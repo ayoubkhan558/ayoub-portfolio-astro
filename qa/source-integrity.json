@@ -1,0 +1,21 @@
+{
+  "unchangedDataFiles": 14,
+  "unchangedOriginalJsonFiles": 5,
+  "unchangedOriginalPublicAssets": 239,
+  "dataSha256": {
+    "src/data/caseStudyDetails.json": "9f827e8d2d740a7236e6757a6ee7069b534119118d6d69e4e48217f49916e6cf",
+    "src/data/caseStudyDetails.ts": "5766cd68dc9362b344a036fcda811937d01b7b2e99126f0292df264e4fca1bf3",
+    "src/data/caseStudySeo.ts": "5aea60a1e22fed04cf5bb2d60b05b6c28d139562c949e93b6e0cd4e30800a0ae",
+    "src/data/portfolio.json": "0faf36e5384c2bd33c95dbaeca9a0b609a40fb06cf318ff86d1a575733009fdb",
+    "src/data/projectLinkStatus.json": "12340767518ffeb25ad41b0fc221cd4fd328eb5ea16a0c11b264b5dd83381d29",
+    "src/data/projectsArchive.json": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
+    "src/data/projectsArchive.ts": "7bb6d4448f7855a3eb40f654128648deb9b97f69e899a014327d6865f9ef2635",
+    "src/data/serviceNiches.ts": "3d9719f346719d74e5b9f8b09cdae8fe05d7c4a1a4dd8e7cd0d827252ca9f865",
+    "src/data/toolCatalog.json": "75819a8c11d25ebc2f2e7c53d1fa91548a680232520c502d7a564dff90fad263",
+    "src/data/toolCatalog.ts": "82b423961d87094853bbd7dd84f4614b98ed8a5cfe3337e7c647fe81595bd5b8",
+    "src/data/work.ts": "18fd27cc7b93d0cb016f31b66959ebede61c2207e74e1a36b8cfc02ba10b5f66",
+    "src/data/privacy-policy.ts": "8005db307dac9794ba5abd14254f76d4612ebe3f4ec1453affbf11aa66b7e979",
+    "src/data/terms-and-conditions.ts": "c0f4c064fab28f237043f667911e51bce61dd93830e9105b3af0d985ba9abc6e",
+    "src/data/servicesPageData.ts": "69deb3485063ef124e27cfa56278423a2f4985e5594db7c7e63e891e755a7c08"
+  }
+}

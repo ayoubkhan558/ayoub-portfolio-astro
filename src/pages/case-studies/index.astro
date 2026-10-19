@@ -1,0 +1,19 @@
+---
+import CaseGrid from "../../components/portfolio/CaseGrid.astro";
+import CTA from "../../components/portfolio/CTA.astro";
+import Intro from "../../components/portfolio/Intro.astro";
+import p from "../../data/portfolio.json";
+import Layout from "../../layouts/PortfolioLayout.astro";
+---
+
+<Layout title="Case studies"
+  ><div class="template-background">
+    <Intro
+      {...{
+        label: p.sections.caseStudies.label,
+        title: p.sections.caseStudies.title,
+        description: p.sections.caseStudies.subtitle,
+      }}
+    /><section class="section wrap first-section"><CaseGrid /></section>
+  </div><CTA /></Layout
+>

@@ -1,0 +1,8 @@
+{
+  "report": [
+    "Open project drawer has zero axe A/AA violations and retains keyboard focus.",
+    "Invalid URL, 15-second timeout and duplicate-submit protection pass; details preserved.",
+    "Contact error state has zero automated axe A/AA violations.",
+    "No-JavaScript: all 147 projects + native details, one-open FAQ fallback and native contact validation."
+  ]
+}

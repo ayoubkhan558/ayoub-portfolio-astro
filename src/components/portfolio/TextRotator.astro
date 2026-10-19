@@ -1,0 +1,37 @@
+---
+interface Props { label: string; items: string[]; }
+const { label, items } = Astro.props;
+---
+<div class="text-rotator" data-text-rotator>
+  <div class="rotator-header"><h3>{label}</h3><div class="rotator-controls" hidden>
+    <button type="button" data-rotator-pause aria-label={`Pause ${label.toLowerCase()} rotation`} aria-pressed="false">Pause</button>
+    <button type="button" data-rotator-next aria-label={`Next ${label.toLowerCase()} item`}>Next <span aria-hidden="true">→</span></button>
+  </div></div>
+  <ul class="rotator-items" aria-label={label}>{items.map((item, i) => <li class:list={[i === 0 && 'is-current']}><span class="rotator-number" aria-hidden="true">{String(i + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}</span><p>{item}</p></li>)}</ul>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-text-rotator]').forEach(root => {
+    const items = Array.from(root.querySelectorAll<HTMLElement>('.rotator-items li'));
+    const pause = root.querySelector<HTMLButtonElement>('[data-rotator-pause]')!;
+    const next = root.querySelector<HTMLButtonElement>('[data-rotator-next]')!;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0, paused = reduced.matches, inView = false, timer: ReturnType<typeof setInterval> | undefined;
+    root.dataset.ready = 'true'; root.querySelector<HTMLElement>('.rotator-controls')!.hidden = false;
+    // The complete list stays in the accessibility tree; only its visual presentation rotates.
+    function showNext() { items[index].classList.remove('is-current'); index = (index + 1) % items.length; items[index].classList.add('is-current'); }
+    function sync() {
+      clearInterval(timer); pause.textContent = reduced.matches ? 'Reduced motion' : paused ? 'Play' : 'Pause'; pause.disabled = reduced.matches;
+      pause.setAttribute('aria-pressed', String(paused));
+      pause.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} ${root.querySelector('h3')!.textContent!.toLowerCase()} rotation`);
+      if (!paused && !reduced.matches && inView && !document.hidden && !root.matches(':hover, :focus-within')) timer = setInterval(showNext, 5500);
+    }
+    pause.addEventListener('click', () => { paused = !paused; sync(); });
+    next.addEventListener('click', () => { showNext(); sync(); });
+    ['mouseenter', 'mouseleave', 'focusin'].forEach(event => root.addEventListener(event, sync));
+    root.addEventListener('focusout', () => setTimeout(sync, 0));
+    document.addEventListener('visibilitychange', sync);
+    reduced.addEventListener('change', () => { paused = reduced.matches; sync(); });
+    new IntersectionObserver(entries => { inView = entries[0].isIntersecting; sync(); }).observe(root);
+    sync();
+  });
+</script>

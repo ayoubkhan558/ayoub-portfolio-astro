@@ -1,0 +1,10 @@
+---
+import { caseStudyDetails } from "../../data/caseStudyDetails";
+import { Features } from "../blocks/features";
+interface Props {
+  limit?: number;
+}
+const { limit } = Astro.props;
+---
+
+<Features studies={Object.values(caseStudyDetails)} limit={limit} />

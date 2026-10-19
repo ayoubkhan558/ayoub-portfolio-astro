@@ -1,0 +1,1218 @@
+{
+  "rejuvenated-knives": {
+    "slug": "rejuvenated-knives",
+    "client": "Rejuvenated Knives",
+    "urlLabel": "get.rejuvenatedknives.com",
+    "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+    "company": "Xgrid.co",
+    "timeline": "4 weeks",
+    "caseType": "migration",
+    "listing": {
+      "tag": "CASE_00",
+      "icon": "sparkles",
+      "title": "Rejuvenated Knives",
+      "company": "Xgrid.co",
+      "description": "Legacy PHP and MySQL website migrated into WordPress with Bricks Builder while working at Xgrid.co, after a Figma redesign created a cleaner and easier-to-expand sharpening service website.",
+      "result": "A maintainable WordPress system replacing a difficult legacy PHP codebase",
+      "achievement": "Delivered while working at Xgrid.co: converted PHP/MySQL content into WordPress and rebuilt the experience in Bricks Builder",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "Figma"
+      ],
+      "href": "/case-studies/rejuvenated-knives",
+      "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+      "image": "/case-study/rk-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Rejuvenated Knives website"
+    },
+    "pageShowcase": {
+      "label": "Migration result",
+      "title": "From legacy PHP to editable WordPress",
+      "text": "The previous custom PHP site was redesigned in Figma, rebuilt in Bricks Builder, and migrated into WordPress so future pages, services, and content could be managed more easily.",
+      "items": [
+        {
+          "label": "New WordPress website",
+          "image": "/case-study/rk-new.webp",
+          "caption": "Bricks Builder rebuild"
+        }
+      ]
+    },
+    "heroMockup": "/case-study/rk-mockup.png",
+    "eyebrow": "Case study / Rejuvenated Knives",
+    "headline": "A legacy PHP sharpening-service website rebuilt into a maintainable WordPress and Bricks Builder system.",
+    "tagline": "Delivered while working at Xgrid.co: redesigned in Figma, rebuilt in Bricks Builder, and migrated from a hard-to-maintain PHP/MySQL setup into WordPress.",
+    "overview": "Rejuvenated Knives had an older PHP website that was difficult to maintain, hard to expand, and not practical for adding new features or content changes. While working at Xgrid.co, the project started with a fresh Figma design, then the site was rebuilt in WordPress using Bricks Builder. Existing PHP and MySQL data was migrated into WordPress so the business could manage its door-to-door sharpening service through a more reliable CMS foundation.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Door-to-door sharpening service"
+      },
+      {
+        "label": "Delivery context",
+        "value": "While working at Xgrid.co"
+      },
+      {
+        "label": "Objective",
+        "value": "Replace a poor-quality legacy PHP site with an editable and expandable WordPress build"
+      },
+      {
+        "label": "Project type",
+        "value": "Figma redesign, PHP/MySQL to WordPress migration, and Bricks Builder development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Legacy PHP codebase",
+        "text": "The old website had poor code quality, was hard to maintain, and made routine changes slower than they needed to be."
+      },
+      {
+        "title": "Limited expansion path",
+        "text": "Adding new features, changing service content, or improving the customer journey required too much custom development effort."
+      },
+      {
+        "title": "Data migration requirement",
+        "text": "Existing PHP and MySQL content needed to be moved into WordPress without losing the structure needed for the service experience."
+      }
+    ],
+    "results": [
+      {
+        "title": "Fresh Figma-led redesign",
+        "text": "The project began with a dedicated Figma design phase so the new site had a clearer customer journey before development started."
+      },
+      {
+        "title": "Bricks Builder WordPress rebuild",
+        "text": "The final website was rebuilt in Bricks Builder, giving the business a cleaner visual system and an easier editing workflow."
+      },
+      {
+        "title": "Legacy data moved into WordPress",
+        "text": "The PHP/MySQL content was migrated into WordPress, creating a stronger foundation for future updates, feature additions, and site maintenance."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "wordpress",
+      "figma",
+      "mysql",
+      "php"
+    ],
+    "performanceNote": "The core improvement was maintainability: replacing the hard-to-expand PHP build with WordPress and Bricks Builder made the website easier to update, extend, and hand off.",
+    "branding": {
+      "title": "Warm service branding with a sharper WordPress foundation.",
+      "text": "The redesign uses Rejuvenated Knives' earthy brown, black, and linen palette to make the door-to-door sharpening offer feel practical, trustworthy, and easy to act on.",
+      "logoMark": "RK",
+      "logoImage": "/client/logo-rk.png",
+      "fontName": "Geologica + Sequela",
+      "fontFamilies": [
+        "Geologica",
+        "Sequela"
+      ],
+      "fontMeta": "Geologica supports clear service information, while Sequela adds a more distinctive brand voice for key headings and campaign moments.",
+      "palette": [
+        {
+          "label": "Black",
+          "value": "#201820"
+        },
+        {
+          "label": "Brown",
+          "value": "#802020"
+        },
+        {
+          "label": "Linen",
+          "value": "#F0E8E0"
+        },
+        {
+          "label": "Homepage Black",
+          "value": "#2A1F19"
+        },
+        {
+          "label": "Homepage Linen",
+          "value": "#E9E5D7"
+        },
+        {
+          "label": "Dim Gray",
+          "value": "#7F6053"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Sharpening service overview and lead path"
+      },
+      {
+        "name": "Services",
+        "type": "Kitchen knives, tools, and gardening instrument sharpening"
+      },
+      {
+        "name": "Order Flow",
+        "type": "Door-to-door service ordering path"
+      },
+      {
+        "name": "Content Pages",
+        "type": "Editable WordPress pages migrated from the legacy PHP site"
+      }
+    ],
+    "responsiveBenefits": [
+      "Customers can understand the sharpening service quickly on mobile and desktop.",
+      "WordPress makes future edits easier than the previous PHP codebase.",
+      "Bricks Builder provides reusable sections for future page expansion.",
+      "Migrated data now lives inside a CMS instead of a custom legacy setup.",
+      "The site is easier for another developer or site owner to maintain."
+    ],
+    "testimonial": {
+      "quote": "The old PHP website was difficult to maintain and expand. Moving it into WordPress with Bricks Builder created a cleaner system for updates and future improvements.",
+      "author": "Rejuvenated Knives",
+      "meta": "PHP/MySQL to WordPress migration"
+    },
+    "cta": {
+      "heading": "Need to move a legacy website into WordPress?",
+      "text": "I can help redesign, rebuild, and migrate outdated PHP or hard-to-maintain websites into a cleaner WordPress system your team can keep improving.",
+      "buttonText": "Plan My Migration"
+    }
+  },
+  "pagano-law": {
+    "slug": "pagano-law",
+    "client": "Pagano Law",
+    "urlLabel": "paganolaw.net",
+    "liveUrl": "https://paganolaw.net",
+    "timeline": "4 weeks",
+    "caseType": "redesign",
+    "listing": {
+      "tag": "CASE_01",
+      "icon": "scale",
+      "title": "Pagano Law",
+      "description": "Complete law firm website redesign and rebuild from Divi to Bricks Builder with dynamic ACF templates, performance improvements, and infrastructure optimization.",
+      "result": "Faster website, reusable CMS, and simplified long-term management",
+      "achievement": "Saved the client approximately $1,000 annually by consolidating hosting, domains, and email services",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/pagano-law",
+      "liveUrl": "https://paganolaw.net",
+      "image": "/case-study/paganolaw-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Pagano Law website"
+    },
+    "pageShowcase": {
+      "label": "Homepage comparison",
+      "title": "Old Divi homepage and new Bricks rebuild",
+      "text": "A side-by-side desktop view of the original Divi homepage and the rebuilt Bricks Builder experience.",
+      "items": [
+        {
+          "label": "Old Divi homepage",
+          "image": "/case-study/paganolaw-old.jpg",
+          "caption": "Before redesign"
+        },
+        {
+          "label": "New Bricks homepage",
+          "image": "/case-study/paganolaw-new.jpg",
+          "caption": "After rebuild"
+        }
+      ]
+    },
+    "heroMockup": "/case-study/paganolaw-mocup.png",
+    "eyebrow": "Case study / Pagano Law",
+    "headline": "A complete law firm website rebuild with Bricks Builder, better performance, and lower operating costs.",
+    "tagline": "Redesigned from Divi, rebuilt from scratch in Bricks Builder, and simplified the client's entire website infrastructure.",
+    "overview": "Pagano Law had an outdated Divi-based website that was difficult to maintain, slower than necessary, and tied to an unnecessarily expensive hosting setup. The project involved a complete redesign and a fresh Bricks Builder development, while also consolidating hosting, domains, email, and website services into a single provider. The result was a faster, easier-to-manage website and approximately $1,000 in annual infrastructure savings.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Law Firm"
+      },
+      {
+        "label": "Objective",
+        "value": "Complete redesign, improve performance, simplify management, and reduce infrastructure costs"
+      },
+      {
+        "label": "Project type",
+        "value": "WordPress redesign and custom Bricks Builder development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Heavy Divi website",
+        "text": "The existing Divi Builder website was difficult to maintain, contained unnecessary overhead, and lacked a scalable foundation for future growth."
+      },
+      {
+        "title": "Scattered infrastructure",
+        "text": "Hosting, domains, email, and related services were spread across multiple providers, making management complicated and increasing recurring costs."
+      },
+      {
+        "title": "Limited editing workflow",
+        "text": "The client needed a cleaner CMS experience that allowed content updates without dealing with bulky page-builder structures."
+      }
+    ],
+    "results": [
+      {
+        "title": "Complete Bricks Builder rebuild",
+        "text": "The website was redesigned and rebuilt from scratch using Bricks Builder with reusable components, dynamic templates, and a cleaner development architecture."
+      },
+      {
+        "title": "Around $1,000 saved annually",
+        "text": "The client's hosting, domain, email, and website services were consolidated into a single provider, eliminating unnecessary premium plans and duplicate subscriptions."
+      },
+      {
+        "title": "Simplified long-term maintenance",
+        "text": "The new CMS structure, dynamic templates, and optimized plugin stack make future updates significantly easier while improving overall performance."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "advanced-custom-fields",
+      "slim-seo",
+      "google-site-kit",
+      "happyfiles",
+      "wordpress"
+    ],
+    "performanceNote": "The project focused on replacing Divi with a lightweight Bricks Builder architecture, reducing unnecessary assets, improving maintainability, and creating a faster editing experience while lowering long-term infrastructure costs.",
+    "branding": {
+      "title": "Professional legal branding with modern editorial styling.",
+      "text": "The visual identity combines elegant serif typography with a clean sans-serif interface to establish trust, readability, and professionalism throughout the website.",
+      "logoMark": "PL",
+      "logoImage": "/client/paganolaw-logo.png",
+      "clientImage": "/client/paganolaw-gregory-j-agano-client.jpg",
+      "fontName": "Libre Baskerville + Inter",
+      "fontFamilies": [
+        "Libre Baskerville",
+        "Inter"
+      ],
+      "fontMeta": "Libre Baskerville is used for headings to reinforce authority, while Inter provides clean, readable body text and interface elements.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#877FFA"
+        },
+        {
+          "label": "Secondary",
+          "value": "#231F20"
+        },
+        {
+          "label": "Accent",
+          "value": "#F0EDE2"
+        },
+        {
+          "label": "Background",
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Firm overview and lead generation"
+      },
+      {
+        "name": "Practice Areas",
+        "type": "Dynamic legal service templates"
+      },
+      {
+        "name": "Attorney Profiles",
+        "type": "Dynamic team pages powered by ACF"
+      },
+      {
+        "name": "Testimonials",
+        "type": "Dynamic client review system"
+      },
+      {
+        "name": "Contact",
+        "type": "Conversion-focused inquiry page"
+      }
+    ],
+    "responsiveBenefits": [
+      "Optimized layouts across desktop, tablet, and mobile devices.",
+      "Dynamic templates reduce repetitive content management.",
+      "Cleaner editing workflow for the client.",
+      "Lower maintenance costs with fewer plugins and reusable components.",
+      "Consolidated infrastructure makes ongoing administration much easier."
+    ],
+    "testimonial": {
+      "quote": "The new website is dramatically easier to manage, noticeably faster, and consolidating our services into one provider reduced unnecessary yearly expenses.",
+      "author": "Pagano Law",
+      "meta": "Website redesign and infrastructure optimization"
+    },
+    "cta": {
+      "heading": "Need a website that's faster and costs less to maintain?",
+      "text": "Whether you're rebuilding an outdated WordPress site or migrating away from a heavy page builder, I can design, develop, and optimize a solution that's built for long-term growth.",
+      "buttonText": "Start Your Project"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://paganolaw.net",
+      "measuredAt": "2026-06-29",
+      "mobile": {
+        "performance": 55,
+        "fcp": "7.3 s",
+        "lcp": "11.6 s",
+        "cls": "0.054",
+        "tbt": "90 ms",
+        "speedIndex": "10.2 s"
+      },
+      "desktop": {
+        "performance": 79,
+        "fcp": "1.4 s",
+        "lcp": "2.3 s",
+        "cls": "0.03",
+        "tbt": "50 ms",
+        "speedIndex": "2.5 s"
+      }
+    }
+  },
+  "weinberger-aesthetics": {
+    "slug": "weinberger-aesthetics",
+    "client": "Weinberger Aesthetics",
+    "urlLabel": "weinberger-aesthetics.de",
+    "liveUrl": "https://www.weinberger-aesthetics.de/",
+    "timeline": "4 weeks",
+    "caseType": "rebuild",
+    "listing": {
+      "tag": "CASE_02",
+      "icon": "sparkles",
+      "title": "Weinberger Aesthetics",
+      "description": "Premium aesthetic surgery clinic website converted from Figma into a custom Bricks Builder build with dynamic WordPress content and a clean CMS structure.",
+      "result": "35% better performance and 20% more conversions after the Bricks rebuild",
+      "achievement": "Rebuilt Neve + Live Composer into Bricks with 99 desktop PageSpeed",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/weinberger-aesthetics",
+      "liveUrl": "https://www.weinberger-aesthetics.de/",
+      "image": "/case-study/weinberger-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Weinberger Aesthetics clinic website"
+    },
+    "pageShowcase": {
+      "label": "Homepage comparison",
+      "title": "Old Neve homepage and new Bricks build",
+      "text": "A side-by-side desktop view of the previous WordPress (Neve + Live Composer) homepage and the new Bricks Builder implementation.",
+      "items": [
+        {
+          "label": "Old Neve + Live Composer homepage",
+          "image": "/case-study/weinberger-old.jpg",
+          "caption": "Before rebuild — older WordPress stack"
+        },
+        {
+          "label": "New Bricks homepage",
+          "image": "/case-study/weinberger-new.jpg",
+          "caption": "After rebuild — 99 desktop PageSpeed"
+        }
+      ]
+    },
+    "heroMockup": "/case-study/weinberger-mocup.png",
+    "eyebrow": "Case study / Weinberger Aesthetics",
+    "headline": "A premium clinic website rebuilt in Bricks Builder from a custom Figma design.",
+    "tagline": "Replaced an older Neve + Live Composer WordPress stack with a refined Bricks Builder website for a plastic, aesthetic, and hand surgery clinic in Kassel.",
+    "overview": "Weinberger Aesthetics had an older WordPress site built on the Neve theme and Live Composer (DSLC), with a heavy plugin stack (AIOSEO, Contact Form 7, CleanTalk, CookieYes, WP-Optimize). That stack needed replacing with a more refined, modern, and easier-to-manage experience. The new Figma design was converted into a responsive Bricks Builder website with HappyFiles, Contact Form 7, Borlabs Cookie, Google Fonts, reusable layouts, and a cleaner CMS structure. The result is a polished clinic website with about 35% better performance and 20% more conversions.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Plastic, aesthetic, and hand surgery clinic"
+      },
+      {
+        "label": "Objective",
+        "value": "Replace the old Neve + Live Composer stack with a responsive Bricks Builder website from Figma"
+      },
+      {
+        "label": "Project type",
+        "value": "WordPress rebuild and Figma to Bricks Builder development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Outdated WordPress stack",
+        "text": "The previous site ran WordPress 6.4.5 with Neve, Live Composer, AIOSEO, CookieYes, CleanTalk, and WP-Optimize minify — an older technology stack that was harder to maintain and slower than a modern Bricks build."
+      },
+      {
+        "title": "Detailed treatment content",
+        "text": "The clinic offers a wide range of surgical and non-surgical treatments, so the content needed to be organized clearly without overwhelming visitors."
+      },
+      {
+        "title": "Premium medical presentation",
+        "text": "The website needed to feel elegant, professional, discreet, and trustworthy while still staying easy to read across all devices."
+      }
+    ],
+    "results": [
+      {
+        "title": "35% better performance",
+        "text": "Desktop PageSpeed Insights scored 99 Performance, 92 Accessibility, 100 Best Practices, and 100 SEO after moving off Neve + Live Composer to a lightweight Bricks Builder stack."
+      },
+      {
+        "title": "20% more conversions",
+        "text": "Clearer treatment structure, stronger CTAs, and a faster patient journey improved conversion rate by about 20%."
+      },
+      {
+        "title": "Modern editable WordPress foundation",
+        "text": "Reusable Bricks sections, HappyFiles media organization, Contact Form 7, Borlabs Cookie, and Google Fonts replaced the older plugin-heavy setup with a cleaner stack the clinic can manage."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "advanced-custom-fields",
+      "seopress",
+      "fluent-smtp",
+      "happyfiles-pro",
+      "wordpress"
+    ],
+    "performanceNote": "The old Neve + Live Composer stack was replaced with a lightweight Bricks Builder build — HappyFiles, Contact Form 7, Borlabs Cookie, and Google Fonts — focused on Core Web Vitals, reusable sections, and easier long-term maintenance.",
+    "branding": {
+      "title": "A calm, premium visual system for a modern aesthetic clinic.",
+      "text": "The visual direction uses deep green, soft neutrals, and clean typography to create a discreet, professional, and patient-focused experience.",
+      "logoMark": "WA",
+      "logoImage": "/client/weinberger-aesthetics-logo.svg",
+      "fontName": "Source Sans Pro",
+      "fontFamilies": [
+        "Source Sans Pro"
+      ],
+      "fontMeta": "Source Sans Pro is used across the website for clean readability, polished interface text, and a modern medical aesthetic.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "hsl(163 100% 13%)"
+        },
+        {
+          "label": "Secondary",
+          "value": "hsl(34, 2%, 55%)"
+        },
+        {
+          "label": "Accent",
+          "value": "hsl(0, 0%, 88%)"
+        },
+        {
+          "label": "Background",
+          "value": "#F2F3F4"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Clinic overview and patient trust"
+      },
+      {
+        "name": "Treatments",
+        "type": "Surgical and non-surgical service structure"
+      },
+      {
+        "name": "Treatment Detail",
+        "type": "Procedure information and consultation-focused content"
+      },
+      {
+        "name": "About",
+        "type": "Doctor profile, clinic values, and professional trust"
+      },
+      {
+        "name": "Contact",
+        "type": "Appointment and inquiry-focused page"
+      }
+    ],
+    "responsiveBenefits": [
+      "Figma layouts were carefully adapted for desktop, tablet, and mobile screens.",
+      "Treatment content stays readable and structured on smaller devices.",
+      "Reusable Bricks sections make future page updates easier.",
+      "ACF fields support cleaner content management for clinic and treatment information.",
+      "The refined visual system creates a consistent premium experience across the site."
+    ],
+    "testimonial": {
+      "quote": "The new website feels premium, structured, and much easier to manage while presenting our clinic and treatments in a professional way.",
+      "author": "Weinberger Aesthetics",
+      "meta": "Figma to Bricks Builder clinic website"
+    },
+    "cta": {
+      "heading": "Need a premium clinic website built from Figma?",
+      "text": "I can convert your design into a responsive, fast, and easy-to-manage WordPress website using Bricks Builder and a clean CMS structure.",
+      "buttonText": "Start Your Project"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://www.weinberger-aesthetics.de/",
+      "measuredAt": "2026-07-30",
+      "desktop": {
+        "performance": 99,
+        "fcp": "1.2 s",
+        "lcp": "1.6 s",
+        "cls": "0",
+        "tbt": null,
+        "speedIndex": null
+      }
+    }
+  },
+  "studyly": {
+    "slug": "studyly",
+    "client": "Studyly",
+    "urlLabel": "studyly.com/at",
+    "liveUrl": "https://studyly.com/at",
+    "timeline": "2 weeks",
+    "caseType": "New Website Build",
+    "listing": {
+      "tag": "CASE_04",
+      "icon": "graduation-cap",
+      "title": "Studyly",
+      "description": "Pixel-perfect Figma to HTML implementation for an AI-powered mathematics learning platform using Tailwind CSS and modern frontend libraries.",
+      "result": "Responsive landing pages with smooth animations and excellent visual fidelity",
+      "achievement": "Converted complex Figma designs into production-ready frontend components",
+      "stack": [
+        "HTML",
+        "Tailwind",
+        "JavaScript"
+      ],
+      "href": "/case-studies/studyly",
+      "liveUrl": "https://studyly.com/at",
+      "image": "/case-study/studyly-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Studyly website"
+    },
+    "heroMockup": "/case-study/studyly-mockup.png",
+    "pageShowcase": {
+      "label": "Delivered pages",
+      "title": "Selected Studyly desktop page views",
+      "text": "A focused look at the main desktop pages delivered from the supplied Figma design.",
+      "items": [
+        {
+          "label": "Studyly landing page",
+          "image": "/case-study/studyly-home.jpg",
+          "caption": "First-time frontend page build"
+        }
+      ]
+    },
+    "eyebrow": "Case study / Studyly",
+    "headline": "A pixel-perfect Figma-to-code implementation for an AI-powered education platform.",
+    "tagline": "Modern frontend development with responsive layouts, interactive animations, and production-ready HTML components.",
+    "overview": "Studyly is an AI-powered mathematics learning platform used by more than 800 schools. The project involved converting detailed Figma designs into responsive HTML, Tailwind CSS, and JavaScript while maintaining visual accuracy, smooth interactions, and excellent performance across devices.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "EdTech"
+      },
+      {
+        "label": "Objective",
+        "value": "Convert Figma designs into responsive production-ready frontend"
+      },
+      {
+        "label": "Project type",
+        "value": "Figma to HTML, Tailwind CSS, and JavaScript"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Pixel-perfect implementation",
+        "text": "Every section needed to match the supplied Figma design precisely while remaining fully responsive across all screen sizes."
+      },
+      {
+        "title": "Interactive user experience",
+        "text": "Animations, sliders, media components, and scroll effects had to feel smooth without affecting page performance."
+      },
+      {
+        "title": "Scalable frontend architecture",
+        "text": "The codebase needed reusable components, clean utility classes, and an organized structure for future development."
+      }
+    ],
+    "results": [
+      {
+        "title": "Accurate Figma implementation",
+        "text": "Every layout, spacing, typography, and component was translated into responsive HTML with high visual accuracy."
+      },
+      {
+        "title": "Modern interactive experience",
+        "text": "GSAP animations, Swiper sliders, media playback, and scroll interactions created a polished user experience."
+      },
+      {
+        "title": "Clean developer-friendly code",
+        "text": "The frontend was built with reusable Tailwind utilities and maintainable JavaScript for easy future expansion."
+      }
+    ],
+    "tools": [
+      "html",
+      "css",
+      "javascript",
+      "tailwind",
+      "gsap",
+      "swiperjs",
+      "plyr",
+      "scrollreveal",
+      "jquery"
+    ],
+    "performanceNote": "The frontend focused on lightweight responsive layouts, optimized assets, reusable Tailwind components, and hardware-accelerated animations to deliver a smooth browsing experience.",
+    "branding": {
+      "title": "Modern educational design with approachable technology.",
+      "text": "The interface combines clean typography, spacious layouts, and vibrant blue accents to create a trustworthy and engaging learning experience.",
+      "logoMark": "ST",
+      "logoImage": "/client/studyly-logo.svg",
+      "fontName": "Poppins",
+      "fontFamilies": [
+        "Poppins"
+      ],
+      "fontMeta": "Poppins provides clean geometric typography that improves readability while reinforcing the platform's modern educational identity.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#3481B4"
+        },
+        {
+          "label": "Background",
+          "value": "#E9F1F7"
+        },
+        {
+          "label": "Dark",
+          "value": "#0C2435"
+        },
+        {
+          "label": "Accent",
+          "value": "#E5A346"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Landing Page",
+        "type": "Product overview and feature highlights"
+      },
+      {
+        "name": "Features",
+        "type": "Interactive platform capabilities"
+      },
+      {
+        "name": "Schools",
+        "type": "Education-focused marketing sections"
+      },
+      {
+        "name": "Pricing",
+        "type": "Subscription and platform information"
+      },
+      {
+        "name": "Contact",
+        "type": "Lead generation and inquiries"
+      }
+    ],
+    "responsiveBenefits": [
+      "Pixel-perfect layouts across desktop, tablet, and mobile.",
+      "Smooth GSAP and scroll-based animations.",
+      "Reusable Tailwind components simplify future development.",
+      "Optimized media playback using Plyr.",
+      "Interactive sliders enhance content presentation."
+    ],
+    "testimonial": {
+      "quote": "The final implementation matched the Figma designs with excellent responsiveness and smooth interactions across every device.",
+      "author": "Studyly",
+      "meta": "Figma to HTML frontend implementation"
+    },
+    "cta": {
+      "heading": "Need a Figma design turned into production-ready code?",
+      "text": "I build fast, responsive, pixel-perfect websites using modern frontend technologies and clean, maintainable code.",
+      "buttonText": "Let's Build It"
+    }
+  },
+  "kingsre": {
+    "slug": "kingsre",
+    "client": "Kings Real Estate",
+    "urlLabel": "kingsre.ae",
+    "liveUrl": "https://kingsre.ae",
+    "timeline": "1 week",
+    "caseType": "Elementor → Bricks  ",
+    "listing": {
+      "tag": "CASE_06",
+      "icon": "building-2",
+      "title": "Kings Real Estate",
+      "description": "Migrated the Kings Real Estate website from Elementor to Bricks Builder while preserving the existing design and improving performance, maintainability, and editing experience.",
+      "result": "Faster, cleaner, and fully editable Bricks Builder website with the same design",
+      "achievement": "Elementor → Bricks   with 40% better performance.",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/kingsre",
+      "liveUrl": "https://kingsre.ae",
+      "image": "/case-study/kingsre-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the Kings Real Estate website"
+    },
+    "heroMockup": "/case-study/kingsre-mockup.png",
+    "pageShowcase": {
+      "label": "Website comparison",
+      "title": "Before & after migration",
+      "text": "A comparison of the original Elementor homepage and the redesigned Bricks Builder homepage after migration.",
+      "items": [
+        {
+          "label": "Old Homepage (Elementor)",
+          "image": "/case-study/kingsre-old.jpg",
+          "caption": "Old Elementor UI homepage"
+        },
+        {
+          "label": "New Homepage (Bricks Builder)",
+          "image": "/case-study/kingsre-home.jpg",
+          "caption": "Modern Premium UI, 40% Faster"
+        }
+      ]
+    },
+    "eyebrow": "Case study / Kings Real Estate",
+    "headline": "Migrated from Elementor to Bricks Builder without changing the brand identity.",
+    "tagline": "The existing website was rebuilt in Bricks Builder to improve performance, maintainability, and the editing experience while preserving the original design.",
+    "overview": "Kings Real Estate already had an existing Elementor website that required migration to Bricks Builder. The goal was to faithfully recreate the design while replacing Elementor with a cleaner, faster, and more maintainable Bricks Builder architecture. Every section was rebuilt using reusable components, resulting in a lighter website that's easier to manage and extend without affecting the existing branding or user experience.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Luxury real estate"
+      },
+      {
+        "label": "Objective",
+        "value": "Migrate the website from Elementor to Bricks Builder"
+      },
+      {
+        "label": "Project type",
+        "value": "WordPress migration and redevelopment"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Pixel-perfect migration",
+        "text": "The existing Elementor website had to be recreated in Bricks Builder while maintaining the same visual appearance and user experience."
+      },
+      {
+        "title": "Cleaner architecture",
+        "text": "Replace Elementor's heavier page structure with reusable Bricks Builder components for easier maintenance and future scalability."
+      },
+      {
+        "title": "Maintain existing SEO",
+        "text": "Ensure URLs, page content, metadata, and overall site structure remained intact throughout the migration."
+      }
+    ],
+    "results": [
+      {
+        "title": "Complete Bricks Builder migration",
+        "text": "Successfully rebuilt the website using Bricks Builder while preserving the original layout, branding, and functionality."
+      },
+      {
+        "title": "Improved maintainability",
+        "text": "Reusable templates, global components, and Advanced Custom Fields provide a much cleaner editing experience."
+      },
+      {
+        "title": "Better performance",
+        "text": "The migration reduced unnecessary page builder overhead, resulting in a faster and more maintainable WordPress website."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "advanced-custom-fields",
+      "happyfiles-pro",
+      "admin-columns-pro",
+      "chaty",
+      "fluent-smtp",
+      "litespeed-cache",
+      "seopress",
+      "google-site-kit",
+      "microsoft-clarity",
+      "meta-pixel",
+      "wordpress"
+    ],
+    "performanceNote": "The website was rebuilt using Bricks Builder with reusable components, optimized templates, LiteSpeed Cache, Advanced Custom Fields, and a lightweight plugin stack to improve performance and long-term maintainability.",
+    "branding": {
+      "title": "Preserving the existing brand while modernizing the technology.",
+      "text": "The migration retained the original visual identity while replacing Elementor with a cleaner Bricks Builder architecture, ensuring consistency across every page.",
+      "logoMark": "KR",
+      "logoImage": "/client/kingsre-logo.png",
+      "clientImage": "/client/inshad-arshad-bajwa-client.jpg",
+      "fontName": "Plus Jakarta Sans + Lora",
+      "fontFamilies": [
+        "Plus Jakarta Sans",
+        "Lora"
+      ],
+      "fontMeta": "The original typography and branding were preserved throughout the migration.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#B6966E"
+        },
+        {
+          "label": "Secondary",
+          "value": "#1E3F71"
+        },
+        {
+          "label": "Background",
+          "value": "#FFFFFF"
+        },
+        {
+          "label": "Text",
+          "value": "#07234B"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Homepage",
+        "type": "Migrated from Elementor to Bricks Builder"
+      },
+      {
+        "name": "Property Pages",
+        "type": "Rebuilt with reusable Bricks Builder templates"
+      },
+      {
+        "name": "About",
+        "type": "Migrated while preserving design"
+      },
+      {
+        "name": "Services",
+        "type": "Rebuilt using reusable components"
+      },
+      {
+        "name": "Blog",
+        "type": "Optimized WordPress templates"
+      },
+      {
+        "name": "Contact",
+        "type": "Responsive inquiry page"
+      }
+    ],
+    "responsiveBenefits": [
+      "Pixel-perfect migration from Elementor to Bricks Builder.",
+      "Cleaner page structure with reusable global components.",
+      "Improved loading speed and maintainability.",
+      "Fully responsive across desktop, tablet, and mobile.",
+      "Simpler editing workflow for future website updates."
+    ],
+    "testimonial": {
+      "quote": "The migration to Bricks Builder preserved our website's appearance while giving us a faster, cleaner, and much easier platform to manage.",
+      "author": "Kings Real Estate",
+      "meta": "Elementor → Bricks  "
+    },
+    "cta": {
+      "heading": "Need to migrate your Elementor website to Bricks Builder?",
+      "text": "I rebuild existing Elementor websites in Bricks Builder while preserving the design, improving performance, and creating a cleaner, future-proof WordPress architecture.",
+      "buttonText": "Start Your Migration"
+    }
+  },
+  "serveekay": {
+    "slug": "serveekay",
+    "client": "SerVeekay",
+    "urlLabel": "serveekay.com",
+    "liveUrl": "https://serveekay.com",
+    "timeline": "3 weeks",
+    "caseType": "first-time Figma to WordPress build",
+    "listing": {
+      "tag": "CASE_05",
+      "icon": "pen-tool",
+      "title": "SerVeekay",
+      "description": "Figma to Bricks Builder WordPress portfolio website for a UI/UX and product designer with service pages, portfolio sections, pricing, and lead-focused CTAs.",
+      "result": "Premium designer portfolio with editable CMS and responsive Bricks layouts",
+      "achievement": "Converted a detailed Figma design into a polished WordPress website using Bricks Builder",
+      "stack": [
+        "Bricks",
+        "WordPress",
+        "ACF"
+      ],
+      "href": "/case-studies/serveekay",
+      "liveUrl": "https://serveekay.com",
+      "image": "/case-study/serveekay-thumbnail.jpg",
+      "imageAlt": "Screenshot preview of the SerVeekay portfolio website"
+    },
+    "heroMockup": "/case-study/serveekay-mockup.png",
+    "pageShowcase": {
+      "label": "Delivered pages",
+      "title": "Selected SerVeekay desktop page views",
+      "text": "A focused look at the portfolio pages converted from Figma into Bricks Builder.",
+      "items": [
+        {
+          "label": "SerVeekay landing page",
+          "image": "/case-study/serveekay-home.jpg",
+          "caption": "First-time WordPress page build"
+        }
+      ]
+    },
+    "eyebrow": "Case study / SerVeekay",
+    "headline": "A premium Figma-to-Bricks portfolio website for a product designer.",
+    "tagline": "Converted from Figma into a responsive Bricks Builder WordPress website built to attract startups, founders, and product teams.",
+    "overview": "SerVeekay is a personal portfolio and freelance services website for Waleed, a UI/UX and product designer. The goal was to convert a detailed Figma design into a polished WordPress website using Bricks Builder, while keeping the site responsive, editable, and focused on lead generation. The final website presents services, portfolio projects, pricing options, testimonials, FAQs, and discovery-call CTAs in a clean, conversion-focused structure.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "UI/UX design and product design services"
+      },
+      {
+        "label": "Objective",
+        "value": "Convert Figma design into a responsive Bricks Builder WordPress website"
+      },
+      {
+        "label": "Project type",
+        "value": "Figma to Bricks Builder WordPress development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Detailed portfolio structure",
+        "text": "The website needed to present services, case studies, pricing, testimonials, FAQs, and personal branding without making the page feel crowded."
+      },
+      {
+        "title": "Strong visual accuracy",
+        "text": "The Figma design used custom typography, dark visual sections, gradients, rounded cards, and spacing systems that needed to be implemented accurately in Bricks Builder."
+      },
+      {
+        "title": "Lead-focused user flow",
+        "text": "The site had to guide startup founders and businesses from portfolio browsing toward booking a discovery call or starting a project."
+      }
+    ],
+    "results": [
+      {
+        "title": "Figma to Bricks conversion",
+        "text": "The design was converted into a responsive Bricks Builder WordPress website with accurate typography, spacing, layout structure, and visual styling."
+      },
+      {
+        "title": "Editable portfolio foundation",
+        "text": "WordPress, ACF, and reusable Bricks sections made portfolio content, service information, and page sections easier to manage."
+      },
+      {
+        "title": "Conversion-focused presentation",
+        "text": "Services, pricing, testimonials, portfolio projects, FAQs, and CTAs were structured to support trust-building and lead generation."
+      }
+    ],
+    "tools": [
+      "bricks-builder",
+      "advanced-custom-fields",
+      "seopress",
+      "google-site-kit",
+      "happyfiles",
+      "wpc-admin-columns",
+      "wordpress"
+    ],
+    "performanceNote": "The build focused on clean Bricks Builder structure, reusable sections, responsive layouts, organized CMS fields, and a lightweight plugin stack for easier long-term maintenance.",
+    "branding": {
+      "title": "A bold, premium portfolio style for a product designer.",
+      "text": "The visual system uses dark backgrounds, warm peach highlights, custom typography, soft gradients, and rounded layouts to create a modern designer-led brand experience.",
+      "logoMark": "SV",
+      "logoImage": "/client/serveekay-logo.svg",
+      "clientImage": "/client/serveekay-waleed-client.jpg",
+      "fontName": "Neue Haas Grotesk Display Pro + Bricolage Grotesque",
+      "fontFamilies": [
+        "Neue Haas Grotesk Display Pro",
+        "Bricolage Grotesque"
+      ],
+      "fontMeta": "Neue Haas Grotesk Display Pro creates a premium display feel, while Bricolage Grotesque supports expressive, modern interface typography.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#F1B890"
+        },
+        {
+          "label": "Background",
+          "value": "#2F363C"
+        },
+        {
+          "label": "Text",
+          "value": "#FFFFFF"
+        },
+        {
+          "label": "Muted",
+          "value": "#9FA6AC"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Home",
+        "type": "Personal brand, services, and lead generation"
+      },
+      {
+        "name": "Portfolio",
+        "type": "Project showcase across product design and digital platforms"
+      },
+      {
+        "name": "Services",
+        "type": "UI/UX consulting, design systems, web, app, and branding services"
+      },
+      {
+        "name": "Pricing",
+        "type": "Monthly design partnership and fixed project options"
+      },
+      {
+        "name": "FAQ",
+        "type": "Workflow, process, and client decision support"
+      }
+    ],
+    "responsiveBenefits": [
+      "Figma layouts were adapted carefully for desktop, tablet, and mobile.",
+      "Portfolio projects stay visually strong and readable across screen sizes.",
+      "Reusable Bricks sections make content updates easier.",
+      "ACF supports cleaner management for portfolio and service content.",
+      "Lead-generation CTAs remain visible throughout the browsing journey."
+    ],
+    "testimonial": {
+      "quote": "The website now presents my portfolio, services, pricing, and process in a polished way that feels premium and easy to update.",
+      "author": "SerVeekay",
+      "meta": "Figma to Bricks Builder portfolio website"
+    },
+    "cta": {
+      "heading": "Need your Figma design converted into WordPress?",
+      "text": "I can turn your design into a responsive, editable, and conversion-focused Bricks Builder website with clean structure and reusable sections.",
+      "buttonText": "Start Your Project"
+    }
+  },
+  "supplementshub": {
+    "slug": "supplementshub",
+    "client": "Supplements Hub ",
+    "urlLabel": "supplementshub.com.pk",
+    "liveUrl": "https://supplementshub.com.pk",
+    "timeline": "2 weeks",
+    "caseType": "Custom Shopify Store",
+    "listing": {
+      "tag": "CASE_07",
+      "icon": "shopping-bag",
+      "title": "Supplements Hub ",
+      "description": "Designed and developed a complete Shopify nutrition store from the ground up, including branding, logo design, product imagery, UI/UX, and a scalable ecommerce architecture without any Figma designs.",
+      "result": "Modern, conversion-focused Shopify store with custom branding and premium shopping experience.",
+      "achievement": "Complete Shopify design & development with custom branding and optimized shopping UX.",
+      "stack": [
+        "Shopify",
+        "Liquid",
+        "JavaScript",
+        "CSS",
+        "Shopify Admin"
+      ],
+      "href": "/case-studies/supplementshub",
+      "liveUrl": "https://supplementshub.com.pk",
+      "image": "/case-study/supplementshub-thumbnail.webp",
+      "imageAlt": "Screenshot preview of SupplementsHub Pakistan Shopify store"
+    },
+    "heroMockup": "/case-study/supplementshub-mockup.webp",
+    "pageShowcase": {
+      "label": "Store showcase",
+      "title": "From concept to launch",
+      "text": "The entire ecommerce experience—including branding, logo, UI design, product imagery, and Shopify development—was created from scratch using only a reference website as inspiration.",
+      "items": [
+        {
+          "label": "Homepage",
+          "image": "/case-study/supplementshub-home.webp",
+          "caption": "Premium Shopify storefront"
+        },
+        {
+          "label": "Product Detail Page",
+          "image": "/case-study/supplementshub-product.webp",
+          "caption": "Conversion-focused product page"
+        },
+        {
+          "label": "Product Listing Page",
+          "image": "/case-study/supplementshub-product-list.webp",
+          "caption": "Conversion-focused product listing page"
+        }
+      ]
+    },
+    "eyebrow": "Case study / SupplementsHub Pakistan",
+    "headline": "Built a complete Shopify nutrition store from scratch with custom branding and premium ecommerce experience.",
+    "tagline": "Every aspect of the store—from logo and product creatives to UI design and Shopify development—was designed and developed without any design files, creating a unique and scalable ecommerce platform.",
+    "overview": "SupplementsHub Pakistan was built entirely from the ground up using Shopify. The project began with only a reference website, without any Figma designs or existing brand assets. The complete visual identity, logo, product image creatives, user interface, and ecommerce experience were designed from scratch. The store was optimized for conversions, easy product management, and a premium shopping experience while maintaining excellent responsiveness across all devices.",
+    "facts": [
+      {
+        "label": "Industry",
+        "value": "Nutrition & Wellness Ecommerce"
+      },
+      {
+        "label": "Objective",
+        "value": "Build a complete Shopify store from scratch"
+      },
+      {
+        "label": "Project type",
+        "value": "Branding, UI/UX Design & Shopify Development"
+      }
+    ],
+    "challenges": [
+      {
+        "title": "No design assets",
+        "text": "There were no Figma files, branding guidelines, or UI designs available. The complete design system had to be created from scratch."
+      },
+      {
+        "title": "Create a trustworthy brand",
+        "text": "Develop a premium visual identity suitable for nutrition and wellness products while building customer trust."
+      },
+      {
+        "title": "Conversion-focused ecommerce",
+        "text": "Design product pages, navigation, and shopping flows that simplify purchasing and improve the overall customer experience."
+      }
+    ],
+    "results": [
+      {
+        "title": "Complete custom Shopify store",
+        "text": "Designed and developed a fully custom Shopify ecommerce website tailored for nutrition and wellness products."
+      },
+      {
+        "title": "Brand identity from scratch",
+        "text": "Created the logo, visual identity, product graphics, and marketing imagery without relying on external design files."
+      },
+      {
+        "title": "Premium shopping experience",
+        "text": "Built a clean, responsive, and scalable ecommerce platform with intuitive navigation and optimized product presentation."
+      }
+    ],
+    "tools": [
+      "shopify",
+      "photoshop"
+    ],
+    "performanceNote": "The store was built with clean Shopify Liquid templates, lightweight custom components, optimized assets, responsive layouts, and streamlined product pages to deliver a fast, scalable ecommerce experience.",
+    "branding": {
+      "title": "Building a nutrition brand from the ground up.",
+      "text": "Everything from the logo and visual identity to product imagery and interface design was created specifically for SupplementsHub, resulting in a modern and trustworthy ecommerce brand.",
+      "logoMark": "SH",
+      "logoImage": "/client/supplementshub-Logo-client-arslan-no-color.svg",
+      "clientImage": "/client/supplementshub-Logo-client-arslan.svg",
+      "fontName": "DM Sans",
+      "fontFamilies": [
+        "DM Sans"
+      ],
+      "fontMeta": "A modern geometric typeface selected for readability, simplicity, and ecommerce usability.",
+      "palette": [
+        {
+          "label": "Primary",
+          "value": "#252023"
+        },
+        {
+          "label": "Accent",
+          "value": "#C7A83E"
+        },
+        {
+          "label": "Background",
+          "value": "#F2EEE6"
+        },
+        {
+          "label": "Success",
+          "value": "#008C62"
+        }
+      ]
+    },
+    "desktopPages": [
+      {
+        "name": "Homepage",
+        "type": "Custom Shopify landing page"
+      },
+      {
+        "name": "Collection Pages",
+        "type": "Optimized product browsing"
+      },
+      {
+        "name": "Product Detail Pages",
+        "type": "Conversion-focused product layouts"
+      },
+      {
+        "name": "Contact",
+        "type": "Responsive support page"
+      },
+      {
+        "name": "Cart & Checkout",
+        "type": "Optimized Shopify purchasing flow"
+      }
+    ],
+    "responsiveBenefits": [
+      "Fully custom Shopify storefront.",
+      "Premium UI designed without Figma.",
+      "Custom logo and product image creatives.",
+      "Mobile-first responsive shopping experience.",
+      "Easy product management using Shopify Admin.",
+      "Scalable architecture for future product expansion."
+    ],
+    "testimonial": {
+      "quote": "The store exceeded expectations with a premium design, custom branding, and a professional shopping experience built entirely from scratch.",
+      "author": "Arslan",
+      "meta": "Custom Shopify Ecommerce Store"
+    },
+    "cta": {
+      "heading": "Need a Shopify store built from scratch?",
+      "text": "I design and develop complete Shopify ecommerce websites—including branding, logo design, UI/UX, product creatives, and custom development—to create fast, modern, conversion-focused online stores.",
+      "buttonText": "Start Your Shopify Project"
+    }
+  }
+}

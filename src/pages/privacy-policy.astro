@@ -1,0 +1,46 @@
+---
+import Intro from "../components/portfolio/Intro.astro";
+import { sections, highlights } from "../data/privacy-policy";
+import Layout from "../layouts/PortfolioLayout.astro";
+---
+
+<Layout title="Privacy Policy"
+  ><div class="template-background">
+    <Intro
+      label="Legal"
+      title="Privacy Policy"
+      description="How contact details, project information, analytics, and support records are handled."
+    />
+  </div><article class="section wrap prose-narrow">
+    <p class="eyebrow">Last updated: June 28, 2026</p><div
+      class="two-grid legal-highlights"
+    >
+      {
+        highlights.map((h) => (
+          <div class="plain-card">
+            <>
+              <span class="eyebrow">{h.label}</span>
+              <p>{h.value}</p>
+            </>
+          </div>
+        ))
+      }
+    </div>{
+      sections.map((s) => (
+        <section class="spaced">
+          <h2>{s.title}</h2>
+          {s.paragraphs.map((text) => (
+            <p>{text}</p>
+          ))}
+          {"bullets" in s && (
+            <ul class="check-list">
+              {s.bullets?.map((text) => (
+                <li>{text}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))
+    }
+  </article></Layout
+>

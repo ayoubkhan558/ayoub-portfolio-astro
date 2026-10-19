@@ -1,0 +1,297 @@
+{
+  "html": {
+    "name": "HTML",
+    "categories": ["frontend"],
+    "logo": "/tools/html-5.svg",
+    "description": "Semantic HTML structure for accessible and well-organized websites."
+  },
+  "css": {
+    "name": "CSS",
+    "categories": ["frontend"],
+    "logo": "/tools/css-3.svg",
+    "description": "Responsive CSS styling for modern layouts and polished interfaces."
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "categories": ["frontend", "javascript"],
+    "logo": "/tools/javascript.svg",
+    "description": "Interactive JavaScript functionality for dynamic user experiences."
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "categories": ["frontend", "javascript"],
+    "logo": "/tools/TypeScript.svg",
+    "description": "Typed JavaScript development for scalable and maintainable applications."
+  },
+  "figma": {
+    "name": "Figma",
+    "categories": ["frontend"],
+    "logo": "/tools/figma.svg",
+    "description": "Collaborative interface design for efficient developer handoff workflows."
+  },
+  "nextjs": {
+    "name": "Next.js",
+    "categories": ["frontend", "javascript"],
+    "logo": "/tools/nextjs.svg",
+    "description": "React framework for fast, scalable production web applications."
+  },
+  "graphql": {
+    "name": "GraphQL",
+    "categories": ["frontend"],
+    "logo": "/tools/graphql.svg",
+    "description": "Query language for APIs and a runtime for executing those queries   ."
+  },
+  "redux": {
+    "name": "Redux",
+    "categories": ["frontend", "javascript"],
+    "logo": "/tools/Redux.svg",
+    "description": "Centralized state management for complex React applications."
+  },
+  "material-ui": {
+    "name": "Material UI",
+    "categories": ["frontend"],
+    "logo": "/tools/Material-UI.svg",
+    "description": "React component library for consistent and scalable user interfaces."
+  },
+  "bootstrap": {
+    "name": "Bootstrap",
+    "categories": ["frontend"],
+    "logo": "/tools/bootstrap.svg",
+    "description": "Responsive CSS framework for fast and consistent interface development."
+  },
+  "bulma": {
+    "name": "Bulma",
+    "categories": ["frontend"],
+    "logo": "/tools/Bulma.svg",
+    "description": "Lightweight CSS framework for responsive and modern website layouts."
+  },
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "categories": ["frontend"],
+    "logo": "/tools/tailwind.svg",
+    "description": "Utility-first CSS framework for fast custom interface development."
+  },
+  "gsap": {
+    "name": "GSAP",
+    "categories": ["frontend"],
+    "logo": "/tools/gsap.svg",
+    "description": "JavaScript animation library for smooth interactive web experiences."
+  },
+  "swiperjs": {
+    "name": "Swiper",
+    "logo": "/tools/swiper-logo.svg",
+    "description": "Touch-friendly slider library for responsive content and galleries."
+  },
+  "accessibility": {
+    "name": "Accessibility",
+    "logo": "/tools/accessibility.svg",
+    "description": "Web accessibility best practices for inclusive and usable digital experiences."
+  },
+  "php": {
+    "name": "PHP Templates",
+    "logo": "/tools/php.svg",
+    "description": "Custom WordPress templates with scalable PHP theme architecture."
+  },
+  "rest-api": {
+    "name": "REST API Patterns",
+    "logo": null,
+    "description": "Scalable REST API integration for dynamic website data handling."
+  },
+  "plyr": {
+    "name": "Plyr",
+    "logo": "/tools/plyr-io-logo.png",
+    "description": "Accessible media player for modern video and audio experiences."
+  },
+  "scrollreveal": {
+    "name": "ScrollReveal",
+    "logo": "/tools/scrollreveal.svg",
+    "description": "Scroll animation library for engaging page reveal effects."
+  },
+  "jquery": {
+    "name": "jQuery",
+    "logo": "/tools/jquery-icon.svg",
+    "description": "JavaScript library for simplified DOM manipulation and event handling."
+  },
+  "postcss": {
+    "name": "PostCSS",
+    "logo": "/tools/PostCSS.svg",
+    "description": "CSS processing tool for modern frontend development workflows."
+  },
+  "sass": {
+    "name": "Sass",
+    "logo": "/tools/sass.svg",
+    "description": "CSS preprocessor for scalable and maintainable stylesheet development."
+  },
+  "shopify": {
+    "name": "Shopify",
+    "logo": "/tools/shopify.svg",
+    "description": "eCommerce platform for customizable online stores and product management."
+  },
+  "webflow": {
+    "name": "Webflow",
+    "logo": "/tools/webflow-icon.svg",
+    "description": "Visual website builder for responsive marketing and business websites."
+  },
+  "vite": {
+    "name": "Vite",
+    "logo": "/tools/vitejs.svg",
+    "description": "Modern build tool for fast frontend development and testing."
+  },
+  "vercel": {
+    "name": "Vercel",
+    "logo": "/tools/vercel-logo.svg",
+    "description": "Cloud deployment platform for modern frontend and Next.js applications."
+  },
+  "git": {
+    "name": "Git",
+    "logo": "/tools/git-logo.svg",
+    "description": "Version control system for collaborative software development workflows."
+  },
+  "npm": {
+    "name": "NPM",
+    "logo": "/tools/NPM.svg",
+    "description": "JavaScript package manager for efficient dependency and script management."
+  },
+  "postman": {
+    "name": "Postman",
+    "logo": "/tools/Postman.svg",
+    "description": "API development platform for testing and debugging web services."
+  },
+  "json": {
+    "name": "JSON",
+    "logo": "/tools/JSON.svg",
+    "description": "Lightweight data format for APIs and application configuration files."
+  },
+  "seo": {
+    "name": "SEO",
+    "logo": "/tools/seo-2.png",
+    "description": "Search engine optimization practices for improving website visibility and ranking."
+  },
+  "rank-math": {
+    "name": "Rank Math",
+    "categories": ["seo"],
+    "logo": "/tools/rankmath.png",
+    "description": "WordPress SEO plugin for technical setup, structured data, and on-page optimization."
+  },
+  "yoast-seo": {
+    "name": "Yoast SEO",
+    "categories": ["seo"],
+    "logo": "/tools/yoast-seo.png",
+    "description": "WordPress SEO plugin for content optimization, metadata, and search readability."
+  },
+  "vs-code": {
+    "name": "VS Code",
+    "logo": "/tools/vs-code.svg",
+    "description": "Code editor for efficient software development and debugging workflows."
+  },
+  "mysql": {
+    "name": "MySQL",
+    "logo": "/tools/mysql.svg",
+    "description": "Relational database for scalable website and application data storage."
+  },
+  "phpmyadmin": {
+    "name": "phpMyAdmin",
+    "logo": "/tools/phpmyadmin.svg",
+    "description": "Web-based MySQL administration for efficient database management tasks."
+  },
+  "admin-columns-pro": {
+    "name": "Admin Columns Pro",
+    "logo": "/tools/admin-columns-pro.png",
+    "description": "Advanced WordPress admin columns for efficient content management workflows."
+  },
+  "chaty": {
+    "name": "Chaty",
+    "logo": "/tools/chaty.gif",
+    "description": "Multi-channel chat widget for seamless customer communication and support."
+  },
+  "litespeed-cache": {
+    "name": "LiteSpeed Cache",
+    "logo": "/tools/litespeed-cache.png",
+    "description": "WordPress caching plugin for faster performance and Core Web Vitals."
+  },
+  "meta-pixel": {
+    "name": "Meta Pixel",
+    "logo": "/tools/meta-pixel.svg",
+    "description": "Conversion tracking for Meta Ads and website visitor analytics."
+  },
+  "microsoft-clarity": {
+    "name": "Microsoft Clarity",
+    "logo": "/tools/microsoft-clarity.png",
+    "description": "User behavior analytics with heatmaps, recordings, and engagement insights."
+  },
+  "bricks-builder": {
+    "name": "Bricks Builder",
+    "logo": "/tools/bricks-logo.svg",
+    "description": "Visual WordPress builder for fast custom layouts and design."
+  },
+  "advanced-custom-fields": {
+    "name": "Advanced Custom Fields",
+    "logo": "/tools/acf.svg",
+    "description": "Structured WordPress fields for flexible editable website content."
+  },
+  "slim-seo": {
+    "name": "Slim SEO",
+    "logo": "/tools/slim-seo.svg",
+    "description": "Lightweight WordPress SEO for strong technical site optimization."
+  },
+  "seopress": {
+    "name": "SEOPress",
+    "logo": "/tools/slim-seo.svg",
+    "description": "Complete WordPress SEO for metadata, indexing, and optimization."
+  },
+  "fluent-smtp": {
+    "name": "FluentSMTP",
+    "logo": "/tools/fluent-smtp-logo.svg",
+    "description": "Reliable WordPress email delivery for forms and notifications."
+  },
+  "google-site-kit": {
+    "name": "Google Site Kit",
+    "logo": "/tools/google-search-console.svg",
+    "description": "Google insights for Search Console, Analytics, and performance data."
+  },
+  "happyfiles": {
+    "name": "HappyFiles",
+    "logo": "/tools/happyfiles-logo.svg",
+    "description": "WordPress media organization for cleaner file management workflows."
+  },
+  "happyfiles-pro": {
+    "name": "HappyFiles Pro",
+    "logo": "/tools/happyfiles-logo.svg",
+    "description": "Advanced WordPress media organization for large content libraries."
+  },
+  "wpc-admin-columns": {
+    "name": "Admin Columns",
+    "logo": null,
+    "description": "Custom WordPress admin columns for efficient content management."
+  },
+  "wordpress": {
+    "name": "WordPress CMS",
+    "logo": "/tools/wordpress.svg",
+    "description": "Flexible content management for scalable business websites."
+  },
+  "woocommerce": {
+    "name": "WooCommerce",
+    "logo": "/tools/woocommerce.svg",
+    "description": "Complete eCommerce solution for WordPress stores and online sales."
+  },
+  "elementor": {
+    "name": "Elementor Pro",
+    "logo": "/tools/elementor.svg",
+    "description": "Visual WordPress builder for responsive custom page layouts."
+  },
+  "performance-qa": {
+    "name": "Performance QA",
+    "logo": null,
+    "description": "Performance testing for responsive layouts and smooth user interactions."
+  },
+  "pinterest-api": {
+    "name": "Pinterest API Positioning",
+    "logo": "/tools/pinterest.svg",
+    "description": "Pinterest integration strategy for automated marketing and content workflows."
+  },
+  "whatsapp-flow": {
+    "name": "WhatsApp Flow",
+    "logo": "/tools/whatsapp.svg",
+    "description": "WhatsApp lead generation for seamless customer communication workflows."
+  }
+}

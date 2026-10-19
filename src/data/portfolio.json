@@ -1,0 +1,1156 @@
+{
+  "profile": {
+    "name": "Muhammad Ayoub",
+    "brand": "MAYOUB.DEV",
+    "role": "Web Developer & Full-Cycle SEO Specialist",
+    "location": "Faisalabad, Pakistan",
+    "phone": "+92 334 781 2124",
+    "email": "ayoubkhan558@hotmail.com",
+    "linkedin": "https://linkedin.com/in/ayoubkhan558",
+    "github": "https://github.com/ayoubkhan558",
+    "linktree": "https://linktr.ee/ayoubkhan558",
+    "website": "https://ayoubkhan.vercel.app/",
+    "upwork": "https://www.upwork.com/freelancers/~ayoubkhan558",
+    "availability": "Open for new projects",
+    "currentlyBuilding": "Resumify workflows",
+    "summary": "I build conversion-focused React, Next.js, and WordPress websites, then grow their search visibility with full-cycle SEO across technical, on-page, content, and off-page work."
+  },
+  "offer": "Refer a client — get 15% off your next project",
+  "navLinks": [
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Solutions",
+      "href": "/services"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "label": "Case Studies",
+      "href": "/case-studies"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "sections": {
+    "whyWork": {
+      "label": "Why clients stay",
+      "title": "No surprises. Just shipped.",
+      "subtitle": "What working together looks like."
+    },
+    "caseStudies": {
+      "label": "Featured Cases",
+      "title": "Behind the Solution",
+      "subtitle": "The thinking, decisions, and outcomes behind selected projects."
+    },
+    "projects": {
+      "label": "Selected Work",
+      "title": "What I've Built",
+      "subtitle": "Projects crafted with a focus on quality, usability, and impact."
+    },
+    "services": {
+      "label": "Solutions",
+      "title": "Solutions I provide.",
+      "subtitle": "Three productized ways to fix the business problems behind weak website performance."
+    },
+    "process": {
+      "label": "Process",
+      "title": "How a project runs.",
+      "subtitle": "Four steps. No black boxes."
+    },
+    "testimonials": {
+      "label": "Client words",
+      "title": "What clients say.",
+      "subtitle": "Unedited. From real projects."
+    },
+    "expertise": {
+      "label": "Stack",
+      "title": "Tools I reach for on day one.",
+      "subtitle": "Eight years of choosing what works."
+    },
+    "contact": {
+      "label": "Work together",
+      "title": "Got a project? Let's talk.",
+      "subtitle": "Tell me what you're building."
+    }
+  },
+  "hero": {
+    "headlineLineOne": "Web Developer + SEO Specialist for Sites That Rank & Convert",
+    "headlineLineTwo": "",
+    "subheadline": "I build and improve React, Next.js, and WordPress websites, pairing solid development with technical SEO, on-page improvements, useful content, and off-page authority building.",
+    "primaryCta": "Book a discovery call",
+    "secondaryCta": "View case studies",
+    "badges": [
+      {
+        "icon": "star",
+        "label": "Top Rated on Upwork"
+      }
+    ],
+    "trustMetrics": [
+      {
+        "label": "Experience",
+        "value": "8",
+        "unit": "+ yrs",
+        "trend": "React & UI"
+      },
+      {
+        "label": "Projects delivered",
+        "value": "50",
+        "unit": "+",
+        "trend": "+20 clients"
+      },
+      {
+        "label": "Rating",
+        "value": "4.9",
+        "unit": "/5",
+        "trend": "top rated"
+      }
+    ],
+    "deliveryLog": [
+      {
+        "time": "01",
+        "message": "Goals, users, and conversion blockers mapped",
+        "status": "OK"
+      },
+      {
+        "time": "02",
+        "message": "Figma or XD translated into pixel-precise React, HTML, CSS, and JavaScript",
+        "status": "OK"
+      },
+      {
+        "time": "03",
+        "message": "Next.js routing, data fetching, and API layer wired",
+        "status": "OK"
+      },
+      {
+        "time": "04",
+        "message": "Forms, APIs, tracking, and front-end integrations wired cleanly",
+        "status": "OK"
+      },
+      {
+        "time": "05",
+        "message": "Legacy dependencies detected — performance pass queued",
+        "status": "WARN"
+      },
+      {
+        "time": "06",
+        "message": "Accessibility, responsive QA, and Core Web Vitals checked before launch",
+        "status": "OK"
+      },
+      {
+        "time": "07",
+        "message": "Launch checklist cleared",
+        "status": "OK"
+      },
+      {
+        "time": "08",
+        "message": "Handoff complete — your team owns the codebase",
+        "status": "OK"
+      }
+    ]
+  },
+  "trustMarquee": [
+    {
+      "name": "SaaS",
+      "icon": "rocket"
+    },
+    {
+      "name": "E-Commerce",
+      "icon": "cart"
+    },
+    {
+      "name": "Marketing",
+      "icon": "globe"
+    },
+    {
+      "name": "Education",
+      "icon": "layers"
+    },
+    {
+      "name": "Healthcare",
+      "icon": "shield"
+    },
+    {
+      "name": "Real Estate",
+      "icon": "search"
+    },
+    {
+      "name": "5gStore",
+      "icon": "cart"
+    },
+    {
+      "name": "Xgrid",
+      "icon": "code"
+    },
+    {
+      "name": "PinAuto",
+      "icon": "gauge"
+    },
+    {
+      "name": "Markedine",
+      "icon": "sparkles"
+    },
+    {
+      "name": "Mortgage",
+      "icon": "lock"
+    },
+    {
+      "name": "Serveekay",
+      "icon": "users"
+    }
+  ],
+  "painPoints": [
+    "Your Visitors Drop In, But Don't Engage",
+    "Your Website Lacks Uniqueness",
+    "Your Competitor Stealing the Spotlight"
+  ],
+  "problemsSolved": [
+    "Unclear homepage messaging that fails to explain what you do",
+    "Weak CTA flow that leaves visitors unsure what to do next",
+    "Slow pages that make people bounce before reading the offer",
+    "Mobile layouts that break trust on the device most visitors use",
+    "Service pages that describe features but do not sell outcomes",
+    "Outdated visual design that makes a capable business look less credible",
+    "Contact forms and inquiry paths with too much friction",
+    "Project handoffs where the business cannot update or reuse the website confidently",
+    "Landing pages that get traffic but do not convert enough leads",
+    "Competitors feeling more polished, easier to trust, and easier to buy from"
+  ],
+  "whyWork": [
+    "Scope agreed before work starts",
+    "Updates without being asked",
+    "Deadlines that hold",
+    "Code the next dev can read",
+    "Mobile and performance by default",
+    "Feedback rounds, not big reveals",
+    "Problems flagged early, not at launch",
+    "Clean handoff every time",
+    "You own it when we're done"
+  ],
+  "outcomes": [
+    "A clearer homepage that explains the offer in seconds",
+    "Stronger calls to action and a simpler inquiry path",
+    "Pages structured around buyer questions, objections, and next steps",
+    "A faster mobile experience that protects trust before the first click",
+    "Reusable sections for future campaigns, services, and landing pages",
+    "A website that feels more credible against stronger competitors",
+    "Clean implementation that your team or next developer can maintain",
+    "CMS support only where editing control is genuinely useful"
+  ],
+  "services": [
+    {
+      "level": "SOLUTION_01",
+      "name": "Custom Web App",
+      "price": "Starting from $2,000",
+      "period": "",
+      "description": "Build a polished product interface, MVP front end, dashboard, or web app experience with clean implementation.",
+      "whatYouGet": "Reusable UI components, responsive screens, state-aware interface patterns, API-ready structure, and maintainable front-end delivery.",
+      "timeline": "Typical timeline: 2-5 weeks",
+      "bestFit": "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
+      "features": [
+        "User-flow based screen structure",
+        "Reusable interface components",
+        "Empty, loading, error, and responsive states",
+        "API and form integration readiness",
+        "Clean code handoff for future development"
+      ],
+      "cta": "Build my product",
+      "href": "/contact",
+      "featured": true
+    },
+    {
+      "level": "SOLUTION_02",
+      "name": "Landing Page",
+      "price": "Starting from $500",
+      "period": "",
+      "description": "A focused landing page for ads, product launches, lead magnets, SaaS offers, or service campaigns.",
+      "whatYouGet": "A conversion-focused page with offer framing, CTA sections, forms, responsive layout, tracking-ready structure, and clean handoff.",
+      "timeline": "Typical timeline: 3-10 days",
+      "bestFit": "Best when you need a dedicated page for a campaign, service, SaaS idea, or product instead of sending traffic to a general website.",
+      "features": [
+        "Single-purpose page strategy",
+        "Section flow from problem to solution to action",
+        "Lead form or booking CTA integration",
+        "Fast mobile-friendly build",
+        "Analytics and conversion event readiness"
+      ],
+      "cta": "Launch my page",
+      "href": "/contact",
+      "featured": true
+    },
+    {
+      "level": "SOLUTION_03",
+      "name": "Website Redesign",
+      "price": "Starting from $1,000",
+      "period": "",
+      "description": "Modernize a dated website, improve credibility, fix the mobile experience, and strengthen conversion paths.",
+      "whatYouGet": "Visual hierarchy cleanup, modern section design, clearer service positioning, improved responsiveness, and implementation support.",
+      "timeline": "Typical timeline: 1-2 weeks",
+      "bestFit": "Best when your business is good, but the website makes prospects hesitate or compare you unfavorably with competitors.",
+      "features": [
+        "Before/after page structure improvements",
+        "Typography, spacing, and visual polish",
+        "Trust signals and proof made more visible",
+        "Mobile layout repair",
+        "Conversion path cleanup"
+      ],
+      "cta": "Plan my redesign",
+      "href": "/contact",
+      "featured": true
+    },
+    {
+      "level": "SOLUTION_04",
+      "name": "Speed Optimization",
+      "price": "Starting from $400",
+      "period": "",
+      "description": "Improve website speed, Core Web Vitals, and page performance so visitors get a faster, smoother experience.",
+      "whatYouGet": "Focused fixes across performance, spacing, mobile layout, forms, broken interactions, and high-friction user paths.",
+      "timeline": "Typical timeline: 1-5 days",
+      "bestFit": "Best when the website mostly exists, but users hit friction before they inquire, book, buy, or trust the brand.",
+      "features": [
+        "Mobile usability fixes",
+        "Speed and Core Web Vitals improvements",
+        "Broken form/menu/interaction repairs",
+        "CTA and layout cleanup",
+        "Cross-browser QA"
+      ],
+      "cta": "Optimize my site",
+      "href": "/contact",
+      "featured": false
+    },
+    {
+      "level": "SOLUTION_05",
+      "name": "E-Commerce Setup",
+      "price": "Starting from $900",
+      "period": "",
+      "description": "Set up a customer-ready online store with clear product pages, trusted checkout, and a smooth mobile shopping experience.",
+      "whatYouGet": "Store structure, product and collection setup, payment and shipping configuration, checkout review, and mobile QA.",
+      "timeline": "Typical timeline: 1-4 weeks",
+      "bestFit": "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
+      "features": [
+        "Product and collection setup",
+        "Payment and shipping configuration",
+        "Clear product page structure",
+        "Mobile-friendly cart and checkout",
+        "Store launch QA"
+      ],
+      "cta": "Set up my store",
+      "href": "/contact",
+      "featured": false
+    },
+    {
+      "level": "SOLUTION_06",
+      "name": "Ongoing Support",
+      "price": "Starting from $300/mo",
+      "period": "",
+      "description": "Ongoing website improvements, fixes, new sections, content updates, and technical support after launch.",
+      "whatYouGet": "A practical monthly support lane for small improvements, performance checks, bug fixes, campaign updates, and launch follow-through.",
+      "timeline": "Monthly support",
+      "bestFit": "Best when the site is live but still needs steady iteration, technical care, and quick changes without starting a new project every time.",
+      "features": [
+        "Small design and content updates",
+        "Bug fixes and browser checks",
+        "Performance and plugin cleanup",
+        "New landing sections when needed",
+        "Priority support window"
+      ],
+      "cta": "Keep improving",
+      "href": "/contact",
+      "featured": false
+    }
+  ],
+  "process": [
+    {
+      "tag": "01_DISCOVERY",
+      "icon": "search",
+      "title": "Discovery & Planning",
+      "description": "We clarify business goals, target users, current blockers, success metrics, technical requirements, and project scope.",
+      "metrics": [
+        {
+          "label": "Goals",
+          "value": "Clear"
+        },
+        {
+          "label": "Scope",
+          "value": "Mapped"
+        },
+        {
+          "label": "Risk",
+          "value": "Known"
+        }
+      ]
+    },
+    {
+      "tag": "02_SOLUTION",
+      "icon": "layers",
+      "title": "Solution Design",
+      "description": "I define the structure before build: page flow, components, APIs, CMS needs, integrations, hosting, and deployment plan.",
+      "metrics": [
+        {
+          "label": "Flow",
+          "value": "Planned"
+        },
+        {
+          "label": "Stack",
+          "value": "Chosen"
+        },
+        {
+          "label": "Data",
+          "value": "Mapped"
+        }
+      ]
+    },
+    {
+      "tag": "03_DEVELOPMENT",
+      "icon": "code",
+      "title": "Development",
+      "description": "I build in visible milestones with clean, responsive, maintainable implementation and feedback loops throughout.",
+      "metrics": [
+        {
+          "label": "Frontend",
+          "value": "Active"
+        },
+        {
+          "label": "Integrations",
+          "value": "Wired"
+        },
+        {
+          "label": "Updates",
+          "value": "Weekly"
+        }
+      ]
+    },
+    {
+      "tag": "04_TESTING",
+      "icon": "shield",
+      "title": "Testing & QA",
+      "description": "Functionality, forms, responsiveness, browser behavior, performance, accessibility, and edge cases are checked before launch.",
+      "metrics": [
+        {
+          "label": "Mobile",
+          "value": "Tested"
+        },
+        {
+          "label": "Speed",
+          "value": "Checked"
+        },
+        {
+          "label": "Bugs",
+          "value": "Fixed"
+        }
+      ]
+    },
+    {
+      "tag": "05_LAUNCH",
+      "icon": "rocket",
+      "title": "Deployment & Launch",
+      "description": "Production deployment, domain and hosting setup, SSL, analytics, final QA, and launch handoff are handled carefully.",
+      "metrics": [
+        {
+          "label": "Deploy",
+          "value": "Ready"
+        },
+        {
+          "label": "SSL",
+          "value": "Set"
+        },
+        {
+          "label": "Analytics",
+          "value": "Wired"
+        }
+      ]
+    },
+    {
+      "tag": "06_GROWTH",
+      "icon": "gauge",
+      "title": "Support & Growth",
+      "description": "After launch, I can help with improvements, maintenance, new features, performance monitoring, and scaling needs.",
+      "metrics": [
+        {
+          "label": "Support",
+          "value": "Available"
+        },
+        {
+          "label": "Improve",
+          "value": "Ongoing"
+        },
+        {
+          "label": "Scale",
+          "value": "Ready"
+        }
+      ]
+    }
+  ],
+  "about": {
+    "story": "I'm a web developer and full-cycle SEO specialist based in Faisalabad, Pakistan. I build React, Next.js, and WordPress websites, then improve their visibility through technical SEO, on-page optimization, content strategy, and off-page authority building.",
+    "motivation": "Most of the projects I'm brought onto have the same root problem: a UI that was built fast but not built to last. Hard to extend, slow to load, impossible to hand off. I fix that — and make sure the technical foundation, performance, and SEO structure support long-term growth instead of just looking good on launch day.",
+    "originStory": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
+    "education": "Master of Computer Science, University of Sahiwal",
+    "careerStartLabel": "Career Started",
+    "careerPath": [
+      {
+        "year": "2018",
+        "title": "Frontend Foundations",
+        "technologies": "HTML, CSS, JavaScript, Bootstrap",
+        "description": "Learning the fundamentals and building responsive web interfaces."
+      },
+      {
+        "year": "2021",
+        "title": "WordPress Development",
+        "technologies": "WordPress, Elementor",
+        "description": "Creating and customizing CMS-powered websites with flexible page layouts."
+      },
+      {
+        "year": "2022",
+        "title": "React Development",
+        "technologies": "React.js",
+        "description": "Building interactive interfaces with reusable components."
+      },
+      {
+        "year": "2026 - Current",
+        "title": "SEO Strategy",
+        "technologies": "On-page SEO, Off-page SEO, Technical SEO, Content Strategy",
+        "description": "Leading full-cycle SEO growth across technical optimization, on-page improvements, content structure, authority building, and conversion-focused visibility strategy.",
+        "current": true
+      }
+    ],
+    "heroStatAwardLabels": {
+      "experience": "Experience",
+      "projects": "Projects delivered",
+      "jobSuccess": "Rating"
+    },
+    "signature": "Muhammad Ayoub",
+    "resumeHref": "/ATS-react-front-Ayoub-CV_Resume.pdf",
+    "awards": [
+      {
+        "label": "Projects delivered",
+        "value": "50+"
+      },
+      {
+        "label": "Rating",
+        "value": "4.7+"
+      },
+      {
+        "label": "Experience",
+        "value": "8+ Years"
+      },
+      {
+        "label": "Happy clients",
+        "value": "20+"
+      }
+    ],
+    "storyCards": [
+      {
+        "label": "How I got into web development",
+        "title": "Self-learning shaped how I build",
+        "text": "That start taught me to be patient, resourceful, and practical when learning new tools or solving project problems."
+      },
+      {
+        "label": "What I enjoy building",
+        "title": "Useful websites, product pages, and internal tools",
+        "text": "I enjoy turning designs and ideas into fast React, Next.js, WordPress, and WooCommerce experiences that are clean to manage after launch."
+      },
+      {
+        "label": "Who I work with",
+        "title": "Founders, agencies, and product teams",
+        "text": "Most of my work is with people who need dependable implementation, practical communication, and a site or interface their team can keep improving."
+      }
+    ],
+    "toolbox": [
+      {
+        "title": "React",
+        "items": [
+          "React.js Ecosystem",
+          "Component-Driven Architecture",
+          "State Management & Hooks",
+          "REST APIs Integration"
+        ]
+      },
+      {
+        "title": "Styling",
+        "items": [
+          "Tailwind CSS",
+          "Sass / SCSS",
+          "Responsive Layout Systems",
+          "Figma-to-Code Implementation"
+        ]
+      },
+      {
+        "title": "Builders",
+        "items": [
+          "Bricks Builder",
+          "Elementor Pro",
+          "Dynamic Templates",
+          "Custom Widget Integration"
+        ]
+      },
+      {
+        "title": "Dynamic",
+        "items": [
+          "Advanced Custom Fields (ACF)",
+          "Custom Post Types (CPTs)",
+          "WooCommerce Development",
+          "Flexible Content Layouts"
+        ]
+      },
+      {
+        "title": "Performance",
+        "items": [
+          "Core Web Vitals Optimization",
+          "Speed & Asset Optimization",
+          "Clean & Scalable Codebase",
+          "Mobile-First QA Testing"
+        ]
+      },
+      {
+        "title": "SEO & Growth",
+        "items": [
+          "Technical, On-Page & Off-Page SEO",
+          "Content Strategy & Search Intent",
+          "Authority & Link Building",
+          "Conversion Flow & CTA Planning",
+          "Tracking-Ready Analytics",
+          "CMS Handoff & Documentation"
+        ]
+      }
+    ],
+    "toolboxIconKeys": [
+      "nextjs",
+      "typescript",
+      "javascript",
+      "redux",
+      "material-ui",
+      "wordpress",
+      "woocommerce",
+      "figma",
+      "html",
+      "css",
+      "tailwind",
+      "sass",
+      "bootstrap",
+      "bulma",
+      "postcss",
+      "git",
+      "npm",
+      "postman",
+      "json",
+      "seo",
+      "rank-math",
+      "yoast-seo",
+      "vercel",
+      "vs-code",
+      "mysql",
+      "phpmyadmin"
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "E-commerce client",
+      "role": "WooCommerce project",
+      "quote": "Ayoub improved the store structure, made the pages easier to manage, and handled feedback quickly."
+    },
+    {
+      "name": "Agency team",
+      "role": "WordPress delivery",
+      "quote": "Clear communication, reliable delivery, and strong attention to responsive details across the project."
+    }
+  ],
+  "stats": [
+    {
+      "target": 5,
+      "suffix": "+",
+      "label": "Years experience",
+      "sub": "React, Next.js & WordPress",
+      "icon": "gauge"
+    },
+    {
+      "target": 50,
+      "suffix": "+",
+      "label": "Projects delivered",
+      "sub": "Products, sites, and tools",
+      "icon": "layers"
+    },
+    {
+      "target": 20,
+      "suffix": "+",
+      "label": "Happy clients",
+      "sub": "Across multiple industries",
+      "icon": "users"
+    }
+  ],
+  "recognition": [
+    {
+      "label": "Top Rated Freelancer",
+      "status": "Verified"
+    },
+    {
+      "label": "4.7+ Rating",
+      "status": "Trusted"
+    },
+    {
+      "label": "Master of Computer Science",
+      "status": "University of Sahiwal"
+    },
+    {
+      "label": "Currently Building",
+      "status": "Resumify"
+    }
+  ],
+  "expertise": [
+    {
+      "icon": "rocket",
+      "name": "React.js",
+      "version": "v18+",
+      "role": "Components, hooks, state, performance"
+    },
+    {
+      "icon": "layers",
+      "name": "Next.js",
+      "version": "App Router",
+      "role": "SSR, SSG, routing, server components"
+    },
+    {
+      "icon": "code",
+      "name": "TypeScript & JavaScript",
+      "version": "ES2024",
+      "role": "Type-safe, maintainable front-end code"
+    },
+    {
+      "icon": "sparkles",
+      "name": "Tailwind / Shadcn / Bootstrap",
+      "version": "v3+",
+      "role": "Utility-first and component UI systems"
+    },
+    {
+      "icon": "image",
+      "name": "Figma to Code",
+      "version": "Pixel",
+      "role": "Accurate, responsive implementation from designs"
+    },
+    {
+      "icon": "gauge",
+      "name": "Performance & Technical SEO",
+      "version": "Lighthouse",
+      "role": "Speed, crawlability, WebP, lazy loading, Core Web Vitals, and indexing health"
+    },
+    {
+      "icon": "shield",
+      "name": "API Integrations",
+      "version": "REST",
+      "role": "Stripe, PayPal, Shopify, custom APIs"
+    },
+    {
+      "icon": "globe",
+      "name": "WordPress CMS",
+      "version": "5+ yrs",
+      "role": "Themes, ACF, CPT, REST API, headless"
+    },
+    {
+      "icon": "cart",
+      "name": "WooCommerce",
+      "version": "Stores",
+      "role": "Product pages, checkout, payment flows"
+    },
+    {
+      "icon": "database",
+      "name": "CMS Architecture",
+      "version": "ACF",
+      "role": "Editable content models and templates"
+    },
+    {
+      "icon": "check",
+      "name": "QA & Handoff",
+      "version": "Launch",
+      "role": "Testing, docs, support, maintainability, and technical SEO validation"
+    }
+  ],
+  "experienceLog": [
+    {
+      "year": "2024 - 2026",
+      "duration": "1 year 9 months",
+      "startDate": "2024-10-01",
+      "endDate": "2026-07-06",
+      "title": "Frontend Website Developer",
+      "company": "Xgrid",
+      "location": "Islamabad",
+      "logo": "/comapnies/xgrid-logo.svg",
+      "description": "Building custom WordPress and React-based websites, developing reusable components, creating internal tools such as Brickify to improve development workflows, and implementing technical SEO improvements."
+    },
+    {
+      "year": "2023 - 2024",
+      "duration": "1 year 6 months",
+      "startDate": "2023-02-14",
+      "endDate": "2024-08-13",
+      "title": "Senior Website Developer",
+      "company": "Epicsols",
+      "location": "Sahiwal",
+      "logo": "/comapnies/epicsols-logo.png",
+      "description": "Delivered WordPress, React, and Next.js projects, transformed Figma designs into production-ready websites, and developed scalable CMS solutions."
+    },
+    {
+      "year": "2020 - 2023",
+      "duration": "3 years",
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "title": "Freelance Web Developer & SEO Specialist",
+      "company": "Fiverr & Upwork",
+      "location": "Remote",
+      "logo": "/comapnies/fiverr_Logo.png",
+      "description": "Delivered 100+ small projects, including websites, landing pages, and Shopify stores, alongside SEO services. Achieved Level 2 Seller status on Fiverr and Top Rated status on Upwork."
+    },
+    {
+      "year": "2019 - 2020",
+      "duration": "1 year",
+      "startDate": "2019-01",
+      "endDate": "2020-01",
+      "title": "Frontend Developer",
+      "company": "Hawk ITs & Consultancy Provider",
+      "location": "Sahiwal",
+      "logo": "/comapnies/hawk-it-logo.png",
+      "description": "Developed responsive websites and web applications using JavaScript, jQuery, AJAX, Angular, and modern front-end practices."
+    },
+    {
+      "year": "2018",
+      "duration": "6 months",
+      "startDate": "2018-01",
+      "endDate": "2018-06",
+      "title": "Frontend Developer Intern",
+      "company": "AWSOL Web Technologies",
+      "location": "Lahore",
+      "logo": "/comapnies/awsol-logo.png",
+      "description": "Started my professional development journey by building responsive interfaces and learning production-level development workflows."
+    }
+  ],
+  "contactSteps": [
+    "Send project details",
+    "Get a build estimate"
+  ],
+  "faqs": [
+    {
+      "question": "How long does a typical project take?",
+      "answer": "Small landing pages usually take 3–10 days. Redesigns and product front ends usually take 2–5 weeks depending on scope, content, integrations, and feedback speed."
+    },
+    {
+      "question": "Do you only design or also develop?",
+      "answer": "I develop the final website or front end. I can work from your design, improve an existing design, or help structure the page before implementation."
+    },
+    {
+      "question": "What can I hire you for?",
+      "answer": "Homepage conversion, landing pages, website redesigns, product front ends, speed/mobile cleanup, editable website systems, and store conversion improvements."
+    },
+    {
+      "question": "Do you work with international clients?",
+      "answer": "Yes. I work remotely with founders, agencies, businesses, and product teams across different time zones."
+    },
+    {
+      "question": "Do you provide ongoing support?",
+      "answer": "Yes. After launch I can help with maintenance, bug fixes, new sections, performance improvements, and feature enhancements."
+    },
+    {
+      "question": "Do you share pricing upfront?",
+      "answer": "Yes. Services use starting-from pricing to qualify scope quickly. Final pricing depends on pages, complexity, integrations, content readiness, and timeline."
+    }
+  ],
+  "footerColumns": [
+    {
+      "title": "Sections",
+      "links": [
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Projects",
+          "href": "/projects"
+        },
+        {
+          "label": "Case Studies",
+          "href": "/case-studies"
+        }
+      ]
+    },
+    {
+      "title": "Projects",
+      "links": [
+        {
+          "label": "Brickify",
+          "href": "https://brickify.netlify.app"
+        },
+        {
+          "label": "5gStore",
+          "href": "https://5gstore.pk"
+        },
+        {
+          "label": "PinAuto",
+          "href": "https://pin-auto.com"
+        },
+        {
+          "label": "Clampy",
+          "href": "https://clampy.netlify.app"
+        }
+      ]
+    },
+    {
+      "title": "Contact",
+      "links": [
+        {
+          "label": "Email",
+          "href": "mailto:ayoubkhan558@hotmail.com"
+        },
+        {
+          "label": "Phone",
+          "href": "tel:+923347812124"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/in/ayoubkhan558"
+        },
+        {
+          "label": "Hire Me",
+          "href": "/contact"
+        }
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "name": "Weinberger Aesthetics",
+      "role": "Aesthetics practice client",
+      "logo": "/client/weinberger-aesthetics-logo.svg",
+      "logoDark": "/client/weinberger-aesthetics-logo-no-color.svg",
+      "website": "https://weinbergeraesthetics.com/",
+      "reviewId": "review-weinbergeraesthetics-01",
+      "review": "Aesthetic practice pages tuned for premium trust and appointment intent.",
+      "testimonial": "The result felt more premium and made the path to booking feel clearer and more trustworthy.",
+      "initials": "WA",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Studyly",
+      "role": "Education product client",
+      "logo": "/client/studyly-logo.svg",
+      "logoDark": "/client/studyly-logo-no-color.svg",
+      "website": "https://studyly.com/",
+      "reviewId": "review-studyly-01",
+      "review": "Education product UI shaped around simple onboarding and readable content.",
+      "testimonial": "The product experience became more approachable and the content layout felt much cleaner.",
+      "initials": "ST",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Sunshield Insurance",
+      "role": "Insurance website client",
+      "logo": "/client/sunshieldins-logo.svg",
+      "logoDark": "/client/sunshieldins-logo-no-color.svg",
+      "website": "https://sunshieldins.com/",
+      "reviewId": "review-sunshieldins-01",
+      "review": "Insurance pages organized for faster quote intent and clearer service paths.",
+      "testimonial": "The pages made our services easier to understand and improved the path toward quote requests.",
+      "initials": "SI",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Kings RE",
+      "role": "Real estate client",
+      "logo": "/client/kingsre-logo.png",
+      "logoDark": "/client/kingsre-logo-no-color.png",
+      "website": "https://www.kingsrealestate.com/",
+      "reviewId": "review-kingsre-01",
+      "review": "Real estate pages structured for trust, clarity, and lead capture.",
+      "testimonial": "The website feels more credible and makes it easier for prospects to move toward an inquiry.",
+      "initials": "KR",
+      "avatar": "/client/inshad-arshad-bajwa-client.jpg",
+      "showInClientImages": true,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "LWS Academy",
+      "role": "Education platform client",
+      "logo": "/client/lws-academy-logo.png",
+      "logoDark": "/client/lws-academy-logo-no-color.png",
+      "website": "https://lws.academy/",
+      "reviewId": "review-lwsacademy-01",
+      "review": "Learning-site interface work with cleaner content structure and navigation.",
+      "testimonial": "The learning pages became cleaner, easier to scan, and more consistent across devices.",
+      "initials": "LW",
+      "avatar": "/client/shajeel-afzal-lws-client.jpg",
+      "showInClientImages": true,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Markedine",
+      "role": "Marketing website client",
+      "logo": "/client/markedine-logo.png",
+      "logoDark": "/client/markedine-logo-no-color.png",
+      "website": "https://markedine.com/",
+      "reviewId": "review-markedine-01",
+      "review": "Marketing pages refined for sharper positioning and conversion paths.",
+      "testimonial": "Clear communication, reliable delivery, and strong attention to responsive details across the project.",
+      "initials": "MD",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Pagano Law",
+      "role": "Professional services client",
+      "logo": "/client/paganolaw-logo.png",
+      "logoDark": "/client/paganolaw-logo.png",
+      "website": "https://paganolaw.com/",
+      "reviewId": "review-paganolaw-01",
+      "review": "Professional service pages built around credibility and clear inquiry paths.",
+      "testimonial": "The final pages were polished, readable, and better suited for high-trust service inquiries.",
+      "initials": "PL",
+      "avatar": "/client/paganolaw-gregory-j-agano-client.jpg",
+      "showInClientImages": true,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "RO Gold",
+      "role": "Commerce client",
+      "logo": "/client/ro-gold-logo.png",
+      "logoDark": "/client/ro-gold-logo-no-color.png",
+      "website": "https://rogold.com/",
+      "reviewId": "review-rogold-01",
+      "review": "Commerce presentation polished for product confidence and premium feel.",
+      "testimonial": "The work gave our products a stronger presentation and a more premium browsing experience.",
+      "initials": "RG",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Serveekay",
+      "role": "Service business client",
+      "logo": "/client/serveekay-logo.svg",
+      "logoDark": "/client/serveekay-logo-no-color.svg",
+      "website": "https://serveekay.com/",
+      "reviewId": "review-serveekay-01",
+      "review": "Service-site delivery with better hierarchy, speed, and maintainability.",
+      "testimonial": "The site became easier to maintain and the page hierarchy was much clearer after launch.",
+      "initials": "SK",
+      "avatar": "/client/serveekay-waleed-client.jpg",
+      "showInClientImages": true,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Baby PNG",
+      "role": "Image tooling client",
+      "logo": "/client/baby-png-logo.svg",
+      "logoDark": "/client/baby-png-logo-no-color.svg",
+      "website": "https://babypng.com/",
+      "reviewId": "review-babypng-01",
+      "review": "Image tooling UI delivered with cleaner flows and faster conversion paths.",
+      "testimonial": "The interface became easier to use, clearer to navigate, and better aligned with our product goals.",
+      "initials": "BP",
+      "avatar": null,
+      "proofLabel": "Founders, individuals, and teams I've built for",
+      "proofText": "20+ happy clients",
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Carptrac",
+      "role": "Service website client",
+      "logo": "/client/carptrac-Logo.svg",
+      "logoDark": "/client/carptrac-Logo-no-color.svg",
+      "website": "https://www.carptrac.com.fj/",
+      "reviewId": "review-carptrac-01",
+      "review": "A practical website build that made product and service discovery easier.",
+      "testimonial": "Ayoub gave the site a clearer structure and helped visitors understand the offer faster.",
+      "initials": "CT",
+      "avatar": "/client/robert-wee-carptrac-client.jpg",
+      "showInClientImages": true,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "5G Store",
+      "role": "E-commerce client",
+      "logo": "/client/logo-5g-store.png",
+      "logoDark": "/client/logo-5g-store-no-color.png",
+      "website": "https://5gstore.com/",
+      "reviewId": "review-5gstore-01",
+      "review": "E-commerce improvements focused on product clarity and technical buyers.",
+      "testimonial": "Ayoub improved the store structure, made the pages easier to manage, and handled feedback quickly.",
+      "initials": "5G",
+      "avatar": "/client/hassan-client-5g-store.jpg",
+      "showInClientImages": true,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Serpio",
+      "role": "Product interface client",
+      "logo": "/client/serpio-logo.png",
+      "logoDark": "/client/serpio-logo-no-color.png",
+      "website": "https://serpio.com/",
+      "reviewId": "review-serpio-01",
+      "review": "Product interface work focused on usability, structure, and launch quality.",
+      "testimonial": "The interface work improved usability and gave the product a cleaner launch-ready structure.",
+      "initials": "SP",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "The Royal Pin",
+      "role": "Brand commerce client",
+      "logo": "/client/theroyalpin-logo.png",
+      "logoDark": "/client/theroyalpin-logo-no-color.png",
+      "website": "https://theroyalpin.com/",
+      "reviewId": "review-theroyalpin-01",
+      "review": "Brand-led site work with stronger product storytelling and polish.",
+      "testimonial": "The site presentation became sharper, more refined, and better matched the brand direction.",
+      "initials": "RP",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    },
+    {
+      "name": "Shinning Horizon",
+      "role": "Brand website client",
+      "logo": "/client/shinning-horizon-logo.png",
+      "logoDark": "/client/shinning-horizon-logo-no-color.png",
+      "website": "https://shinninghorizon.com/",
+      "reviewId": "review-shinninghorizon-01",
+      "review": "A cleaner web presence with stronger section flow and visual consistency.",
+      "testimonial": "The website now feels more consistent and gives visitors a clearer path through the content.",
+      "initials": "SH",
+      "avatar": null,
+      "showInClientImages": false,
+      "showInLogos": true,
+      "showInTestimonials": true
+    }
+  ],
+  "bestFit": [
+    "Founders who need custom React.js or Next.js landing pages",
+    "Agencies that need reliable HTML, CSS, JavaScript, or React implementation",
+    "SaaS/product teams that need fast front-end pages, dashboards, or MVP UI",
+    "Businesses that want a conversion-focused website before investing in a CMS"
+  ]
+}

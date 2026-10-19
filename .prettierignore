@@ -1,0 +1,14 @@
+node_modules
+pnpm-lock.yaml
+package-lock.json
+src/components/ui
+.astro
+public
+src/data
+dist
+qa
+preview
+migration-manifest.json
+
+# Preserve dynamic Astro templates; format explicitly after review.
+src/**/*.astro

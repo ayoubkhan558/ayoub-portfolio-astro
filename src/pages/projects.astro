@@ -1,0 +1,208 @@
+---
+import CTA from "../components/portfolio/CTA.astro";
+import Intro from "../components/portfolio/Intro.astro";
+import ProjectCard from "../components/portfolio/ProjectCard.astro";
+import {
+  sortProjectsByLiveStatus,
+  projectPlatformFilters,
+  projectStatusFilters,
+} from "../data/projectsArchive";
+import archive from "../data/projectsArchive.json";
+import Layout from "../layouts/PortfolioLayout.astro";
+const projects = sortProjectsByLiveStatus(archive.projects);
+---
+
+<Layout title="Projects"
+  ><div class="template-background">
+    <Intro
+      label="The complete archive"
+      title="Ideas brought to life."
+      description="Client websites, product interfaces, and useful tools. Explore my work across industries and technologies."
+    /><section class="section wrap first-section" id="archive">
+      <form class="project-toolbar" id="project-filters" role="search">
+        <label for="project-search"
+          >Search projects<input
+            id="project-search"
+            name="q"
+            type="search"
+            placeholder="Search name, industry, stack…"
+          /></label
+        ><label for="platform-filter"
+          >Platform<select id="platform-filter" name="platform"
+            >{
+              projectPlatformFilters.map((p) => (
+                <option value={p.value}>{p.label}</option>
+              ))
+            }</select
+          ></label
+        ><label for="status-filter"
+          >Original project status<select id="status-filter" name="status"
+            >{
+              projectStatusFilters.map((p) => (
+                <option value={p.value}>{p.label}</option>
+              ))
+            }</select
+          ></label
+        >
+      </form><p
+        class="project-count"
+        id="project-count"
+        tabindex="-1"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {projects.length} projects · status labels are from the original portfolio,
+        not a current uptime check.
+      </p><div class="project-grid" id="project-grid">
+        {projects.map((p, index) => <ProjectCard project={p} index={index} />)}
+      </div><div class="empty-state" id="no-projects" hidden>
+        <h2>No matching projects.</h2><p>
+          Try a different keyword or clear your filters.
+        </p><button class="button outline" id="clear-filters"
+          >Clear filters</button
+        >
+      </div><div class="pagination" id="pagination" hidden>
+        <button type="button" class="button outline" id="prev-page"
+          >← Previous</button
+        ><span id="page-label" aria-live="polite"></span><button
+          type="button"
+          class="button outline"
+          id="next-page">Next →</button
+        >
+      </div><noscript
+        ><style>
+          .project-toolbar {
+            display: none;
+          }
+        </style><p>
+          All projects are shown. Enable JavaScript to use search, filters, and
+          pagination.
+        </p></noscript
+>
+    </section>
+  </div><CTA /></Layout
+>
+<script>
+  const cards = [...document.querySelectorAll<HTMLElement>(".project-card")];
+  const search = document.querySelector<HTMLInputElement>("#project-search")!;
+  const platform =
+    document.querySelector<HTMLSelectElement>("#platform-filter")!;
+  const status = document.querySelector<HTMLSelectElement>("#status-filter")!;
+  const form = document.querySelector<HTMLFormElement>("#project-filters")!;
+  const count = document.querySelector<HTMLElement>("#project-count")!;
+  const empty = document.querySelector<HTMLElement>("#no-projects")!;
+  const pagination = document.querySelector<HTMLElement>("#pagination")!;
+  const prev = document.querySelector<HTMLButtonElement>("#prev-page")!;
+  const next = document.querySelector<HTMLButtonElement>("#next-page")!;
+  const label = document.querySelector<HTMLElement>("#page-label")!;
+  const statuses: Record<string, string> = {
+    all: "",
+    live: "Live",
+    redesigned: "Redesigned by Client",
+    "domain-expired": "Offline (Domain Expired)",
+  };
+  const perPage = 12;
+  let page = 1;
+  function readURL() {
+    const params = new URLSearchParams(location.search);
+    search.value = params.get("q") || "";
+    const legacy = params.get("filter") || "";
+    const p = params.get("platform") || legacy;
+    const s = params.get("status") || legacy;
+    platform.value = [...platform.options].some((o) => o.value === p)
+      ? p
+      : "all";
+    status.value = Object.hasOwn(statuses, s) ? s : "all";
+    const n = Number(params.get("page") || 1);
+    page = Number.isSafeInteger(n) && n > 0 ? n : 1;
+  }
+  function render(historyMode: "none" | "replace" | "push" = "replace") {
+    const q = search.value.trim().toLowerCase();
+    const matching = cards.filter(
+      (card) =>
+        (!q || card.dataset.search!.includes(q)) &&
+        (platform.value === "all" ||
+          card.dataset.platform!.split(" ").includes(platform.value)) &&
+        (!statuses[status.value] ||
+          card.dataset.status === statuses[status.value]),
+    );
+    const pages = Math.max(1, Math.ceil(matching.length / perPage));
+    page = Math.max(1, Math.min(page, pages));
+    cards.forEach((card) => (card.hidden = true));
+    const first = (page - 1) * perPage;
+    matching
+      .slice(first, first + perPage)
+      .forEach((card) => (card.hidden = false));
+    count.textContent = matching.length
+      ? `Showing ${first + 1}–${Math.min(first + perPage, matching.length)} of ${matching.length} matching projects · ${cards.length} total.`
+      : `No matching projects · ${cards.length} total.`;
+    empty.hidden = matching.length > 0;
+    pagination.hidden = matching.length <= perPage;
+    prev.disabled = page === 1;
+    next.disabled = page === pages;
+    label.textContent = `Page ${page} of ${pages}`;
+    if (historyMode !== "none") {
+      const params = new URLSearchParams();
+      if (q) params.set("q", search.value.trim());
+      if (platform.value !== "all") params.set("platform", platform.value);
+      if (status.value !== "all") params.set("status", status.value);
+      if (page > 1) params.set("page", String(page));
+      const url =
+        location.pathname + (params.size ? "?" + params.toString() : "");
+      if (historyMode === "push") history.pushState(null, "", url);
+      else history.replaceState(null, "", url);
+    }
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    page = 1;
+    render();
+  });
+  [search, platform, status].forEach((control) =>
+    control.addEventListener(control === search ? "input" : "change", () => {
+      page = 1;
+      render();
+    }),
+  );
+  function navigate(delta: number) {
+    page += delta;
+    render("push");
+    count.focus({ preventScroll: true });
+    document.querySelector("#archive")?.scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+      block: "start",
+    });
+  }
+  prev.addEventListener("click", () => navigate(-1));
+  next.addEventListener("click", () => navigate(1));
+  document.querySelector("#clear-filters")?.addEventListener("click", () => {
+    search.value = "";
+    platform.value = "all";
+    status.value = "all";
+    page = 1;
+    render();
+    search.focus();
+  });
+  window.addEventListener("popstate", () => {
+    readURL();
+    render("none");
+  });
+  readURL();
+  render("none");
+</script>
+
+<script>
+ let opener: HTMLElement | null = null;
+ for(const card of document.querySelectorAll<HTMLElement>(".project-card")) {
+   const dialog=card.querySelector<HTMLDialogElement>("dialog")!;
+   const button=card.querySelector<HTMLButtonElement>(".project-open")!;
+   const open=()=>{opener=button;dialog.showModal();document.body.classList.add("drawer-open");};
+   card.addEventListener("click",(event)=>{if(!(event.target instanceof Element) || dialog.contains(event.target) || event.target.closest("a,details")) return;open();});
+   button.addEventListener("keydown",(e)=>{if(e.key==="Enter" || e.key===" ") {e.preventDefault();open();}});
+   dialog.querySelector(".drawer-close")?.addEventListener("click",()=>dialog.close());
+   dialog.addEventListener("click",(e)=>{if(e.target===dialog){const rect=dialog.getBoundingClientRect();if(e.clientX<rect.left || e.clientX>rect.right || e.clientY<rect.top || e.clientY>rect.bottom)dialog.close();}});
+   dialog.addEventListener("close",()=>{document.body.classList.remove("drawer-open");opener?.focus({preventScroll:true});});
+ }
+</script>

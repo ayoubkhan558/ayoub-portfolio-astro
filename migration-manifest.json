@@ -1,0 +1,1232 @@
+{
+  "source": "ayoub-saas-website-nextjs-main.zip",
+  "template": "mainline-astro-template-master.zip",
+  "projectRecords": 147,
+  "caseStudies": 7,
+  "toolCatalogEntries": 56,
+  "sourcePublicFiles": 239,
+  "jsonData": [
+    {
+      "file": "caseStudyDetails.json",
+      "sha256": "9f827e8d2d740a7236e6757a6ee7069b534119118d6d69e4e48217f49916e6cf",
+      "unchanged": true
+    },
+    {
+      "file": "portfolio.json",
+      "sha256": "0faf36e5384c2bd33c95dbaeca9a0b609a40fb06cf318ff86d1a575733009fdb",
+      "unchanged": true
+    },
+    {
+      "file": "projectLinkStatus.json",
+      "sha256": "12340767518ffeb25ad41b0fc221cd4fd328eb5ea16a0c11b264b5dd83381d29",
+      "unchanged": true
+    },
+    {
+      "file": "projectsArchive.json",
+      "sha256": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
+      "unchanged": true
+    },
+    {
+      "file": "toolCatalog.json",
+      "sha256": "75819a8c11d25ebc2f2e7c53d1fa91548a680232520c502d7a564dff90fad263",
+      "unchanged": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "ATS-react-front-Ayoub-CV_Resume.pdf",
+      "sha256": "1e3874e5e451d4cd36e5242d1686b6f8e14aa9364fb4b3a28c0b23ab38211ae3",
+      "unchanged": true
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "sha256": "159af8c5e47c632ed6752dd4eb9ddffe5a619bf5239dd06d7a5ce0005fde3567",
+      "unchanged": true
+    },
+    {
+      "path": "ayoub-about-v2.jpg",
+      "sha256": "0d9852348f03845acca60f286f0132791051c9e9adf1f491c772bd84ebff8dad",
+      "unchanged": true
+    },
+    {
+      "path": "ayoub-about-v4.jpg",
+      "sha256": "fb0c6c8cafe6e6bcd88f38a7c0fbf43f07c192e149b48d1659dea93ca9884503",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/kingsre-about.jpg",
+      "sha256": "50ed114dee5f5b03bf15b46b5f7d03e36fb2ae8255c278a3bb9b360dcbc11e6a",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/kingsre-home.jpg",
+      "sha256": "749bcbf742f7fe0154f2c51680d85bbd61926bb091581958e72b475e717b09f0",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/kingsre-mockup.png",
+      "sha256": "91fcfa9777f3e1e9c6debe1d1eccd340e20185ea5949e6d34e47b98b43790e34",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/kingsre-old.jpg",
+      "sha256": "7f57adced2e29230c02827e4b9c060ef9774d818c182ac1a04d8300b4d1702f2",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/kingsre-thumbnail.jpg",
+      "sha256": "bcbc780864ce6a3427898a7874ce2cc4f407d0a35f19d144f0c69f31e7e3d3b3",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/paganolaw-mocup.png",
+      "sha256": "22da0ad00da05e9c05f2109f9256814598ee517e6867761815d652571fd31200",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/paganolaw-new.jpg",
+      "sha256": "3272d79d2fe91e3a50f910df5ca0dd7f0262f70d77f1e2de356bcdccf12ef63b",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/paganolaw-old.jpg",
+      "sha256": "0c61a25cba973b6e04dd76c0eb2090de287f47f97654ac7ea1c985bff77ebc63",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/paganolaw-thumbnail.jpg",
+      "sha256": "c8a7cdf77be36dd12ed366f2fdf8b85dc634b00ebeedc227c25c5ebbc7632b4f",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/rk-mockup.png",
+      "sha256": "1d4ddc5bedf571e8f08bfa92d93142233c9444723a786aedf1c269ba1e9f9c67",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/rk-new.webp",
+      "sha256": "e070a59a8f9c25d52d551b9fd1e7229a97a85a0903ad308637d0f68eb27d24c1",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/rk-thumbnail.jpg",
+      "sha256": "618052eb13acdab063cc54af6ef5f2c54ee63506aa01308b5eb5a72945542e00",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/serveekay-home.jpg",
+      "sha256": "4e36c06229c3773ce07a415113861c4709b9069b09e84b2619398ce3f056264c",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/serveekay-mockup.png",
+      "sha256": "2da739130d53f8a10fd672a2d1b82a587e89d8df9ddc4de7f8b4732acf3a38e0",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/serveekay-thumbnail.jpg",
+      "sha256": "00fbd11a69ab7b694b66dad3eea1226eb03e82efa9cf7d4c448175c9b014b6d1",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/serveekay-thumbnail.png",
+      "sha256": "cae92cff9a07e7a93100d990c269d1e4cd81ec7a0958214ded0002d69c63503d",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/studyly-home.jpg",
+      "sha256": "f3238dff67a577714c6fd6f28afb8e93b3dd93823ab82beb8eb9a7405538087b",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/studyly-mockup.png",
+      "sha256": "ca48d135631bd667d47f2b4a369b0fd5f32532bd50ed620b3620ab3db3f7bfe0",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/studyly-mockup0.png",
+      "sha256": "a7042729f72ce7a576228f572d1e727a3ecc55fce4bcac947fa7d11c2dbbfadf",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/studyly-thumbnail.jpg",
+      "sha256": "c9b62eb373c0cbb8de8588933b0806d48b179e06099bf0aa89de74a666970f07",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/supplementshub-home.webp",
+      "sha256": "0d84b0e1163ecf170ace299e7efcfb77a4b157126e8c60b0e3ccb4243c289e87",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/supplementshub-mockup.webp",
+      "sha256": "2bac347a8d9361e674033decf1d272f509e6bf800a735b65f8253e80c566f010",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/supplementshub-product-list.webp",
+      "sha256": "5667657a86066b709370c91a0fef4a3a1f7d7b9eb63f6fd847fce394ecd7a1f7",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/supplementshub-product.webp",
+      "sha256": "c9ab89de34b7d4d6aa32bdab9e3e2bfe369b64ec184c1d54de2f644ede3636c2",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/supplementshub-thumbnail.webp",
+      "sha256": "4b8ab3d91bb14cad1411a77024e0cc64b33461d2e824796a7c85a7da943d96b9",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/weinberger-mocup.png",
+      "sha256": "36660e1508f79c33be1bc8e3f030012316c555f1e57762ef3552b7ab78748ed6",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/weinberger-new.jpg",
+      "sha256": "88b91110e9af2ebd50d6cf67d0964c83511072420631d826bc405dbc89f583fd",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/weinberger-old.jpg",
+      "sha256": "b975cdf2421f9ca5099aded9d506f7c0de2c887fe5d8e9c6e4c9bec77be8fc83",
+      "unchanged": true
+    },
+    {
+      "path": "case-study/weinberger-thumbnail.jpg",
+      "sha256": "9b1c0fe29a1f19e2ba193a246177142af5b33f8101291f6ce8a77599b336a3f8",
+      "unchanged": true
+    },
+    {
+      "path": "client/SKU-Auto-Bulk-SKU-Generator-Logo.webp",
+      "sha256": "776b721e4b781e0a900b446c71acb86fa46d6d2e182c1804cf31717f40376c30",
+      "unchanged": true
+    },
+    {
+      "path": "client/baby-png-logo-no-color.svg",
+      "sha256": "0efdba2cdbb98935277f3707d9620b7ff27d78eb0468e39d3d8c70804faf9777",
+      "unchanged": true
+    },
+    {
+      "path": "client/baby-png-logo.svg",
+      "sha256": "c64c9bdd2ade3e9d6e290929fd8bcc4d0346f1d86facc773d6bb3dcbc7702366",
+      "unchanged": true
+    },
+    {
+      "path": "client/carptrac-Logo-no-color.svg",
+      "sha256": "2c82f0b767d6557b3b4ad0cc2642ab8a9476cb9462f4575fa04b55621f8e397e",
+      "unchanged": true
+    },
+    {
+      "path": "client/carptrac-Logo.svg",
+      "sha256": "f6acbaf86a991503133dd51f3a88f053e177c559b92dcfd71a2e839d32a7215d",
+      "unchanged": true
+    },
+    {
+      "path": "client/dalailkhairat-logo-no-color.png",
+      "sha256": "4712ba38911e13d1f69e92fe20fa36c57b4e1cfd3936e9fa040b3f3131320998",
+      "unchanged": true
+    },
+    {
+      "path": "client/dalailkhairat-logo-no-color.webp",
+      "sha256": "afa4a4cd908f1f1170fb5a735e3ec7151b4be70d0e1aea2ce5a115c333a6bfa4",
+      "unchanged": true
+    },
+    {
+      "path": "client/dalailkhairat-logo.webp",
+      "sha256": "afa4a4cd908f1f1170fb5a735e3ec7151b4be70d0e1aea2ce5a115c333a6bfa4",
+      "unchanged": true
+    },
+    {
+      "path": "client/hassan-client-5g-store.jpg",
+      "sha256": "ce864804320f696132a1cae94f1dab9fa483960ad502de86a1c0ba4af89acce8",
+      "unchanged": true
+    },
+    {
+      "path": "client/inshad-arshad-bajwa-client.jpg",
+      "sha256": "79a829bda7b6d01780f35c17eeb20c9bf32282e10e5339f18bd752748a9ba17a",
+      "unchanged": true
+    },
+    {
+      "path": "client/kingsre-logo-no-color.png",
+      "sha256": "61170e0dad3ae093a298d590472158fe0fd1a6d9b18b6b75fac018aefca5fb42",
+      "unchanged": true
+    },
+    {
+      "path": "client/kingsre-logo.png",
+      "sha256": "98729abf363a1980b6587a4408058dd4caa5bc0717d8393449d0bea2259de9b1",
+      "unchanged": true
+    },
+    {
+      "path": "client/logo-5g-store-no-color.png",
+      "sha256": "75c4b05473e8e168edb486d52d77536b60050a579539a347e33261810d8ed759",
+      "unchanged": true
+    },
+    {
+      "path": "client/logo-5g-store.png",
+      "sha256": "97b58d9bd6a5a2e7b93470c1c4fc3d403e5ce4390ce98e2ba359e4ddb20ac3b3",
+      "unchanged": true
+    },
+    {
+      "path": "client/logo-rk.png",
+      "sha256": "af23bca0cb571e53eb789805e6c9f55a31ef9080feecad50954b1f86ba5b2b7d",
+      "unchanged": true
+    },
+    {
+      "path": "client/lws-academy-logo-no-color.png",
+      "sha256": "fcf4a2fc89342ea7849a3611934f618765c66b068f17c3e1d783d9fc5a144287",
+      "unchanged": true
+    },
+    {
+      "path": "client/lws-academy-logo.png",
+      "sha256": "79c744531acf5a23853eb5cd24120c5e482c232cbd2d4a42da7529754b9b0b6c",
+      "unchanged": true
+    },
+    {
+      "path": "client/markedine-logo-no-color.png",
+      "sha256": "d3ae53cca4fd6a222714360884891063f814fb086dd1df14c9517a969399a9eb",
+      "unchanged": true
+    },
+    {
+      "path": "client/markedine-logo.png",
+      "sha256": "d37acd86f249ff6580ee73650c1fb9e869bb511265971600b9f509d5ebea7cbb",
+      "unchanged": true
+    },
+    {
+      "path": "client/mugnsoft-logo-no-color.png",
+      "sha256": "6c039ba3d269c2f4e4bf3e6b35b2b1affe4f3ff51c832a160fcdee1fd5d6616a",
+      "unchanged": true
+    },
+    {
+      "path": "client/mugnsoft-logo.png",
+      "sha256": "2afb521a1b1d27fa4e44c09a3734ec06bb0a98ea24de5d9570859a7c0e5a7f4e",
+      "unchanged": true
+    },
+    {
+      "path": "client/naseeha-logo.svg",
+      "sha256": "30d5f57543c6952b9a47fe45ff3ddb97a87e70f537cd50e2e01269056fc2303e",
+      "unchanged": true
+    },
+    {
+      "path": "client/paganolaw-gregory-j-agano-client.jpg",
+      "sha256": "4224eb532627e993d443837cda31bfd3b933b547499504f24b34dfe00f7e37e4",
+      "unchanged": true
+    },
+    {
+      "path": "client/paganolaw-logo.png",
+      "sha256": "591e55c225d382908351e65f1f458cf22795cb1edf5bcb08a1479fba4bdacaeb",
+      "unchanged": true
+    },
+    {
+      "path": "client/ro-gold-logo-no-color.png",
+      "sha256": "99e3eefdec536b21aff04a388f5085bcc51bcd0f9c427fa9e7c592351b184770",
+      "unchanged": true
+    },
+    {
+      "path": "client/ro-gold-logo.png",
+      "sha256": "6bb2ccc28bfa2b5693bcadf4a941d51366f5c62802094f1849ac341b47e79692",
+      "unchanged": true
+    },
+    {
+      "path": "client/robert-wee-carptrac-client.jpg",
+      "sha256": "006d09b268f82740f189e3a30cd3e4ca607690563614aadb1bec810e294f320b",
+      "unchanged": true
+    },
+    {
+      "path": "client/serpio-logo-no-color.png",
+      "sha256": "9e1019c24565a9d001b26470b9c2ccfc9dbde6cde011aec4b0527e6986f481a1",
+      "unchanged": true
+    },
+    {
+      "path": "client/serpio-logo.png",
+      "sha256": "19935662b2bbcc6a7ef4aeb7c32d0017258d5190612bc08e31e345fd5009327f",
+      "unchanged": true
+    },
+    {
+      "path": "client/serpio-logo.svg",
+      "sha256": "358ba4e6087c2c32dcf409655cd2c1abefabc0ea2696c36775425723fea8e9c3",
+      "unchanged": true
+    },
+    {
+      "path": "client/serveekay-logo-no-color.svg",
+      "sha256": "8e9b7d4ef46bac97e72efae9ffb4baf1bd845e46c1a9f7d2c2e2a890f0631cdb",
+      "unchanged": true
+    },
+    {
+      "path": "client/serveekay-logo.svg",
+      "sha256": "09a36de948f0a75217a143f70c16e208efb8a8a4a1f081db47236db8ced173ee",
+      "unchanged": true
+    },
+    {
+      "path": "client/serveekay-waleed-client.jpg",
+      "sha256": "cae70298b85ed2e1cbd1a215c4a7dab6206d1d1c4335e95eced64ad8ca6ad7d4",
+      "unchanged": true
+    },
+    {
+      "path": "client/shajeel-afzal-lws-client.jpg",
+      "sha256": "173e9703fa0172a31a77c6ef6bee8c9f3a92a609a97c4cec776d97359752022c",
+      "unchanged": true
+    },
+    {
+      "path": "client/shinning-horizon-logo-no-color.png",
+      "sha256": "46a8dfc6662d45f4e2986ff6a7daaa47c18bc9853defa089072bed62c161fd06",
+      "unchanged": true
+    },
+    {
+      "path": "client/shinning-horizon-logo.png",
+      "sha256": "6146b1e300603d7bcdff6bc06b53c4c150f8cec00fb262be52276aa1d85a9f43",
+      "unchanged": true
+    },
+    {
+      "path": "client/studyly-logo-no-color.svg",
+      "sha256": "4e0e13bb21876ca67da47189d64fedcac0f282d8088406b7770b917b3a728d88",
+      "unchanged": true
+    },
+    {
+      "path": "client/studyly-logo.svg",
+      "sha256": "b15761c8e2ab4ac9ddff171c478db464e2de9ed7e5d5c37d791652180a632a9d",
+      "unchanged": true
+    },
+    {
+      "path": "client/sunshieldins-logo-no-color.svg",
+      "sha256": "33b39db30a775c3ce36f1c42793ef601d35fd28e7bc86ba2c8be5a37561e450e",
+      "unchanged": true
+    },
+    {
+      "path": "client/sunshieldins-logo.svg",
+      "sha256": "1e8465e20052b237e52bb64284d162793d410db2493f16d144e3dbb717aeb5dd",
+      "unchanged": true
+    },
+    {
+      "path": "client/supplementshub-Logo-client-arslan-no-color.svg",
+      "sha256": "c00c29703e3a035fd4771e414ce1041dc58ec10d4f17e5947e8e86dbb364b59e",
+      "unchanged": true
+    },
+    {
+      "path": "client/supplementshub-Logo-client-arslan.svg",
+      "sha256": "fa623747ad1bb5e06ac95e4d70fc9a71472b33c6b2e0b37196f070d85faf6e83",
+      "unchanged": true
+    },
+    {
+      "path": "client/theroyalpin-logo-no-color.png",
+      "sha256": "410fb6a21db953e3232457ef7f9ab0ac0862cdf021cd3f8e80f74ca32c2e2c4d",
+      "unchanged": true
+    },
+    {
+      "path": "client/theroyalpin-logo.png",
+      "sha256": "ee8c6d35631286316898edcd8f0ce1136637647642cf8c412745d2725bc83c0d",
+      "unchanged": true
+    },
+    {
+      "path": "client/weinberger-aesthetics-logo-no-color.svg",
+      "sha256": "be40eb2ca56e481b6a47f2297a5f8865407e048ef3f37546f0168470a5802ea3",
+      "unchanged": true
+    },
+    {
+      "path": "client/weinberger-aesthetics-logo.svg",
+      "sha256": "8dccb4c108006a8f75627f583856f7a9a5f108ec08d8ac2bf8af00b23c9df1fb",
+      "unchanged": true
+    },
+    {
+      "path": "comapnies/awsol-logo.png",
+      "sha256": "346789b453fafae5d96a681cd087bc00db273d15965857be9bf4a11546a10dbf",
+      "unchanged": true
+    },
+    {
+      "path": "comapnies/epicsols-logo.png",
+      "sha256": "aa8f3e247a411e9ac6d3316699c4b740178d9a2f5b4129e4a8a843ea93007c31",
+      "unchanged": true
+    },
+    {
+      "path": "comapnies/fiverr_Logo.png",
+      "sha256": "9ddedc0a4ffd486a168b384c583fa0924d90412b927da640b0c449603b77ddaf",
+      "unchanged": true
+    },
+    {
+      "path": "comapnies/hawk-it-logo.png",
+      "sha256": "652614d8f6562c74c186e61604998aaa536b6245c35c571d9d71094ab636ca2a",
+      "unchanged": true
+    },
+    {
+      "path": "comapnies/xgrid-logo.svg",
+      "sha256": "543577ae9995a2464906b4962699bb3e079fffc23cbbd3721438775a3976654d",
+      "unchanged": true
+    },
+    {
+      "path": "favicon.png",
+      "sha256": "62a0585702a4b847e6542c602b0568922557eb30b6ab9642fd0c1da4c7759928",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/GT-Cinetype-Bold.woff2",
+      "sha256": "221e703dbd241d1085335833cfc3be139f12a373c5eb3e30e65d5101558cec77",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/GT-Cinetype-Light.woff2",
+      "sha256": "6ead30aaa1096f8648fb392cd09ec940f29b3c9213dbe3ea9893747433124d34",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/GT-Cinetype-Mono.woff2",
+      "sha256": "b70fca3cf54d2bbc8b71a224af0db96d2d3e04e5f882726facb4676ff49622be",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/GT-Cinetype-Regular.woff2",
+      "sha256": "cec8e730f3a18c61e331fee80fa490d4ef8cdb022749055ef84b163d714757ce",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/PP-Formula-ExtraBold.woff2",
+      "sha256": "a1b3d2f9f0a77c9f35fb8ff6bdfa348c7ba031751f243304f2b99a755270df74",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/PP-Formula-SemiExtendedBold.woff2",
+      "sha256": "b5d6ad57ecf49d2e81962fcaade9bc083810365c0134eafadd26336c07304dac",
+      "unchanged": true
+    },
+    {
+      "path": "fonts/PPEditorialNew-UltralightItalic.woff2",
+      "sha256": "48494af9b899ff21a19b097ee92f64ae7a8c81b56875ddee5767b537a35e8461",
+      "unchanged": true
+    },
+    {
+      "path": "icon-192.png",
+      "sha256": "008fd6f1e197b6475c51056a5a4366608b16964754112656b46e76c696df99af",
+      "unchanged": true
+    },
+    {
+      "path": "icon-32.png",
+      "sha256": "d9e97575cbba8ac97fc9617ee3e6bbed0fc4d2e1a2d9b7802422059b21a0cb29",
+      "unchanged": true
+    },
+    {
+      "path": "icon-48.png",
+      "sha256": "8e5c7fd08423ee95930b13b8ca99706b762ddb20ff460658ecba7c0f287ac561",
+      "unchanged": true
+    },
+    {
+      "path": "icon-512.png",
+      "sha256": "98693c86dd1087381b1e09bcc5824156a8d0b741bd6f73492012d248f8303440",
+      "unchanged": true
+    },
+    {
+      "path": "m-ayoub-dev-jutt-no-bg.png",
+      "sha256": "3f815040ce448472b3f6733f3e0a055e60da53da4e6abd78c86a814606fdc7e2",
+      "unchanged": true
+    },
+    {
+      "path": "mayoub-dev-logo.svg",
+      "sha256": "cc0834649b675d691febd1503ffb6e4cece8378ba3532ebd2c6cd31afd771e71",
+      "unchanged": true
+    },
+    {
+      "path": "mayoub-signature.png",
+      "sha256": "ad378ba6bb33030c6de6b040cad505fa5ecc02a080f7af2c724effb9686e3c3d",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-301-redirect.jpg",
+      "sha256": "5bd2a714900c0a7d1dcb5d27adf54f16d453f0ff04703afd3070279c709bf0e5",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-50stars.jpg",
+      "sha256": "32eae813979ba531f705d360b9ae0d6124844efd23fc91f125629979b367884e",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-5gstore.jpg",
+      "sha256": "ac5a62b95c6a9b33b22b51e7408fafe019ee5db06b3ad9552b6abbd6199ee860",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-acholyte.jpg",
+      "sha256": "a929001e964e61304f379a66d4c4f1cee737f76649dff52aac3810a4759c0f19",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-alkira.jpg",
+      "sha256": "397829a8aa5925a25f5a6bd89ce88db78b5ee1aa8ebe289ba233fe97ccd88828",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-appmint-landing-page.jpg",
+      "sha256": "bc07c797815fd1b984db8a98952a9405fb997e41a054f4bbde99b745cfa8f5fb",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-appmint.jpg",
+      "sha256": "f510337bb88f47bdb1c0601f723963e552d4127a07d745379efff04a4f8ffc66",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-art-digital.jpg",
+      "sha256": "e689ad7f97063b83492746fecece48f663bc99cc76c10dc298c31d6de475f755",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-assessment-intelligent-netlify.jpg",
+      "sha256": "5458bd5ff5ee32d999dbe58100c71f3f47d3cd8f1eae13bfd0d5f045c31d7afb",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-babypng.jpg",
+      "sha256": "45e31f4c1190a53c3445a1dd3b0a1ee1b7341c63268919e4417930d4f8de8827",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-bitss.jpg",
+      "sha256": "e6b77704d4e7614c82c4dc5c50550aaa086a521188b0078436e6010ad7c58122",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-brickify.jpg",
+      "sha256": "1c96c785edcc0e03cb486f2f5384d22b11e20359b904b5434b0319480af48743",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-carptrac.jpg",
+      "sha256": "e97e875fa04fe9d8ea0e680bf25933aebcf5fd90b09304c842413074326fdb81",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-centaurivision.jpg",
+      "sha256": "715cee21f90bee2b163309be6034e955d8ea752462ad1ac95055c67ec6f825f7",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-champions-mortgage-team.jpg",
+      "sha256": "21edd08315943a8629db21b84aaeeb8d8620a814f591c224e459832068923315",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-cheapzy.jpg",
+      "sha256": "3efd66b733c2193a8a0d9eb0fbcda6d1a9c59c3317feabb4903174cbcaf76648",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-chkk.jpg",
+      "sha256": "30c7807d72e07c4b19922fb81227dd32b539cf833dbc536b2423eb228b03deb6",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-clampy.jpg",
+      "sha256": "b58b3748e98c41ba51f24a734214f16b1fcd12d05822a74f8becc88d592b0bf4",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-dalailkhairat.jpg",
+      "sha256": "5509cf9ea547a3b63a40563f6e36ab9f9ff0d4269ee096412ff704a2a02289d9",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-danielle-ball-fitness.jpg",
+      "sha256": "cb60b12b7c3002d2fad88b343d972db753a8082576279a02976dba3e47615ad0",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-debate-box.jpg",
+      "sha256": "58fd1e43b52465b23bd431e747f3da40275675261321d78efb261d52a73be17f",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-dhabas-netlify.jpg",
+      "sha256": "9b3bb2df07da5a7abed055787e0d3ea71e42d683990599f1df7928323704e9d5",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-digihub.jpg",
+      "sha256": "c8e3e12c33ca048e0798d38599c03da1bc942a4cebee379defe9d20df001bee5",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-episcols.jpg",
+      "sha256": "dd477481dfd82017b3adfc861cdd29f1e5d68cb14fcbb879696f84d2d361e3cf",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-fewcents.jpg",
+      "sha256": "656c0a738ea526d0ee971b20a1c63ea1815e80326c4a12b87f8a0c17678129d4",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-glowcore.jpg",
+      "sha256": "cb6f013c27db07c6258b0d36d16af8d03bb3545cab4f565a9b49211a10698da7",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-guaranteed-grades.jpg",
+      "sha256": "2fed20d47ca6a5a498fc9853ff16032be9ead85f12a0f35138836dd4591e9a00",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg",
+      "sha256": "323a8e25a0d688738acbba1c537eff3ee81b58f8966ca799c7d624c88cb1eb87",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-katy-body-sculpt.jpg",
+      "sha256": "da5804a9a865795f620a22a5a1b189a604e9635ef0605ef9aa887a0394206aae",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-king-sr-real-estate-rk.jpg",
+      "sha256": "c3932cdc87269fc6afc4f90fe16eb2c4e667f0bdf1ef8c1da4d438b2ccfff696",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-kodak-connect.jpg",
+      "sha256": "c12cd69b3c97c0a2cac882a2ea84e86d010b8edc81a71bfa4b729e2124062dc2",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-kuza-app-netlify.jpg",
+      "sha256": "e95cb16eb2de8bd5c44d2786bb5aa6f09905d9ecb1e5d026dd04dec6628abc86",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-lws-academy.jpg",
+      "sha256": "803d9ae6e3e4c807c5a553fd6bbc0239a6f60f00766b5fc8acffc6d6f0735537",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-magnet-social.jpg",
+      "sha256": "533e2bccb962a9971439892d61bed66fc51247809e111bf2e6a5640e96ec0572",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-markedine.jpg",
+      "sha256": "084d8891335cb7575b06755aa08bdbe7991db23e1690f29807717e09d7749d90",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-mkz-mart.jpg",
+      "sha256": "4f6a8d4df75257766612addf667c97afc1c814f71be33a384d9cc594b184bf39",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-monoami-landing.jpg",
+      "sha256": "b0457e12120c4aeb2d8c641fe006ee1497efb575b78bf0199a353b00ecd1a051",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-more-than-baths.jpg",
+      "sha256": "c47707968ba5493f6b8eb34cd8b5844ae99dd3d0d65f9f2ae273a4fccfec150f",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-mrchrissyservices-netlify.jpg",
+      "sha256": "5e7a70f0ac283fa1e3e23b21893c465b893635c59885bd5ca35e46767b605636",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-mugnsoft.jpg",
+      "sha256": "27e294632c5d795adcd10f177475bb7c50d35c96b4ea376f4adbece80630bdca",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-naseeha.jpg",
+      "sha256": "af4b2593b443eb4c02e1d905522db809c360ff632fab64c613b43fd062dbfe90",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-nclrealestate.jpg",
+      "sha256": "2b908c13d1aa8a302f793e78cd4e89d07769d9c43b701c96fe4c8df4e7523f20",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-p-intelligence.jpg",
+      "sha256": "819ac78e9d7dab53f37e5f7005c3c7c7fb573c66ff17179c3b5b10e317eced25",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-pagano-law.jpg",
+      "sha256": "74286601d38da06e298a303b754fa6660838dbeaaf033707aeabc7533c5bdb32",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-pin-it.jpg",
+      "sha256": "2ab55448ebe0c4300c8d3a2c87a005a1d0d2d3a47646d4f5b58c9b305a6644bc",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-polygon.jpg",
+      "sha256": "86d6e4c452f865a9c4a19a38ed87c3aa472d06c24710e33eec091dc9c3698e60",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-portoro.jpg",
+      "sha256": "8cb482a737d8a13cb5957ac03ee9bd1589451edde79268c81b2d187e760c1e5a",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-price-bulk-edit.jpg",
+      "sha256": "f880b28e5557aebaafb31265eda07192498622fb7fcd287f206bfbcac84aba4d",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-promo-intelligence-pro-netlify.jpg",
+      "sha256": "8eb0e703d4bed2a71aebccb82eecf77679f3214f76bd9ba84c3282e72ec8ed86",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-rebill.jpg",
+      "sha256": "a247479a4a6f69ffe5f9242b630b113ae29d3d7c22720b741f5b1250df580e8b",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-reppit.jpg",
+      "sha256": "a81083db52633175c96d26a38e0bbe273033f6ce89f6b7973dc9f47c0cc7c320",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-reyesenvironmental.jpg",
+      "sha256": "36a7dc66cb48a8594abb4fd0cbf929a70e11ba9b9107eb928349164ae1d466c1",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-robux-gold.jpg",
+      "sha256": "a09104655eccbfc4459e871ad5a4681a0480f3a18e890ea17e06bb7c81c5f4e0",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-serpio.jpg",
+      "sha256": "dcae7497003bf3355e1c22b14a7bc620babfc0119b2207a51fd7829ddc9b5e5e",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-serviceplace.jpg",
+      "sha256": "826f4d4c4578f948eecd4e4b3a435a25817a65b9716eec280b43b3a6f5198ad7",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-seshy.jpg",
+      "sha256": "4ed93ac61cefa572e4d251e2305d7bfb3d493db10af83275c9136d7b2c3eb2b3",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-shininghorizon.jpg",
+      "sha256": "9b06666531eeb3f745653c8ec2ea3d44b15dc0971c7fab8431735c56ddea4665",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-shoppable.jpg",
+      "sha256": "c53e72e61eed31f1da73a49474632242f52752e2499a97e80b77e69dc4e0e514",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-sku-auto.jpg",
+      "sha256": "55de6ccae39164b55e2b6e245faa59cc6d8bb8998d6ce007271a03f5954d8035",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-smartavlasia.jpg",
+      "sha256": "fbad4b5f5f484589d3571bba50183cbba84f6b47c99e0f4720a2ecdecc781a6c",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-strainproxies-front.jpg",
+      "sha256": "ab15e5066d47e21aa1af5056fb104fc9bc4d107beb13e2170df84906aba450db",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-studyly - Copy.jpg",
+      "sha256": "3a8a06c71936eafd4696361ebff43cd1f52393721408dcecc3ab0c93e88477ec",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-studyly.jpg",
+      "sha256": "3a8a06c71936eafd4696361ebff43cd1f52393721408dcecc3ab0c93e88477ec",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-sun-shield-insurance.jpg",
+      "sha256": "63d46c528531ca88ca5d07239c234a93e1a28e8a6809669df5f9a5fa2ec23ca5",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-supplements-hub.jpg",
+      "sha256": "fab0a050fed5df9197b7f74634e94c8a56ed526393313be915c9188fc68e9f75",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-thaivisaexpert.jpg",
+      "sha256": "2a549788f912fc5777d6b95420601c73c05d2b16f43d1e916d5125e667ea37a8",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-the-golden-form.jpg",
+      "sha256": "28d55b0409c2b9dc5525cae0161a2a99d5f8aec87c8eb38f082e50b60abc688d",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-the-royal-pin.jpg",
+      "sha256": "3d78376f5db02a746cc7bdf31d98512e3a15955250ca45b035c7950da0ca63f7",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-theme-scheduler.jpg",
+      "sha256": "e080c0698958335a887cf4c56139844cf099528a51bf3fa68bbe0c1519c99861",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-tripo-netlify.jpg",
+      "sha256": "3f7f8307298140273509cf39be1b195aa6fdc3e71662013f2df5fbf148c21462",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-waleed-portfolio.jpg",
+      "sha256": "f55507a9dd533d28477edcbb6af15512d13a5b8c336aa0650fd396f37d9c5ad1",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-webp-optimzer.jpg",
+      "sha256": "5fd1256baa5ffd3d81e42b1d3e3d76de413054e5fd5a0193985c9622b8735a8e",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-weinberger-aesthetics.jpg",
+      "sha256": "e1978e744704abcde107ed2e2fa9d1637e1877107708d87e3b5c26cf6a2ba9fc",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-xgrid.jpg",
+      "sha256": "45ebe7be0094040c4cddeca9fd778c38522b26f2a9b941cb566b5505418c3ffa",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-xnation.jpg",
+      "sha256": "c01fc2e7c3233f3f4f26341a53a2d622ed727b6debeff1586f9b8909f423eeaa",
+      "unchanged": true
+    },
+    {
+      "path": "projects/project-ss-youtube-convert.jpg",
+      "sha256": "a7c9c9231ed7ab5ff42b24aa28eb82599705cedc17cb2f3302c599b8c56fe518",
+      "unchanged": true
+    },
+    {
+      "path": "react-projects/project-ss-mockify.jpg",
+      "sha256": "4bbb829bfd5b88da91297f9f8d20511ac400beaf864ca23786cd5af68380097d",
+      "unchanged": true
+    },
+    {
+      "path": "react-projects/project-ss-resumify.png",
+      "sha256": "56acc81592e7503a2e04aed95f1f8ee809936388e26b787043a21eb0f50137b0",
+      "unchanged": true
+    },
+    {
+      "path": "site.webmanifest",
+      "sha256": "da5e7f6811b7504297862bfbb7eac0b26ebedcbb3271a1e28dfad89db038f336",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail-about.jpg",
+      "sha256": "8b9658ef4621b9e802cc95ab47ee478503b5f81dd9332a776ddd2f9d80218e3b",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail-case-studies.jpg",
+      "sha256": "9cb27b2812c59fc02a34d00697b38598125d717e8e5fbb1129660a294936702b",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail-contact.jpg",
+      "sha256": "1eea27b54b115902aab48c5429b2f97a21c7cc9a8c4b2b31bc75f736c3dcca83",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail-landing.jpg",
+      "sha256": "12b8ca79901a049892787c08248a6c68592a45e370e0ecbcf1fa86857745a18f",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail-projects.jpg",
+      "sha256": "0967be03e8285847d1fc55db95921006c9f3272063ce5ac4602e8885b59facc5",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail-services.jpg",
+      "sha256": "e1777b3912cd123bb13bf4e53303846f4a7ccc6fc8debaab9ce2b103ebd5f6d0",
+      "unchanged": true
+    },
+    {
+      "path": "social/ayoub-portfolio-thumbnail.jpg",
+      "sha256": "8ccf44b9836046fbd3abbcf0014f217bc5cca64a46fe69eebfc40cd1d8fd5eab",
+      "unchanged": true
+    },
+    {
+      "path": "tools/Bulma.svg",
+      "sha256": "cdccdfb0246613722e0b14b7dcd865eb40146c1a68ed40062ec870616c66dd3c",
+      "unchanged": true
+    },
+    {
+      "path": "tools/JSON.svg",
+      "sha256": "f36df74e684c6142c837c192f99f3d1c399d3dd523ec74ef579b831f5b970867",
+      "unchanged": true
+    },
+    {
+      "path": "tools/Material-UI.svg",
+      "sha256": "6480f23a1e32cf36801e7e771f4f68d6c5f3b2f1c9cb636b9ac6c25c58779f18",
+      "unchanged": true
+    },
+    {
+      "path": "tools/NPM.svg",
+      "sha256": "9013d7e4c96cb5ef404ec839e4cd1802b4e91dc92280dc20809e56ed5097a932",
+      "unchanged": true
+    },
+    {
+      "path": "tools/PostCSS.svg",
+      "sha256": "95f805a1fe12d899feff521fdaf8976fb3d319babbd441b88d5c478e7d5705a2",
+      "unchanged": true
+    },
+    {
+      "path": "tools/Postman.svg",
+      "sha256": "0b366c7a023328b0d95e8c90d9050519b8c31d206f8b34db17742488f72efccb",
+      "unchanged": true
+    },
+    {
+      "path": "tools/Redux.svg",
+      "sha256": "72a56f5d8acc368b77624e1e7b7d8a2acbbc070ac6bf5d1b9979c92072d89962",
+      "unchanged": true
+    },
+    {
+      "path": "tools/TypeScript.svg",
+      "sha256": "c9191199f4049920c2fc19035b8a6664f37f4689fcd9e8434e786097e78863f0",
+      "unchanged": true
+    },
+    {
+      "path": "tools/accessibility.svg",
+      "sha256": "f5704249f2e4ee8b0978021d0cb4780955b172584c3ff629d118a74a027e0260",
+      "unchanged": true
+    },
+    {
+      "path": "tools/acf.svg",
+      "sha256": "25b7316817303982c4473481934ea578c98a7c443fc4bda6a40ab63e738edd9a",
+      "unchanged": true
+    },
+    {
+      "path": "tools/admin-columns-pro.png",
+      "sha256": "f618453fadb3d0c7fd8ab4b9d8d83d1d9a26b2c693c5502b04b346e4f29ce177",
+      "unchanged": true
+    },
+    {
+      "path": "tools/aos-logo.png",
+      "sha256": "84515bbf53f402318457124cba5583d8a0eeb41f098b2dabf369614586a31741",
+      "unchanged": true
+    },
+    {
+      "path": "tools/bootstrap.svg",
+      "sha256": "b473ea9e4d801fb797303732d55aada02492f282a7a77089cbda660c50b23b91",
+      "unchanged": true
+    },
+    {
+      "path": "tools/bricks-logo.svg",
+      "sha256": "d5e482b5904972bacb294773de3863e5ff04f54c3ddeb09bb503b46fe5c6a002",
+      "unchanged": true
+    },
+    {
+      "path": "tools/chaty.gif",
+      "sha256": "4b9a788c694a617bc2a25ef5e261b5e907105822d3374798f54336d04627b383",
+      "unchanged": true
+    },
+    {
+      "path": "tools/css-3.svg",
+      "sha256": "020056602741ffcbb1924ea21d32763edf564bf46dc22ef296489bff437a48d0",
+      "unchanged": true
+    },
+    {
+      "path": "tools/elementor-icon.svg",
+      "sha256": "71a808698f6eaf48d87a1b2334ecaf7868c5fdb02f8ce19e412d963c5a3a386c",
+      "unchanged": true
+    },
+    {
+      "path": "tools/elementor.svg",
+      "sha256": "b0bcb173d2b3412fc186d1817b6b5d94e0d36fa5160c06341bcf227278d23d2f",
+      "unchanged": true
+    },
+    {
+      "path": "tools/figma.svg",
+      "sha256": "a246e15ead6cdd885b6c4c72783b621f7d457b20e3cf346adae92524fd6759f9",
+      "unchanged": true
+    },
+    {
+      "path": "tools/fluent-smtp-logo.svg",
+      "sha256": "b421d311cac5befaba065e07789d96daaa53d39194c28b3440fc6aa2b68c495a",
+      "unchanged": true
+    },
+    {
+      "path": "tools/git-logo.svg",
+      "sha256": "1080a5430edb6278dc03e4b04efc16c8bed5b943408d648ad721a28836814220",
+      "unchanged": true
+    },
+    {
+      "path": "tools/google-search-console.svg",
+      "sha256": "a5a26ad81a74be748fe6f417b85c79cddaf4d61a88b3bf5d27aaea36315f11c2",
+      "unchanged": true
+    },
+    {
+      "path": "tools/graphql.svg",
+      "sha256": "1b59be790b1a045f460d83a75656771ab3e9d79bf25fea09f652a0ce91c7013f",
+      "unchanged": true
+    },
+    {
+      "path": "tools/gsap.svg",
+      "sha256": "e434e9973e676aea4a115c85d48b2c4fb1ccf1149b052365ab52b67477504dbc",
+      "unchanged": true
+    },
+    {
+      "path": "tools/happyfiles-logo.svg",
+      "sha256": "a73844309582103f0489ec48afacde9153ece05d980c92136ff1bcceacd65cd6",
+      "unchanged": true
+    },
+    {
+      "path": "tools/html-5.svg",
+      "sha256": "281ad1987838a99963332f36039363321fc426eb69245af28f27a1a53e2d39ef",
+      "unchanged": true
+    },
+    {
+      "path": "tools/javascript.svg",
+      "sha256": "ab8c4cc01d97353722e6f7dcf89e390aad10f0f0878aad8c740d6e34d04e7b89",
+      "unchanged": true
+    },
+    {
+      "path": "tools/jquery-icon.svg",
+      "sha256": "d084b025b37a8db1093d86eee4eb8f73d1181e0b63c5a0a2039931f740859ce1",
+      "unchanged": true
+    },
+    {
+      "path": "tools/litespeed-cache.png",
+      "sha256": "44bf917967e438ae447e3cfa5a4081fbb1a8bba42dd32631d0fdc32e616df985",
+      "unchanged": true
+    },
+    {
+      "path": "tools/meta-pixel.svg",
+      "sha256": "fc8308c028411ce5aaff867a9006c6722f6bd091f169bee1b2849e3b8d230f81",
+      "unchanged": true
+    },
+    {
+      "path": "tools/microsoft-clarity.png",
+      "sha256": "71c524b91e4d51c0dc59bd7abfa781891532c410f010e03aa3e4532f925de9ae",
+      "unchanged": true
+    },
+    {
+      "path": "tools/mysql.svg",
+      "sha256": "2dfff93896caa053dd6bafc124067d51a7fa313780ebb7b570e4ae15f05e5ea4",
+      "unchanged": true
+    },
+    {
+      "path": "tools/nextjs.svg",
+      "sha256": "0bc286173ca6d80f1ba8d8bf3187c24a27856d95d3470220fc59e3f2e6a70e3d",
+      "unchanged": true
+    },
+    {
+      "path": "tools/php.svg",
+      "sha256": "bb87dd9a895df96cba3b0185b2cebbc0f381183bf5668ee25776638b8367570e",
+      "unchanged": true
+    },
+    {
+      "path": "tools/phpmyadmin.svg",
+      "sha256": "ef6d2aeb5a51c377a2103b984a802a4bedfd40da143a064414e7a3e351a64eec",
+      "unchanged": true
+    },
+    {
+      "path": "tools/pinterest.svg",
+      "sha256": "3ddfb8bdb609e7bb419d613f940692f0d44a3c13173ea317b1cd69f339416603",
+      "unchanged": true
+    },
+    {
+      "path": "tools/plyr-io-logo.png",
+      "sha256": "d773599804bd04d2244d337e59209125b8811b35697cfa5a0bf4ddcfa9a79f28",
+      "unchanged": true
+    },
+    {
+      "path": "tools/rankmath.png",
+      "sha256": "548c5782fb24a923dd084a377035997c30499ee1220b46db64491b70cf61e88f",
+      "unchanged": true
+    },
+    {
+      "path": "tools/sass.svg",
+      "sha256": "5e63adc257222023641d45ebb7314edf66ce76e882d265eda1c32db4138f0e10",
+      "unchanged": true
+    },
+    {
+      "path": "tools/scrollreveal.svg",
+      "sha256": "eed6997f167dd672ad56fa1668797809fb4ae459fee914b14e146a573d1e3d52",
+      "unchanged": true
+    },
+    {
+      "path": "tools/seo-2.png",
+      "sha256": "a709ad9005a48f8da17813026e089d326f6a996c31ce965f20631f67d1a3073b",
+      "unchanged": true
+    },
+    {
+      "path": "tools/seo.png",
+      "sha256": "aa2a2158de0c0b05786caa4291f789c125481e96695663d670fb3ef205669d50",
+      "unchanged": true
+    },
+    {
+      "path": "tools/shopify.svg",
+      "sha256": "edcbe896d8da37b7f53d2d1e0fc80f08000a624c88352d39bb645f1431ab2744",
+      "unchanged": true
+    },
+    {
+      "path": "tools/slim-seo.svg",
+      "sha256": "eaf5b671c578da053fe97b379456bc23655d23f650b2cd09cc4d9ba0b193c06e",
+      "unchanged": true
+    },
+    {
+      "path": "tools/swiper-logo.svg",
+      "sha256": "7ae5d1467f8e2b83fce8925b5f483c0fb3a62ece059e87f3febea5634ba39209",
+      "unchanged": true
+    },
+    {
+      "path": "tools/tailwind.svg",
+      "sha256": "d9011701823845cab3a08d3806a56e475119eced675309bd62ae4312d4bd30d4",
+      "unchanged": true
+    },
+    {
+      "path": "tools/vercel-logo.svg",
+      "sha256": "f76d844a46b9bfb8ab59ad0d5f35d636dd21d4b947e81113c5bd308d93e622ad",
+      "unchanged": true
+    },
+    {
+      "path": "tools/vitejs.svg",
+      "sha256": "45c315885175623a64c1db08f26df2610c871d417dadb154f17464a702b22834",
+      "unchanged": true
+    },
+    {
+      "path": "tools/vs-code.svg",
+      "sha256": "503d580c442a7071aae180d9b4766e312e4600bf0e9d842b30f56d0e614eceb8",
+      "unchanged": true
+    },
+    {
+      "path": "tools/webflow-icon.svg",
+      "sha256": "69f76a0a7f8540e337a1a15f87b0235c00fecd12ed04b26dbdc954f941c35380",
+      "unchanged": true
+    },
+    {
+      "path": "tools/whatsapp.svg",
+      "sha256": "3e197e0e1f3e679ee09823c75e1c7bad3a19da9bd1ba01df395268b9ae91816f",
+      "unchanged": true
+    },
+    {
+      "path": "tools/woocommerce.svg",
+      "sha256": "7770286380dc0d2ce346da5362c9ab86061abaf24e407b764cc57029909e843a",
+      "unchanged": true
+    },
+    {
+      "path": "tools/wordpress.svg",
+      "sha256": "0d45778b7cb89372dd4710f38874c5b87045a8bbc8aba5bb7f40fbaf5fcb8808",
+      "unchanged": true
+    },
+    {
+      "path": "tools/yoast-seo.png",
+      "sha256": "d519d8112563011bbf31eb35e2323b2ef59a927f4ee3dacc208878dad84d94ef",
+      "unchanged": true
+    }
+  ]
+}

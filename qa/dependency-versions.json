@@ -1,0 +1,211 @@
+{
+  "checkedAt": "2026-10-19T15:13:25.900Z",
+  "registry": "https://registry.npmjs.org",
+  "versions": [
+    {
+      "name": "@astrojs/react",
+      "previous": "^7.1.0",
+      "requested": "^7.1.0",
+      "installed": "7.1.0",
+      "latestStable": "7.1.0"
+    },
+    {
+      "name": "@astrojs/sitemap",
+      "previous": "^3.7.4",
+      "requested": "^3.7.4",
+      "installed": "3.7.4",
+      "latestStable": "3.7.4"
+    },
+    {
+      "name": "@radix-ui/react-accordion",
+      "previous": "^1.2.12",
+      "requested": "^1.3.1",
+      "installed": "1.3.1",
+      "latestStable": "1.3.1"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "previous": "^1.2.3",
+      "requested": "^1.5.0",
+      "installed": "1.5.0",
+      "latestStable": "1.5.0"
+    },
+    {
+      "name": "astro",
+      "previous": "^7.4.0",
+      "requested": "^7.4.1",
+      "installed": "7.4.1",
+      "latestStable": "7.4.1"
+    },
+    {
+      "name": "class-variance-authority",
+      "previous": "^0.7.1",
+      "requested": "^0.7.1",
+      "installed": "0.7.1",
+      "latestStable": "0.7.1"
+    },
+    {
+      "name": "clsx",
+      "previous": "^2.1.1",
+      "requested": "^2.1.1",
+      "installed": "2.1.1",
+      "latestStable": "2.1.1"
+    },
+    {
+      "name": "embla-carousel-react",
+      "previous": "^8.6.0",
+      "requested": "^8.6.0",
+      "installed": "8.6.0",
+      "latestStable": "8.6.0"
+    },
+    {
+      "name": "image-size",
+      "previous": "^2.0.4",
+      "requested": "^2.0.4",
+      "installed": "2.0.4",
+      "latestStable": "2.0.4"
+    },
+    {
+      "name": "lucide-react",
+      "previous": "^0.545.0",
+      "requested": "^1.59.0",
+      "installed": "1.59.0",
+      "latestStable": "1.59.0"
+    },
+    {
+      "name": "react",
+      "previous": "^19.2.0",
+      "requested": "^19.3.1",
+      "installed": "19.3.1",
+      "latestStable": "19.3.1"
+    },
+    {
+      "name": "react-dom",
+      "previous": "^19.2.0",
+      "requested": "^19.3.1",
+      "installed": "19.3.1",
+      "latestStable": "19.3.1"
+    },
+    {
+      "name": "tailwind-merge",
+      "previous": "^3.3.1",
+      "requested": "^3.7.0",
+      "installed": "3.7.0",
+      "latestStable": "3.7.0"
+    },
+    {
+      "name": "@astrojs/check",
+      "previous": "^0.9.10",
+      "requested": "^0.9.11",
+      "installed": "0.9.11",
+      "latestStable": "0.9.11"
+    },
+    {
+      "name": "@axe-core/playwright",
+      "previous": "^4.14.0",
+      "requested": "^4.14.0",
+      "installed": "4.14.0",
+      "latestStable": "4.14.0"
+    },
+    {
+      "name": "@tailwindcss/typography",
+      "previous": "^0.5.19",
+      "requested": "^0.5.20",
+      "installed": "0.5.20",
+      "latestStable": "0.5.20"
+    },
+    {
+      "name": "@tailwindcss/vite",
+      "previous": "^4.1.14",
+      "requested": "^4.3.3",
+      "installed": "4.3.3",
+      "latestStable": "4.3.3"
+    },
+    {
+      "name": "@types/react",
+      "previous": "^19.2.2",
+      "requested": "^19.3.0",
+      "installed": "19.3.0",
+      "latestStable": "19.3.0"
+    },
+    {
+      "name": "@types/react-dom",
+      "previous": "^19.2.2",
+      "requested": "^19.3.0",
+      "installed": "19.3.0",
+      "latestStable": "19.3.0"
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "previous": "^8.71.2",
+      "requested": "^8.71.2",
+      "installed": "8.71.2",
+      "latestStable": "8.71.2"
+    },
+    {
+      "name": "eslint",
+      "previous": "^9.39.5",
+      "requested": "^10.13.0",
+      "installed": "10.13.0",
+      "latestStable": "10.13.0"
+    },
+    {
+      "name": "eslint-plugin-import-x",
+      "previous": null,
+      "requested": "^4.17.1",
+      "installed": "4.17.1",
+      "latestStable": "4.17.1"
+    },
+    {
+      "name": "playwright",
+      "previous": "^1.64.1",
+      "requested": "^1.64.1",
+      "installed": "1.64.1",
+      "latestStable": "1.64.1"
+    },
+    {
+      "name": "prettier",
+      "previous": "^3.6.2",
+      "requested": "^3.9.10",
+      "installed": "3.9.10",
+      "latestStable": "3.9.10"
+    },
+    {
+      "name": "prettier-plugin-astro",
+      "previous": "^0.13.0",
+      "requested": "^1.1.1",
+      "installed": "1.1.1",
+      "latestStable": "1.1.1"
+    },
+    {
+      "name": "prettier-plugin-tailwindcss",
+      "previous": "^0.7.0",
+      "requested": "^0.8.1",
+      "installed": "0.8.1",
+      "latestStable": "0.8.1"
+    },
+    {
+      "name": "tailwindcss",
+      "previous": "^4.1.14",
+      "requested": "^4.3.3",
+      "installed": "4.3.3",
+      "latestStable": "4.3.3"
+    },
+    {
+      "name": "tw-animate-css",
+      "previous": "^1.4.0",
+      "requested": "^1.4.0",
+      "installed": "1.4.0",
+      "latestStable": "1.4.0"
+    },
+    {
+      "name": "typescript",
+      "previous": "^5.9.3",
+      "requested": "^6.0.3",
+      "installed": "6.0.3",
+      "latestStable": "7.0.2",
+      "compatibilityNote": "TypeScript 7 is latest but outside @astrojs/check (^5 || ^6) and @typescript-eslint/parser (>=4.8.4 <6.1) peer ranges. Using latest compatible 6.0.3."
+    }
+  ],
+  "toolingMigration": "Replaced eslint-plugin-import with maintained eslint-plugin-import-x to support latest ESLint 10 without peer-dependency overrides."
+}

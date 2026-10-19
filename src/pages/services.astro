@@ -1,0 +1,73 @@
+---
+import CTA from "../components/portfolio/CTA.astro";
+import Heading from "../components/portfolio/Heading.astro";
+import Intro from "../components/portfolio/Intro.astro";
+import Process from "../components/portfolio/Process.astro";
+import Services from "../components/portfolio/Services.astro";
+import p from "../data/portfolio.json";
+import { serviceNiches } from "../data/serviceNiches";
+import { proofNotes, outcomes } from "../data/servicesPageData";
+import Layout from "../layouts/PortfolioLayout.astro";
+---
+
+<Layout title="Services"
+  ><div class="template-background">
+    <Intro
+      label={p.sections.services.label}
+      title={p.sections.services.title}
+      description={p.profile.summary}
+    /><section class="wrap section first-section"><Services /></section>
+  </div><section class="section wrap">
+    <Heading
+      label="Specialist services"
+      title="A focused solution for your next build."
+    /><div class="three-grid">
+      {
+        serviceNiches.map((s) => (
+          <a class="plain-card linked-card" href={`/services/${s.slug}/`}>
+            <>
+              <span class="eyebrow">{s.label}</span>
+              <h3>{s.title} ↗</h3>
+              <p>{s.description}</p>
+            </>
+          </a>
+        ))
+      }
+    </div>
+  </section><section class="section wrap">
+    <Heading {...p.sections.process} /><Process />
+  </section><section class="section wrap">
+    <Heading
+      label="Delivery"
+      title="A clearer path from brief to launch."
+    /><div class="two-grid">
+      <div>
+        <h3>Problems I solve</h3><ul class="check-list">
+          {p.problemsSolved.map((v) => <li>{v}</li>)}
+        </ul>
+      </div><div>
+        <h3>What you take away</h3><ul class="check-list">
+          {p.outcomes.map((v) => <li>{v}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section><section class="section wrap">
+    <Heading
+      label="Working together"
+      title="Clear scope. Useful milestones."
+    /><div class="three-grid">
+      {
+        proofNotes.map((note) => (
+          <article class="plain-card">
+            <>
+              <span class="eyebrow">{note.label}</span>
+              <h3>{note.value}</h3>
+            </>
+          </article>
+        ))
+      }
+    </div><ul class="check-list spaced">
+      {outcomes.map((value) => <li>{value}</li>)}
+    </ul>
+  </section><div class="template-background bottom"><CTA /></div></Layout
+>

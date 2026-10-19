@@ -1,0 +1,64 @@
+---
+import CTA from "../../components/portfolio/CTA.astro";
+import Intro from "../../components/portfolio/Intro.astro";
+import { serviceNiches } from "../../data/serviceNiches";
+import Layout from "../../layouts/PortfolioLayout.astro";
+export function getStaticPaths() {
+  return serviceNiches.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+const { service: s } = Astro.props;
+---
+
+<Layout title={s.title} description={s.description}
+  ><div class="template-background">
+    <Intro label={s.label} title={s.h1} description={s.description}
+      ><div class="actions">
+        <a
+          class="button"
+          href={`/contact/?subject=${encodeURIComponent(s.title)}`}
+          >Discuss your project ↗</a
+        ><a class="text-link" href="/services/">All services →</a>
+      </div></Intro
+    ><div class="wrap three-grid section first-section">
+      {
+        s.highlights.map((h) => (
+          <article class="plain-card">
+            <>
+              <span class="eyebrow">{h.label}</span>
+              <h3>{h.value}</h3>
+            </>
+          </article>
+        ))
+      }
+    </div>
+  </div><section class="section wrap prose-narrow">
+    {
+      s.sections.map((section) => (
+        <article class="spaced">
+          <h2>{section.title}</h2>
+          {section.paragraphs.map((text) => (
+            <p>{text}</p>
+          ))}
+          {section.bullets && (
+            <ul class="check-list">
+              {section.bullets.map((text) => (
+                <li>{text}</li>
+              ))}
+            </ul>
+          )}
+        </article>
+      ))
+    }<h2 class="spaced">Related case studies</h2><div class="link-list">
+      {
+        s.relatedCases.map((c) => (
+          <a class="text-link" href={c.href}>
+            {c.label} ↗
+          </a>
+        ))
+      }
+    </div>
+  </section><div class="template-background bottom"><CTA /></div></Layout
+>

@@ -1,0 +1,34 @@
+---
+import tools from '../../data/toolCatalog.json';
+const entries = Object.entries(tools);
+const rows = [entries.slice(0, Math.ceil(entries.length / 2)), entries.slice(Math.ceil(entries.length / 2))];
+---
+<div class="skills-marquee" data-skills-marquee>
+  <div class="marquee-toolbar"><p class="small-note">{entries.length} tools & technologies. Always learning, always building.</p><button type="button" class="marquee-toggle" aria-pressed="false" hidden>Pause motion</button></div>
+  <div class="marquee-viewport">
+    {rows.map((row, i) => <div class:list={['marquee-track', i === 1 && 'reverse']}>
+      {[false, true].map(duplicate => <div class="marquee-group" aria-hidden={duplicate ? 'true' : undefined} inert={duplicate ? true : undefined}>
+        {row.map(([key, t]) => <article class="tool-chip" data-tool={duplicate ? undefined : key} title={`${t.name}: ${t.description}`}>
+          {t.logo ? <img src={t.logo} alt="" width="32" height="32" loading="lazy" class="tool-logo" /> : <span class="tool-monogram" aria-hidden="true">{t.name.slice(0, 2)}</span>}
+          <h3>{t.name}</h3><p class="sr-only">{t.description}{'categories' in t ? ` Categories: ${t.categories.join(', ')}.` : ''}</p>
+        </article>)}
+      </div>)}
+    </div>)}
+  </div>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-skills-marquee]').forEach(root => {
+    const toggle = root.querySelector<HTMLButtonElement>('.marquee-toggle')!;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    let paused = false;
+    function sync() {
+      root.dataset.paused = String(paused || reduced.matches || document.hidden);
+      toggle.textContent = reduced.matches ? 'Reduced motion on' : paused ? 'Resume motion' : 'Pause motion';
+      toggle.setAttribute('aria-pressed', String(paused || reduced.matches));
+      toggle.disabled = reduced.matches;
+    }
+    root.dataset.ready = 'true'; toggle.hidden = false;
+    toggle.addEventListener('click', () => { paused = !paused; sync(); });
+    reduced.addEventListener('change', sync); document.addEventListener('visibilitychange', sync); sync();
+  });
+</script>

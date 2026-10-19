@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/PortfolioLayout.astro';
+import p from '../data/portfolio.json';
+import { projects } from '../data/work';
+import { Hero } from '../components/blocks/hero';
+import { Background } from '../components/background';
+import { caseStudyDetails } from '../data/caseStudyDetails';
+import Asset from '../components/portfolio/Asset.astro';
+import Heading from '../components/portfolio/Heading.astro';
+import CaseGrid from '../components/portfolio/CaseGrid.astro';
+import { Pricing } from '../components/blocks/pricing';
+import Process from '../components/portfolio/Process.astro';
+import FAQ from '../components/portfolio/FAQ.astro';
+import CTA from '../components/portfolio/CTA.astro';
+import Logos from '../components/portfolio/Logos.astro';
+import Testimonials from '../components/portfolio/Testimonials.astro';
+import TextRotator from '../components/portfolio/TextRotator.astro';
+---
+<Layout>
+<div class="home-page">
+<Background className="template-background"><Hero data={p} featured={Object.values(caseStudyDetails)[0]} />
+<section class="wrap logo-section" id="trust"><div class="dashed-label"><span>Good work. Great partnerships.</span></div><Logos /></section></Background>
+<section class="section wrap" id="problems"><Heading label="Is this you?" title="Sound familiar?" subtitle="Your site should build trust before your prospect ever books a call." />
+<div class="three-grid">{p.painPoints.map((point,i) => <article class="plain-card"><span class="step-number">0{i+1}</span><h3>{point}</h3></article>)}</div>
+<div class="fit-rotators spaced"><TextRotator label="Best fit for" items={p.bestFit} /><TextRotator label="Problems I solve" items={p.problemsSolved} /></div>
+<div class="tags industries">{p.trustMarquee.map(v => <span>{v.name}</span>)}</div></section>
+<Background variant="bottom" className="template-background bottom"><section class="section wrap" id="services"><Heading label="Solutions" title="What you can hire me for" subtitle="Business problems first, implementation details second. Pick the outcome you need and I will choose the right build path." /><Pricing services={p.services.filter(s=>s.featured).slice(0,3)} /><div class="section-end"><a href="/services/" class="button outline">View all services →</a></div></section></Background>
+<section class="wrap section" id="lead-magnet"><div class="resource-panel"><div><span class="eyebrow">Free resource</span><h2>Get a free homepage checklist.</h2><p>Not ready to start? Get a free homepage checklist. Find messaging, UX, and CTA issues before you redesign.</p></div><a href="/contact/?subject=Free%20homepage%20checklist" class="button">Request checklist →</a></div></section>
+<section class="section wrap" id="projects"><Heading {...p.sections.projects} /><div class="selected-grid">{projects.slice(0,6).map(project => <article class="selected-card"><a href={project.href} target="_blank" rel="noopener noreferrer"><div class="selected-media"><Asset src={project.image.startsWith('/') ? project.image : null} alt={project.title} class="selected-image" />{project.deliveryContext && <span class="delivery-badge">{project.deliveryContext}</span>}</div><div><span class="eyebrow">{project.badge}</span><h3>{project.title} <span aria-hidden="true">↗</span></h3><p>{project.description}</p><p class="small-note">{project.stack}</p></div></a></article>)}</div><div class="section-end"><a href="/projects/" class="button outline">Explore the complete project archive →</a></div></section>
+<section class="section wrap" id="case-studies"><Heading {...p.sections.caseStudies} /><CaseGrid limit={3} /><div class="section-end"><a href="/case-studies/" class="button outline">All seven case studies →</a></div></section>
+<section class="section wrap" id="proof"><Heading {...p.sections.testimonials} /><Testimonials /></section>
+<section class="section wrap" id="about"><div class="home-about"><div><Heading label="About me" title="About Ayoub" subtitle={p.profile.summary} /><p class="lead">{p.about.story}</p><div class="actions"><a href="/about/" class="button">Meet {p.profile.name} →</a><a href={p.about.resumeHref} class="text-link" download>Download Resume ↓</a></div><div class="tags spaced">{p.recognition.map(v=><span>{v.label} · {v.status}</span>)}</div></div><figure><Asset src="/ayoub-about-v4.jpg" alt={`${p.profile.name}, web developer and SEO specialist`} class="home-portrait"/><figcaption>{p.profile.name} · {p.profile.location}</figcaption></figure></div></section>
+<Background variant="bottom" className="template-background bottom"><section class="section wrap" id="process"><Heading {...p.sections.process} subtitle={p.sections.process.subtitle.replace('Four steps.', `${p.process.length} clear steps.`)} /><Process /></section></Background>
+<section class="section wrap faq-section" id="faq"><FAQ /></section>
+<Background variant="bottom" className="template-background bottom"><div id="cta"><CTA /></div></Background>
+</div>
+</Layout>

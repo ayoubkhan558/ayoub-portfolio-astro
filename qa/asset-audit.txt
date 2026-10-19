@@ -1,0 +1,9 @@
+
+> ayoub-astro-portfolio@1.2.1 check:assets
+> node scripts/audit-assets.mjs
+
+201 distinct local data asset paths checked.
+KNOWN SOURCE OMISSION (styled fallback): /projects/project-ss-goenterprisehr.jpg
+KNOWN SOURCE OMISSION (styled fallback): /projects/project-ss-techbridgerecruiting.jpg
+KNOWN SOURCE OMISSION (styled fallback): /projects/project-ss-gillieselectric.jpg
+0 unexpected missing assets.

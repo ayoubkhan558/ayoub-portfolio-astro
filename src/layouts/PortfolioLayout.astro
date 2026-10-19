@@ -1,0 +1,104 @@
+---
+import "../styles/global.css";
+import "../styles/portfolio.css";
+import Footer from "../components/portfolio/Footer.astro";
+import Header from "../components/portfolio/Header.astro";
+import p from "../data/portfolio.json";
+import BackToTop from "../components/portfolio/BackToTop.astro";
+const {
+  title = p.profile.role,
+  description = p.profile.summary,
+  image = "/social/ayoub-portfolio-thumbnail.jpg",
+} = Astro.props;
+const fullTitle = `${title} | ${p.profile.name}`;
+const pathname = Astro.url.pathname;
+const canonicalPath =
+  pathname === "/" || /\.[a-z]+$/i.test(pathname)
+    ? pathname
+    : pathname.replace(/\/?$/, "/");
+const canonical = new URL(canonicalPath, Astro.site);
+const notFound =
+  pathname === "/404" || pathname === "/404/" || pathname === "/404.html";
+const ogType = /^\/case-studies\/[^/]+\/?$/.test(pathname)
+  ? "article"
+  : "website";
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: p.profile.name,
+  url: Astro.site?.href,
+  jobTitle: p.profile.role,
+  email: p.profile.email,
+  sameAs: [p.profile.github, p.profile.linkedin, p.profile.upwork],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head
+    ><meta charset="utf-8" /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    /><title>{fullTitle}</title><meta
+      name="description"
+      content={description}
+    /><meta
+      name="robots"
+      content={notFound ? "noindex, follow" : "index, follow"}
+    /><meta name="author" content={p.profile.name} /><link
+      rel="canonical"
+      href={canonical}
+    /><link rel="icon" href="/favicon.svg" type="image/svg+xml" /><link
+      rel="apple-touch-icon"
+      href="/apple-touch-icon.png"
+    /><meta property="og:title" content={fullTitle} /><meta
+      property="og:description"
+      content={description}
+    /><meta property="og:type" content={ogType} /><meta
+      property="og:site_name"
+      content={p.profile.brand}
+    /><meta property="og:url" content={canonical} /><meta
+      property="og:image"
+      content={new URL(image, Astro.site)}
+    /><meta name="twitter:card" content="summary_large_image" /><meta
+      name="twitter:title"
+      content={fullTitle}
+    /><meta name="twitter:description" content={description} /><meta
+      name="twitter:image"
+      content={new URL(image, Astro.site)}
+    /><meta name="generator" content={Astro.generator} /><link
+      rel="sitemap"
+      href="/sitemap-index.xml"
+    /><link
+      rel="preload"
+      href="/fonts/dm-sans/DMSans-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    /><script
+      type="application/ld+json"
+      set:html={JSON.stringify(schema).replace(/</g, "\\u003c")}
+    /><script is:inline>
+      try {
+        const value = localStorage.getItem("theme");
+        const saved = value === "dark" || value === "light" ? value : null;
+        document.documentElement.classList.toggle(
+          "dark",
+          saved
+            ? saved === "dark"
+            : matchMedia("(prefers-color-scheme: dark)").matches,
+        );
+      } catch {
+        document.documentElement.classList.toggle(
+          "dark",
+          matchMedia("(prefers-color-scheme: dark)").matches,
+        );
+      }
+    </script></head
+  ><body id="page-top"
+    ><noscript><style>[data-slot="carousel-content"]{overflow-x:auto!important}[data-slot="carousel-content"] > div{width:max-content;max-width:none}[data-slot="carousel-item"]{width:min(320px,85vw);flex-basis:auto!important}.slider-controls{display:none!important}</style></noscript><a href="#main" class="skip-link">Skip to content</a><Header /><main
+      id="main"
+    >
+      <slot />
+    </main><Footer /><BackToTop /></body>
+</html>

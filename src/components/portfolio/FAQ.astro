@@ -1,0 +1,6 @@
+---
+import p from "../../data/portfolio.json";
+import { FAQ } from "../blocks/faq";
+---
+<div class="faq-enhanced"><FAQ items={p.faqs} client:load /></div>
+<noscript><style>.faq-enhanced{display:none}</style><div class="faq-list">{p.faqs.map((f) => <details name="portfolio-faq"><summary>{f.question}</summary><p>{f.answer}</p></details>)}</div></noscript>

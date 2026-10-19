@@ -1,0 +1,10 @@
+{
+  "report": [
+    "/: visible images preserve source proportions or use explicit cover/contain.",
+    "/about/: visible images preserve source proportions or use explicit cover/contain.",
+    "/projects/: visible images preserve source proportions or use explicit cover/contain.",
+    "/case-studies/: visible images preserve source proportions or use explicit cover/contain.",
+    "light: navigation, text links, buttons, footer and back-to-top show hover color/surface changes.",
+    "dark: navigation, text links, buttons, footer and back-to-top show hover color/surface changes."
+  ]
+}

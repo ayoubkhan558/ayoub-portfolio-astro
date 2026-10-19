@@ -1,0 +1,28 @@
+---
+import Asset from "./Asset.astro";
+import p from "../../data/portfolio.json";
+---
+
+<div class="logo-strip">
+  {
+    p.clients
+      .filter((c) => c.showInLogos)
+      .map((c) => (
+        <a
+          href={c.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={c.name}
+        >
+          <>
+            <Asset src={c.logo} alt={c.name} class="client-logo light-logo" />
+            <Asset
+              src={c.logoDark || c.logo}
+              alt={c.name}
+              class="client-logo dark-logo"
+            />
+          </>
+        </a>
+      ))
+  }
+</div>

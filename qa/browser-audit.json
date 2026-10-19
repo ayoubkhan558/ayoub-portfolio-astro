@@ -1,0 +1,1086 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "route": "/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/about/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/projects/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/rejuvenated-knives/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/pagano-law/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/weinberger-aesthetics/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/studyly/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/kingsre/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/serveekay/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/supplementshub/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/bricks-builder/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/figma-to-code/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/wordpress-redesign/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/faq/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/404/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/about/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/projects/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/rejuvenated-knives/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/pagano-law/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/weinberger-aesthetics/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/studyly/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/kingsre/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/serveekay/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/supplementshub/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/bricks-builder/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/figma-to-code/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/wordpress-redesign/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/faq/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/404/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/about/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/projects/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/rejuvenated-knives/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/pagano-law/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/weinberger-aesthetics/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/studyly/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/kingsre/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/serveekay/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/supplementshub/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/bricks-builder/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/figma-to-code/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/wordpress-redesign/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/faq/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/404/",
+      "width": 390,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/about/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/projects/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/rejuvenated-knives/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/pagano-law/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/weinberger-aesthetics/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/studyly/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/kingsre/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/serveekay/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/supplementshub/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/bricks-builder/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/figma-to-code/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/wordpress-redesign/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/faq/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/404/",
+      "width": 390,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/about/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/projects/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/rejuvenated-knives/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/pagano-law/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/weinberger-aesthetics/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/studyly/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/kingsre/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/serveekay/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/supplementshub/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/bricks-builder/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/figma-to-code/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/wordpress-redesign/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/faq/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/404/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/about/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/projects/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/rejuvenated-knives/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/pagano-law/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/weinberger-aesthetics/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/studyly/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/kingsre/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/serveekay/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/case-studies/supplementshub/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/bricks-builder/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/figma-to-code/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/services/wordpress-redesign/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/faq/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    },
+    {
+      "route": "/404/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": 1,
+      "overflow": false,
+      "broken": [],
+      "noDimensions": []
+    }
+  ],
+  "axe": []
+}
