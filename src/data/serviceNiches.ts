@@ -19,7 +19,10 @@ export const serviceNiches: ServiceNiche[] = [
       "Custom Bricks Builder WordPress sites with ACF, clean structure, and editable handoff for clinics, firms, agencies, and founders.",
     label: "Service / Bricks",
     highlights: [
-      { label: "Best for", value: "New Bricks builds and Divi/Elementor migrations" },
+      {
+        label: "Best for",
+        value: "New Bricks builds and Divi/Elementor migrations",
+      },
       { label: "Stack", value: "Bricks, WordPress, ACF" },
       { label: "Proof", value: "Pagano Law, Weinberger, Kings RE, SerVeekay" },
     ],
@@ -50,9 +53,18 @@ export const serviceNiches: ServiceNiche[] = [
       },
     ],
     relatedCases: [
-      { href: "/case-studies/pagano-law", label: "Divi to Bricks — Pagano Law" },
-      { href: "/case-studies/weinberger-aesthetics", label: "Figma to Bricks clinic" },
-      { href: "/case-studies/kingsre", label: "Elementor to Bricks — Kings RE" },
+      {
+        href: "/case-studies/pagano-law",
+        label: "Divi to Bricks — Pagano Law",
+      },
+      {
+        href: "/case-studies/weinberger-aesthetics",
+        label: "Figma to Bricks clinic",
+      },
+      {
+        href: "/case-studies/kingsre",
+        label: "Elementor to Bricks — Kings RE",
+      },
       { href: "/case-studies/serveekay", label: "Figma to Bricks portfolio" },
     ],
   },
@@ -64,7 +76,10 @@ export const serviceNiches: ServiceNiche[] = [
       "Pixel-accurate Figma handoff into HTML/Tailwind, React, or Bricks Builder WordPress — production-ready front ends without redesign guesswork.",
     label: "Service / Figma",
     highlights: [
-      { label: "Best for", value: "Agencies and product teams with finished designs" },
+      {
+        label: "Best for",
+        value: "Agencies and product teams with finished designs",
+      },
       { label: "Outputs", value: "HTML/Tailwind, React, Bricks" },
       { label: "Proof", value: "Studyly, Weinberger, SerVeekay" },
     ],
@@ -89,8 +104,14 @@ export const serviceNiches: ServiceNiche[] = [
       },
     ],
     relatedCases: [
-      { href: "/case-studies/studyly", label: "Figma to HTML/Tailwind — Studyly" },
-      { href: "/case-studies/weinberger-aesthetics", label: "Figma to Bricks clinic" },
+      {
+        href: "/case-studies/studyly",
+        label: "Figma to HTML/Tailwind — Studyly",
+      },
+      {
+        href: "/case-studies/weinberger-aesthetics",
+        label: "Figma to Bricks clinic",
+      },
       { href: "/case-studies/serveekay", label: "Figma to Bricks portfolio" },
     ],
   },
@@ -103,7 +124,10 @@ export const serviceNiches: ServiceNiche[] = [
     label: "Service / Redesign",
     highlights: [
       { label: "Best for", value: "Outdated or hard-to-edit WordPress sites" },
-      { label: "Outcomes", value: "Clearer offer, better mobile, easier edits" },
+      {
+        label: "Outcomes",
+        value: "Clearer offer, better mobile, easier edits",
+      },
       { label: "Proof", value: "Pagano Law, Kings RE" },
     ],
     sections: [
@@ -127,8 +151,14 @@ export const serviceNiches: ServiceNiche[] = [
       },
     ],
     relatedCases: [
-      { href: "/case-studies/pagano-law", label: "Law firm Divi to Bricks rebuild" },
-      { href: "/case-studies/kingsre", label: "Real estate Elementor to Bricks" },
+      {
+        href: "/case-studies/pagano-law",
+        label: "Law firm Divi to Bricks rebuild",
+      },
+      {
+        href: "/case-studies/kingsre",
+        label: "Real estate Elementor to Bricks",
+      },
     ],
   },
 ];

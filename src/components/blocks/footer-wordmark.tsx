@@ -1,9 +1,9 @@
-/** Mainline footer's full-width SVG wordmark and original gradient treatment.
+/** Portfolio footer's full-width SVG wordmark and original gradient treatment.
  * Glyph outlines are MAYOUB.DEV from the supplied DM Sans font. */
 export function FooterWordmark() {
   return (
     <div
-      className="text-primary mainline-footer-wordmark mt-10 w-full md:mt-14 lg:mt-20"
+      className="text-primary portfolio-footer-wordmark mt-10 w-full md:mt-14 lg:mt-20"
       aria-hidden="true"
     >
       <svg

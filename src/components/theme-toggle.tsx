@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-/** Original Mainline control, server-rendered; the shared header script owns theme state. */
+/** Portfolio control, server-rendered; the shared header script owns theme state. */
 export function ThemeToggle() {
   return (
     <Button

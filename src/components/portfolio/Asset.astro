@@ -17,29 +17,27 @@ const {
 const asset = getAsset(src);
 ---
 
-{
-  asset ? (
-    <img
-      src={asset.src}
-      width={asset.width}
-      height={asset.height}
-      alt={alt}
-      class={className}
-      loading={eager ? "eager" : "lazy"}
-      decoding="async"
-      fetchpriority={eager ? "high" : "auto"}
-      {...rest}
-    />
-  ) : (
-    <div
-      class:list={["asset-fallback", className]}
-      role="img"
-      aria-label={`${alt} — preview not supplied`}
-    >
-      <>
-        <span>{initials(alt)}</span>
-        <small>Project preview unavailable</small>
-      </>
-    </div>
-  )
-}
+{asset ? (
+  <img
+    src={asset.src}
+    width={asset.width}
+    height={asset.height}
+    alt={alt}
+    class={className}
+    loading={eager ? "eager" : "lazy"}
+    decoding="async"
+    fetchpriority={eager ? "high" : "auto"}
+    {...rest}
+  />
+) : (
+  <div
+    class:list={["asset-fallback", className]}
+    role="img"
+    aria-label={`${alt} — preview not supplied`}
+  >
+    <>
+      <span>{initials(alt)}</span>
+      <small>Project preview unavailable</small>
+    </>
+  </div>
+)}

@@ -9,11 +9,11 @@ const errors = [];
 for (const entry of [
   ...manifest.jsonData.map((e) => ({
     path: `src/data/${e.file}`,
-    sha256: e.sha256,
+    sha256: e.currentSha256 || e.sha256,
   })),
   ...manifest.assets.map((e) => ({
     path: `public/${e.path}`,
-    sha256: e.sha256,
+    sha256: e.currentSha256 || e.sha256,
   })),
 ]) {
   try {
@@ -27,7 +27,7 @@ for (const entry of [
   }
 }
 console.log(
-  `${checked} original JSON/asset hashes checked. ${errors.length} differences.`,
+  `${checked} current JSON/asset hashes checked. ${errors.length} differences.`,
 );
 if (errors.length) {
   console.error(errors.join("\n"));

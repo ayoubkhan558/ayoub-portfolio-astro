@@ -65,14 +65,19 @@ const projectThemeIcons: Record<string, string> = {
   Mockify: "code2",
 };
 
-function toProjectCard(project: (typeof projectArchiveItems)[number]): ProjectCard {
+function toProjectCard(
+  project: (typeof projectArchiveItems)[number],
+): ProjectCard {
   const title = getProjectTitle(project);
   const stack = project.platformFrameworkBuilder || "Custom web build";
   const isFreeTool = /tool|generator|mockup|clamp|convert/i.test(
     `${project.projectType ?? ""} ${project.description ?? ""}`,
   );
-  const href = normalizeHttpLink(project.websiteUrl) || project.websiteUrl || "#";
-  const image = getProjectThumbnail(project) || `https://s.wordpress.com/mshots/v1/${encodeURIComponent(href)}?w=900`;
+  const href =
+    normalizeHttpLink(project.websiteUrl) || project.websiteUrl || "#";
+  const image =
+    getProjectThumbnail(project) ||
+    `https://s.wordpress.com/mshots/v1/${encodeURIComponent(href)}?w=900`;
 
   return {
     icon: projectThemeIcons[title] ?? "rocket",
@@ -80,7 +85,9 @@ function toProjectCard(project: (typeof projectArchiveItems)[number]): ProjectCa
     kind: isFreeTool ? "free-tool" : "client-site",
     badge: isFreeTool ? "Free web tool" : `${stack} project`,
     deliveryContext:
-      typeof project.company === "string" && project.company ? `While working at ${project.company}` : undefined,
+      typeof project.company === "string" && project.company
+        ? `While working at ${project.company}`
+        : undefined,
     description: getProjectDescription(project),
     stack,
     technologies: [
@@ -101,6 +108,8 @@ function toProjectCard(project: (typeof projectArchiveItems)[number]): ProjectCa
 }
 
 export const projects = featuredProjectNames
-  .map((name) => projectArchiveItems.find((project) => getProjectTitle(project) === name))
+  .map((name) =>
+    projectArchiveItems.find((project) => getProjectTitle(project) === name),
+  )
   .filter((project): project is NonNullable<typeof project> => Boolean(project))
   .map(toProjectCard);

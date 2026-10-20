@@ -1,21 +1,22 @@
 {
-  "unchangedDataFiles": 14,
-  "unchangedOriginalJsonFiles": 5,
+  "sourceDataFiles": 14,
+  "dataStructureUnchanged": true,
+  "semanticChanges": "Only the requested shorter SEO career description; see data-changes.json. Other data edits are formatting.",
   "unchangedOriginalPublicAssets": 239,
-  "dataSha256": {
-    "src/data/caseStudyDetails.json": "9f827e8d2d740a7236e6757a6ee7069b534119118d6d69e4e48217f49916e6cf",
-    "src/data/caseStudyDetails.ts": "5766cd68dc9362b344a036fcda811937d01b7b2e99126f0292df264e4fca1bf3",
+  "currentDataSha256": {
+    "src/data/caseStudyDetails.json": "c80c8fe9bd33bec97157c2efae0d14e176a1451435ee59f60aba380cb95f3e4f",
+    "src/data/caseStudyDetails.ts": "a0db5cf619a1a5d66f71909aaa58b1c6858ce76965c58faa2608a6e229be9ff1",
     "src/data/caseStudySeo.ts": "5aea60a1e22fed04cf5bb2d60b05b6c28d139562c949e93b6e0cd4e30800a0ae",
-    "src/data/portfolio.json": "0faf36e5384c2bd33c95dbaeca9a0b609a40fb06cf318ff86d1a575733009fdb",
-    "src/data/projectLinkStatus.json": "12340767518ffeb25ad41b0fc221cd4fd328eb5ea16a0c11b264b5dd83381d29",
-    "src/data/projectsArchive.json": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
-    "src/data/projectsArchive.ts": "7bb6d4448f7855a3eb40f654128648deb9b97f69e899a014327d6865f9ef2635",
-    "src/data/serviceNiches.ts": "3d9719f346719d74e5b9f8b09cdae8fe05d7c4a1a4dd8e7cd0d827252ca9f865",
-    "src/data/toolCatalog.json": "75819a8c11d25ebc2f2e7c53d1fa91548a680232520c502d7a564dff90fad263",
-    "src/data/toolCatalog.ts": "82b423961d87094853bbd7dd84f4614b98ed8a5cfe3337e7c647fe81595bd5b8",
-    "src/data/work.ts": "18fd27cc7b93d0cb016f31b66959ebede61c2207e74e1a36b8cfc02ba10b5f66",
-    "src/data/privacy-policy.ts": "8005db307dac9794ba5abd14254f76d4612ebe3f4ec1453affbf11aa66b7e979",
-    "src/data/terms-and-conditions.ts": "c0f4c064fab28f237043f667911e51bce61dd93830e9105b3af0d985ba9abc6e",
-    "src/data/servicesPageData.ts": "69deb3485063ef124e27cfa56278423a2f4985e5594db7c7e63e891e755a7c08"
+    "src/data/portfolio.json": "efbff8ab9fdff886430ba97577d823cf7ac515965647ff5edf59a986f7afe09c",
+    "src/data/privacy-policy.ts": "932f62104bc188a03038f32bc180efdb335c05324ecd0197fa0938946cd8191d",
+    "src/data/projectLinkStatus.json": "c51c6b484843e27f8833974aca094aa17a9fcaf9ad35e9ae14c89d3445042284",
+    "src/data/projectsArchive.json": "cd59daf47f9ca6e4ae82f8c21fc0715430673f35b034b6dd3c43b6886b0e80c1",
+    "src/data/projectsArchive.ts": "ae31d369bb8127852fa19943d3303d924aa7a000533ca1c523dc43ecdb28d657",
+    "src/data/serviceNiches.ts": "65da295de8b6770f3dae13044f5c4f1e2050afdd9b89c9ee9e384678c5d53bd8",
+    "src/data/servicesPageData.ts": "8cb66409a01e656a5e9d505d1e3fa1d0fa2441159cf8bb7f9464ac94fcd172aa",
+    "src/data/terms-and-conditions.ts": "7c9caf7b483bc766cb24f23f131b2a9e3bd560861689ecc94c59d42e5830fa41",
+    "src/data/toolCatalog.json": "9435e78205337c324d33c09e4ca68a78da6419177e503bead7c414940c6f64e5",
+    "src/data/toolCatalog.ts": "5a58026175f9ef69266b7f012da97c71c0eafd22b1419b6e7fa938257206dcef",
+    "src/data/work.ts": "dd0f6072e1e5f3b7106446061dbab5085fba7b37cecaff9f409be166640062c8"
   }
 }

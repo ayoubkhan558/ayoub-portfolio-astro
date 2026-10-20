@@ -1,17 +1,46 @@
-<a href="#page-top" class="back-to-top" aria-label="Back to top" title="Back to top" data-back-to-top><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 12 6-6 6 6M12 6v13" /></svg></a>
+<a
+  href="#page-top"
+  class="back-to-top"
+  aria-label="Back to top"
+  title="Back to top"
+  data-back-to-top
+>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="m6 12 6-6 6 6M12 6v13" />
+  </svg>
+</a>
 <script>
-  const topLink = document.querySelector<HTMLAnchorElement>('[data-back-to-top]')!;
-  topLink.dataset.ready = 'true';
+  const topLink =
+    document.querySelector<HTMLAnchorElement>("[data-back-to-top]")!;
+  topLink.dataset.ready = "true";
   function syncTopLink() {
     const visible = scrollY > 500;
-    topLink.classList.toggle('is-visible', visible);
+    topLink.classList.toggle("is-visible", visible);
     topLink.tabIndex = visible ? 0 : -1;
-    topLink.setAttribute('aria-hidden', String(!visible));
+    topLink.setAttribute("aria-hidden", String(!visible));
   }
-  addEventListener('scroll', syncTopLink, { passive: true }); syncTopLink();
-  topLink.addEventListener('click', event => {
+  addEventListener("scroll", syncTopLink, { passive: true });
+  syncTopLink();
+  topLink.addEventListener("click", (event) => {
     event.preventDefault();
-    document.querySelector<HTMLAnchorElement>('.site-header .brand')?.focus({ preventScroll: true });
-    scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    document
+      .querySelector<HTMLAnchorElement>(".site-header .brand")
+      ?.focus({ preventScroll: true });
+    scrollTo({
+      top: 0,
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
   });
 </script>

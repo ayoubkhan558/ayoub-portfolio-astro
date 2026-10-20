@@ -1,8 +1,8 @@
 {
   "report": [
-    "Original homepage section order restored; six selected projects; portrait present.",
-    "Mainline FAQ: single-open and collapsible; keyboard-accessible Radix accordion.",
-    "Testimonials use Mainline Embla carousel; arrows advance slides.",
+    "Requested homepage section order retained without Process; six selected projects; portrait present.",
+    "Portfolio FAQ: single-open and collapsible; keyboard-accessible Radix accordion.",
+    "Testimonials use Portfolio Embla carousel; arrows advance slides.",
     "147 unique project drawers: card and button open; focus trap, Escape, close and return focus; filters still work.",
     "All 56 tools retained in the continuous skills marquee; reduced motion shows a static, wrapping list.",
     "Case sections have alternating surfaces; screenshot hover pans through full image; reduced-motion respected.",

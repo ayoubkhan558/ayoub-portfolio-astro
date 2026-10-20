@@ -3,7 +3,9 @@ const { label, title, subtitle } = Astro.props;
 ---
 
 <div class="section-heading">
-  <div><span class="eyebrow">{label}</span><h2>{title}</h2></div>{
-    subtitle && <p>{subtitle}</p>
-  }
+  <div>
+    <span class="eyebrow">{label}</span>
+    <h2>{title}</h2>
+  </div>
+  {subtitle && <p>{subtitle}</p>}
 </div>

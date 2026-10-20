@@ -1,4 +1,4 @@
-import p from './portfolio.json';
+import p from "./portfolio.json";
 export const sections = [
   {
     title: "Agreement to these terms",
@@ -98,8 +98,24 @@ export const sections = [
 ];
 
 export const highlights = [
-          { label: "Scope", value: "Deliverables, price, timeline, and assumptions are confirmed before work starts." },
-          { label: "Payment", value: "Work may pause when payments, assets, access, or approvals are delayed." },
-          { label: "Ownership", value: "Custom deliverables transfer after final payment unless agreed otherwise." },
-          { label: "Support", value: "Launch checks are included when agreed; ongoing maintenance is separate." },
-        ];
+  {
+    label: "Scope",
+    value:
+      "Deliverables, price, timeline, and assumptions are confirmed before work starts.",
+  },
+  {
+    label: "Payment",
+    value:
+      "Work may pause when payments, assets, access, or approvals are delayed.",
+  },
+  {
+    label: "Ownership",
+    value:
+      "Custom deliverables transfer after final payment unless agreed otherwise.",
+  },
+  {
+    label: "Support",
+    value:
+      "Launch checks are included when agreed; ongoing maintenance is separate.",
+  },
+];

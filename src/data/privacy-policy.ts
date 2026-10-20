@@ -1,4 +1,4 @@
-import p from './portfolio.json';
+import p from "./portfolio.json";
 export const sections = [
   {
     title: "Who this policy applies to",
@@ -83,8 +83,22 @@ export const sections = [
 ];
 
 export const highlights = [
-          { label: "Data collected", value: "Only what is needed for inquiries, estimates, delivery, and support." },
-          { label: "Sharing", value: "Limited to services needed for project work, payment, hosting, or compliance." },
-          { label: "Retention", value: "Kept only while useful for work, records, support, or legal needs." },
-          { label: "Requests", value: "You can ask for access, correction, or deletion where applicable." },
-        ];
+  {
+    label: "Data collected",
+    value:
+      "Only what is needed for inquiries, estimates, delivery, and support.",
+  },
+  {
+    label: "Sharing",
+    value:
+      "Limited to services needed for project work, payment, hosting, or compliance.",
+  },
+  {
+    label: "Retention",
+    value: "Kept only while useful for work, records, support, or legal needs.",
+  },
+  {
+    label: "Requests",
+    value: "You can ask for access, correction, or deletion where applicable.",
+  },
+];

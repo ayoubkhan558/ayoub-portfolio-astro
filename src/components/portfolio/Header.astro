@@ -10,34 +10,36 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
     class="brand"
     href="/"
     aria-label={`a. ${p.profile.brand} — ${p.profile.name} home`}
-    ><span class="brand-mark" aria-hidden="true">a.</span><span
-      >{p.profile.brand}</span
-    ></a
   >
+    <span class="brand-mark" aria-hidden="true">
+      a.
+    </span>
+    <span>{p.profile.brand}</span>
+  </a>
   <nav class="desktop-nav" aria-label="Main navigation">
-    {
-      p.navLinks.map((link) => (
-        <a
-          class:list={[isActive(link.href) && "active"]}
-          href={link.href}
-          aria-current={path === link.href ? "page" : undefined}
-        >
-          {link.label}
-        </a>
-      ))
-    }
+    {p.navLinks.map((link) => (
+      <a
+        class:list={[isActive(link.href) && "active"]}
+        href={link.href}
+        aria-current={path === link.href ? "page" : undefined}
+      >
+        {link.label}
+      </a>
+    ))}
   </nav>
   <div class="header-actions">
-    <ThemeToggle /><a class="button small header-cta" href="/contact/"
-      >Let's talk <span aria-hidden="true">↗</span></a
-    >
+    <ThemeToggle />
+    <a class="button small header-cta" href="/contact/">
+      Let's talk <span aria-hidden="true">↗</span>
+    </a>
     <details class="mobile-menu" id="menu-details">
       <summary
         class="icon-button menu-toggle"
         id="menu-toggle"
         aria-label="Navigation menu"
         aria-controls="mobile-nav"
-        ><svg
+      >
+        <svg
           aria-hidden="true"
           width="20"
           height="20"
@@ -45,30 +47,32 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
           fill="none"
           stroke="currentColor"
           stroke-width="1.6"
-          stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg
-        ></summary
-      ><nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
-        {
-          p.navLinks.map((link) => (
-            <a
-              href={link.href}
-              aria-current={path === link.href ? "page" : undefined}
-            >
-              {link.label}
-            </a>
-          ))
-        }<a href="/contact/">Let's talk ↗</a>
+          stroke-linecap="round"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </summary>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+        {p.navLinks.map((link) => (
+          <a
+            href={link.href}
+            aria-current={path === link.href ? "page" : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a href="/contact/">Let's talk ↗</a>
       </nav>
     </details>
   </div>
 </header>
-<noscript
-  ><style>
+<noscript>
+  <style>
     #theme-toggle {
       display: none;
     }
-  </style></noscript
->
+  </style>
+</noscript>
 <script>
   const theme = document.querySelector<HTMLButtonElement>("#theme-toggle");
   const preference = matchMedia("(prefers-color-scheme: dark)");

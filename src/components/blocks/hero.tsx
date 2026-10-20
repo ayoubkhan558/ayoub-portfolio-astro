@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 import type portfolio from "@/data/portfolio.json";
 
-/** Mainline's original split hero, wired directly to the existing portfolio schema. */
+/** Portfolio split hero, wired directly to the existing portfolio schema. */
 export function Hero({
   data,
   featured,
@@ -51,7 +51,7 @@ export function Hero({
           aria-label="About your developer"
         >
           <div className="hero-profile-top">
-            <span className="eyebrow">Your next web partner</span>
+            <span className="eyebrow">Independent web developer</span>
             <span className="profile-status">
               <i aria-hidden="true" />
               Available
@@ -66,11 +66,10 @@ export function Hero({
             />
             <div>
               <span className="eyebrow">Build. Improve. Grow.</span>
-              <h2>
-                One partner.
-                <br />
-                From code to search.
-              </h2>
+              <h2>{data.profile.name}</h2>
+              <p className="hero-profile-role">
+                Web Developer & SEO Specialist
+              </p>
               <p>{data.profile.location}</p>
             </div>
           </div>
@@ -99,7 +98,7 @@ export function Hero({
           </div>
         </aside>
       </section>
-      <div className="hero-showcase wrap">
+      <div className="hero-showcase wrap" hidden>
         <div className="browser-bar" aria-hidden="true">
           <span className="browser-dots">● ● ●</span>
           <span>Selected work · built with care</span>

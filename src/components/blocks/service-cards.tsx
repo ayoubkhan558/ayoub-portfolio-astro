@@ -14,15 +14,44 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type portfolio from "@/data/portfolio.json";
 
-/** Mainline's original Pricing/Card/Button block. Portfolio services are not subscription plans. */
-export function Pricing({
+/** Portfolio Pricing/Card/Button block. Portfolio services are not subscription plans. */
+export function ServiceCards({
   services,
   idPrefix = "services",
+  compact = false,
 }: {
   services: typeof portfolio.services;
   idPrefix?: string;
+  compact?: boolean;
 }) {
   const icons = [Code2, LayoutTemplate, PanelsTopLeft, Gauge, Search, Globe];
+  if (compact) {
+    return (
+      <div className="compact-solutions-grid">
+        {services.map((service, i) => {
+          const Icon = icons[i % icons.length];
+          return (
+            <article className="compact-solution" key={service.level}>
+              <div className="compact-solution-top">
+                <Icon size={22} aria-hidden="true" />
+                <span className="eyebrow">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
+              <a
+                className="text-link card-action"
+                href={`/services/#services-${i}`}
+              >
+                Explore service <ArrowUpRight aria-hidden="true" size={16} />
+              </a>
+            </article>
+          );
+        })}
+      </div>
+    );
+  }
   return (
     <div className="service-grid service-grid-v2">
       {services.map((s, i) => (
@@ -72,7 +101,11 @@ export function Pricing({
               <p>{s.whatYouGet}</p>
               <p>{s.bestFit}</p>
             </details>
-            <Button asChild variant="outline" className="button outline">
+            <Button
+              asChild
+              variant="outline"
+              className="button card-action outline"
+            >
               <a
                 href={`${s.href}${s.href.includes("?") ? "&" : "?"}subject=${encodeURIComponent(s.name)}`}
               >

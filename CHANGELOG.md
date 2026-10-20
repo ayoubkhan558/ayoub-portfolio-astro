@@ -1,3 +1,18 @@
+# Version 1.4.0 — compact layouts, personal identity and formatting
+
+- Formatted all editable supported files with two spaces; added matching EditorConfig, VS Code and format-check settings.
+- Shortened the SEO career description while preserving dataset structure and all other JSON values.
+- Personalized the hero card; hid the large showcase and removed homepage Process and Best fit for.
+- Replaced home service pricing cards with compact solution cards; retained full details on Services.
+- Removed About Delivery checklist, moved Project fit to Services and added alternate section surfaces.
+- Made Services Problems I solve and What you take away single-item rotators.
+- Kept skills scrolling on hover; explicit pause and reduced-motion/static fallbacks remain.
+- Normalized FAQ spacing and bottom-aligned final card actions across the site.
+- Removed project-facing template identity, renamed service-cards component and preserved mandatory licenses.
+- Updated integrity checks to distinguish formatted current JSON from original hashes. All 239 assets remain unchanged.
+
+---
+
 # Version 1.3.0 — package updates and homepage/About refinements
 
 - Updated direct packages to latest stable releases, with TypeScript 6.0.3 retained as the latest checker/parser-compatible version instead of unsupported 7.x.
@@ -27,8 +42,8 @@
 # Version 1.2 — requested portfolio refinements
 
 - Restored original Next.js homepage section order, added homepage portrait, limited Selected Work to six.
-- Switched FAQs to original Mainline Radix accordion (single-open) and testimonials/tools to original Embla carousel primitives.
-- Restored Mainline full-width SVG gradient footer treatment with personal branding; aligned brand lockups.
+- Switched FAQs to original portfolio Radix accordion (single-open) and testimonials/tools to original Embla carousel primitives.
+- Restored portfolio full-width SVG gradient footer treatment with personal branding; aligned brand lockups.
 - Redesigned services with numbered/icon headers, investment bands and hover accents.
 - Moved delivery/status badges onto image layers and added accessible project-detail offcanvas dialogs.
 - Added alternating case-study section surfaces and hover-scroll screenshot thumbnails.
@@ -41,9 +56,9 @@
 
 ## Original template components
 
-- Connected Mainline Hero, Features, Pricing, FAQ, Testimonials, Background, DashedLine, ThemeToggle and UI primitives directly to the existing portfolio data.
+- Connected portfolio Hero, Features, Pricing, FAQ, Testimonials, Background, DashedLine, ThemeToggle and UI primitives directly to the existing portfolio data.
 - Replaced the very tall testimonial stack with a keyboard-focusable, scroll-snap rail, manual buttons, boundary states and reduced-motion handling. All 17 reviews remain available; there is no autoplay or React hydration.
-- Kept the Mainline typography, gradient shells, navigation shape, card treatment and overall design.
+- Kept the portfolio typography, gradient shells, navigation shape, card treatment and overall design.
 
 ## Fixes
 

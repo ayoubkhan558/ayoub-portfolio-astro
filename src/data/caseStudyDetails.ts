@@ -62,7 +62,11 @@ export type CaseStudyDetailData = {
     fontName: string;
     fontFamilies?: string[];
     fontMeta: string;
-    palette: Array<{ label: string; tone?: "dark" | "gray" | "light" | "accent"; value?: string }>;
+    palette: Array<{
+      label: string;
+      tone?: "dark" | "gray" | "light" | "accent";
+      value?: string;
+    }>;
   };
   desktopPages: Array<{ name: string; type: string }>;
   responsiveBenefits: string[];
@@ -87,4 +91,7 @@ export type CaseStudyPageSpeedResult = {
   speedIndex: string | null;
 };
 
-export const caseStudyDetails = caseStudyDetailsJson as Record<string, CaseStudyDetailData>;
+export const caseStudyDetails = caseStudyDetailsJson as Record<
+  string,
+  CaseStudyDetailData
+>;

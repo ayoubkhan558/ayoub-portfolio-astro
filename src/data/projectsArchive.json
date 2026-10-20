@@ -2,10 +2,7 @@
   "sourceFile": "C:\\Users\\NCS\\Downloads\\Ayoub Projects.xlsx",
   "sheet": "Sheet1",
   "projectCount": 143,
-  "excludedRows": [
-    42,
-    137
-  ],
+  "excludedRows": [42, 137],
   "projects": [
     {
       "websiteName": "Xgrid",
@@ -183,10 +180,7 @@
       "description": "Automates Reddit lead generation, keyword monitoring, and AI-powered reply engagement for brand visibility and sales.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-reppit.jpg",
-      "originalStack": [
-        "WordPress",
-        "Bricks Builder"
-      ]
+      "originalStack": ["WordPress", "Bricks Builder"]
     },
     {
       "websiteName": "Smart Bulk Price Editor",
@@ -453,10 +447,7 @@
       "description": "Episcols is a wordpress website translated from Figma with Wordpress, Elementor to present services clearly and convert qualified visitors.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
+      "originalStack": ["WordPress", "Elementor"],
       "screenshot": "/projects/project-ss-episcols.jpg"
     },
     {
@@ -548,10 +539,7 @@
       "description": "LWS Academy is an education website built with Wordperss, Elementor, TutorLMS to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
+      "originalStack": ["WordPress", "Elementor"],
       "screenshot": "/projects/project-ss-lws-academy.jpg"
     },
     {
@@ -601,10 +589,7 @@
       "description": "Sun Shield Insurance is a wordpress website translated from Figma with Wordperss, Elementor to support lead generation with a cleaner user journey.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
+      "originalStack": ["WordPress", "Elementor"],
       "screenshot": "/projects/project-ss-sun-shield-insurance.jpg"
     },
     {
@@ -1859,10 +1844,7 @@
       "description": "centaurivision is a wordpress website built with Wordpress, Elementor to make key content easier to understand and act on.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
+      "originalStack": ["WordPress", "Elementor"],
       "screenshot": "/projects/project-ss-centaurivision.jpg"
     },
     {

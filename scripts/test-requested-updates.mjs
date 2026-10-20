@@ -31,7 +31,7 @@ async function shot(name, selector) {
 }
 await page.goto(base + "/", { waitUntil: "networkidle" });
 await page.waitForFunction(() =>
-  document.querySelector('.mainline-faq [data-slot="accordion-trigger"]'),
+  document.querySelector('.portfolio-faq [data-slot="accordion-trigger"]'),
 );
 const order = await page
   .locator("main section[id],main div#cta")
@@ -45,7 +45,6 @@ assert.deepEqual(order, [
   "case-studies",
   "proof",
   "about",
-  "process",
   "faq",
   "cta",
 ]);
@@ -56,7 +55,7 @@ await page.setViewportSize({ width: 1440, height: 960 });
 await shot("home-desktop");
 await shot("home-about", "#about");
 report.push(
-  "Original homepage section order restored; six selected projects; portrait present.",
+  "Requested homepage section order retained without Process; six selected projects; portrait present.",
 );
 await page.locator("#menu-toggle").isVisible();
 await page.setViewportSize({ width: 390, height: 960 });
@@ -67,7 +66,7 @@ await page.locator("#theme-toggle").click();
 await page.evaluate(() => scrollTo(0, 0));
 await shot("home-dark");
 await page.locator("#theme-toggle").click();
-const accordion = page.locator(".mainline-faq");
+const accordion = page.locator(".portfolio-faq");
 const triggers = accordion.locator('[data-slot="accordion-trigger"]');
 await triggers.nth(1).click();
 assert.equal(
@@ -77,7 +76,7 @@ assert.equal(
   1,
 );
 assert.equal(await triggers.nth(0).getAttribute("data-state"), "closed");
-await shot("faq-mobile", ".mainline-faq");
+await shot("faq-mobile", ".portfolio-faq");
 await triggers.nth(1).click();
 assert.equal(
   await accordion
@@ -86,7 +85,7 @@ assert.equal(
   0,
 );
 report.push(
-  "Mainline FAQ: single-open and collapsible; keyboard-accessible Radix accordion.",
+  "Portfolio FAQ: single-open and collapsible; keyboard-accessible Radix accordion.",
 );
 await page.locator(".reviews-slider").scrollIntoViewIfNeeded();
 await page.waitForFunction(
@@ -103,7 +102,9 @@ await page.waitForTimeout(700);
 const after = await slide.boundingBox();
 assert.ok(after.x < before.x - 100);
 await shot("testimonials-mobile", ".reviews-slider");
-report.push("Testimonials use Mainline Embla carousel; arrows advance slides.");
+report.push(
+  "Testimonials use Portfolio Embla carousel; arrows advance slides.",
+);
 await page.goto(base + "/services/", { waitUntil: "networkidle" });
 assert.equal(await page.locator(".service-card").count(), 6);
 await shot("services-mobile", ".service-grid");

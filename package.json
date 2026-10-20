@@ -1,15 +1,15 @@
 {
   "name": "ayoub-astro-portfolio",
   "type": "module",
-  "version": "1.3.0",
-  "author": "shadcnblocks.com",
+  "version": "1.4.0",
+  "author": "Muhammad Ayoub",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "format": "prettier --write \"src/**/*.{tsx,css}\" \"src/lib/*.ts\" \"scripts/*.mjs\" README.md QA-REPORT.md CHANGELOG.md",
+    "format": "prettier --write . --ignore-unknown",
     "start": "astro dev",
     "check:assets": "node scripts/audit-assets.mjs",
     "check": "astro check",
@@ -19,7 +19,9 @@
     "test:interactions": "node scripts/test-requested-updates.mjs",
     "check:build": "node scripts/check-build.mjs",
     "test:extra": "node scripts/test-extra.mjs",
-    "test:design": "node scripts/test-design-updates.mjs"
+    "test:design": "node scripts/test-design-updates.mjs",
+    "format:check": "prettier --check . --ignore-unknown",
+    "test:refinements": "node scripts/test-refinements.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.0",
@@ -55,7 +57,7 @@
     "typescript": "^6.0.3"
   },
   "private": true,
-  "description": "Muhammad Ayoub portfolio \u2014 Mainline design, Astro static site",
+  "description": "Muhammad Ayoub — personal portfolio built with Astro",
   "overrides": {
     "postcss-selector-parser": "^7.1.6"
   },

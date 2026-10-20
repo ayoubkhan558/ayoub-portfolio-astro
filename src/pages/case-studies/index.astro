@@ -6,14 +6,18 @@ import p from "../../data/portfolio.json";
 import Layout from "../../layouts/PortfolioLayout.astro";
 ---
 
-<Layout title="Case studies"
-  ><div class="template-background">
+<Layout title="Case studies">
+  <div class="portfolio-background">
     <Intro
       {...{
         label: p.sections.caseStudies.label,
         title: p.sections.caseStudies.title,
         description: p.sections.caseStudies.subtitle,
       }}
-    /><section class="section wrap first-section"><CaseGrid /></section>
-  </div><CTA /></Layout
->
+    />
+    <section class="section wrap first-section">
+      <CaseGrid />
+    </section>
+  </div>
+  <CTA />
+</Layout>

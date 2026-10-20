@@ -58,48 +58,127 @@ const details = Object.fromEntries(
   data-platform={keys}
   data-status={p.projectStatus || ""}
 >
-  <div class="project-media"><Asset
-    src={p.screenshot}
-    alt={`${title} website preview`}
-    class="project-preview"
-  /><span class:list={["project-status",p.projectStatus === "Live" ? "is-live" : "is-legacy"]}>{p.projectStatus || "Status not recorded"}</span>{p.company && <span class="delivery-badge">Delivered at {p.company}</span>}</div>
+  <div class="project-media">
+    <Asset
+      src={p.screenshot}
+      alt={`${title} website preview`}
+      class="project-preview"
+    />
+    <span
+      class:list={[
+        "project-status",
+        p.projectStatus === "Live" ? "is-live" : "is-legacy",
+      ]}
+    >
+      {p.projectStatus || "Status not recorded"}
+    </span>
+    {p.company && <span class="delivery-badge">Delivered at {p.company}</span>}
+  </div>
   <div class="project-body">
     <h2>{title}</h2>
     <p>{description}</p>
     <div class="tags">
       <span>{p.platformFrameworkBuilder || "Custom web build"}</span>
     </div>
-    <div class="project-links">
-      {
-        href && (
+    <div class="project-links card-link-row">
+      {href && (
+        <a
+          class="text-link"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Website ↗
+        </a>
+      )}
+      {figma && (
+        <a
+          class="text-link"
+          href={figma}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Figma ↗
+        </a>
+      )}
+    </div>
+    <button
+      type="button"
+      class="button outline project-open card-action"
+      data-project-open={panelId}
+      aria-haspopup="dialog"
+      aria-controls={panelId}
+    >
+      Project details <span aria-hidden="true">↗</span>
+    </button>
+    <noscript>
+      <details>
+        <summary>Project details</summary>
+        <ValueTree value={details} />
+      </details>
+    </noscript>
+  </div>
+  <dialog
+    class="project-drawer"
+    id={panelId}
+    aria-labelledby={`${panelId}-title`}
+  >
+    <div class="drawer-header">
+      <span class="eyebrow">Project details</span>
+      <button
+        type="button"
+        class="icon-button drawer-close"
+        aria-label="Close project details"
+      >
+        <svg
+          aria-hidden="true"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        >
+          <path d="m6 6 12 12M18 6 6 18"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <Asset
+        src={p.screenshot}
+        alt={`${title} website preview`}
+        class="drawer-image"
+      />
+      <div class="tags spaced">
+        <span>{p.projectStatus || "Status not recorded"}</span>
+        <span>{p.platformFrameworkBuilder || "Custom web build"}</span>
+      </div>
+      <h2 id={`${panelId}-title`}>{title}</h2>
+      <p>{description}</p>
+      <ValueTree value={details} />
+      <div class="actions">
+        {href && (
           <a
-            class="text-link"
+            class="button"
             href={href}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Website ↗
+            Visit website ↗
           </a>
-        )
-      }
-      {
-        figma && (
+        )}
+        {figma && (
           <a
-            class="text-link"
+            class="button outline"
             href={figma}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Figma ↗
+            View Figma ↗
           </a>
-        )
-      }
+        )}
+      </div>
     </div>
-    <button type="button" class="button outline project-open" data-project-open={panelId} aria-haspopup="dialog" aria-controls={panelId}>Project details <span aria-hidden="true">↗</span></button>
-    <noscript><details><summary>Project details</summary><ValueTree value={details} /></details></noscript>
-  </div>
-  <dialog class="project-drawer" id={panelId} aria-labelledby={`${panelId}-title`}>
-    <div class="drawer-header"><span class="eyebrow">Project details</span><button type="button" class="icon-button drawer-close" aria-label="Close project details"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"></path></svg></button></div>
-    <div class="drawer-content"><Asset src={p.screenshot} alt={`${title} website preview`} class="drawer-image" /><div class="tags spaced"><span>{p.projectStatus || "Status not recorded"}</span><span>{p.platformFrameworkBuilder || "Custom web build"}</span></div><h2 id={`${panelId}-title`}>{title}</h2><p>{description}</p><ValueTree value={details} /><div class="actions">{href && <a class="button" href={href} target="_blank" rel="noopener noreferrer">Visit website ↗</a>}{figma && <a class="button outline" href={figma} target="_blank" rel="noopener noreferrer">View Figma ↗</a>}</div></div>
   </dialog>
 </article>

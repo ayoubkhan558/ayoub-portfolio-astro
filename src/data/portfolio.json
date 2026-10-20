@@ -516,7 +516,7 @@
         "year": "2026 - Current",
         "title": "SEO Strategy",
         "technologies": "On-page SEO, Off-page SEO, Technical SEO, Content Strategy",
-        "description": "Leading full-cycle SEO growth across technical optimization, on-page improvements, content structure, authority building, and conversion-focused visibility strategy.",
+        "description": "Growing search visibility through technical SEO, content, and authority building.",
         "current": true
       }
     ],
@@ -827,10 +827,7 @@
       "description": "Started my professional development journey by building responsive interfaces and learning production-level development workflows."
     }
   ],
-  "contactSteps": [
-    "Send project details",
-    "Get a build estimate"
-  ],
+  "contactSteps": ["Send project details", "Get a build estimate"],
   "faqs": [
     {
       "question": "How long does a typical project take?",

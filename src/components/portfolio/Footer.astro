@@ -3,33 +3,46 @@ import p from "../../data/portfolio.json";
 import { FooterWordmark } from "../blocks/footer-wordmark";
 ---
 
-<footer class="site-footer"><div class="wrap">
-  <div class="footer-top">
-    <div>
-      <a class="brand" href="/"
-        ><span class="brand-mark">a.</span><span>{p.profile.brand}</span></a
-      ><p>{p.profile.role}<br />{p.profile.location}</p><span
-        class="availability"><i></i>{p.profile.availability}</span
-      >
-    </div>{
-      p.footerColumns.map((column) => (
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="/">
+          <span class="brand-mark">a.</span>
+          <span>{p.profile.brand}</span>
+        </a>
+        <p>
+          {p.profile.role}
+          <br />
+          {p.profile.location}
+        </p>
+        <span class="availability">
+          <i></i>
+          {p.profile.availability}
+        </span>
+      </div>
+      {p.footerColumns.map((column) => (
         <div class="footer-column">
           <h2>{column.title}</h2>
           {column.links.map((link) => (
-            <a href={link.href}>{link.label.replace(/résumé|resume/gi, "Resume")}</a>
+            <a href={link.href}>
+              {link.label.replace(/résumé|resume/gi, "Resume")}
+            </a>
           ))}
         </div>
-      ))
-    }
-  </div><div class="footer-bottom">
-    <span
-      >© {new Date().getFullYear()} {p.profile.name}. All rights reserved.</span
-    ><div>
-      <a href="/privacy-policy/">Privacy policy</a><a
-        href="/terms-and-conditions/">Terms</a
-      ><a href={p.profile.github}>GitHub ↗</a><a href={p.profile.linktree}
-        >All links ↗</a
-      >
+      ))}
     </div>
-  </div></div><FooterWordmark />
+    <div class="footer-bottom">
+      <span>
+        © {new Date().getFullYear()} {p.profile.name}. All rights reserved.
+      </span>
+      <div>
+        <a href="/privacy-policy/">Privacy policy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href={p.profile.github}>GitHub ↗</a>
+        <a href={p.profile.linktree}>All links ↗</a>
+      </div>
+    </div>
+  </div>
+  <FooterWordmark />
 </footer>

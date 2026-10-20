@@ -70,7 +70,7 @@
     ".vscode/extensions.json",
     ".vscode/launch.json",
     ".vscode/settings.json",
-    "reference/MAINLINE-README.md"
+    "reference/removed-template-readme.md"
   ],
   "removedPackages": [
     "@eslint/eslintrc",

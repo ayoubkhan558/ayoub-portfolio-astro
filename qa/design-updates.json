@@ -1,6 +1,6 @@
 {
   "report": [
-    "Home: redesigned portrait/results hero, six stacked section headings, one-at-a-time rotating copy, pause and next controls.",
+    "Home: personalized portrait/results hero, stacked section headings (Process removed), one-at-a-time rotating copy, pause and next controls.",
     "Back-to-top: threshold visibility, scroll to top and keyboard focus returned to the home link.",
     "About: education beside portrait, Resume wording, compact toolbox, testimonials, all 56 tools in a seamless marquee with pause/resume and hidden duplicate groups.",
     "Reduced motion disables autoplay; manual next remains usable. Desktop, 390px and 320px requested sections captured without page overflow.",

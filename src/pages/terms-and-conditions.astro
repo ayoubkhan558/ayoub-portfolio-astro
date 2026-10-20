@@ -4,43 +4,40 @@ import { sections, highlights } from "../data/terms-and-conditions";
 import Layout from "../layouts/PortfolioLayout.astro";
 ---
 
-<Layout title="Terms and Conditions"
-  ><div class="template-background">
+<Layout title="Terms and Conditions">
+  <div class="portfolio-background">
     <Intro
       label="Legal"
       title="Terms and Conditions"
       description="General terms for website use, project scope, payment, delivery, ownership, and support."
     />
-  </div><article class="section wrap prose-narrow">
-    <p class="eyebrow">Last updated: June 28, 2026</p><div
-      class="two-grid legal-highlights"
-    >
-      {
-        highlights.map((h) => (
-          <div class="plain-card">
-            <>
-              <span class="eyebrow">{h.label}</span>
-              <p>{h.value}</p>
-            </>
-          </div>
-        ))
-      }
-    </div>{
-      sections.map((s) => (
-        <section class="spaced">
-          <h2>{s.title}</h2>
-          {s.paragraphs.map((text) => (
-            <p>{text}</p>
-          ))}
-          {"bullets" in s && (
-            <ul class="check-list">
-              {s.bullets?.map((text) => (
-                <li>{text}</li>
-              ))}
-            </ul>
-          )}
-        </section>
-      ))
-    }
-  </article></Layout
->
+  </div>
+  <article class="section wrap prose-narrow">
+    <p class="eyebrow">Last updated: June 28, 2026</p>
+    <div class="two-grid legal-highlights">
+      {highlights.map((h) => (
+        <div class="plain-card">
+          <>
+            <span class="eyebrow">{h.label}</span>
+            <p>{h.value}</p>
+          </>
+        </div>
+      ))}
+    </div>
+    {sections.map((s) => (
+      <section class="spaced">
+        <h2>{s.title}</h2>
+        {s.paragraphs.map((text) => (
+          <p>{text}</p>
+        ))}
+        {"bullets" in s && (
+          <ul class="check-list">
+            {s.bullets?.map((text) => (
+              <li>{text}</li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ))}
+  </article>
+</Layout>

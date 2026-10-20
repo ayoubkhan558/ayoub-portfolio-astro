@@ -8,12 +8,16 @@ const {
 ---
 
 <section class="cta-panel wrap">
-  <span class="eyebrow">{p.sections.contact.label}</span><h2>{title}</h2><p>
-    {text}
-  </p><div class="actions">
-    <a class="button" href="/contact/"
-      >{button} <span aria-hidden="true">↗</span></a
-    ><a class="text-link" href={`mailto:${p.profile.email}`}
-      >{p.profile.email}</a>
-  </div><p class="offer">{p.offer}</p>
+  <span class="eyebrow">{p.sections.contact.label}</span>
+  <h2>{title}</h2>
+  <p>{text}</p>
+  <div class="actions">
+    <a class="button" href="/contact/">
+      {button} <span aria-hidden="true">↗</span>
+    </a>
+    <a class="text-link" href={`mailto:${p.profile.email}`}>
+      {p.profile.email}
+    </a>
+  </div>
+  <p class="offer">{p.offer}</p>
 </section>

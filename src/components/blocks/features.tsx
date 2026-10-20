@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { CaseStudyDetailData } from "@/data/caseStudyDetails";
 
-/** Original Mainline image/card feature block, adapted to case-study records without reshaping them. */
+/** Portfolio image/card feature block, adapted to case-study records without reshaping them. */
 export function Features({
   studies,
   limit = studies.length,
@@ -50,7 +50,7 @@ export function Features({
               </h3>
               <p>{s.listing.description}</p>
               <div className="case-result">{s.listing.result}</div>
-              <a className="text-link" href={s.listing.href}>
+              <a className="text-link card-action" href={s.listing.href}>
                 Read the case study
                 <ArrowRight aria-hidden="true" size={16} />
               </a>

@@ -4,7 +4,8 @@ import projectLinkStatusJson from "./projectLinkStatus.json";
 export type ProjectArchiveItem = (typeof projectsArchiveJson.projects)[number];
 
 export const projectsArchive = projectsArchiveJson;
-export const projectArchiveItems = projectsArchiveJson.projects as ProjectArchiveItem[];
+export const projectArchiveItems =
+  projectsArchiveJson.projects as ProjectArchiveItem[];
 const verifiedLinks = new Set(projectLinkStatusJson.okLinks);
 const priorityProjectNames = ["Resumify", "Mockify"];
 
@@ -22,7 +23,8 @@ export const projectArchiveFilters = [
   { label: "Domain expired", value: "domain-expired" },
 ] as const;
 
-export type ProjectArchiveFilter = (typeof projectArchiveFilters)[number]["value"];
+export type ProjectArchiveFilter =
+  (typeof projectArchiveFilters)[number]["value"];
 
 export const projectPlatformFilters = [
   { label: "All platforms", value: "all" },
@@ -35,7 +37,8 @@ export const projectPlatformFilters = [
   { label: "Webflow", value: "webflow" },
 ] as const;
 
-export type ProjectPlatformFilter = (typeof projectPlatformFilters)[number]["value"];
+export type ProjectPlatformFilter =
+  (typeof projectPlatformFilters)[number]["value"];
 
 export const projectStatusFilters = [
   { label: "All statuses", value: "all" },
@@ -44,7 +47,8 @@ export const projectStatusFilters = [
   { label: "Domain expired", value: "domain-expired" },
 ] as const;
 
-export type ProjectStatusFilter = (typeof projectStatusFilters)[number]["value"];
+export type ProjectStatusFilter =
+  (typeof projectStatusFilters)[number]["value"];
 
 export function compactUrl(url: string) {
   try {
@@ -71,7 +75,8 @@ export function getProjectTitle(project: ProjectArchiveItem) {
 }
 
 export function getProjectType(project: ProjectArchiveItem) {
-  const details = `${project.projectType ?? ""} ${project.description ?? ""} ${project.notes ?? ""}`.toLowerCase();
+  const details =
+    `${project.projectType ?? ""} ${project.description ?? ""} ${project.notes ?? ""}`.toLowerCase();
   const stack = (project.platformFrameworkBuilder ?? "").toLowerCase();
 
   if (/divi/.test(details) && /bricks/.test(details)) {
@@ -86,7 +91,9 @@ export function getProjectType(project: ProjectArchiveItem) {
     return "Website redesign";
   }
 
-  const usesFigma = /figma/i.test(`${project.figmaLink ?? ""} ${project.description ?? ""}`);
+  const usesFigma = /figma/i.test(
+    `${project.figmaLink ?? ""} ${project.description ?? ""}`,
+  );
   const implementation = /html|css|bootstrap|jquery/.test(stack)
     ? "HTML/CSS"
     : /elementor/.test(stack)
@@ -111,7 +118,10 @@ export function getProjectType(project: ProjectArchiveItem) {
 }
 
 export function getProjectDescription(project: ProjectArchiveItem) {
-  return project.description || `${getProjectTitle(project)} is a client project built for a focused web experience.`;
+  return (
+    project.description ||
+    `${getProjectTitle(project)} is a client project built for a focused web experience.`
+  );
 }
 
 export function getProjectThumbnail(project: ProjectArchiveItem) {
@@ -130,24 +140,33 @@ export function getProjectThumbnail(project: ProjectArchiveItem) {
 
 export function getProjectInitials(project: ProjectArchiveItem) {
   const title = getProjectTitle(project);
-  const words = title.replace(/https?:\/\//, "").split(/[\s.-]+/).filter(Boolean);
-  return words
-    .slice(0, 2)
-    .map((word) => word[0]?.toUpperCase())
-    .join("") || "P";
+  const words = title
+    .replace(/https?:\/\//, "")
+    .split(/[\s.-]+/)
+    .filter(Boolean);
+  return (
+    words
+      .slice(0, 2)
+      .map((word) => word[0]?.toUpperCase())
+      .join("") || "P"
+  );
 }
 
 export function getProjectMeta(project: ProjectArchiveItem) {
-  return [
-    project.categoryNiche,
-  ].filter((item): item is string => Boolean(item && !/^https?:\/\//i.test(item.trim())));
+  return [project.categoryNiche].filter((item): item is string =>
+    Boolean(item && !/^https?:\/\//i.test(item.trim())),
+  );
 }
 
 export function getProjectCompany(project: ProjectArchiveItem) {
-  return "company" in project && typeof project.company === "string" ? project.company : null;
+  return "company" in project && typeof project.company === "string"
+    ? project.company
+    : null;
 }
 
-export function normalizeProjectFilter(value: string | string[] | undefined): ProjectArchiveFilter {
+export function normalizeProjectFilter(
+  value: string | string[] | undefined,
+): ProjectArchiveFilter {
   const rawValue = Array.isArray(value) ? value[0] : value;
 
   return projectArchiveFilters.some((filter) => filter.value === rawValue)
@@ -155,7 +174,9 @@ export function normalizeProjectFilter(value: string | string[] | undefined): Pr
     : "all";
 }
 
-export function normalizeProjectPlatformFilter(value: string | string[] | undefined): ProjectPlatformFilter {
+export function normalizeProjectPlatformFilter(
+  value: string | string[] | undefined,
+): ProjectPlatformFilter {
   const rawValue = Array.isArray(value) ? value[0] : value;
 
   return projectPlatformFilters.some((filter) => filter.value === rawValue)
@@ -163,7 +184,9 @@ export function normalizeProjectPlatformFilter(value: string | string[] | undefi
     : "all";
 }
 
-export function normalizeProjectStatusFilter(value: string | string[] | undefined): ProjectStatusFilter {
+export function normalizeProjectStatusFilter(
+  value: string | string[] | undefined,
+): ProjectStatusFilter {
   const rawValue = Array.isArray(value) ? value[0] : value;
 
   return projectStatusFilters.some((filter) => filter.value === rawValue)
@@ -171,24 +194,35 @@ export function normalizeProjectStatusFilter(value: string | string[] | undefine
     : "all";
 }
 
-export function projectMatchesFilter(project: ProjectArchiveItem, filter: ProjectArchiveFilter) {
+export function projectMatchesFilter(
+  project: ProjectArchiveItem,
+  filter: ProjectArchiveFilter,
+) {
   if (filter === "all") {
     return true;
   }
 
-  if (filter === "live" || filter === "redesigned" || filter === "domain-expired") {
+  if (
+    filter === "live" ||
+    filter === "redesigned" ||
+    filter === "domain-expired"
+  ) {
     return projectMatchesStatus(project, filter);
   }
 
   return projectMatchesPlatform(project, filter);
 }
 
-export function projectMatchesPlatform(project: ProjectArchiveItem, filter: ProjectPlatformFilter) {
+export function projectMatchesPlatform(
+  project: ProjectArchiveItem,
+  filter: ProjectPlatformFilter,
+) {
   if (filter === "all") {
     return true;
   }
 
-  const stack = `${project.platformFrameworkBuilder ?? ""} ${project.projectType ?? ""} ${project.description ?? ""}`.toLowerCase();
+  const stack =
+    `${project.platformFrameworkBuilder ?? ""} ${project.projectType ?? ""} ${project.description ?? ""}`.toLowerCase();
 
   if (filter === "html-css") {
     return /html|css|bootstrap|jquery/.test(stack);
@@ -221,7 +255,10 @@ export function projectMatchesPlatform(project: ProjectArchiveItem, filter: Proj
   return true;
 }
 
-export function projectMatchesStatus(project: ProjectArchiveItem, filter: ProjectStatusFilter) {
+export function projectMatchesStatus(
+  project: ProjectArchiveItem,
+  filter: ProjectStatusFilter,
+) {
   if (filter === "all") {
     return true;
   }
@@ -283,7 +320,11 @@ function getProjectAvailabilityRank(project: ProjectArchiveItem) {
 
 export function getProjectLinks(project: ProjectArchiveItem) {
   const links = [
-    { href: normalizeHttpLink(project.websiteUrl), label: "Open website", kind: "website" as const },
+    {
+      href: normalizeHttpLink(project.websiteUrl),
+      label: "Open website",
+      kind: "website" as const,
+    },
   ];
 
   return links.filter(
@@ -300,7 +341,11 @@ export function normalizeHttpLink(value: string | null | undefined) {
   let trimmed = value.trim();
   // Source archive includes a few bare domains. Normalize only domain-shaped
   // values for the link UI; original JSON remains untouched.
-  if (/^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}(?::\d+)?(?:[/?#][^\s]*)?$/i.test(trimmed)) {
+  if (
+    /^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}(?::\d+)?(?:[/?#][^\s]*)?$/i.test(
+      trimmed,
+    )
+  ) {
     trimmed = `https://${trimmed}`;
   }
   if (!/^https?:\/\//i.test(trimmed)) {

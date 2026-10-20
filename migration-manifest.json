@@ -1,6 +1,5 @@
 {
   "source": "ayoub-saas-website-nextjs-main.zip",
-  "template": "mainline-astro-template-master.zip",
   "projectRecords": 147,
   "caseStudies": 7,
   "toolCatalogEntries": 56,
@@ -9,27 +8,37 @@
     {
       "file": "caseStudyDetails.json",
       "sha256": "9f827e8d2d740a7236e6757a6ee7069b534119118d6d69e4e48217f49916e6cf",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c80c8fe9bd33bec97157c2efae0d14e176a1451435ee59f60aba380cb95f3e4f",
+      "changeNote": "Two-space formatting only; parsed data unchanged."
     },
     {
       "file": "portfolio.json",
       "sha256": "0faf36e5384c2bd33c95dbaeca9a0b609a40fb06cf318ff86d1a575733009fdb",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "efbff8ab9fdff886430ba97577d823cf7ac515965647ff5edf59a986f7afe09c",
+      "changeNote": "Two-space formatting and the requested SEO description edit."
     },
     {
       "file": "projectLinkStatus.json",
       "sha256": "12340767518ffeb25ad41b0fc221cd4fd328eb5ea16a0c11b264b5dd83381d29",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c51c6b484843e27f8833974aca094aa17a9fcaf9ad35e9ae14c89d3445042284",
+      "changeNote": "Two-space formatting only; parsed data unchanged."
     },
     {
       "file": "projectsArchive.json",
       "sha256": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "cd59daf47f9ca6e4ae82f8c21fc0715430673f35b034b6dd3c43b6886b0e80c1",
+      "changeNote": "Two-space formatting only; parsed data unchanged."
     },
     {
       "file": "toolCatalog.json",
       "sha256": "75819a8c11d25ebc2f2e7c53d1fa91548a680232520c502d7a564dff90fad263",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "9435e78205337c324d33c09e4ca68a78da6419177e503bead7c414940c6f64e5",
+      "changeNote": "Two-space formatting only; parsed data unchanged."
     }
   ],
   "assets": [
@@ -1228,5 +1237,7 @@
       "sha256": "d519d8112563011bbf31eb35e2323b2ef59a927f4ee3dacc208878dad84d94ef",
       "unchanged": true
     }
-  ]
+  ],
+  "project": "Muhammad Ayoub Portfolio",
+  "formatting": "Two-space Prettier formatting applied to editable source files in v1.4.0. Original sha256 values are preserved; currentSha256 identifies the delivered JSON."
 }

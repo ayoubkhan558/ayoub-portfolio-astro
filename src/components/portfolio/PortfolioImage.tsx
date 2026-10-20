@@ -1,7 +1,7 @@
 import type { ImgHTMLAttributes } from "react";
 
 import { getAsset, initials } from "@/lib/assets";
-/** Server-rendered image shared by the original Mainline blocks. Never hydrate this module. */
+/** Server-rendered image shared by the original Portfolio blocks. Never hydrate this module. */
 export function PortfolioImage({
   src,
   alt = "",

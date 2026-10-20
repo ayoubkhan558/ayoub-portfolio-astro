@@ -45,7 +45,6 @@ for (const id of [
   "projects",
   "case-studies",
   "proof",
-  "process",
 ]) {
   const h = page.locator(`#${id} .section-heading`);
   assert.equal(await h.evaluate((e) => getComputedStyle(e).display), "block");
@@ -68,7 +67,7 @@ await rotator.locator("[data-rotator-next]").click();
 assert.notEqual(await getCurrent(), paused, "Next works while paused");
 await screenshot("rotators-desktop", ".fit-rotators");
 report.push(
-  "Home: redesigned portrait/results hero, six stacked section headings, one-at-a-time rotating copy, pause and next controls.",
+  "Home: personalized portrait/results hero, stacked section headings (Process removed), one-at-a-time rotating copy, pause and next controls.",
 );
 const top = page.locator("[data-back-to-top]");
 await page.locator("footer").scrollIntoViewIfNeeded();
@@ -168,7 +167,6 @@ for (const width of [390, 320]) {
         "#projects",
         "#case-studies",
         "#proof",
-        "#process",
       ],
     ],
     [

@@ -1,0 +1,14 @@
+{
+  "semanticChanges": [
+    {
+      "file": "portfolio.json",
+      "path": "about.careerPath[3].description",
+      "previous": "Leading full-cycle SEO growth across technical optimization, on-page improvements, content structure, authority building, and conversion-focused visibility strategy.",
+      "current": "Growing search visibility through technical SEO, content, and authority building."
+    }
+  ],
+  "allOtherOriginalJsonValuesUnchanged": true,
+  "dataStructureUnchanged": true,
+  "sourceDataFiles": 14,
+  "originalAssetFilesUnchanged": 239
+}

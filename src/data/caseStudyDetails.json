@@ -15,11 +15,7 @@
       "description": "Legacy PHP and MySQL website migrated into WordPress with Bricks Builder while working at Xgrid.co, after a Figma redesign created a cleaner and easier-to-expand sharpening service website.",
       "result": "A maintainable WordPress system replacing a difficult legacy PHP codebase",
       "achievement": "Delivered while working at Xgrid.co: converted PHP/MySQL content into WordPress and rebuilt the experience in Bricks Builder",
-      "stack": [
-        "Bricks",
-        "WordPress",
-        "Figma"
-      ],
+      "stack": ["Bricks", "WordPress", "Figma"],
       "href": "/case-studies/rejuvenated-knives",
       "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
       "image": "/case-study/rk-thumbnail.jpg",
@@ -88,13 +84,7 @@
         "text": "The PHP/MySQL content was migrated into WordPress, creating a stronger foundation for future updates, feature additions, and site maintenance."
       }
     ],
-    "tools": [
-      "bricks-builder",
-      "wordpress",
-      "figma",
-      "mysql",
-      "php"
-    ],
+    "tools": ["bricks-builder", "wordpress", "figma", "mysql", "php"],
     "performanceNote": "The core improvement was maintainability: replacing the hard-to-expand PHP build with WordPress and Bricks Builder made the website easier to update, extend, and hand off.",
     "branding": {
       "title": "Warm service branding with a sharper WordPress foundation.",
@@ -102,10 +92,7 @@
       "logoMark": "RK",
       "logoImage": "/client/logo-rk.png",
       "fontName": "Geologica + Sequela",
-      "fontFamilies": [
-        "Geologica",
-        "Sequela"
-      ],
+      "fontFamilies": ["Geologica", "Sequela"],
       "fontMeta": "Geologica supports clear service information, while Sequela adds a more distinctive brand voice for key headings and campaign moments.",
       "palette": [
         {
@@ -184,11 +171,7 @@
       "description": "Complete law firm website redesign and rebuild from Divi to Bricks Builder with dynamic ACF templates, performance improvements, and infrastructure optimization.",
       "result": "Faster website, reusable CMS, and simplified long-term management",
       "achievement": "Saved the client approximately $1,000 annually by consolidating hosting, domains, and email services",
-      "stack": [
-        "Bricks",
-        "WordPress",
-        "ACF"
-      ],
+      "stack": ["Bricks", "WordPress", "ACF"],
       "href": "/case-studies/pagano-law",
       "liveUrl": "https://paganolaw.net",
       "image": "/case-study/paganolaw-thumbnail.jpg",
@@ -274,10 +257,7 @@
       "logoImage": "/client/paganolaw-logo.png",
       "clientImage": "/client/paganolaw-gregory-j-agano-client.jpg",
       "fontName": "Libre Baskerville + Inter",
-      "fontFamilies": [
-        "Libre Baskerville",
-        "Inter"
-      ],
+      "fontFamilies": ["Libre Baskerville", "Inter"],
       "fontMeta": "Libre Baskerville is used for headings to reinforce authority, while Inter provides clean, readable body text and interface elements.",
       "palette": [
         {
@@ -373,11 +353,7 @@
       "description": "Premium aesthetic surgery clinic website converted from Figma into a custom Bricks Builder build with dynamic WordPress content and a clean CMS structure.",
       "result": "35% better performance and 20% more conversions after the Bricks rebuild",
       "achievement": "Rebuilt Neve + Live Composer into Bricks with 99 desktop PageSpeed",
-      "stack": [
-        "Bricks",
-        "WordPress",
-        "ACF"
-      ],
+      "stack": ["Bricks", "WordPress", "ACF"],
       "href": "/case-studies/weinberger-aesthetics",
       "liveUrl": "https://www.weinberger-aesthetics.de/",
       "image": "/case-study/weinberger-thumbnail.jpg",
@@ -462,9 +438,7 @@
       "logoMark": "WA",
       "logoImage": "/client/weinberger-aesthetics-logo.svg",
       "fontName": "Source Sans Pro",
-      "fontFamilies": [
-        "Source Sans Pro"
-      ],
+      "fontFamilies": ["Source Sans Pro"],
       "fontMeta": "Source Sans Pro is used across the website for clean readability, polished interface text, and a modern medical aesthetic.",
       "palette": [
         {
@@ -552,11 +526,7 @@
       "description": "Pixel-perfect Figma to HTML implementation for an AI-powered mathematics learning platform using Tailwind CSS and modern frontend libraries.",
       "result": "Responsive landing pages with smooth animations and excellent visual fidelity",
       "achievement": "Converted complex Figma designs into production-ready frontend components",
-      "stack": [
-        "HTML",
-        "Tailwind",
-        "JavaScript"
-      ],
+      "stack": ["HTML", "Tailwind", "JavaScript"],
       "href": "/case-studies/studyly",
       "liveUrl": "https://studyly.com/at",
       "image": "/case-study/studyly-thumbnail.jpg",
@@ -639,9 +609,7 @@
       "logoMark": "ST",
       "logoImage": "/client/studyly-logo.svg",
       "fontName": "Poppins",
-      "fontFamilies": [
-        "Poppins"
-      ],
+      "fontFamilies": ["Poppins"],
       "fontMeta": "Poppins provides clean geometric typography that improves readability while reinforcing the platform's modern educational identity.",
       "palette": [
         {
@@ -716,11 +684,7 @@
       "description": "Migrated the Kings Real Estate website from Elementor to Bricks Builder while preserving the existing design and improving performance, maintainability, and editing experience.",
       "result": "Faster, cleaner, and fully editable Bricks Builder website with the same design",
       "achievement": "Elementor → Bricks   with 40% better performance.",
-      "stack": [
-        "Bricks",
-        "WordPress",
-        "ACF"
-      ],
+      "stack": ["Bricks", "WordPress", "ACF"],
       "href": "/case-studies/kingsre",
       "liveUrl": "https://kingsre.ae",
       "image": "/case-study/kingsre-thumbnail.jpg",
@@ -812,10 +776,7 @@
       "logoImage": "/client/kingsre-logo.png",
       "clientImage": "/client/inshad-arshad-bajwa-client.jpg",
       "fontName": "Plus Jakarta Sans + Lora",
-      "fontFamilies": [
-        "Plus Jakarta Sans",
-        "Lora"
-      ],
+      "fontFamilies": ["Plus Jakarta Sans", "Lora"],
       "fontMeta": "The original typography and branding were preserved throughout the migration.",
       "palette": [
         {
@@ -894,11 +855,7 @@
       "description": "Figma to Bricks Builder WordPress portfolio website for a UI/UX and product designer with service pages, portfolio sections, pricing, and lead-focused CTAs.",
       "result": "Premium designer portfolio with editable CMS and responsive Bricks layouts",
       "achievement": "Converted a detailed Figma design into a polished WordPress website using Bricks Builder",
-      "stack": [
-        "Bricks",
-        "WordPress",
-        "ACF"
-      ],
+      "stack": ["Bricks", "WordPress", "ACF"],
       "href": "/case-studies/serveekay",
       "liveUrl": "https://serveekay.com",
       "image": "/case-study/serveekay-thumbnail.jpg",
@@ -980,10 +937,7 @@
       "logoImage": "/client/serveekay-logo.svg",
       "clientImage": "/client/serveekay-waleed-client.jpg",
       "fontName": "Neue Haas Grotesk Display Pro + Bricolage Grotesque",
-      "fontFamilies": [
-        "Neue Haas Grotesk Display Pro",
-        "Bricolage Grotesque"
-      ],
+      "fontFamilies": ["Neue Haas Grotesk Display Pro", "Bricolage Grotesque"],
       "fontMeta": "Neue Haas Grotesk Display Pro creates a premium display feel, while Bricolage Grotesque supports expressive, modern interface typography.",
       "palette": [
         {
@@ -1058,13 +1012,7 @@
       "description": "Designed and developed a complete Shopify nutrition store from the ground up, including branding, logo design, product imagery, UI/UX, and a scalable ecommerce architecture without any Figma designs.",
       "result": "Modern, conversion-focused Shopify store with custom branding and premium shopping experience.",
       "achievement": "Complete Shopify design & development with custom branding and optimized shopping UX.",
-      "stack": [
-        "Shopify",
-        "Liquid",
-        "JavaScript",
-        "CSS",
-        "Shopify Admin"
-      ],
+      "stack": ["Shopify", "Liquid", "JavaScript", "CSS", "Shopify Admin"],
       "href": "/case-studies/supplementshub",
       "liveUrl": "https://supplementshub.com.pk",
       "image": "/case-study/supplementshub-thumbnail.webp",
@@ -1139,10 +1087,7 @@
         "text": "Built a clean, responsive, and scalable ecommerce platform with intuitive navigation and optimized product presentation."
       }
     ],
-    "tools": [
-      "shopify",
-      "photoshop"
-    ],
+    "tools": ["shopify", "photoshop"],
     "performanceNote": "The store was built with clean Shopify Liquid templates, lightweight custom components, optimized assets, responsive layouts, and streamlined product pages to deliver a fast, scalable ecommerce experience.",
     "branding": {
       "title": "Building a nutrition brand from the ground up.",
@@ -1151,9 +1096,7 @@
       "logoImage": "/client/supplementshub-Logo-client-arslan-no-color.svg",
       "clientImage": "/client/supplementshub-Logo-client-arslan.svg",
       "fontName": "DM Sans",
-      "fontFamilies": [
-        "DM Sans"
-      ],
+      "fontFamilies": ["DM Sans"],
       "fontMeta": "A modern geometric typeface selected for readability, simplicity, and ecommerce usability.",
       "palette": [
         {

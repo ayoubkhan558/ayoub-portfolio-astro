@@ -13,7 +13,7 @@ export function getToolCatalogItem(toolKey: string): ToolCatalogItem {
     toolCatalog[toolKey] ?? {
       name: toolKey,
       logo: null,
-      description: "Project stack item."
+      description: "Project stack item.",
     }
   );
 }

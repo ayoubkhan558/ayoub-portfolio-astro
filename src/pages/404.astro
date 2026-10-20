@@ -3,16 +3,21 @@ import Intro from "../components/portfolio/Intro.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 ---
 
-<Layout title="Page not found"
-  ><div class="template-background">
+<Layout title="Page not found">
+  <div class="portfolio-background">
     <Intro
       label="404 / Not found"
       title="This page took a different path."
       description="Let's get you back to the good stuff."
-      ><div class="actions">
-        <a class="button" href="/">Back home →</a><a
-          class="button outline"
-          href="/projects/">Explore projects</a>
-      </div></Intro>
-  </div></Layout
->
+    >
+      <div class="actions">
+        <a class="button" href="/">
+          Back home →
+        </a>
+        <a class="button outline" href="/projects/">
+          Explore projects
+        </a>
+      </div>
+    </Intro>
+  </div>
+</Layout>

@@ -1,64 +1,54 @@
-# Portfolio QA — version 1.3.0
+# Portfolio QA — version 1.4.0
 
-## Preservation
+## Data, assets and formatting
 
-- All 14 existing data files unchanged; five original JSON files byte-for-byte identical.
-- 239 original assets unchanged. Assets remain in the previous project's `public/` folder and are intentionally not resent in this source-only ZIP.
-- All 147 projects, seven case studies, six services, six process stages, 15 clients, 17 displayed reviews and 56 tools retained.
-- Homepage section sequence matches the original Next.js `PortfolioLanding` sequence. Exactly six Selected Work cards are displayed; all archive records remain accessible.
+- All 14 data files retained, including all 147 projects, seven case studies, six services and 56 tools.
+- Data structure preserved. The only semantic JSON change is the requested shorter SEO career description; all other parsed original JSON values are unchanged. Editable files were reformatted, so they are not byte-identical to earlier releases.
+- All 239 original public assets remain byte-identical. They are intentionally excluded from the source-only ZIP.
+- Two-space Prettier check passes for all matched editable source, Astro templates, data, configuration, scripts and documentation. EditorConfig and VS Code settings match.
+- Current JSON plus asset hash verification: 244 entries, zero differences. Original and current JSON hashes are distinguished in the migration manifest.
 
-## Build and static validation
+## Build and dependency checks
 
-- Astro/TypeScript: zero errors, warnings or hints.
-- Production static build: 20 content/error pages plus three redirects.
-- Built HTML local links, JSON-LD, all archive titles, all 56 tool headings and 404 noindex: pass.
-- Original JSON/asset hash verification: 244 checked, zero differences.
-- Dependency audit: zero known vulnerabilities at verification time; not a security guarantee.
-- Three already-missing source screenshots use the existing intentional fallbacks.
+- Astro/TypeScript: 67 checked files; zero errors, warnings or hints.
+- ESLint and production build pass.
+- 23 built HTML files, 1018 local references, JSON-LD, archive title/record parity, tool headings and 404 indexing checks pass.
+- 201 distinct local data asset paths checked; zero unexpected missing assets. Three screenshots were already absent from the supplied source and retain styled fallbacks.
+- npm audit reports zero known vulnerabilities at verification time; this is not a security guarantee.
+- No dependency changes were needed in this refinement pass. Prior upgrades and the TypeScript 6.0.3 compatibility hold are documented in dependency-versions.json.
 
-## Browser audit
+## Browser and accessibility regression
 
-- 20 routes × 1440/390/320px × light/dark = 120 checks.
-- Zero runtime errors, horizontal page overflows, broken rendered images or missing image dimensions.
-- Automated WCAG 2 A/AA and 2.1 A/AA scans at 390px on every route in both themes: zero detected violations.
-- Open modal drawer and contact error state were additionally scanned: zero detected A/AA violations.
+- 20 routes × 1440/390/320px × light/dark = 120 route checks.
+- Zero runtime errors, horizontal page overflows, rendered-image/dimension failures or automated accessibility failures.
+- WCAG 2 A/AA and 2.1 A/AA scans cover every route at 390px in both themes.
+- Open drawer and contact error state additionally have zero detected A/AA violations.
 - Automated scans are not a complete accessibility certification.
 
-## Requested interaction checks
+## Latest requested refinements
 
-- Mainline FAQ: one question open at a time; collapsible; native single-open fallback without JavaScript.
-- Mainline Embla testimonial carousels on Home/About: arrows move slides, all records retained, responsive widths and no autoplay.
-- Native skills marquee: all 56 tools retained, seamless duplicated tracks, Pause/Resume and static reduced-motion/no-JavaScript fallbacks.
-- Archive: 147 unique native modal drawers; card/button opening, close, Escape, focus retention and return focus. Search/filter empty-state reset and 12-card pagination still pass.
-- Case screenshots: hover translates the full image through its thumbnail window; reduced motion disables panning; direct full-image links retained.
-- Contact: removed requested copy/actions; explicit availability label; required fields, invalid email/URL, provider field errors, network failure, 15-second timeout, duplicate submission protection, success/reset and failure/input preservation pass.
-- No-JavaScript: all 147 archive records/details, single-open FAQ fallback and native contact validation remain usable.
-- Visual inspection covered desktop/mobile homepage, portrait, brand alignment, service redesign, FAQ, both sliders, modal drawers, separated case sections, hover gallery, visible form error states and full-width footer in both themes.
+- Home Process and Best fit for are removed; the large showcase is hidden. Personal hero card names Muhammad Ayoub. Compact solution cards omit pricing and expanded service information.
+- About Delivery checklist and Project fit removed; Project fit appears on Services. Alternate About/Services surfaces reviewed at desktop and mobile sizes.
+- Services Problems I solve and What you take away show one active item each; manual advancement retains single-item visibility.
+- Skills marquee remains running on hover, verified through computed animation state and changing transform. Explicit pause/resume and reduced-motion/no-JavaScript fallbacks still pass.
+- Final actions in compact/full services, specialist services, case studies and archive cards align within each equal-height desktop row, verified through measured action bottoms.
+- FAQ on Home, FAQ and Contact: 24px top/bottom trigger padding, zero inherited heading margin and consistent 24px answer bottom padding. Native fallback spacing also normalized.
+- Project-facing template branding/identifiers removed; obligatory third-party license notices retained.
+- Individual screenshots visually inspected for personal hero (desktop/mobile/dark), compact Solutions, About backgrounds/career path, tools marquee, single-item Services panels, full Services at 320px, Project fit, FAQ and aligned archive actions.
+
+## Existing interaction checks
+
+- FAQ single-open/collapsible behavior and native no-JavaScript fallback pass.
+- Testimonials on Home/About retain all records and manual arrow navigation.
+- 147 unique project drawers: card/button opening, focus trap, close, Escape, focus return and filters pass.
+- All 56 tools remain accessible, with static wrapping reduced-motion/no-JavaScript modes.
+- Case screenshot panning and reduced-motion behavior pass.
+- Back-to-top threshold, scrolling and keyboard-focus restoration pass.
+- Contact required fields, invalid email/URL, provider errors, network errors, 15-second timeout, duplicate submission protection, preserved inputs and success reset pass with intercepted requests.
+- No real mail was sent; provider ownership, activation and inbox delivery remain unverified.
 
 ## Delivery
 
-The ZIP is a clean source-only bundle: no `public/`, `dist/`, `node_modules/`, generated screenshots or duplicate image bundle. Extract into a new empty folder and copy `public/` (and `.env`, if used) from the previous project; do not merge the old source or dependencies. Build locally to regenerate `dist/`. Installation instructions are at the top of README.
+Clean source-only ZIP includes source, scripts, configs, VS Code settings, documentation, license notices and machine-readable QA reports. It excludes public assets, dependencies, build output, generated types and screenshots.
 
-No real Formspree submission was sent; inbox delivery is not verified. Original external links, statistics, prices and source claims were not independently reverified. Machine-readable reports are in `qa/`.
-
-## Cleanup validation — v1.2.1
-
-- Removed 66 unreachable source files and five unused editor/scaffolding/documentation files.
-- Removed 44 unused unique direct packages and five duplicate declarations: 78 declarations reduced to 29.
-- Retained tooling required for builds, linting, formatting and browser/accessibility tests.
-- Fresh install from the regenerated lockfile succeeded.
-- All 14 data files and all 239 original assets unchanged.
-- Removal manifest: `qa/cleanup.json`.
-
-## v1.3 package and design checks
-
-- Latest stable direct-package versions verified against npm registry; TypeScript 6.0.3 is the only compatibility hold (upstream Astro checker/parser do not support TypeScript 7 yet). Version list and peer-range explanation: `qa/dependency-versions.json`.
-- ESLint import plugin migrated to `eslint-plugin-import-x` for ESLint 10 support; no forced peer resolution flags used.
-- Home: portrait/results hero, stacked section headings, one-at-a-time copy with pause/next, reduced-motion handling and back-to-top focus restoration tested.
-- About: education beside portrait, Resume labels, compact Toolbox, testimonial carousel and two-row continuous tools marquee tested.
-- 1440px desktop, 390px mobile and 320px narrow layouts captured for all requested sections.
-- Global hover colors and image proportions reviewed; automated route/accessibility regression checks passed.
-- No screenshots were attached to the request; no screenshot-specific issue is claimed as fixed.
-- New behavior report: `qa/design-updates.json`.
-
-- Fresh `npm ci` succeeded without peer-resolution override flags. Final Astro check: zero errors, warnings or hints. Dependency audit: zero reported known vulnerabilities (not a security guarantee).
+Extract into a new empty folder, copy your existing public/ and optional .env, then run npm ci. Do not merge old source or dependencies. Source statistics, reviews, historical links and marketing claims were preserved rather than independently verified.

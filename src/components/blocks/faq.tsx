@@ -5,10 +5,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type portfolio from "@/data/portfolio.json";
-/** Mainline's original FAQ accordion, populated without changing the data schema. */
+/** Portfolio FAQ accordion, populated without changing the data schema. */
 export function FAQ({ items }: { items: typeof portfolio.faqs }) {
   return (
-    <div className="mainline-faq mx-auto grid gap-16 lg:grid-cols-2">
+    <div className="portfolio-faq mx-auto grid gap-16 lg:grid-cols-2">
       <div className="faq-introduction space-y-4">
         <span className="eyebrow">Good questions</span>
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
