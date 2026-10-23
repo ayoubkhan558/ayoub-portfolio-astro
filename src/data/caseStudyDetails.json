@@ -3,7 +3,7 @@
     "slug": "rejuvenated-knives",
     "client": "Rejuvenated Knives",
     "urlLabel": "get.rejuvenatedknives.com",
-    "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+    "liveUrl": "https://get.rejuvenatedknives.com",
     "company": "Xgrid.co",
     "timeline": "4 weeks",
     "caseType": "migration",
@@ -17,7 +17,7 @@
       "achievement": "Delivered while working at Xgrid.co: converted PHP/MySQL content into WordPress and rebuilt the experience in Bricks Builder",
       "stack": ["Bricks", "WordPress", "Figma"],
       "href": "/case-studies/rejuvenated-knives",
-      "liveUrl": "https://get.rejuvenatedknives.com/door-to-door-knife-sharpening-service/",
+      "liveUrl": "https://get.rejuvenatedknives.com",
       "image": "/case-study/rk-thumbnail.jpg",
       "imageAlt": "Screenshot preview of the Rejuvenated Knives website"
     },
