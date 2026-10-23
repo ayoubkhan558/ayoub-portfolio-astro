@@ -1,0 +1,27 @@
+---
+import { outcomes, proofNotes } from "../../../data/servicesPageData";
+---
+
+<section class="services-working-together-section section wrap">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">Working together</span>
+      <h2>Clear scope. Useful milestones.</h2>
+    </div>
+  </div>
+  <div class="three-grid">
+    {proofNotes.map((note) => (
+      <article class="plain-card">
+        <>
+          <span class="eyebrow">{note.label}</span>
+          <h3>{note.value}</h3>
+        </>
+      </article>
+    ))}
+  </div>
+  <ul class="check-list spaced">
+    {outcomes.map((value) => (
+      <li>{value}</li>
+    ))}
+  </ul>
+</section>

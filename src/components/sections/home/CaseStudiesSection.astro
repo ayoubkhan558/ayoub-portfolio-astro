@@ -1,0 +1,18 @@
+---
+import CaseGrid from "../../portfolio/CaseGrid.astro";
+import Heading from "../../portfolio/Heading.astro";
+---
+
+<section class="home-case-studies-section section wrap" id="case-studies">
+  <Heading
+    label="Featured Cases"
+    title="Behind the Solution"
+    subtitle="The thinking, decisions, and outcomes behind selected projects."
+  />
+  <CaseGrid limit={3} />
+  <div class="section-end">
+    <a href="/case-studies/" class="button outline">
+      All seven case studies →
+    </a>
+  </div>
+</section>

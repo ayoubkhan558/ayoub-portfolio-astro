@@ -1,7 +1,7 @@
 ---
 import CTA from "../components/portfolio/CTA.astro";
-import FAQ from "../components/portfolio/FAQ.astro";
 import Intro from "../components/portfolio/Intro.astro";
+import FAQSection from "../components/sections/faq/FAQSection.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 ---
 
@@ -12,9 +12,7 @@ import Layout from "../layouts/PortfolioLayout.astro";
       title="Before we get started."
       description="Answers about scope, timelines, and working together."
     />
-    <section class="section wrap first-section">
-      <FAQ />
-    </section>
+    <FAQSection />
   </div>
   <CTA />
 </Layout>

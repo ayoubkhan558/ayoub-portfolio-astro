@@ -1,0 +1,43 @@
+---
+import p from "../../../data/portfolio.json";
+import Asset from "../../portfolio/Asset.astro";
+import Heading from "../../portfolio/Heading.astro";
+---
+
+<section class="home-about-section section wrap" id="about">
+  <div class="home-about">
+    <div>
+      <Heading
+        label="About me"
+        title="About Ayoub"
+        subtitle={p.profile.summary}
+      />
+      <p class="lead">{p.about.story}</p>
+      <div class="actions">
+        <a href="/about/" class="button">
+          Meet {p.profile.name} →
+        </a>
+        <a href={p.about.resumeHref} class="text-link" download>
+          Download Resume ↓
+        </a>
+      </div>
+      <div class="tags spaced">
+        {p.recognition.map((v) => (
+          <span>
+            {v.label} · {v.status}
+          </span>
+        ))}
+      </div>
+    </div>
+    <figure>
+      <Asset
+        src="/ayoub-about-v4.jpg"
+        alt={`${p.profile.name}, web developer and SEO specialist`}
+        class="home-portrait"
+      />
+      <figcaption>
+        {p.profile.name} · {p.profile.location}
+      </figcaption>
+    </figure>
+  </div>
+</section>

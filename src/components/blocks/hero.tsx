@@ -15,7 +15,10 @@ export function Hero({
 }) {
   return (
     <>
-      <section className="hero wrap" aria-labelledby="hero-heading">
+      <section
+        className="home-hero-section hero wrap"
+        aria-labelledby="hero-heading"
+      >
         <div className="hero-copy">
           <span className="availability">
             <i aria-hidden="true" />

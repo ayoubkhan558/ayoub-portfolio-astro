@@ -1,0 +1,22 @@
+---
+import { ServiceCards } from "../../blocks/service-cards";
+import Heading from "../../portfolio/Heading.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="home-services-section section wrap" id="services">
+  <Heading
+    label="Solutions"
+    title="What you can hire me for"
+    subtitle="Business problems first, implementation details second. Pick the outcome you need and I will choose the right build path."
+  />
+  <ServiceCards
+    services={p.services.filter((s) => s.featured).slice(0, 3)}
+    compact
+  />
+  <div class="section-end">
+    <a href="/services/" class="button outline">
+      View all services →
+    </a>
+  </div>
+</section>

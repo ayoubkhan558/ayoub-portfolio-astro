@@ -1,0 +1,29 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+import SkillsMarquee from "../../portfolio/SkillsMarquee.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="about-toolbox-section section wrap">
+  <Heading label="Toolbox" title="The right tools for the job." />
+  <div class="compact-toolbox">
+    {p.about.toolbox.map((t, i) => (
+      <article>
+        <div>
+          <span class="toolbox-index">{String(i + 1).padStart(2, "0")}</span>
+          <h3>{t.title}</h3>
+        </div>
+        <ul>
+          {t.items.map((v) => (
+            <li>{v}</li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </div>
+  <div class="skills-title">
+    <h3>Skills & technologies</h3>
+    <p>Familiar tools. Thoughtful choices.</p>
+  </div>
+  <SkillsMarquee />
+</section>

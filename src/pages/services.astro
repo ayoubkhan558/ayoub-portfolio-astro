@@ -1,14 +1,14 @@
 ---
 import CTA from "../components/portfolio/CTA.astro";
-import TextRotator from "../components/portfolio/TextRotator.astro";
-import Heading from "../components/portfolio/Heading.astro";
 import Intro from "../components/portfolio/Intro.astro";
-import Process from "../components/portfolio/Process.astro";
-import Services from "../components/portfolio/Services.astro";
 import p from "../data/portfolio.json";
-import { serviceNiches } from "../data/serviceNiches";
-import { proofNotes, outcomes } from "../data/servicesPageData";
 import Layout from "../layouts/PortfolioLayout.astro";
+import ServiceCardsSection from "../components/sections/services/ServiceCardsSection.astro";
+import NichesSection from "../components/sections/services/NichesSection.astro";
+import ProcessSection from "../components/sections/services/ProcessSection.astro";
+import DeliverySection from "../components/sections/services/DeliverySection.astro";
+import WorkingTogetherSection from "../components/sections/services/WorkingTogetherSection.astro";
+import ProjectFitSection from "../components/sections/services/ProjectFitSection.astro";
 ---
 
 <Layout title="Services">
@@ -19,74 +19,13 @@ import Layout from "../layouts/PortfolioLayout.astro";
         title="Solutions I provide."
         description={p.profile.summary}
       />
-      <section class="wrap section first-section">
-        <Services />
-      </section>
+      <ServiceCardsSection />
     </div>
-    <section class="section wrap">
-      <Heading
-        label="Specialist services"
-        title="A focused solution for your next build."
-      />
-      <div class="three-grid">
-        {serviceNiches.map((s) => (
-          <a class="plain-card linked-card" href={`/services/${s.slug}/`}>
-            <>
-              <span class="eyebrow">{s.label}</span>
-              <h3>{s.title}</h3>
-              <p>{s.description}</p>
-              <span class="text-link card-action" aria-hidden="true">
-                Explore service →
-              </span>
-            </>
-          </a>
-        ))}
-      </div>
-    </section>
-    <section class="section wrap">
-      <Heading
-        label="Process"
-        title="How a project runs."
-        subtitle={`${p.process.length} clear steps. No black boxes.`}
-      />
-      <Process />
-    </section>
-    <section class="section wrap">
-      <Heading label="Delivery" title="A clearer path from brief to launch." />
-      <div class="fit-rotators">
-        <TextRotator label="Problems I solve" items={p.problemsSolved} />
-        <TextRotator label="What you take away" items={p.outcomes} />
-      </div>
-    </section>
-    <section class="section wrap">
-      <Heading
-        label="Working together"
-        title="Clear scope. Useful milestones."
-      />
-      <div class="three-grid">
-        {proofNotes.map((note) => (
-          <article class="plain-card">
-            <>
-              <span class="eyebrow">{note.label}</span>
-              <h3>{note.value}</h3>
-            </>
-          </article>
-        ))}
-      </div>
-      <ul class="check-list spaced">
-        {outcomes.map((value) => (
-          <li>{value}</li>
-        ))}
-      </ul>
-    </section>
-    <section class="section wrap">
-      <Heading label="Project fit" title="Who I work best with." />
-      <ul class="check-list">
-        {p.bestFit.map((f) => (
-          <li>{f}</li>
-        ))}
-      </ul>
-    </section>
+    <NichesSection />
+    <ProcessSection />
+    <DeliverySection />
+    <WorkingTogetherSection />
+    <ProjectFitSection />
     <div class="portfolio-background bottom">
       <CTA />
     </div>

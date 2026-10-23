@@ -1,6 +1,7 @@
 ---
 import CTA from "../../components/portfolio/CTA.astro";
 import Intro from "../../components/portfolio/Intro.astro";
+import ServiceDetailSection from "../../components/sections/services/ServiceDetailSection.astro";
 import { serviceNiches } from "../../data/serviceNiches";
 import Layout from "../../layouts/PortfolioLayout.astro";
 export function getStaticPaths() {
@@ -39,31 +40,7 @@ const { service: s } = Astro.props;
         ))}
       </div>
     </div>
-    <section class="section wrap prose-narrow">
-      {s.sections.map((section) => (
-        <article class="spaced">
-          <h2>{section.title}</h2>
-          {section.paragraphs.map((text) => (
-            <p>{text}</p>
-          ))}
-          {section.bullets && (
-            <ul class="check-list">
-              {section.bullets.map((text) => (
-                <li>{text}</li>
-              ))}
-            </ul>
-          )}
-        </article>
-      ))}
-      <h2 class="spaced">Related case studies</h2>
-      <div class="link-list">
-        {s.relatedCases.map((c) => (
-          <a class="text-link" href={c.href}>
-            {c.label} ↗
-          </a>
-        ))}
-      </div>
-    </section>
+    <ServiceDetailSection service={s} />
     <div class="portfolio-background bottom">
       <CTA />
     </div>

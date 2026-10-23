@@ -1,0 +1,29 @@
+---
+const { service } = Astro.props;
+---
+
+<section class="service-detail-content-section section wrap prose-narrow">
+  {service.sections.map((section) => (
+    <article class="spaced">
+      <h2>{section.title}</h2>
+      {section.paragraphs.map((text) => (
+        <p>{text}</p>
+      ))}
+      {section.bullets && (
+        <ul class="check-list">
+          {section.bullets.map((text) => (
+            <li>{text}</li>
+          ))}
+        </ul>
+      )}
+    </article>
+  ))}
+  <h2 class="spaced">Related case studies</h2>
+  <div class="link-list">
+    {service.relatedCases.map((c) => (
+      <a class="text-link" href={c.href}>
+        {c.label} ↗
+      </a>
+    ))}
+  </div>
+</section>

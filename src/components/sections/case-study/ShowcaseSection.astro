@@ -1,0 +1,37 @@
+---
+import Asset from "../../portfolio/Asset.astro";
+const { study } = Astro.props;
+---
+
+<section class="case-study-showcase-section section wrap">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">{study.pageShowcase.label}</span>
+      <h2>{study.pageShowcase.title}</h2>
+    </div>
+    <p>{study.pageShowcase.text}</p>
+  </div>
+  <div class="showcase-grid">
+    {study.pageShowcase.items.map((item) => (
+      <figure>
+        <>
+          <a
+            class="screenshot-window"
+            href={item.image}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View full screenshot: ${item.label}`}
+          >
+            <Asset src={item.image} alt={item.label} class="full-page-image" />
+          </a>
+          <figcaption>
+            <>
+              <h3>{item.label}</h3>
+              <p>{item.caption}</p>
+            </>
+          </figcaption>
+        </>
+      </figure>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+import Asset from "../../portfolio/Asset.astro";
+import Heading from "../../portfolio/Heading.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="about-experience-section section wrap">
+  <Heading label="Experience" title="Teams I've built with." />
+  <div class="experience-list">
+    {p.experienceLog.map((e) => (
+      <article>
+        <Asset src={e.logo} alt={e.company} class="company-logo" />
+        <div>
+          <span class="eyebrow">
+            {e.year} · {e.duration}
+          </span>
+          <h3>{e.title}</h3>
+          <p>
+            <strong>{e.company}</strong> · {e.location}
+          </p>
+          <p>{e.description}</p>
+          <p class="small-note">
+            <time datetime={e.startDate}>{e.startDate}</time> →{" "}
+            <time datetime={e.endDate}>{e.endDate}</time>
+          </p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

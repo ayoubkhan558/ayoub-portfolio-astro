@@ -1,12 +1,15 @@
 ---
-import Asset from "../../components/portfolio/Asset.astro";
 import CTA from "../../components/portfolio/CTA.astro";
-import Heading from "../../components/portfolio/Heading.astro";
 import Intro from "../../components/portfolio/Intro.astro";
-import ValueTree from "../../components/portfolio/ValueTree.astro";
+import OverviewSection from "../../components/sections/case-study/OverviewSection.astro";
+import ChallengesSection from "../../components/sections/case-study/ChallengesSection.astro";
+import BrandingSection from "../../components/sections/case-study/BrandingSection.astro";
+import ShowcaseSection from "../../components/sections/case-study/ShowcaseSection.astro";
+import ImplementationSection from "../../components/sections/case-study/ImplementationSection.astro";
+import QuoteSection from "../../components/sections/case-study/QuoteSection.astro";
 import data from "../../data/caseStudyDetails.json";
 import { caseStudySeo } from "../../data/caseStudySeo";
-import { toolCatalog as tools } from "../../data/toolCatalog";
+import Asset from "../../components/portfolio/Asset.astro";
 import Layout from "../../layouts/PortfolioLayout.astro";
 export function getStaticPaths() {
   return Object.values(data).map((study) => ({
@@ -58,192 +61,13 @@ const next = all[(i + 1) % all.length];
           eager
         />
       </div>
-      <section class="section wrap">
-        <Heading
-          label="The brief"
-          title="Project overview"
-          subtitle={s.overview}
-        />
-        <div class="facts-grid">
-          {s.facts.map((f) => (
-            <article>
-              <>
-                <span class="eyebrow">{f.label}</span>
-                <p>{f.value}</p>
-              </>
-            </article>
-          ))}
-        </div>
-        <p class="result-highlight">{s.listing.achievement}</p>
-      </section>
+      <OverviewSection study={s} />
     </div>
-    <section class="section wrap">
-      <div class="two-grid">
-        <div>
-          <span class="eyebrow">Before</span>
-          <h2>The challenges</h2>
-          {s.challenges.map((c) => (
-            <article class="challenge-item">
-              <>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
-              </>
-            </article>
-          ))}
-        </div>
-        <div>
-          <span class="eyebrow">After</span>
-          <h2>The results</h2>
-          {s.results.map((c) => (
-            <article class="challenge-item">
-              <>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
-              </>
-            </article>
-          ))}
-        </div>
-      </div>
-      <p class="result-highlight">{s.performanceNote}</p>
-      {"pageSpeed" in s && (
-        <details class="plain-card">
-          <>
-            <summary>PageSpeed Insights · original measured results</summary>
-            <ValueTree value={s.pageSpeed} />
-          </>
-        </details>
-      )}
-    </section>
-    <section class="section wrap">
-      <Heading
-        label="Visual identity"
-        title={s.branding.title}
-        subtitle={s.branding.text}
-      />
-      <div class="branding-grid">
-        <div class="brand-preview">
-          {"logoImage" in s.branding && (
-            <Asset
-              src={s.branding.logoImage}
-              alt={`${s.client} logo`}
-              class="branding-logo"
-            />
-          )}
-          <strong>{s.branding.logoMark}</strong>
-        </div>
-        <div>
-          <h3>{s.branding.fontName}</h3>
-          <p>{s.branding.fontMeta}</p>
-          <div class="tags">
-            {s.branding.fontFamilies.map((f) => (
-              <span>{f}</span>
-            ))}
-          </div>
-          <div class="palette">
-            {s.branding.palette.map((c) => (
-              <div>
-                <>
-                  <div class="swatch" style={{ backgroundColor: c.value }} />
-                  <strong>{c.label}</strong>
-                  <small>{c.value}</small>
-                </>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section wrap">
-      <Heading
-        label={s.pageShowcase.label}
-        title={s.pageShowcase.title}
-        subtitle={s.pageShowcase.text}
-      />
-      <div class="showcase-grid">
-        {s.pageShowcase.items.map((item) => (
-          <figure>
-            <>
-              <a
-                class="screenshot-window"
-                href={item.image}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`View full screenshot: ${item.label}`}
-              >
-                <Asset
-                  src={item.image}
-                  alt={item.label}
-                  class="full-page-image"
-                />
-              </a>
-              <figcaption>
-                <>
-                  <h3>{item.label}</h3>
-                  <p>{item.caption}</p>
-                </>
-              </figcaption>
-            </>
-          </figure>
-        ))}
-      </div>
-    </section>
-    <section class="section wrap">
-      <Heading label="The details" title="Built for every screen." />
-      <div class="two-grid">
-        <div>
-          <h3>Page architecture</h3>
-          <div class="link-list">
-            {s.desktopPages.map((page) => (
-              <div class="architecture-row">
-                <>
-                  <strong>{page.name}</strong>
-                  <p>{page.type}</p>
-                </>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3>Responsive benefits</h3>
-          <ul class="check-list">
-            {s.responsiveBenefits.map((v) => (
-              <li>{v}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <h3 class="spaced">Tools used</h3>
-      <div class="tools-inline">
-        {s.tools.map(
-          (key: string) =>
-            tools[key] && (
-              <div>
-                <>
-                  <Asset
-                    src={tools[key].logo}
-                    alt={tools[key].name}
-                    class="tool-logo"
-                  />
-                  <span>{tools[key].name}</span>
-                </>
-              </div>
-            ),
-        )}
-      </div>
-    </section>
-    <section class="wrap section">
-      <figure class="large-quote">
-        <blockquote>“{s.testimonial.quote}”</blockquote>
-        <figcaption>
-          <strong>{s.testimonial.author}</strong>
-          <span>{s.testimonial.meta}</span>
-        </figcaption>
-      </figure>
-      <div class="next-case">
-        <span>Next case study</span>
-        <a href={next.listing.href}>{next.client} →</a>
-      </div>
-    </section>
+    <ChallengesSection study={s} />
+    <BrandingSection study={s} />
+    <ShowcaseSection study={s} />
+    <ImplementationSection study={s} />
+    <QuoteSection study={s} next={next} />
     <div class="portfolio-background bottom">
       <CTA title={s.cta.heading} text={s.cta.text} button={s.cta.buttonText} />
     </div>

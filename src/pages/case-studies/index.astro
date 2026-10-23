@@ -1,7 +1,7 @@
 ---
-import CaseGrid from "../../components/portfolio/CaseGrid.astro";
 import CTA from "../../components/portfolio/CTA.astro";
 import Intro from "../../components/portfolio/Intro.astro";
+import CaseStudiesListSection from "../../components/sections/case-studies/CaseStudiesListSection.astro";
 import Layout from "../../layouts/PortfolioLayout.astro";
 ---
 
@@ -12,9 +12,7 @@ import Layout from "../../layouts/PortfolioLayout.astro";
       title="Behind the Solution"
       description="The thinking, decisions, and outcomes behind selected projects."
     />
-    <section class="section wrap first-section">
-      <CaseGrid />
-    </section>
+    <CaseStudiesListSection />
   </div>
   <CTA />
 </Layout>

@@ -1,0 +1,29 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+import TextRotator from "../../portfolio/TextRotator.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="home-problems-section section wrap" id="problems">
+  <Heading
+    label="Is this you?"
+    title="Sound familiar?"
+    subtitle="Your site should build trust before your prospect ever books a call."
+  />
+  <div class="three-grid">
+    {p.painPoints.map((point, i) => (
+      <article class="plain-card">
+        <span class="step-number">0{i + 1}</span>
+        <h3>{point}</h3>
+      </article>
+    ))}
+  </div>
+  <div class="fit-rotators single-rotator spaced">
+    <TextRotator label="Problems I solve" items={p.problemsSolved} />
+  </div>
+  <!-- <div class="tags industries">
+    {p.trustMarquee.map((v) => (
+      <span>{v.name}</span>
+    ))}
+  </div> -->
+</section>

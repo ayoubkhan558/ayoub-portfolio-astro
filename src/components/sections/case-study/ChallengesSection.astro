@@ -1,0 +1,42 @@
+---
+import ValueTree from "../../portfolio/ValueTree.astro";
+const { study } = Astro.props;
+---
+
+<section class="case-study-challenges-section section wrap">
+  <div class="two-grid">
+    <div>
+      <span class="eyebrow">Before</span>
+      <h2>The challenges</h2>
+      {study.challenges.map((c) => (
+        <article class="challenge-item">
+          <>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+          </>
+        </article>
+      ))}
+    </div>
+    <div>
+      <span class="eyebrow">After</span>
+      <h2>The results</h2>
+      {study.results.map((c) => (
+        <article class="challenge-item">
+          <>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+          </>
+        </article>
+      ))}
+    </div>
+  </div>
+  <p class="result-highlight">{study.performanceNote}</p>
+  {"pageSpeed" in study && (
+    <details class="plain-card">
+      <>
+        <summary>PageSpeed Insights · original measured results</summary>
+        <ValueTree value={study.pageSpeed} />
+      </>
+    </details>
+  )}
+</section>

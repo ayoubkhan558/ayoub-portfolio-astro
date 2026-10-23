@@ -1,0 +1,23 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+const { study } = Astro.props;
+---
+
+<section class="case-study-overview-section section wrap">
+  <Heading
+    label="The brief"
+    title="Project overview"
+    subtitle={study.overview}
+  />
+  <div class="facts-grid">
+    {study.facts.map((f) => (
+      <article>
+        <>
+          <span class="eyebrow">{f.label}</span>
+          <p>{f.value}</p>
+        </>
+      </article>
+    ))}
+  </div>
+  <p class="result-highlight">{study.listing.achievement}</p>
+</section>

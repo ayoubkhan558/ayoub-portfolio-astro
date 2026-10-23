@@ -1,0 +1,17 @@
+---
+const { study, next } = Astro.props;
+---
+
+<section class="case-study-quote-section wrap section">
+  <figure class="large-quote">
+    <blockquote>“{study.testimonial.quote}”</blockquote>
+    <figcaption>
+      <strong>{study.testimonial.author}</strong>
+      <span>{study.testimonial.meta}</span>
+    </figcaption>
+  </figure>
+  <div class="next-case">
+    <span>Next case study</span>
+    <a href={next.listing.href}>{next.client} →</a>
+  </div>
+</section>

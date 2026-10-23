@@ -1,0 +1,25 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+import { serviceNiches } from "../../../data/serviceNiches";
+---
+
+<section class="services-niches-section section wrap">
+  <Heading
+    label="Specialist services"
+    title="A focused solution for your next build."
+  />
+  <div class="three-grid">
+    {serviceNiches.map((s) => (
+      <a class="plain-card linked-card" href={`/services/${s.slug}/`}>
+        <>
+          <span class="eyebrow">{s.label}</span>
+          <h3>{s.title}</h3>
+          <p>{s.description}</p>
+          <span class="text-link card-action" aria-hidden="true">
+            Explore service →
+          </span>
+        </>
+      </a>
+    ))}
+  </div>
+</section>

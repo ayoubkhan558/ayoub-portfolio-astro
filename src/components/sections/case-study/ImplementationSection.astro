@@ -1,0 +1,55 @@
+---
+import Asset from "../../portfolio/Asset.astro";
+import { toolCatalog as tools } from "../../../data/toolCatalog";
+const { study } = Astro.props;
+---
+
+<section class="case-study-implementation-section section wrap">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">The details</span>
+      <h2>Built for every screen.</h2>
+    </div>
+  </div>
+  <div class="two-grid">
+    <div>
+      <h3>Page architecture</h3>
+      <div class="link-list">
+        {study.desktopPages.map((page) => (
+          <div class="architecture-row">
+            <>
+              <strong>{page.name}</strong>
+              <p>{page.type}</p>
+            </>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div>
+      <h3>Responsive benefits</h3>
+      <ul class="check-list">
+        {study.responsiveBenefits.map((v) => (
+          <li>{v}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  <h3 class="spaced">Tools used</h3>
+  <div class="tools-inline">
+    {study.tools.map(
+      (key: string) =>
+        tools[key] && (
+          <div>
+            <>
+              <Asset
+                src={tools[key].logo}
+                alt={tools[key].name}
+                class="tool-logo"
+              />
+              <span>{tools[key].name}</span>
+            </>
+          </div>
+        ),
+    )}
+  </div>
+</section>

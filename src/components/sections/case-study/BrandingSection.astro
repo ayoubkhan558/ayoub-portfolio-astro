@@ -1,0 +1,46 @@
+---
+import Asset from "../../portfolio/Asset.astro";
+const { study } = Astro.props;
+---
+
+<section class="case-study-branding-section section wrap">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">Visual identity</span>
+      <h2>{study.branding.title}</h2>
+    </div>
+    <p>{study.branding.text}</p>
+  </div>
+  <div class="branding-grid">
+    <div class="brand-preview">
+      {"logoImage" in study.branding && (
+        <Asset
+          src={study.branding.logoImage}
+          alt={`${study.client} logo`}
+          class="branding-logo"
+        />
+      )}
+      <strong>{study.branding.logoMark}</strong>
+    </div>
+    <div>
+      <h3>{study.branding.fontName}</h3>
+      <p>{study.branding.fontMeta}</p>
+      <div class="tags">
+        {study.branding.fontFamilies.map((f) => (
+          <span>{f}</span>
+        ))}
+      </div>
+      <div class="palette">
+        {study.branding.palette.map((c) => (
+          <div>
+            <>
+              <div class="swatch" style={{ backgroundColor: c.value }} />
+              <strong>{c.label}</strong>
+              <small>{c.value}</small>
+            </>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

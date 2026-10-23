@@ -1,0 +1,21 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="about-career-section section wrap">
+  <Heading
+    label={p.about.careerStartLabel}
+    title="A path built one skill at a time."
+  />
+  <div class="timeline">
+    {p.about.careerPath.map((c) => (
+      <article>
+        <span class="eyebrow">{c.year}</span>
+        <h3>{c.title}</h3>
+        <p>{c.description}</p>
+        <span class="tag">{c.technologies}</span>
+      </article>
+    ))}
+  </div>
+</section>

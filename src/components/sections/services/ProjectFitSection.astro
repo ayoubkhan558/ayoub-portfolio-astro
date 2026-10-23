@@ -1,0 +1,13 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="services-project-fit-section section wrap">
+  <Heading label="Project fit" title="Who I work best with." />
+  <ul class="check-list">
+    {p.bestFit.map((f) => (
+      <li>{f}</li>
+    ))}
+  </ul>
+</section>

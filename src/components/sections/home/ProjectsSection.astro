@@ -1,0 +1,44 @@
+---
+import { projects } from "../../../data/work";
+import Asset from "../../portfolio/Asset.astro";
+import Heading from "../../portfolio/Heading.astro";
+---
+
+<section class="home-projects-section section wrap" id="projects">
+  <Heading
+    label="Selected Work"
+    title="What I've Built"
+    subtitle="Projects crafted with a focus on quality, usability, and impact."
+  />
+  <div class="selected-grid">
+    {projects.slice(0, 6).map((project) => (
+      <article class="selected-card">
+        <a href={project.href} target="_blank" rel="noopener noreferrer">
+          <div class="selected-media">
+            <Asset
+              src={project.image.startsWith("/") ? project.image : null}
+              alt={project.title}
+              class="selected-image"
+            />
+            {project.deliveryContext && (
+              <span class="delivery-badge">{project.deliveryContext}</span>
+            )}
+          </div>
+          <div>
+            <span class="eyebrow">{project.badge}</span>
+            <h3>
+              {project.title} <span aria-hidden="true">↗</span>
+            </h3>
+            <p>{project.description}</p>
+            <p class="small-note">{project.stack}</p>
+          </div>
+        </a>
+      </article>
+    ))}
+  </div>
+  <div class="section-end">
+    <a href="/projects/" class="button outline">
+      Explore the complete project archive →
+    </a>
+  </div>
+</section>

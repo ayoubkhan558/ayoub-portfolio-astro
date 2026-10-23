@@ -1,0 +1,17 @@
+---
+import TextRotator from "../../portfolio/TextRotator.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="services-delivery-section section wrap">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">Delivery</span>
+      <h2>A clearer path from brief to launch.</h2>
+    </div>
+  </div>
+  <div class="fit-rotators">
+    <TextRotator label="Problems I solve" items={p.problemsSolved} />
+    <TextRotator label="What you take away" items={p.outcomes} />
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+interface Section {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+}
+
+interface Props {
+  sections: Section[];
+  sectionClass: string;
+}
+
+const { sections, sectionClass } = Astro.props;
+---
+
+{sections.map((section) => (
+  <section class={`${sectionClass} spaced`}>
+    <h2>{section.title}</h2>
+    {section.paragraphs.map((text) => (
+      <p>{text}</p>
+    ))}
+    {section.bullets && (
+      <ul class="check-list">
+        {section.bullets.map((text) => (
+          <li>{text}</li>
+        ))}
+      </ul>
+    )}
+  </section>
+))}

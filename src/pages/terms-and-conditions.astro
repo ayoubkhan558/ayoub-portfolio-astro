@@ -1,6 +1,7 @@
 ---
 import Intro from "../components/portfolio/Intro.astro";
 import { sections, highlights } from "../data/terms-and-conditions";
+import LegalSections from "../components/sections/legal/LegalSections.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 ---
 
@@ -24,20 +25,9 @@ import Layout from "../layouts/PortfolioLayout.astro";
         </div>
       ))}
     </div>
-    {sections.map((s) => (
-      <section class="spaced">
-        <h2>{s.title}</h2>
-        {s.paragraphs.map((text) => (
-          <p>{text}</p>
-        ))}
-        {"bullets" in s && (
-          <ul class="check-list">
-            {s.bullets?.map((text) => (
-              <li>{text}</li>
-            ))}
-          </ul>
-        )}
-      </section>
-    ))}
+    <LegalSections
+      sections={sections}
+      sectionClass="terms-and-conditions-content-section"
+    />
   </article>
 </Layout>

@@ -1,0 +1,22 @@
+---
+import Heading from "../../portfolio/Heading.astro";
+import p from "../../../data/portfolio.json";
+---
+
+<section class="about-story-section section wrap">
+  <Heading label="My story" title="Learning by building." />
+  <div class="two-grid">
+    <p class="lead">{p.about.originStory}</p>
+    <p class="lead">{p.about.motivation}</p>
+  </div>
+  <div class="three-grid spaced">
+    {p.about.storyCards.map((s) => (
+      <article class="plain-card">
+        <span class="eyebrow">{s.label}</span>
+        <h3>{s.title}</h3>
+        <p>{s.text}</p>
+      </article>
+    ))}
+  </div>
+  <p class="signature">{p.about.signature}</p>
+</section>
