@@ -15,8 +15,8 @@ import Layout from "../layouts/PortfolioLayout.astro";
   <div class="services-page">
     <div class="portfolio-background">
       <Intro
-        label={p.sections.services.label}
-        title={p.sections.services.title}
+        label="Solutions"
+        title="Solutions I provide."
         description={p.profile.summary}
       />
       <section class="wrap section first-section">
@@ -45,11 +45,9 @@ import Layout from "../layouts/PortfolioLayout.astro";
     </section>
     <section class="section wrap">
       <Heading
-        {...p.sections.process}
-        subtitle={p.sections.process.subtitle.replace(
-          "Four steps.",
-          `${p.process.length} clear steps.`,
-        )}
+        label="Process"
+        title="How a project runs."
+        subtitle={`${p.process.length} clear steps. No black boxes.`}
       />
       <Process />
     </section>

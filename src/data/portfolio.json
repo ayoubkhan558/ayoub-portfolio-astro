@@ -38,48 +38,6 @@
       "href": "/contact"
     }
   ],
-  "sections": {
-    "whyWork": {
-      "label": "Why clients stay",
-      "title": "No surprises. Just shipped.",
-      "subtitle": "What working together looks like."
-    },
-    "caseStudies": {
-      "label": "Featured Cases",
-      "title": "Behind the Solution",
-      "subtitle": "The thinking, decisions, and outcomes behind selected projects."
-    },
-    "projects": {
-      "label": "Selected Work",
-      "title": "What I've Built",
-      "subtitle": "Projects crafted with a focus on quality, usability, and impact."
-    },
-    "services": {
-      "label": "Solutions",
-      "title": "Solutions I provide.",
-      "subtitle": "Three productized ways to fix the business problems behind weak website performance."
-    },
-    "process": {
-      "label": "Process",
-      "title": "How a project runs.",
-      "subtitle": "Four steps. No black boxes."
-    },
-    "testimonials": {
-      "label": "Client words",
-      "title": "What clients say.",
-      "subtitle": "Unedited. From real projects."
-    },
-    "expertise": {
-      "label": "Stack",
-      "title": "Tools I reach for on day one.",
-      "subtitle": "Eight years of choosing what works."
-    },
-    "contact": {
-      "label": "Work together",
-      "title": "Got a project? Let's talk.",
-      "subtitle": "Tell me what you're building."
-    }
-  },
   "hero": {
     "headlineLineOne": "Web Developer + SEO Specialist for Sites That Rank & Convert",
     "headlineLineTwo": "",

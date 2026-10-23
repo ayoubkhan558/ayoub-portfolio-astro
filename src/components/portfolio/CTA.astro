@@ -1,14 +1,14 @@
 ---
 import p from "../../data/portfolio.json";
 const {
-  title = p.sections.contact.title,
-  text = p.sections.contact.subtitle,
+  title = "Got a project? Let's talk.",
+  text = "Tell me what you're building.",
   button = p.hero.primaryCta,
 } = Astro.props;
 ---
 
 <section class="cta-panel wrap">
-  <span class="eyebrow">{p.sections.contact.label}</span>
+  <span class="eyebrow">Work together</span>
   <h2>{title}</h2>
   <p>{text}</p>
   <div class="actions">

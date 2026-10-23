@@ -84,7 +84,11 @@ import TextRotator from "../components/portfolio/TextRotator.astro";
       </div>
     </section>
     <section class="section wrap" id="projects">
-      <Heading {...p.sections.projects} />
+      <Heading
+        label="Selected Work"
+        title="What I've Built"
+        subtitle="Projects crafted with a focus on quality, usability, and impact."
+      />
       <div class="selected-grid">
         {projects.slice(0, 6).map((project) => (
           <article class="selected-card">
@@ -118,7 +122,11 @@ import TextRotator from "../components/portfolio/TextRotator.astro";
       </div>
     </section>
     <section class="section wrap" id="case-studies">
-      <Heading {...p.sections.caseStudies} />
+      <Heading
+        label="Featured Cases"
+        title="Behind the Solution"
+        subtitle="The thinking, decisions, and outcomes behind selected projects."
+      />
       <CaseGrid limit={3} />
       <div class="section-end">
         <a href="/case-studies/" class="button outline">
@@ -127,7 +135,11 @@ import TextRotator from "../components/portfolio/TextRotator.astro";
       </div>
     </section>
     <section class="section wrap" id="proof">
-      <Heading {...p.sections.testimonials} />
+      <Heading
+        label="Client words"
+        title="What clients say."
+        subtitle="Unedited. From real projects."
+      />
       <Testimonials />
     </section>
     <section class="section wrap" id="about">
