@@ -450,6 +450,87 @@
     "motivation": "Most of the projects I'm brought onto have the same root problem: a UI that was built fast but not built to last. Hard to extend, slow to load, impossible to hand off. I fix that — and make sure the technical foundation, performance, and SEO structure support long-term growth instead of just looking good on launch day.",
     "originStory": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
     "education": "Master of Computer Science, University of Sahiwal",
+    "educationHistory": [
+      {
+        "degree": "Master of Computer Science (MCS)",
+        "field": "Computer Software Engineering",
+        "institution": "University of Sahiwal",
+        "location": "Punjab, Pakistan",
+        "startYear": 2018,
+        "endYear": 2020,
+        "grade": "GPA 3.32 / 4.0",
+        "details": "Pursued the MCS to advance expertise in software engineering and modern technologies. Focused on professional communication, discipline, time management, grooming, and etiquette, with hands-on foundations in web and desktop software development.",
+        "coursework": [
+          "C Programming",
+          "DBMS",
+          "Java",
+          "Discrete Mathematics",
+          "Digital Logic Design (DLD)",
+          "Data Structures",
+          "Object-Oriented Programming (C++)",
+          "Web Technologies (HTML, CSS, JavaScript)",
+          "Software Engineering",
+          "Theory of Automata",
+          "Operating Systems"
+        ]
+      },
+      {
+        "degree": "BSc Computer, Accounting and Computer Science",
+        "institution": "Jinnah Postgraduate College",
+        "location": "Sahiwal, Pakistan",
+        "startYear": 2015,
+        "endYear": 2018,
+        "grade": "Second Division (420/800 marks)",
+        "details": "Completed the B.A./B.Sc. Supplementary Examination in 2017, certified through Bahauddin Zakariya University, Multan. Completed BSc Computer A+B at this college.",
+        "coursework": [
+          "English Language",
+          "Islamic Studies/Ethics",
+          "Pakistan Studies",
+          "Computer-A",
+          "Computer-B",
+          "Economics"
+        ]
+      },
+      {
+        "degree": "Intermediate (I.C.S.)",
+        "field": "Computer Science",
+        "institution": "Islamia Model College",
+        "location": "Mamunkanjan, Pakistan",
+        "startYear": 2013,
+        "endYear": 2015,
+        "grade": "C (622/1100 marks)",
+        "details": "Completed the General Science Group examination in parts as a private candidate, certified through the Board of Intermediate & Secondary Education, Faisalabad.",
+        "coursework": [
+          "Urdu",
+          "English",
+          "Islamic Education",
+          "Pakistan Studies",
+          "Mathematics",
+          "Economics",
+          "Computer Science"
+        ]
+      },
+      {
+        "degree": "Matriculation",
+        "field": "Computer Science",
+        "institution": "Govt High School 53/2 Tukra",
+        "location": "Mamunkanjan, Pakistan",
+        "startYear": 2010,
+        "endYear": 2012,
+        "grade": "C (608/1050 marks)",
+        "details": "Completed the Science Group with Computer Science.",
+        "coursework": [
+          "English",
+          "Urdu",
+          "Islamiyat",
+          "Pakistan Studies",
+          "Mathematics",
+          "Physics",
+          "Chemistry",
+          "Computer Science"
+        ]
+      }
+    ],
     "careerStartLabel": "Career Started",
     "careerPath": [
       {
