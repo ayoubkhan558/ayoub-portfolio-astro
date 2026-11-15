@@ -123,6 +123,94 @@ import Layout from "../layouts/PortfolioLayout.astro";
     readURL();
     render("none");
   });
+  const copyDialog = document.querySelector<HTMLDialogElement>(
+    "#project-copy-dialog",
+  )!;
+  const copyGroup = document.querySelector<HTMLSelectElement>(
+    "#copy-project-platform",
+  )!;
+  const copyTitle =
+    document.querySelector<HTMLInputElement>("#copy-list-title")!;
+  const copyFormat = document.querySelector<HTMLSelectElement>(
+    "#copy-output-format",
+  )!;
+  const includeTitle = document.querySelector<HTMLInputElement>(
+    "#copy-include-title",
+  )!;
+  const includeCategory = document.querySelector<HTMLInputElement>(
+    "#copy-include-category",
+  )!;
+  const copyStatus = document.querySelector<HTMLElement>(
+    "#project-copy-status",
+  )!;
+  const copyButtons = [
+    document.querySelector<HTMLButtonElement>("#copy-all-projects")!,
+    document.querySelector<HTMLButtonElement>("#copy-project-group")!,
+  ];
+  document
+    .querySelector<HTMLButtonElement>("#open-project-copy")!
+    .addEventListener("click", () => copyDialog.showModal());
+  document
+    .querySelector<HTMLButtonElement>("#close-project-copy")!
+    .addEventListener("click", () => copyDialog.close());
+  copyDialog.addEventListener("click", (event) => {
+    if (event.target === copyDialog) copyDialog.close();
+  });
+  function formatProjectLinks(selected: HTMLElement[]) {
+    const records = selected.flatMap((card) => {
+      const links = [
+        card.dataset.projectWebsite,
+        card.dataset.projectFigma,
+      ].filter((href): href is string => Boolean(href));
+      return links.map((href) => ({
+        href,
+        title: card.dataset.projectTitle || href,
+        category: card.dataset.projectCategory || "",
+      }));
+    });
+    if (!records.length) return "";
+    const header = copyTitle.value.trim();
+    const list = records.map((record) => {
+      const name = includeTitle.checked ? record.title : "";
+      const category =
+        includeCategory.checked && record.category
+          ? ` (${record.category})`
+          : "";
+      if (copyFormat.value === "urls") return record.href;
+      if (copyFormat.value === "markdown") {
+        return `- ${name ? `[${name}](${record.href})` : record.href}${category}`;
+      }
+      return `${name ? `${name} — ` : ""}${record.href}${category}`;
+    });
+    return [header, ...list].filter(Boolean).join("\n");
+  }
+  async function copyProjects(group: string | null) {
+    const selected = group
+      ? cards.filter((card) =>
+          card.dataset.platform!.split(" ").includes(group),
+        )
+      : cards;
+    const content = formatProjectLinks(selected);
+    if (!content) {
+      copyStatus.textContent = "No project links are available to copy.";
+      return;
+    }
+    copyButtons.forEach((button) => (button.disabled = true));
+    try {
+      await navigator.clipboard.writeText(content);
+      const source = group
+        ? `${copyGroup.selectedOptions[0].textContent?.trim()} group`
+        : "all projects";
+      copyStatus.textContent = `Copied ${content.split("\n").length - (copyTitle.value.trim() ? 1 : 0)} links from ${source}.`;
+    } catch {
+      copyStatus.textContent =
+        "Could not access the clipboard. Check browser permissions and try again.";
+    } finally {
+      copyButtons.forEach((button) => (button.disabled = false));
+    }
+  }
+  copyButtons[0].addEventListener("click", () => copyProjects(null));
+  copyButtons[1].addEventListener("click", () => copyProjects(copyGroup.value));
   readURL();
   render("none");
 </script>

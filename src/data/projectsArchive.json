@@ -2124,7 +2124,7 @@
       "notes": "Personal project: a local-first resume builder with multiple designs, rich-text custom sections, and persistent light and dark modes.",
       "date": null,
       "projectType": "Web application",
-      "description": "A Vue.js resume builder for creating and managing professional CVs with customizable templates, live previews, content-based completion tracking, WYSIWYG custom sections, PDF and DOCX exports, and local backup and restore.",
+      "description": "A Vue.js resume builder with customizable templates, live previews, progress tracking, PDF/DOCX exports, and local backup and restore.",
       "projectStatus": "Live",
       "screenshot": "/react-projects/project-ss-resumify.png"
     },

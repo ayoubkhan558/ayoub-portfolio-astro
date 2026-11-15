@@ -1,9 +1,11 @@
 ---
 import Asset from "./Asset.astro";
+import PageSpeedReport from "./PageSpeedReport.astro";
 import ValueTree from "./ValueTree.astro";
 import {
   getProjectTitle,
   getProjectDescription,
+  getProjectMeta,
   normalizeHttpLink,
   projectPlatformFilters,
   projectMatchesPlatform,
@@ -45,6 +47,7 @@ const details = Object.fromEntries(
         "platformFrameworkBuilder",
         "screenshot",
         "projectStatus",
+        "pageSpeed",
       ].includes(k) &&
       v != null &&
       v !== "",
@@ -57,6 +60,10 @@ const details = Object.fromEntries(
   data-search={search}
   data-platform={keys}
   data-status={p.projectStatus || ""}
+  data-project-title={title}
+  data-project-category={getProjectMeta(p).join(", ")}
+  data-project-website={href || ""}
+  data-project-figma={figma || ""}
 >
   <div class="project-media">
     <Asset
@@ -157,6 +164,7 @@ const details = Object.fromEntries(
       <h2 id={`${panelId}-title`}>{title}</h2>
       <p>{description}</p>
       <ValueTree value={details} />
+      {p.pageSpeed && <PageSpeedReport report={p.pageSpeed} />}
       <div class="actions">
         {href && (
           <a

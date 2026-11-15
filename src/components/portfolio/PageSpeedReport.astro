@@ -1,0 +1,148 @@
+---
+interface PageSpeedResult {
+  performance: number;
+  fcp?: string | null;
+  lcp?: string | null;
+  cls?: string | null;
+  tbt?: string | null;
+  speedIndex?: string | null;
+}
+
+interface Props {
+  report: {
+    source?: string;
+    testedUrl?: string;
+    measuredAt?: string;
+    mobile?: PageSpeedResult;
+    desktop?: PageSpeedResult;
+    mobileError?: string;
+    desktopError?: string;
+  };
+}
+
+const { report } = Astro.props as Props;
+const devices = [
+  {
+    label: "Mobile",
+    result: report.mobile,
+    error: report.mobileError,
+  },
+  {
+    label: "Desktop",
+    result: report.desktop,
+    error: report.desktopError,
+  },
+].filter((device) => device.result || device.error);
+const metrics = [
+  { key: "fcp", label: "First Contentful Paint", thresholds: [1.8, 3] },
+  { key: "si", label: "Speed Index", thresholds: [3.4, 5.8] },
+  { key: "lcp", label: "Largest Contentful Paint", thresholds: [2.5, 4] },
+  { key: "tbt", label: "Total Blocking Time", thresholds: [200, 600] },
+  { key: "cls", label: "Cumulative Layout Shift", thresholds: [0.1, 0.25] },
+] as const;
+const scoreLevel = (score: number) =>
+  score >= 90 ? "good" : score >= 50 ? "needs-improvement" : "poor";
+const metricLevel = (key: string, value: string) => {
+  const parsed = Number.parseFloat(value.replace(/,/g, ""));
+  if (!Number.isFinite(parsed)) return "unrated";
+  const definition = metrics.find((metric) => metric.key === key);
+  if (!definition) return "unrated";
+  return parsed <= definition.thresholds[0]
+    ? "good"
+    : parsed <= definition.thresholds[1]
+      ? "needs-improvement"
+      : "poor";
+};
+const pageSpeedUrl = report.testedUrl
+  ? `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(report.testedUrl)}`
+  : null;
+---
+
+{devices.length > 0 && (
+  <section
+    class="pagespeed-report"
+    aria-label="Google PageSpeed Insights results"
+  >
+    <header class="pagespeed-header">
+      <div>
+        <span class="eyebrow">
+          {report.source || "Google PageSpeed Insights"}
+        </span>
+        <h3>Performance report</h3>
+      </div>
+      {report.measuredAt && (
+        <time datetime={report.measuredAt}>Tested {report.measuredAt}</time>
+      )}
+    </header>
+    {report.testedUrl && <p class="pagespeed-tested-url">{report.testedUrl}</p>}
+    {devices.map(({ key, label, result, error }) => (
+      <section class="pagespeed-device" aria-label={`${label} performance`}>
+        <h4>{label}</h4>
+        {result ? (
+          <>
+            <div class="pagespeed-score-row">
+              <div
+                class:list={["pagespeed-score", scoreLevel(result.performance)]}
+                aria-label={`Performance score ${result.performance} out of 100`}
+              >
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                  <circle
+                    class="pagespeed-score-track"
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    pathLength="100"
+                  />
+                  <circle
+                    class="pagespeed-score-value"
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    pathLength="100"
+                    stroke-dasharray={`${Math.max(0, Math.min(100, result.performance))} 100`}
+                  />
+                </svg>
+                <span>{result.performance}</span>
+              </div>
+              <span
+                class:list={[
+                  "pagespeed-score-label",
+                  scoreLevel(result.performance),
+                ]}
+              >
+                Performance
+              </span>
+            </div>
+            <dl class="pagespeed-metrics">
+              {metrics.map((metric) => {
+                const value =
+                  metric.key === "si" ? result.speedIndex : result[metric.key];
+                return value != null && value !== "" ? (
+                  <div
+                    class:list={[
+                      "pagespeed-metric",
+                      metricLevel(metric.key, value),
+                    ]}
+                  >
+                    <dt>{metric.label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ) : null;
+              })}
+            </dl>
+          </>
+        ) : (
+          <p class="pagespeed-error">{error}</p>
+        )}
+      </section>
+    ))}
+    <footer class="pagespeed-footer">
+      <span>Results are from the date shown; scores can change over time.</span>
+      {pageSpeedUrl && (
+        <a href={pageSpeedUrl} target="_blank" rel="noopener noreferrer">
+          Run in PageSpeed Insights ↗
+        </a>
+      )}
+    </footer>
+  </section>
+)}
