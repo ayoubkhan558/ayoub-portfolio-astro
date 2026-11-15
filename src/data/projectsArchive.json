@@ -497,7 +497,7 @@
       "date": null,
       "projectType": "Landing page",
       "description": "Robux Gold is a landing page translated from Figma with Reactjs, Bootstrap to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live",
+      "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-robux-gold.jpg"
     },
     {
@@ -1319,7 +1319,7 @@
       "websiteName": "TheFinancologist",
       "rating": 5,
       "categoryNiche": "Finance and insurance",
-      "websiteUrl": "https://thefinancologist.co/",
+      "websiteUrl": "https://thefinancologist.com/",
       "figmaLink": null,
       "platformFrameworkBuilder": "Wordperss, Elementor",
       "client": "",
@@ -1327,7 +1327,7 @@
       "date": null,
       "projectType": "WordPress website",
       "description": "TheFinancologist is a wordpress website built with Wordperss, Elementor to present services clearly and convert qualified visitors.",
-      "projectStatus": "Offline (Domain Expired)"
+      "projectStatus": "Live"
     },
     {
       "websiteName": "Assessment Intelligent",
@@ -1443,7 +1443,8 @@
       "notes": null,
       "date": null,
       "projectType": "Business website",
-      "description": "Client project is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on."
+      "description": "Client project is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on.",
+      "projectStatus": "Offline (Domain Expired)"
     },
     {
       "websiteName": "Katy Body Sculpt",
@@ -1471,7 +1472,8 @@
       "notes": null,
       "date": null,
       "projectType": "Business website",
-      "description": "Client project is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices."
+      "description": "Client project is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices.",
+      "projectStatus": "Offline (Domain Expired)"
     },
     {
       "websiteName": null,
@@ -1499,12 +1501,12 @@
       "date": null,
       "projectType": "Business website",
       "description": "Client project is a business website built with a practical web stack to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live",
+      "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-p-intelligence.jpg"
     },
     {
       "websiteName": "LuxuryLagoonDubai",
-      "rating": 3,
+      "rating": 2,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://luxurylagoondubai.com/",
       "figmaLink": null,
@@ -1534,7 +1536,7 @@
       "websiteName": "The Golden Form",
       "rating": 5,
       "categoryNiche": "Food and hospitality",
-      "websiteUrl": "https://www.thegoldenfork.com.mt/",
+      "websiteUrl": "https://www.thegoldenfork.mt/",
       "figmaLink": "https://www.figma.com/file/vPZjIuEwUJtZVKWq8fy2sx/THE-GOLDEN-FORK?node-id=68%3A639&mode=dev",
       "platformFrameworkBuilder": "Wix",
       "client": null,
@@ -1606,7 +1608,7 @@
       "dateRaw": "44983.0",
       "projectType": "WordPress website",
       "description": "Magnet Social is a wordpress website translated from Figma with Wordpress, Elementor to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Live",
+      "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-magnet-social.jpg"
     },
     {
@@ -1623,7 +1625,7 @@
       "dateRaw": "45084.7+",
       "projectType": "E-commerce website",
       "description": "GlowUpDental is an e-commerce website translated from Figma with Shopify to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Offline (Domain Expired)"
     },
     {
       "websiteName": "More Than Baths",
@@ -1673,7 +1675,7 @@
       "dateRaw": "45231.0",
       "projectType": "WordPress website",
       "description": "Acholyte is a wordpress website translated from Figma with Wordpress, Elementor to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Archived (HTTP only)",
+      "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-acholyte.jpg"
     },
     {
@@ -2150,7 +2152,8 @@
         "client2": "Guloona"
       },
       "projectType": "WordPress website",
-      "description": "TallerPR is a wordpress website built with Wordpress, Elementor to give the client a sharper, easier-to-maintain online presence."
+      "description": "TallerPR is a wordpress website built with Wordpress, Elementor to give the client a sharper, easier-to-maintain online presence.",
+      "projectStatus": "Offline (Domain Expired)"
     },
     {
       "websiteName": "mundotallerpr",
@@ -2247,20 +2250,6 @@
       "projectType": "WordPress website",
       "description": "dongolthedev is a wordpress website built with Bricks Page Builder to present services clearly and convert qualified visitors.",
       "projectStatus": "Offline (Domain Expired)"
-    },
-    {
-      "websiteName": null,
-      "rating": 3,
-      "categoryNiche": "Professional services",
-      "websiteUrl": "https://web-metix.com/",
-      "figmaLink": "WORK IN PROGRESS",
-      "platformFrameworkBuilder": "Bricks Page Builder",
-      "client": null,
-      "notes": null,
-      "date": null,
-      "projectType": "WordPress website",
-      "description": "Client project is a wordpress website translated from Figma with Bricks Page Builder to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
     },
     {
       "websiteName": "Clampy",

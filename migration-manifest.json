@@ -10,7 +10,7 @@
       "sha256": "9f827e8d2d740a7236e6757a6ee7069b534119118d6d69e4e48217f49916e6cf",
       "unchanged": false,
       "currentSha256": "c80c8fe9bd33bec97157c2efae0d14e176a1451435ee59f60aba380cb95f3e4f",
-      "changeNote": "Added project ratings and a verified screenshot path."
+      "changeNote": "Two-space formatting only; parsed data unchanged."
     },
     {
       "file": "portfolio.json",
@@ -30,8 +30,8 @@
       "file": "projectsArchive.json",
       "sha256": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
       "unchanged": false,
-      "currentSha256": "8345577e2604d94e10441ce0c517d32e633d386110e7c65f2607ca0690d3ddd3",
-      "changeNote": "Two-space formatting only; parsed data unchanged."
+      "currentSha256": "d82b0b5485c027f95301258b164d3ce7bd810a809623fd1d9cfdcf5bdcfe685e",
+      "changeNote": "Added ratings to unrated projects and a verified screenshot path."
     },
     {
       "file": "toolCatalog.json",
