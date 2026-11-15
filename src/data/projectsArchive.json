@@ -9,6 +9,7 @@
   "projects": [
     {
       "websiteName": "Xgrid",
+      "rating": 5,
       "categoryNiche": "Cloud infrastructure and technology services",
       "websiteUrl": "https://www.xgrid.co/",
       "figmaLink": null,
@@ -24,6 +25,7 @@
     },
     {
       "websiteName": "Alkira",
+      "rating": 5,
       "categoryNiche": "Cloud networking",
       "websiteUrl": "https://www.alkira.com/",
       "figmaLink": null,
@@ -39,6 +41,7 @@
     },
     {
       "websiteName": "Chkk",
+      "rating": 5,
       "categoryNiche": "Cloud native infrastructure",
       "websiteUrl": "https://www.chkk.io/",
       "figmaLink": null,
@@ -54,6 +57,7 @@
     },
     {
       "websiteName": "dalailkhairat",
+      "rating": 4,
       "categoryNiche": "Islamic Site",
       "websiteUrl": "https://dalailkhairat.com/",
       "figmaLink": null,
@@ -68,6 +72,7 @@
     },
     {
       "websiteName": "Pagano Law",
+      "rating": 5,
       "categoryNiche": "Legal services",
       "websiteUrl": "https://paganolaw.net/",
       "figmaLink": null,
@@ -103,6 +108,7 @@
     },
     {
       "websiteName": "King SR - Real Estate RK",
+      "rating": 5,
       "categoryNiche": "Real Estate",
       "websiteUrl": "https://www.kingsre.ae/",
       "figmaLink": null,
@@ -117,6 +123,7 @@
     },
     {
       "websiteName": "Edinburghpt Academy",
+      "rating": 3,
       "categoryNiche": "Education and learning",
       "websiteUrl": "https://edinburghptacademy.com/",
       "figmaLink": null,
@@ -130,6 +137,7 @@
     },
     {
       "websiteName": "Weinberger Aesthetics",
+      "rating": 5,
       "categoryNiche": "Health and wellness",
       "websiteUrl": "https://weinberger-aesthetics.de/",
       "figmaLink": "https://www.figma.com/design/uAAfNrvyJaOmVuif5wQuHV/WA-Section-Design?node-id=28-734&t=rHWrD4Ld7a2Ywg7h-0",
@@ -144,6 +152,7 @@
     },
     {
       "websiteName": "GlowCore",
+      "rating": 4,
       "categoryNiche": "Online retail",
       "websiteUrl": "https://glowcore.com.pk/",
       "figmaLink": null,
@@ -158,6 +167,7 @@
     },
     {
       "websiteName": "Supplements Hub",
+      "rating": 4,
       "categoryNiche": "Health & Nutrition / Dietary Supplements",
       "websiteUrl": "https://supplementshub.com.pk/",
       "figmaLink": null,
@@ -172,6 +182,7 @@
     },
     {
       "websiteName": "Reppit",
+      "rating": 4,
       "categoryNiche": "AI SaaS / Reddit Marketing",
       "websiteUrl": "https://reppit.ai/",
       "figmaLink": null,
@@ -190,6 +201,7 @@
     },
     {
       "websiteName": "Smart Bulk Price Editor",
+      "rating": 4,
       "categoryNiche": "E-commerce SaaS / Pricing Automation",
       "websiteUrl": "https://bulk-edit.com/",
       "figmaLink": null,
@@ -204,6 +216,7 @@
     },
     {
       "websiteName": "ShiningHorizon",
+      "rating": 4,
       "categoryNiche": "Business services",
       "websiteUrl": "https://shininghorizon.com/",
       "figmaLink": null,
@@ -218,6 +231,7 @@
     },
     {
       "websiteName": "BabyPNG",
+      "rating": 5,
       "categoryNiche": "Business services  ",
       "websiteUrl": "https://babypng.com/",
       "figmaLink": "https://www.figma.com/file/NnX3sSnUGbW2LhOheP6Sft/BabyPNG-development?type=design&node-id=0-1&mode=design&t=xlkhm1SjiI80dMz1-0",
@@ -235,6 +249,7 @@
     },
     {
       "websiteName": "Shoppable",
+      "rating": 4,
       "categoryNiche": "Video commerce",
       "websiteUrl": "https://shoppable-video.com/",
       "figmaLink": null,
@@ -249,6 +264,7 @@
     },
     {
       "websiteName": "301-redirect",
+      "rating": 4,
       "categoryNiche": "Marketing automation tools",
       "websiteUrl": "https://301-redirect.app/",
       "figmaLink": null,
@@ -263,6 +279,7 @@
     },
     {
       "websiteName": "Theme-scheduler",
+      "rating": 4,
       "categoryNiche": "Marketing automation tools",
       "websiteUrl": "https://theme-scheduler.com/",
       "figmaLink": null,
@@ -277,6 +294,7 @@
     },
     {
       "websiteName": "Pin It",
+      "rating": 4,
       "categoryNiche": "Marketing automation tools",
       "websiteUrl": "https://pin-auto.com/",
       "figmaLink": null,
@@ -312,6 +330,7 @@
     },
     {
       "websiteName": "WebP Optimizer",
+      "rating": 4,
       "categoryNiche": "Image Optimization / Speed SEO",
       "websiteUrl": "https://webp-image.com/",
       "figmaLink": null,
@@ -326,6 +345,7 @@
     },
     {
       "websiteName": "Serpio",
+      "rating": 4,
       "categoryNiche": "SaaS / SEO Tools",
       "websiteUrl": "https://serpio.app/",
       "figmaLink": null,
@@ -340,6 +360,7 @@
     },
     {
       "websiteName": "carptrac",
+      "rating": 5,
       "categoryNiche": "Automotive and transport",
       "websiteUrl": "https://www.carptrac.com.fj/",
       "figmaLink": null,
@@ -355,6 +376,7 @@
     },
     {
       "websiteName": "Markedine",
+      "rating": 4,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://www.markedine.com/",
       "figmaLink": null,
@@ -391,6 +413,7 @@
     },
     {
       "websiteName": "5gStore",
+      "rating": 4,
       "categoryNiche": "Online retail",
       "websiteUrl": "https://5gstore.pk/",
       "figmaLink": null,
@@ -427,6 +450,7 @@
     },
     {
       "websiteName": "SKU Auto",
+      "rating": 4,
       "categoryNiche": "Inventory & SKU Automation",
       "websiteUrl": "https://sku-auto.com/",
       "figmaLink": null,
@@ -441,6 +465,7 @@
     },
     {
       "websiteName": "Episcols",
+      "rating": 4,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://epicsols.com/",
       "figmaLink": "https://www.figma.com/file/arVVMmApgZmdzNGxxcJNWz/EPICSOLS-AGENCY-WEBSITE-2024?type=design&node-id=0-1&mode=design&t=vqAcPTGqAE4KiXBq-0",
@@ -461,6 +486,7 @@
     },
     {
       "websiteName": "Robux Gold",
+      "rating": 4,
       "categoryNiche": "Gaming and digital entertainment",
       "websiteUrl": "https://ro.gold/",
       "figmaLink": "https://www.figma.com/file/Isl1gmAlINlpez3CU3Znud/ROBLUXGOLD?type=design&t=NlOnUmS6H68nFy13-6",
@@ -476,6 +502,7 @@
     },
     {
       "websiteName": "Go Enterprise HR",
+      "rating": 4,
       "categoryNiche": "HR Software / SaaS",
       "websiteUrl": "https://goenterprisehr.com/",
       "figmaLink": null,
@@ -492,6 +519,7 @@
     },
     {
       "websiteName": "Tech Bridge Recruiting",
+      "rating": 4,
       "categoryNiche": "IT Recruitment & Staffing",
       "websiteUrl": "https://techbridgerecruiting.com/",
       "figmaLink": null,
@@ -508,6 +536,7 @@
     },
     {
       "websiteName": "Rebill",
+      "rating": 4,
       "categoryNiche": "Subscriptions & Recurring Billing",
       "websiteUrl": "https://rebill.shop/",
       "figmaLink": null,
@@ -522,6 +551,7 @@
     },
     {
       "websiteName": "Waleed Portfolio",
+      "rating": 3,
       "categoryNiche": "Personal portfolios",
       "websiteUrl": "https://serveekay.com/",
       "figmaLink": "https://www.figma.com/design/B1bSg9E8R8rrMB5Q57ji6h/Untitled?node-id=0-1&p=f&t=wOfumBd8BeUhPGT6-0",
@@ -537,6 +567,7 @@
     },
     {
       "websiteName": "LWS Academy",
+      "rating": 5,
       "categoryNiche": "Education and learning",
       "websiteUrl": "https://lws.academy/",
       "figmaLink": null,
@@ -556,6 +587,7 @@
     },
     {
       "websiteName": "50Stars",
+      "rating": 5,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://50stars.pro/",
       "figmaLink": null,
@@ -570,6 +602,7 @@
     },
     {
       "websiteName": "Naseeha",
+      "rating": 4,
       "categoryNiche": "Business services",
       "websiteUrl": "https://naseeha.surge.sh/",
       "figmaLink": "https://www.figma.com/file/l2cxK2hrGJmgBm7KTtnWqZ/Naseeha?type=design&node-id=725-9180&mode=design&t=xlkhm1SjiI80dMz1-0",
@@ -587,6 +620,7 @@
     },
     {
       "websiteName": "Sun Shield Insurance",
+      "rating": 4,
       "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://sunshieldinsurance.com/",
       "figmaLink": "https://www.figma.com/file/FmNLwfTFE6n9itNNGvYOJa/SUN-SHIELD-WEBSITE-Final?node-id=1%3A13&mode=dev",
@@ -609,6 +643,7 @@
     },
     {
       "websiteName": "Juhayana",
+      "rating": 5,
       "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://www.juhayna-co.com/",
       "figmaLink": "https://www.figma.com/file/r59v15bOHaMMQOYJuOY3w3/Juhayna?mode=dev",
@@ -624,6 +659,7 @@
     },
     {
       "websiteName": "Waitiyi Admin",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://waitiyi.surge.sh/",
       "figmaLink": null,
@@ -637,6 +673,7 @@
     },
     {
       "websiteName": "Waitiyi Front",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://waitifi-front.surge.sh/",
       "figmaLink": null,
@@ -650,6 +687,7 @@
     },
     {
       "websiteName": "punisher",
+      "rating": 3,
       "categoryNiche": "Web interfaces",
       "websiteUrl": "https://punisher-react.surge.sh/",
       "figmaLink": null,
@@ -663,6 +701,7 @@
     },
     {
       "websiteName": "tembekasua",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://tembekasua-react.surge.sh/",
       "figmaLink": "https://www.figma.com/file/vKg1IRnyvbUOAYusYZB41u/tembekasua?node-id=1679%3A92932&mode=dev",
@@ -679,6 +718,7 @@
     },
     {
       "websiteName": "MKZ Mart",
+      "rating": 5,
       "categoryNiche": "Online retail",
       "websiteUrl": "https://mkzmart.com/",
       "figmaLink": null,
@@ -693,6 +733,7 @@
     },
     {
       "websiteName": "Studyly",
+      "rating": 5,
       "categoryNiche": "Education and learning",
       "websiteUrl": "https://studyly.com/",
       "figmaLink": null,
@@ -707,6 +748,7 @@
     },
     {
       "websiteName": "StrainProxies Admin",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://strain-proxies.surge.sh/",
       "figmaLink": null,
@@ -720,6 +762,7 @@
     },
     {
       "websiteName": "StrainProxies Front",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://strainproxies.surge.sh/",
       "figmaLink": null,
@@ -734,6 +777,7 @@
     },
     {
       "websiteName": "PaperPrensa",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://paper-prenza.surge.sh/",
       "figmaLink": null,
@@ -747,6 +791,7 @@
     },
     {
       "websiteName": "Traffictinker",
+      "rating": 3,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://traffictinker.surge.sh/",
       "figmaLink": null,
@@ -760,6 +805,7 @@
     },
     {
       "websiteName": "WallsStreetBets",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://wallsstreetbets.surge.sh/",
       "figmaLink": null,
@@ -773,6 +819,7 @@
     },
     {
       "websiteName": "PureForYou Landing",
+      "rating": 3,
       "categoryNiche": "Product marketing",
       "websiteUrl": "https://pure-for-you.surge.sh/",
       "figmaLink": null,
@@ -786,6 +833,7 @@
     },
     {
       "websiteName": "Lazhora",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://lazhora.surge.sh/",
       "figmaLink": null,
@@ -799,6 +847,7 @@
     },
     {
       "websiteName": "Leadgen",
+      "rating": 3,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://leadgen-fv.surge.sh/",
       "figmaLink": null,
@@ -812,6 +861,7 @@
     },
     {
       "websiteName": "MonoAmi Landing",
+      "rating": 3,
       "categoryNiche": "Product marketing",
       "websiteUrl": "https://monoami.surge.sh/",
       "figmaLink": null,
@@ -826,6 +876,7 @@
     },
     {
       "websiteName": "BCD Landing",
+      "rating": 3,
       "categoryNiche": "Product marketing",
       "websiteUrl": "https://bcd-landing.surge.sh/",
       "figmaLink": null,
@@ -839,6 +890,7 @@
     },
     {
       "websiteName": "Assertive Industries",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://assertive-industries.surge.sh/",
       "figmaLink": null,
@@ -852,6 +904,7 @@
     },
     {
       "websiteName": "Casino Bonuses Finder",
+      "rating": 3,
       "categoryNiche": "Gaming and digital entertainment",
       "websiteUrl": "https://casino-bonuses-finder.surge.sh/",
       "figmaLink": null,
@@ -865,6 +918,7 @@
     },
     {
       "websiteName": "Cartoon Landing",
+      "rating": 3,
       "categoryNiche": "Product marketing",
       "websiteUrl": "https://cartoon-landing.surge.sh/",
       "figmaLink": null,
@@ -878,6 +932,7 @@
     },
     {
       "websiteName": "Art Digital",
+      "rating": 3,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://art-digital.surge.sh/",
       "figmaLink": null,
@@ -892,6 +947,7 @@
     },
     {
       "websiteName": "SixAgri Front",
+      "rating": 3,
       "categoryNiche": "Agriculture",
       "websiteUrl": "sixagri-front.surge.sh",
       "figmaLink": null,
@@ -904,6 +960,7 @@
     },
     {
       "websiteName": "Youtube Convert",
+      "rating": 3,
       "categoryNiche": "Media and content",
       "websiteUrl": "https://yt-converter-front.surge.sh/",
       "figmaLink": null,
@@ -918,6 +975,7 @@
     },
     {
       "websiteName": "StarFM",
+      "rating": 3,
       "categoryNiche": "Media and content",
       "websiteUrl": "https://starfm.surge.sh/",
       "figmaLink": null,
@@ -931,6 +989,7 @@
     },
     {
       "websiteName": "YouTube Wav",
+      "rating": 3,
       "categoryNiche": "Media and content",
       "websiteUrl": "https://yt-wav.surge.sh/",
       "figmaLink": null,
@@ -944,6 +1003,7 @@
     },
     {
       "websiteName": "10ANS+1",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "10ans.surge.sh",
       "figmaLink": null,
@@ -956,6 +1016,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://tokyo-ten.surge.sh/",
       "figmaLink": null,
@@ -969,6 +1030,7 @@
     },
     {
       "websiteName": "Jackson CV",
+      "rating": 3,
       "categoryNiche": "Personal portfolios",
       "websiteUrl": "https://jackson-cv.surge.sh/",
       "figmaLink": null,
@@ -982,6 +1044,7 @@
     },
     {
       "websiteName": "Kodak Connect",
+      "rating": 3,
       "categoryNiche": "Media and content",
       "websiteUrl": "https://fv-kodak-connect.pages.dev/",
       "figmaLink": null,
@@ -996,6 +1059,7 @@
     },
     {
       "websiteName": "Portoro",
+      "rating": 5,
       "categoryNiche": "Business services",
       "websiteUrl": "https://www.portoro.com/",
       "figmaLink": "https://www.figma.com/file/lpbXdBlPE6NcXjoieZCr4v/For-Conversion",
@@ -1010,6 +1074,7 @@
     },
     {
       "websiteName": "ServicePlace",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://review-website.pages.dev/",
       "figmaLink": null,
@@ -1024,6 +1089,7 @@
     },
     {
       "websiteName": "RefillAdmin",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://refill-admin.surge.sh/",
       "figmaLink": null,
@@ -1037,6 +1103,7 @@
     },
     {
       "websiteName": "Bitss",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://fv-bitss.pages.dev/",
       "figmaLink": null,
@@ -1051,6 +1118,7 @@
     },
     {
       "websiteName": "Safe Affinity",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://safe-affinity.surge.sh/",
       "figmaLink": null,
@@ -1064,6 +1132,7 @@
     },
     {
       "websiteName": "NovaMarkets",
+      "rating": 3,
       "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://nova-markets.surge.sh/",
       "figmaLink": null,
@@ -1077,6 +1146,7 @@
     },
     {
       "websiteName": "AutoMovel Landing",
+      "rating": 3,
       "categoryNiche": "Automotive and transport",
       "websiteUrl": "https://automovel-landing.surge.sh/",
       "figmaLink": null,
@@ -1090,6 +1160,7 @@
     },
     {
       "websiteName": "Guyana Landing",
+      "rating": 3,
       "categoryNiche": "Product marketing",
       "websiteUrl": "https://guyana-landing.surge.sh/",
       "figmaLink": null,
@@ -1103,6 +1174,7 @@
     },
     {
       "websiteName": "LiquidGarden",
+      "rating": 3,
       "categoryNiche": "Home and garden",
       "websiteUrl": "liquid-garden.surge.sh",
       "figmaLink": null,
@@ -1115,6 +1187,7 @@
     },
     {
       "websiteName": "Nobux",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://nobux.surge.sh/",
       "figmaLink": null,
@@ -1128,6 +1201,7 @@
     },
     {
       "websiteName": "AccorePWA",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://accore-pwa.surge.sh/",
       "figmaLink": null,
@@ -1141,6 +1215,7 @@
     },
     {
       "websiteName": "Ventoy",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "ventoy.surge.sh",
       "figmaLink": null,
@@ -1153,6 +1228,7 @@
     },
     {
       "websiteName": "FreeEla",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://free-ela.surge.sh/",
       "figmaLink": null,
@@ -1166,6 +1242,7 @@
     },
     {
       "websiteName": "Fewcents",
+      "rating": 4,
       "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://www.fewcents.co/",
       "figmaLink": null,
@@ -1180,6 +1257,7 @@
     },
     {
       "websiteName": "XNation",
+      "rating": 2,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://xnation.com/",
       "figmaLink": null,
@@ -1194,6 +1272,7 @@
     },
     {
       "websiteName": "Promo Intelligence",
+      "rating": 3,
       "categoryNiche": "Web interfaces",
       "websiteUrl": "https://promo-intelligence-pro.netlify.app/",
       "figmaLink": null,
@@ -1208,6 +1287,7 @@
     },
     {
       "websiteName": "Mugnsoft",
+      "rating": 5,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://mugnsoft.com/",
       "figmaLink": null,
@@ -1222,6 +1302,7 @@
     },
     {
       "websiteName": "Polygon",
+      "rating": 5,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://polygon.sa/",
       "figmaLink": null,
@@ -1236,6 +1317,7 @@
     },
     {
       "websiteName": "TheFinancologist",
+      "rating": 5,
       "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://thefinancologist.co/",
       "figmaLink": null,
@@ -1249,6 +1331,7 @@
     },
     {
       "websiteName": "Assessment Intelligent",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://assessment-intelligent.netlify.app/",
       "figmaLink": null,
@@ -1263,6 +1346,7 @@
     },
     {
       "websiteName": "Dhabas",
+      "rating": 3,
       "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://dhabas.netlify.app/",
       "figmaLink": null,
@@ -1277,6 +1361,7 @@
     },
     {
       "websiteName": "Kuza",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://kuza-app.netlify.app/",
       "figmaLink": null,
@@ -1291,6 +1376,7 @@
     },
     {
       "websiteName": "Mrchrissy Services",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://mrchrissyservices.netlify.app/",
       "figmaLink": null,
@@ -1305,6 +1391,7 @@
     },
     {
       "websiteName": "Service Herd",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://www.serviceherd.com/",
       "figmaLink": null,
@@ -1318,6 +1405,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://vikfougere.com/",
       "figmaLink": null,
@@ -1331,6 +1419,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://tripo.netlify.app/",
       "figmaLink": null,
@@ -1345,6 +1434,7 @@
     },
     {
       "websiteName": null,
+      "rating": 5,
       "categoryNiche": "Business services",
       "websiteUrl": "https://erepowerfl.com/",
       "figmaLink": null,
@@ -1357,6 +1447,7 @@
     },
     {
       "websiteName": "Katy Body Sculpt",
+      "rating": 3,
       "categoryNiche": "Health and wellness",
       "websiteUrl": "https://katy-body.netlify.app/",
       "figmaLink": null,
@@ -1371,6 +1462,7 @@
     },
     {
       "websiteName": null,
+      "rating": 2,
       "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://www.openpantry.com.au/",
       "figmaLink": null,
@@ -1383,6 +1475,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://kenmoeagency.com/",
       "figmaLink": null,
@@ -1396,6 +1489,7 @@
     },
     {
       "websiteName": null,
+      "rating": 4,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://www.p-intelligence.com/",
       "figmaLink": null,
@@ -1410,6 +1504,7 @@
     },
     {
       "websiteName": "LuxuryLagoonDubai",
+      "rating": 3,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://luxurylagoondubai.com/",
       "figmaLink": null,
@@ -1423,6 +1518,7 @@
     },
     {
       "websiteName": "Eningo",
+      "rating": 5,
       "categoryNiche": "Business services",
       "websiteUrl": "eningo.se",
       "figmaLink": "https://www.figma.com/file/KgWZdYT2fOAUa4fQxLNt9Q/Eningo-mockup?node-id=0%3A1&mode=dev",
@@ -1436,6 +1532,7 @@
     },
     {
       "websiteName": "The Golden Form",
+      "rating": 5,
       "categoryNiche": "Food and hospitality",
       "websiteUrl": "https://www.thegoldenfork.com.mt/",
       "figmaLink": "https://www.figma.com/file/vPZjIuEwUJtZVKWq8fy2sx/THE-GOLDEN-FORK?node-id=68%3A639&mode=dev",
@@ -1450,6 +1547,7 @@
     },
     {
       "websiteName": "The Infineights",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://theinfineights.com/",
       "figmaLink": "https://www.figma.com/file/e241jolFxLdJ9qHsCYIDlb/THE-INFINEIGHTS?node-id=2%3A824&mode=dev",
@@ -1464,6 +1562,7 @@
     },
     {
       "websiteName": "DigiHub",
+      "rating": 5,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://digihub.li/",
       "figmaLink": "https://www.figma.com/file/EcBjiUDJO3MlneCKtEazUd/New-DIGIHUB?node-id=0%3A1&mode=dev",
@@ -1479,6 +1578,7 @@
     },
     {
       "websiteName": "Cheapzy",
+      "rating": 4,
       "categoryNiche": "Online retail",
       "websiteUrl": "https://cheapzy.net/",
       "figmaLink": "https://www.figma.com/file/Mbkg39Gy6dsGzFdskDf2IA/CHEAPZY-WEBSITE?node-id=0%3A1&mode=dev",
@@ -1494,6 +1594,7 @@
     },
     {
       "websiteName": "Magnet Social",
+      "rating": 2,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://magnet.social/",
       "figmaLink": "https://www.figma.com/file/tVS468D15SuA3CoLT8dVVf/magnet-smm-(Copy)?node-id=0%3A1&mode=dev",
@@ -1510,6 +1611,7 @@
     },
     {
       "websiteName": "GlowUpDental",
+      "rating": 2,
       "categoryNiche": "Health and wellness",
       "websiteUrl": "https://glowupdental.co.uk/",
       "figmaLink": "https://www.figma.com/file/EBm3TFggQDe6IU9eMKewWk/GLOW-UP-DENTAL?type=design&mode=design&t=o5BL7F2hEjvzo15Z-0",
@@ -1525,6 +1627,7 @@
     },
     {
       "websiteName": "More Than Baths",
+      "rating": 3,
       "categoryNiche": "Bathroom Fixtures & Home Improvement",
       "websiteUrl": "https://morethanbaths.co.uk/",
       "figmaLink": "https://www.figma.com/file/YTWUfn5hd5CFFHuR5NzZ9x/More-Than-Bath?type=design&t=t3ekXOdJgLR1entc-6",
@@ -1541,6 +1644,7 @@
     },
     {
       "websiteName": "Champions Mortgage Team",
+      "rating": 4,
       "categoryNiche": "Finance and insurance",
       "websiteUrl": "https://championsmortgageteam.com/",
       "figmaLink": "https://www.figma.com/file/4kdaXhs0ZxRIfTxrrDdGHQ/CHAMPION-MORTAGAGE-(Copy)?mode=dev",
@@ -1557,6 +1661,7 @@
     },
     {
       "websiteName": "Acholyte",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": null,
       "figmaLink": "https://www.figma.com/file/BdvkenEPUjsVkFUR9lyM43/ACHOLYTE-WEBSITE?type=design&mode=design&t=OeKA6DbWV7m0OyrD-0",
@@ -1573,6 +1678,7 @@
     },
     {
       "websiteName": "Majik",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://majik.bot/",
       "figmaLink": "https://www.figma.com/file/Tw5v6IJjUDV0lsSKtMIqRL/BAI-WEBSITE?type=design&mode=design&t=7fpd9NkY58FiyArg-0",
@@ -1587,6 +1693,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://new-beea11.webflow.io/",
       "figmaLink": "https://www.figma.com/file/KgWZdYT2fOAUa4fQxLNt9Q/Eningo-mockup?type=design&node-id=0-1&mode=design&t=RI0zFRB66LecqBOl-0",
@@ -1600,6 +1707,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": null,
       "figmaLink": "https://www.figma.com/file/q2J7E2cumcPBquvOx1VZns/BUMPING-SHIP-DASHBOARD?node-id=0%3A1&mode=dev",
@@ -1615,6 +1723,7 @@
     },
     {
       "websiteName": "AppMint Landing Page",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://website-mint-landing-page.vercel.app/",
       "figmaLink": null,
@@ -1631,6 +1740,7 @@
     },
     {
       "websiteName": "AppMint",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://website-mint.netlify.app/",
       "figmaLink": "WebsiteMint Final Development – Figma",
@@ -1647,6 +1757,7 @@
     },
     {
       "websiteName": "Gillies Electric",
+      "rating": 4,
       "categoryNiche": "Construction and home services",
       "websiteUrl": "https://www.gillieselectric.com/",
       "figmaLink": null,
@@ -1663,6 +1774,7 @@
     },
     {
       "websiteName": null,
+      "rating": 4,
       "categoryNiche": "Construction and home services",
       "websiteUrl": "https://reyesenvironmental.com/",
       "figmaLink": "https://www.figma.com/file/ApUGkUHARZCIECySq2HXHm",
@@ -1679,6 +1791,7 @@
     },
     {
       "websiteName": "YT Solutions",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://yt-solutions.surge.sh/",
       "figmaLink": "https://www.figma.com/file/2B08PEBi2nPfOafiJTcLR5/YT-Solutions?type=design&node-id=0-1&mode=design&t=HRDP9xwdxvOy3SE8-0",
@@ -1693,6 +1806,7 @@
     },
     {
       "websiteName": "Seshy",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://seshy.surge.sh/",
       "figmaLink": "https://www.figma.com/file/mkjBo8GP5AxbGbzw2ifBDY/SESHY-DASHBOARD?type=design&node-id=0-1&mode=design&t=QOLkR9R9RMpGc873-0",
@@ -1708,6 +1822,7 @@
     },
     {
       "websiteName": "Episcols Admin",
+      "rating": 3,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://episcols.surge.sh/",
       "figmaLink": "https://www.figma.com/file/mkjBo8GP5AxbGbzw2ifBDY/SESHY-DASHBOARD?type=design&node-id=0-1&mode=design&t=QOLkR9R9RMpGc873-0",
@@ -1718,10 +1833,12 @@
       "date": null,
       "projectType": "Web app interface",
       "description": "Episcols Admin is a web app interface translated from Figma with Reactjs, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "screenshot": "/projects/project-ss-episcols.jpg"
     },
     {
       "websiteName": "Debate Box",
+      "rating": 3,
       "categoryNiche": "Web interfaces",
       "websiteUrl": "https://chatter-react.surge.sh/",
       "figmaLink": "ROBLUXGOLD – Figma",
@@ -1737,6 +1854,7 @@
     },
     {
       "websiteName": "Future Pauments Tech",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "Future Pauments Tech",
       "figmaLink": "https://www.figma.com/file/917e68s9KO4dBMvHCjlCuT/FUTURE-PAYMENT-%2B-TECH?type=design&node-id=0-1&mode=design&t=BOnWh2Gmnpdn7kTR-0",
@@ -1751,6 +1869,7 @@
     },
     {
       "websiteName": "BoatXchange",
+      "rating": 3,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "No Link",
       "figmaLink": "https://www.figma.com/file/5Dik0lUQRMeUghWLVw9v3J/BOATXCHANGE-WEBSITE?type=design&t=QOLkR9R9RMpGc873-6",
@@ -1765,6 +1884,7 @@
     },
     {
       "websiteName": "Bunny Mint",
+      "rating": 3,
       "categoryNiche": "Software products",
       "websiteUrl": "https://bunny-mint.surge.sh/",
       "figmaLink": null,
@@ -1779,6 +1899,7 @@
     },
     {
       "websiteName": "RadioLogix",
+      "rating": 3,
       "categoryNiche": "Health and wellness",
       "websiteUrl": "No Link",
       "figmaLink": "https://www.figma.com/file/o5jjMhW4LV9iWoFY8kl1WU/Radiologex-Website?node-id=889%3A41&mode=dev",
@@ -1792,6 +1913,7 @@
     },
     {
       "websiteName": "Luxury Lagoon Dubai",
+      "rating": 3,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://luxurylagoondubai.com/",
       "figmaLink": null,
@@ -1805,6 +1927,7 @@
     },
     {
       "websiteName": "The Royal Pin",
+      "rating": 5,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://theroyalpin.com/",
       "figmaLink": null,
@@ -1819,6 +1942,7 @@
     },
     {
       "websiteName": "Danielle Ball Fitness",
+      "rating": 3,
       "categoryNiche": "Health and wellness",
       "websiteUrl": "https://danielleballfitness.com/",
       "figmaLink": null,
@@ -1833,6 +1957,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Automotive and transport",
       "websiteUrl": "https://kargokdelivery-cqxwipnq8r.live-website.com/",
       "figmaLink": null,
@@ -1847,6 +1972,7 @@
     },
     {
       "websiteName": "centaurivision",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://centaurivision.ca/",
       "figmaLink": null,
@@ -1867,6 +1993,7 @@
     },
     {
       "websiteName": "smartavlasia",
+      "rating": 3,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://smartavlasia.com/",
       "figmaLink": null,
@@ -1882,6 +2009,7 @@
     },
     {
       "websiteName": "robertw264",
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://robertw264.sg-host.com/",
       "figmaLink": null,
@@ -1896,6 +2024,7 @@
     },
     {
       "websiteName": "thaivisaexpert",
+      "rating": 3,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://thaivisaexpert.com/",
       "figmaLink": null,
@@ -1911,6 +2040,7 @@
     },
     {
       "websiteName": "https://withdmtech.com/",
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": null,
       "figmaLink": null,
@@ -1924,6 +2054,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": null,
       "figmaLink": null,
@@ -1936,6 +2067,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Business services",
       "websiteUrl": "https://mc-servers.de/",
       "figmaLink": null,
@@ -1948,6 +2080,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": null,
       "figmaLink": null,
@@ -1961,6 +2094,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Construction and home services",
       "websiteUrl": "https://tallerpr.pixelprosai.com/",
       "figmaLink": null,
@@ -1974,6 +2108,7 @@
     },
     {
       "websiteName": "Nova Crystal Line",
+      "rating": 4,
       "categoryNiche": "Real Estate",
       "websiteUrl": "https://nclrealestate.com",
       "figmaLink": null,
@@ -1989,6 +2124,7 @@
     },
     {
       "websiteName": "ExploreAsia",
+      "rating": 3,
       "categoryNiche": "Travel and tourism",
       "websiteUrl": "https://robertw274.sg-host.com/",
       "figmaLink": "https://www.figma.com/design/Hw0y4WjPWkQ1B2gwIOOy8M/XploreAsia?node-id=58-3050&node-type=frame&t=OFCEDTyihakPUJqb-0",
@@ -2002,6 +2138,7 @@
     },
     {
       "websiteName": "TallerPR",
+      "rating": 3,
       "categoryNiche": "Construction and home services",
       "websiteUrl": "https://tallerpr.com/",
       "figmaLink": null,
@@ -2017,6 +2154,7 @@
     },
     {
       "websiteName": "mundotallerpr",
+      "rating": 3,
       "categoryNiche": "Construction and home services",
       "websiteUrl": "https://mundotallerpr.com/",
       "figmaLink": "https://www.figma.com/design/d0dzOeCcqjB9XIBGRlZcsc/Project-277---MundoTaller?node-id=92-32&t=LHUMWCY0FhfiUOmp-0",
@@ -2033,6 +2171,7 @@
     },
     {
       "websiteName": "Llavedigital",
+      "rating": 3,
       "categoryNiche": "Marketing and digital services",
       "websiteUrl": "https://mundotaller.pixelprosai.com",
       "figmaLink": "https://www.figma.com/design/4mq3m6YQE63sSg1C1ooJsS/LlaveDigital-(with-p)?node-id=16-11&t=t4BIUBvXpusj7uoO-0",
@@ -2049,6 +2188,7 @@
     },
     {
       "websiteName": "Guaranteed Grades",
+      "rating": 3,
       "categoryNiche": "Education and learning",
       "websiteUrl": "https://guaranteedgrades.net/",
       "figmaLink": "https://www.figma.com/design/GbZDZG7jXK1JrHOn84mdjZ/Guaranteed-Grades?node-id=62-260&m=dev",
@@ -2067,6 +2207,7 @@
     },
     {
       "websiteName": "PMS",
+      "rating": 3,
       "categoryNiche": "Education and learning",
       "websiteUrl": "https://pms-study.com/",
       "figmaLink": "https://www.figma.com/design/qiHBZQGpi0VPV6fo5Ls07Z/Phelan-McDermid-(Copy)?node-id=2844-5957&t=Af9KV8DglSpZRy8z-0",
@@ -2080,6 +2221,7 @@
     },
     {
       "websiteName": "LP Video Site",
+      "rating": 3,
       "categoryNiche": "Product marketing",
       "websiteUrl": "https://lp-video-site.surge.sh/",
       "figmaLink": null,
@@ -2093,6 +2235,7 @@
     },
     {
       "websiteName": "dongolthedev",
+      "rating": 3,
       "categoryNiche": "Personal portfolios",
       "websiteUrl": null,
       "figmaLink": null,
@@ -2107,6 +2250,7 @@
     },
     {
       "websiteName": null,
+      "rating": 3,
       "categoryNiche": "Professional services",
       "websiteUrl": "https://web-metix.com/",
       "figmaLink": "WORK IN PROGRESS",
@@ -2120,6 +2264,7 @@
     },
     {
       "websiteName": "Clampy",
+      "rating": 3,
       "categoryNiche": "Developer tools and responsive design",
       "websiteUrl": "https://clampy.netlify.app/",
       "figmaLink": null,
@@ -2149,6 +2294,7 @@
     },
     {
       "websiteName": "Brickify",
+      "rating": 4,
       "categoryNiche": "Developer tools and Bricks Builder",
       "websiteUrl": "https://brickify.netlify.app/",
       "figmaLink": null,
@@ -2163,7 +2309,7 @@
     },
     {
       "websiteName": "Mockify",
-      "rating": 4,
+      "rating": 3,
       "categoryNiche": "Developer tools and product mockups",
       "websiteUrl": "https://mockify-alpha.vercel.app/",
       "figmaLink": null,
