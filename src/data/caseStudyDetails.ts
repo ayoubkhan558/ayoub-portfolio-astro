@@ -84,6 +84,9 @@ export type CaseStudyDetailData = {
 
 export type CaseStudyPageSpeedResult = {
   performance: number;
+  seo?: number;
+  accessibility?: number;
+  bestPractices?: number;
   fcp: string | null;
   lcp: string | null;
   cls: string | null;

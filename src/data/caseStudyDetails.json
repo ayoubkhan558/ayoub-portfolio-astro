@@ -155,6 +155,33 @@
       "heading": "Need to move a legacy website into WordPress?",
       "text": "I can help redesign, rebuild, and migrate outdated PHP or hard-to-maintain websites into a cleaner WordPress system your team can keep improving.",
       "buttonText": "Plan My Migration"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://get.rejuvenatedknives.com",
+      "measuredAt": "2026-11-16",
+      "mobile": {
+        "performance": 48,
+        "seo": 92,
+        "accessibility": 81,
+        "bestPractices": 96,
+        "fcp": "2.2 s",
+        "lcp": "6.0 s",
+        "tbt": "1,060 ms",
+        "cls": "0.001",
+        "speedIndex": "6.1 s"
+      },
+      "desktop": {
+        "performance": 64,
+        "seo": 92,
+        "accessibility": 77,
+        "bestPractices": 96,
+        "fcp": "0.6 s",
+        "lcp": "1.7 s",
+        "tbt": "890 ms",
+        "cls": "0.001",
+        "speedIndex": "1.2 s"
+      }
     }
   },
   "pagano-law": {
@@ -320,22 +347,28 @@
     "pageSpeed": {
       "source": "Google PageSpeed Insights",
       "testedUrl": "https://paganolaw.net",
-      "measuredAt": "2026-06-29",
+      "measuredAt": "2026-11-16",
       "mobile": {
-        "performance": 55,
-        "fcp": "7.3 s",
-        "lcp": "11.6 s",
-        "cls": "0.054",
-        "tbt": "90 ms",
-        "speedIndex": "10.2 s"
+        "performance": 43,
+        "seo": 100,
+        "accessibility": 84,
+        "bestPractices": 92,
+        "fcp": "7.4 s",
+        "lcp": "13.2 s",
+        "tbt": "520 ms",
+        "cls": "0.009",
+        "speedIndex": "9.2 s"
       },
       "desktop": {
-        "performance": 79,
-        "fcp": "1.4 s",
-        "lcp": "2.3 s",
-        "cls": "0.03",
-        "tbt": "50 ms",
-        "speedIndex": "2.5 s"
+        "performance": 71,
+        "seo": 100,
+        "accessibility": 84,
+        "bestPractices": 96,
+        "fcp": "1.3 s",
+        "lcp": "2.6 s",
+        "tbt": "210 ms",
+        "cls": "0.021",
+        "speedIndex": "2.3 s"
       }
     }
   },
@@ -501,14 +534,28 @@
     "pageSpeed": {
       "source": "Google PageSpeed Insights",
       "testedUrl": "https://www.weinberger-aesthetics.de/",
-      "measuredAt": "2026-07-30",
-      "desktop": {
-        "performance": 99,
-        "fcp": "1.2 s",
-        "lcp": "1.6 s",
+      "measuredAt": "2026-11-16",
+      "mobile": {
+        "performance": 87,
+        "seo": 100,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "fcp": "1.1 s",
+        "lcp": "3.9 s",
+        "tbt": "30 ms",
         "cls": "0",
-        "tbt": null,
-        "speedIndex": null
+        "speedIndex": "3.6 s"
+      },
+      "desktop": {
+        "performance": 96,
+        "seo": 100,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "fcp": "0.3 s",
+        "lcp": "0.8 s",
+        "cls": "0",
+        "tbt": "0 ms",
+        "speedIndex": "2.0 s"
       }
     }
   },
@@ -668,6 +715,33 @@
       "heading": "Need a Figma design turned into production-ready code?",
       "text": "I build fast, responsive, pixel-perfect websites using modern frontend technologies and clean, maintainable code.",
       "buttonText": "Let's Build It"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://studyly.com/at",
+      "measuredAt": "2026-11-16",
+      "mobile": {
+        "performance": 93,
+        "seo": 92,
+        "accessibility": 81,
+        "bestPractices": 100,
+        "fcp": "1.4 s",
+        "lcp": "2.9 s",
+        "tbt": "0 ms",
+        "cls": "0.074",
+        "speedIndex": "3.5 s"
+      },
+      "desktop": {
+        "performance": 95,
+        "seo": 92,
+        "accessibility": 86,
+        "bestPractices": 100,
+        "fcp": "0.4 s",
+        "lcp": "0.9 s",
+        "tbt": "0 ms",
+        "cls": "0.029",
+        "speedIndex": "2.1 s"
+      }
     }
   },
   "kingsre": {
@@ -839,6 +913,33 @@
       "heading": "Need to migrate your Elementor website to Bricks Builder?",
       "text": "I rebuild existing Elementor websites in Bricks Builder while preserving the design, improving performance, and creating a cleaner, future-proof WordPress architecture.",
       "buttonText": "Start Your Migration"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://kingsre.ae",
+      "measuredAt": "2026-11-16",
+      "mobile": {
+        "performance": 89,
+        "seo": 100,
+        "accessibility": 87,
+        "bestPractices": 100,
+        "fcp": "1.8 s",
+        "lcp": "3.2 s",
+        "tbt": "0 ms",
+        "cls": "0.001",
+        "speedIndex": "4.9 s"
+      },
+      "desktop": {
+        "performance": 96,
+        "seo": 100,
+        "accessibility": 91,
+        "bestPractices": 96,
+        "fcp": "0.5 s",
+        "lcp": "0.9 s",
+        "tbt": "0 ms",
+        "cls": "0.008",
+        "speedIndex": "1.8 s"
+      }
     }
   },
   "serveekay": {
@@ -1156,6 +1257,33 @@
       "heading": "Need a Shopify store built from scratch?",
       "text": "I design and develop complete Shopify ecommerce websites—including branding, logo design, UI/UX, product creatives, and custom development—to create fast, modern, conversion-focused online stores.",
       "buttonText": "Start Your Shopify Project"
+    },
+    "pageSpeed": {
+      "source": "Google PageSpeed Insights",
+      "testedUrl": "https://supplementshub.com.pk",
+      "measuredAt": "2026-11-16",
+      "mobile": {
+        "performance": 67,
+        "seo": 100,
+        "accessibility": 92,
+        "bestPractices": 96,
+        "fcp": "1.2 s",
+        "lcp": "17.1 s",
+        "tbt": "140 ms",
+        "cls": "0",
+        "speedIndex": "6.7 s"
+      },
+      "desktop": {
+        "performance": 73,
+        "seo": 100,
+        "accessibility": 92,
+        "bestPractices": 96,
+        "fcp": "0.3 s",
+        "lcp": "0.7 s",
+        "tbt": "100 ms",
+        "cls": "0.521",
+        "speedIndex": "2.2 s"
+      }
     }
   }
 }

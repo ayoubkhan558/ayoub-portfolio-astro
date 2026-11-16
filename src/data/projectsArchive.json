@@ -2,10 +2,7 @@
   "sourceFile": "C:\\Users\\NCS\\Downloads\\Ayoub Projects.xlsx",
   "sheet": "Sheet1",
   "projectCount": 143,
-  "excludedRows": [
-    42,
-    137
-  ],
+  "excludedRows": [42, 137],
   "projects": [
     {
       "websiteName": "Xgrid",
@@ -21,7 +18,24 @@
       "projectType": "Technology services website",
       "description": "Corporate website for Xgrid's cloud infrastructure and technology services, built with Next.js.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-xgrid.jpg"
+      "screenshot": "/projects/project-ss-xgrid.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.xgrid.co/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 89,
+          "seo": 100,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "fcp": "0.4 s",
+          "lcp": "1.3 s",
+          "tbt": "150 ms",
+          "cls": "0.001",
+          "speedIndex": "2.3 s"
+        }
+      }
     },
     {
       "websiteName": "Alkira",
@@ -37,7 +51,24 @@
       "projectType": "Enterprise networking website",
       "description": "Enterprise networking website for Alkira's cloud-native networking platform, built with custom WordPress.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-alkira.jpg"
+      "screenshot": "/projects/project-ss-alkira.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.alkira.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 54,
+          "seo": 85,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "fcp": "3.2 s",
+          "lcp": "25.8 s",
+          "tbt": "330 ms",
+          "cls": "0",
+          "speedIndex": "8.4 s"
+        },
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Chkk",
@@ -53,7 +84,14 @@
       "projectType": "SaaS marketing website",
       "description": "SaaS marketing website for Chkk's cloud-native infrastructure platform, built with Webflow.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-chkk.jpg"
+      "screenshot": "/projects/project-ss-chkk.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.chkk.io/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "dalailkhairat",
@@ -68,7 +106,34 @@
       "projectType": "Community website",
       "description": "dalailkhairat is a community website for Islamic Site built with a practical web stack to make key content easier to understand and act on.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-dalailkhairat.jpg"
+      "screenshot": "/projects/project-ss-dalailkhairat.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://dalailkhairat.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 71,
+          "seo": 100,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "fcp": "1.1 s",
+          "lcp": "6.5 s",
+          "tbt": "50 ms",
+          "cls": "0",
+          "speedIndex": "6.4 s"
+        },
+        "desktop": {
+          "performance": 91,
+          "seo": 100,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "1.4 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "2.3 s"
+        }
+      }
     },
     {
       "websiteName": "Pagano Law",
@@ -86,24 +151,10 @@
       "screenshot": "/projects/project-ss-pagano-law.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://paganolaw.net",
-        "measuredAt": "2026-06-29",
-        "mobile": {
-          "performance": 55,
-          "fcp": "7.3 s",
-          "lcp": "11.6 s",
-          "cls": "0.054",
-          "tbt": "90 ms",
-          "speedIndex": "10.2 s"
-        },
-        "desktop": {
-          "performance": 79,
-          "fcp": "1.4 s",
-          "lcp": "2.3 s",
-          "cls": "0.03",
-          "tbt": "50 ms",
-          "speedIndex": "2.5 s"
-        }
+        "testedUrl": "https://paganolaw.net/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
       }
     },
     {
@@ -119,7 +170,43 @@
       "projectType": "Real estate website",
       "description": "King SR - Real Estate RK is a real estate website built with a practical web stack to give the client a sharper, easier-to-maintain online presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-king-sr-real-estate-rk.jpg"
+      "screenshot": "/projects/project-ss-king-sr-real-estate-rk.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.kingsre.ae/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 76,
+          "seo": 100,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "2.6 s",
+          "lcp": "4.1 s",
+          "tbt": "0 ms",
+          "cls": "0.004",
+          "speedIndex": "7.7 s"
+        },
+        "desktop": {
+          "performance": 90,
+          "seo": 100,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "fcp": "0.7 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0.008",
+          "speedIndex": "3.1 s"
+        }
+      },
+      "pageSpeedAdditional": [
+        {
+          "source": "Google PageSpeed Insights",
+          "testedUrl": "https://consulting-realty.com/kingsre",
+          "measuredAt": "2026-11-16",
+          "mobileError": "PageSpeed Insights could not generate a mobile report.",
+          "desktopError": "PageSpeed Insights could not generate a desktop report."
+        }
+      ]
     },
     {
       "websiteName": "Edinburghpt Academy",
@@ -133,7 +220,14 @@
       "date": null,
       "projectType": "Education website",
       "description": "Edinburghpt Academy is an education website built with HTML, CSS to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.edinburghptacademy.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Weinberger Aesthetics",
@@ -148,7 +242,23 @@
       "projectType": "Healthcare website",
       "description": "Weinberger Aesthetics is a healthcare website translated from Figma with Bricks Page Builder to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-weinberger-aesthetics.jpg"
+      "screenshot": "/projects/project-ss-weinberger-aesthetics.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://weinberger-aesthetics.de/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      },
+      "pageSpeedAdditional": [
+        {
+          "source": "Google PageSpeed Insights",
+          "testedUrl": "https://p668994.webspaceconfig.de/weinberger-aesthetics-wp/wp-admin/",
+          "measuredAt": "2026-11-16",
+          "mobileError": "PageSpeed Insights could not generate a mobile report.",
+          "desktopError": "PageSpeed Insights could not generate a desktop report."
+        }
+      ]
     },
     {
       "websiteName": "GlowCore",
@@ -163,7 +273,14 @@
       "projectType": "E-commerce website",
       "description": "GlowCore is an e-commerce website built with Shopify to make key content easier to understand and act on.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-glowcore.jpg"
+      "screenshot": "/projects/project-ss-glowcore.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://glowcore.com.pk/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Supplements Hub",
@@ -178,7 +295,34 @@
       "projectType": "E-commerce website",
       "description": "Showcases authentic weight management, beauty collagen, family wellness, and daily growth supplements for online ordering across Pakistan.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-supplements-hub.jpg"
+      "screenshot": "/projects/project-ss-supplements-hub.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://supplementshub.com.pk/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "1.2 s",
+          "lcp": "3.5 s",
+          "tbt": "10 ms",
+          "cls": "0",
+          "speedIndex": "5.1 s"
+        },
+        "desktop": {
+          "performance": 73,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "0.7 s",
+          "tbt": "60 ms",
+          "cls": "0.521",
+          "speedIndex": "2.4 s"
+        }
+      }
     },
     {
       "websiteName": "Reppit",
@@ -194,10 +338,14 @@
       "description": "Automates Reddit lead generation, keyword monitoring, and AI-powered reply engagement for brand visibility and sales.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-reppit.jpg",
-      "originalStack": [
-        "WordPress",
-        "Bricks Builder"
-      ]
+      "originalStack": ["WordPress", "Bricks Builder"],
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://reppit.ai/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Smart Bulk Price Editor",
@@ -212,7 +360,14 @@
       "projectType": "WordPress website",
       "description": "Automates product pricing, scheduled discounts, multi-market rate updates, and one-click price rollbacks for store inventory.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-price-bulk-edit.jpg"
+      "screenshot": "/projects/project-ss-price-bulk-edit.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://bulk-edit.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "ShiningHorizon",
@@ -227,7 +382,14 @@
       "projectType": "WordPress website",
       "description": "ShiningHorizon is a wordpress website built with Wordperss, Elementor to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-shininghorizon.jpg"
+      "screenshot": "/projects/project-ss-shininghorizon.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://shininghorizon.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "BabyPNG",
@@ -245,7 +407,34 @@
       "projectType": "Figma to HTML/CSS",
       "description": "BabyPNG is a business website translated from Figma with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-babypng.jpg"
+      "screenshot": "/projects/project-ss-babypng.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://babypng.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 95,
+          "seo": 85,
+          "accessibility": 78,
+          "bestPractices": 100,
+          "fcp": "1.8 s",
+          "lcp": "2.6 s",
+          "tbt": "10 ms",
+          "cls": "0.009",
+          "speedIndex": "3.3 s"
+        },
+        "desktop": {
+          "performance": 96,
+          "seo": 85,
+          "accessibility": 77,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "1.3 s",
+          "tbt": "0 ms",
+          "cls": "0.06",
+          "speedIndex": "1.1 s"
+        }
+      }
     },
     {
       "websiteName": "Shoppable",
@@ -260,7 +449,14 @@
       "projectType": "WordPress website",
       "description": "Shoppable is a wordpress website built with Bricks Page Builder to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-shoppable.jpg"
+      "screenshot": "/projects/project-ss-shoppable.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://shoppable-video.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "301-redirect",
@@ -275,7 +471,24 @@
       "projectType": "WordPress website",
       "description": "301-redirect is a wordpress website built with Bricks Page Builder to make the offer easier to scan across devices.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-301-redirect.jpg"
+      "screenshot": "/projects/project-ss-301-redirect.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://301-redirect.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 96,
+          "seo": 92,
+          "accessibility": 94,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "0.5 s",
+          "tbt": "60 ms",
+          "cls": "0.003",
+          "speedIndex": "2.1 s"
+        }
+      }
     },
     {
       "websiteName": "Theme-scheduler",
@@ -290,7 +503,14 @@
       "projectType": "WordPress website",
       "description": "Theme-scheduler is a wordpress website built with Bricks Page Builder to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-theme-scheduler.jpg"
+      "screenshot": "/projects/project-ss-theme-scheduler.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://theme-scheduler.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Pin It",
@@ -308,24 +528,10 @@
       "screenshot": "/projects/project-ss-pin-it.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://pin-auto.com",
-        "measuredAt": "2026-06-29",
-        "mobile": {
-          "performance": 92,
-          "fcp": "1.5 s",
-          "lcp": "2.4 s",
-          "cls": "0.052",
-          "tbt": "70 ms",
-          "speedIndex": "5.6 s"
-        },
-        "desktop": {
-          "performance": 97,
-          "fcp": "0.3 s",
-          "lcp": "0.5 s",
-          "cls": "0.003",
-          "tbt": "70 ms",
-          "speedIndex": "1.7 s"
-        }
+        "testedUrl": "https://pin-auto.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
       }
     },
     {
@@ -341,7 +547,14 @@
       "projectType": "WordPress website",
       "description": "Showcases bulk WebP conversion, background compression, lazy loading, and SEO alt-text tools to improve site speed and Core Web Vitals.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-webp-optimzer.jpg"
+      "screenshot": "/projects/project-ss-webp-optimzer.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://webp-image.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Serpio",
@@ -356,7 +569,14 @@
       "projectType": "Bricks Builder",
       "description": "Serpio.app is a pay-as-you-go SEO rank tracking platform built with WordPress and Bricks Builder, designed to deliver accurate organic and Google Maps grid rank analytics.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-serpio.jpg"
+      "screenshot": "/projects/project-ss-serpio.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://serpio.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "carptrac",
@@ -372,7 +592,14 @@
       "projectType": "E-commerce website",
       "description": "carptrac is an e-commerce website built with Wordperss, Elementor, WooCommerce to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-carptrac.jpg"
+      "screenshot": "/projects/project-ss-carptrac.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.carptrac.com.fj/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Markedine",
@@ -391,24 +618,10 @@
       "screenshot": "/projects/project-ss-markedine.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://markedine.com",
-        "measuredAt": "2026-06-29",
-        "mobile": {
-          "performance": 32,
-          "fcp": "3.8 s",
-          "lcp": "17.9 s",
-          "cls": "0",
-          "tbt": "1,920 ms",
-          "speedIndex": "8.3 s"
-        },
-        "desktop": {
-          "performance": 59,
-          "fcp": "0.8 s",
-          "lcp": "4.3 s",
-          "cls": "0.002",
-          "tbt": "380 ms",
-          "speedIndex": "1.7 s"
-        }
+        "testedUrl": "https://www.markedine.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
       }
     },
     {
@@ -428,23 +641,29 @@
       "screenshot": "/projects/project-ss-5gstore.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://5gstore.pk",
-        "measuredAt": "2026-06-29",
+        "testedUrl": "https://5gstore.pk/",
+        "measuredAt": "2026-11-16",
         "mobile": {
-          "performance": 83,
-          "fcp": "1.6 s",
-          "lcp": "4.1 s",
+          "performance": 92,
+          "seo": 92,
+          "accessibility": 96,
+          "bestPractices": 96,
+          "fcp": "1.4 s",
+          "lcp": "2.3 s",
+          "tbt": "0 ms",
           "cls": "0",
-          "tbt": "160 ms",
-          "speedIndex": "3.8 s"
+          "speedIndex": "6.9 s"
         },
         "desktop": {
-          "performance": 95,
+          "performance": 94,
+          "seo": 92,
+          "accessibility": 96,
+          "bestPractices": 100,
           "fcp": "0.4 s",
-          "lcp": "1.2 s",
-          "cls": "0",
-          "tbt": "40 ms",
-          "speedIndex": "1.7 s"
+          "lcp": "0.5 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "2.5 s"
         }
       }
     },
@@ -461,7 +680,14 @@
       "projectType": "WordPress website",
       "description": "Automates SKU and barcode generation with custom templates, bulk editing, and automated product updates for store inventory.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-sku-auto.jpg"
+      "screenshot": "/projects/project-ss-sku-auto.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://sku-auto.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Episcols",
@@ -478,11 +704,25 @@
       "description": "Episcols is a wordpress website translated from Figma with Wordpress, Elementor to present services clearly and convert qualified visitors.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
-      "screenshot": "/projects/project-ss-episcols.jpg"
+      "originalStack": ["WordPress", "Elementor"],
+      "screenshot": "/projects/project-ss-episcols.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://epicsols.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 99,
+          "seo": 77,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.2 s"
+        }
+      }
     },
     {
       "websiteName": "Robux Gold",
@@ -515,7 +755,34 @@
       "projectType": "HR Management Software Website",
       "description": "Enterprise HR software platform designed for growing teams and global workforces to automate core HR, attendance, payroll, compliance, and employee workflows.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-goenterprisehr.jpg"
+      "screenshot": "/projects/project-ss-goenterprisehr.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://goenterprisehr.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "fcp": "1.2 s",
+          "lcp": "3.9 s",
+          "tbt": "0 ms",
+          "cls": "0.002",
+          "speedIndex": "3.6 s"
+        },
+        "desktop": {
+          "performance": 98,
+          "seo": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "1.5 s"
+        }
+      }
     },
     {
       "websiteName": "Tech Bridge Recruiting",
@@ -532,7 +799,34 @@
       "projectType": "IT Recruitment Agency Website",
       "description": "Recruitment agency platform designed to connect IT professionals with job opportunities and assist businesses in sourcing tech talent, temporary workers, and consultancy services.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-techbridgerecruiting.jpg"
+      "screenshot": "/projects/project-ss-techbridgerecruiting.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://techbridgerecruiting.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 89,
+          "seo": 92,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "2.0 s",
+          "lcp": "3.5 s",
+          "tbt": "0 ms",
+          "cls": "0.03",
+          "speedIndex": "3.2 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 92,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.003",
+          "speedIndex": "1.3 s"
+        }
+      }
     },
     {
       "websiteName": "Rebill",
@@ -547,7 +841,14 @@
       "projectType": "WordPress website",
       "description": "Automates subscription management, recurring payments, customizable billing cycles, and self-service portals to boost customer LTV.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-rebill.jpg"
+      "screenshot": "/projects/project-ss-rebill.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://rebill.shop/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Waleed Portfolio",
@@ -563,7 +864,14 @@
       "projectType": "WordPress website",
       "description": "Waleed Portfolio is a wordpress website translated from Figma with Bricks Page Builder to present services clearly and convert qualified visitors.",
       "projectStatus": "Offline (Domain Expired)",
-      "screenshot": "/projects/project-ss-waleed-portfolio.jpg"
+      "screenshot": "/projects/project-ss-waleed-portfolio.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://serveekay.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "LWS Academy",
@@ -579,11 +887,15 @@
       "description": "LWS Academy is an education website built with Wordperss, Elementor, TutorLMS to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
-      "screenshot": "/projects/project-ss-lws-academy.jpg"
+      "originalStack": ["WordPress", "Elementor"],
+      "screenshot": "/projects/project-ss-lws-academy.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://lws.academy/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "50Stars",
@@ -598,7 +910,34 @@
       "projectType": "WordPress website",
       "description": "50Stars is a wordpress website built with Wordperss, Elementor to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-50stars.jpg"
+      "screenshot": "/projects/project-ss-50stars.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://50stars.pro/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 84,
+          "seo": 92,
+          "accessibility": 95,
+          "bestPractices": 96,
+          "fcp": "2.6 s",
+          "lcp": "3.8 s",
+          "tbt": "50 ms",
+          "cls": "0",
+          "speedIndex": "3.9 s"
+        },
+        "desktop": {
+          "performance": 94,
+          "seo": 92,
+          "accessibility": 95,
+          "bestPractices": 96,
+          "fcp": "0.6 s",
+          "lcp": "1.0 s",
+          "tbt": "10 ms",
+          "cls": "0",
+          "speedIndex": "2.2 s"
+        }
+      }
     },
     {
       "websiteName": "Naseeha",
@@ -616,7 +955,14 @@
       "projectType": "Business website",
       "description": "Naseeha is a business website translated from Figma with HTML, CSS, Bootstrap to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-naseeha.jpg"
+      "screenshot": "/projects/project-ss-naseeha.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://naseeha.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Sun Shield Insurance",
@@ -635,11 +981,15 @@
       "description": "Sun Shield Insurance is a wordpress website translated from Figma with Wordperss, Elementor to support lead generation with a cleaner user journey.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
-      "screenshot": "/projects/project-ss-sun-shield-insurance.jpg"
+      "originalStack": ["WordPress", "Elementor"],
+      "screenshot": "/projects/project-ss-sun-shield-insurance.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://sunshieldinsurance.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Juhayana",
@@ -655,7 +1005,34 @@
         "client2": "Fiverr"
       },
       "projectType": "WordPress website",
-      "description": "Juhayana is a wordpress website translated from Figma with Wordperss, Elementor to present services clearly and convert qualified visitors."
+      "description": "Juhayana is a wordpress website translated from Figma with Wordperss, Elementor to present services clearly and convert qualified visitors.",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.juhayna-co.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 72,
+          "seo": 85,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "fcp": "1.7 s",
+          "lcp": "6.5 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "5.5 s"
+        },
+        "desktop": {
+          "performance": 93,
+          "seo": 85,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "1.4 s",
+          "tbt": "30 ms",
+          "cls": "0.014",
+          "speedIndex": "1.8 s"
+        }
+      }
     },
     {
       "websiteName": "Waitiyi Admin",
@@ -669,7 +1046,34 @@
       "date": null,
       "projectType": "Web app interface",
       "description": "Waitiyi Admin is a web app interface built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://waitiyi.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 89,
+          "seo": 58,
+          "accessibility": 89,
+          "bestPractices": 62,
+          "fcp": "1.5 s",
+          "lcp": "3.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "3.0 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 58,
+          "accessibility": 86,
+          "bestPractices": 62,
+          "fcp": "0.4 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0.038",
+          "speedIndex": "0.7 s"
+        }
+      }
     },
     {
       "websiteName": "Waitiyi Front",
@@ -683,7 +1087,34 @@
       "date": null,
       "projectType": "Web app interface",
       "description": "Waitiyi Front is a web app interface built with HTML, CSS, Bootstrap to make key content easier to understand and act on.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://waitifi-front.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 69,
+          "seo": 58,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "fcp": "1.5 s",
+          "lcp": "5.7 s",
+          "tbt": "0 ms",
+          "cls": "0.208",
+          "speedIndex": "2.0 s"
+        },
+        "desktop": {
+          "performance": 76,
+          "seo": 58,
+          "accessibility": 94,
+          "bestPractices": 73,
+          "fcp": "0.4 s",
+          "lcp": "2.7 s",
+          "tbt": "0 ms",
+          "cls": "0.194",
+          "speedIndex": "0.6 s"
+        }
+      }
     },
     {
       "websiteName": "punisher",
@@ -697,7 +1128,34 @@
       "date": null,
       "projectType": "Frontend build",
       "description": "punisher is a frontend build built with Reactjs to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://punisher-react.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 67,
+          "seo": 66,
+          "accessibility": 80,
+          "bestPractices": 100,
+          "fcp": "2.0 s",
+          "lcp": "5.2 s",
+          "tbt": "20 ms",
+          "cls": "0.202",
+          "speedIndex": "4.6 s"
+        },
+        "desktop": {
+          "performance": 94,
+          "seo": 66,
+          "accessibility": 80,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "1.3 s",
+          "tbt": "20 ms",
+          "cls": "0.103",
+          "speedIndex": "0.8 s"
+        }
+      }
     },
     {
       "websiteName": "tembekasua",
@@ -714,7 +1172,14 @@
       },
       "projectType": "Web app interface",
       "description": "tembekasua is a web app interface translated from Figma with Tailwind, Reactjs to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://tembekasua-react.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "MKZ Mart",
@@ -729,7 +1194,14 @@
       "projectType": "Business website",
       "description": "MKZ Mart is a business website built with a practical web stack to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-mkz-mart.jpg"
+      "screenshot": "/projects/project-ss-mkz-mart.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://mkzmart.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Studyly",
@@ -744,7 +1216,24 @@
       "projectType": "Business website",
       "description": "Studyly is a business website built with HTML, CSS to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-studyly.jpg"
+      "screenshot": "/projects/project-ss-studyly.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://studyly.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 96,
+          "seo": 92,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.043",
+          "speedIndex": "1.9 s"
+        }
+      }
     },
     {
       "websiteName": "StrainProxies Admin",
@@ -758,7 +1247,34 @@
       "date": null,
       "projectType": "Web app interface",
       "description": "StrainProxies Admin is a web app interface built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://strain-proxies.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 97,
+          "seo": 58,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "2.5 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "2.8 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 58,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.014",
+          "speedIndex": "1.1 s"
+        }
+      }
     },
     {
       "websiteName": "StrainProxies Front",
@@ -773,7 +1289,14 @@
       "projectType": "Web app interface",
       "description": "StrainProxies Front is a web app interface built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-strainproxies-front.jpg"
+      "screenshot": "/projects/project-ss-strainproxies-front.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://strainproxies.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "PaperPrensa",
@@ -787,7 +1310,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "PaperPrensa is a business website built with HTML, CSS, Bootstrap, JQuery to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://paper-prenza.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 82,
+          "seo": 58,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "4.4 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.4 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 58,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0.006",
+          "speedIndex": "0.8 s"
+        }
+      }
     },
     {
       "websiteName": "Traffictinker",
@@ -801,7 +1351,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Traffictinker is a business website built with HTML, CSS, JS, JQuery, Bootstrap, Particles.js to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://traffictinker.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 39,
+          "seo": 58,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "fcp": "3.5 s",
+          "lcp": "9.9 s",
+          "tbt": "140 ms",
+          "cls": "0.53",
+          "speedIndex": "7.1 s"
+        },
+        "desktop": {
+          "performance": 73,
+          "seo": 58,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "1.8 s",
+          "tbt": "20 ms",
+          "cls": "0.363",
+          "speedIndex": "1.7 s"
+        }
+      }
     },
     {
       "websiteName": "WallsStreetBets",
@@ -815,7 +1392,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "WallsStreetBets is a business website built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://wallsstreetbets.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 90,
+          "seo": 58,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "3.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "2.6 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 58,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.6 s"
+        }
+      }
     },
     {
       "websiteName": "PureForYou Landing",
@@ -829,7 +1433,24 @@
       "date": null,
       "projectType": "Landing page",
       "description": "PureForYou Landing is a landing page built with HTML, CSS, Bootstrap to make key content easier to understand and act on.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://pure-for-you.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 68,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "3.8 s",
+          "tbt": "0 ms",
+          "cls": "0.212",
+          "speedIndex": "1.4 s"
+        }
+      }
     },
     {
       "websiteName": "Lazhora",
@@ -843,7 +1464,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Lazhora is a business website built with HTML, CSS, Bootstrap to improve trust, browsing flow, and mobile readability.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://lazhora.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 65,
+          "seo": 58,
+          "accessibility": 79,
+          "bestPractices": 92,
+          "fcp": "2.0 s",
+          "lcp": "3.6 s",
+          "tbt": "0 ms",
+          "cls": "0.38",
+          "speedIndex": "6.2 s"
+        },
+        "desktop": {
+          "performance": 77,
+          "seo": 58,
+          "accessibility": 79,
+          "bestPractices": 92,
+          "fcp": "0.5 s",
+          "lcp": "0.9 s",
+          "tbt": "0 ms",
+          "cls": "0.43",
+          "speedIndex": "1.7 s"
+        }
+      }
     },
     {
       "websiteName": "Leadgen",
@@ -857,7 +1505,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Leadgen is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://leadgen-fv.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 96,
+          "seo": 50,
+          "accessibility": 82,
+          "bestPractices": 88,
+          "fcp": "0.9 s",
+          "lcp": "2.6 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "2.9 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 50,
+          "accessibility": 82,
+          "bestPractices": 92,
+          "fcp": "0.2 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0.084",
+          "speedIndex": "1.0 s"
+        }
+      }
     },
     {
       "websiteName": "MonoAmi Landing",
@@ -872,7 +1547,14 @@
       "projectType": "Landing page",
       "description": "MonoAmi Landing is a landing page built with HTML, CSS, JS, JQuery, Bootstrap, Particles.js to make key content easier to understand and act on.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-monoami-landing.jpg"
+      "screenshot": "/projects/project-ss-monoami-landing.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://monoami.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "BCD Landing",
@@ -886,7 +1568,34 @@
       "date": null,
       "projectType": "Landing page",
       "description": "BCD Landing is a landing page built with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://bcd-landing.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 60,
+          "seo": 50,
+          "accessibility": 76,
+          "bestPractices": 100,
+          "fcp": "3.3 s",
+          "lcp": "26.6 s",
+          "tbt": "40 ms",
+          "cls": "0",
+          "speedIndex": "11.0 s"
+        },
+        "desktop": {
+          "performance": 90,
+          "seo": 58,
+          "accessibility": 83,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "2.0 s",
+          "tbt": "40 ms",
+          "cls": "0",
+          "speedIndex": "1.2 s"
+        }
+      }
     },
     {
       "websiteName": "Assertive Industries",
@@ -900,7 +1609,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Assertive Industries is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://assertive-industries.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 86,
+          "seo": 66,
+          "accessibility": 73,
+          "bestPractices": 96,
+          "fcp": "1.6 s",
+          "lcp": "1.6 s",
+          "tbt": "0 ms",
+          "cls": "0.11",
+          "speedIndex": "12.7 s"
+        },
+        "desktop": {
+          "performance": 60,
+          "seo": 66,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "3.3 s",
+          "tbt": "0 ms",
+          "cls": "0.365",
+          "speedIndex": "2.0 s"
+        }
+      }
     },
     {
       "websiteName": "Casino Bonuses Finder",
@@ -914,7 +1650,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Casino Bonuses Finder is a business website built with HTML, CSS, Bootstrap to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://casino-bonuses-finder.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 73,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "7.0 s",
+          "tbt": "0 ms",
+          "cls": "0.05",
+          "speedIndex": "4.6 s"
+        },
+        "desktop": {
+          "performance": 94,
+          "seo": 58,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "2.1 s"
+        }
+      }
     },
     {
       "websiteName": "Cartoon Landing",
@@ -928,7 +1691,34 @@
       "date": null,
       "projectType": "Landing page",
       "description": "Cartoon Landing is a landing page built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://cartoon-landing.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 69,
+          "seo": 58,
+          "accessibility": 89,
+          "bestPractices": 69,
+          "fcp": "1.7 s",
+          "lcp": "17.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "5.7 s"
+        },
+        "desktop": {
+          "performance": 84,
+          "seo": 58,
+          "accessibility": 85,
+          "bestPractices": 69,
+          "fcp": "0.4 s",
+          "lcp": "3.0 s",
+          "tbt": "0 ms",
+          "cls": "0.008",
+          "speedIndex": "0.6 s"
+        }
+      }
     },
     {
       "websiteName": "Art Digital",
@@ -943,7 +1733,34 @@
       "projectType": "Business website",
       "description": "Art Digital is a business website built with HTML, CSS, Bootstrap to present services clearly and convert qualified visitors.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-art-digital.jpg"
+      "screenshot": "/projects/project-ss-art-digital.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://art-digital.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 80,
+          "seo": 58,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "fcp": "3.4 s",
+          "lcp": "3.4 s",
+          "tbt": "100 ms",
+          "cls": "0",
+          "speedIndex": "5.6 s"
+        },
+        "desktop": {
+          "performance": 91,
+          "seo": 58,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "fcp": "0.8 s",
+          "lcp": "1.4 s",
+          "tbt": "0 ms",
+          "cls": "0.009",
+          "speedIndex": "2.2 s"
+        }
+      }
     },
     {
       "websiteName": "SixAgri Front",
@@ -956,7 +1773,34 @@
       "notes": "https://github.com/Hackathon-Soft/six-agri/",
       "date": null,
       "projectType": "Business website",
-      "description": "SixAgri Front is a business website built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey."
+      "description": "SixAgri Front is a business website built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://sixagri-front.surge.sh",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 67,
+          "seo": 58,
+          "accessibility": 73,
+          "bestPractices": 100,
+          "fcp": "1.7 s",
+          "lcp": "9.8 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "7.6 s"
+        },
+        "desktop": {
+          "performance": 93,
+          "seo": 58,
+          "accessibility": 79,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.0 s"
+        }
+      }
     },
     {
       "websiteName": "Youtube Convert",
@@ -971,7 +1815,14 @@
       "projectType": "Business website",
       "description": "Youtube Convert is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-youtube-convert.jpg"
+      "screenshot": "/projects/project-ss-youtube-convert.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://yt-converter-front.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "StarFM",
@@ -985,7 +1836,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "StarFM is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://starfm.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 93,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "2.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "3.5 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 58,
+          "accessibility": 96,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.1 s"
+        }
+      }
     },
     {
       "websiteName": "YouTube Wav",
@@ -999,7 +1877,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "YouTube Wav is a business website built with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://yt-wav.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 98,
+          "seo": 66,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "1.5 s",
+          "tbt": "60 ms",
+          "cls": "0",
+          "speedIndex": "4.0 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 66,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "0.4 s",
+          "tbt": "0 ms",
+          "cls": "0.013",
+          "speedIndex": "0.6 s"
+        }
+      }
     },
     {
       "websiteName": "10ANS+1",
@@ -1012,7 +1917,34 @@
       "notes": "https://github.com/Hackathon-Soft/fv-10ANS-1",
       "date": null,
       "projectType": "Business website",
-      "description": "10ANS+1 is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices."
+      "description": "10ANS+1 is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices.",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://10ans.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 96,
+          "seo": 50,
+          "accessibility": 82,
+          "bestPractices": 96,
+          "fcp": "1.7 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.9 s"
+        },
+        "desktop": {
+          "performance": 83,
+          "seo": 50,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0.293",
+          "speedIndex": "0.8 s"
+        }
+      }
     },
     {
       "websiteName": null,
@@ -1026,7 +1958,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://tokyo-ten.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 80,
+          "seo": 66,
+          "accessibility": 96,
+          "bestPractices": 96,
+          "fcp": "1.8 s",
+          "lcp": "4.4 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.9 s"
+        },
+        "desktop": {
+          "performance": 90,
+          "seo": 66,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "1.3 s",
+          "tbt": "0 ms",
+          "cls": "0.17",
+          "speedIndex": "0.5 s"
+        }
+      }
     },
     {
       "websiteName": "Jackson CV",
@@ -1040,7 +1999,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Jackson CV is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://jackson-cv.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 74,
+          "seo": 66,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "fcp": "1.8 s",
+          "lcp": "5.9 s",
+          "tbt": "0 ms",
+          "cls": "0.004",
+          "speedIndex": "4.6 s"
+        },
+        "desktop": {
+          "performance": 86,
+          "seo": 66,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0.233",
+          "speedIndex": "1.1 s"
+        }
+      }
     },
     {
       "websiteName": "Kodak Connect",
@@ -1055,7 +2041,24 @@
       "projectType": "Business website",
       "description": "Kodak Connect is a business website built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-kodak-connect.jpg"
+      "screenshot": "/projects/project-ss-kodak-connect.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://fv-kodak-connect.pages.dev/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 98,
+          "seo": 83,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "fcp": "1.1 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "3.8 s"
+        },
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Portoro",
@@ -1070,7 +2073,14 @@
       "projectType": "Landing page",
       "description": "Portoro is a landing page translated from Figma with HTML, CSS, Bootstrap to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-portoro.jpg"
+      "screenshot": "/projects/project-ss-portoro.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://portoro.pages.dev/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "ServicePlace",
@@ -1085,7 +2095,14 @@
       "projectType": "Business website",
       "description": "ServicePlace is a business website built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-serviceplace.jpg"
+      "screenshot": "/projects/project-ss-serviceplace.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://review-website.pages.dev/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "RefillAdmin",
@@ -1099,7 +2116,34 @@
       "date": null,
       "projectType": "Web app interface",
       "description": "RefillAdmin is a web app interface built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://refill-admin.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 59,
+          "seo": 58,
+          "accessibility": 66,
+          "bestPractices": 73,
+          "fcp": "5.6 s",
+          "lcp": "9.5 s",
+          "tbt": "130 ms",
+          "cls": "0.002",
+          "speedIndex": "6.2 s"
+        },
+        "desktop": {
+          "performance": 80,
+          "seo": 58,
+          "accessibility": 75,
+          "bestPractices": 77,
+          "fcp": "1.2 s",
+          "lcp": "2.0 s",
+          "tbt": "160 ms",
+          "cls": "0.001",
+          "speedIndex": "2.0 s"
+        }
+      }
     },
     {
       "websiteName": "Bitss",
@@ -1114,7 +2158,24 @@
       "projectType": "Business website",
       "description": "Bitss is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-bitss.jpg"
+      "screenshot": "/projects/project-ss-bitss.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://fv-bitss.pages.dev/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 99,
+          "seo": 83,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.0 s"
+        }
+      }
     },
     {
       "websiteName": "Safe Affinity",
@@ -1128,7 +2189,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Safe Affinity is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://safe-affinity.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 79,
+          "seo": 66,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "3.4 s",
+          "tbt": "0 ms",
+          "cls": "0.203",
+          "speedIndex": "4.5 s"
+        },
+        "desktop": {
+          "performance": 92,
+          "seo": 66,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0.148",
+          "speedIndex": "1.4 s"
+        }
+      }
     },
     {
       "websiteName": "NovaMarkets",
@@ -1142,7 +2230,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "NovaMarkets is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://nova-markets.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 74,
+          "seo": 58,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "fcp": "1.7 s",
+          "lcp": "22.1 s",
+          "tbt": "0 ms",
+          "cls": "0.016",
+          "speedIndex": "2.7 s"
+        },
+        "desktop": {
+          "performance": 80,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "3.6 s",
+          "tbt": "0 ms",
+          "cls": "0.019",
+          "speedIndex": "1.1 s"
+        }
+      }
     },
     {
       "websiteName": "AutoMovel Landing",
@@ -1156,7 +2271,34 @@
       "date": null,
       "projectType": "Landing page",
       "description": "AutoMovel Landing is a landing page built with HTML, CSS, Bootstrap to improve trust, browsing flow, and mobile readability.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://automovel-landing.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 86,
+          "seo": 50,
+          "accessibility": 84,
+          "bestPractices": 92,
+          "fcp": "1.6 s",
+          "lcp": "3.8 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.2 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 50,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "0.6 s",
+          "tbt": "0 ms",
+          "cls": "0.009",
+          "speedIndex": "0.6 s"
+        }
+      }
     },
     {
       "websiteName": "Guyana Landing",
@@ -1170,7 +2312,34 @@
       "date": null,
       "projectType": "Landing page",
       "description": "Guyana Landing is a landing page built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://guyana-landing.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 73,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "2.6 s",
+          "lcp": "4.8 s",
+          "tbt": "180 ms",
+          "cls": "0",
+          "speedIndex": "4.4 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.7 s",
+          "lcp": "1.1 s",
+          "tbt": "10 ms",
+          "cls": "0.03",
+          "speedIndex": "1.2 s"
+        }
+      }
     },
     {
       "websiteName": "LiquidGarden",
@@ -1183,7 +2352,34 @@
       "notes": null,
       "date": null,
       "projectType": "Business website",
-      "description": "LiquidGarden is a business website built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence."
+      "description": "LiquidGarden is a business website built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence.",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://liquid-garden.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 85,
+          "seo": 66,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "1.8 s",
+          "lcp": "3.8 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.4 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 66,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "0.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.0 s"
+        }
+      }
     },
     {
       "websiteName": "Nobux",
@@ -1197,7 +2393,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Nobux is a business website built with HTML, CSS, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://nobux.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 92,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "1.1 s",
+          "lcp": "2.6 s",
+          "tbt": "0 ms",
+          "cls": "0.132",
+          "speedIndex": "2.5 s"
+        },
+        "desktop": {
+          "performance": 95,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.131",
+          "speedIndex": "0.4 s"
+        }
+      }
     },
     {
       "websiteName": "AccorePWA",
@@ -1211,7 +2434,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "AccorePWA is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://accore-pwa.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 92,
+          "seo": 66,
+          "accessibility": 82,
+          "bestPractices": 69,
+          "fcp": "1.1 s",
+          "lcp": "1.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "7.3 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 66,
+          "accessibility": 80,
+          "bestPractices": 69,
+          "fcp": "0.3 s",
+          "lcp": "0.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.9 s"
+        }
+      }
     },
     {
       "websiteName": "Ventoy",
@@ -1224,7 +2474,34 @@
       "notes": null,
       "date": null,
       "projectType": "Business website",
-      "description": "Ventoy is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on."
+      "description": "Ventoy is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on.",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://ventoy.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 100,
+          "seo": 58,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "fcp": "0.9 s",
+          "lcp": "0.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "2.3 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 58,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "fcp": "0.2 s",
+          "lcp": "0.5 s",
+          "tbt": "0 ms",
+          "cls": "0.03",
+          "speedIndex": "0.6 s"
+        }
+      }
     },
     {
       "websiteName": "FreeEla",
@@ -1238,7 +2515,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "FreeEla is a business website built with a practical web stack to make the offer easier to scan across devices.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://free-ela.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 66,
+          "seo": 66,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "fcp": "2.1 s",
+          "lcp": "8.6 s",
+          "tbt": "80 ms",
+          "cls": "0.077",
+          "speedIndex": "6.2 s"
+        },
+        "desktop": {
+          "performance": 90,
+          "seo": 66,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "1.6 s",
+          "tbt": "90 ms",
+          "cls": "0",
+          "speedIndex": "1.9 s"
+        }
+      }
     },
     {
       "websiteName": "Fewcents",
@@ -1253,7 +2557,14 @@
       "projectType": "Business website",
       "description": "Fewcents is a business website built with a practical web stack to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-fewcents.jpg"
+      "screenshot": "/projects/project-ss-fewcents.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.fewcents.co/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "XNation",
@@ -1283,7 +2594,14 @@
       "projectType": "HTML/CSS",
       "description": "Client project is a frontend build built with HTML, Scss, Bootstrap to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-promo-intelligence-pro-netlify.jpg"
+      "screenshot": "/projects/project-ss-promo-intelligence-pro-netlify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://promo-intelligence-pro.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Mugnsoft",
@@ -1298,7 +2616,14 @@
       "projectType": "WordPress website",
       "description": "Mugnsoft is a wordpress website built with Wordperss, Elementor to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-mugnsoft.jpg"
+      "screenshot": "/projects/project-ss-mugnsoft.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://mugnsoft.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Polygon",
@@ -1313,7 +2638,14 @@
       "projectType": "WordPress website",
       "description": "Polygon is a wordpress website built with Wordperss, Elementor to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-polygon.jpg"
+      "screenshot": "/projects/project-ss-polygon.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://polygon.sa/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "TheFinancologist",
@@ -1327,7 +2659,34 @@
       "date": null,
       "projectType": "WordPress website",
       "description": "TheFinancologist is a wordpress website built with Wordperss, Elementor to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://thefinancologist.com",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 80,
+          "seo": 92,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "fcp": "1.7 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0.345",
+          "speedIndex": "3.8 s"
+        },
+        "desktop": {
+          "performance": 79,
+          "seo": 92,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.4 s",
+          "tbt": "30 ms",
+          "cls": "0.415",
+          "speedIndex": "1.6 s"
+        }
+      }
     },
     {
       "websiteName": "Assessment Intelligent",
@@ -1342,7 +2701,34 @@
       "projectType": "Business website",
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to make key content easier to understand and act on.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-assessment-intelligent-netlify.jpg"
+      "screenshot": "/projects/project-ss-assessment-intelligent-netlify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://assessment-intelligent.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 95,
+          "seo": 91,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "1.9 s",
+          "lcp": "1.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.7 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 91,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0.061",
+          "speedIndex": "0.7 s"
+        }
+      }
     },
     {
       "websiteName": "Dhabas",
@@ -1357,7 +2743,14 @@
       "projectType": "Business website",
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to present services clearly and convert qualified visitors.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-dhabas-netlify.jpg"
+      "screenshot": "/projects/project-ss-dhabas-netlify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://dhabas.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Kuza",
@@ -1372,7 +2765,14 @@
       "projectType": "Business website",
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to make the offer easier to scan across devices.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-kuza-app-netlify.jpg"
+      "screenshot": "/projects/project-ss-kuza-app-netlify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://kuza-app.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Mrchrissy Services",
@@ -1387,7 +2787,24 @@
       "projectType": "Business website",
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-mrchrissyservices-netlify.jpg"
+      "screenshot": "/projects/project-ss-mrchrissyservices-netlify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://mrchrissyservices.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktop": {
+          "performance": 97,
+          "seo": 100,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "1.0 s",
+          "tbt": "0 ms",
+          "cls": "0.039",
+          "speedIndex": "1.5 s"
+        }
+      }
     },
     {
       "websiteName": "Service Herd",
@@ -1430,7 +2847,14 @@
       "projectType": "Business website",
       "description": "Client project is a business website built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-tripo-netlify.jpg"
+      "screenshot": "/projects/project-ss-tripo-netlify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://tripo.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": null,
@@ -1459,7 +2883,14 @@
       "projectType": "Landing page",
       "description": "Katy Body Sculpt is a landing page built with HTML, CSS, Bootstrap to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-katy-body-sculpt.jpg"
+      "screenshot": "/projects/project-ss-katy-body-sculpt.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://katy-body.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": null,
@@ -1530,7 +2961,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "Eningo is a business website translated from Figma with Webflow to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://eningo.se/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 67,
+          "seo": 100,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "2.3 s",
+          "lcp": "7.1 s",
+          "tbt": "60 ms",
+          "cls": "0.141",
+          "speedIndex": "3.5 s"
+        },
+        "desktop": {
+          "performance": 80,
+          "seo": 100,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.7 s",
+          "lcp": "1.9 s",
+          "tbt": "20 ms",
+          "cls": "0.203",
+          "speedIndex": "1.4 s"
+        }
+      }
     },
     {
       "websiteName": "The Golden Form",
@@ -1545,7 +3003,14 @@
       "projectType": "Business website",
       "description": "The Golden Form is a business website translated from Figma with Wix to present services clearly and convert qualified visitors.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-the-golden-form.jpg"
+      "screenshot": "/projects/project-ss-the-golden-form.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.thegoldenfork.com.mt/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "The Infineights",
@@ -1576,7 +3041,34 @@
       "projectType": "WordPress website",
       "description": "DigiHub is a wordpress website translated from Figma with Wordpress to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-digihub.jpg"
+      "screenshot": "/projects/project-ss-digihub.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://digihub.li/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 96,
+          "seo": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "fcp": "1.6 s",
+          "lcp": "2.3 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.3 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.5 s",
+          "tbt": "0 ms",
+          "cls": "0.003",
+          "speedIndex": "0.4 s"
+        }
+      }
     },
     {
       "websiteName": "Cheapzy",
@@ -1592,7 +3084,14 @@
       "projectType": "WordPress website",
       "description": "Cheapzy is a wordpress website translated from Figma with Wordpress, Elementor to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-cheapzy.jpg"
+      "screenshot": "/projects/project-ss-cheapzy.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://cheapzy.net/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Magnet Social",
@@ -1609,7 +3108,24 @@
       "projectType": "WordPress website",
       "description": "Magnet Social is a wordpress website translated from Figma with Wordpress, Elementor to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Offline (Domain Expired)",
-      "screenshot": "/projects/project-ss-magnet-social.jpg"
+      "screenshot": "/projects/project-ss-magnet-social.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://magnet.social/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 86,
+          "seo": 100,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "fcp": "2.6 s",
+          "lcp": "2.6 s",
+          "tbt": "200 ms",
+          "cls": "0",
+          "speedIndex": "5.3 s"
+        },
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "GlowUpDental",
@@ -1642,7 +3158,14 @@
       "projectType": "E-commerce website",
       "description": "Showcases luxury bathroom suites, custom showers, and heating products with an intuitive navigation flow to boost customer inquiries.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-more-than-baths.jpg"
+      "screenshot": "/projects/project-ss-more-than-baths.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://morethanbaths.co.uk/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Champions Mortgage Team",
@@ -1659,7 +3182,24 @@
       "projectType": "WordPress website",
       "description": "Champions Mortgage Team is a wordpress website translated from Figma with Wordpress, Elementor to make key content easier to understand and act on.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-champions-mortgage-team.jpg"
+      "screenshot": "/projects/project-ss-champions-mortgage-team.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://championsmortgageteam.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 28,
+          "seo": 92,
+          "accessibility": 80,
+          "bestPractices": 77,
+          "fcp": "4.1 s",
+          "lcp": "30.7 s",
+          "tbt": "2,460 ms",
+          "cls": "0.003",
+          "speedIndex": "15.2 s"
+        },
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Acholyte",
@@ -1705,7 +3245,34 @@
       "notes": null,
       "date": null,
       "projectType": "Business website",
-      "description": "Client project is a business website translated from Figma with Webflow to turn the brand into a faster production-ready web presence."
+      "description": "Client project is a business website translated from Figma with Webflow to turn the brand into a faster production-ready web presence.",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://new-beea11.webflow.io/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 100,
+          "seo": 90,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "1.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.5 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 90,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "0.4 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.5 s"
+        }
+      }
     },
     {
       "websiteName": null,
@@ -1738,7 +3305,14 @@
       "projectType": "Web app interface",
       "description": "AppMint Landing Page is a web app interface built with Reactjs NextJs, TailwindCSS to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-appmint-landing-page.jpg"
+      "screenshot": "/projects/project-ss-appmint-landing-page.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://website-mint-landing-page.vercel.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "AppMint",
@@ -1755,7 +3329,14 @@
       "projectType": "Web app interface",
       "description": "AppMint is a web app interface translated from Figma with Reactjs NextJs, TailwindCSS to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-appmint.jpg"
+      "screenshot": "/projects/project-ss-appmint.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://website-mint.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Gillies Electric",
@@ -1772,7 +3353,34 @@
       "projectType": "Electrical Contractor Website",
       "description": "Full-service commercial and residential electrical contractor website built to highlight electrical services, EV charger installations, and compliance solutions for Los Angeles and Ventura Counties.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-gillieselectric.jpg"
+      "screenshot": "/projects/project-ss-gillieselectric.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://www.gillieselectric.com/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 59,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "4.3 s",
+          "lcp": "11.9 s",
+          "tbt": "90 ms",
+          "cls": "0",
+          "speedIndex": "7.6 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "0.7 s",
+          "lcp": "1.1 s",
+          "tbt": "80 ms",
+          "cls": "0.036",
+          "speedIndex": "1.0 s"
+        }
+      }
     },
     {
       "websiteName": null,
@@ -1789,7 +3397,14 @@
       "projectType": "WordPress website",
       "description": "Client project is a wordpress website translated from Figma with Wordpress, Elementor to present services clearly and convert qualified visitors.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-reyesenvironmental.jpg"
+      "screenshot": "/projects/project-ss-reyesenvironmental.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://reyesenvironmental.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "YT Solutions",
@@ -1804,7 +3419,34 @@
       "date": null,
       "projectType": "Business website",
       "description": "YT Solutions is a business website translated from Figma with html, css to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://yt-solutions.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 74,
+          "seo": 58,
+          "accessibility": 80,
+          "bestPractices": 100,
+          "fcp": "1.1 s",
+          "lcp": "6.7 s",
+          "tbt": "0 ms",
+          "cls": "0.072",
+          "speedIndex": "3.9 s"
+        },
+        "desktop": {
+          "performance": 80,
+          "seo": 58,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "fcp": "0.2 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0.248",
+          "speedIndex": "1.2 s"
+        }
+      }
     },
     {
       "websiteName": "Seshy",
@@ -1820,7 +3462,14 @@
       "projectType": "Web app interface",
       "description": "Seshy is a web app interface translated from Figma with Reactjs, Bootstrap to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-seshy.jpg"
+      "screenshot": "/projects/project-ss-seshy.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://seshy.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Episcols Admin",
@@ -1836,7 +3485,34 @@
       "projectType": "Web app interface",
       "description": "Episcols Admin is a web app interface translated from Figma with Reactjs, Bootstrap to give the client a sharper, easier-to-maintain online presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-episcols.jpg"
+      "screenshot": "/projects/project-ss-episcols.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://episcols.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 66,
+          "seo": 58,
+          "accessibility": 75,
+          "bestPractices": 100,
+          "fcp": "3.7 s",
+          "lcp": "6.7 s",
+          "tbt": "50 ms",
+          "cls": "0.002",
+          "speedIndex": "4.9 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 58,
+          "accessibility": 75,
+          "bestPractices": 100,
+          "fcp": "0.6 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.6 s"
+        }
+      }
     },
     {
       "websiteName": "Debate Box",
@@ -1852,7 +3528,34 @@
       "projectType": "Frontend build",
       "description": "Debate Box is a frontend build translated from Figma with Reactjs, Bootstrap to make the offer easier to scan across devices.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-debate-box.jpg"
+      "screenshot": "/projects/project-ss-debate-box.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://chatter-react.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 79,
+          "seo": 58,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "fcp": "0.9 s",
+          "lcp": "4.5 s",
+          "tbt": "20 ms",
+          "cls": "0.132",
+          "speedIndex": "3.0 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.033",
+          "speedIndex": "0.4 s"
+        }
+      }
     },
     {
       "websiteName": "Future Pauments Tech",
@@ -1897,7 +3600,34 @@
       "date": null,
       "projectType": "Web app interface",
       "description": "Bunny Mint is a web app interface built with Tailwind, Vuejs to give the client a sharper, easier-to-maintain online presence.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://bunny-mint.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 94,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "2.6 s",
+          "tbt": "0 ms",
+          "cls": "0.068",
+          "speedIndex": "4.0 s"
+        },
+        "desktop": {
+          "performance": 91,
+          "seo": 58,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.179",
+          "speedIndex": "1.1 s"
+        }
+      }
     },
     {
       "websiteName": "RadioLogix",
@@ -1940,7 +3670,14 @@
       "projectType": "WordPress website",
       "description": "The Royal Pin is a wordpress website built with Wordpress, Elementor to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-the-royal-pin.jpg"
+      "screenshot": "/projects/project-ss-the-royal-pin.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://theroyalpin.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Danielle Ball Fitness",
@@ -1970,7 +3707,14 @@
       "projectType": "Business website",
       "description": "Client project is a business website built with a practical web stack to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg"
+      "screenshot": "/projects/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://kargokdelivery-cqxwipnq8r.live-website.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "centaurivision",
@@ -1987,11 +3731,15 @@
       "description": "centaurivision is a wordpress website built with Wordpress, Elementor to make key content easier to understand and act on.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": [
-        "WordPress",
-        "Elementor"
-      ],
-      "screenshot": "/projects/project-ss-centaurivision.jpg"
+      "originalStack": ["WordPress", "Elementor"],
+      "screenshot": "/projects/project-ss-centaurivision.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://centaurivision.ca/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "smartavlasia",
@@ -2007,7 +3755,14 @@
       "projectType": "WordPress website",
       "description": "smartavlasia is a wordpress website built with Wordpress, Elementor to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-smartavlasia.jpg"
+      "screenshot": "/projects/project-ss-smartavlasia.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://smartavlasia.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "robertw264",
@@ -2038,7 +3793,14 @@
       "projectType": "Web app interface",
       "description": "thaivisaexpert is a web app interface built with Wordpress, Elementor to turn the brand into a faster production-ready web presence.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-thaivisaexpert.jpg"
+      "screenshot": "/projects/project-ss-thaivisaexpert.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://thaivisaexpert.com/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "https://withdmtech.com/",
@@ -2122,7 +3884,14 @@
       "projectType": "Real estate website",
       "description": "NCL Real Estate is a lead-focused real estate website built to present listings and services clearly while improving trust, usability, and inquiry conversion.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-nclrealestate.jpg"
+      "screenshot": "/projects/project-ss-nclrealestate.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://nclrealestate.com",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "ExploreAsia",
@@ -2220,7 +3989,14 @@
       "date": null,
       "projectType": "WordPress website",
       "description": "PMS is a wordpress website translated from Figma with Wordpress, Elementor to support lead generation with a cleaner user journey.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://pms-study.com/wp-admin",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "LP Video Site",
@@ -2234,7 +4010,34 @@
       "date": null,
       "projectType": "Landing page",
       "description": "LP Video Site is a landing page built with HTML, CSS, Bootstrap to ship a focused front-end experience from design to launch.",
-      "projectStatus": "Live"
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://lp-video-site.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 57,
+          "seo": 58,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "fcp": "1.1 s",
+          "lcp": "5.1 s",
+          "tbt": "0 ms",
+          "cls": "0.722",
+          "speedIndex": "2.9 s"
+        },
+        "desktop": {
+          "performance": 86,
+          "seo": 58,
+          "accessibility": 82,
+          "bestPractices": 96,
+          "fcp": "0.3 s",
+          "lcp": "1.0 s",
+          "tbt": "0 ms",
+          "cls": "0.249",
+          "speedIndex": "0.7 s"
+        }
+      }
     },
     {
       "websiteName": "dongolthedev",
@@ -2264,7 +4067,14 @@
       "projectType": "CSS developer tool",
       "description": "A React.js tool that generates fluid CSS clamp() values for scalable, viewport-responsive typography and spacing.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-clampy.jpg"
+      "screenshot": "/projects/project-ss-clampy.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://clampy.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Resumify",
@@ -2279,7 +4089,34 @@
       "projectType": "Web application",
       "description": "A Vue.js resume builder with customizable templates, live previews, progress tracking, PDF/DOCX exports, and local backup and restore.",
       "projectStatus": "Live",
-      "screenshot": "/react-projects/project-ss-resumify.png"
+      "screenshot": "/react-projects/project-ss-resumify.png",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://resumify-pro.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 98,
+          "seo": 100,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "fcp": "1.2 s",
+          "lcp": "1.2 s",
+          "tbt": "10 ms",
+          "cls": "0",
+          "speedIndex": "4.0 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "fcp": "0.2 s",
+          "lcp": "0.3 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.4 s"
+        }
+      }
     },
     {
       "websiteName": "Brickify",
@@ -2294,7 +4131,14 @@
       "projectType": "Developer tool",
       "description": "A React.js developer tool that converts HTML, CSS, and JavaScript into Bricks Builder JSON, supporting modern Flexbox and CSS Grid layouts and pseudo-classes.",
       "projectStatus": "Live",
-      "screenshot": "/projects/project-ss-brickify.jpg"
+      "screenshot": "/projects/project-ss-brickify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://brickify.netlify.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     },
     {
       "websiteName": "Mockify",
@@ -2309,7 +4153,14 @@
       "projectType": "Developer tool",
       "description": "Website mockup generator that captures desktop, tablet, and mobile screenshots onto a single canvas with customizable frames and transparent export.",
       "projectStatus": "Live",
-      "screenshot": "/react-projects/project-ss-mockify.jpg"
+      "screenshot": "/react-projects/project-ss-mockify.jpg",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://mockify-alpha.vercel.app/",
+        "measuredAt": "2026-11-16",
+        "mobileError": "PageSpeed Insights could not generate a mobile report.",
+        "desktopError": "PageSpeed Insights could not generate a desktop report."
+      }
     }
   ]
 }

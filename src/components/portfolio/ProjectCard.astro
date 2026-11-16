@@ -165,6 +165,9 @@ const details = Object.fromEntries(
       <p>{description}</p>
       <ValueTree value={details} />
       {p.pageSpeed && <PageSpeedReport report={p.pageSpeed} />}
+      {p.pageSpeedAdditional?.map((report) => (
+        <PageSpeedReport report={report} />
+      ))}
       <div class="actions">
         {href && (
           <a
