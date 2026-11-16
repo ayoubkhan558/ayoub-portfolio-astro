@@ -2,7 +2,10 @@
   "sourceFile": "C:\\Users\\NCS\\Downloads\\Ayoub Projects.xlsx",
   "sheet": "Sheet1",
   "projectCount": 143,
-  "excludedRows": [42, 137],
+  "excludedRows": [
+    42,
+    137
+  ],
   "projects": [
     {
       "websiteName": "Xgrid",
@@ -21,19 +24,29 @@
       "screenshot": "/projects/project-ss-xgrid.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.xgrid.co/",
+        "testedUrl": "https://xgrid.co",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
-          "performance": 89,
+          "performance": 86,
           "seo": 100,
           "accessibility": 80,
-          "bestPractices": 92,
-          "fcp": "0.4 s",
-          "lcp": "1.3 s",
-          "tbt": "150 ms",
+          "bestPractices": 88,
+          "fcp": "0.6 s",
+          "lcp": "1.7 s",
+          "tbt": "120 ms",
           "cls": "0.001",
-          "speedIndex": "2.3 s"
+          "speedIndex": "2.5 s"
+        },
+        "mobile": {
+          "performance": 54,
+          "seo": 100,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "fcp": "5.7 s",
+          "lcp": "5.7 s",
+          "tbt": "280 ms",
+          "cls": "0",
+          "speedIndex": "11.7 s"
         }
       }
     },
@@ -54,20 +67,30 @@
       "screenshot": "/projects/project-ss-alkira.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.alkira.com/",
+        "testedUrl": "https://alkira.com",
         "measuredAt": "2026-11-16",
         "mobile": {
-          "performance": 54,
+          "performance": 22,
           "seo": 85,
           "accessibility": 90,
           "bestPractices": 73,
-          "fcp": "3.2 s",
-          "lcp": "25.8 s",
-          "tbt": "330 ms",
-          "cls": "0",
-          "speedIndex": "8.4 s"
+          "fcp": "3.3 s",
+          "lcp": "29.6 s",
+          "tbt": "1,660 ms",
+          "cls": "0.224",
+          "speedIndex": "12.4 s"
         },
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "desktop": {
+          "performance": 57,
+          "seo": 85,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "fcp": "0.8 s",
+          "lcp": "1.2 s",
+          "tbt": "990 ms",
+          "cls": "0.107",
+          "speedIndex": "3.2 s"
+        }
       }
     },
     {
@@ -87,10 +110,30 @@
       "screenshot": "/projects/project-ss-chkk.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.chkk.io/",
+        "testedUrl": "https://chkk.io",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 41,
+          "seo": 92,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "fcp": "4.5 s",
+          "lcp": "4.5 s",
+          "tbt": "920 ms",
+          "cls": "0.175",
+          "speedIndex": "6.0 s"
+        },
+        "desktop": {
+          "performance": 68,
+          "seo": 92,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "fcp": "0.6 s",
+          "lcp": "1.3 s",
+          "tbt": "610 ms",
+          "cls": "0.116",
+          "speedIndex": "1.1 s"
+        }
       }
     },
     {
@@ -151,10 +194,30 @@
       "screenshot": "/projects/project-ss-pagano-law.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://paganolaw.net/",
+        "testedUrl": "https://paganolaw.net",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 43,
+          "seo": 100,
+          "accessibility": 84,
+          "bestPractices": 92,
+          "fcp": "7.3 s",
+          "lcp": "13.7 s",
+          "tbt": "580 ms",
+          "cls": "0.01",
+          "speedIndex": "7.3 s"
+        },
+        "desktop": {
+          "performance": 77,
+          "seo": 100,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "fcp": "1.3 s",
+          "lcp": "2.4 s",
+          "tbt": "150 ms",
+          "cls": "0.02",
+          "speedIndex": "2.2 s"
+        }
       }
     },
     {
@@ -173,40 +236,31 @@
       "screenshot": "/projects/project-ss-king-sr-real-estate-rk.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.kingsre.ae/",
+        "testedUrl": "https://kingsre.ae",
         "measuredAt": "2026-11-16",
         "mobile": {
-          "performance": 76,
+          "performance": 80,
           "seo": 100,
           "accessibility": 87,
           "bestPractices": 100,
-          "fcp": "2.6 s",
-          "lcp": "4.1 s",
+          "fcp": "1.8 s",
+          "lcp": "3.8 s",
           "tbt": "0 ms",
-          "cls": "0.004",
-          "speedIndex": "7.7 s"
+          "cls": "0.001",
+          "speedIndex": "8.0 s"
         },
         "desktop": {
           "performance": 90,
           "seo": 100,
           "accessibility": 91,
-          "bestPractices": 100,
-          "fcp": "0.7 s",
-          "lcp": "1.1 s",
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "0.9 s",
           "tbt": "0 ms",
           "cls": "0.008",
-          "speedIndex": "3.1 s"
+          "speedIndex": "4.0 s"
         }
-      },
-      "pageSpeedAdditional": [
-        {
-          "source": "Google PageSpeed Insights",
-          "testedUrl": "https://consulting-realty.com/kingsre",
-          "measuredAt": "2026-11-16",
-          "mobileError": "PageSpeed Insights could not generate a mobile report.",
-          "desktopError": "PageSpeed Insights could not generate a desktop report."
-        }
-      ]
+      }
     },
     {
       "websiteName": "Edinburghpt Academy",
@@ -223,10 +277,30 @@
       "projectStatus": "Live",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.edinburghptacademy.com/",
+        "testedUrl": "https://edinburghptacademy.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 67,
+          "seo": 100,
+          "accessibility": 96,
+          "bestPractices": 96,
+          "fcp": "3.3 s",
+          "lcp": "6.7 s",
+          "tbt": "30 ms",
+          "cls": "0",
+          "speedIndex": "5.1 s"
+        },
+        "desktop": {
+          "performance": 94,
+          "seo": 100,
+          "accessibility": 96,
+          "bestPractices": 96,
+          "fcp": "0.6 s",
+          "lcp": "1.5 s",
+          "tbt": "110 ms",
+          "cls": "0.02",
+          "speedIndex": "0.9 s"
+        }
       }
     },
     {
@@ -245,20 +319,31 @@
       "screenshot": "/projects/project-ss-weinberger-aesthetics.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://weinberger-aesthetics.de/",
+        "testedUrl": "https://weinberger-aesthetics.de",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
-      },
-      "pageSpeedAdditional": [
-        {
-          "source": "Google PageSpeed Insights",
-          "testedUrl": "https://p668994.webspaceconfig.de/weinberger-aesthetics-wp/wp-admin/",
-          "measuredAt": "2026-11-16",
-          "mobileError": "PageSpeed Insights could not generate a mobile report.",
-          "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 75,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "fcp": "1.8 s",
+          "lcp": "4.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "8.2 s"
+        },
+        "desktop": {
+          "performance": 91,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "3.1 s"
         }
-      ]
+      }
     },
     {
       "websiteName": "GlowCore",
@@ -276,10 +361,30 @@
       "screenshot": "/projects/project-ss-glowcore.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://glowcore.com.pk/",
+        "testedUrl": "https://glowcore.com.pk",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 62,
+          "seo": 92,
+          "accessibility": 55,
+          "bestPractices": 73,
+          "fcp": "2.1 s",
+          "lcp": "11.3 s",
+          "tbt": "30 ms",
+          "cls": "0.105",
+          "speedIndex": "8.9 s"
+        },
+        "desktop": {
+          "performance": 70,
+          "seo": 92,
+          "accessibility": 55,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "2.0 s",
+          "tbt": "0 ms",
+          "cls": "0.305",
+          "speedIndex": "2.4 s"
+        }
       }
     },
     {
@@ -338,13 +443,36 @@
       "description": "Automates Reddit lead generation, keyword monitoring, and AI-powered reply engagement for brand visibility and sales.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-reppit.jpg",
-      "originalStack": ["WordPress", "Bricks Builder"],
+      "originalStack": [
+        "WordPress",
+        "Bricks Builder"
+      ],
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://reppit.ai/",
+        "testedUrl": "https://reppit.ai",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 96,
+          "seo": 100,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "fcp": "0.9 s",
+          "lcp": "2.6 s",
+          "tbt": "90 ms",
+          "cls": "0.033",
+          "speedIndex": "2.7 s"
+        },
+        "desktop": {
+          "performance": 98,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "1.0 s",
+          "tbt": "30 ms",
+          "cls": "0.004",
+          "speedIndex": "1.0 s"
+        }
       }
     },
     {
@@ -363,10 +491,30 @@
       "screenshot": "/projects/project-ss-price-bulk-edit.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://bulk-edit.com/",
+        "testedUrl": "https://bulk-edit.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 76,
+          "seo": 92,
+          "accessibility": 91,
+          "bestPractices": 69,
+          "fcp": "1.4 s",
+          "lcp": "1.4 s",
+          "tbt": "550 ms",
+          "cls": "0.001",
+          "speedIndex": "11.7 s"
+        },
+        "desktop": {
+          "performance": 84,
+          "seo": 92,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "0.5 s",
+          "tbt": "200 ms",
+          "cls": "0.001",
+          "speedIndex": "4.9 s"
+        }
       }
     },
     {
@@ -385,10 +533,30 @@
       "screenshot": "/projects/project-ss-shininghorizon.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://shininghorizon.com/",
+        "testedUrl": "https://shininghorizon.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 52,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "fcp": "4.4 s",
+          "lcp": "7.0 s",
+          "tbt": "420 ms",
+          "cls": "0.036",
+          "speedIndex": "6.5 s"
+        },
+        "desktop": {
+          "performance": 17,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 92,
+          "fcp": "3.8 s",
+          "lcp": "3.8 s",
+          "tbt": "640 ms",
+          "cls": "0.381",
+          "speedIndex": "7.0 s"
+        }
       }
     },
     {
@@ -452,10 +620,30 @@
       "screenshot": "/projects/project-ss-shoppable.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://shoppable-video.com/",
+        "testedUrl": "https://shoppable-video.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 75,
+          "seo": 58,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "fcp": "1.9 s",
+          "lcp": "5.3 s",
+          "tbt": "100 ms",
+          "cls": "0.115",
+          "speedIndex": "2.6 s"
+        },
+        "desktop": {
+          "performance": 94,
+          "seo": 58,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "fcp": "0.7 s",
+          "lcp": "1.5 s",
+          "tbt": "30 ms",
+          "cls": "0.052",
+          "speedIndex": "1.1 s"
+        }
       }
     },
     {
@@ -474,19 +662,29 @@
       "screenshot": "/projects/project-ss-301-redirect.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://301-redirect.app/",
+        "testedUrl": "https://301-redirect.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
-          "performance": 96,
+          "performance": 82,
           "seo": 92,
           "accessibility": 94,
           "bestPractices": 73,
           "fcp": "0.5 s",
           "lcp": "0.5 s",
-          "tbt": "60 ms",
-          "cls": "0.003",
-          "speedIndex": "2.1 s"
+          "tbt": "240 ms",
+          "cls": "0.002",
+          "speedIndex": "5.2 s"
+        },
+        "mobile": {
+          "performance": 82,
+          "seo": 92,
+          "accessibility": 94,
+          "bestPractices": 69,
+          "fcp": "1.2 s",
+          "lcp": "1.2 s",
+          "tbt": "360 ms",
+          "cls": "0.002",
+          "speedIndex": "12.6 s"
         }
       }
     },
@@ -506,10 +704,30 @@
       "screenshot": "/projects/project-ss-theme-scheduler.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://theme-scheduler.com/",
+        "testedUrl": "https://theme-scheduler.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 77,
+          "seo": 100,
+          "accessibility": 91,
+          "bestPractices": 77,
+          "fcp": "1.9 s",
+          "lcp": "4.1 s",
+          "tbt": "220 ms",
+          "cls": "0.055",
+          "speedIndex": "5.2 s"
+        },
+        "desktop": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "0.8 s",
+          "tbt": "250 ms",
+          "cls": "0.01",
+          "speedIndex": "1.7 s"
+        }
       }
     },
     {
@@ -528,10 +746,30 @@
       "screenshot": "/projects/project-ss-pin-it.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://pin-auto.com/",
+        "testedUrl": "https://pin-auto.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 66,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 73,
+          "fcp": "1.4 s",
+          "lcp": "1.5 s",
+          "tbt": "1,210 ms",
+          "cls": "0.011",
+          "speedIndex": "11.6 s"
+        },
+        "desktop": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 89,
+          "bestPractices": 73,
+          "fcp": "0.3 s",
+          "lcp": "0.5 s",
+          "tbt": "150 ms",
+          "cls": "0.003",
+          "speedIndex": "4.9 s"
+        }
       }
     },
     {
@@ -550,10 +788,30 @@
       "screenshot": "/projects/project-ss-webp-optimzer.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://webp-image.com/",
+        "testedUrl": "https://webp-image.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 57,
+          "seo": 100,
+          "accessibility": 94,
+          "bestPractices": 77,
+          "fcp": "1.7 s",
+          "lcp": "10.1 s",
+          "tbt": "320 ms",
+          "cls": "0.001",
+          "speedIndex": "14.4 s"
+        },
+        "desktop": {
+          "performance": 74,
+          "seo": 100,
+          "accessibility": 94,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "0.7 s",
+          "tbt": "370 ms",
+          "cls": "0.001",
+          "speedIndex": "5.8 s"
+        }
       }
     },
     {
@@ -572,10 +830,30 @@
       "screenshot": "/projects/project-ss-serpio.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://serpio.app/",
+        "testedUrl": "https://serpio.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "2.0 s",
+          "lcp": "3.8 s",
+          "tbt": "0 ms",
+          "cls": "0.002",
+          "speedIndex": "2.1 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 100,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "fcp": "0.6 s",
+          "lcp": "0.9 s",
+          "tbt": "0 ms",
+          "cls": "0.002",
+          "speedIndex": "0.8 s"
+        }
       }
     },
     {
@@ -595,10 +873,30 @@
       "screenshot": "/projects/project-ss-carptrac.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.carptrac.com.fj/",
+        "testedUrl": "https://carptrac.com.fj",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 57,
+          "seo": 92,
+          "accessibility": 83,
+          "bestPractices": 100,
+          "fcp": "1.7 s",
+          "lcp": "11.7 s",
+          "tbt": "510 ms",
+          "cls": "0.023",
+          "speedIndex": "5.3 s"
+        },
+        "desktop": {
+          "performance": 79,
+          "seo": 92,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "3.0 s",
+          "tbt": "40 ms",
+          "cls": "0.034",
+          "speedIndex": "2.2 s"
+        }
       }
     },
     {
@@ -618,10 +916,30 @@
       "screenshot": "/projects/project-ss-markedine.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.markedine.com/",
+        "testedUrl": "https://markedine.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 32,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "1.1 s",
+          "lcp": "7.9 s",
+          "tbt": "610 ms",
+          "cls": "0.993",
+          "speedIndex": "5.0 s"
+        },
+        "desktop": {
+          "performance": 68,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "1.9 s",
+          "tbt": "400 ms",
+          "cls": "0.132",
+          "speedIndex": "1.1 s"
+        }
       }
     },
     {
@@ -683,10 +1001,30 @@
       "screenshot": "/projects/project-ss-sku-auto.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://sku-auto.com/",
+        "testedUrl": "https://sku-auto.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 86,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 69,
+          "fcp": "1.2 s",
+          "lcp": "1.2 s",
+          "tbt": "210 ms",
+          "cls": "0.059",
+          "speedIndex": "12.4 s"
+        },
+        "desktop": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 69,
+          "fcp": "0.3 s",
+          "lcp": "0.3 s",
+          "tbt": "150 ms",
+          "cls": "0.001",
+          "speedIndex": "5.0 s"
+        }
       }
     },
     {
@@ -704,23 +1042,36 @@
       "description": "Episcols is a wordpress website translated from Figma with Wordpress, Elementor to present services clearly and convert qualified visitors.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": ["WordPress", "Elementor"],
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
       "screenshot": "/projects/project-ss-episcols.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://epicsols.com/",
+        "testedUrl": "https://epicsols.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
-          "performance": 99,
+          "performance": 94,
           "seo": 77,
           "accessibility": 88,
           "bestPractices": 100,
           "fcp": "0.5 s",
           "lcp": "0.8 s",
-          "tbt": "0 ms",
+          "tbt": "10 ms",
           "cls": "0",
-          "speedIndex": "1.2 s"
+          "speedIndex": "2.4 s"
+        },
+        "mobile": {
+          "performance": 93,
+          "seo": 77,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "2.1 s",
+          "lcp": "2.9 s",
+          "tbt": "0 ms",
+          "cls": "0.004",
+          "speedIndex": "2.7 s"
         }
       }
     },
@@ -844,10 +1195,30 @@
       "screenshot": "/projects/project-ss-rebill.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://rebill.shop/",
+        "testedUrl": "https://rebill.shop",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 80,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 73,
+          "fcp": "1.8 s",
+          "lcp": "1.8 s",
+          "tbt": "390 ms",
+          "cls": "0",
+          "speedIndex": "9.9 s"
+        },
+        "desktop": {
+          "performance": 72,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "0.5 s",
+          "tbt": "430 ms",
+          "cls": "0",
+          "speedIndex": "3.8 s"
+        }
       }
     },
     {
@@ -865,13 +1236,7 @@
       "description": "Waleed Portfolio is a wordpress website translated from Figma with Bricks Page Builder to present services clearly and convert qualified visitors.",
       "projectStatus": "Offline (Domain Expired)",
       "screenshot": "/projects/project-ss-waleed-portfolio.jpg",
-      "pageSpeed": {
-        "source": "Google PageSpeed Insights",
-        "testedUrl": "https://serveekay.com/",
-        "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
-      }
+      "pageSpeed": {}
     },
     {
       "websiteName": "LWS Academy",
@@ -887,14 +1252,37 @@
       "description": "LWS Academy is an education website built with Wordperss, Elementor, TutorLMS to improve trust, browsing flow, and mobile readability.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": ["WordPress", "Elementor"],
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
       "screenshot": "/projects/project-ss-lws-academy.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://lws.academy/",
+        "testedUrl": "https://lws.academy",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 62,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "4.9 s",
+          "lcp": "7.2 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "5.8 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.6 s",
+          "tbt": "50 ms",
+          "cls": "0.001",
+          "speedIndex": "0.6 s"
+        }
       }
     },
     {
@@ -958,10 +1346,30 @@
       "screenshot": "/projects/project-ss-naseeha.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://naseeha.surge.sh/",
+        "testedUrl": "https://naseeha.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 59,
+          "seo": 58,
+          "accessibility": 83,
+          "bestPractices": 69,
+          "fcp": "7.0 s",
+          "lcp": "7.0 s",
+          "tbt": "30 ms",
+          "cls": "0",
+          "speedIndex": "8.3 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 69,
+          "fcp": "0.5 s",
+          "lcp": "0.5 s",
+          "tbt": "40 ms",
+          "cls": "0.014",
+          "speedIndex": "1.4 s"
+        }
       }
     },
     {
@@ -981,14 +1389,37 @@
       "description": "Sun Shield Insurance is a wordpress website translated from Figma with Wordperss, Elementor to support lead generation with a cleaner user journey.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": ["WordPress", "Elementor"],
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
       "screenshot": "/projects/project-ss-sun-shield-insurance.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://sunshieldinsurance.com/",
+        "testedUrl": "https://sunshieldinsurance.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 68,
+          "seo": 92,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "fcp": "2.3 s",
+          "lcp": "7.1 s",
+          "tbt": "260 ms",
+          "cls": "0",
+          "speedIndex": "3.0 s"
+        },
+        "desktop": {
+          "performance": 96,
+          "seo": 92,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "fcp": "0.6 s",
+          "lcp": "1.4 s",
+          "tbt": "30 ms",
+          "cls": "0",
+          "speedIndex": "0.6 s"
+        }
       }
     },
     {
@@ -1175,10 +1606,30 @@
       "projectStatus": "Live",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://tembekasua-react.surge.sh/",
+        "testedUrl": "https://tembekasua-react.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 54,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "2.6 s",
+          "lcp": "7.2 s",
+          "tbt": "160 ms",
+          "cls": "0.289",
+          "speedIndex": "4.2 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "0.6 s",
+          "lcp": "1.0 s",
+          "tbt": "0 ms",
+          "cls": "0.068",
+          "speedIndex": "1.2 s"
+        }
       }
     },
     {
@@ -1197,10 +1648,30 @@
       "screenshot": "/projects/project-ss-mkz-mart.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://mkzmart.com/",
+        "testedUrl": "https://mkzmart.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 63,
+          "seo": 100,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "2.0 s",
+          "lcp": "7.3 s",
+          "tbt": "140 ms",
+          "cls": "0",
+          "speedIndex": "12.3 s"
+        },
+        "desktop": {
+          "performance": 84,
+          "seo": 92,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0.003",
+          "speedIndex": "4.9 s"
+        }
       }
     },
     {
@@ -1219,19 +1690,29 @@
       "screenshot": "/projects/project-ss-studyly.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://studyly.com/",
+        "testedUrl": "https://studyly.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
-          "performance": 96,
+          "performance": 95,
           "seo": 92,
           "accessibility": 86,
           "bestPractices": 100,
           "fcp": "0.4 s",
           "lcp": "0.7 s",
           "tbt": "0 ms",
-          "cls": "0.043",
-          "speedIndex": "1.9 s"
+          "cls": "0.013",
+          "speedIndex": "2.3 s"
+        },
+        "mobile": {
+          "performance": 90,
+          "seo": 92,
+          "accessibility": 81,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "3.0 s",
+          "tbt": "0 ms",
+          "cls": "0.076",
+          "speedIndex": "4.4 s"
         }
       }
     },
@@ -1292,10 +1773,30 @@
       "screenshot": "/projects/project-ss-strainproxies-front.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://strainproxies.surge.sh/",
+        "testedUrl": "https://strainproxies.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 92,
+          "seo": 58,
+          "accessibility": 75,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "2.5 s",
+          "tbt": "0 ms",
+          "cls": "0.1",
+          "speedIndex": "4.2 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 58,
+          "accessibility": 75,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.101",
+          "speedIndex": "0.9 s"
+        }
       }
     },
     {
@@ -1436,19 +1937,29 @@
       "projectStatus": "Live",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://pure-for-you.surge.sh/",
+        "testedUrl": "https://pure-for-you.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
-          "performance": 68,
+          "performance": 66,
           "seo": 58,
           "accessibility": 90,
           "bestPractices": 96,
           "fcp": "0.5 s",
-          "lcp": "3.8 s",
+          "lcp": "4.0 s",
           "tbt": "0 ms",
           "cls": "0.212",
-          "speedIndex": "1.4 s"
+          "speedIndex": "1.8 s"
+        },
+        "mobile": {
+          "performance": 62,
+          "seo": 58,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "fcp": "2.0 s",
+          "lcp": "27.7 s",
+          "tbt": "180 ms",
+          "cls": "0",
+          "speedIndex": "9.0 s"
         }
       }
     },
@@ -1550,10 +2061,30 @@
       "screenshot": "/projects/project-ss-monoami-landing.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://monoami.surge.sh/",
+        "testedUrl": "https://monoami.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 71,
+          "seo": 66,
+          "accessibility": 72,
+          "bestPractices": 96,
+          "fcp": "2.0 s",
+          "lcp": "6.8 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "5.2 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 66,
+          "accessibility": 76,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "0.8 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "0.8 s"
+        }
       }
     },
     {
@@ -1818,10 +2349,30 @@
       "screenshot": "/projects/project-ss-youtube-convert.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://yt-converter-front.surge.sh/",
+        "testedUrl": "https://yt-converter-front.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 95,
+          "seo": 58,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "1.8 s",
+          "lcp": "2.8 s",
+          "tbt": "10 ms",
+          "cls": "0",
+          "speedIndex": "2.2 s"
+        },
+        "desktop": {
+          "performance": 99,
+          "seo": 58,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.0 s"
+        }
       }
     },
     {
@@ -2044,10 +2595,10 @@
       "screenshot": "/projects/project-ss-kodak-connect.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://fv-kodak-connect.pages.dev/",
+        "testedUrl": "https://fv-kodak-connect.pages.dev",
         "measuredAt": "2026-11-16",
         "mobile": {
-          "performance": 98,
+          "performance": 96,
           "seo": 83,
           "accessibility": 94,
           "bestPractices": 96,
@@ -2055,9 +2606,19 @@
           "lcp": "1.1 s",
           "tbt": "0 ms",
           "cls": "0",
-          "speedIndex": "3.8 s"
+          "speedIndex": "5.2 s"
         },
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "desktop": {
+          "performance": 99,
+          "seo": 83,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.3 s",
+          "lcp": "1.0 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.5 s"
+        }
       }
     },
     {
@@ -2076,10 +2637,30 @@
       "screenshot": "/projects/project-ss-portoro.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://portoro.pages.dev/",
+        "testedUrl": "https://portoro.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 41,
+          "seo": 92,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "1.7 s",
+          "lcp": "27.0 s",
+          "tbt": "1,190 ms",
+          "cls": "0",
+          "speedIndex": "14.6 s"
+        },
+        "desktop": {
+          "performance": 44,
+          "seo": 92,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "4.3 s",
+          "tbt": "760 ms",
+          "cls": "0.03",
+          "speedIndex": "3.6 s"
+        }
       }
     },
     {
@@ -2098,10 +2679,30 @@
       "screenshot": "/projects/project-ss-serviceplace.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://review-website.pages.dev/",
+        "testedUrl": "https://review-website.pages.dev",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 99,
+          "seo": 83,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "1.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "2.5 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 83,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "0.4 s",
+          "tbt": "0 ms",
+          "cls": "0.022",
+          "speedIndex": "0.4 s"
+        }
       }
     },
     {
@@ -2161,9 +2762,8 @@
       "screenshot": "/projects/project-ss-bitss.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://fv-bitss.pages.dev/",
+        "testedUrl": "https://fv-bitss.pages.dev",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
           "performance": 99,
           "seo": 83,
@@ -2173,7 +2773,18 @@
           "lcp": "0.7 s",
           "tbt": "0 ms",
           "cls": "0",
-          "speedIndex": "1.0 s"
+          "speedIndex": "0.8 s"
+        },
+        "mobile": {
+          "performance": 74,
+          "seo": 83,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "fcp": "1.9 s",
+          "lcp": "5.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "4.6 s"
         }
       }
     },
@@ -2560,10 +3171,30 @@
       "screenshot": "/projects/project-ss-fewcents.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.fewcents.co/",
+        "testedUrl": "https://fewcents.co",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 42,
+          "seo": 100,
+          "accessibility": 88,
+          "bestPractices": 69,
+          "fcp": "2.7 s",
+          "lcp": "4.6 s",
+          "tbt": "2,570 ms",
+          "cls": "0.058",
+          "speedIndex": "8.1 s"
+        },
+        "desktop": {
+          "performance": 57,
+          "seo": 100,
+          "accessibility": 98,
+          "bestPractices": 69,
+          "fcp": "0.7 s",
+          "lcp": "1.2 s",
+          "tbt": "1,510 ms",
+          "cls": "0.076",
+          "speedIndex": "3.6 s"
+        }
       }
     },
     {
@@ -2597,10 +3228,30 @@
       "screenshot": "/projects/project-ss-promo-intelligence-pro-netlify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://promo-intelligence-pro.netlify.app/",
+        "testedUrl": "https://promo-intelligence-pro.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 91,
+          "seo": 100,
+          "accessibility": 83,
+          "bestPractices": 92,
+          "fcp": "1.6 s",
+          "lcp": "3.1 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "4.1 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 100,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "0.7 s",
+          "tbt": "0 ms",
+          "cls": "0.017",
+          "speedIndex": "1.8 s"
+        }
       }
     },
     {
@@ -2619,10 +3270,30 @@
       "screenshot": "/projects/project-ss-mugnsoft.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://mugnsoft.com/",
+        "testedUrl": "https://mugnsoft.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 95,
+          "seo": 85,
+          "accessibility": 93,
+          "bestPractices": 92,
+          "fcp": "1.2 s",
+          "lcp": "2.6 s",
+          "tbt": "60 ms",
+          "cls": "0.004",
+          "speedIndex": "4.3 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 85,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "fcp": "0.3 s",
+          "lcp": "0.7 s",
+          "tbt": "120 ms",
+          "cls": "0.007",
+          "speedIndex": "1.5 s"
+        }
       }
     },
     {
@@ -2641,10 +3312,30 @@
       "screenshot": "/projects/project-ss-polygon.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://polygon.sa/",
+        "testedUrl": "https://polygon.sa",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 60,
+          "seo": 85,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "fcp": "4.5 s",
+          "lcp": "14.4 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "6.8 s"
+        },
+        "desktop": {
+          "performance": 70,
+          "seo": 85,
+          "accessibility": 95,
+          "bestPractices": 96,
+          "fcp": "1.0 s",
+          "lcp": "3.4 s",
+          "tbt": "90 ms",
+          "cls": "0.001",
+          "speedIndex": "4.6 s"
+        }
       }
     },
     {
@@ -2746,10 +3437,30 @@
       "screenshot": "/projects/project-ss-dhabas-netlify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://dhabas.netlify.app/",
+        "testedUrl": "https://dhabas.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 67,
+          "seo": 91,
+          "accessibility": 78,
+          "bestPractices": 50,
+          "fcp": "2.3 s",
+          "lcp": "6.9 s",
+          "tbt": "150 ms",
+          "cls": "0",
+          "speedIndex": "6.5 s"
+        },
+        "desktop": {
+          "performance": 74,
+          "seo": 91,
+          "accessibility": 75,
+          "bestPractices": 50,
+          "fcp": "1.3 s",
+          "lcp": "1.3 s",
+          "tbt": "290 ms",
+          "cls": "0",
+          "speedIndex": "3.0 s"
+        }
       }
     },
     {
@@ -2768,10 +3479,30 @@
       "screenshot": "/projects/project-ss-kuza-app-netlify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://kuza-app.netlify.app/",
+        "testedUrl": "https://kuza-app.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 70,
+          "seo": 91,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "7.6 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "6.0 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 91,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "1.3 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.0 s"
+        }
       }
     },
     {
@@ -2790,19 +3521,29 @@
       "screenshot": "/projects/project-ss-mrchrissyservices-netlify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://mrchrissyservices.netlify.app/",
+        "testedUrl": "https://mrchrissyservices.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
         "desktop": {
-          "performance": 97,
+          "performance": 98,
           "seo": 100,
           "accessibility": 83,
           "bestPractices": 96,
-          "fcp": "0.5 s",
-          "lcp": "1.0 s",
+          "fcp": "0.4 s",
+          "lcp": "0.9 s",
           "tbt": "0 ms",
-          "cls": "0.039",
-          "speedIndex": "1.5 s"
+          "cls": "0.004",
+          "speedIndex": "1.2 s"
+        },
+        "mobile": {
+          "performance": 85,
+          "seo": 100,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "fcp": "1.5 s",
+          "lcp": "4.1 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "3.3 s"
         }
       }
     },
@@ -2850,10 +3591,30 @@
       "screenshot": "/projects/project-ss-tripo-netlify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://tripo.netlify.app/",
+        "testedUrl": "https://tripo.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 69,
+          "seo": 91,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "fcp": "1.9 s",
+          "lcp": "8.9 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "5.4 s"
+        },
+        "desktop": {
+          "performance": 85,
+          "seo": 91,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "1.6 s",
+          "tbt": "0 ms",
+          "cls": "0.186",
+          "speedIndex": "1.0 s"
+        }
       }
     },
     {
@@ -2886,10 +3647,30 @@
       "screenshot": "/projects/project-ss-katy-body-sculpt.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://katy-body.netlify.app/",
+        "testedUrl": "https://katy-body.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 67,
+          "seo": 82,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "fcp": "2.0 s",
+          "lcp": "8.7 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "6.9 s"
+        },
+        "desktop": {
+          "performance": 97,
+          "seo": 82,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "1.0 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.4 s"
+        }
       }
     },
     {
@@ -3006,10 +3787,30 @@
       "screenshot": "/projects/project-ss-the-golden-form.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://www.thegoldenfork.com.mt/",
+        "testedUrl": "https://thegoldenfork.mt",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 37,
+          "seo": 100,
+          "accessibility": 80,
+          "bestPractices": 77,
+          "fcp": "2.3 s",
+          "lcp": "7.1 s",
+          "tbt": "1,610 ms",
+          "cls": "0",
+          "speedIndex": "18.5 s"
+        },
+        "desktop": {
+          "performance": 59,
+          "seo": 100,
+          "accessibility": 87,
+          "bestPractices": 77,
+          "fcp": "0.6 s",
+          "lcp": "1.0 s",
+          "tbt": "1,490 ms",
+          "cls": "0.002",
+          "speedIndex": "5.5 s"
+        }
       }
     },
     {
@@ -3087,10 +3888,30 @@
       "screenshot": "/projects/project-ss-cheapzy.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://cheapzy.net/",
+        "testedUrl": "https://cheapzy.net",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 61,
+          "seo": 85,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "fcp": "3.2 s",
+          "lcp": "13.4 s",
+          "tbt": "30 ms",
+          "cls": "0",
+          "speedIndex": "8.4 s"
+        },
+        "desktop": {
+          "performance": 87,
+          "seo": 85,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "fcp": "0.9 s",
+          "lcp": "2.2 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "1.3 s"
+        }
       }
     },
     {
@@ -3111,20 +3932,30 @@
       "screenshot": "/projects/project-ss-magnet-social.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://magnet.social/",
+        "testedUrl": "https://magnet.social",
         "measuredAt": "2026-11-16",
         "mobile": {
-          "performance": 86,
+          "performance": 87,
           "seo": 100,
           "accessibility": 94,
           "bestPractices": 96,
           "fcp": "2.6 s",
           "lcp": "2.6 s",
-          "tbt": "200 ms",
+          "tbt": "140 ms",
           "cls": "0",
-          "speedIndex": "5.3 s"
+          "speedIndex": "5.7 s"
         },
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "desktop": {
+          "performance": 94,
+          "seo": 100,
+          "accessibility": 94,
+          "bestPractices": 96,
+          "fcp": "0.7 s",
+          "lcp": "0.7 s",
+          "tbt": "150 ms",
+          "cls": "0",
+          "speedIndex": "1.6 s"
+        }
       }
     },
     {
@@ -3161,10 +3992,30 @@
       "screenshot": "/projects/project-ss-more-than-baths.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://morethanbaths.co.uk/",
+        "testedUrl": "https://morethanbaths.co.uk",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 65,
+          "seo": 85,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "fcp": "2.0 s",
+          "lcp": "17.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "9.0 s"
+        },
+        "desktop": {
+          "performance": 74,
+          "seo": 77,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "3.2 s",
+          "tbt": "0 ms",
+          "cls": "0.005",
+          "speedIndex": "3.3 s"
+        }
       }
     },
     {
@@ -3185,20 +4036,30 @@
       "screenshot": "/projects/project-ss-champions-mortgage-team.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://championsmortgageteam.com/",
+        "testedUrl": "https://championsmortgageteam.com",
         "measuredAt": "2026-11-16",
         "mobile": {
-          "performance": 28,
+          "performance": 33,
           "seo": 92,
           "accessibility": 80,
           "bestPractices": 77,
           "fcp": "4.1 s",
-          "lcp": "30.7 s",
-          "tbt": "2,460 ms",
+          "lcp": "39.1 s",
+          "tbt": "1,290 ms",
           "cls": "0.003",
-          "speedIndex": "15.2 s"
+          "speedIndex": "10.6 s"
         },
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "desktop": {
+          "performance": 39,
+          "seo": 92,
+          "accessibility": 80,
+          "bestPractices": 77,
+          "fcp": "0.9 s",
+          "lcp": "7.8 s",
+          "tbt": "690 ms",
+          "cls": "0.019",
+          "speedIndex": "6.0 s"
+        }
       }
     },
     {
@@ -3308,10 +4169,30 @@
       "screenshot": "/projects/project-ss-appmint-landing-page.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://website-mint-landing-page.vercel.app/",
+        "testedUrl": "https://website-mint-landing-page.vercel.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 88,
+          "seo": 92,
+          "accessibility": 83,
+          "bestPractices": 92,
+          "fcp": "0.8 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0.244",
+          "speedIndex": "1.1 s"
+        },
+        "desktop": {
+          "performance": 87,
+          "seo": 92,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "fcp": "0.3 s",
+          "lcp": "0.4 s",
+          "tbt": "0 ms",
+          "cls": "0.265",
+          "speedIndex": "0.4 s"
+        }
       }
     },
     {
@@ -3332,10 +4213,30 @@
       "screenshot": "/projects/project-ss-appmint.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://website-mint.netlify.app/",
+        "testedUrl": "https://website-mint.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 56,
+          "seo": 92,
+          "accessibility": 94,
+          "bestPractices": 73,
+          "fcp": "5.6 s",
+          "lcp": "9.5 s",
+          "tbt": "240 ms",
+          "cls": "0",
+          "speedIndex": "6.0 s"
+        },
+        "desktop": {
+          "performance": 74,
+          "seo": 92,
+          "accessibility": 95,
+          "bestPractices": 73,
+          "fcp": "0.5 s",
+          "lcp": "2.0 s",
+          "tbt": "340 ms",
+          "cls": "0.079",
+          "speedIndex": "1.1 s"
+        }
       }
     },
     {
@@ -3400,10 +4301,30 @@
       "screenshot": "/projects/project-ss-reyesenvironmental.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://reyesenvironmental.com/",
+        "testedUrl": "https://reyesenvironmental.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 79,
+          "seo": 85,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "2.0 s",
+          "lcp": "4.4 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "5.3 s"
+        },
+        "desktop": {
+          "performance": 93,
+          "seo": 85,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "0.4 s",
+          "lcp": "1.1 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "2.4 s"
+        }
       }
     },
     {
@@ -3465,10 +4386,30 @@
       "screenshot": "/projects/project-ss-seshy.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://seshy.surge.sh/",
+        "testedUrl": "https://seshy.surge.sh",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 65,
+          "seo": 58,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "fcp": "3.9 s",
+          "lcp": "7.2 s",
+          "tbt": "20 ms",
+          "cls": "0",
+          "speedIndex": "5.1 s"
+        },
+        "desktop": {
+          "performance": 96,
+          "seo": 58,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "fcp": "0.5 s",
+          "lcp": "1.3 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.1 s"
+        }
       }
     },
     {
@@ -3671,13 +4612,7 @@
       "description": "The Royal Pin is a wordpress website built with Wordpress, Elementor to support lead generation with a cleaner user journey.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-the-royal-pin.jpg",
-      "pageSpeed": {
-        "source": "Google PageSpeed Insights",
-        "testedUrl": "https://theroyalpin.com/",
-        "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
-      }
+      "pageSpeed": {}
     },
     {
       "websiteName": "Danielle Ball Fitness",
@@ -3708,13 +4643,7 @@
       "description": "Client project is a business website built with a practical web stack to ship a focused front-end experience from design to launch.",
       "projectStatus": "Live",
       "screenshot": "/projects/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg",
-      "pageSpeed": {
-        "source": "Google PageSpeed Insights",
-        "testedUrl": "https://kargokdelivery-cqxwipnq8r.live-website.com/",
-        "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
-      }
+      "pageSpeed": {}
     },
     {
       "websiteName": "centaurivision",
@@ -3731,14 +4660,37 @@
       "description": "centaurivision is a wordpress website built with Wordpress, Elementor to make key content easier to understand and act on.",
       "projectStatus": "Redesigned by Client",
       "myRole": "Built the original version of the website.",
-      "originalStack": ["WordPress", "Elementor"],
+      "originalStack": [
+        "WordPress",
+        "Elementor"
+      ],
       "screenshot": "/projects/project-ss-centaurivision.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://centaurivision.ca/",
+        "testedUrl": "https://centaurivision.ca",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 75,
+          "seo": 100,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "1.7 s",
+          "lcp": "7.9 s",
+          "tbt": "20 ms",
+          "cls": "0.001",
+          "speedIndex": "2.7 s"
+        },
+        "desktop": {
+          "performance": 93,
+          "seo": 100,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.9 s"
+        }
       }
     },
     {
@@ -3758,10 +4710,30 @@
       "screenshot": "/projects/project-ss-smartavlasia.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://smartavlasia.com/",
+        "testedUrl": "https://smartavlasia.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 88,
+          "seo": 100,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "fcp": "0.9 s",
+          "lcp": "3.6 s",
+          "tbt": "70 ms",
+          "cls": "0",
+          "speedIndex": "3.7 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.3 s",
+          "tbt": "0 ms",
+          "cls": "0.003",
+          "speedIndex": "0.5 s"
+        }
       }
     },
     {
@@ -3796,10 +4768,30 @@
       "screenshot": "/projects/project-ss-thaivisaexpert.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://thaivisaexpert.com/",
+        "testedUrl": "https://thaivisaexpert.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 93,
+          "seo": 100,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "1.7 s",
+          "lcp": "3.1 s",
+          "tbt": "40 ms",
+          "cls": "0.004",
+          "speedIndex": "1.7 s"
+        },
+        "desktop": {
+          "performance": 98,
+          "seo": 100,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "fcp": "0.5 s",
+          "lcp": "0.9 s",
+          "tbt": "110 ms",
+          "cls": "0.033",
+          "speedIndex": "0.7 s"
+        }
       }
     },
     {
@@ -3889,8 +4881,28 @@
         "source": "Google PageSpeed Insights",
         "testedUrl": "https://nclrealestate.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 55,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "fcp": "3.7 s",
+          "lcp": "18.0 s",
+          "tbt": "250 ms",
+          "cls": "0.028",
+          "speedIndex": "8.6 s"
+        },
+        "desktop": {
+          "performance": 73,
+          "seo": 100,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "0.8 s",
+          "lcp": "3.5 s",
+          "tbt": "110 ms",
+          "cls": "0.025",
+          "speedIndex": "2.8 s"
+        }
       }
     },
     {
@@ -3992,10 +5004,30 @@
       "projectStatus": "Live",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://pms-study.com/wp-admin",
+        "testedUrl": "https://pms-study.com",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 91,
+          "seo": 92,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "fcp": "2.3 s",
+          "lcp": "3.1 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "2.7 s"
+        },
+        "desktop": {
+          "performance": 96,
+          "seo": 92,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "fcp": "0.7 s",
+          "lcp": "1.1 s",
+          "tbt": "0 ms",
+          "cls": "0.004",
+          "speedIndex": "1.3 s"
+        }
       }
     },
     {
@@ -4070,10 +5102,30 @@
       "screenshot": "/projects/project-ss-clampy.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://clampy.netlify.app/",
+        "testedUrl": "https://clampy.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "fcp": "0.9 s",
+          "lcp": "0.9 s",
+          "tbt": "0 ms",
+          "cls": "0.001",
+          "speedIndex": "2.4 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 97,
+          "bestPractices": 100,
+          "fcp": "0.3 s",
+          "lcp": "0.3 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.7 s"
+        }
       }
     },
     {
@@ -4134,10 +5186,30 @@
       "screenshot": "/projects/project-ss-brickify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://brickify.netlify.app/",
+        "testedUrl": "https://brickify.netlify.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 83,
+          "seo": 100,
+          "accessibility": 78,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "1.5 s",
+          "tbt": "590 ms",
+          "cls": "0",
+          "speedIndex": "4.0 s"
+        },
+        "desktop": {
+          "performance": 87,
+          "seo": 100,
+          "accessibility": 78,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.4 s",
+          "tbt": "280 ms",
+          "cls": "0",
+          "speedIndex": "1.6 s"
+        }
       }
     },
     {
@@ -4156,10 +5228,30 @@
       "screenshot": "/react-projects/project-ss-mockify.jpg",
       "pageSpeed": {
         "source": "Google PageSpeed Insights",
-        "testedUrl": "https://mockify-alpha.vercel.app/",
+        "testedUrl": "https://mockify-alpha.vercel.app",
         "measuredAt": "2026-11-16",
-        "mobileError": "PageSpeed Insights could not generate a mobile report.",
-        "desktopError": "PageSpeed Insights could not generate a desktop report."
+        "mobile": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "1.5 s",
+          "lcp": "1.5 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "1.5 s"
+        },
+        "desktop": {
+          "performance": 100,
+          "seo": 100,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "fcp": "0.4 s",
+          "lcp": "0.4 s",
+          "tbt": "0 ms",
+          "cls": "0",
+          "speedIndex": "0.4 s"
+        }
       }
     }
   ]
