@@ -117,6 +117,39 @@ const ratings = await page
   .locator(".project-card")
   .evaluateAll((cards) => cards.map((card) => Number(card.dataset.projectRating)));
 assert.deepEqual(ratings, [...ratings].sort((a, b) => b - a));
+const expiredCards = page.locator(
+  '.project-card[data-status="Offline (Domain Expired)"]',
+);
+assert.ok((await expiredCards.count()) > 0);
+assert.equal(
+  await expiredCards.locator(".project-domain-expired").count(),
+  await expiredCards.count(),
+);
+assert.equal(await expiredCards.locator(".project-links a").count(), 0);
+assert.equal(await page.locator(".project-card a[href*='figma.com']").count(), 0);
+const actionRows = await page.locator(".project-links").evaluateAll((rows) =>
+  rows.map((row) =>
+    [...row.querySelectorAll("button, a, span")].map((item) =>
+      Math.round(
+        item.getBoundingClientRect().top +
+          item.getBoundingClientRect().height / 2,
+      ),
+    ),
+  ),
+);
+assert.ok(actionRows.every((tops) => tops.length < 2 || new Set(tops).size === 1));
+assert.equal(
+  await page.locator(".project-card .value-tree").getByText("Rating").count(),
+  0,
+);
+const missingScreenshot = page.locator(
+  '.project-card[data-project-title="Edinburghpt Academy"]',
+);
+assert.match(
+  await missingScreenshot.locator(".project-preview").getAttribute("src"),
+  /ayoub-portfolio-thumbnail-projects\.jpg$/,
+);
+assert.ok((await page.locator(".project-card .project-stack-logo img").count()) > 0);
 assert.equal(
   await page.getByText("About this archive", { exact: true }).count(),
   0,
@@ -127,6 +160,10 @@ const ids = await page
 assert.equal(new Set(ids).size, projectCount);
 await page.locator(".project-card:visible .project-open").first().click();
 assert.equal(await page.locator("dialog[open]").count(), 1);
+assert.equal(
+  await page.locator("dialog[open] .value-tree").getByText("Rating").count(),
+  0,
+);
 await shot("drawer-desktop", "dialog[open]");
 await page.keyboard.press("Escape");
 assert.equal(await page.locator("dialog[open]").count(), 0);

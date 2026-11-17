@@ -4,17 +4,19 @@ import type { HTMLAttributes } from "astro/types";
 import { getAsset, initials } from "../../lib/assets";
 interface Props extends Omit<HTMLAttributes<"img">, "src" | "alt"> {
   src?: string | null;
+  fallback?: string;
   alt?: string;
   eager?: boolean;
 }
 const {
   src,
+  fallback,
   alt = "",
   class: className = "",
   eager = false,
   ...rest
 } = Astro.props;
-const asset = getAsset(src);
+const asset = getAsset(src) ?? (fallback ? getAsset(fallback) : null);
 ---
 
 {asset ? (
