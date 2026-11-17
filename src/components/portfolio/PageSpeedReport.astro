@@ -111,23 +111,26 @@ const metricLevel = (key: string, value: string) => {
                 Performance
               </span>
             </div>
-            <dl class="pagespeed-metrics">
-              {metrics.map((metric) => {
-                const value =
-                  metric.key === "si" ? result.speedIndex : result[metric.key];
-                return value != null && value !== "" ? (
-                  <div
-                    class:list={[
-                      "pagespeed-metric",
-                      metricLevel(metric.key, value),
-                    ]}
-                  >
-                    <dt>{metric.label}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ) : null;
-              })}
-            </dl>
+            <details class="pagespeed-metrics-details" open>
+              <summary>View metrics</summary>
+              <dl class="pagespeed-metrics">
+                {metrics.map((metric) => {
+                  const value =
+                    metric.key === "si" ? result.speedIndex : result[metric.key];
+                  return value != null && value !== "" ? (
+                    <div
+                      class:list={[
+                        "pagespeed-metric",
+                        metricLevel(metric.key, value),
+                      ]}
+                    >
+                      <dt>{metric.label}</dt>
+                      <dd>{value}</dd>
+                    </div>
+                  ) : null;
+                })}
+              </dl>
+            </details>
           </>
         ) : (
           <p class="pagespeed-error">{error}</p>
@@ -139,3 +142,18 @@ const metricLevel = (key: string, value: string) => {
     </footer>
   </section>
 )}
+
+<script>
+  const mobileViewport = window.matchMedia("(max-width: 600px)");
+  const syncMetricsDetails = () => {
+    document
+      .querySelectorAll<HTMLDetailsElement>(".pagespeed-metrics-details")
+      .forEach((details) => {
+        details.open = !mobileViewport.matches;
+      });
+  };
+
+  syncMetricsDetails();
+  mobileViewport.addEventListener("change", syncMetricsDetails);
+  document.addEventListener("astro:page-load", syncMetricsDetails);
+</script>

@@ -138,6 +138,14 @@ const projects = sortProjectsByLiveStatus(archive.projects);
                 ))}
             </select>
           </label>
+          <label for="copy-project-status">
+            Project status
+            <select id="copy-project-status">
+              <option value="Live">Live</option>
+              <option value="Offline (Domain Expired)">Expired</option>
+              <option value="Redesigned by Client">Redesigned</option>
+            </select>
+          </label>
           <label for="copy-output-format">
             Output format
             <select id="copy-output-format">
@@ -174,7 +182,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
             aria-live="polite"
             aria-atomic="true"
           >
-            Copy all archive links or only the selected platform group.
+            Copy links by status, optionally limited to a platform group.
           </p>
         </div>
       </div>

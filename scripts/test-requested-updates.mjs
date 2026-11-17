@@ -154,6 +154,39 @@ assert.equal(
   await page.getByText("About this archive", { exact: true }).count(),
   0,
 );
+await page.evaluate(() => {
+  window.copiedText = "";
+  Object.defineProperty(navigator, "clipboard", {
+    configurable: true,
+    value: { writeText: async (text) => (window.copiedText = text) },
+  });
+});
+await page.locator("#open-project-copy").click();
+const copyStatus = page.locator("#copy-project-status");
+for (const status of [
+  "Live",
+  "Offline (Domain Expired)",
+  "Redesigned by Client",
+]) {
+  await copyStatus.selectOption(status);
+  const expectedLinks = await page.locator(".project-card").evaluateAll(
+    (cards, selectedStatus) =>
+      cards.filter(
+        (card) =>
+          card.dataset.status === selectedStatus &&
+          Boolean(card.dataset.projectWebsite),
+      ).length,
+    status,
+  );
+  await page.locator("#copy-all-projects").click();
+  const copiedLinks = await page.evaluate(
+    () => window.copiedText.match(/https?:\/\/\S+/g)?.length ?? 0,
+  );
+  assert.ok(expectedLinks > 0);
+  assert.equal(copiedLinks, expectedLinks);
+}
+await page.locator("#close-project-copy").click();
+report.push("Project link copier filters live, expired and redesigned projects.");
 const ids = await page
   .locator(".project-drawer")
   .evaluateAll((es) => es.map((e) => e.id));
@@ -177,6 +210,16 @@ assert.equal(
 await page.setViewportSize({ width: 390, height: 960 });
 await page.locator(".project-card:visible .project-media").first().click();
 await shot("drawer-mobile", "dialog[open]");
+const pageSpeedMetrics = page.locator(
+  "dialog[open] .pagespeed-metrics-details",
+);
+assert.equal(await pageSpeedMetrics.count(), 2);
+assert.equal(await pageSpeedMetrics.first().getAttribute("open"), null);
+await pageSpeedMetrics.first().locator("summary").click();
+assert.equal(await pageSpeedMetrics.first().getAttribute("open"), "");
+assert.ok(
+  (await pageSpeedMetrics.first().locator(".pagespeed-metric").count()) > 0,
+);
 await page.locator("dialog[open] .drawer-close").click();
 await page.locator("#project-search").fill("no-such-project-777");
 assert.equal(await page.locator("#no-projects").isVisible(), true);

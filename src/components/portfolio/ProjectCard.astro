@@ -24,10 +24,10 @@ const panelId = `project-${index}`;
 const description = getProjectDescription(p);
 const isDomainExpired = p.projectStatus === "Offline (Domain Expired)";
 const websiteHref = normalizeHttpLink(p.websiteUrl);
-const href =
-  !isDomainExpired && !websiteHref?.toLowerCase().includes("figma.com")
-    ? websiteHref
-    : undefined;
+const copyHref = !websiteHref?.toLowerCase().includes("figma.com")
+  ? websiteHref
+  : undefined;
+const href = !isDomainExpired ? copyHref : undefined;
 const keys = projectPlatformFilters
   .filter((filter) => projectMatchesPlatform(p, filter.value))
   .map((f) => f.value)
@@ -97,7 +97,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
   data-project-title={title}
   data-project-rating={p.rating ?? 0}
   data-project-category={getProjectMeta(p).join(", ")}
-  data-project-website={href || ""}
+  data-project-website={copyHref || ""}
 >
   <div class="project-media">
     <Asset

@@ -1441,6 +1441,12 @@ textarea {
   gap: 8px;
   margin: 0;
 }
+.pagespeed-metrics-details > summary {
+  display: none;
+}
+.pagespeed-metrics-details:not([open]) > .pagespeed-metrics {
+  display: grid;
+}
 .pagespeed-metric {
   min-width: 0;
   padding: 10px 12px;
@@ -1551,6 +1557,21 @@ textarea {
     font-size: 13px;
   }
   .pagespeed-metrics {
+    display: none;
+  }
+  .pagespeed-metrics-details {
+    margin-top: 8px;
+  }
+  .pagespeed-metrics-details > summary {
+    display: list-item;
+    color: var(--muted-foreground);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    padding-block: 4px;
+  }
+  .pagespeed-metrics-details[open] > .pagespeed-metrics {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
   }

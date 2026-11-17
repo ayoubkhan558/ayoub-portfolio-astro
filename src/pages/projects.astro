@@ -131,6 +131,9 @@ import Layout from "../layouts/PortfolioLayout.astro";
   const copyGroup = document.querySelector<HTMLSelectElement>(
     "#copy-project-platform",
   )!;
+  const copyProjectStatus = document.querySelector<HTMLSelectElement>(
+    "#copy-project-status",
+  )!;
   const copyTitle =
     document.querySelector<HTMLInputElement>("#copy-list-title")!;
   const copyFormat = document.querySelector<HTMLSelectElement>(
@@ -187,11 +190,11 @@ import Layout from "../layouts/PortfolioLayout.astro";
     return [header, ...list].filter(Boolean).join("\n");
   }
   async function copyProjects(group: string | null) {
-    const selected = group
-      ? cards.filter((card) =>
-          card.dataset.platform!.split(" ").includes(group),
-        )
-      : cards;
+    const selected = cards.filter(
+      (card) =>
+        card.dataset.status === copyProjectStatus.value &&
+        (!group || card.dataset.platform!.split(" ").includes(group)),
+    );
     const content = formatProjectLinks(selected);
     if (!content) {
       copyStatus.textContent = "No project links are available to copy.";
@@ -200,9 +203,12 @@ import Layout from "../layouts/PortfolioLayout.astro";
     copyButtons.forEach((button) => (button.disabled = true));
     try {
       await navigator.clipboard.writeText(content);
-      const source = group
-        ? `${copyGroup.selectedOptions[0].textContent?.trim()} group`
-        : "all projects";
+      const source = [
+        copyProjectStatus.selectedOptions[0].textContent?.trim(),
+        ...(group
+          ? [`${copyGroup.selectedOptions[0].textContent?.trim()} group`]
+          : []),
+      ].join(", ");
       copyStatus.textContent = `Copied ${content.split("\n").length - (copyTitle.value.trim() ? 1 : 0)} links from ${source}.`;
     } catch {
       copyStatus.textContent =
