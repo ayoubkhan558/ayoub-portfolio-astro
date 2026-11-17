@@ -1,5 +1,6 @@
 ---
 import p from "../../data/portfolio.json";
+import ExternalArrow from "./ExternalArrow.astro";
 import { ThemeToggle } from "../theme-toggle";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 const isActive = (href: string) => path === href || path.startsWith(href + "/");
@@ -30,7 +31,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   <div class="header-actions">
     <ThemeToggle />
     <a class="button small header-cta" href="/contact/">
-      Let's talk <span aria-hidden="true">↗</span>
+      Let's talk <ExternalArrow />
     </a>
     <details class="mobile-menu" id="menu-details">
       <summary
@@ -61,7 +62,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
             {link.label}
           </a>
         ))}
-        <a href="/contact/">Let's talk ↗</a>
+        <a href="/contact/">Let's talk <ExternalArrow /></a>
       </nav>
     </details>
   </div>

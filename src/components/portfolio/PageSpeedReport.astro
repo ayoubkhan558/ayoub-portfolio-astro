@@ -1,4 +1,6 @@
 ---
+import { siteSettings } from "../../config/siteSettings";
+
 interface PageSpeedResult {
   performance: number;
   fcp?: string | null;
@@ -21,7 +23,7 @@ interface Props {
 }
 
 const { report } = Astro.props as Props;
-const devices = [
+const allDevices = [
   {
     label: "Mobile",
     result: report.mobile,
@@ -33,6 +35,9 @@ const devices = [
     error: report.desktopError,
   },
 ].filter((device) => device.result || device.error);
+const devices = siteSettings.showDesktopPageSpeedOnly
+  ? allDevices.filter((device) => device.label === "Desktop")
+  : allDevices;
 const metrics = [
   { key: "fcp", label: "First Contentful Paint", thresholds: [1.8, 3] },
   { key: "si", label: "Speed Index", thresholds: [3.4, 5.8] },
@@ -53,9 +58,6 @@ const metricLevel = (key: string, value: string) => {
       ? "needs-improvement"
       : "poor";
 };
-const pageSpeedUrl = report.testedUrl
-  ? `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(report.testedUrl)}`
-  : null;
 ---
 
 {devices.length > 0 && (
@@ -70,12 +72,8 @@ const pageSpeedUrl = report.testedUrl
         </span>
         <h3>Performance report</h3>
       </div>
-      {report.measuredAt && (
-        <time datetime={report.measuredAt}>Tested {report.measuredAt}</time>
-      )}
     </header>
-    {report.testedUrl && <p class="pagespeed-tested-url">{report.testedUrl}</p>}
-    {devices.map(({ key, label, result, error }) => (
+    {devices.map(({ label, result, error }) => (
       <section class="pagespeed-device" aria-label={`${label} performance`}>
         <h4>{label}</h4>
         {result ? (
@@ -137,12 +135,7 @@ const pageSpeedUrl = report.testedUrl
       </section>
     ))}
     <footer class="pagespeed-footer">
-      <span>Results are from the date shown; scores can change over time.</span>
-      {pageSpeedUrl && (
-        <a href={pageSpeedUrl} target="_blank" rel="noopener noreferrer">
-          Run in PageSpeed Insights ↗
-        </a>
-      )}
+      <span>Scores can change over time.</span>
     </footer>
   </section>
 )}

@@ -35,7 +35,9 @@ import Layout from "../layouts/PortfolioLayout.astro";
     redesigned: "Redesigned by Client",
     "domain-expired": "Offline (Domain Expired)",
   };
-  const perPage = 12;
+  const perPage = Number(
+    document.querySelector<HTMLElement>("#archive")!.dataset.projectsPerPage,
+  );
   let page = 1;
   function readURL() {
     const params = new URLSearchParams(location.search);

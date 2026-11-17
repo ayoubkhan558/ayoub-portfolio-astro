@@ -16,8 +16,8 @@
       "file": "portfolio.json",
       "sha256": "0faf36e5384c2bd33c95dbaeca9a0b609a40fb06cf318ff86d1a575733009fdb",
       "unchanged": false,
-      "currentSha256": "efbff8ab9fdff886430ba97577d823cf7ac515965647ff5edf59a986f7afe09c",
-      "changeNote": "Two-space formatting and the requested SEO description edit."
+      "currentSha256": "21bf3ca909a105ecde9dc6ad0a88b88f6ea45a098def5b81af9634295805bb37",
+      "changeNote": "Moved section-specific content out of the portfolio JSON; SEO description and other portfolio values retained."
     },
     {
       "file": "projectLinkStatus.json",

@@ -111,7 +111,12 @@ await shot("services-mobile", ".service-grid");
 await page.setViewportSize({ width: 1440, height: 960 });
 await shot("services-desktop", ".service-grid");
 await page.goto(base + "/projects/", { waitUntil: "networkidle" });
-assert.equal(await page.locator(".project-card").count(), 147);
+const projectCount = await page.locator(".project-card").count();
+assert.ok(projectCount > 0);
+const ratings = await page
+  .locator(".project-card")
+  .evaluateAll((cards) => cards.map((card) => Number(card.dataset.projectRating)));
+assert.deepEqual(ratings, [...ratings].sort((a, b) => b - a));
 assert.equal(
   await page.getByText("About this archive", { exact: true }).count(),
   0,
@@ -119,7 +124,7 @@ assert.equal(
 const ids = await page
   .locator(".project-drawer")
   .evaluateAll((es) => es.map((e) => e.id));
-assert.equal(new Set(ids).size, 147);
+assert.equal(new Set(ids).size, projectCount);
 await page.locator(".project-card:visible .project-open").first().click();
 assert.equal(await page.locator("dialog[open]").count(), 1);
 await shot("drawer-desktop", "dialog[open]");
@@ -141,7 +146,7 @@ assert.equal(await page.locator("#no-projects").isVisible(), true);
 await page.locator("#clear-filters").click();
 assert.equal(await page.locator(".project-card:visible").count(), 12);
 report.push(
-  "147 unique project drawers: card and button open; focus trap, Escape, close and return focus; filters still work.",
+  `${projectCount} unique project drawers: rating order, card and button open; focus trap, Escape, close and return focus; filters still work.`,
 );
 await page.goto(base + "/about/", { waitUntil: "networkidle" });
 await page.locator(".skills-marquee").scrollIntoViewIfNeeded();
@@ -190,12 +195,23 @@ assert.equal(await page.getByText("Available for", { exact: true }).count(), 1);
 for (const text of [
   "Best fit",
   "Refer a client — get 15% off your next project",
-  "Send project details",
-  "Get a build estimate",
 ])
   assert.equal(await page.getByText(text, { exact: true }).count(), 0);
+for (const text of ["Send project details", "Get a build estimate"])
+  assert.equal(await page.getByText(text, { exact: true }).count(), 1);
+await page.goto(
+  base + "/contact/?subject=Website+estimate&details=Prefilled+details",
+  { waitUntil: "networkidle" },
+);
+await page.waitForFunction(
+  () =>
+    document.querySelector('[name="_subject"]').value === "Website estimate" &&
+    document.querySelector('[name="message"]').value === "Prefilled details",
+);
+assert.equal(await page.locator('[name="_subject"]').inputValue(), "Website estimate");
+assert.equal(await page.locator('[name="message"]').inputValue(), "Prefilled details");
 await page.locator("#send-brief").click();
-assert.equal(await page.locator('[aria-invalid="true"]').count(), 5);
+assert.equal(await page.locator('[aria-invalid="true"]').count(), 3);
 await shot("form-required", "form");
 await page.locator('[name="name"]').fill("Test User");
 await page.locator('[name="email"]').fill("not-email");

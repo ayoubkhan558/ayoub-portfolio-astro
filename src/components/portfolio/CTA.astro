@@ -1,5 +1,6 @@
 ---
 import p from "../../data/portfolio.json";
+import ExternalArrow from "./ExternalArrow.astro";
 const {
   title = "Got a project? Let's talk.",
   text = "Tell me what you're building.",
@@ -13,7 +14,7 @@ const {
   <p>{text}</p>
   <div class="actions">
     <a class="button" href="/contact/">
-      {button} <span aria-hidden="true">↗</span>
+      {button} <ExternalArrow />
     </a>
     <a class="text-link" href={`mailto:${p.profile.email}`}>
       {p.profile.email}

@@ -1,5 +1,6 @@
 ---
 import Asset from "./Asset.astro";
+import ExternalArrow from "./ExternalArrow.astro";
 import PageSpeedReport from "./PageSpeedReport.astro";
 import ValueTree from "./ValueTree.astro";
 import {
@@ -48,6 +49,7 @@ const details = Object.fromEntries(
         "screenshot",
         "projectStatus",
         "pageSpeed",
+        "notes",
       ].includes(k) &&
       v != null &&
       v !== "",
@@ -61,6 +63,7 @@ const details = Object.fromEntries(
   data-platform={keys}
   data-status={p.projectStatus || ""}
   data-project-title={title}
+  data-project-rating={p.rating ?? 0}
   data-project-category={getProjectMeta(p).join(", ")}
   data-project-website={href || ""}
   data-project-figma={figma || ""}
@@ -95,7 +98,7 @@ const details = Object.fromEntries(
           target="_blank"
           rel="noopener noreferrer"
         >
-          Website ↗
+          Website <ExternalArrow />
         </a>
       )}
       {figma && (
@@ -105,7 +108,7 @@ const details = Object.fromEntries(
           target="_blank"
           rel="noopener noreferrer"
         >
-          Figma ↗
+          Figma <ExternalArrow />
         </a>
       )}
     </div>
@@ -116,7 +119,7 @@ const details = Object.fromEntries(
       aria-haspopup="dialog"
       aria-controls={panelId}
     >
-      Project details <span aria-hidden="true">↗</span>
+      Project details <ExternalArrow />
     </button>
     <noscript>
       <details>
@@ -165,9 +168,6 @@ const details = Object.fromEntries(
       <p>{description}</p>
       <ValueTree value={details} />
       {p.pageSpeed && <PageSpeedReport report={p.pageSpeed} />}
-      {p.pageSpeedAdditional?.map((report) => (
-        <PageSpeedReport report={report} />
-      ))}
       <div class="actions">
         {href && (
           <a
@@ -176,7 +176,7 @@ const details = Object.fromEntries(
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit website ↗
+            Visit website <ExternalArrow />
           </a>
         )}
         {figma && (
@@ -186,7 +186,7 @@ const details = Object.fromEntries(
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Figma ↗
+            View Figma <ExternalArrow />
           </a>
         )}
       </div>

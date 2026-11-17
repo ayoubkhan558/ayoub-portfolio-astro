@@ -11,6 +11,7 @@ import data from "../../data/caseStudyDetails.json";
 import { caseStudySeo } from "../../data/caseStudySeo";
 import Asset from "../../components/portfolio/Asset.astro";
 import Layout from "../../layouts/PortfolioLayout.astro";
+import ExternalArrow from "../../components/portfolio/ExternalArrow.astro";
 export function getStaticPaths() {
   return Object.values(data).map((study) => ({
     params: { slug: study.slug },
@@ -39,7 +40,7 @@ const next = all[(i + 1) % all.length];
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit {s.urlLabel} ↗
+            Visit {s.urlLabel} <ExternalArrow />
           </a>
           <a href="/case-studies/" class="text-link">
             All case studies →

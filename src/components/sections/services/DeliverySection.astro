@@ -1,6 +1,17 @@
 ---
 import TextRotator from "../../portfolio/TextRotator.astro";
-import p from "../../../data/portfolio.json";
+import { problemsSolved } from "../home/problems";
+
+const outcomes = [
+  "A clearer homepage that explains the offer in seconds",
+  "Stronger calls to action and a simpler inquiry path",
+  "Pages structured around buyer questions, objections, and next steps",
+  "A faster mobile experience that protects trust before the first click",
+  "Reusable sections for future campaigns, services, and landing pages",
+  "A website that feels more credible against stronger competitors",
+  "Clean implementation that your team or next developer can maintain",
+  "CMS support only where editing control is genuinely useful",
+];
 ---
 
 <section class="services-delivery-section section wrap">
@@ -11,7 +22,7 @@ import p from "../../../data/portfolio.json";
     </div>
   </div>
   <div class="fit-rotators">
-    <TextRotator label="Problems I solve" items={p.problemsSolved} />
-    <TextRotator label="What you take away" items={p.outcomes} />
+    <TextRotator label="Problems I solve" items={problemsSolved} />
+    <TextRotator label="What you take away" items={outcomes} />
   </div>
 </section>

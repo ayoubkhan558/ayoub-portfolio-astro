@@ -1,12 +1,18 @@
 ---
 import Heading from "../../portfolio/Heading.astro";
-import p from "../../../data/portfolio.json";
+
+const bestFit = [
+  "Founders who need custom React.js or Next.js landing pages",
+  "Agencies that need reliable HTML, CSS, JavaScript, or React implementation",
+  "SaaS/product teams that need fast front-end pages, dashboards, or MVP UI",
+  "Businesses that want a conversion-focused website before investing in a CMS",
+];
 ---
 
 <section class="services-project-fit-section section wrap">
   <Heading label="Project fit" title="Who I work best with." />
   <ul class="check-list">
-    {p.bestFit.map((f) => (
+    {bestFit.map((f) => (
       <li>{f}</li>
     ))}
   </ul>

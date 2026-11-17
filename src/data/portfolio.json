@@ -163,44 +163,6 @@
       "icon": "users"
     }
   ],
-  "painPoints": [
-    "Your Visitors Drop In, But Don't Engage",
-    "Your Website Lacks Uniqueness",
-    "Your Competitor Stealing the Spotlight"
-  ],
-  "problemsSolved": [
-    "Unclear homepage messaging that fails to explain what you do",
-    "Weak CTA flow that leaves visitors unsure what to do next",
-    "Slow pages that make people bounce before reading the offer",
-    "Mobile layouts that break trust on the device most visitors use",
-    "Service pages that describe features but do not sell outcomes",
-    "Outdated visual design that makes a capable business look less credible",
-    "Contact forms and inquiry paths with too much friction",
-    "Project handoffs where the business cannot update or reuse the website confidently",
-    "Landing pages that get traffic but do not convert enough leads",
-    "Competitors feeling more polished, easier to trust, and easier to buy from"
-  ],
-  "whyWork": [
-    "Scope agreed before work starts",
-    "Updates without being asked",
-    "Deadlines that hold",
-    "Code the next dev can read",
-    "Mobile and performance by default",
-    "Feedback rounds, not big reveals",
-    "Problems flagged early, not at launch",
-    "Clean handoff every time",
-    "You own it when we're done"
-  ],
-  "outcomes": [
-    "A clearer homepage that explains the offer in seconds",
-    "Stronger calls to action and a simpler inquiry path",
-    "Pages structured around buyer questions, objections, and next steps",
-    "A faster mobile experience that protects trust before the first click",
-    "Reusable sections for future campaigns, services, and landing pages",
-    "A website that feels more credible against stronger competitors",
-    "Clean implementation that your team or next developer can maintain",
-    "CMS support only where editing control is genuinely useful"
-  ],
   "services": [
     {
       "level": "SOLUTION_01",
@@ -210,7 +172,6 @@
       "description": "Build a polished product interface, MVP front end, dashboard, or web app experience with clean implementation.",
       "whatYouGet": "Reusable UI components, responsive screens, state-aware interface patterns, API-ready structure, and maintainable front-end delivery.",
       "timeline": "Typical timeline: 2-5 weeks",
-      "bestFit": "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
       "features": [
         "User-flow based screen structure",
         "Reusable interface components",
@@ -230,7 +191,6 @@
       "description": "A focused landing page for ads, product launches, lead magnets, SaaS offers, or service campaigns.",
       "whatYouGet": "A conversion-focused page with offer framing, CTA sections, forms, responsive layout, tracking-ready structure, and clean handoff.",
       "timeline": "Typical timeline: 3-10 days",
-      "bestFit": "Best when you need a dedicated page for a campaign, service, SaaS idea, or product instead of sending traffic to a general website.",
       "features": [
         "Single-purpose page strategy",
         "Section flow from problem to solution to action",
@@ -250,7 +210,6 @@
       "description": "Modernize a dated website, improve credibility, fix the mobile experience, and strengthen conversion paths.",
       "whatYouGet": "Visual hierarchy cleanup, modern section design, clearer service positioning, improved responsiveness, and implementation support.",
       "timeline": "Typical timeline: 1-2 weeks",
-      "bestFit": "Best when your business is good, but the website makes prospects hesitate or compare you unfavorably with competitors.",
       "features": [
         "Before/after page structure improvements",
         "Typography, spacing, and visual polish",
@@ -270,7 +229,6 @@
       "description": "Improve website speed, Core Web Vitals, and page performance so visitors get a faster, smoother experience.",
       "whatYouGet": "Focused fixes across performance, spacing, mobile layout, forms, broken interactions, and high-friction user paths.",
       "timeline": "Typical timeline: 1-5 days",
-      "bestFit": "Best when the website mostly exists, but users hit friction before they inquire, book, buy, or trust the brand.",
       "features": [
         "Mobile usability fixes",
         "Speed and Core Web Vitals improvements",
@@ -290,7 +248,6 @@
       "description": "Set up a customer-ready online store with clear product pages, trusted checkout, and a smooth mobile shopping experience.",
       "whatYouGet": "Store structure, product and collection setup, payment and shipping configuration, checkout review, and mobile QA.",
       "timeline": "Typical timeline: 1-4 weeks",
-      "bestFit": "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
       "features": [
         "Product and collection setup",
         "Payment and shipping configuration",
@@ -310,7 +267,6 @@
       "description": "Ongoing website improvements, fixes, new sections, content updates, and technical support after launch.",
       "whatYouGet": "A practical monthly support lane for small improvements, performance checks, bug fixes, campaign updates, and launch follow-through.",
       "timeline": "Monthly support",
-      "bestFit": "Best when the site is live but still needs steady iteration, technical care, and quick changes without starting a new project every time.",
       "features": [
         "Small design and content updates",
         "Bug fixes and browser checks",
@@ -741,74 +697,6 @@
       "status": "Resumify"
     }
   ],
-  "expertise": [
-    {
-      "icon": "rocket",
-      "name": "React.js",
-      "version": "v18+",
-      "role": "Components, hooks, state, performance"
-    },
-    {
-      "icon": "layers",
-      "name": "Next.js",
-      "version": "App Router",
-      "role": "SSR, SSG, routing, server components"
-    },
-    {
-      "icon": "code",
-      "name": "TypeScript & JavaScript",
-      "version": "ES2024",
-      "role": "Type-safe, maintainable front-end code"
-    },
-    {
-      "icon": "sparkles",
-      "name": "Tailwind / Shadcn / Bootstrap",
-      "version": "v3+",
-      "role": "Utility-first and component UI systems"
-    },
-    {
-      "icon": "image",
-      "name": "Figma to Code",
-      "version": "Pixel",
-      "role": "Accurate, responsive implementation from designs"
-    },
-    {
-      "icon": "gauge",
-      "name": "Performance & Technical SEO",
-      "version": "Lighthouse",
-      "role": "Speed, crawlability, WebP, lazy loading, Core Web Vitals, and indexing health"
-    },
-    {
-      "icon": "shield",
-      "name": "API Integrations",
-      "version": "REST",
-      "role": "Stripe, PayPal, Shopify, custom APIs"
-    },
-    {
-      "icon": "globe",
-      "name": "WordPress CMS",
-      "version": "5+ yrs",
-      "role": "Themes, ACF, CPT, REST API, headless"
-    },
-    {
-      "icon": "cart",
-      "name": "WooCommerce",
-      "version": "Stores",
-      "role": "Product pages, checkout, payment flows"
-    },
-    {
-      "icon": "database",
-      "name": "CMS Architecture",
-      "version": "ACF",
-      "role": "Editable content models and templates"
-    },
-    {
-      "icon": "check",
-      "name": "QA & Handoff",
-      "version": "Launch",
-      "role": "Testing, docs, support, maintainability, and technical SEO validation"
-    }
-  ],
   "experienceLog": [
     {
       "year": "2024 - 2026",
@@ -866,7 +754,6 @@
       "description": "Started my professional development journey by building responsive interfaces and learning production-level development workflows."
     }
   ],
-  "contactSteps": ["Send project details", "Get a build estimate"],
   "faqs": [
     {
       "question": "How long does a typical project take?",
@@ -1182,11 +1069,5 @@
       "showInLogos": true,
       "showInTestimonials": true
     }
-  ],
-  "bestFit": [
-    "Founders who need custom React.js or Next.js landing pages",
-    "Agencies that need reliable HTML, CSS, JavaScript, or React implementation",
-    "SaaS/product teams that need fast front-end pages, dashboards, or MVP UI",
-    "Businesses that want a conversion-focused website before investing in a CMS"
   ]
 }

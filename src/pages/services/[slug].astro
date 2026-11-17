@@ -4,6 +4,7 @@ import Intro from "../../components/portfolio/Intro.astro";
 import ServiceDetailSection from "../../components/sections/services/ServiceDetailSection.astro";
 import { serviceNiches } from "../../data/serviceNiches";
 import Layout from "../../layouts/PortfolioLayout.astro";
+import ExternalArrow from "../../components/portfolio/ExternalArrow.astro";
 export function getStaticPaths() {
   return serviceNiches.map((service) => ({
     params: { slug: service.slug },
@@ -22,7 +23,7 @@ const { service: s } = Astro.props;
             class="button"
             href={`/contact/?subject=${encodeURIComponent(s.title)}`}
           >
-            Discuss your project ↗
+            Discuss your project <ExternalArrow />
           </a>
           <a class="text-link" href="/services/">
             All services →

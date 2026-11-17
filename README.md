@@ -1,6 +1,6 @@
 # Muhammad Ayoub — Astro Portfolio v1.4.0
 
-**Clean source-only update.** The ZIP excludes `public/`, `dist/`, `node_modules/` and generated screenshots. All 239 original public assets are unchanged. Editable files now use two-space formatting; portfolio data structure is preserved, with only the requested shorter SEO sentence changed.
+**Clean source-only update.** The ZIP excludes `public/`, `dist/`, `node_modules/` and generated screenshots. All 239 original public assets are unchanged. Editable files use two-space formatting. Section-specific copy lives with its components; project and case-study archives remain JSON-driven.
 
 ## Install in a new folder
 
@@ -71,7 +71,7 @@ Earlier cleanup removed 66 unreachable source files, five unused scaffolding/doc
 
 ## Data and asset preservation
 
-All 14 data files retain their structure and records. Five original JSON datasets still contain all projects, case studies, tools and supporting data. The only semantic edit is the shortened SEO career description; other changes are formatting. Details: `qa/data-changes.json` and current hashes in `qa/source-integrity.json`.
+Project and case-study records remain JSON-driven. Best fit, contact steps, expertise, working-together points, outcomes and problem lists now live with their corresponding components instead of `src/data/portfolio.json`. Other data files retain their records.
 
 `migration-manifest.json` preserves original hashes alongside current formatted JSON hashes. `check:integrity` validates current source JSON and the original 239 public assets after you copy `public/`.
 
@@ -82,9 +82,11 @@ Copy `.env.example` to `.env` only if changing settings:
 ```dotenv
 SITE_URL=https://your-domain.com
 PUBLIC_FORMSPREE_ID=mgojyyqd
+PUBLIC_SHOW_DESKTOP_PAGESPEED_ONLY=false
+PUBLIC_PROJECTS_PER_PAGE=12
 ```
 
-The canonical domain defaults to `profile.website`. Set `SITE_URL` to the production domain and rebuild. Confirm the existing Formspree ID's ownership, activation and allowed domain before launch.
+The canonical domain defaults to `profile.website`. Set `SITE_URL` to the production domain and rebuild. Set `PUBLIC_SHOW_DESKTOP_PAGESPEED_ONLY=true` to hide mobile PageSpeed results. `PUBLIC_PROJECTS_PER_PAGE` controls the archive page size. Confirm the existing Formspree ID's ownership, activation and allowed domain before launch.
 
 **No real submission was sent; inbox delivery is unverified.** Provider validation, success, server/network failure, timeout, input preservation and duplicate-submit protection are tested with intercepted requests. Direct email/phone links and query-string form prefills remain.
 

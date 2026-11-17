@@ -14,6 +14,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type portfolio from "@/data/portfolio.json";
 
+const serviceBestFit = [
+  "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
+  "Best when you need a dedicated page for a campaign, service, SaaS idea, or product instead of sending traffic to a general website.",
+  "Best when your business is good, but the website makes prospects hesitate or compare you unfavorably with competitors.",
+  "Best when the website mostly exists, but users hit friction before they inquire, book, buy, or trust the brand.",
+  "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
+  "Best when the site is live but still needs steady iteration, technical care, and quick changes without starting a new project every time.",
+];
+
 /** Portfolio Pricing/Card/Button block. Portfolio services are not subscription plans. */
 export function ServiceCards({
   services,
@@ -99,7 +108,7 @@ export function ServiceCards({
             <details>
               <summary>Deliverables & project fit</summary>
               <p>{s.whatYouGet}</p>
-              <p>{s.bestFit}</p>
+              <p>{serviceBestFit[i]}</p>
             </details>
             <Button
               asChild

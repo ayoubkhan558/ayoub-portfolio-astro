@@ -1,5 +1,15 @@
 ---
-import { outcomes, proofNotes } from "../../../data/servicesPageData";
+const whyWork = [
+  "Scope agreed before work starts",
+  "Updates without being asked",
+  "Deadlines that hold",
+  "Code the next dev can read",
+  "Mobile and performance by default",
+  "Feedback rounds, not big reveals",
+  "Problems flagged early, not at launch",
+  "Clean handoff every time",
+  "You own it when we're done",
+];
 ---
 
 <section class="services-working-together-section section wrap">
@@ -10,18 +20,10 @@ import { outcomes, proofNotes } from "../../../data/servicesPageData";
     </div>
   </div>
   <div class="three-grid">
-    {proofNotes.map((note) => (
+    {whyWork.map((reason) => (
       <article class="plain-card">
-        <>
-          <span class="eyebrow">{note.label}</span>
-          <h3>{note.value}</h3>
-        </>
+        <h3>{reason}</h3>
       </article>
     ))}
   </div>
-  <ul class="check-list spaced">
-    {outcomes.map((value) => (
-      <li>{value}</li>
-    ))}
-  </ul>
 </section>

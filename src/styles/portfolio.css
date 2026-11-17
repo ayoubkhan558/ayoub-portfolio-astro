@@ -210,7 +210,7 @@ small,
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
   font-weight: 500;
   font-size: 14px;
   overflow-wrap: anywhere;
@@ -1501,6 +1501,10 @@ textarea {
   box-shadow: 0 8px 28px #0002;
 }
 .project-copy-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
   width: min(460px, calc(100vw - 32px));
   max-width: none;
   max-height: min(90dvh, 700px);
@@ -1518,6 +1522,48 @@ textarea {
 .project-copy-panel {
   overflow: auto;
   max-height: min(90dvh, 700px);
+}
+@media (max-width: 600px) {
+  .pagespeed-report {
+    margin-block: 12px;
+    padding: 12px;
+  }
+  .pagespeed-header h3 {
+    font-size: 16px;
+  }
+  .pagespeed-device {
+    padding-top: 12px;
+  }
+  .pagespeed-device h4 {
+    margin-bottom: 8px;
+  }
+  .pagespeed-score-row {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .pagespeed-score {
+    width: 52px;
+  }
+  .pagespeed-score > span {
+    font-size: 17px;
+  }
+  .pagespeed-score-label {
+    font-size: 13px;
+  }
+  .pagespeed-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .pagespeed-metric {
+    padding: 7px 8px;
+  }
+  .pagespeed-metric dd {
+    font-size: 13px;
+  }
+  .pagespeed-footer {
+    margin-top: 10px;
+    padding-top: 9px;
+  }
 }
 .project-copy-header {
   position: sticky;

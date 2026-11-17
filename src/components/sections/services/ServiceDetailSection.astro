@@ -1,4 +1,5 @@
 ---
+import ExternalArrow from "../../portfolio/ExternalArrow.astro";
 const { service } = Astro.props;
 ---
 
@@ -22,7 +23,7 @@ const { service } = Astro.props;
   <div class="link-list">
     {service.relatedCases.map((c) => (
       <a class="text-link" href={c.href}>
-        {c.label} ↗
+        {c.label} <ExternalArrow />
       </a>
     ))}
   </div>

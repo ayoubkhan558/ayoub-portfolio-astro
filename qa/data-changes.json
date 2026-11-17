@@ -5,10 +5,15 @@
       "path": "about.careerPath[3].description",
       "previous": "Leading full-cycle SEO growth across technical optimization, on-page improvements, content structure, authority building, and conversion-focused visibility strategy.",
       "current": "Growing search visibility through technical SEO, content, and authority building."
+    },
+    {
+      "file": "portfolio.json",
+      "path": "bestFit, contactSteps, expertise, whyWork, outcomes, problemsSolved, painPoints",
+      "current": "Moved to the corresponding section components without changing their content."
     }
   ],
   "allOtherOriginalJsonValuesUnchanged": true,
-  "dataStructureUnchanged": true,
+  "dataStructureUnchanged": false,
   "sourceDataFiles": 14,
   "originalAssetFilesUnchanged": 239
 }

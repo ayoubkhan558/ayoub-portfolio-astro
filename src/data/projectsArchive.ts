@@ -7,8 +7,6 @@ export const projectsArchive = projectsArchiveJson;
 export const projectArchiveItems =
   projectsArchiveJson.projects as ProjectArchiveItem[];
 const verifiedLinks = new Set(projectLinkStatusJson.okLinks);
-const priorityProjectNames = ["Resumify", "Mockify"];
-
 export const projectArchiveFilters = [
   { label: "All", value: "all" },
   { label: "HTML/CSS", value: "html-css" },
@@ -280,14 +278,8 @@ export function projectMatchesStatus(
 
 export function sortProjectsByLiveStatus(projects: ProjectArchiveItem[]) {
   return [...projects].sort((a, b) => {
-    const aPriority = priorityProjectNames.indexOf(getProjectTitle(a));
-    const bPriority = priorityProjectNames.indexOf(getProjectTitle(b));
-
-    if (aPriority !== bPriority) {
-      if (aPriority === -1) return 1;
-      if (bPriority === -1) return -1;
-      return aPriority - bPriority;
-    }
+    const ratingDifference = (b.rating ?? 0) - (a.rating ?? 0);
+    if (ratingDifference !== 0) return ratingDifference;
 
     const aRank = getProjectAvailabilityRank(a);
     const bRank = getProjectAvailabilityRank(b);

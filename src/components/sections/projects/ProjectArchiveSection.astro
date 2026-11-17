@@ -6,12 +6,14 @@ import {
   projectStatusFilters,
 } from "../../../data/projectsArchive";
 import archive from "../../../data/projectsArchive.json";
+import { siteSettings } from "../../../config/siteSettings";
 const projects = sortProjectsByLiveStatus(archive.projects);
 ---
 
 <section
   class="project-archive-section section wrap first-section"
   id="archive"
+  data-projects-per-page={siteSettings.projectsPerPage}
 >
   <form class="project-toolbar" id="project-filters" role="search">
     <label for="project-search">
