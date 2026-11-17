@@ -107,7 +107,7 @@ Deploy `dist/` to static hosting. Netlify, Cloudflare Pages or Vercel: Astro/sta
 - `src/components/blocks/faq.tsx`, `testimonials.tsx` — shared FAQ/testimonials.
 - `src/components/portfolio/SkillsMarquee.astro`, `TextRotator.astro`, `BackToTop.astro` — native interactions.
 - `src/components/portfolio/ProjectCard.astro` — archive cards/dialogs.
-- `src/styles/portfolio.css` — responsive surfaces, spacing and alignment.
+- `src/styles/portfolio.scss` — responsive surfaces, spacing and alignment.
 
 ## Source caveats and licenses
 

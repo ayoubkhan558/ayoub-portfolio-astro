@@ -477,6 +477,34 @@
   resolved "https://registry.npmjs.org/@oxc-project/types/-/types-0.154.0.tgz"
   integrity sha512-KYOUGQFlLWR+s4QMV2Q9ko38TZm7EdO87Qm7rvZLqk/webse/cDjtyxKhg/47l0byCbs/k46LT8qc4PKjAikzA==
 
+"@parcel/watcher-win32-x64@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.npmjs.org/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.6.0.tgz"
+  integrity sha512-cA+/pXV2YkfxlIcXOQ5fSWqAzzPyD78/x5qbK/I0vUkrlYHA8TIz+MXjAbGouguKVSI4bOmkTSJ1/poVSsgt+A==
+
+"@parcel/watcher@^2.4.1":
+  version "2.6.0"
+  resolved "https://registry.npmjs.org/@parcel/watcher/-/watcher-2.6.0.tgz"
+  integrity sha512-7FNeNl8NCE7aINx7WXiKQrPYZWC/hvrTsmk6zmxbI7LTXE7hVek/n8AfVgpe2y82zl3w0HvCHN0bVKMBoJcC0w==
+  dependencies:
+    detect-libc "^2.0.3"
+    is-glob "^4.0.3"
+    node-addon-api "^7.0.0"
+    picomatch "^4.0.4"
+  optionalDependencies:
+    "@parcel/watcher-android-arm64" "2.6.0"
+    "@parcel/watcher-darwin-arm64" "2.6.0"
+    "@parcel/watcher-darwin-x64" "2.6.0"
+    "@parcel/watcher-freebsd-x64" "2.6.0"
+    "@parcel/watcher-linux-arm-glibc" "2.6.0"
+    "@parcel/watcher-linux-arm-musl" "2.6.0"
+    "@parcel/watcher-linux-arm64-glibc" "2.6.0"
+    "@parcel/watcher-linux-arm64-musl" "2.6.0"
+    "@parcel/watcher-linux-x64-glibc" "2.6.0"
+    "@parcel/watcher-linux-x64-musl" "2.6.0"
+    "@parcel/watcher-win32-arm64" "2.6.0"
+    "@parcel/watcher-win32-x64" "2.6.0"
+
 "@prettier/parse-srcset@^3.1.0":
   version "3.1.0"
   resolved "https://registry.npmjs.org/@prettier/parse-srcset/-/parse-srcset-3.1.0.tgz"
@@ -1805,6 +1833,11 @@ image-size@^2.0.4:
   resolved "https://registry.npmjs.org/image-size/-/image-size-2.0.4.tgz"
   integrity sha512-QRUkFFsRV/6fuESxb9Vkq+a0LkSrgKXuc2NEqfikiXxxN/G3tjWt5EVUlMaImRBZRZK/jRBEbYvpPYZL8t08Zw==
 
+immutable@^5.1.5:
+  version "5.2.1"
+  resolved "https://registry.npmjs.org/immutable/-/immutable-5.2.1.tgz"
+  integrity sha512-CgXNM1BhKqpMjFHTyqQSk09OWqzHNJ/U4BdeBgXoBdR2DdgBdOSv131cO1/YMgzopqnka3B/i949UaMLEKUxOA==
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
@@ -2090,6 +2123,11 @@ nlcst-to-string@^4.0.0:
   integrity sha512-YKLBCcUYKAg0FNlOBT6aI91qFmSiFKiluk655WzPF+DDMA02qIyy8uiRqI8QXtcFpEvll12LpL5MXqEmAZ+dcA==
   dependencies:
     "@types/nlcst" "^2.0.0"
+
+node-addon-api@^7.0.0:
+  version "7.1.1"
+  resolved "https://registry.npmjs.org/node-addon-api/-/node-addon-api-7.1.1.tgz"
+  integrity sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==
 
 node-fetch-native@^1.6.7:
   version "1.6.7"
@@ -2458,6 +2496,17 @@ sass-formatter@^0.8.0:
   dependencies:
     suf-log "^2.5.3"
 
+sass@*, sass@^1.108.2, sass@^1.70.0:
+  version "1.108.2"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.108.2.tgz"
+  integrity sha512-kugK8djotnG9HQRPTOf36asKYlxg8rWWsNLYHOgWDIVOiZQqlRfKBgF4XXM6kfw146kIDMvm57B4GIkvDSyTzA==
+  dependencies:
+    chokidar "^5.0.0"
+    immutable "^5.1.5"
+    source-map-js ">=0.6.2 <2.0.0"
+  optionalDependencies:
+    "@parcel/watcher" "^2.4.1"
+
 satteri@^0.10.5:
   version "0.10.5"
   resolved "https://registry.npmjs.org/satteri/-/satteri-0.10.5.tgz"
@@ -2574,7 +2623,7 @@ smol-toml@^1.9.1:
   resolved "https://registry.npmjs.org/smol-toml/-/smol-toml-1.9.1.tgz"
   integrity sha512-j7WyPdf0CJoutMzMoPLF/bVXHtKZIT9Rb4eGeEbWw8X2t5oirjPgpL+OpaENZrILYaXqYwnVH+qgUwVbl+pUJQ==
 
-source-map-js@^1.0.1, source-map-js@^1.2.1, source-map-js@^1.2.2:
+source-map-js@^1.0.1, source-map-js@^1.2.1, source-map-js@^1.2.2, "source-map-js@>=0.6.2 <2.0.0":
   version "1.2.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz"
   integrity sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==
