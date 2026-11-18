@@ -30,7 +30,7 @@
       "file": "projectsArchive.json",
       "sha256": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
       "unchanged": false,
-      "currentSha256": "fb8a8c2fda80bd886322bcde302cd57a26d02139d27528f04a0adaac13538a53",
+      "currentSha256": "93a44e966b950640bb6d171401d1acb4dfda6c6fa2a6dede4107dcae786ac19e",
       "changeNote": "Added ratings to unrated projects and a verified screenshot path."
     },
     {

@@ -1150,7 +1150,7 @@
       "date": "2024-03-05",
       "dateRaw": "45356.0",
       "projectType": "Custom Figma-to-WordPress Website",
-      "description": "Pixel-accurate Figma-to-WordPress website developed for Reyes Environmental through Epicsols using WordPress and Elementor. Built to clearly showcase environmental and construction services, drive quote requests, and deliver strong Core Web Vitals—achieving 93 desktop performance, 96 best practices, and zero layout shift (0 CLS).",
+      "description": "Figma-to-WordPress site built for Reyes Environmental with Elementor, achieving 93 desktop performance and 0 CLS.",
       "projectStatus": "Live",
       "screenshot": "/projects/wordpress/project-ss-reyesenvironmental.jpg",
       "pageSpeed": {
