@@ -1,0 +1,169 @@
+@media (max-width: 1050px) {
+  .testimonial-rail {
+    grid-auto-columns: calc((100% - 22px) / 2);
+  }
+}
+@media (max-width: 800px) {
+  .mobile-menu {
+    display: block;
+  }
+  .hero-divider {
+    display: none;
+  }
+  .hero-right {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .hero-metric {
+    min-width: 0;
+  }
+  .hero-metric strong {
+    min-width: 0;
+  }
+  .hero-right > .text-link {
+    grid-column: 1/-1;
+  }
+  .hero-metric .metric-label {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .hero-metric p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .testimonial-rail {
+    grid-auto-columns: 85%;
+  }
+  .review-inner figure {
+    min-height: 300px;
+  }
+  .review-toolbar .small-note {
+    max-width: 200px;
+  }
+  .site-header {
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 540px) {
+  .hero h1 {
+    font-size: clamp(34px, 9.5vw, 40px);
+  }
+  .hero-right {
+    gap: 14px;
+  }
+  .hero-metric strong {
+    font-size: 34px;
+  }
+  .hero-metric .metric-label {
+    font-size: 13px;
+  }
+  .hero-metric p {
+    font-size: 12px;
+  }
+  .hero-project {
+    height: auto;
+    aspect-ratio: 16/10;
+    padding: 8px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.045em;
+  }
+  .page-intro h1 {
+    font-size: clamp(30px, 8.2vw, 36px);
+  }
+  .hero-badges {
+    font-size: 13px;
+  }
+  .service-inner[data-slot="card-content"] {
+    padding: 24px;
+  }
+  .service-inner > p:first-of-type {
+    min-height: 0;
+  }
+  .service-top .eyebrow {
+    font-size: 12px;
+  }
+  .service-price {
+    font-size: 24px;
+  }
+  .testimonial-rail {
+    grid-auto-columns: 92%;
+    gap: 16px;
+  }
+  .review-inner[data-slot="card-content"] {
+    padding: 24px;
+  }
+  .review-inner blockquote {
+    font-size: 19px;
+  }
+  .review-inner figure {
+    min-height: 320px;
+  }
+  .review-toolbar {
+    gap: 12px;
+  }
+  .review-toolbar .small-note {
+    max-width: 190px;
+  }
+  .pagination {
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .pagination .button {
+    min-width: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .pagination span {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .client-card-top .eyebrow {
+    font-size: 13px;
+  }
+  .footer-bottom {
+    font-size: 13px;
+  }
+  .footer-wordmark {
+    font-size: clamp(33px, 11.8vw, 65px);
+  }
+  .tool-grid p {
+    font-size: 14px;
+  }
+  .tool-grid h3 {
+    font-size: 17px;
+  }
+  .contact-form {
+    padding: 22px;
+  }
+  .form-grid.spaced {
+    gap: 18px;
+  }
+  .facts-grid p {
+    font-size: 15px;
+  }
+  .architecture-row p {
+    font-size: 15px;
+  }
+  .check-list li {
+    font-size: 16px;
+  }
+  .project-status {
+    font-size: 14px;
+  }
+  .project-body p {
+    font-size: 15px;
+  }
+  .project-preview {
+    height: auto;
+    aspect-ratio: 1.6;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-rail {
+    scroll-behavior: auto !important;
+    scroll-snap-type: none;
+  }
+}

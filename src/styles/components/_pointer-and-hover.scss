@@ -1,0 +1,39 @@
+// Preserve the native cursor and keep its enhancement outside pointer hit testing.
+.pointer-feedback__halo:not([hidden]) {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 100;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 1px solid var(--link-accent);
+  border-radius: 50%;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+// Hover gives cards a visual response without implying that static cards are links.
+@media (hover: hover) and (pointer: fine) {
+  :is(.testimonial-card, .review-journal__entry, .tool-chip, .facts-grid article):hover {
+    background: var(--link-accent-soft);
+    border-color: var(--link-accent);
+  }
+
+  .selected-work .selected-card:hover {
+    border-color: var(--link-accent);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :is(.testimonial-card, .review-journal__entry, .tool-chip, .facts-grid article) {
+    transition: background-color 180ms ease, border-color 180ms ease;
+  }
+
+  .selected-work .selected-image {
+    transition: transform 220ms ease;
+  }
+
+  .selected-work .selected-card:is(:hover, :focus-within) .selected-image {
+    transform: scale(1.035);
+  }
+}

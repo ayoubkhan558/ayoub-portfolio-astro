@@ -1,0 +1,166 @@
+.about-hero .portrait {
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+.compact-toolbox {
+  border-top: 1px solid var(--border);
+}
+.compact-toolbox article {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.compact-toolbox article > div {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.toolbox-index {
+  font-size: 12px;
+  color: var(--link-accent);
+  font-family: var(--font-mono);
+}
+.compact-toolbox h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.compact-toolbox ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.compact-toolbox li {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.skills-title {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 48px;
+}
+.skills-title h3 {
+  font-size: 24px;
+}
+.skills-title p {
+  font-size: 14px;
+}
+.marquee-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.marquee-toolbar p {
+  margin: 0;
+  max-width: 65ch;
+}
+.marquee-toggle {
+  flex-shrink: 0;
+}
+.marquee-toggle[hidden] {
+  display: none;
+}
+.marquee-viewport {
+  overflow: hidden;
+  padding-block: 4px;
+}
+.marquee-track {
+  display: block;
+}
+.marquee-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.marquee-group[aria-hidden="true"] {
+  display: none;
+}
+.tool-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--background);
+  flex-shrink: 0;
+}
+.tool-chip h3 {
+  font-size: 15px;
+  letter-spacing: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+.tool-chip .tool-logo,
+.tool-chip .tool-monogram {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  object-fit: contain;
+}
+[data-skills-marquee][data-ready] .marquee-track {
+  display: flex;
+  width: max-content;
+  animation: tools-drift 130s linear infinite;
+}
+[data-skills-marquee][data-ready] .marquee-group {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 0 12px;
+  padding-right: 12px;
+}
+[data-skills-marquee][data-ready] .reverse {
+  animation-direction: reverse;
+}
+[data-skills-marquee][data-paused="true"] .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes tools-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.back-to-top {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  z-index: 30;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 2px 12px #00000014;
+}
+.back-to-top:hover {
+  background: var(--link-accent);
+  color: var(--background);
+}
+.back-to-top[data-ready] {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.back-to-top[data-ready].is-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}

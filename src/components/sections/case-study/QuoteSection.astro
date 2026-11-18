@@ -1,13 +1,33 @@
 ---
+import { UserRound } from "lucide-react";
+import portfolio from "../../../data/portfolio.json";
+import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
+
+interface Props {
+  study: CaseStudyDetailData;
+  next: CaseStudyDetailData;
+}
+
 const { study, next } = Astro.props;
+const clientName = study.slug === "kingsre" ? "Kings RE" : study.client.trim();
+const avatar = portfolio.clients.find(
+  (client) => client.name.toLowerCase() === clientName.toLowerCase(),
+)?.avatar;
 ---
 
 <section class="case-study-quote-section wrap section">
   <figure class="large-quote">
     <blockquote>“{study.testimonial.quote}”</blockquote>
-    <figcaption>
-      <strong>{study.testimonial.author}</strong>
-      <span>{study.testimonial.meta}</span>
+    <figcaption class="large-quote__attribution">
+      <span class="testimonial__avatar" aria-hidden="true">
+        {avatar ? (
+          <img src={avatar} alt="" width="48" height="48" loading="lazy" decoding="async" />
+        ) : <UserRound size={24} />}
+      </span>
+      <div>
+        <strong>{study.testimonial.author}</strong>
+        <span>{study.testimonial.meta}</span>
+      </div>
     </figcaption>
   </figure>
   <div class="next-case">

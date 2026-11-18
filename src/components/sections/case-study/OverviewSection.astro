@@ -1,5 +1,7 @@
 ---
 import Heading from "../../portfolio/Heading.astro";
+import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
+interface Props { study: CaseStudyDetailData }
 const { study } = Astro.props;
 ---
 
@@ -9,15 +11,4 @@ const { study } = Astro.props;
     title="Project overview"
     subtitle={study.overview}
   />
-  <div class="facts-grid">
-    {study.facts.map((f) => (
-      <article>
-        <>
-          <span class="eyebrow">{f.label}</span>
-          <p>{f.value}</p>
-        </>
-      </article>
-    ))}
-  </div>
-  <p class="result-highlight">{study.listing.achievement}</p>
 </section>

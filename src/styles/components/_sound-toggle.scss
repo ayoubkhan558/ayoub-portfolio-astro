@@ -1,0 +1,25 @@
+// Keep the toggle off touch layouts and clear of the back-to-top control.
+.pointer-feedback__toggle:not([hidden]) {
+  display: none;
+
+  @media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: auto auto max(18px, env(safe-area-inset-bottom)) 18px;
+    z-index: 40;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--background);
+    color: var(--foreground);
+    cursor: pointer;
+  }
+}
+
+.pointer-feedback__toggle[aria-pressed="true"] .pointer-feedback__icon--off,
+.pointer-feedback__toggle[aria-pressed="false"] .pointer-feedback__icon--on {
+  display: none;
+}

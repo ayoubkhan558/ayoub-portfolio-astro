@@ -1,0 +1,58 @@
+// A single link covers the case study card and has one keyboard stop.
+.case-card__link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.case-card__link:focus-visible,
+.selected-card:focus-within {
+  outline: 2px solid var(--link-accent);
+  outline-offset: -2px;
+}
+
+.case-card__link:is(:hover, :focus-visible) .round-arrow {
+  background: var(--link-accent);
+  color: var(--background);
+}
+
+.selected-work .selected-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 16px 24px;
+  padding: clamp(16px, 2.5vw, 24px);
+  cursor: pointer;
+}
+
+.selected-work .selected-media {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  background: var(--muted);
+}
+
+.selected-work .selected-image {
+  display: block;
+}
+
+.selected-work__copy {
+  min-width: 0;
+}
+
+// Cap the preview width so project details have more room on desktop.
+@media (min-width: 601px) {
+  .selected-work .selected-card {
+    grid-template-columns: minmax(0, clamp(160px, 23vw, 260px)) minmax(0, 1fr);
+  }
+}
+
+.selected-work__opener {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}

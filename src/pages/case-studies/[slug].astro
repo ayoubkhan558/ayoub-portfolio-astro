@@ -34,6 +34,14 @@ const next = all[(i + 1) % all.length];
     <div class="portfolio-background">
       <Intro label={s.eyebrow} title={s.headline} description={s.tagline}>
         <p class="case-detail__result"><strong>Result:</strong> {s.listing.result}</p>
+        <dl class="case-detail__facts">
+          {s.facts.map((fact) => (
+            <div>
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
         <div class="actions">
           <a
             class="button"

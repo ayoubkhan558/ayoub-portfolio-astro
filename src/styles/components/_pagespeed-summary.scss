@@ -1,0 +1,27 @@
+// Keep the score and full metric labels on one line, even in the project drawer.
+// The row can scroll horizontally by touch or keyboard if it is wider than its container.
+.pagespeed-report__summary-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+
+  .pagespeed-score-row {
+    flex: none;
+    margin: 0;
+  }
+
+  .pagespeed-score {
+    width: 48px;
+  }
+
+  .pagespeed-metrics {
+    display: flex;
+    flex: none;
+  }
+
+  .pagespeed-metric {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,24 @@
+
+.service-card__pricing {
+  margin-block: 4px 18px;
+
+  .service-price { margin: 0; }
+  p { margin: 4px 0 0; }
+}
+
+.service-card__inclusions {
+  margin-bottom: 24px;
+
+  p { margin: 6px 0 0; }
+}
+
+.project-card .project-body h2 {
+  font-size: clamp(20px, 2vw, 25px);
+}
+
+.project-card .project-body > p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

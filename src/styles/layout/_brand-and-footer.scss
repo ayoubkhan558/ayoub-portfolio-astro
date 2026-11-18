@@ -1,0 +1,36 @@
+/* v1.2 — requested component refinements. Original source records are untouched. */
+.brand {
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1;
+}
+.brand-mark {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1;
+  transform: none;
+}
+.brand > span:last-child {
+  line-height: 1;
+  position: relative;
+  top: -2px;
+}
+.site-header .brand {
+  align-self: center;
+}
+.site-footer .brand {
+  align-items: baseline;
+}
+.portfolio-footer-wordmark {
+  color: var(--foreground);
+  overflow: hidden;
+  line-height: 0;
+}
+.portfolio-footer-wordmark svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.site-footer {
+  padding-bottom: 0;
+}

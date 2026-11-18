@@ -109,31 +109,10 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       alt={`${title} website preview`}
       class="project-preview"
     />
-    <span
-      class:list={[
-        "project-status",
-        p.projectStatus === "Live" ? "is-live" : "is-legacy",
-      ]}
-    >
-      {p.projectStatus || "Status not recorded"}
-    </span>
-    {p.company && <span class="delivery-badge">Delivered at {p.company}</span>}
   </div>
   <div class="project-body">
     <h2>{title}</h2>
     <p>{description}</p>
-    <div class="tags">
-      {stack.map((tool) => {
-        const logo = getAsset(tool.logo);
-        return logo ? (
-          <span class="project-stack-logo" title={tool.name}>
-            <img src={logo.src} alt={tool.name} loading="lazy" decoding="async" />
-          </span>
-        ) : (
-          <span>{tool.name}</span>
-        );
-      })}
-    </div>
     <div class="project-links card-link-row">
       <button
         type="button"
@@ -201,6 +180,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       />
       <div class="tags spaced">
         <span>{p.projectStatus || "Status not recorded"}</span>
+        {p.company && <span>Delivered at {p.company}</span>}
         {stack.map((tool) => {
           const logo = getAsset(tool.logo);
           return logo ? (

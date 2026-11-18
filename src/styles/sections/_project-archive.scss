@@ -1,0 +1,112 @@
+.project-toolbar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.project-toolbar label,
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 500;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--foreground);
+  padding: 11px 14px;
+  font-size: 15px;
+}
+textarea {
+  resize: vertical;
+  min-height: 155px;
+}
+.project-count {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  margin: 20px 0 30px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--card);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 620px;
+}
+.project-preview {
+  width: 100%;
+  aspect-ratio: 1.6;
+  object-fit: cover;
+  object-position: top;
+}
+.project-body {
+  padding: 24px;
+}
+.project-body h2 {
+  font-size: 24px;
+}
+.project-body p {
+  font-size: 14px;
+}
+.project-body details {
+  margin-top: 18px;
+  font-size: 13px;
+}
+.project-body summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 0;
+}
+.project-body .value-object {
+  grid-template-columns: 1fr;
+}
+.project-body .value-tree p {
+  font-size: 13px;
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.project-status {
+  font-size: 11px;
+  margin-bottom: 12px;
+  color: var(--muted-foreground);
+}
+.project-grid [hidden],
+[hidden] {
+  display: none !important;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+.pagination span {
+  font-size: 13px;
+}
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+}

@@ -1,0 +1,17 @@
+/* Reviewed Portfolio component integration — data lives only in src/data. */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+.button {
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
+.button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}

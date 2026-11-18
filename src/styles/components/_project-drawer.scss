@@ -1,0 +1,103 @@
+.project-card {
+  cursor: pointer;
+  position: relative;
+}
+.project-card .project-open {
+  margin-top: 20px;
+  width: 100%;
+}
+.project-card .project-preview {
+  width: 100%;
+}
+.project-drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  width: min(640px, 100vw);
+  max-width: 100vw;
+  max-height: 100dvh;
+  height: 100dvh;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--border);
+  color: var(--foreground);
+  background: var(--background);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: -20px 0 80px #0003;
+  cursor: default;
+}
+.project-drawer::backdrop {
+  background: #1119;
+  backdrop-filter: blur(3px);
+}
+.project-drawer[open] {
+  animation: drawer-enter 0.22s ease-out;
+}
+@keyframes drawer-enter {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.drawer-open {
+  overflow: hidden;
+}
+.drawer-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+.drawer-close {
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+.drawer-content {
+  padding: 28px;
+}
+.drawer-content h2 {
+  font-size: 32px;
+  margin: 24px 0 16px;
+}
+.drawer-image {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+}
+.drawer-content .value-object {
+  grid-template-columns: 1fr;
+}
+.drawer-content .value-tree {
+  font-size: 15px;
+}
+.case-detail > section:nth-of-type(odd) {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 64px 48px;
+}
+.case-detail > section:nth-of-type(even) {
+  border-top: 1px solid var(--border);
+  padding-top: 64px;
+}
+.case-detail > section {
+  margin-block: 64px;
+}
+.case-detail .two-grid > div:first-child {
+  padding-right: 24px;
+}
+.case-detail .two-grid > div:last-child {
+  border-left: 1px solid var(--border);
+  padding-left: 32px;
+}

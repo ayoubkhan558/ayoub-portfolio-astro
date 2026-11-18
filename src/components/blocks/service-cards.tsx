@@ -1,6 +1,5 @@
 import {
   ArrowUpRight,
-  Check,
   Code2,
   Workflow,
   PanelsTopLeft,
@@ -13,15 +12,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type portfolio from "@/data/portfolio.json";
-
-const serviceBestFit = [
-  "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
-  "A good fit if your team spends time sorting requests or drafting similar replies and can review what the AI produces.",
-  "Best when your business is good, but the website makes prospects hesitate or compare you unfavorably with competitors.",
-  "Best when the website mostly exists, but users hit friction before they inquire, book, buy, or trust the brand.",
-  "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
-  "Best when the site is live but still needs steady iteration, technical care, and quick changes without starting a new project every time.",
-];
 
 /** Portfolio Pricing/Card/Button block. Portfolio services are not subscription plans. */
 export function ServiceCards({
@@ -79,9 +69,6 @@ export function ServiceCards({
                   return <Icon aria-hidden="true" size={24} />;
                 })()}
               </div>
-              <span className="service-index">
-                {String(i + 1).padStart(2, "0")}
-              </span>
               {s.featured && (
                 <Badge variant="outline" className="tag">
                   Featured
@@ -89,32 +76,20 @@ export function ServiceCards({
               )}
             </div>
             <h3 id={`${idPrefix}-${i}`}>{s.name}</h3>
-            <p><strong>What’s included:</strong> {s.description}</p>
-            <div className="investment-band">
-              <span className="eyebrow">Pricing</span>
+            <div className="service-card__pricing">
               <div className="service-price">
                 {s.price}
                 {s.period && <small>{s.period}</small>}
               </div>
               <p className="small-note">{s.timeline}</p>
             </div>
-            <ul className="service-features">
-              {s.features.map((f) => (
-                <li key={f}>
-                  <Check size={16} aria-hidden="true" />
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-            <details>
-              <summary>Deliverables & project fit</summary>
-              <p>{s.whatYouGet}</p>
-              <p>{serviceBestFit[i]}</p>
-            </details>
+            <div className="service-card__inclusions">
+              <strong>What’s included</strong>
+              <p>{s.description}</p>
+            </div>
             <Button
               asChild
-              variant="outline"
-              className="button card-action outline"
+              className="button card-action"
             >
               <a
                 href={s.href.includes("subject=") ? s.href : `${s.href}${s.href.includes("?") ? "&" : "?"}subject=${encodeURIComponent(s.name)}`}

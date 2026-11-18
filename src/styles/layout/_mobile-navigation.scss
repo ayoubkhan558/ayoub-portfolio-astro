@@ -1,0 +1,39 @@
+.menu-toggle {
+  display: none;
+}
+.mobile-nav[hidden] {
+  display: none;
+}
+.mobile-nav {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px #00000012;
+}
+.mobile-nav a {
+  display: block;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 12px;
+  background: var(--background);
+  border: 2px solid var(--foreground);
+  border-radius: 8px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 5px;
+}

@@ -1,0 +1,25 @@
+/* Visible field boundaries on both themes, independent of the subtle card borders. */
+.project-toolbar input,
+.project-toolbar select,
+.contact-form input:not([name="_gotcha"]),
+.contact-form select,
+.contact-form textarea {
+  border-color: var(--muted-foreground);
+}
+
+.footer-wordmark {
+  color: #8a8a8a;
+}
+.dark .footer-wordmark {
+  color: #777;
+}
+
+/* Fallback tiles must stay legible even inside brand/logo tiles. */
+.asset-fallback {
+  color: #444 !important;
+  background: linear-gradient(145deg, #eee8d7, #f4f4f4) !important;
+}
+.dark .asset-fallback {
+  color: #ddd !important;
+  background: linear-gradient(145deg, #353329, #202020) !important;
+}

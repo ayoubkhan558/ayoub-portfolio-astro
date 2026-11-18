@@ -1,0 +1,21 @@
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.section-heading h2 {
+  margin-bottom: 0;
+  max-width: 560px;
+}
+.section-heading p {
+  max-width: 520px;
+  margin: 0;
+  font-size: 17px;
+}
+.section-end {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

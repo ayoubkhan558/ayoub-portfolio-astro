@@ -54,6 +54,9 @@ const projects = sortProjectsByLiveStatus(archive.projects);
     not a current uptime check.
   </p>
   </div>
+
+  <hr ><br>
+
   <div class="project-grid" id="project-grid">
     {projects.map((p, index) => (
       <ProjectCard project={p} index={index} />

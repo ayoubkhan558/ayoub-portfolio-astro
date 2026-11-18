@@ -1,0 +1,68 @@
+.service-grid-v2 .service-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card);
+  position: relative;
+}
+.service-grid-v2 .service-card.featured {
+  background: var(--card);
+  border-top: 3px solid #6b927a;
+}
+.service-grid-v2 .service-inner {
+  padding: 28px;
+}
+.service-grid-v2 .service-top {
+  align-items: center;
+  margin-bottom: 22px;
+}
+.service-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #e8f0ea;
+  color: #325a40;
+}
+.service-index {
+  font-size: 14px;
+  font-family: monospace;
+  color: var(--muted-foreground);
+  margin-left: auto;
+}
+.service-grid-v2 .service-top .tag {
+  display: none;
+}
+.service-grid-v2 h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.service-grid-v2 .investment-band {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0 16px;
+  margin-top: 16px;
+  background: transparent;
+}
+.service-grid-v2 .service-price {
+  margin: 8px 0;
+  font-size: 25px;
+}
+.service-grid-v2 .investment-band p {
+  margin: 0;
+  font-size: 14px;
+}
+.service-grid-v2 .service-card:hover {
+  border-color: #6b927a;
+  background: color-mix(in oklch, #6b927a 5%, var(--card));
+}
+.service-grid-v2 .service-card:hover .service-symbol {
+  background: #325a40;
+  color: #fff;
+}
+.dark .service-symbol {
+  background: #21362a;
+  color: #b1d6bd;
+}

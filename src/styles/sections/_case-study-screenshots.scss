@@ -1,0 +1,30 @@
+.screenshot-window {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 460px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.screenshot-window .full-page-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  transition: transform 0.5s ease-out;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .screenshot-window:hover .full-page-image,
+  .screenshot-window:focus-visible .full-page-image {
+    transform: translateY(var(--screenshot-distance, 0px));
+    transition: transform var(--screenshot-duration, 5s) linear;
+  }
+}
+@media (min-width: 801px) {
+  .project-drawer .project-body {
+    padding: 0;
+  }
+}

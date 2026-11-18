@@ -1,0 +1,45 @@
+.portfolio-faq [data-slot="accordion-trigger"] {
+  letter-spacing: normal;
+  font-weight: 500;
+}
+.home-about .section-heading {
+  display: block;
+}
+.home-about .section-heading > p {
+  max-width: 56ch;
+  margin-top: 20px;
+}
+.tool-monogram {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+.form-message {
+  margin-block: 20px;
+}
+.project-media .project-status.is-legacy {
+  background: #faf3e6;
+  color: #76501a;
+  border-color: #d9c49d;
+}
+.faq-introduction h2 {
+  margin-top: 16px;
+  line-height: 1.15;
+}
+.faq-introduction p {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media (min-width: 1024px) {
+  .faq-introduction {
+    top: 32px;
+    align-self: start;
+  }
+}

@@ -1,0 +1,75 @@
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 70px;
+  align-items: center;
+}
+.portrait {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px;
+}
+.about-hero h2 {
+  font-size: 40px;
+}
+.about-hero .small-note {
+  margin-top: 22px;
+}
+.signature {
+  font-size: 24px;
+  margin-top: 28px;
+  color: var(--foreground);
+}
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+.timeline article {
+  border-top: 1px dashed var(--border);
+  padding-top: 22px;
+}
+.timeline h3 {
+  font-size: 21px;
+}
+.timeline p {
+  font-size: 14px;
+}
+.experience-list article {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
+  padding: 32px 0;
+  border-top: 1px dashed var(--border);
+}
+.company-logo {
+  max-width: 90px;
+  max-height: 60px;
+  object-fit: contain;
+}
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+.tool-grid article {
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 15px;
+}
+.tool-grid h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.tool-grid p {
+  font-size: 13px;
+}
+.tool-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}

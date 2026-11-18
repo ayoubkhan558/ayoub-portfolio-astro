@@ -1,0 +1,129 @@
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.case-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+}
+.case-image-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.case-image {
+  aspect-ratio: 1.35;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s;
+}
+.case-card:hover .case-image {
+  transform: scale(1.025);
+}
+.round-arrow {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--background);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  border: 1px solid var(--border);
+}
+.case-body {
+  padding: 25px;
+}
+.case-body h3 {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+.case-body p {
+  font-size: 14px;
+}
+.case-result {
+  border-top: 1px dashed var(--border);
+  padding-top: 16px;
+  margin: 18px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.tags span,
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--muted-foreground);
+  overflow-wrap: anywhere;
+}
+.two-grid,
+.three-grid {
+  display: grid;
+  gap: 32px;
+}
+.two-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.three-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.plain-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+}
+.plain-card p:last-child {
+  margin-bottom: 0;
+}
+.plain-card h3 {
+  font-size: 23px;
+}
+.linked-card:hover {
+  background: var(--muted);
+}
+.step-number {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted-foreground);
+  display: block;
+  margin-bottom: 25px;
+}
+.check-list {
+  list-style: none;
+  margin: 22px 0;
+  padding: 0;
+}
+.check-list li {
+  position: relative;
+  padding: 9px 0 9px 25px;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+}
+.check-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  color: var(--foreground);
+  font-size: 13px;
+}
+.industries {
+  justify-content: center;
+  margin-top: 48px;
+}

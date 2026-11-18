@@ -1,0 +1,16 @@
+// Give the final strip inside the hero background room before the next section.
+.home-page .home-trust-section {
+  padding-bottom: clamp(40px, 6vw, 88px);
+}
+
+// Keep the subtitle with the testimonial heading so it reads as one introduction.
+.home-page #proof .section-heading {
+  display: block;
+  margin-inline: 0;
+  text-align: left;
+
+  h2,
+  > p {
+    margin-inline: 0;
+  }
+}

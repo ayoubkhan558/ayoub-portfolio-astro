@@ -1,0 +1,35 @@
+.site-header {
+  align-items: center;
+}
+.mobile-menu {
+  display: none;
+  position: static;
+}
+.mobile-menu summary {
+  list-style: none;
+}
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+.mobile-menu[open] .menu-toggle {
+  background: var(--muted);
+}
+.mobile-menu .mobile-nav {
+  max-height: calc(100dvh - 140px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.mobile-nav a[aria-current="page"] {
+  font-weight: 700;
+  background: var(--muted);
+  border-radius: 7px;
+}
+.theme-sun {
+  display: none;
+}
+.dark .theme-sun {
+  display: block;
+}
+.dark .theme-moon {
+  display: none;
+}

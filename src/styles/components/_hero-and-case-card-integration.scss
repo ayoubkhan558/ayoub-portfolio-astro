@@ -1,0 +1,59 @@
+.hero-right {
+  position: relative;
+  border-left: 0;
+}
+.hero-divider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  opacity: 0.35;
+}
+.hero-metric .metric-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 4px;
+}
+.hero-project {
+  height: auto;
+  aspect-ratio: 16/9;
+  max-height: 650px;
+  object-fit: contain;
+  background: var(--muted);
+  padding: 14px;
+}
+.case-card-shell {
+  min-width: 0;
+}
+.case-card[data-slot="card"] {
+  height: 100%;
+  padding: 0;
+  gap: 0;
+  box-shadow: none;
+}
+.case-body[data-slot="card-content"] {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+.case-body > .text-link {
+  margin-top: auto;
+}
+.case-result {
+  margin-top: auto;
+}
+.case-body .tags {
+  margin-bottom: 0;
+}
+.case-body h3 {
+  line-height: 1.2;
+}
+.case-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+}

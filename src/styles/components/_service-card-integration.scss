@@ -1,0 +1,54 @@
+.service-card[data-slot="card"] {
+  padding: 0;
+  gap: 0;
+  display: block;
+  box-shadow: none;
+}
+.service-inner[data-slot="card-content"] {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+}
+.service-inner > .button {
+  width: 100%;
+  margin-top: auto;
+}
+.service-inner > p:first-of-type {
+  min-height: 82px;
+}
+.service-top {
+  min-height: 44px;
+  gap: 12px;
+}
+.service-top .tag {
+  flex-shrink: 0;
+}
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 22px;
+}
+.service-features li {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+  padding: 8px 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+}
+.service-features svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--foreground);
+}
+.service-card details > summary {
+  line-height: 1.5;
+  padding-block: 10px;
+  min-height: 44px;
+}
+.service-card details p {
+  font-size: 15px;
+}

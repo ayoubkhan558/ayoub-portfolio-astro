@@ -41,9 +41,10 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
       })),
   ];
   if (journal) {
-    return (
-      <div className="review-journal">
-        {reviews.map((review) => (
+    const featuredIds = ["review-5gstore-01", "review-serveekay-01", "review-carptrac-01"];
+    const featured = reviews.filter((review) => featuredIds.includes(review.id));
+    const remaining = reviews.filter((review) => !featuredIds.includes(review.id));
+    const renderQuote = (review: (typeof reviews)[number]) => (
           <figure className="review-journal__entry" key={review.id} id={review.id}>
             <figcaption className="review-journal__person">
               <ReviewPortrait src={review.avatar} />
@@ -51,7 +52,16 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
             </figcaption>
             <blockquote className="review-journal__quote">{review.quote}</blockquote>
           </figure>
-        ))}
+    );
+    return (
+      <div className="review-journal">
+        {featured.map(renderQuote)}
+        {remaining.length > 0 && (
+          <details className="review-journal__more">
+            <summary>Read {remaining.length} more testimonials</summary>
+            {remaining.map(renderQuote)}
+          </details>
+        )}
       </div>
     );
   }

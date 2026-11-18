@@ -1,0 +1,37 @@
+.portfolio-faq [data-slot="accordion-trigger"] {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 25px 4px;
+  min-height: 72px;
+  border-radius: 0;
+  text-align: left;
+}
+.portfolio-faq [data-slot="accordion-item"] > h3 {
+  display: flex;
+  margin: 0;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.portfolio-faq [data-slot="accordion-trigger"] svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.portfolio-faq [data-slot="accordion-content"] {
+  font-size: 16px;
+  line-height: 1.7;
+  padding-inline: 4px;
+}
+.portfolio-faq [data-slot="accordion-content"] > div {
+  padding-bottom: 28px;
+  max-width: 70ch;
+}
+.portfolio-faq [data-slot="accordion-item"] {
+  border-bottom: 1px solid var(--border);
+}

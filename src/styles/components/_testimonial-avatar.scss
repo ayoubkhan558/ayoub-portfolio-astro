@@ -1,0 +1,30 @@
+// Maintain the same portrait footprint whether the client photo loads or falls back.
+.testimonial__avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  height: 48px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--muted-foreground);
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  img[hidden] {
+    display: none;
+  }
+}
+
+.portfolio-faq [data-slot="accordion-trigger"]:is(:hover, :focus-visible),
+.faq-list summary:is(:hover, :focus-visible) {
+  color: var(--link-accent);
+}

@@ -1,0 +1,27 @@
+.site-footer {
+  padding-bottom: 18px;
+}
+.footer-wordmark {
+  line-height: 1.25;
+}
+
+.dark .tool-logo {
+  background: #fff;
+  padding: 5px;
+  border-radius: 6px;
+}
+.dark .company-logo,
+.dark .branding-logo {
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+.dark .logo-strip .light-logo {
+  display: block;
+  background: #fff;
+  padding: 7px;
+  border-radius: 5px;
+}
+.dark .logo-strip .dark-logo {
+  display: none;
+}

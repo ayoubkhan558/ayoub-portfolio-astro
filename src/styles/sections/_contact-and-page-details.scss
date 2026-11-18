@@ -1,0 +1,168 @@
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 60px;
+  align-items: start;
+}
+
+// Keep the form first in the reading order and place it beside the contact details on wide screens.
+@media (min-width: 801px) {
+  .contact-layout__form {
+    grid-area: 1 / 2;
+    min-width: 0;
+  }
+
+  .contact-layout > .contact-info {
+    grid-area: 1 / 1;
+  }
+}
+
+.legal-toc {
+  padding-block: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-toc__links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal-toc__target {
+  scroll-margin-block-start: 24px;
+}
+
+.faq-topics__group + .faq-topics__group {
+  margin-top: 40px;
+}
+
+.case-detail__result {
+  max-width: 52ch;
+  margin-block: 20px;
+  color: var(--foreground);
+  font-size: clamp(19px, 2.4vw, 28px);
+  line-height: 1.4;
+}
+
+.case-detail__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-block: 12px;
+  border-block: 1px solid var(--border);
+  font-size: 14px;
+
+  dt { color: var(--muted-foreground); }
+  dd { margin: 2px 0 0; }
+}
+
+.service-summary {
+  display: grid;
+  gap: 16px;
+  margin-block: 24px;
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 4px 0 0;
+  }
+}
+
+// Keep desktop filters with the list without covering the short mobile viewport.
+@media (min-width: 1024px) and (min-height: 650px) {
+  .project-archive__controls {
+    // position: sticky;
+    // top: 0;
+    // z-index: 5;
+    padding-block: 8px;
+    // background: var(--background);
+  }
+
+  .project-archive__controls .project-toolbar {
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .project-archive__controls :is(input, select) {
+    min-height: 38px;
+    padding-block: 5px;
+  }
+
+  .project-archive__controls .project-count {
+    margin-block: 4px 0;
+  }
+}
+.contact-info h2 {
+  font-size: 32px;
+}
+.contact-link {
+  display: block;
+  border-bottom: 1px dashed var(--border);
+  padding: 18px 0;
+  overflow-wrap: anywhere;
+}
+.contact-link span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.contact-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 35px;
+}
+.contact-form h2 {
+  font-size: 28px;
+}
+.contact-form p {
+  font-size: 14px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.form-field {
+  margin-top: 18px;
+}
+.form-grid .form-field {
+  margin-top: 0;
+}
+.contact-form .button {
+  width: 100%;
+  margin-top: 25px;
+}
+.form-message {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  margin-top: 20px;
+}
+.form-message.error {
+  color: #a72c27;
+}
+.dark .form-message.error {
+  color: #ffaaa2;
+}
+.contact-form .consent {
+  font-size: 12px;
+  margin-top: 18px;
+}
+.contact-form .consent a {
+  text-decoration: underline;
+}
+.contact-form input[name="_gotcha"] {
+  display: none;
+}
+.contact-steps {
+  margin: 30px 0;
+}
+.contact-steps li {
+  margin-bottom: 12px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}

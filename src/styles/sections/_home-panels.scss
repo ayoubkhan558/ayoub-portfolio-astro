@@ -1,0 +1,122 @@
+.home-about {
+  display: grid;
+  grid-template-columns: 1.25fr 0.8fr;
+  gap: 72px;
+  align-items: center;
+}
+.home-about .section-heading {
+  margin-bottom: 28px;
+}
+.home-about figure {
+  margin: 0;
+}
+.home-portrait {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.home-about figcaption {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  margin-top: 16px;
+}
+.resource-panel {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--muted);
+}
+.resource-panel h2 {
+  margin-top: 12px;
+}
+.resource-panel p {
+  max-width: 640px;
+  margin-bottom: 0;
+}
+.resource-panel .button {
+  flex-shrink: 0;
+}
+.selected-media,
+.project-media {
+  position: relative;
+  overflow: hidden;
+}
+.selected-card .selected-media {
+  padding: 0;
+}
+.delivery-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  border: 1px solid #d7d4c9;
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: #fffdf7;
+  color: #2c302a;
+  font-size: 12px;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px #0000000d;
+  max-width: calc(100% - 32px);
+}
+.project-media .project-status {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  line-height: 1.4;
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #edf7f0;
+  color: #235d3c;
+  border: 1px solid #b7d5c1;
+  font-size: 12px;
+  max-width: 65%;
+}
+.project-media .delivery-badge {
+  top: auto;
+  bottom: 14px;
+}
+.case-image-link,
+.selected-media {
+  isolation: isolate;
+}
+.case-image-link .delivery-badge {
+  top: 14px;
+  left: 14px;
+}
+.case-card,
+.selected-card,
+.plain-card,
+.project-card,
+.tool-slide article {
+  transition:
+    border-color 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+.case-card:hover,
+.selected-card:hover,
+.project-card:hover,
+.plain-card:hover {
+  border-color: #a5bcae;
+  box-shadow: 0 8px 32px #173d2610;
+}
+.text-link:hover,
+.footer-column a:hover,
+.footer-bottom a:hover,
+.desktop-nav a:hover {
+  color: #367453;
+}
+.dark .text-link:hover,
+.dark .footer-column a:hover,
+.dark .footer-bottom a:hover,
+.dark .desktop-nav a:hover {
+  color: #9acbaa;
+}

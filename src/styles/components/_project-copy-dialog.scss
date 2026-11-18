@@ -1,0 +1,136 @@
+.project-archive__copy {
+  margin-top: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-copy-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  width: min(460px, calc(100vw - 32px));
+  max-width: none;
+  max-height: min(90dvh, 700px);
+  padding: 0;
+  color: var(--foreground);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 24px 80px #0004;
+}
+.project-copy-dialog::backdrop {
+  background: #1119;
+  backdrop-filter: blur(3px);
+}
+.project-copy-panel {
+  overflow: auto;
+  max-height: min(90dvh, 700px);
+}
+@media (max-width: 600px) {
+  .pagespeed-report {
+    margin-block: 12px;
+    padding: 12px;
+  }
+  .pagespeed-header h3 {
+    font-size: 16px;
+  }
+  .pagespeed-device {
+    padding-top: 12px;
+  }
+  .pagespeed-device h4 {
+    margin-bottom: 8px;
+  }
+  .pagespeed-score-row {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .pagespeed-score {
+    width: 52px;
+  }
+  .pagespeed-score > span {
+    font-size: 17px;
+  }
+  .pagespeed-score-label {
+    font-size: 13px;
+  }
+  .pagespeed-metric {
+    padding: 7px 8px;
+  }
+  .pagespeed-metric dd {
+    font-size: 13px;
+  }
+  .pagespeed-footer {
+    margin-top: 10px;
+    padding-top: 9px;
+  }
+}
+.project-copy-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+.project-copy-header .eyebrow {
+  margin-bottom: 6px;
+}
+.project-copy-header h2 {
+  margin: 0;
+  font-size: 23px;
+}
+.project-copy-close {
+  min-height: 42px;
+  padding: 8px 14px;
+}
+.project-copy-fields {
+  display: grid;
+  gap: 18px;
+  padding: 22px 24px 24px;
+}
+.project-copy-fields > label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.project-copy-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.project-copy-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.project-copy-options input {
+  width: 18px;
+  min-height: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+.project-copy-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+.project-copy-status {
+  min-height: 22px;
+  margin: -4px 0 0;
+  font-size: 13px;
+}
+.project-copy-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
