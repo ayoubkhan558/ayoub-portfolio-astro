@@ -15,6 +15,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
   id="archive"
   data-projects-per-page={siteSettings.projectsPerPage}
 >
+  <div class="project-archive__controls">
   <form class="project-toolbar" id="project-filters" role="search">
     <label for="project-search">
       Search projects
@@ -52,6 +53,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
     {projects.length} projects · status labels are from the original portfolio,
     not a current uptime check.
   </p>
+  </div>
   <div class="project-grid" id="project-grid">
     {projects.map((p, index) => (
       <ProjectCard project={p} index={index} />
@@ -76,7 +78,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
   <div class="project-copy-tools">
     <button
       type="button"
-      class="button project-copy-trigger"
+      class="text-link project-archive__copy"
       id="open-project-copy"
       aria-haspopup="dialog"
       aria-controls="project-copy-dialog"
@@ -95,7 +97,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
         <rect x="8" y="8" width="13" height="13" rx="2"></rect>
         <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path>
       </svg>
-      Copy links
+      Copy project links
     </button>
     <dialog
       class="project-copy-dialog"

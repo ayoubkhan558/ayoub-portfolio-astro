@@ -1,18 +1,18 @@
 export const painPoints = [
-  "Your Visitors Drop In, But Don't Engage",
-  "Your Website Lacks Uniqueness",
-  "Your Competitor Stealing the Spotlight",
+  "People visit your site but rarely get in touch",
+  "Your site looks too much like everyone else’s",
+  "Customers have an easier time finding your competitors",
 ];
 
 export const problemsSolved = [
-  "Unclear homepage messaging that fails to explain what you do",
-  "Weak CTA flow that leaves visitors unsure what to do next",
-  "Slow pages that make people bounce before reading the offer",
-  "Mobile layouts that break trust on the device most visitors use",
-  "Service pages that describe features but do not sell outcomes",
-  "Outdated visual design that makes a capable business look less credible",
-  "Contact forms and inquiry paths with too much friction",
-  "Project handoffs where the business cannot update or reuse the website confidently",
-  "Landing pages that get traffic but do not convert enough leads",
-  "Competitors feeling more polished, easier to trust, and easier to buy from",
+  "Visitors can’t tell from the homepage what you do",
+  "Visitors don’t know where to click next",
+  "People leave before a slow page finishes loading",
+  "The site is hard to use on a phone",
+  "Service pages list features without explaining what customers get",
+  "The site looks dated even though the business has moved on",
+  "It takes too many steps to send an inquiry",
+  "Your team can’t update the site after handoff",
+  "The landing page gets visits but few inquiries",
+  "It’s easier for customers to buy from your competitors",
 ];

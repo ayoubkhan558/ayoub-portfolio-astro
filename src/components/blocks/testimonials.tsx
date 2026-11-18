@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { Quote, UserRound } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -9,7 +9,17 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import type portfolio from "@/data/portfolio.json";
-export function Testimonials({ data }: { data: typeof portfolio }) {
+function ReviewPortrait({ src }: { src: string | null }) {
+  return (
+    <span className="testimonial__avatar" aria-hidden="true">
+      <UserRound size={24} />
+      {src && <img src={src} alt="" width="48" height="48" loading="lazy"
+        onError={(event) => { event.currentTarget.hidden = true; }} />}
+    </span>
+  );
+}
+
+export function Testimonials({ data, journal }: { data: typeof portfolio; journal?: boolean }) {
   const reviews = [
     ...data.testimonials.map((t, i) => ({
       id: `testimonial-${i}`,
@@ -30,21 +40,27 @@ export function Testimonials({ data }: { data: typeof portfolio }) {
         avatar: c.avatar as string | null,
       })),
   ];
+  if (journal) {
+    return (
+      <div className="review-journal">
+        {reviews.map((review) => (
+          <figure className="review-journal__entry" key={review.id} id={review.id}>
+            <figcaption className="review-journal__person">
+              <ReviewPortrait src={review.avatar} />
+              <div><strong>{review.name}</strong><p>{review.role}</p></div>
+            </figcaption>
+            <blockquote className="review-journal__quote">{review.quote}</blockquote>
+          </figure>
+        ))}
+      </div>
+    );
+  }
   return (
     <Carousel
       opts={{ align: "start", slidesToScroll: 1 }}
       className="reviews-slider"
       aria-label="Client testimonials"
     >
-      <div className="review-toolbar">
-        <p className="small-note">
-          Client feedback · {reviews.length} perspectives
-        </p>
-        <div className="slider-controls">
-          <CarouselPrevious />
-          <CarouselNext />
-        </div>
-      </div>
       <CarouselContent>
         {reviews.map((t, i) => (
           <CarouselItem
@@ -62,16 +78,7 @@ export function Testimonials({ data }: { data: typeof portfolio }) {
                   />
                   <blockquote>{t.quote}</blockquote>
                   <figcaption>
-                    {t.avatar && (
-                      <img
-                        src={t.avatar}
-                        alt=""
-                        className="avatar"
-                        width="48"
-                        height="48"
-                        loading="lazy"
-                      />
-                    )}
+                    <ReviewPortrait src={t.avatar} />
                     <div>
                       <strong>{t.name}</strong>
                       <span>{t.role}</span>
@@ -84,6 +91,10 @@ export function Testimonials({ data }: { data: typeof portfolio }) {
           </CarouselItem>
         ))}
       </CarouselContent>
+      <div className="slider-controls reviews-slider__controls" role="group" aria-label="Testimonial navigation">
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
     </Carousel>
   );
 }

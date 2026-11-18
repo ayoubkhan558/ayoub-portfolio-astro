@@ -2,7 +2,7 @@ import {
   ArrowUpRight,
   Check,
   Code2,
-  LayoutTemplate,
+  Workflow,
   PanelsTopLeft,
   Gauge,
   Search,
@@ -16,7 +16,7 @@ import type portfolio from "@/data/portfolio.json";
 
 const serviceBestFit = [
   "Best when you have an MVP, internal tool, SaaS interface, or product idea that needs a clean user experience.",
-  "Best when you need a dedicated page for a campaign, service, SaaS idea, or product instead of sending traffic to a general website.",
+  "A good fit if your team spends time sorting requests or drafting similar replies and can review what the AI produces.",
   "Best when your business is good, but the website makes prospects hesitate or compare you unfavorably with competitors.",
   "Best when the website mostly exists, but users hit friction before they inquire, book, buy, or trust the brand.",
   "Best for stores with traffic but weak conversion, confusing product pages, or a checkout flow customers do not trust.",
@@ -33,7 +33,7 @@ export function ServiceCards({
   idPrefix?: string;
   compact?: boolean;
 }) {
-  const icons = [Code2, LayoutTemplate, PanelsTopLeft, Gauge, Search, Globe];
+  const icons = [Code2, Workflow, PanelsTopLeft, Gauge, Search, Globe];
   if (compact) {
     return (
       <div className="compact-solutions-grid">
@@ -48,12 +48,13 @@ export function ServiceCards({
                 </span>
               </div>
               <h3>{service.name}</h3>
-              <p>{service.description}</p>
+              <p><strong>What’s included:</strong> {service.description}</p>
+              <p><strong>Pricing:</strong> {service.price}{service.period}</p>
               <a
                 className="text-link card-action"
                 href={`/services/#services-${i}`}
               >
-                Explore service <ArrowUpRight aria-hidden="true" size={16} />
+                View service details <ArrowUpRight aria-hidden="true" size={16} />
               </a>
             </article>
           );
@@ -88,9 +89,9 @@ export function ServiceCards({
               )}
             </div>
             <h3 id={`${idPrefix}-${i}`}>{s.name}</h3>
-            <p>{s.description}</p>
+            <p><strong>What’s included:</strong> {s.description}</p>
             <div className="investment-band">
-              <span className="eyebrow">Investment</span>
+              <span className="eyebrow">Pricing</span>
               <div className="service-price">
                 {s.price}
                 {s.period && <small>{s.period}</small>}
@@ -116,7 +117,7 @@ export function ServiceCards({
               className="button card-action outline"
             >
               <a
-                href={`${s.href}${s.href.includes("?") ? "&" : "?"}subject=${encodeURIComponent(s.name)}`}
+                href={s.href.includes("subject=") ? s.href : `${s.href}${s.href.includes("?") ? "&" : "?"}subject=${encodeURIComponent(s.name)}`}
               >
                 {s.cta}
                 <ArrowUpRight aria-hidden="true" />

@@ -7,6 +7,15 @@ const contactSteps = ["Send project details", "Get a build estimate"];
 ---
 
 <section class="contact-details-section section wrap first-section contact-layout">
+  <div class="contact-layout__form">
+    <ContactForm
+      client:load
+      action={`https://formspree.io/f/${formId}`}
+      email={p.profile.email}
+      subject={Astro.url.searchParams.get("subject") || ""}
+      details={Astro.url.searchParams.get("details") || ""}
+    />
+  </div>
   <div class="contact-info">
     <div class="contact-availability">
       <span class="eyebrow">Available for</span>
@@ -46,11 +55,4 @@ const contactSteps = ["Send project details", "Get a build estimate"];
     </a>
     <p class="spaced">Based in {p.profile.location}</p>
   </div>
-  <ContactForm
-    client:load
-    action={`https://formspree.io/f/${formId}`}
-    email={p.profile.email}
-    subject={Astro.url.searchParams.get("subject") || ""}
-    details={Astro.url.searchParams.get("details") || ""}
-  />
 </section>

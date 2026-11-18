@@ -18,6 +18,20 @@ const { service: s } = Astro.props;
   <div class="service-detail-page">
     <div class="portfolio-background">
       <Intro label={s.label} title={s.h1} description={s.description}>
+        <dl class="service-summary">
+          <div>
+            <dt>What’s included</dt>
+            <dd>{s.sections[0]?.paragraphs[0] || s.description}</dd>
+          </div>
+          <div>
+            <dt>Pricing</dt>
+            <dd>Custom quote</dd>
+          </div>
+          <div>
+            <dt>Next step</dt>
+            <dd>Send your project details for an estimate.</dd>
+          </div>
+        </dl>
         <div class="actions">
           <a
             class="button"

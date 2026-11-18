@@ -5,10 +5,12 @@ import Footer from "../components/portfolio/Footer.astro";
 import Header from "../components/portfolio/Header.astro";
 import p from "../data/portfolio.json";
 import BackToTop from "../components/portfolio/BackToTop.astro";
+import PointerFeedback from "../components/portfolio/PointerFeedback.astro";
 const {
   title = p.profile.role,
   description = p.profile.summary,
   image = "/social/ayoub-portfolio-thumbnail.jpg",
+  recovery = false,
 } = Astro.props;
 const fullTitle = `${title} | ${p.profile.name}`;
 const pathname = Astro.url.pathname;
@@ -18,7 +20,7 @@ const canonicalPath =
     : pathname.replace(/\/?$/, "/");
 const canonical = new URL(canonicalPath, Astro.site);
 const notFound =
-  pathname === "/404" || pathname === "/404/" || pathname === "/404.html";
+  recovery || pathname === "/404" || pathname === "/404/" || pathname === "/404.html";
 const ogType = /^\/case-studies\/[^/]+\/?$/.test(pathname)
   ? "article"
   : "website";
@@ -111,11 +113,10 @@ const schema = {
     <a href="#main" class="skip-link">
       Skip to content
     </a>
-    <Header />
+    {!notFound && <Header />}
     <main id="main">
       <slot />
     </main>
-    <Footer />
-    <BackToTop />
+    {!notFound && <><PointerFeedback /><Footer /><BackToTop /></>}
   </body>
 </html>

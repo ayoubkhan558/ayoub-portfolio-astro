@@ -32,7 +32,7 @@ const { study } = Astro.props;
   </div>
   <p class="result-highlight">{study.performanceNote}</p>
   {"pageSpeed" in study && (
-    <details class="plain-card" open>
+    <details class="plain-card">
       <>
         <summary>Google PageSpeed Insights results</summary>
         {study.pageSpeed && <PageSpeedReport report={study.pageSpeed} />}

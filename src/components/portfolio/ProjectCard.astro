@@ -17,8 +17,9 @@ import type archive from "../../data/projectsArchive.json";
 interface Props {
   project: (typeof archive.projects)[number];
   index: number;
+  featured?: boolean;
 }
-const { project: p, index } = Astro.props;
+const { project: p, index, featured = false } = Astro.props;
 const title = getProjectTitle(p);
 const panelId = `project-${index}`;
 const description = getProjectDescription(p);
@@ -69,7 +70,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
   .split(
     /[,/]| (?=(?:Next|React|Tailwind|Vue|Bootstrap|WordPress|Elementor|Shopify|Webflow|Wix|Bricks|Laravel|HTML|CSS|Scss|jQuery|PHP)\b)/i,
   )
-  .flatMap((part) => {
+  .flatMap<{ name: string; logo: string | null }>((part) => {
     const label = part.toLowerCase().replace(/[^a-z0-9]/g, "");
     const matches = Object.entries(toolCatalog)
       .filter(([key, tool]) => {
@@ -90,7 +91,8 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
 ---
 
 <article
-  class="project-card"
+  class={featured ? "selected-card" : "project-card"}
+  data-project-drawer-card
   data-search={search}
   data-platform={keys}
   data-status={p.projectStatus || ""}
@@ -99,6 +101,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
   data-project-category={getProjectMeta(p).join(", ")}
   data-project-website={copyHref || ""}
 >
+  {featured ? <slot /> : <>
   <div class="project-media">
     <Asset
       src={p.screenshot}
@@ -162,6 +165,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       </details>
     </noscript>
   </div>
+  </>}
   <dialog
     class="project-drawer"
     id={panelId}
@@ -227,3 +231,51 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
     </div>
   </dialog>
 </article>
+
+<script>
+  let opener: HTMLElement | null = null;
+  for (const card of document.querySelectorAll<HTMLElement>("[data-project-drawer-card]")) {
+    const dialog = card.querySelector<HTMLDialogElement>("dialog")!;
+    const button = card.querySelector<HTMLButtonElement>("[data-project-open]")!;
+    const open = () => {
+      if (dialog.open) return;
+      opener = button;
+      dialog.showModal();
+      document.body.classList.add("drawer-open");
+    };
+    card.addEventListener("click", (event) => {
+      if (
+        !(event.target instanceof Element) ||
+        dialog.contains(event.target) ||
+        event.target.closest("a,details")
+      )
+        return;
+      open();
+    });
+    button.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open();
+      }
+    });
+    dialog
+      .querySelector(".drawer-close")
+      ?.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) {
+        const rect = dialog.getBoundingClientRect();
+        if (
+          e.clientX < rect.left ||
+          e.clientX > rect.right ||
+          e.clientY < rect.top ||
+          e.clientY > rect.bottom
+        )
+          dialog.close();
+      }
+    });
+    dialog.addEventListener("close", () => {
+      document.body.classList.remove("drawer-open");
+      opener?.focus({ preventScroll: true });
+    });
+  }
+</script>

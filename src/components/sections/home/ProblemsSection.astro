@@ -6,14 +6,13 @@ import { painPoints, problemsSolved } from "./problems";
 
 <section class="home-problems-section section wrap" id="problems">
   <Heading
-    label="Is this you?"
-    title="Sound familiar?"
-    subtitle="Your site should build trust before your prospect ever books a call."
+    label="Common problems"
+    title="Website problems I can help with"
+    subtitle="Start with what’s getting in the way on your current site."
   />
   <div class="three-grid">
-    {painPoints.map((point, i) => (
+    {painPoints.map((point) => (
       <article class="plain-card">
-        <span class="step-number">0{i + 1}</span>
         <h3>{point}</h3>
       </article>
     ))}

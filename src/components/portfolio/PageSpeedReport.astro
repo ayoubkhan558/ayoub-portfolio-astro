@@ -77,7 +77,7 @@ const metricLevel = (key: string, value: string) => {
       <section class="pagespeed-device" aria-label={`${label} performance`}>
         <h4>{label}</h4>
         {result ? (
-          <>
+          <div class="pagespeed-report__summary-row" tabindex="0" role="group" aria-label={`${label} score and metrics`}>
             <div class="pagespeed-score-row">
               <div
                 class:list={["pagespeed-score", scoreLevel(result.performance)]}
@@ -111,8 +111,6 @@ const metricLevel = (key: string, value: string) => {
                 Performance
               </span>
             </div>
-            <details class="pagespeed-metrics-details" open>
-              <summary>View metrics</summary>
               <dl class="pagespeed-metrics">
                 {metrics.map((metric) => {
                   const value =
@@ -130,8 +128,7 @@ const metricLevel = (key: string, value: string) => {
                   ) : null;
                 })}
               </dl>
-            </details>
-          </>
+          </div>
         ) : (
           <p class="pagespeed-error">{error}</p>
         )}
@@ -142,18 +139,3 @@ const metricLevel = (key: string, value: string) => {
     </footer>
   </section>
 )}
-
-<script>
-  const mobileViewport = window.matchMedia("(max-width: 600px)");
-  const syncMetricsDetails = () => {
-    document
-      .querySelectorAll<HTMLDetailsElement>(".pagespeed-metrics-details")
-      .forEach((details) => {
-        details.open = !mobileViewport.matches;
-      });
-  };
-
-  syncMetricsDetails();
-  mobileViewport.addEventListener("change", syncMetricsDetails);
-  document.addEventListener("astro:page-load", syncMetricsDetails);
-</script>

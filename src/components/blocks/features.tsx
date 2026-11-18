@@ -20,9 +20,10 @@ export function Features({
           <Card className="case-card">
             <a
               href={s.listing.href}
-              className="case-image-link"
-              aria-label={`Read ${s.client} case study${s.listing.company ? ` · Delivered at ${s.listing.company}` : ""}`}
+              className="case-card__link"
+              aria-labelledby={`case-title-${s.slug}`}
             >
+              <div className="case-image-link">
               <PortfolioImage
                 src={s.listing.image}
                 alt={s.listing.imageAlt}
@@ -36,7 +37,7 @@ export function Features({
               <span className="round-arrow" aria-hidden="true">
                 <ArrowUpRight size={20} />
               </span>
-            </a>
+              </div>
             <CardContent className="case-body">
               <div className="tags">
                 {s.listing.stack.map((tag) => (
@@ -45,16 +46,15 @@ export function Features({
                   </Badge>
                 ))}
               </div>
-              <h3>
-                <a href={s.listing.href}>{s.listing.title}</a>
-              </h3>
+              <h3 id={`case-title-${s.slug}`}>{s.listing.title}</h3>
               <p>{s.listing.description}</p>
               <div className="case-result">{s.listing.result}</div>
-              <a className="text-link card-action" href={s.listing.href}>
+              <span className="text-link card-action">
                 Read the case study
                 <ArrowRight aria-hidden="true" size={16} />
-              </a>
+              </span>
             </CardContent>
+            </a>
           </Card>
         </article>
       ))}

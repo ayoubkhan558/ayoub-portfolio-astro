@@ -6,15 +6,14 @@ import p from "../../../data/portfolio.json";
 ---
 
 <section class="about-toolbox-section section wrap">
-  <Heading label="Toolbox" title="The right tools for the job." />
+  <Heading title="My toolbox" />
   <div class="compact-toolbox">
-    {p.about.toolbox.map((t, i) => (
+    {p.about.toolbox.map((t) => (
       <article>
         <div>
-          <span class="toolbox-index">{String(i + 1).padStart(2, "0")}</span>
           <h3>{t.title}</h3>
         </div>
-        <ul class="toolbox-items">
+        <ul>
           {t.items.map((v) => (
             <li>{v}</li>
           ))}
@@ -24,7 +23,6 @@ import p from "../../../data/portfolio.json";
   </div>
   <div class="skills-title">
     <h3>Skills & technologies</h3>
-    <p>Familiar tools. Thoughtful choices.</p>
   </div>
   <SkillsMarquee />
 </section>

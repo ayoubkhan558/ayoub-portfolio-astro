@@ -13,9 +13,9 @@
     "upwork": "https://www.upwork.com/freelancers/~ayoubkhan558",
     "availability": "Open for new projects",
     "currentlyBuilding": "Resumify workflows",
-    "summary": "I build conversion-focused React, Next.js, and WordPress websites, then grow their search visibility with full-cycle SEO across technical, on-page, content, and off-page work."
+    "summary": "I build websites with React, Next.js, and WordPress. I’ve worked on SEO since 2022, and I’m spending more time on Node.js and Express alongside PHP."
   },
-  "offer": "Refer a client — get 15% off your next project",
+  "offer": "Refer a client and get 15% off your next project.",
   "navLinks": [
     {
       "label": "About",
@@ -39,9 +39,9 @@
     }
   ],
   "hero": {
-    "headlineLineOne": "Web Developer + SEO Specialist for Sites That Rank & Convert",
+    "headlineLineOne": "I build websites and help people find them.",
     "headlineLineTwo": "",
-    "subheadline": "I build and improve React, Next.js, and WordPress websites, pairing solid development with technical SEO, on-page improvements, useful content, and off-page authority building.",
+    "subheadline": "I work with React, Next.js, and WordPress, and I’ve worked on SEO since 2022. These days I’m building more with Node.js and Express, alongside PHP.",
     "primaryCta": "Book a discovery call",
     "secondaryCta": "View case studies",
     "badges": [
@@ -73,7 +73,7 @@
     "deliveryLog": [
       {
         "time": "01",
-        "message": "Goals, users, and conversion blockers mapped",
+        "message": "Identify who will use the site, what they need, and where they get stuck",
         "status": "OK"
       },
       {
@@ -93,7 +93,7 @@
       },
       {
         "time": "05",
-        "message": "Legacy dependencies detected — performance pass queued",
+        "message": "Flag old dependencies for the performance review",
         "status": "WARN"
       },
       {
@@ -108,7 +108,7 @@
       },
       {
         "time": "08",
-        "message": "Handoff complete — your team owns the codebase",
+        "message": "Hand over the codebase to your team",
         "status": "OK"
       }
     ]
@@ -169,7 +169,7 @@
       "name": "Custom Web App",
       "price": "Starting from $2,000",
       "period": "",
-      "description": "Build a polished product interface, MVP front end, dashboard, or web app experience with clean implementation.",
+      "description": "I build front ends for prototypes, dashboards, and web apps.",
       "whatYouGet": "Reusable UI components, responsive screens, state-aware interface patterns, API-ready structure, and maintainable front-end delivery.",
       "timeline": "Typical timeline: 2-5 weeks",
       "features": [
@@ -185,21 +185,20 @@
     },
     {
       "level": "SOLUTION_02",
-      "name": "Landing Page",
-      "price": "Starting from $500",
+      "name": "AI Features & Automation",
+      "price": "Custom quote",
       "period": "",
-      "description": "A focused landing page for ads, product launches, lead magnets, SaaS offers, or service campaigns.",
-      "whatYouGet": "A conversion-focused page with offer framing, CTA sections, forms, responsive layout, tracking-ready structure, and clean handoff.",
-      "timeline": "Typical timeline: 3-10 days",
+      "description": "I add AI features to websites and internal tools, such as drafting replies or sorting incoming requests.",
+      "whatYouGet": "We pick one task to start with. I connect it to an AI model, test it with your examples, and show your team how to review the results.",
+      "timeline": "Timeline depends on the workflow and integrations",
       "features": [
-        "Single-purpose page strategy",
-        "Section flow from problem to solution to action",
-        "Lead form or booking CTA integration",
-        "Fast mobile-friendly build",
-        "Analytics and conversion event readiness"
+        "Connect an AI API to your site or app",
+        "Write and test prompts on your examples",
+        "Add a review step before results are used",
+        "Document setup and handoff"
       ],
-      "cta": "Launch my page",
-      "href": "/contact",
+      "cta": "Discuss an AI project",
+      "href": "/contact/?subject=AI%20Features%20%26%20Automation",
       "featured": true
     },
     {
@@ -207,7 +206,7 @@
       "name": "Website Redesign",
       "price": "Starting from $1,000",
       "period": "",
-      "description": "Modernize a dated website, improve credibility, fix the mobile experience, and strengthen conversion paths.",
+      "description": "I redesign existing sites so visitors can find what they need and get in touch from any screen.",
       "whatYouGet": "Visual hierarchy cleanup, modern section design, clearer service positioning, improved responsiveness, and implementation support.",
       "timeline": "Typical timeline: 1-2 weeks",
       "features": [
@@ -226,8 +225,8 @@
       "name": "Speed Optimization",
       "price": "Starting from $400",
       "period": "",
-      "description": "Improve website speed, Core Web Vitals, and page performance so visitors get a faster, smoother experience.",
-      "whatYouGet": "Focused fixes across performance, spacing, mobile layout, forms, broken interactions, and high-friction user paths.",
+      "description": "I find what slows down your site and fix issues such as oversized images, heavy scripts, and shifting layouts.",
+      "whatYouGet": "I fix slow pages, awkward spacing, mobile layout problems, broken forms and controls, and steps that make the site harder to use.",
       "timeline": "Typical timeline: 1-5 days",
       "features": [
         "Mobile usability fixes",
@@ -245,7 +244,7 @@
       "name": "E-Commerce Setup",
       "price": "Starting from $900",
       "period": "",
-      "description": "Set up a customer-ready online store with clear product pages, trusted checkout, and a smooth mobile shopping experience.",
+      "description": "I build online stores with product pages and checkout that are easy to use on a phone.",
       "whatYouGet": "Store structure, product and collection setup, payment and shipping configuration, checkout review, and mobile QA.",
       "timeline": "Typical timeline: 1-4 weeks",
       "features": [
@@ -264,7 +263,7 @@
       "name": "Ongoing Support",
       "price": "Starting from $300/mo",
       "period": "",
-      "description": "Ongoing website improvements, fixes, new sections, content updates, and technical support after launch.",
+      "description": "I can fix bugs, add pages, update content, and help maintain your site after launch.",
       "whatYouGet": "A practical monthly support lane for small improvements, performance checks, bug fixes, campaign updates, and launch follow-through.",
       "timeline": "Monthly support",
       "features": [
@@ -402,9 +401,10 @@
     }
   ],
   "about": {
-    "story": "I'm a web developer and full-cycle SEO specialist based in Faisalabad, Pakistan. I build React, Next.js, and WordPress websites, then improve their visibility through technical SEO, on-page optimization, content strategy, and off-page authority building.",
-    "motivation": "Most of the projects I'm brought onto have the same root problem: a UI that was built fast but not built to last. Hard to extend, slow to load, impossible to hand off. I fix that — and make sure the technical foundation, performance, and SEO structure support long-term growth instead of just looking good on launch day.",
-    "originStory": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
+    "story": "I work from Faisalabad, Pakistan. Sometimes I use vibe coding to see if an idea is worth pursuing. Once I know what a feature needs to do, I spell out those requirements in the prompt and review the code it produces before keeping it.",
+    "homeIntro": "I’m a web developer in Faisalabad, Pakistan. AI helps me try ideas quickly. I write more specific prompts as the work takes shape and review the code before I use it.",
+    "motivation": "I like fixing the parts of a website people deal with every day: a slow page, a form that’s hard to use, or content that takes too many steps to update.",
+    "originStory": "I started learning web development in 2018. I didn’t have internet at home, so I used my friends’ connections to download tutorials. I watched them offline and learned HTML and CSS by building pages myself.",
     "education": "Master of Computer Science, University of Sahiwal",
     "educationHistory": [
       {
@@ -493,25 +493,25 @@
         "year": "2018",
         "title": "Frontend Foundations",
         "technologies": "HTML, CSS, JavaScript, Bootstrap",
-        "description": "Learning the fundamentals and building responsive web interfaces."
+        "description": "I learned HTML, CSS, and JavaScript by building pages and getting them to work on smaller screens."
       },
       {
         "year": "2021",
         "title": "WordPress Development",
         "technologies": "WordPress, Elementor",
-        "description": "Creating and customizing CMS-powered websites with flexible page layouts."
+        "description": "I started building WordPress sites with pages clients could edit themselves."
       },
       {
         "year": "2022",
-        "title": "React Development",
-        "technologies": "React.js",
-        "description": "Building interactive interfaces with reusable components."
+        "title": "React Development & SEO Strategy",
+        "technologies": "React.js, technical SEO, on-page SEO, content strategy, off-page SEO",
+        "description": "I began working on SEO strategy in 2022. Around the same time, I started using React to build interactive pages from reusable components."
       },
       {
         "year": "2026 - Current",
-        "title": "SEO Strategy",
-        "technologies": "On-page SEO, Off-page SEO, Technical SEO, Content Strategy",
-        "description": "Growing search visibility through technical SEO, content, and authority building.",
+        "title": "Backend Development",
+        "technologies": "Node.js, ExpressJS, PHP",
+        "description": "I’m spending more of my development time on the backend, particularly on APIs with Node.js and ExpressJS. I’m building on the PHP experience I already have.",
         "current": true
       }
     ],
@@ -558,6 +558,10 @@
       }
     ],
     "toolbox": [
+      {
+        "title": "Backend",
+        "items": ["Node.js", "ExpressJS", "PHP"]
+      },
       {
         "title": "React",
         "items": [
@@ -757,15 +761,15 @@
   "faqs": [
     {
       "question": "How long does a typical project take?",
-      "answer": "Small landing pages usually take 3–10 days. Redesigns and product front ends usually take 2–5 weeks depending on scope, content, integrations, and feedback speed."
+      "answer": "I usually need 3–10 days for a small landing page and 2–5 weeks for a redesign or product front end. The timeline depends on what we’re building and when content and feedback are ready."
     },
     {
       "question": "Do you only design or also develop?",
-      "answer": "I develop the final website or front end. I can work from your design, improve an existing design, or help structure the page before implementation."
+      "answer": "Development is my main work. I can build from your design, help improve what you already have, or plan the page with you before I start coding."
     },
     {
       "question": "What can I hire you for?",
-      "answer": "Homepage conversion, landing pages, website redesigns, product front ends, speed/mobile cleanup, editable website systems, and store conversion improvements."
+      "answer": "You can hire me to redesign a site, build a product interface, or add an AI feature to an existing tool. I also fix mobile layouts, speed up pages, and help make online stores easier to use."
     },
     {
       "question": "Do you work with international clients?",
@@ -777,7 +781,7 @@
     },
     {
       "question": "Do you share pricing upfront?",
-      "answer": "Yes. Services use starting-from pricing to qualify scope quickly. Final pricing depends on pages, complexity, integrations, content readiness, and timeline."
+      "answer": "Yes. I list starting prices on the Services page. Once I know how many pages you need, what the site connects to, and when you need it, I can give you a quote."
     }
   ],
   "footerColumns": [

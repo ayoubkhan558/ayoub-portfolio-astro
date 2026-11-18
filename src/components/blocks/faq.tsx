@@ -8,7 +8,7 @@ import type portfolio from "@/data/portfolio.json";
 /** Portfolio FAQ accordion, populated without changing the data schema. */
 export function FAQ({ items }: { items: typeof portfolio.faqs }) {
   return (
-    <div className="portfolio-faq mx-auto grid gap-16 lg:grid-cols-2">
+    <div className="portfolio-faq">
       <div className="faq-introduction space-y-4">
         <span className="eyebrow">Good questions</span>
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
@@ -22,7 +22,7 @@ export function FAQ({ items }: { items: typeof portfolio.faqs }) {
           .
         </p>
       </div>
-      <div className="grid gap-6 text-start">
+      <div className="portfolio-faq__questions">
         <Accordion
           type="single"
           collapsible

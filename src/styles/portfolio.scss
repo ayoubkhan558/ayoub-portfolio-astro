@@ -1178,7 +1178,7 @@ figcaption span {
 }
 .selected-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 22px;
 }
 .selected-card {
@@ -1191,9 +1191,6 @@ figcaption span {
   aspect-ratio: 1.6;
   object-fit: cover;
   object-position: top;
-}
-.selected-card a > div:not(.asset-fallback) {
-  padding: 22px;
 }
 .selected-card h3 {
   font-size: 23px;
@@ -1436,16 +1433,8 @@ textarea {
   --pagespeed-level: var(--pagespeed-poor);
 }
 .pagespeed-metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
   gap: 8px;
   margin: 0;
-}
-.pagespeed-metrics-details > summary {
-  display: none;
-}
-.pagespeed-metrics-details:not([open]) > .pagespeed-metrics {
-  display: grid;
 }
 .pagespeed-metric {
   min-width: 0;
@@ -1499,12 +1488,10 @@ textarea {
 .pagespeed-footer a:hover {
   text-decoration: underline;
 }
-.project-copy-trigger {
-  position: fixed;
-  z-index: 45;
-  right: max(20px, env(safe-area-inset-right));
-  bottom: max(20px, env(safe-area-inset-bottom));
-  box-shadow: 0 8px 28px #0002;
+.project-archive__copy {
+  margin-top: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .project-copy-dialog {
   position: fixed;
@@ -1555,25 +1542,6 @@ textarea {
   }
   .pagespeed-score-label {
     font-size: 13px;
-  }
-  .pagespeed-metrics {
-    display: none;
-  }
-  .pagespeed-metrics-details {
-    margin-top: 8px;
-  }
-  .pagespeed-metrics-details > summary {
-    display: list-item;
-    color: var(--muted-foreground);
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    padding-block: 4px;
-  }
-  .pagespeed-metrics-details[open] > .pagespeed-metrics {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
   }
   .pagespeed-metric {
     padding: 7px 8px;
@@ -1661,6 +1629,66 @@ textarea {
   grid-template-columns: 1fr 1.35fr;
   gap: 60px;
   align-items: start;
+}
+
+// Keep the form first in the reading order and place it beside the contact details on wide screens.
+@media (min-width: 801px) {
+  .contact-layout__form {
+    grid-area: 1 / 2;
+    min-width: 0;
+  }
+
+  .contact-layout > .contact-info {
+    grid-area: 1 / 1;
+  }
+}
+
+.legal-toc {
+  padding-block: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-toc__links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal-toc__target {
+  scroll-margin-block-start: 24px;
+}
+
+.faq-topics__group + .faq-topics__group {
+  margin-top: 40px;
+}
+
+.case-detail__result {
+  max-width: 65ch;
+  margin-block: 20px;
+}
+
+.service-summary {
+  display: grid;
+  gap: 16px;
+  margin-block: 24px;
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 4px 0 0;
+  }
+}
+
+// Keep desktop filters with the list without covering the short mobile viewport.
+@media (min-width: 1024px) and (min-height: 650px) {
+  .project-archive__controls {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding-block: 12px;
+    background: var(--background);
+  }
 }
 .contact-info h2 {
   font-size: 32px;
@@ -1763,7 +1791,6 @@ textarea {
   }
   .case-grid,
   .service-grid,
-  .selected-grid,
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2003,7 +2030,6 @@ textarea {
   .three-grid,
   .two-grid,
   .testimonial-grid,
-  .selected-grid,
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -2366,7 +2392,7 @@ textarea {
   margin-top: auto;
 }
 .service-inner > p:first-of-type {
-  min-height: 92px;
+  min-height: 82px;
 }
 .service-top {
   min-height: 44px;
@@ -3532,34 +3558,38 @@ a.case-image-link:hover .round-arrow {
   color: var(--background);
   background: var(--link-accent);
 }
-.home-page .section-heading {
+.home-page :is(.section-heading, .faq-introduction) {
   display: block;
+  text-align: left;
   margin-bottom: 40px;
   max-width: 820px;
 }
-.home-page .section-heading .eyebrow {
+.home-page :is(.section-heading, .faq-introduction) .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
   color: var(--link-accent);
 }
-.home-page .section-heading .eyebrow::before {
+.home-page :is(.section-heading, .faq-introduction) .eyebrow::before {
   content: "";
   width: 24px;
   height: 1px;
   background: currentColor;
 }
-.home-page .section-heading h2 {
+.home-page :is(.section-heading, .faq-introduction) h2 {
   max-width: 800px;
   font-size: clamp(30px, 3.4vw, 46px);
   line-height: 1.12;
 }
-.home-page .section-heading > p {
+.home-page :is(.section-heading, .faq-introduction) > p {
   max-width: 64ch;
   margin-top: 16px;
   font-size: 18px;
   line-height: 1.6;
+}
+.home-page .resource-panel .section-heading {
+  margin-bottom: 0;
 }
 .home-page #proof .section-heading,
 .home-page #process .section-heading {
@@ -3573,7 +3603,7 @@ a.case-image-link:hover .round-arrow {
   margin-inline: auto;
 }
 .home-page .section-end {
-  justify-content: flex-start;
+  justify-content: center;
 }
 .home-page .hero {
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
@@ -3895,6 +3925,7 @@ a.case-image-link:hover .round-arrow {
 }
 .tool-chip {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 12px;
   padding: 14px 18px;
@@ -4254,16 +4285,6 @@ a.case-image-link:hover .round-arrow {
 .service-grid-v2 .service-inner > details {
   margin-bottom: 24px;
 }
-.selected-card > a {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.selected-card > a > div:last-child {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
 .selected-card .small-note {
   margin-top: auto;
   padding-top: 16px;
@@ -4327,4 +4348,316 @@ a.case-image-link:hover .round-arrow {
 }
 .linked-card > .card-action {
   padding-top: 18px;
+}
+
+// Give the final strip inside the hero background room before the next section.
+.home-page .home-trust-section {
+  padding-bottom: clamp(40px, 6vw, 88px);
+}
+
+// Keep the subtitle with the testimonial heading so it reads as one introduction.
+.home-page #proof .section-heading {
+  display: block;
+  margin-inline: 0;
+  text-align: left;
+
+  h2,
+  > p {
+    margin-inline: 0;
+  }
+}
+
+// Maintain the same portrait footprint whether the client photo loads or falls back.
+.testimonial__avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  height: 48px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--muted-foreground);
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  img[hidden] {
+    display: none;
+  }
+}
+
+.portfolio-faq [data-slot="accordion-trigger"]:is(:hover, :focus-visible),
+.faq-list summary:is(:hover, :focus-visible) {
+  color: var(--link-accent);
+}
+
+// Radix holds the closing panel in the DOM while its measured height animates.
+.portfolio-faq {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: 900px) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  [data-slot="accordion-content"] {
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    [data-slot="accordion-content"][data-state="open"] {
+      animation: faq-expand 320ms cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+
+    [data-slot="accordion-content"][data-state="closed"] {
+      animation: faq-collapse 280ms cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    [data-slot="accordion-trigger"] svg {
+      transition: transform 280ms ease;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot="accordion-content"] {
+      animation: none;
+    }
+
+    [data-slot="accordion-trigger"] svg {
+      transition: none;
+    }
+  }
+}
+
+@keyframes faq-expand {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes faq-collapse {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+// Keep the score and full metric labels on one line, even in the project drawer.
+// The row can scroll horizontally by touch or keyboard if it is wider than its container.
+.pagespeed-report__summary-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+
+  .pagespeed-score-row {
+    flex: none;
+    margin: 0;
+  }
+
+  .pagespeed-score {
+    width: 48px;
+  }
+
+  .pagespeed-metrics {
+    display: flex;
+    flex: none;
+  }
+
+  .pagespeed-metric {
+    white-space: nowrap;
+  }
+}
+
+
+// A single link covers the case study card and has one keyboard stop.
+.case-card__link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.case-card__link:focus-visible,
+.selected-card:focus-within {
+  outline: 2px solid var(--link-accent);
+  outline-offset: -2px;
+}
+
+.case-card__link:is(:hover, :focus-visible) .round-arrow {
+  background: var(--link-accent);
+  color: var(--background);
+}
+
+.selected-work .selected-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 16px 24px;
+  padding: clamp(16px, 2.5vw, 24px);
+  cursor: pointer;
+}
+
+.selected-work .selected-media {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  background: var(--muted);
+}
+
+.selected-work .selected-image {
+  display: block;
+}
+
+.selected-work__copy {
+  min-width: 0;
+}
+
+// Cap the preview width so project details have more room on desktop.
+@media (min-width: 601px) {
+  .selected-work .selected-card {
+    grid-template-columns: minmax(0, clamp(160px, 23vw, 260px)) minmax(0, 1fr);
+  }
+}
+
+.selected-work__opener {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+// Keep the toggle off touch layouts and clear of the back-to-top control.
+.pointer-feedback__toggle:not([hidden]) {
+  display: none;
+
+  @media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: auto auto max(18px, env(safe-area-inset-bottom)) 18px;
+    z-index: 40;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--background);
+    color: var(--foreground);
+    cursor: pointer;
+  }
+}
+
+.pointer-feedback__toggle[aria-pressed="true"] .pointer-feedback__icon--off,
+.pointer-feedback__toggle[aria-pressed="false"] .pointer-feedback__icon--on {
+  display: none;
+}
+
+.reviews-slider__controls {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reviews-slider .reviews-slider__controls button {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--muted-foreground);
+  background: var(--card);
+  color: var(--foreground);
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+
+  &:enabled:is(:hover, :focus-visible) {
+    background: var(--link-accent-soft);
+    border-color: var(--link-accent);
+    color: var(--link-accent);
+  }
+
+  // The carousel sets the native disabled state at either end of the rail.
+  &:disabled {
+    opacity: 0.45;
+    background: var(--muted);
+    border-color: var(--border);
+    color: var(--muted-foreground);
+    cursor: default;
+  }
+}
+
+// The About page pairs the speaker and quote in an editorial list.
+.review-journal__entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 16px clamp(20px, 5vw, 64px);
+  padding: clamp(20px, 4vw, 40px);
+  margin: 0;
+  border-top: 1px solid var(--border);
+
+  @media (max-width: 650px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.review-journal__person {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  p {
+    margin: 4px 0 0;
+    font-size: 14px;
+  }
+}
+
+.review-journal__quote {
+  margin: 0;
+  font-size: clamp(17px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+// Preserve the native cursor and keep its enhancement outside pointer hit testing.
+.pointer-feedback__halo:not([hidden]) {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 100;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 1px solid var(--link-accent);
+  border-radius: 50%;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+// Hover gives cards a visual response without implying that static cards are links.
+@media (hover: hover) and (pointer: fine) {
+  :is(.testimonial-card, .review-journal__entry, .tool-chip, .facts-grid article):hover {
+    background: var(--link-accent-soft);
+    border-color: var(--link-accent);
+  }
+
+  .selected-work .selected-card:hover {
+    border-color: var(--link-accent);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :is(.testimonial-card, .review-journal__entry, .tool-chip, .facts-grid article) {
+    transition: background-color 180ms ease, border-color 180ms ease;
+  }
+
+  .selected-work .selected-image {
+    transition: transform 220ms ease;
+  }
+
+  .selected-work .selected-card:is(:hover, :focus-within) .selected-image {
+    transform: scale(1.035);
+  }
 }

@@ -27,6 +27,7 @@ export const caseStudies = Object.values(caseStudyDetails).map(
 ) as CaseStudyCard[];
 
 export type ProjectCard = {
+  source: (typeof projectArchiveItems)[number];
   icon: string;
   title: string;
   kind?: "free-tool" | "client-site" | string;
@@ -39,7 +40,6 @@ export type ProjectCard = {
   href: string;
   image: string;
   imageAlt: string;
-  rating?: number;
 };
 
 const featuredProjectNames = [
@@ -85,6 +85,7 @@ function toProjectCard(
     `https://s.wordpress.com/mshots/v1/${encodeURIComponent(href)}?w=900`;
 
   return {
+    source: project,
     icon: projectThemeIcons[title] ?? "rocket",
     title,
     kind: isFreeTool ? "free-tool" : "client-site",
@@ -109,7 +110,6 @@ function toProjectCard(
     href,
     image,
     imageAlt: `${title} project preview`,
-    rating: project.rating,
   };
 }
 

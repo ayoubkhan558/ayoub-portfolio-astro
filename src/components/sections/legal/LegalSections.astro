@@ -11,10 +11,21 @@ interface Props {
 }
 
 const { sections, sectionClass } = Astro.props;
+const entries = sections.map((section, index) => ({
+  ...section,
+  id: `policy-${index + 1}`,
+}));
 ---
 
-{sections.map((section) => (
-  <section class={`${sectionClass} spaced`}>
+<nav class="legal-toc" aria-labelledby="policy-contents">
+  <h2 id="policy-contents">On this page</h2>
+  <ul class="legal-toc__links">
+    {entries.map(({ id, title }) => <li><a href={`#${id}`}>{title}</a></li>)}
+  </ul>
+</nav>
+
+{entries.map((section) => (
+  <section id={section.id} class={`${sectionClass} legal-toc__target spaced`}>
     <h2>{section.title}</h2>
     {section.paragraphs.map((text) => (
       <p>{text}</p>

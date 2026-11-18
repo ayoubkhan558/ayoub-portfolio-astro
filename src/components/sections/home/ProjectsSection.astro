@@ -1,45 +1,42 @@
 ---
-import ExternalArrow from "../../portfolio/ExternalArrow.astro";
 import { projects } from "../../../data/work";
 import Asset from "../../portfolio/Asset.astro";
 import Heading from "../../portfolio/Heading.astro";
+import ProjectCard from "../../portfolio/ProjectCard.astro";
 ---
 
-<section class="home-projects-section section wrap" id="projects">
+<section class="home-projects-section selected-work section wrap" id="projects">
   <Heading
-    label="Selected Work"
-    title="What I've Built"
-    subtitle="Projects crafted with a focus on quality, usability, and impact."
+    label="Selected work"
+    title="Projects I’ve built"
+    subtitle="Explore the project details, tools, and screenshots."
   />
   <div class="selected-grid">
-    {projects.slice(0, 6).map((project) => (
-      <article class="selected-card">
-        <a href={project.href} target="_blank" rel="noopener noreferrer">
+    {projects.slice(0, 6).map((project, index) => (
+      <ProjectCard project={project.source} index={index} featured>
           <div class="selected-media">
             <Asset
               src={project.image.startsWith("/") ? project.image : null}
               alt={project.title}
               class="selected-image"
             />
-            {project.deliveryContext && (
-              <span class="delivery-badge">{project.deliveryContext}</span>
-            )}
           </div>
-          <div>
-            <span class="eyebrow">{project.badge}</span>
+          <div class="selected-work__copy">
             <h3>
-              {project.title} <ExternalArrow />
+              <button type="button" class="selected-work__opener" data-project-open aria-haspopup="dialog" aria-controls={`project-${index}`}>
+                {project.title}
+              </button>
             </h3>
             <p>{project.description}</p>
+            {project.deliveryContext && <p>{project.deliveryContext}</p>}
             <p class="small-note">{project.stack}</p>
           </div>
-        </a>
-      </article>
+      </ProjectCard>
     ))}
   </div>
   <div class="section-end">
     <a href="/projects/" class="button outline">
-      Explore the complete project archive →
+      View all projects →
     </a>
   </div>
 </section>

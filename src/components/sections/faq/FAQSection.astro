@@ -1,7 +1,24 @@
 ---
-import FAQ from "../../portfolio/FAQ.astro";
+import p from "../../../data/portfolio.json";
+const topics = [
+  { title: "Services and pricing", items: [p.faqs[1], p.faqs[2], p.faqs[5]] },
+  { title: "Timelines and working together", items: [p.faqs[0], p.faqs[3]] },
+  { title: "After launch", items: [p.faqs[4]] },
+];
 ---
 
 <section class="faq-page-section section wrap first-section">
-  <FAQ />
+  {topics.map((topic, index) => (
+    <section class="faq-topics__group">
+      <h2>{topic.title}</h2>
+      <div class="faq-list">
+        {topic.items.map((item) => (
+          <details name={`faq-topic-${index}`}>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  ))}
 </section>

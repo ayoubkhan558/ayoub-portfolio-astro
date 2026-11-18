@@ -10,7 +10,7 @@ const rows = [
 <div class="skills-marquee" data-skills-marquee>
   <div class="marquee-toolbar">
     <p class="small-note">
-      {entries.length} tools & technologies. Always learning, always building.
+      {entries.length} tools and technologies
     </p>
     <button type="button" class="marquee-toggle" aria-pressed="false" hidden>
       Pause motion
@@ -46,12 +46,12 @@ const rows = [
                   </span>
                 )}
                 <h3>{t.name}</h3>
-                <p class="sr-only">
+                {/* <p class="sr-only">
                   {t.description}
                   {"categories" in t
                     ? ` Categories: ${t.categories.join(", ")}.`
                     : ""}
-                </p>
+                </p> */}
               </article>
             ))}
           </div>

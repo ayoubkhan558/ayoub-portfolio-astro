@@ -8,9 +8,8 @@ import Layout from "../layouts/PortfolioLayout.astro";
 <Layout title="Projects">
   <div class="portfolio-background">
     <Intro
-      label="The complete archive"
-      title="Ideas brought to life."
-      description="Client websites, product interfaces, and useful tools. Explore my work across industries and technologies."
+      title="Project archive"
+      description="Browse client websites, product interfaces, and tools I’ve built."
     />
     <ProjectArchiveSection />
   </div>
@@ -221,51 +220,4 @@ import Layout from "../layouts/PortfolioLayout.astro";
   copyButtons[1].addEventListener("click", () => copyProjects(copyGroup.value));
   readURL();
   render("none");
-</script>
-
-<script>
-  let opener: HTMLElement | null = null;
-  for (const card of document.querySelectorAll<HTMLElement>(".project-card")) {
-    const dialog = card.querySelector<HTMLDialogElement>("dialog")!;
-    const button = card.querySelector<HTMLButtonElement>(".project-open")!;
-    const open = () => {
-      opener = button;
-      dialog.showModal();
-      document.body.classList.add("drawer-open");
-    };
-    card.addEventListener("click", (event) => {
-      if (
-        !(event.target instanceof Element) ||
-        dialog.contains(event.target) ||
-        event.target.closest("a,details")
-      )
-        return;
-      open();
-    });
-    button.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        open();
-      }
-    });
-    dialog
-      .querySelector(".drawer-close")
-      ?.addEventListener("click", () => dialog.close());
-    dialog.addEventListener("click", (e) => {
-      if (e.target === dialog) {
-        const rect = dialog.getBoundingClientRect();
-        if (
-          e.clientX < rect.left ||
-          e.clientX > rect.right ||
-          e.clientY < rect.top ||
-          e.clientY > rect.bottom
-        )
-          dialog.close();
-      }
-    });
-    dialog.addEventListener("close", () => {
-      document.body.classList.remove("drawer-open");
-      opener?.focus({ preventScroll: true });
-    });
-  }
 </script>
