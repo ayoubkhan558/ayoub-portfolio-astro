@@ -156,6 +156,10 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className,
         )}
+        style={{
+          display: "flex",
+          flexDirection: orientation === "horizontal" ? "row" : "column",
+        }}
         {...props}
       />
     </div>
@@ -175,6 +179,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className,
       )}
+      style={{ flexGrow: 0, flexShrink: 0 }}
       {...props}
     />
   );
