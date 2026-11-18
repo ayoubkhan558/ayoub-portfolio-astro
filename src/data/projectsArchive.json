@@ -995,7 +995,8 @@
           "cls": "0.415",
           "speedIndex": "1.6 s"
         }
-      }
+      },
+      "screenshot": "/projects/wordpress/project-ss-thefinancologist.jpg"
     },
     {
       "websiteName": "ERE Power FL",
@@ -1050,7 +1051,8 @@
           "cls": "0.203",
           "speedIndex": "1.4 s"
         }
-      }
+      },
+      "screenshot": "/projects/webflow/project-ss-eningo.jpg"
     },
     {
       "websiteName": "The Golden Form",
@@ -2400,6 +2402,49 @@
           "speedIndex": "1.6 s"
         }
       }
+    },
+    {
+      "websiteName": "YT Solutions",
+      "rating": 4,
+      "categoryNiche": "Business services",
+      "websiteUrl": "https://www.ytsolutions.co/",
+      "figmaLink": "https://www.figma.com/file/2B08PEBi2nPfOafiJTcLR5/YT-Solutions?type=design&node-id=0-1&mode=design&t=HRDP9xwdxvOy3SE8-0",
+      "platformFrameworkBuilder": "html, css",
+      "company": "Epicsols",
+      "client": "Epicsols",
+      "notes": "Original URL: https://yt-solutions.surge.sh/",
+      "date": null,
+      "projectType": "Business website",
+      "description": "YT Solutions is a business website translated from Figma with html, css to present services clearly and convert qualified visitors.",
+      "projectStatus": "Live",
+      "pageSpeed": {
+        "source": "Google PageSpeed Insights",
+        "testedUrl": "https://yt-solutions.surge.sh/",
+        "measuredAt": "2026-11-16",
+        "mobile": {
+          "performance": 74,
+          "seo": 58,
+          "accessibility": 80,
+          "bestPractices": 100,
+          "fcp": "1.1 s",
+          "lcp": "6.7 s",
+          "tbt": "0 ms",
+          "cls": "0.072",
+          "speedIndex": "3.9 s"
+        },
+        "desktop": {
+          "performance": 80,
+          "seo": 58,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "fcp": "0.2 s",
+          "lcp": "1.7 s",
+          "tbt": "0 ms",
+          "cls": "0.248",
+          "speedIndex": "1.2 s"
+        }
+      },
+      "screenshot": "/projects/html-css/project-ss-ytsolutions.jpg"
     },
     {
       "websiteName": "Waleed Portfolio",
@@ -4377,48 +4422,6 @@
           "tbt": "340 ms",
           "cls": "0.079",
           "speedIndex": "1.1 s"
-        }
-      }
-    },
-    {
-      "websiteName": "YT Solutions",
-      "rating": 3,
-      "categoryNiche": "Business services",
-      "websiteUrl": "https://yt-solutions.surge.sh/",
-      "figmaLink": "https://www.figma.com/file/2B08PEBi2nPfOafiJTcLR5/YT-Solutions?type=design&node-id=0-1&mode=design&t=HRDP9xwdxvOy3SE8-0",
-      "platformFrameworkBuilder": "html, css",
-      "company": "Epicsols",
-      "client": "Epicsols",
-      "notes": null,
-      "date": null,
-      "projectType": "Business website",
-      "description": "YT Solutions is a business website translated from Figma with html, css to present services clearly and convert qualified visitors.",
-      "projectStatus": "Live",
-      "pageSpeed": {
-        "source": "Google PageSpeed Insights",
-        "testedUrl": "https://yt-solutions.surge.sh/",
-        "measuredAt": "2026-11-16",
-        "mobile": {
-          "performance": 74,
-          "seo": 58,
-          "accessibility": 80,
-          "bestPractices": 100,
-          "fcp": "1.1 s",
-          "lcp": "6.7 s",
-          "tbt": "0 ms",
-          "cls": "0.072",
-          "speedIndex": "3.9 s"
-        },
-        "desktop": {
-          "performance": 80,
-          "seo": 58,
-          "accessibility": 81,
-          "bestPractices": 96,
-          "fcp": "0.2 s",
-          "lcp": "1.7 s",
-          "tbt": "0 ms",
-          "cls": "0.248",
-          "speedIndex": "1.2 s"
         }
       }
     },

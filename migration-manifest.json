@@ -30,7 +30,7 @@
       "file": "projectsArchive.json",
       "sha256": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
       "unchanged": false,
-      "currentSha256": "93a44e966b950640bb6d171401d1acb4dfda6c6fa2a6dede4107dcae786ac19e",
+      "currentSha256": "0c0687b6a1bc32aea63de511b3b585f75bb0821e174d36174d6a0741ce880179",
       "changeNote": "Added ratings to unrated projects and a verified screenshot path."
     },
     {
@@ -1632,14 +1632,35 @@
       "path": "projects/wordpress/project-ss-pms-study.jpg",
       "sha256": "669f746e576020525a358f5d22db21df54b5db8b95f404ac012cfdd473335c30",
       "unchanged": false,
-      "currentSha256": "669f746e576020525a358f5d22db21df54b5db8b95f404ac012cfdd473335c30",
-      "changeNote": "Added project screenshot."
+      "currentSha256": "bb8a42a3e4f6b8b338dbbf60348f327ab9815cd6285f0a7596bb58c4312a969a",
+      "changeNote": "Updated project screenshot."
     },
     {
       "path": "projects/html-css/project-ss-lp-video.jpg",
       "sha256": "a88a8b0e5176de9f0174649723bc603ad4738d44a832d86a1a93b3477e9ba729",
       "unchanged": false,
       "currentSha256": "a88a8b0e5176de9f0174649723bc603ad4738d44a832d86a1a93b3477e9ba729",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/wordpress/project-ss-thefinancologist.jpg",
+      "sha256": "c43982cb4351e62cff69453f073d5924571a4338b292d3dd3b7dc28ab95badf7",
+      "unchanged": false,
+      "currentSha256": "c43982cb4351e62cff69453f073d5924571a4338b292d3dd3b7dc28ab95badf7",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/webflow/project-ss-eningo.jpg",
+      "sha256": "2f649d7e556e013af2e0ff69f84c55cc2ff81bb914d1573555bee3c40c671b49",
+      "unchanged": false,
+      "currentSha256": "2f649d7e556e013af2e0ff69f84c55cc2ff81bb914d1573555bee3c40c671b49",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-ytsolutions.jpg",
+      "sha256": "5ce985ad836d14b56316576c8baae0150bdd168bf8d01c5981cebc226020b1e1",
+      "unchanged": false,
+      "currentSha256": "5ce985ad836d14b56316576c8baae0150bdd168bf8d01c5981cebc226020b1e1",
       "changeNote": "Added project screenshot."
     }
   ],
