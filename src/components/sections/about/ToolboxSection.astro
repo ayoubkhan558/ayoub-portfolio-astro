@@ -3,19 +3,6 @@ import Heading from "../../portfolio/Heading.astro";
 import SkillsMarquee from "../../portfolio/SkillsMarquee.astro";
 import p from "../../../data/portfolio.json";
 
-const expertise = [
-  { icon: "rocket", name: "React.js", version: "v18+", role: "Components, hooks, state, performance" },
-  { icon: "layers", name: "Next.js", version: "App Router", role: "SSR, SSG, routing, server components" },
-  { icon: "code", name: "TypeScript & JavaScript", version: "ES2024", role: "Type-safe, maintainable front-end code" },
-  { icon: "sparkles", name: "Tailwind / Shadcn / Bootstrap", version: "v3+", role: "Utility-first and component UI systems" },
-  { icon: "image", name: "Figma to Code", version: "Pixel", role: "Accurate, responsive implementation from designs" },
-  { icon: "gauge", name: "Performance & Technical SEO", version: "Lighthouse", role: "Speed, crawlability, WebP, lazy loading, Core Web Vitals, and indexing health" },
-  { icon: "shield", name: "API Integrations", version: "REST", role: "Stripe, PayPal, Shopify, custom APIs" },
-  { icon: "globe", name: "WordPress CMS", version: "5+ yrs", role: "Themes, ACF, CPT, REST API, headless" },
-  { icon: "cart", name: "WooCommerce", version: "Stores", role: "Product pages, checkout, payment flows" },
-  { icon: "database", name: "CMS Architecture", version: "ACF", role: "Editable content models and templates" },
-  { icon: "check", name: "QA & Handoff", version: "Launch", role: "Testing, docs, support, maintainability, and technical SEO validation" },
-];
 ---
 
 <section class="about-toolbox-section section wrap">
@@ -27,12 +14,7 @@ const expertise = [
           <span class="toolbox-index">{String(i + 1).padStart(2, "0")}</span>
           <h3>{t.title}</h3>
         </div>
-        <ul class="check-list spaced">
-          {expertise.map((item) => (
-            <li><strong>{item.name}</strong> · {item.version} — {item.role}</li>
-          ))}
-        </ul>
-        <ul>
+        <ul class="toolbox-items">
           {t.items.map((v) => (
             <li>{v}</li>
           ))}

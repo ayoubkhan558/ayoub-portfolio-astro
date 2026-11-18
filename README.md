@@ -1,5 +1,7 @@
 # Muhammad Ayoub — Astro Portfolio v1.4.0
 
+Original Template: https://mainline-astro-template.vercel.app/
+
 **Clean source-only update.** The ZIP excludes `public/`, `dist/`, `node_modules/` and generated screenshots. All 239 original public assets are unchanged. Editable files use two-space formatting. Section-specific copy lives with its components; project and case-study archives remain JSON-driven.
 
 ## Install in a new folder

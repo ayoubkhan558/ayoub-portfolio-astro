@@ -3031,16 +3031,29 @@ textarea {
   color: #b1d6bd;
 }
 .portfolio-faq [data-slot="accordion-trigger"] {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   font-size: 17px;
   line-height: 1.5;
   padding: 25px 4px;
   min-height: 72px;
   border-radius: 0;
+  text-align: left;
+}
+.portfolio-faq [data-slot="accordion-item"] > h3 {
+  display: flex;
+  margin: 0;
+  line-height: normal;
+  letter-spacing: normal;
 }
 .portfolio-faq [data-slot="accordion-trigger"] svg {
   width: 20px;
   height: 20px;
   margin-top: 3px;
+  flex-shrink: 0;
 }
 .portfolio-faq [data-slot="accordion-content"] {
   font-size: 16px;
@@ -3066,13 +3079,35 @@ textarea {
   height: 44px;
   min-width: 44px;
 }
+.slider-controls .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .reviews-slider [data-slot="carousel-content"],
 .tools-slider [data-slot="carousel-content"] {
   overflow: hidden;
 }
-.review-slide {
-  flex-basis: 33.333333%;
+.reviews-slider [data-slot="carousel-content"] > div,
+.tools-slider [data-slot="carousel-content"] > div {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.reviews-slider [data-slot="carousel-content"] > div {
+  margin-left: 0;
+  column-gap: 16px;
+}
+.reviews-slider .review-slide {
+  flex: 0 0 calc((100% - 32px) / 3);
+  display: flex;
+  padding-left: 0;
 }
 .review-slide .testimonial-card {
   width: 100%;
@@ -3083,11 +3118,8 @@ textarea {
   gap: 0;
   border-radius: 16px;
 }
-.reviews-slider [data-slot="carousel-content"] > div {
-  align-items: stretch;
-}
 .tool-slide {
-  flex-basis: 25%;
+  flex: 0 0 25%;
   display: flex;
 }
 .tool-slide article {
@@ -3272,8 +3304,8 @@ textarea {
   }
 }
 @media (max-width: 1000px) {
-  .review-slide {
-    flex-basis: 50%;
+  .reviews-slider .review-slide {
+    flex-basis: calc((100% - 16px) / 2);
   }
   .tool-slide {
     flex-basis: 33.333333%;
@@ -3286,7 +3318,7 @@ textarea {
   }
 }
 @media (max-width: 700px) {
-  .review-slide {
+  .reviews-slider .review-slide {
     flex-basis: 92%;
   }
   .tool-slide {
@@ -3384,6 +3416,76 @@ textarea {
     position: sticky;
     top: 32px;
     align-self: start;
+  }
+}
+
+/* Toolbox and proof sections share the same editorial rhythm across breakpoints. */
+.about-toolbox-section .compact-toolbox article {
+  grid-template-columns: minmax(140px, 0.28fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+.about-toolbox-section .compact-toolbox article > div {
+  align-items: baseline;
+}
+.about-toolbox-section .compact-toolbox ul {
+  align-items: flex-start;
+}
+.about-toolbox-section .compact-toolbox li {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.about-toolbox-section .skills-title {
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.about-toolbox-section .skills-title h3,
+.about-toolbox-section .skills-title p {
+  margin-bottom: 0;
+}
+.about-toolbox-section .marquee-toolbar {
+  align-items: center;
+}
+.home-testimonials-section .reviews-slider,
+.about-testimonials .reviews-slider {
+  min-width: 0;
+}
+.portfolio-faq {
+  align-items: start;
+  column-gap: clamp(40px, 8vw, 112px);
+  row-gap: 36px;
+}
+.portfolio-faq > :last-child {
+  min-width: 0;
+}
+.portfolio-faq [data-slot="accordion-trigger"] {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 800px) {
+  .about-toolbox-section .compact-toolbox article {
+    grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
+    gap: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .about-toolbox-section .compact-toolbox article {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .about-toolbox-section .compact-toolbox article > div {
+    gap: 12px;
+  }
+  .about-toolbox-section .skills-title {
+    margin-top: 36px;
+    padding-top: 24px;
+  }
+  .about-toolbox-section .marquee-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .about-toolbox-section .tool-chip {
+    padding: 12px 14px;
   }
 }
 

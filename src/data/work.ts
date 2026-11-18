@@ -39,6 +39,7 @@ export type ProjectCard = {
   href: string;
   image: string;
   imageAlt: string;
+  rating?: number;
 };
 
 const featuredProjectNames = [
@@ -51,6 +52,10 @@ const featuredProjectNames = [
   "PinAuto",
   "Clampy",
   "Markedine",
+  "Pagano Law",
+  "King SR - Real Estate RK",
+  "Weinberger Aesthetics",
+  "50Stars",
 ] as const;
 
 const projectThemeIcons: Record<string, string> = {
@@ -104,6 +109,7 @@ function toProjectCard(
     href,
     image,
     imageAlt: `${title} project preview`,
+    rating: project.rating,
   };
 }
 
@@ -112,4 +118,5 @@ export const projects = featuredProjectNames
     projectArchiveItems.find((project) => getProjectTitle(project) === name),
   )
   .filter((project): project is NonNullable<typeof project> => Boolean(project))
+  .filter((project) => project.rating === 5)
   .map(toProjectCard);
