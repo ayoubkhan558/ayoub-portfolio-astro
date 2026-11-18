@@ -6,5 +6,5 @@ export const siteSettings = {
   projectsPerPage:
     Number.isSafeInteger(projectsPerPage) && projectsPerPage > 0
       ? projectsPerPage
-      : 12,
+    : 9,
 };

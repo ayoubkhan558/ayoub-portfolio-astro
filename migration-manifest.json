@@ -9,7 +9,7 @@
       "file": "caseStudyDetails.json",
       "sha256": "9f827e8d2d740a7236e6757a6ee7069b534119118d6d69e4e48217f49916e6cf",
       "unchanged": false,
-      "currentSha256": "c80c8fe9bd33bec97157c2efae0d14e176a1451435ee59f60aba380cb95f3e4f",
+      "currentSha256": "5180f955b7fd6b6100cccaf15a5716259e05cd19209511ccbfae1fef637f5a75",
       "changeNote": "Two-space formatting only; parsed data unchanged."
     },
     {
@@ -23,14 +23,14 @@
       "file": "projectLinkStatus.json",
       "sha256": "12340767518ffeb25ad41b0fc221cd4fd328eb5ea16a0c11b264b5dd83381d29",
       "unchanged": false,
-      "currentSha256": "c51c6b484843e27f8833974aca094aa17a9fcaf9ad35e9ae14c89d3445042284",
+      "currentSha256": "a2409900203ce6fa9a8cbeb50508e40e1334bf853eb28b497e88016dc9d155b6",
       "changeNote": "Two-space formatting only; parsed data unchanged."
     },
     {
       "file": "projectsArchive.json",
       "sha256": "0bb9d1f73c31d7190738eb0081ea4b94a8c0d4d6194fab32dcd7a0058729a54b",
       "unchanged": false,
-      "currentSha256": "d82b0b5485c027f95301258b164d3ce7bd810a809623fd1d9cfdcf5bdcfe685e",
+      "currentSha256": "fb8a8c2fda80bd886322bcde302cd57a26d02139d27528f04a0adaac13538a53",
       "changeNote": "Added ratings to unrated projects and a verified screenshot path."
     },
     {
@@ -45,7 +45,8 @@
     {
       "path": "cv-resume-ayoub-web-dev-seo.pdf",
       "sha256": "1e3874e5e451d4cd36e5242d1686b6f8e14aa9364fb4b3a28c0b23ab38211ae3",
-      "unchanged": true
+      "unchanged": true,
+      "currentSha256": "ed35981cd18071e5d5517297ce6d9e89a6a2dca22c5fc1250c1c69969f48692a"
     },
     {
       "path": "apple-touch-icon.png",
@@ -538,392 +539,544 @@
       "unchanged": true
     },
     {
-      "path": "projects/project-ss-301-redirect.jpg",
+      "path": "projects/wordpress/project-ss-301-redirect.jpg",
       "sha256": "5bd2a714900c0a7d1dcb5d27adf54f16d453f0ff04703afd3070279c709bf0e5",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "5bd2a714900c0a7d1dcb5d27adf54f16d453f0ff04703afd3070279c709bf0e5",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-50stars.jpg",
+      "path": "projects/wordpress/project-ss-50stars.jpg",
       "sha256": "32eae813979ba531f705d360b9ae0d6124844efd23fc91f125629979b367884e",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "32eae813979ba531f705d360b9ae0d6124844efd23fc91f125629979b367884e",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-5gstore.jpg",
+      "path": "projects/wordpress/project-ss-5gstore.jpg",
       "sha256": "ac5a62b95c6a9b33b22b51e7408fafe019ee5db06b3ad9552b6abbd6199ee860",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c02ee2cda96c9ebf89edb5087983e0cf98c73a07f5e4397d9b2df4c0c65c0d9b",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-acholyte.jpg",
+      "path": "projects/wordpress/project-ss-acholyte.jpg",
       "sha256": "a929001e964e61304f379a66d4c4f1cee737f76649dff52aac3810a4759c0f19",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "a929001e964e61304f379a66d4c4f1cee737f76649dff52aac3810a4759c0f19",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-alkira.jpg",
+      "path": "projects/wordpress/project-ss-alkira.jpg",
       "sha256": "397829a8aa5925a25f5a6bd89ce88db78b5ee1aa8ebe289ba233fe97ccd88828",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "397829a8aa5925a25f5a6bd89ce88db78b5ee1aa8ebe289ba233fe97ccd88828",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-appmint-landing-page.jpg",
+      "path": "projects/reactjs/project-ss-appmint-landing-page.jpg",
       "sha256": "bc07c797815fd1b984db8a98952a9405fb997e41a054f4bbde99b745cfa8f5fb",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "bc07c797815fd1b984db8a98952a9405fb997e41a054f4bbde99b745cfa8f5fb",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-appmint.jpg",
+      "path": "projects/reactjs/project-ss-appmint.jpg",
       "sha256": "f510337bb88f47bdb1c0601f723963e552d4127a07d745379efff04a4f8ffc66",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "f510337bb88f47bdb1c0601f723963e552d4127a07d745379efff04a4f8ffc66",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-art-digital.jpg",
+      "path": "projects/html-css/project-ss-art-digital.jpg",
       "sha256": "e689ad7f97063b83492746fecece48f663bc99cc76c10dc298c31d6de475f755",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "e689ad7f97063b83492746fecece48f663bc99cc76c10dc298c31d6de475f755",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-assessment-intelligent-netlify.jpg",
+      "path": "projects/html-css/project-ss-assessment-intelligent-netlify.jpg",
       "sha256": "5458bd5ff5ee32d999dbe58100c71f3f47d3cd8f1eae13bfd0d5f045c31d7afb",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "5458bd5ff5ee32d999dbe58100c71f3f47d3cd8f1eae13bfd0d5f045c31d7afb",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-babypng.jpg",
+      "path": "projects/html-css/project-ss-babypng.jpg",
       "sha256": "45e31f4c1190a53c3445a1dd3b0a1ee1b7341c63268919e4417930d4f8de8827",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "45e31f4c1190a53c3445a1dd3b0a1ee1b7341c63268919e4417930d4f8de8827",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-bitss.jpg",
+      "path": "projects/html-css/project-ss-bitss.jpg",
       "sha256": "e6b77704d4e7614c82c4dc5c50550aaa086a521188b0078436e6010ad7c58122",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "e6b77704d4e7614c82c4dc5c50550aaa086a521188b0078436e6010ad7c58122",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-brickify.jpg",
+      "path": "projects/reactjs/project-ss-brickify.jpg",
       "sha256": "1c96c785edcc0e03cb486f2f5384d22b11e20359b904b5434b0319480af48743",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "1c96c785edcc0e03cb486f2f5384d22b11e20359b904b5434b0319480af48743",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-carptrac.jpg",
+      "path": "projects/wordpress/project-ss-carptrac.jpg",
       "sha256": "e97e875fa04fe9d8ea0e680bf25933aebcf5fd90b09304c842413074326fdb81",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "e97e875fa04fe9d8ea0e680bf25933aebcf5fd90b09304c842413074326fdb81",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-centaurivision.jpg",
+      "path": "projects/wordpress/project-ss-centaurivision.jpg",
       "sha256": "715cee21f90bee2b163309be6034e955d8ea752462ad1ac95055c67ec6f825f7",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "715cee21f90bee2b163309be6034e955d8ea752462ad1ac95055c67ec6f825f7",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-champions-mortgage-team.jpg",
+      "path": "projects/wordpress/project-ss-champions-mortgage-team.jpg",
       "sha256": "21edd08315943a8629db21b84aaeeb8d8620a814f591c224e459832068923315",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "21edd08315943a8629db21b84aaeeb8d8620a814f591c224e459832068923315",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-cheapzy.jpg",
+      "path": "projects/wordpress/project-ss-cheapzy.jpg",
       "sha256": "3efd66b733c2193a8a0d9eb0fbcda6d1a9c59c3317feabb4903174cbcaf76648",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "3efd66b733c2193a8a0d9eb0fbcda6d1a9c59c3317feabb4903174cbcaf76648",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-chkk.jpg",
+      "path": "projects/webflow/project-ss-chkk.jpg",
       "sha256": "30c7807d72e07c4b19922fb81227dd32b539cf833dbc536b2423eb228b03deb6",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "30c7807d72e07c4b19922fb81227dd32b539cf833dbc536b2423eb228b03deb6",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-clampy.jpg",
+      "path": "projects/reactjs/project-ss-clampy.jpg",
       "sha256": "b58b3748e98c41ba51f24a734214f16b1fcd12d05822a74f8becc88d592b0bf4",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "b58b3748e98c41ba51f24a734214f16b1fcd12d05822a74f8becc88d592b0bf4",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-dalailkhairat.jpg",
+      "path": "projects/other/project-ss-dalailkhairat.jpg",
       "sha256": "5509cf9ea547a3b63a40563f6e36ab9f9ff0d4269ee096412ff704a2a02289d9",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "5509cf9ea547a3b63a40563f6e36ab9f9ff0d4269ee096412ff704a2a02289d9",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-danielle-ball-fitness.jpg",
+      "path": "projects/wordpress/project-ss-danielle-ball-fitness.jpg",
       "sha256": "cb60b12b7c3002d2fad88b343d972db753a8082576279a02976dba3e47615ad0",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "cb60b12b7c3002d2fad88b343d972db753a8082576279a02976dba3e47615ad0",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-debate-box.jpg",
+      "path": "projects/reactjs/project-ss-debate-box.jpg",
       "sha256": "58fd1e43b52465b23bd431e747f3da40275675261321d78efb261d52a73be17f",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "58fd1e43b52465b23bd431e747f3da40275675261321d78efb261d52a73be17f",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-dhabas-netlify.jpg",
+      "path": "projects/html-css/project-ss-dhabas-netlify.jpg",
       "sha256": "9b3bb2df07da5a7abed055787e0d3ea71e42d683990599f1df7928323704e9d5",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "9b3bb2df07da5a7abed055787e0d3ea71e42d683990599f1df7928323704e9d5",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-digihub.jpg",
+      "path": "projects/wordpress/project-ss-digihub.jpg",
       "sha256": "c8e3e12c33ca048e0798d38599c03da1bc942a4cebee379defe9d20df001bee5",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c8e3e12c33ca048e0798d38599c03da1bc942a4cebee379defe9d20df001bee5",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-episcols.jpg",
+      "path": "projects/reactjs/project-ss-episcols.jpg",
       "sha256": "dd477481dfd82017b3adfc861cdd29f1e5d68cb14fcbb879696f84d2d361e3cf",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "fb6ee22a4755c3f2d5c9267d8739cbc28788a909a24e3755e1c64b9ce97f1979",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-fewcents.jpg",
+      "path": "projects/other/project-ss-fewcents.jpg",
       "sha256": "656c0a738ea526d0ee971b20a1c63ea1815e80326c4a12b87f8a0c17678129d4",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "656c0a738ea526d0ee971b20a1c63ea1815e80326c4a12b87f8a0c17678129d4",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-glowcore.jpg",
+      "path": "projects/shopify/project-ss-glowcore.jpg",
       "sha256": "cb6f013c27db07c6258b0d36d16af8d03bb3545cab4f565a9b49211a10698da7",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "cb6f013c27db07c6258b0d36d16af8d03bb3545cab4f565a9b49211a10698da7",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-guaranteed-grades.jpg",
+      "path": "projects/wordpress/project-ss-guaranteed-grades.jpg",
       "sha256": "2fed20d47ca6a5a498fc9853ff16032be9ead85f12a0f35138836dd4591e9a00",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "2fed20d47ca6a5a498fc9853ff16032be9ead85f12a0f35138836dd4591e9a00",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg",
+      "path": "projects/wordpress/project-ss-kargokdelivery-cqxwipnq8r-live-website.jpg",
       "sha256": "323a8e25a0d688738acbba1c537eff3ee81b58f8966ca799c7d624c88cb1eb87",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "323a8e25a0d688738acbba1c537eff3ee81b58f8966ca799c7d624c88cb1eb87",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-katy-body-sculpt.jpg",
+      "path": "projects/html-css/project-ss-katy-body-sculpt.jpg",
       "sha256": "da5804a9a865795f620a22a5a1b189a604e9635ef0605ef9aa887a0394206aae",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "da5804a9a865795f620a22a5a1b189a604e9635ef0605ef9aa887a0394206aae",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-king-sr-real-estate-rk.jpg",
+      "path": "projects/other/project-ss-king-sr-real-estate-rk.jpg",
       "sha256": "c3932cdc87269fc6afc4f90fe16eb2c4e667f0bdf1ef8c1da4d438b2ccfff696",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c3932cdc87269fc6afc4f90fe16eb2c4e667f0bdf1ef8c1da4d438b2ccfff696",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-kodak-connect.jpg",
+      "path": "projects/html-css/project-ss-kodak-connect.jpg",
       "sha256": "c12cd69b3c97c0a2cac882a2ea84e86d010b8edc81a71bfa4b729e2124062dc2",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c12cd69b3c97c0a2cac882a2ea84e86d010b8edc81a71bfa4b729e2124062dc2",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-kuza-app-netlify.jpg",
+      "path": "projects/html-css/project-ss-kuza-app-netlify.jpg",
       "sha256": "e95cb16eb2de8bd5c44d2786bb5aa6f09905d9ecb1e5d026dd04dec6628abc86",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "e95cb16eb2de8bd5c44d2786bb5aa6f09905d9ecb1e5d026dd04dec6628abc86",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-lws-academy.jpg",
+      "path": "projects/wordpress/project-ss-lws-academy.jpg",
       "sha256": "803d9ae6e3e4c807c5a553fd6bbc0239a6f60f00766b5fc8acffc6d6f0735537",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "803d9ae6e3e4c807c5a553fd6bbc0239a6f60f00766b5fc8acffc6d6f0735537",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-magnet-social.jpg",
+      "path": "projects/wordpress/project-ss-magnet-social.jpg",
       "sha256": "533e2bccb962a9971439892d61bed66fc51247809e111bf2e6a5640e96ec0572",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "1d44c46eb596caa17c107d52cd3d25876fa854482beebea2ce8c1bf95eece54c",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-markedine.jpg",
+      "path": "projects/wordpress/project-ss-markedine.jpg",
       "sha256": "084d8891335cb7575b06755aa08bdbe7991db23e1690f29807717e09d7749d90",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "084d8891335cb7575b06755aa08bdbe7991db23e1690f29807717e09d7749d90",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-mkz-mart.jpg",
+      "path": "projects/other/project-ss-mkz-mart.jpg",
       "sha256": "4f6a8d4df75257766612addf667c97afc1c814f71be33a384d9cc594b184bf39",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "4f6a8d4df75257766612addf667c97afc1c814f71be33a384d9cc594b184bf39",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-monoami-landing.jpg",
+      "path": "projects/html-css/project-ss-monoami-landing.jpg",
       "sha256": "b0457e12120c4aeb2d8c641fe006ee1497efb575b78bf0199a353b00ecd1a051",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "b0457e12120c4aeb2d8c641fe006ee1497efb575b78bf0199a353b00ecd1a051",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-more-than-baths.jpg",
+      "path": "projects/shopify/project-ss-more-than-baths.jpg",
       "sha256": "c47707968ba5493f6b8eb34cd8b5844ae99dd3d0d65f9f2ae273a4fccfec150f",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c47707968ba5493f6b8eb34cd8b5844ae99dd3d0d65f9f2ae273a4fccfec150f",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-mrchrissyservices-netlify.jpg",
+      "path": "projects/html-css/project-ss-mrchrissyservices-netlify.jpg",
       "sha256": "5e7a70f0ac283fa1e3e23b21893c465b893635c59885bd5ca35e46767b605636",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "5e7a70f0ac283fa1e3e23b21893c465b893635c59885bd5ca35e46767b605636",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-mugnsoft.jpg",
+      "path": "projects/wordpress/project-ss-mugnsoft.jpg",
       "sha256": "27e294632c5d795adcd10f177475bb7c50d35c96b4ea376f4adbece80630bdca",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "27e294632c5d795adcd10f177475bb7c50d35c96b4ea376f4adbece80630bdca",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-naseeha.jpg",
+      "path": "projects/html-css/project-ss-naseeha.jpg",
       "sha256": "af4b2593b443eb4c02e1d905522db809c360ff632fab64c613b43fd062dbfe90",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "350d6be647db81c48f272b176cf3cc09694c261d6ef026de909b701b78b3e63f",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-nclrealestate.jpg",
+      "path": "projects/wordpress/project-ss-nclrealestate.jpg",
       "sha256": "2b908c13d1aa8a302f793e78cd4e89d07769d9c43b701c96fe4c8df4e7523f20",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "2b908c13d1aa8a302f793e78cd4e89d07769d9c43b701c96fe4c8df4e7523f20",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-p-intelligence.jpg",
+      "path": "projects/html-css/project-ss-p-intelligence.jpg",
       "sha256": "819ac78e9d7dab53f37e5f7005c3c7c7fb573c66ff17179c3b5b10e317eced25",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "819ac78e9d7dab53f37e5f7005c3c7c7fb573c66ff17179c3b5b10e317eced25",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-pagano-law.jpg",
+      "path": "projects/other/project-ss-pagano-law.jpg",
       "sha256": "74286601d38da06e298a303b754fa6660838dbeaaf033707aeabc7533c5bdb32",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "74286601d38da06e298a303b754fa6660838dbeaaf033707aeabc7533c5bdb32",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-pin-it.jpg",
+      "path": "projects/wordpress/project-ss-pin-it.jpg",
       "sha256": "2ab55448ebe0c4300c8d3a2c87a005a1d0d2d3a47646d4f5b58c9b305a6644bc",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "2ab55448ebe0c4300c8d3a2c87a005a1d0d2d3a47646d4f5b58c9b305a6644bc",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-polygon.jpg",
+      "path": "projects/wordpress/project-ss-polygon.jpg",
       "sha256": "86d6e4c452f865a9c4a19a38ed87c3aa472d06c24710e33eec091dc9c3698e60",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "86d6e4c452f865a9c4a19a38ed87c3aa472d06c24710e33eec091dc9c3698e60",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-portoro.jpg",
+      "path": "projects/html-css/project-ss-portoro.jpg",
       "sha256": "8cb482a737d8a13cb5957ac03ee9bd1589451edde79268c81b2d187e760c1e5a",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "8cb482a737d8a13cb5957ac03ee9bd1589451edde79268c81b2d187e760c1e5a",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-price-bulk-edit.jpg",
+      "path": "projects/wordpress/project-ss-price-bulk-edit.jpg",
       "sha256": "f880b28e5557aebaafb31265eda07192498622fb7fcd287f206bfbcac84aba4d",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "f880b28e5557aebaafb31265eda07192498622fb7fcd287f206bfbcac84aba4d",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-promo-intelligence-pro-netlify.jpg",
+      "path": "projects/html-css/project-ss-promo-intelligence-pro-netlify.jpg",
       "sha256": "8eb0e703d4bed2a71aebccb82eecf77679f3214f76bd9ba84c3282e72ec8ed86",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "8eb0e703d4bed2a71aebccb82eecf77679f3214f76bd9ba84c3282e72ec8ed86",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-rebill.jpg",
+      "path": "projects/wordpress/project-ss-rebill.jpg",
       "sha256": "a247479a4a6f69ffe5f9242b630b113ae29d3d7c22720b741f5b1250df580e8b",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "a247479a4a6f69ffe5f9242b630b113ae29d3d7c22720b741f5b1250df580e8b",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-reppit.jpg",
+      "path": "projects/wordpress/project-ss-reppit.jpg",
       "sha256": "a81083db52633175c96d26a38e0bbe273033f6ce89f6b7973dc9f47c0cc7c320",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "a81083db52633175c96d26a38e0bbe273033f6ce89f6b7973dc9f47c0cc7c320",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-reyesenvironmental.jpg",
+      "path": "projects/wordpress/project-ss-reyesenvironmental.jpg",
       "sha256": "36a7dc66cb48a8594abb4fd0cbf929a70e11ba9b9107eb928349164ae1d466c1",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "36a7dc66cb48a8594abb4fd0cbf929a70e11ba9b9107eb928349164ae1d466c1",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-robux-gold.jpg",
+      "path": "projects/reactjs/project-ss-robux-gold.jpg",
       "sha256": "a09104655eccbfc4459e871ad5a4681a0480f3a18e890ea17e06bb7c81c5f4e0",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "a09104655eccbfc4459e871ad5a4681a0480f3a18e890ea17e06bb7c81c5f4e0",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-serpio.jpg",
+      "path": "projects/wordpress/project-ss-serpio.jpg",
       "sha256": "dcae7497003bf3355e1c22b14a7bc620babfc0119b2207a51fd7829ddc9b5e5e",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "dcae7497003bf3355e1c22b14a7bc620babfc0119b2207a51fd7829ddc9b5e5e",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-serviceplace.jpg",
+      "path": "projects/html-css/project-ss-serviceplace.jpg",
       "sha256": "826f4d4c4578f948eecd4e4b3a435a25817a65b9716eec280b43b3a6f5198ad7",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "826f4d4c4578f948eecd4e4b3a435a25817a65b9716eec280b43b3a6f5198ad7",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-seshy.jpg",
+      "path": "projects/reactjs/project-ss-seshy.jpg",
       "sha256": "4ed93ac61cefa572e4d251e2305d7bfb3d493db10af83275c9136d7b2c3eb2b3",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "4ed93ac61cefa572e4d251e2305d7bfb3d493db10af83275c9136d7b2c3eb2b3",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-shininghorizon.jpg",
+      "path": "projects/wordpress/project-ss-shininghorizon.jpg",
       "sha256": "9b06666531eeb3f745653c8ec2ea3d44b15dc0971c7fab8431735c56ddea4665",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "9b06666531eeb3f745653c8ec2ea3d44b15dc0971c7fab8431735c56ddea4665",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-shoppable.jpg",
+      "path": "projects/wordpress/project-ss-shoppable.jpg",
       "sha256": "c53e72e61eed31f1da73a49474632242f52752e2499a97e80b77e69dc4e0e514",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "c53e72e61eed31f1da73a49474632242f52752e2499a97e80b77e69dc4e0e514",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-sku-auto.jpg",
+      "path": "projects/wordpress/project-ss-sku-auto.jpg",
       "sha256": "55de6ccae39164b55e2b6e245faa59cc6d8bb8998d6ce007271a03f5954d8035",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "55de6ccae39164b55e2b6e245faa59cc6d8bb8998d6ce007271a03f5954d8035",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-smartavlasia.jpg",
+      "path": "projects/wordpress/project-ss-smartavlasia.jpg",
       "sha256": "fbad4b5f5f484589d3571bba50183cbba84f6b47c99e0f4720a2ecdecc781a6c",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "fbad4b5f5f484589d3571bba50183cbba84f6b47c99e0f4720a2ecdecc781a6c",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-strainproxies-front.jpg",
+      "path": "projects/html-css/project-ss-strainproxies-front.jpg",
       "sha256": "ab15e5066d47e21aa1af5056fb104fc9bc4d107beb13e2170df84906aba450db",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "ab15e5066d47e21aa1af5056fb104fc9bc4d107beb13e2170df84906aba450db",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-studyly - Copy.jpg",
+      "path": "projects/html-css/project-ss-studyly - Copy.jpg",
       "sha256": "3a8a06c71936eafd4696361ebff43cd1f52393721408dcecc3ab0c93e88477ec",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "3a8a06c71936eafd4696361ebff43cd1f52393721408dcecc3ab0c93e88477ec",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-studyly.jpg",
+      "path": "projects/html-css/project-ss-studyly.jpg",
       "sha256": "3a8a06c71936eafd4696361ebff43cd1f52393721408dcecc3ab0c93e88477ec",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "3a8a06c71936eafd4696361ebff43cd1f52393721408dcecc3ab0c93e88477ec",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-sun-shield-insurance.jpg",
+      "path": "projects/wordpress/project-ss-sun-shield-insurance.jpg",
       "sha256": "63d46c528531ca88ca5d07239c234a93e1a28e8a6809669df5f9a5fa2ec23ca5",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "63d46c528531ca88ca5d07239c234a93e1a28e8a6809669df5f9a5fa2ec23ca5",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-supplements-hub.jpg",
+      "path": "projects/shopify/project-ss-supplements-hub.jpg",
       "sha256": "fab0a050fed5df9197b7f74634e94c8a56ed526393313be915c9188fc68e9f75",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "fab0a050fed5df9197b7f74634e94c8a56ed526393313be915c9188fc68e9f75",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-thaivisaexpert.jpg",
+      "path": "projects/wordpress/project-ss-thaivisaexpert.jpg",
       "sha256": "2a549788f912fc5777d6b95420601c73c05d2b16f43d1e916d5125e667ea37a8",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "2a549788f912fc5777d6b95420601c73c05d2b16f43d1e916d5125e667ea37a8",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-the-golden-form.jpg",
+      "path": "projects/wix/project-ss-the-golden-form.jpg",
       "sha256": "28d55b0409c2b9dc5525cae0161a2a99d5f8aec87c8eb38f082e50b60abc688d",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "28d55b0409c2b9dc5525cae0161a2a99d5f8aec87c8eb38f082e50b60abc688d",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-the-royal-pin.jpg",
+      "path": "projects/wordpress/project-ss-the-royal-pin.jpg",
       "sha256": "3d78376f5db02a746cc7bdf31d98512e3a15955250ca45b035c7950da0ca63f7",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "3d78376f5db02a746cc7bdf31d98512e3a15955250ca45b035c7950da0ca63f7",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-theme-scheduler.jpg",
+      "path": "projects/wordpress/project-ss-theme-scheduler.jpg",
       "sha256": "e080c0698958335a887cf4c56139844cf099528a51bf3fa68bbe0c1519c99861",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "e080c0698958335a887cf4c56139844cf099528a51bf3fa68bbe0c1519c99861",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-tripo-netlify.jpg",
+      "path": "projects/html-css/project-ss-tripo-netlify.jpg",
       "sha256": "3f7f8307298140273509cf39be1b195aa6fdc3e71662013f2df5fbf148c21462",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "3f7f8307298140273509cf39be1b195aa6fdc3e71662013f2df5fbf148c21462",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-waleed-portfolio.jpg",
+      "path": "projects/wordpress/project-ss-waleed-portfolio.jpg",
       "sha256": "f55507a9dd533d28477edcbb6af15512d13a5b8c336aa0650fd396f37d9c5ad1",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "f55507a9dd533d28477edcbb6af15512d13a5b8c336aa0650fd396f37d9c5ad1",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-webp-optimzer.jpg",
+      "path": "projects/wordpress/project-ss-webp-optimzer.jpg",
       "sha256": "5fd1256baa5ffd3d81e42b1d3e3d76de413054e5fd5a0193985c9622b8735a8e",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "5fd1256baa5ffd3d81e42b1d3e3d76de413054e5fd5a0193985c9622b8735a8e",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-weinberger-aesthetics.jpg",
+      "path": "projects/wordpress/project-ss-weinberger-aesthetics.jpg",
       "sha256": "e1978e744704abcde107ed2e2fa9d1637e1877107708d87e3b5c26cf6a2ba9fc",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "e1978e744704abcde107ed2e2fa9d1637e1877107708d87e3b5c26cf6a2ba9fc",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-xgrid.jpg",
+      "path": "projects/nextjs/project-ss-xgrid.jpg",
       "sha256": "45ebe7be0094040c4cddeca9fd778c38522b26f2a9b941cb566b5505418c3ffa",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "45ebe7be0094040c4cddeca9fd778c38522b26f2a9b941cb566b5505418c3ffa",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-xnation.jpg",
+      "path": "projects/reactjs/project-ss-xnation.jpg",
       "sha256": "c01fc2e7c3233f3f4f26341a53a2d622ed727b6debeff1586f9b8909f423eeaa",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "b5c00999a4b9d47edd1875d5d5068818c482a42a9a0a2845b90b89b989311920",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "projects/project-ss-youtube-convert.jpg",
+      "path": "projects/html-css/project-ss-youtube-convert.jpg",
       "sha256": "a7c9c9231ed7ab5ff42b24aa28eb82599705cedc17cb2f3302c599b8c56fe518",
-      "unchanged": true
+      "unchanged": false,
+      "currentSha256": "a7c9c9231ed7ab5ff42b24aa28eb82599705cedc17cb2f3302c599b8c56fe518",
+      "changeNote": "Moved into framework folders; copies synchronized across both sites."
     },
     {
-      "path": "react-projects/project-ss-mockify.jpg",
+      "path": "projects/reactjs/project-ss-mockify.jpg",
       "sha256": "4bbb829bfd5b88da91297f9f8d20511ac400beaf864ca23786cd5af68380097d",
       "unchanged": true
     },
     {
-      "path": "react-projects/project-ss-resumify.png",
+      "path": "projects/reactjs/project-ss-resumify.png",
       "sha256": "56acc81592e7503a2e04aed95f1f8ee809936388e26b787043a21eb0f50137b0",
       "unchanged": true
     },
@@ -1236,6 +1389,258 @@
       "path": "tools/yoast-seo.png",
       "sha256": "d519d8112563011bbf31eb35e2323b2ef59a927f4ee3dacc208878dad84d94ef",
       "unchanged": true
+    },
+    {
+      "path": "projects/html-css/project-ss-edinburghptacademy.jpg",
+      "sha256": "b363edc0c5345d483a84ab8187d5c5708f89527e8d76a628d4b3389f3a88ff2b",
+      "unchanged": false,
+      "currentSha256": "b363edc0c5345d483a84ab8187d5c5708f89527e8d76a628d4b3389f3a88ff2b",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/reactjs/project-ss-goenterprisehr.jpg",
+      "sha256": "de4d9e702b1673ec427dfdd2fb8e5751c19fa4180b63ab01f26db3eefd42d26d",
+      "unchanged": false,
+      "currentSha256": "de4d9e702b1673ec427dfdd2fb8e5751c19fa4180b63ab01f26db3eefd42d26d",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/other/project-ss-techbridgerecruiting.jpg",
+      "sha256": "9aec979fde33d50271b48ea26e06a6db4416daf1bf825c7acfa15b4413be6f13",
+      "unchanged": false,
+      "currentSha256": "9aec979fde33d50271b48ea26e06a6db4416daf1bf825c7acfa15b4413be6f13",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-waitifi.jpg",
+      "sha256": "5b9635cb6e9cc12bca62b276e0992bf12f03271d0cfd76425ef1ae8a27fd82a7",
+      "unchanged": false,
+      "currentSha256": "5b9635cb6e9cc12bca62b276e0992bf12f03271d0cfd76425ef1ae8a27fd82a7",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-waitiyi-front.jpg",
+      "sha256": "4a1e1436ad075b437d60433e4f8a4676cdb53cc0ec25e339056fed170643bde0",
+      "unchanged": false,
+      "currentSha256": "4a1e1436ad075b437d60433e4f8a4676cdb53cc0ec25e339056fed170643bde0",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/reactjs/project-ss-punisher.jpg",
+      "sha256": "ef3b0e5608d609bd3f054e6132938e349369a3dba37fdd2f8d5d85e8a5c77569",
+      "unchanged": false,
+      "currentSha256": "ef3b0e5608d609bd3f054e6132938e349369a3dba37fdd2f8d5d85e8a5c77569",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/reactjs/project-ss-tembekasua.jpg",
+      "sha256": "49139fe8d7362b5c2ba671ba7c3cdda5ceec2ce751f189486616057dda5ff3ee",
+      "unchanged": false,
+      "currentSha256": "49139fe8d7362b5c2ba671ba7c3cdda5ceec2ce751f189486616057dda5ff3ee",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-strain-proxies.jpg",
+      "sha256": "b6ce4490eee56fc3683fb5b4b1342dacd5d8b84110dbcacc08999ad8877b6ab9",
+      "unchanged": false,
+      "currentSha256": "b6ce4490eee56fc3683fb5b4b1342dacd5d8b84110dbcacc08999ad8877b6ab9",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-papelprensa.jpg",
+      "sha256": "5e5c1e4f23c96d1a325c86d40b8197c04a1e98125bc2f54c8e283dd24c9ae8cc",
+      "unchanged": false,
+      "currentSha256": "5e5c1e4f23c96d1a325c86d40b8197c04a1e98125bc2f54c8e283dd24c9ae8cc",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-traffictinker.jpg",
+      "sha256": "b9d8bc82116671921e5059f8c0f14e983c69e51b052d9ede08cde027fe7ea7bf",
+      "unchanged": false,
+      "currentSha256": "b9d8bc82116671921e5059f8c0f14e983c69e51b052d9ede08cde027fe7ea7bf",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-wallsstreetbets.jpg",
+      "sha256": "779c496769501ac413bcb3792cd85942156d680dbf59c680ac2085e4f3a46b86",
+      "unchanged": false,
+      "currentSha256": "779c496769501ac413bcb3792cd85942156d680dbf59c680ac2085e4f3a46b86",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-pure-for-you.jpg",
+      "sha256": "21a3bb31bb8af41abbff094e13582705d8291ec194e2d754955586297a8f09b8",
+      "unchanged": false,
+      "currentSha256": "21a3bb31bb8af41abbff094e13582705d8291ec194e2d754955586297a8f09b8",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-lazhora.jpg",
+      "sha256": "330ea490c3f8a6268f5e569f2ff9af6e3d29f527f7079b338d161cc283517f17",
+      "unchanged": false,
+      "currentSha256": "330ea490c3f8a6268f5e569f2ff9af6e3d29f527f7079b338d161cc283517f17",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-leadgen.jpg",
+      "sha256": "3b05ae5acc47e397a33385758c0959463132ee90d274439b5ea3fed17b4189cf",
+      "unchanged": false,
+      "currentSha256": "3b05ae5acc47e397a33385758c0959463132ee90d274439b5ea3fed17b4189cf",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-bcd.jpg",
+      "sha256": "836067fb6083baf725333b3c1e4efedbe02999b56f2d062b3fb90a028f6e7694",
+      "unchanged": false,
+      "currentSha256": "836067fb6083baf725333b3c1e4efedbe02999b56f2d062b3fb90a028f6e7694",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-assertive-industries.jpg",
+      "sha256": "634e62cab4c0d685e2691e54ac745cc70452ba1518ad76c3d141abe2c4f29235",
+      "unchanged": false,
+      "currentSha256": "634e62cab4c0d685e2691e54ac745cc70452ba1518ad76c3d141abe2c4f29235",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-casino-bonuses-finder.jpg",
+      "sha256": "85e68b5e639c6b73f968db6bd4e2e75035632fb7fbd4a8362c364d5b3474b954",
+      "unchanged": false,
+      "currentSha256": "85e68b5e639c6b73f968db6bd4e2e75035632fb7fbd4a8362c364d5b3474b954",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-cartoon-landing.jpg",
+      "sha256": "eafb36e710917da66333a4365751c7223190b8bda143ac2cb968c08a7061059d",
+      "unchanged": false,
+      "currentSha256": "eafb36e710917da66333a4365751c7223190b8bda143ac2cb968c08a7061059d",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-starfm.jpg",
+      "sha256": "55f11377b35ed19264f5a7b7309243cb899a45dcf6dd34342cd21aa6a6c64513",
+      "unchanged": false,
+      "currentSha256": "55f11377b35ed19264f5a7b7309243cb899a45dcf6dd34342cd21aa6a6c64513",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-ytwave.jpg",
+      "sha256": "c8ddb676815a9a792514bb0c9e836aef9898ba62d774e820d5247b2b4dfbde17",
+      "unchanged": false,
+      "currentSha256": "c8ddb676815a9a792514bb0c9e836aef9898ba62d774e820d5247b2b4dfbde17",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-tokyo-ten.jpg",
+      "sha256": "dd0a627b624d3f5e4f823d3810526d392f178fd93d63b9109dabcfa2596ff6e7",
+      "unchanged": false,
+      "currentSha256": "dd0a627b624d3f5e4f823d3810526d392f178fd93d63b9109dabcfa2596ff6e7",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-jackson-cv.jpg",
+      "sha256": "66417f779b178e77aa1e03fd08bc938eee43b37eb17c3f73060ac341c4c68bbe",
+      "unchanged": false,
+      "currentSha256": "66417f779b178e77aa1e03fd08bc938eee43b37eb17c3f73060ac341c4c68bbe",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-refill-admin.jpg",
+      "sha256": "533fe27f56e667983f69ffd886bb45733dcb33d6d48786a66d63f748cb277946",
+      "unchanged": false,
+      "currentSha256": "533fe27f56e667983f69ffd886bb45733dcb33d6d48786a66d63f748cb277946",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-safe-affinity.jpg",
+      "sha256": "e9c452e840f95dbb7d9ddf1f0c331a28fa8e59a0c9435875949a1b38746d6dbc",
+      "unchanged": false,
+      "currentSha256": "e9c452e840f95dbb7d9ddf1f0c331a28fa8e59a0c9435875949a1b38746d6dbc",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-nova-markets.jpg",
+      "sha256": "ef894f0b820874aeb49e6fdc6da5f76c6f9ce0daa63cde5954fbb4f9bdf81fa7",
+      "unchanged": false,
+      "currentSha256": "ef894f0b820874aeb49e6fdc6da5f76c6f9ce0daa63cde5954fbb4f9bdf81fa7",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-automovel.jpg",
+      "sha256": "16373002a4dfaf0ed0d7d9eef483187b73efd14a520223fbeef0fdfa8f9d8dce",
+      "unchanged": false,
+      "currentSha256": "16373002a4dfaf0ed0d7d9eef483187b73efd14a520223fbeef0fdfa8f9d8dce",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-guyana-landing.jpg",
+      "sha256": "386396bbaa0a32c5e6fd2839ee5b1e298f4ff31baabb438907b1e8d9f90de71b",
+      "unchanged": false,
+      "currentSha256": "386396bbaa0a32c5e6fd2839ee5b1e298f4ff31baabb438907b1e8d9f90de71b",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-nobux.jpg",
+      "sha256": "88c3a8b3c490a23746f4a263d449dcd2b964a00747923ae86798e709bc4fac0b",
+      "unchanged": false,
+      "currentSha256": "88c3a8b3c490a23746f4a263d449dcd2b964a00747923ae86798e709bc4fac0b",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-accore-pwa.jpg",
+      "sha256": "d9e5c9cd92e7b7fdbefac06b69328255f884773315c118cffddaaa25ce96a6ee",
+      "unchanged": false,
+      "currentSha256": "d9e5c9cd92e7b7fdbefac06b69328255f884773315c118cffddaaa25ce96a6ee",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-bumping-ship.jpg",
+      "sha256": "06a439608af27072346a61096151a2d5ec08fd89507629133b2ae4436f197503",
+      "unchanged": false,
+      "currentSha256": "06a439608af27072346a61096151a2d5ec08fd89507629133b2ae4436f197503",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/other/project-ss-gillieselectric.jpg",
+      "sha256": "e9b2635e2880cd30d15834e3b8de20f4568aba9c4131f5f6b4f9b1d3c4e302dc",
+      "unchanged": false,
+      "currentSha256": "e9b2635e2880cd30d15834e3b8de20f4568aba9c4131f5f6b4f9b1d3c4e302dc",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/vuejs/project-ss-bunny-mint.jpg",
+      "sha256": "7b61fc68b7b27f642ddc0e90533a6634b76ad99ff7f7e7b56c025d11c336ede8",
+      "unchanged": false,
+      "currentSha256": "7b61fc68b7b27f642ddc0e90533a6634b76ad99ff7f7e7b56c025d11c336ede8",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-datumine..jpg",
+      "sha256": "4fd0e7924f6600e78aceb532ceb9b40ba81ff2736a762bd10b3eb7c56b4969b5",
+      "unchanged": false,
+      "currentSha256": "4fd0e7924f6600e78aceb532ceb9b40ba81ff2736a762bd10b3eb7c56b4969b5",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-pro-imaging.jpg",
+      "sha256": "a963097e8f72a516d0f19ea1d3dfd79acaf6caaa919b513f7b91e1e9b6cb0375",
+      "unchanged": false,
+      "currentSha256": "a963097e8f72a516d0f19ea1d3dfd79acaf6caaa919b513f7b91e1e9b6cb0375",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/wordpress/project-ss-pms-study.jpg",
+      "sha256": "669f746e576020525a358f5d22db21df54b5db8b95f404ac012cfdd473335c30",
+      "unchanged": false,
+      "currentSha256": "669f746e576020525a358f5d22db21df54b5db8b95f404ac012cfdd473335c30",
+      "changeNote": "Added project screenshot."
+    },
+    {
+      "path": "projects/html-css/project-ss-lp-video.jpg",
+      "sha256": "a88a8b0e5176de9f0174649723bc603ad4738d44a832d86a1a93b3477e9ba729",
+      "unchanged": false,
+      "currentSha256": "a88a8b0e5176de9f0174649723bc603ad4738d44a832d86a1a93b3477e9ba729",
+      "changeNote": "Added project screenshot."
     }
   ],
   "project": "Muhammad Ayoub Portfolio",

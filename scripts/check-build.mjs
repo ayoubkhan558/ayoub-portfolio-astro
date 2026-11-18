@@ -38,9 +38,13 @@ for (const page of pages) {
 }
 const archive = readFileSync(join(root, "projects/index.html"), "utf8");
 const count = (archive.match(/class="project-card"/g) || []).length;
-if (count !== 147) problems.push(`Expected 147 archive records, got ${count}`);
+const expectedCount = JSON.parse(
+  readFileSync("src/data/projectsArchive.json", "utf8"),
+).projects.length;
+if (count !== expectedCount)
+  problems.push(`Expected ${expectedCount} archive records, got ${count}`);
 const titles = (archive.match(/<h2>/g) || []).length;
-if (titles < 147)
+if (titles < expectedCount)
   problems.push(`Missing archive project titles: ${titles} H2 elements`);
 if (!/noindex/.test(readFileSync(join(root, "404.html"), "utf8")))
   problems.push("404 must be noindex");
