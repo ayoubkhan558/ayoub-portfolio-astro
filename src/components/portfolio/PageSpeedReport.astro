@@ -70,12 +70,12 @@ const metricLevel = (key: string, value: string) => {
         <span class="eyebrow">
           {report.source || "Google PageSpeed Insights"}
         </span>
-        <h3 class="pagespeed-report__title portfolio__heading-tertiary">Performance report</h3>
+        <h3 class="pagespeed-report__title">Performance report</h3>
       </div>
     </header>
     {devices.map(({ label, result, error }) => (
       <section class="pagespeed-device" aria-label={`${label} performance`}>
-        <h4 class="pagespeed-report__device-title portfolio__heading-minor">{label}</h4>
+        <h4 class="pagespeed-report__device-title">{label}</h4>
         {result ? (
           <div class="pagespeed-report__summary-row" tabindex="0" role="group" aria-label={`${label} score and metrics`}>
             <div class="pagespeed-score-row">
@@ -130,7 +130,7 @@ const metricLevel = (key: string, value: string) => {
               </dl>
           </div>
         ) : (
-          <p class="pagespeed-error portfolio__paragraph">{error}</p>
+          <p class="pagespeed-error">{error}</p>
         )}
       </section>
     ))}

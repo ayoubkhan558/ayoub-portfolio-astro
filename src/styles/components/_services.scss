@@ -1,3 +1,5 @@
+// Service cards on the homepage and Services page.
+
 @use "../foundation/breakpoints";
 
 .service-grid {
@@ -25,9 +27,11 @@
 }
 
 .service-card.featured {
-  background: linear-gradient(180deg,
-      color-mix(in oklch, var(--primary) 65%, var(--background)),
-      var(--card) 40%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary) 65%, var(--background)),
+    var(--card) 40%
+  );
 }
 
 .service-top {
@@ -101,7 +105,7 @@
   }
 }
 
-.process-grid :where(.portfolio__paragraph) {
+.process-grid :where(p) {
   font-size: var(--text-small);
 }
 
@@ -123,39 +127,6 @@
   font-weight: 500;
 }
 
-.stats-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-7);
-  padding-block: var(--space-10);
-
-  @media (min-width: breakpoints.$small) {
-    gap: 30px;
-    padding-block: 56px;
-  }
-}
-
-.stats-row .stats-row__value {
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  font-size: 44px;
-
-  @media (min-width: breakpoints.$small) {
-    font-size: 52px;
-  }
-}
-
-.stats-row :where(.portfolio__heading-tertiary) {
-  font-size: var(--text-body);
-  margin: 0 0 var(--space-2);
-}
-
-.stats-row .stats-row__description {
-  font-size: var(--text-small);
-  margin: 0;
-}
-
 :where(.review-inner__quote, .review-journal__quote, .large-quote__quote) {
   margin: 15px 0 var(--space-7);
   font-size: 19px;
@@ -163,26 +134,35 @@
   letter-spacing: -0.025em;
 }
 
-:where(.home-about__caption,
+:where(
+  .home-about__caption,
   .review-journal__person,
   .review-inner__caption,
   .showcase-grid__caption,
-  .large-quote__attribution) {
+  .large-quote__attribution
+) {
   font-size: var(--text-small);
 }
 
-:where(.large-quote__author, .review-inner__author, .review-journal__author),
-:where(.large-quote__role,
-  .review-inner__role,
-  .review-journal__role,
-  .testimonial__avatar) {
+:where(.large-quote__author, .review-inner__author, .review-journal__author) {
   display: block;
 }
 
-:where(.large-quote__role,
+:where(
+  .large-quote__role,
   .review-inner__role,
   .review-journal__role,
-  .testimonial__avatar) {
+  .testimonial__avatar
+) {
+  display: block;
+}
+
+:where(
+  .large-quote__role,
+  .review-inner__role,
+  .review-journal__role,
+  .testimonial__avatar
+) {
   color: var(--muted-foreground);
 }
 
@@ -202,5 +182,198 @@
 
   @media (min-width: breakpoints.$large) {
     border-left: 1px dashed var(--border);
+  }
+}
+
+.service-card.ui-card {
+  padding: 0;
+  gap: 0;
+  display: block;
+  box-shadow: none;
+}
+
+.service-inner.ui-card__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+  padding: var(--space-6);
+
+  @media (min-width: breakpoints.$small) {
+    padding: var(--space-7);
+  }
+}
+
+.service-inner > .button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.service-inner > .service-inner__description:first-of-type {
+  min-height: 0;
+
+  @media (min-width: breakpoints.$small) {
+    min-height: 82px;
+  }
+}
+
+.service-top {
+  min-height: 44px;
+  gap: var(--space-3);
+}
+
+.service-top .tag {
+  flex-shrink: 0;
+}
+.service-grid-v2 .service-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card);
+  position: relative;
+}
+
+.service-grid-v2 .service-card.featured {
+  background: var(--card);
+  border-top: 3px solid var(--service-border-accent);
+}
+
+.service-grid-v2 .service-inner {
+  padding: var(--space-7);
+}
+
+.service-grid-v2 .service-top {
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.service-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--service-symbol-surface);
+  color: var(--service-symbol-ink);
+}
+
+.service-grid-v2 .service-top .tag {
+  display: none;
+}
+
+.service-grid-v2 .service-grid-v2__title {
+  font-size: 27px;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+.service-grid-v2 .service-price {
+  margin: var(--space-2) 0;
+  font-size: 25px;
+}
+
+.service-grid-v2 .service-card:hover {
+  border-color: var(--service-border-accent);
+  background: color-mix(in oklch, var(--service-border-accent) 5%, var(--card));
+}
+
+.service-grid-v2 .service-card:hover .service-symbol {
+  background: var(--service-symbol-hover);
+  color: var(--logo-paper);
+}
+
+.dark .service-symbol {
+  background: var(--service-symbol-surface);
+  color: var(--service-symbol-ink);
+}
+
+.compact-solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+.compact-solution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  padding: var(--space-6);
+
+  @media (min-width: breakpoints.$large) {
+    padding: var(--space-7);
+  }
+}
+
+.compact-solution:hover {
+  border-color: var(--link-accent);
+  background: color-mix(in oklch, var(--link-accent) 4%, var(--card));
+}
+
+.compact-solution-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--link-accent);
+  margin-bottom: var(--space-6);
+}
+
+.compact-solution-top .eyebrow {
+  margin: 0;
+}
+
+.compact-solution .compact-solution__title {
+  font-size: 24px;
+  margin-bottom: var(--space-3);
+}
+
+.compact-solution .compact-solution__description {
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: var(--space-6);
+}
+
+.service-grid-v2 .service-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-6);
+
+  @media (min-width: breakpoints.$medium) {
+    padding: var(--space-7);
+  }
+}
+
+.service-grid-v2 .service-inner > .card-action {
+  margin-top: auto;
+}
+.service-card__pricing {
+  margin-block: var(--space-1) 18px;
+
+  .service-price {
+    margin: 0;
+  }
+
+  .service-card__description {
+    margin: var(--space-1) 0 0;
+  }
+}
+
+.service-card__inclusions {
+  margin-bottom: var(--space-6);
+
+  .service-card__description {
+    margin: 6px 0 0;
   }
 }

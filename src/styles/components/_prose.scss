@@ -1,10 +1,12 @@
+// Prose styling on legal and service pages and structured details in project drawers.
+
 @use "../foundation/breakpoints";
 
 .prose-narrow {
   max-width: 850px;
 }
 
-.prose-narrow :where(.portfolio__heading-secondary) {
+.prose-narrow :where(h2) {
   font-size: 29px;
 }
 

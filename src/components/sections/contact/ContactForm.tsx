@@ -163,8 +163,8 @@ export default function ContactForm({
       aria-busy={isSubmitting}
     >
       <span className="eyebrow">Project brief</span>
-      <h2 className="contact-form__title portfolio__heading-secondary">What to send.</h2>
-      <p className="contact-form__description portfolio__paragraph">
+      <h2 className="contact-form__title">What to send.</h2>
+      <p className="contact-form__description">
         Give me enough context to price the next step without a long discovery
         call.
       </p>
@@ -278,10 +278,10 @@ export default function ContactForm({
         {isSubmitting ? "Sending…" : "Send project brief"}
         <ArrowUpRight className="button__icon" aria-hidden="true" size={18} />
       </button>
-      <p className="consent contact-form__description portfolio__paragraph">
+      <p className="consent contact-form__description">
         By submitting, you agree to the{" "}
-        <a className="consent__link portfolio__link" href="/privacy-policy/">privacy policy</a>. Prefer email?{" "}
-        <a className="consent__link portfolio__link" href={`mailto:${email}`}>Write directly</a>.
+        <a className="consent__link" href="/privacy-policy/">privacy policy</a>. Prefer email?{" "}
+        <a className="consent__link" href={`mailto:${email}`}>Write directly</a>.
       </p>
     </form>
   );

@@ -1,3 +1,5 @@
+// Closing call to action on the homepage and supporting pages.
+
 @use "../foundation/breakpoints";
 
 .cta-panel {
@@ -15,7 +17,7 @@
   font-size: clamp(34px, 4.3vw, 56px);
 }
 
-.cta-panel>.cta-panel__description {
+.cta-panel > .cta-panel__description {
   max-width: 740px;
   margin-inline: auto;
 }

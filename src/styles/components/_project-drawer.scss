@@ -1,3 +1,5 @@
+// Project details drawer on the homepage and Projects archive.
+
 @use "../foundation/breakpoints";
 
 .project-card {
@@ -107,12 +109,15 @@
   font-size: 15px;
 }
 
-.case-detail> :is(.case-study-branding-section,
-  .case-study-challenges-section,
-  .case-study-implementation-section,
-  .case-study-overview-section,
-  .case-study-quote-section,
-  .case-study-showcase-section):nth-of-type(odd) {
+.case-detail
+  > :is(
+    .case-study-branding-section,
+    .case-study-challenges-section,
+    .case-study-implementation-section,
+    .case-study-overview-section,
+    .case-study-quote-section,
+    .case-study-showcase-section
+  ):nth-of-type(odd) {
   background: var(--muted);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -123,12 +128,15 @@
   }
 }
 
-.case-detail> :is(.case-study-branding-section,
-  .case-study-challenges-section,
-  .case-study-implementation-section,
-  .case-study-overview-section,
-  .case-study-quote-section,
-  .case-study-showcase-section):nth-of-type(even) {
+.case-detail
+  > :is(
+    .case-study-branding-section,
+    .case-study-challenges-section,
+    .case-study-implementation-section,
+    .case-study-overview-section,
+    .case-study-quote-section,
+    .case-study-showcase-section
+  ):nth-of-type(even) {
   border-top: 1px solid var(--border);
   padding-top: var(--space-10);
 
@@ -137,12 +145,15 @@
   }
 }
 
-.case-detail> :is(.case-study-branding-section,
-  .case-study-challenges-section,
-  .case-study-implementation-section,
-  .case-study-overview-section,
-  .case-study-quote-section,
-  .case-study-showcase-section) {
+.case-detail
+  > :is(
+    .case-study-branding-section,
+    .case-study-challenges-section,
+    .case-study-implementation-section,
+    .case-study-overview-section,
+    .case-study-quote-section,
+    .case-study-showcase-section
+  ) {
   margin-block: 64px;
 }
 
@@ -170,5 +181,55 @@
 .project-drawer[open] {
   @media (prefers-reduced-motion: reduce) {
     animation: none;
+  }
+}
+
+.screenshot-window {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  height: 360px;
+
+  @media (min-width: breakpoints.$medium) {
+    height: 460px;
+  }
+}
+
+.screenshot-window .full-page-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  transition: transform 0.5s ease-out;
+}
+
+.screenshot-window:hover .full-page-image {
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--screenshot-distance, 0px));
+    transition: transform var(--screenshot-duration, 5s) linear;
+  }
+}
+
+.screenshot-window:focus-visible .full-page-image {
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--screenshot-distance, 0px));
+    transition: transform var(--screenshot-duration, 5s) linear;
+  }
+}
+
+.project-drawer .project-body {
+  @media (min-width: breakpoints.$large) {
+    padding: 0;
+  }
+}
+
+.screenshot-window .full-page-image {
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }

@@ -8,7 +8,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
 
 <header class="site-header">
   <a
-    class="brand portfolio__link"
+    class="brand"
     href="/"
     aria-label={`a. ${p.profile.brand} — ${p.profile.name} home`}
   >
@@ -20,7 +20,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   <nav class="site-header__navigation" aria-label="Main navigation">
     {p.navLinks.map((link) => (
       <a
-        class:list={["portfolio__link", "site-header__link", isActive(link.href) && "site-header__link--active"]}
+        class:list={["site-header__link", isActive(link.href) && "site-header__link--active"]}
         href={link.href}
         aria-current={path === link.href ? "page" : undefined}
       >
@@ -30,7 +30,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   </nav>
   <div class="site-header__actions">
     <ThemeToggle />
-    <a class="button button--small site-header__cta portfolio__link" href="/contact/">
+    <a class="button button--small site-header__cta" href="/contact/">
       Let's talk <ExternalArrow />
     </a>
     <details class="site-header__menu" id="menu-details">
@@ -56,14 +56,14 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
       <nav id="mobile-nav" class="site-header__mobile-navigation" aria-label="Mobile navigation">
         {p.navLinks.map((link) => (
           <a
-            class:list={["portfolio__link", "site-header__mobile-link", path === link.href && "site-header__mobile-link--current"]}
+            class:list={["site-header__mobile-link", path === link.href && "site-header__mobile-link--current"]}
             href={link.href}
             aria-current={path === link.href ? "page" : undefined}
           >
             {link.label}
           </a>
         ))}
-        <a class="site-header__mobile-link portfolio__link" href="/contact/">Let's talk <ExternalArrow /></a>
+        <a class="site-header__mobile-link" href="/contact/">Let's talk <ExternalArrow /></a>
       </nav>
     </details>
   </div>

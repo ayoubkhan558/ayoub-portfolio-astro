@@ -56,22 +56,36 @@
   }
 }
 
-.portfolio,
-.portfolio__body {
+.portfolio {
   scroll-behavior: smooth;
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
   }
 }
 
-.portfolio__body {
+body {
+  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
   position: relative;
   background-color: var(--background);
   color: var(--foreground);
   font-weight: var(--text-weight);
 }
 
-:where(.portfolio__heading-primary, .portfolio__heading-secondary) {
+:where(h1) {
+  font-family: var(--display-family);
+  font-feature-settings:
+    "ss02" on,
+    "ss03" on,
+    "ss04" on;
+}
+
+:where(h2) {
   font-family: var(--display-family);
   font-feature-settings:
     "ss02" on,

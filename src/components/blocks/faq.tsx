@@ -11,12 +11,12 @@ export function FAQ({ items }: { items: typeof portfolio.faqs }) {
     <div className="portfolio-faq">
       <div className="faq-introduction">
         <span className="eyebrow">Good questions</span>
-        <h2 className="portfolio-faq__title portfolio__heading-secondary">
+        <h2 className="portfolio-faq__title">
           Before we get started.
         </h2>
-        <p className="portfolio-faq__description portfolio__paragraph">
+        <p className="portfolio-faq__description">
           If you can't find what you're looking for,{" "}
-          <a href="/contact/" className="portfolio-faq__link portfolio__link">
+          <a href="/contact/" className="portfolio-faq__link">
             get in touch
           </a>
           .

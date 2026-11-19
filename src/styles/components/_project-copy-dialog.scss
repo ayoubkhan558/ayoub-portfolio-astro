@@ -1,3 +1,5 @@
+// Bulk link-copy dialog on the Projects archive.
+
 .project-archive__copy {
   margin-top: var(--space-4);
   text-decoration: underline;
@@ -63,7 +65,7 @@
   padding: 22px var(--space-6) var(--space-6);
 }
 
-.project-copy-fields>.project-copy-fields__field {
+.project-copy-fields > .project-copy-fields__field {
   display: flex;
   flex-direction: column;
   gap: 7px;

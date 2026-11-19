@@ -14,13 +14,13 @@ import Layout from "../layouts/PortfolioLayout.astro";
     />
   </div>
   <article class="legal-policy prose-narrow">
-    <p class="eyebrow portfolio__paragraph">Last updated: June 28, 2026</p>
+    <p class="eyebrow">Last updated: June 28, 2026</p>
     <div class="legal-highlights legal-policy__columns">
       {highlights.map((h) => (
         <div class="plain-card">
           <>
             <span class="eyebrow">{h.label}</span>
-            <p class="legal-highlights__description portfolio__paragraph">{h.value}</p>
+            <p class="legal-highlights__description">{h.value}</p>
           </>
         </div>
       ))}

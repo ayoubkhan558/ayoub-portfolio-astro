@@ -44,7 +44,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
     </label>
   </form>
   <p
-    class="project-count portfolio__paragraph"
+    class="project-count"
     id="project-count"
     tabindex="-1"
     aria-live="polite"
@@ -63,8 +63,8 @@ const projects = sortProjectsByLiveStatus(archive.projects);
     ))}
   </div>
   <div class="empty-state" id="no-projects" hidden>
-    <h2 class="portfolio__heading-secondary">No matching projects.</h2>
-    <p class="portfolio__paragraph">Try a different keyword or clear your filters.</p>
+    <h2>No matching projects.</h2>
+    <p>Try a different keyword or clear your filters.</p>
     <button class="button button--outline portfolio__button" id="clear-filters">
       Clear filters
     </button>
@@ -111,7 +111,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
         <header class="project-copy-header">
           <div>
             <span class="eyebrow">Project link builder</span>
-            <h2 class="project-copy-header__title portfolio__heading-secondary" id="project-copy-heading">Copy project links</h2>
+            <h2 class="project-copy-header__title" id="project-copy-heading">Copy project links</h2>
           </div>
           <button
             type="button"
@@ -182,7 +182,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
             </button>
           </div>
           <p
-            class="project-copy-status portfolio__paragraph"
+            class="project-copy-status"
             id="project-copy-status"
             aria-live="polite"
             aria-atomic="true"
@@ -202,7 +202,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
         display: none;
       }
     </style>
-    <p class="portfolio__paragraph">
+    <p>
       All projects are shown. Enable JavaScript to use search, filters, and
       pagination.
     </p>

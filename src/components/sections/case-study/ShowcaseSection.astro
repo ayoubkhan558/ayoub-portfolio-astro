@@ -9,16 +9,16 @@ const { pageShowcase } = Astro.props.study;
   <div class="section-heading">
     <div>
       <span class="eyebrow">{pageShowcase.label}</span>
-      <h2 class="section-heading__title portfolio__heading-secondary">{pageShowcase.title}</h2>
+      <h2 class="section-heading__title">{pageShowcase.title}</h2>
     </div>
-    <p class="section-heading__description portfolio__paragraph">{pageShowcase.text}</p>
+    <p class="section-heading__description">{pageShowcase.text}</p>
   </div>
   <div class="showcase-grid">
     {pageShowcase.items.map((item) => (
       <figure class="showcase-grid__figure">
         <>
           <a
-            class="screenshot-window portfolio__link"
+            class="screenshot-window"
             href={item.image}
             target="_blank"
             rel="noopener noreferrer"
@@ -28,8 +28,8 @@ const { pageShowcase } = Astro.props.study;
           </a>
           <figcaption class="showcase-grid__caption">
             <>
-              <h3 class="showcase-grid__title portfolio__heading-tertiary">{item.label}</h3>
-              <p class="portfolio__paragraph">{item.caption}</p>
+              <h3 class="showcase-grid__title">{item.label}</h3>
+              <p>{item.caption}</p>
             </>
           </figcaption>
         </>

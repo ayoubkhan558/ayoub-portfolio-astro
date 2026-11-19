@@ -12,8 +12,8 @@ import p from "../../../data/portfolio.json";
     {p.about.careerPath.map((c) => (
       <article class="timeline__item">
         <span class="eyebrow">{c.year}</span>
-        <h3 class="timeline__title portfolio__heading-tertiary">{c.title}</h3>
-        <p class="timeline__description portfolio__paragraph">{c.description}</p>
+        <h3 class="timeline__title">{c.title}</h3>
+        <p class="timeline__description">{c.description}</p>
         <span class="tag">{c.technologies}</span>
       </article>
     ))}

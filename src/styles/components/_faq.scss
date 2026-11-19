@@ -1,3 +1,15 @@
+// Homepage, Contact and standalone FAQ accordions.
+
+@use "../foundation/breakpoints";
+
+.portfolio-faq__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.portfolio-faq__accordion {
+  width: 100%;
+}
+
 .faq-list {
   max-width: 850px;
   margin: auto;
@@ -27,4 +39,215 @@
 .faq-list__answer {
   max-width: 740px;
   padding-bottom: var(--space-4);
+}
+.faq-list__question {
+  font-size: 18px;
+}
+
+.faq-list__answer {
+  font-size: var(--text-body);
+}
+.portfolio-faq .accordion__trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 25px var(--space-1);
+  min-height: 72px;
+  border-radius: 0;
+  text-align: left;
+}
+
+.portfolio-faq .accordion__heading {
+  display: flex;
+  margin: 0;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.portfolio-faq .accordion__trigger .accordion__icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.portfolio-faq .accordion__panel {
+  font-size: var(--text-body);
+  line-height: 1.7;
+  padding-inline: var(--space-1);
+}
+
+.portfolio-faq .accordion__body {
+  padding-bottom: var(--space-7);
+  max-width: 70ch;
+}
+
+.portfolio-faq .accordion__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-faq .accordion__trigger {
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
+.home-about .section-heading {
+  display: block;
+}
+
+.home-about .section-heading__description {
+  max-width: 56ch;
+  margin-top: var(--space-5);
+}
+
+.portfolio-faq__title {
+  margin-top: var(--space-4);
+  line-height: 1.15;
+}
+
+.portfolio-faq__description {
+  margin-top: var(--space-6);
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+.faq-introduction {
+  @media (min-width: breakpoints.$wide) {
+    top: 32px;
+    align-self: start;
+  }
+}
+
+.portfolio-faq {
+  align-items: start;
+  column-gap: clamp(var(--space-10), 8vw, 112px);
+  row-gap: 36px;
+}
+
+.portfolio-faq > :last-child {
+  min-width: 0;
+}
+
+.portfolio-faq .accordion__trigger {
+  overflow-wrap: anywhere;
+}
+
+.portfolio-faq .accordion__heading {
+  margin: 0;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.portfolio-faq .accordion__trigger {
+  min-height: 80px;
+  padding: var(--space-6) var(--space-1);
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.portfolio-faq .accordion__trigger .accordion__icon {
+  margin: 0;
+  transform: none;
+}
+
+.portfolio-faq .accordion__trigger[data-state="open"] .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.portfolio-faq .accordion__panel {
+  padding-inline: var(--space-1);
+}
+
+.portfolio-faq .accordion__body {
+  padding: 0 0 var(--space-6);
+  line-height: 1.7;
+}
+
+.faq-list__item {
+  padding: 0 var(--space-1);
+}
+
+.faq-list__question {
+  padding: var(--space-6) 0;
+  min-height: 80px;
+}
+
+.faq-list__item .faq-list__answer {
+  margin: 0;
+  padding: 0 0 var(--space-6);
+  line-height: 1.7;
+}
+
+.faq-list__question {
+  font-size: 18px;
+}
+
+.portfolio-faq .accordion__trigger:is(:hover, :focus-visible) {
+  color: var(--link-accent);
+}
+
+.faq-list__question:is(:hover, :focus-visible) {
+  color: var(--link-accent);
+}
+
+// Radix holds the closing panel in the DOM while its measured height animates.
+.portfolio-faq {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .accordion__panel {
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .accordion__panel[data-state="open"] {
+      animation: faq-expand 320ms cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+
+    .accordion__panel[data-state="closed"] {
+      animation: faq-collapse 280ms cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    .accordion__trigger .accordion__icon {
+      transition: transform 280ms ease;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .accordion__panel {
+      animation: none;
+    }
+
+    .accordion__trigger .accordion__icon {
+      transition: none;
+    }
+  }
+}
+
+@keyframes faq-expand {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes faq-collapse {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
 }

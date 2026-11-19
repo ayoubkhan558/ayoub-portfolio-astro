@@ -8,9 +8,9 @@ const { service } = Astro.props;
 <section class="service-detail-content-section prose-narrow">
   {service.sections.map((section) => (
     <article class="service-detail-content-section__topic">
-      <h2 class="portfolio__heading-secondary">{section.title}</h2>
+      <h2>{section.title}</h2>
       {section.paragraphs.map((text) => (
-        <p class="portfolio__paragraph">{text}</p>
+        <p>{text}</p>
       ))}
       {section.bullets && (
         <ul class="check-list">
@@ -21,10 +21,10 @@ const { service } = Astro.props;
       )}
     </article>
   ))}
-  <h2 class="portfolio__heading-secondary service-detail-content-section__subheading">Related case studies</h2>
+  <h2 class="service-detail-content-section__subheading">Related case studies</h2>
   <div class="link-list">
     {service.relatedCases.map((c) => (
-      <a class="text-link portfolio__link" href={c.href}>
+      <a class="text-link" href={c.href}>
         {c.label} <ExternalArrow />
       </a>
     ))}

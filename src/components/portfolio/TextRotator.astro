@@ -8,7 +8,7 @@ const { label, items } = Astro.props;
 
 <div class="text-rotator" data-text-rotator>
   <div class="rotator-header">
-    <h3 class="rotator-header__title portfolio__heading-tertiary">{label}</h3>
+    <h3 class="rotator-header__title">{label}</h3>
     <div class="rotator-controls" hidden>
       <button class="rotator-controls__button portfolio__button"
         type="button"
@@ -34,7 +34,7 @@ const { label, items } = Astro.props;
           {String(i + 1).padStart(2, "0")} /{" "}
           {String(items.length).padStart(2, "0")}
         </span>
-        <p class="rotator-items__description portfolio__paragraph">{item}</p>
+        <p class="rotator-items__description">{item}</p>
       </li>
     ))}
   </ul>

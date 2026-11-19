@@ -1,9 +1,63 @@
+// About page Toolbox and skills marquee.
+
 @use "../foundation/breakpoints";
 
-.about-hero .portrait {
-  height: auto;
-  aspect-ratio: 4/5;
-  object-fit: cover;
+.tool-monogram {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: var(--text-small);
+}
+
+// Toolbox and proof sections share the same editorial rhythm across breakpoints.
+.about-toolbox-section .skills-title {
+  border-top: 1px solid var(--border);
+  margin-top: 36px;
+  padding-top: var(--space-6);
+
+  @media (min-width: breakpoints.$medium) {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+  }
+}
+
+.about-toolbox-section .skills-title .skills-title__title {
+  margin-bottom: 0;
+}
+
+.about-toolbox-section .skills-title :where(p) {
+  margin-bottom: 0;
+}
+
+.about-toolbox-section .marquee-toolbar {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  @media (min-width: breakpoints.$medium) {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-4);
+  }
+}
+
+.marquee-toggle {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--background);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  font-size: 13px;
+}
+
+.marquee-toggle:hover {
+  color: var(--link-accent);
+  border-color: var(--link-accent);
 }
 
 .skills-title {
@@ -27,7 +81,7 @@
   }
 }
 
-.skills-title :where(.portfolio__paragraph) {
+.skills-title :where(p) {
   font-size: var(--text-small);
 }
 
@@ -97,7 +151,13 @@
   white-space: nowrap;
 }
 
-.tool-chip .tool-logo,
+.tool-chip .tool-logo {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  object-fit: contain;
+}
+
 .tool-chip .tool-monogram {
   width: 28px;
   height: 28px;
@@ -191,5 +251,32 @@
 [data-skills-marquee][data-ready] .marquee-group[aria-hidden="true"] {
   @media (prefers-reduced-motion: reduce) {
     display: none;
+  }
+} /* Pair each stack with its use so the toolbox complements the moving logo strip. */
+.toolbox__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 0 var(--space-8);
+}
+
+.toolbox__group {
+  padding-block: 18px;
+  border-top: 1px solid var(--border);
+
+  .toolbox__title {
+    margin: 0 0 var(--space-2);
+  }
+
+  .toolbox__description {
+    max-width: 54ch;
+    margin: 0;
+  }
+}
+
+.tool-chip {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease;
   }
 }

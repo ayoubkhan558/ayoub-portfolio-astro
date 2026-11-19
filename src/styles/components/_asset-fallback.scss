@@ -1,0 +1,15 @@
+// Fallback previews used by projects, case studies and logo images.
+
+.asset-fallback {
+  overflow: hidden;
+}
+
+.asset-fallback .asset-fallback__note {
+  font-size: var(--text-small);
+}
+
+// Fallback tiles must stay legible even inside brand/logo tiles.
+.asset-fallback {
+  color: var(--fallback-ink) !important;
+  background: var(--fallback-surface) !important;
+}

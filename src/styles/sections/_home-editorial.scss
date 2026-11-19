@@ -1,47 +1,6 @@
+// Homepage editorial headings, rotator and page-level presentation variants.
+
 @use "../foundation/breakpoints";
-
-/* v1.3 — editorial section hierarchy, compact expertise and purposeful motion. */
-:where(.portfolio__link) {
-  transition:
-    color 0.18s ease,
-    background-color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-:where(.portfolio__link):hover,
-:where(.portfolio__link):focus-visible {
-  color: var(--link-accent);
-}
-
-:where(.portfolio__link):hover :where(.portfolio__heading-tertiary),
-:where(.portfolio__link):focus-visible :where(.portfolio__heading-tertiary) {
-  color: var(--link-accent);
-}
-
-:where(.portfolio__link).button:hover,
-:where(.portfolio__link).button:focus-visible {
-  color: var(--background);
-  background: var(--link-accent);
-  border-color: var(--link-accent);
-}
-
-.dark :where(.portfolio__link).button:hover,
-.dark :where(.portfolio__link).button:focus-visible {
-  color: var(--accent-button-hover-ink);
-}
-
-:where(.portfolio__link).text-link:hover,
-.site-footer__link:hover,
-.site-footer__secondary-link:hover,
-.site-header__link:hover,
-.site-header__mobile-link:hover {
-  color: var(--link-accent);
-}
-
-:where(.portfolio__link).case-image-link:hover .round-arrow {
-  color: var(--background);
-  background: var(--link-accent);
-}
 
 .home-page :is(.section-heading, .faq-introduction) {
   display: block;
@@ -80,244 +39,6 @@
 
 .home-page .resource-panel .section-heading {
   margin-bottom: 0;
-}
-
-.home-page .home-testimonials-section .section-heading {
-  margin-inline: auto;
-  text-align: center;
-}
-
-.home-page .home-testimonials-section .section-heading__title,
-.home-page .home-testimonials-section .section-heading__description {
-  margin-inline: auto;
-}
-
-.home-page .hero {
-  align-items: center;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
-  padding-top: 148px;
-
-  @media (min-width: breakpoints.$large) {
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    padding-top: 184px;
-  }
-
-  @media (min-width: breakpoints.$wide) {
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    gap: 64px;
-  }
-}
-
-.hero-right.hero-profile {
-  display: block;
-  border: 1px solid color-mix(in oklch, var(--foreground) 16%, transparent);
-  background: color-mix(in oklch, var(--background) 82%, transparent);
-  border-radius: 20px;
-  min-width: 0;
-  box-shadow: 0 12px 40px var(--profile-shadow-ink);
-  max-width: 580px;
-  padding: var(--space-5);
-
-  @media (min-width: breakpoints.$medium) {
-    padding: var(--space-6);
-  }
-
-  @media (min-width: breakpoints.$large) {
-    max-width: none;
-    padding: var(--space-5);
-  }
-
-  @media (min-width: breakpoints.$wide) {
-    padding: var(--space-6);
-  }
-}
-
-.hero-profile-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-6);
-  gap: var(--space-2);
-
-  @media (min-width: breakpoints.$medium) {
-    gap: var(--space-3);
-  }
-}
-
-.hero-profile-top .eyebrow {
-  font-size: 11px;
-  margin: 0;
-  max-width: 160px;
-
-  @media (min-width: breakpoints.$medium) {
-    max-width: none;
-  }
-}
-
-.profile-status {
-  display: inline-flex;
-  gap: 7px;
-  align-items: center;
-  color: var(--link-accent);
-  font-size: var(--text-caption);
-}
-
-.profile-status__dot {
-  width: 6px;
-  height: 6px;
-  background: currentColor;
-  border-radius: 50%;
-}
-
-.hero-profile-identity {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 80px minmax(0, 1fr);
-  gap: var(--space-4);
-
-  @media (min-width: breakpoints.$medium) {
-    grid-template-columns: 104px minmax(0, 1fr);
-  }
-
-  @media (min-width: breakpoints.$large) {
-    grid-template-columns: 80px minmax(0, 1fr);
-  }
-
-  @media (min-width: breakpoints.$wide) {
-    grid-template-columns: 104px minmax(0, 1fr);
-    gap: var(--space-5);
-  }
-}
-
-.hero-profile-photo {
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-  width: 80px;
-  height: 100px;
-
-  @media (min-width: breakpoints.$medium) {
-    width: 104px;
-    height: 130px;
-  }
-
-  @media (min-width: breakpoints.$large) {
-    width: 80px;
-    height: 100px;
-  }
-
-  @media (min-width: breakpoints.$wide) {
-    width: 104px;
-    height: 130px;
-  }
-}
-
-.hero-profile-identity .eyebrow {
-  font-size: 11px;
-  margin-bottom: 10px;
-}
-
-.hero-profile-identity .hero-profile-identity__title {
-  font-size: clamp(24px, 2.25vw, 32px);
-  line-height: 1.15;
-  margin: 0 0 var(--space-3);
-}
-
-.hero-profile-identity .hero-profile-identity__description {
-  font-size: 13px;
-  margin: 0;
-}
-
-.hero-capabilities {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-6);
-}
-
-.hero-capabilities .hero-capabilities__label {
-  padding: 5px 9px;
-  border: 1px solid var(--border);
-  background: var(--background);
-  border-radius: 5px;
-  font-size: var(--text-caption);
-  line-height: 1.5;
-}
-
-.hero-profile-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-block: 1px solid var(--border);
-  margin-top: var(--space-6);
-  padding-block: var(--space-6);
-  gap: var(--space-2);
-
-  @media (min-width: breakpoints.$medium) {
-    gap: var(--space-3);
-  }
-}
-
-.hero-profile__metric+.hero-profile__metric {
-  border-left: 1px solid var(--border);
-  padding-left: var(--space-2);
-
-  @media (min-width: breakpoints.$medium) {
-    padding-left: var(--space-3);
-  }
-}
-
-.hero-profile-metrics .hero-profile-metrics__value {
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  display: block;
-  line-height: 1.1;
-  white-space: nowrap;
-  font-size: 30px;
-
-  @media (min-width: breakpoints.$wide) {
-    font-size: 36px;
-  }
-}
-
-.hero-profile-metrics .hero-profile-metrics__note {
-  letter-spacing: -0.02em;
-  font-size: 11px;
-
-  @media (min-width: breakpoints.$medium) {
-    font-size: 13px;
-  }
-}
-
-.hero-profile-metrics .hero-profile-metrics__label {
-  display: block;
-  margin-top: 9px;
-  color: var(--muted-foreground);
-  line-height: 1.45;
-  font-size: 11px;
-
-  @media (min-width: breakpoints.$medium) {
-    font-size: var(--text-caption);
-  }
-}
-
-.hero-profile-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-3);
-  padding-top: var(--space-5);
-  font-size: 13px;
-  flex-wrap: wrap;
-
-  @media (min-width: breakpoints.$medium) {
-    flex-wrap: nowrap;
-  }
-}
-
-.hero-profile-bottom .text-link {
-  font-size: 13px;
 }
 
 .fit-rotators {
@@ -367,8 +88,7 @@
   display: none;
 }
 
-.rotator-controls .rotator-controls__button,
-.marquee-toggle {
+.rotator-controls .rotator-controls__button {
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--background);
@@ -377,8 +97,7 @@
   font-size: 13px;
 }
 
-.rotator-controls .rotator-controls__button:hover,
-.marquee-toggle:hover {
+.rotator-controls .rotator-controls__button:hover {
   color: var(--link-accent);
   border-color: var(--link-accent);
 }
@@ -458,14 +177,6 @@
   color: var(--foreground);
 }
 
-.home-page .home-testimonials-section .section-heading {
-  text-align: left;
-
-  @media (min-width: breakpoints.$medium) {
-    text-align: center;
-  }
-}
-
 .home-page .section-heading__description {
   font-size: var(--text-body);
 
@@ -493,5 +204,111 @@
 [data-text-rotator][data-ready] .rotator-items__item.is-current {
   @media (prefers-reduced-motion: reduce) {
     animation: none;
+  }
+}
+
+// v1.4 — concise services, consistent spacing and bottom-aligned card actions.
+.about-page
+  > :is(
+    .about-career-section,
+    .about-experience-section,
+    .about-story-section,
+    .about-testimonials-section,
+    .about-toolbox-section
+  ):nth-of-type(even) {
+  background: color-mix(in oklch, var(--portfolio-sand) 25%, var(--background));
+  border-block: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.services-page
+  > :is(
+    .service-detail-content-section,
+    .services-cards-section,
+    .services-delivery-section,
+    .services-niches-section,
+    .services-process-section,
+    .services-project-fit-section,
+    .services-working-together-section
+  ):nth-of-type(even) {
+  background: color-mix(in oklch, var(--portfolio-sand) 25%, var(--background));
+  border-block: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.about-page
+  > :is(
+    .about-career-section,
+    .about-experience-section,
+    .about-story-section,
+    .about-testimonials-section,
+    .about-toolbox-section
+  ):nth-of-type(even) {
+  padding-block: 64px;
+}
+
+.services-page
+  > :is(
+    .service-detail-content-section,
+    .services-cards-section,
+    .services-delivery-section,
+    .services-niches-section,
+    .services-process-section,
+    .services-project-fit-section,
+    .services-working-together-section
+  ):nth-of-type(even) {
+  padding-block: 64px;
+}
+
+.single-rotator {
+  grid-template-columns: 1fr;
+}
+
+.single-rotator .rotator-items .rotator-items__description {
+  max-width: 70ch;
+}
+
+.card-action {
+  margin-top: auto;
+}
+
+.linked-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.linked-card > .card-action {
+  padding-top: 18px;
+}
+
+.about-page
+  > :is(
+    .about-career-section,
+    .about-experience-section,
+    .about-story-section,
+    .about-testimonials-section,
+    .about-toolbox-section
+  ):nth-of-type(even) {
+  padding-block: var(--space-12);
+
+  @media (min-width: breakpoints.$large) {
+    padding-block: 64px;
+  }
+}
+
+.services-page
+  > :is(
+    .service-detail-content-section,
+    .services-cards-section,
+    .services-delivery-section,
+    .services-niches-section,
+    .services-process-section,
+    .services-project-fit-section,
+    .services-working-together-section
+  ):nth-of-type(even) {
+  padding-block: var(--space-12);
+
+  @media (min-width: breakpoints.$large) {
+    padding-block: 64px;
   }
 }

@@ -125,7 +125,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         </h3>
         <p class="selected-card__description">{featured.description}</p>
         {featured.deliveryContext && (
-          <p class="selected-card__description">{featured.deliveryContext}</p>
+          <p class="selected-card__badge">{featured.deliveryContext}</p>
         )}
         <p class="selected-card__stack">{featured.stack}</p>
       </div>
@@ -141,10 +141,10 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         />
       </div>
       <div class="project-body">
-        <h2 class="project-body__title portfolio__heading-secondary">
+        <h2 class="project-body__title">
           {title}
         </h2>
-        <p class="project-body__description portfolio__paragraph">
+        <p class="project-body__description">
           {description}
         </p>
         <div class="project-links card-link-row">
@@ -162,7 +162,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
           )}
           {!isDomainExpired && href && (
             <a
-              class="text-link portfolio__link"
+              class="text-link"
               href={href}
               target="_blank"
               rel="noopener noreferrer"
@@ -236,18 +236,18 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         })}
       </div>
       <h2
-        class="drawer-content__title portfolio__heading-secondary"
+        class="drawer-content__title"
         id={`${panelId}-title`}
       >
         {title}
       </h2>
-      <p class="portfolio__paragraph">{description}</p>
+      <p>{description}</p>
       <ValueTree value={details} />
       {p.pageSpeed && <PageSpeedReport report={p.pageSpeed} />}
       <div class="project-card__actions">
         {href && (
           <a
-            class="button portfolio__link"
+            class="button"
             href={href}
             target="_blank"
             rel="noopener noreferrer"

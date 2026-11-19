@@ -1,3 +1,5 @@
+// Shared React button, badge, card, accordion and carousel primitives.
+
 // Low-specificity defaults let a portfolio component control its own spacing.
 :where(.ui-button, .ui-badge) {
   display: inline-flex;
@@ -96,7 +98,10 @@
   justify-self: end;
   align-self: start;
 }
-.ui-card__content,
+.ui-card__content {
+  padding-inline: var(--space-6);
+}
+
 .ui-card__footer {
   padding-inline: var(--space-6);
 }
@@ -165,11 +170,4 @@
 }
 .accordion__icon {
   pointer-events: none;
-}
-.portfolio-faq__link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.portfolio-faq__accordion {
-  width: 100%;
 }

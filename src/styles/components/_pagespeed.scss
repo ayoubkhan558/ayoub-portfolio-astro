@@ -1,3 +1,5 @@
+// Performance reports in project drawers and case-study details.
+
 @use "../foundation/breakpoints";
 
 .pagespeed-report {
@@ -81,7 +83,11 @@
   inset: 0;
   transform: rotate(-90deg);
 }
-.pagespeed-score-track,
+.pagespeed-score-track {
+  fill: none;
+  stroke-width: 7;
+}
+
 .pagespeed-score-value {
   fill: none;
   stroke-width: 7;
@@ -111,15 +117,24 @@
     font-size: 15px;
   }
 }
-.pagespeed-score.good,
+.pagespeed-score.good {
+  --pagespeed-level: var(--pagespeed-good);
+}
+
 .pagespeed-score-label.good {
   --pagespeed-level: var(--pagespeed-good);
 }
-.pagespeed-score.needs-improvement,
+.pagespeed-score.needs-improvement {
+  --pagespeed-level: var(--pagespeed-mid);
+}
+
 .pagespeed-score-label.needs-improvement {
   --pagespeed-level: var(--pagespeed-mid);
 }
-.pagespeed-score.poor,
+.pagespeed-score.poor {
+  --pagespeed-level: var(--pagespeed-poor);
+}
+
 .pagespeed-score-label.poor {
   --pagespeed-level: var(--pagespeed-poor);
 }
@@ -184,11 +199,37 @@
     padding-top: 14px;
   }
 }
-.pagespeed-footer :where(.portfolio__link) {
+.pagespeed-footer :where(a) {
   color: var(--foreground);
   font-weight: 600;
   text-underline-offset: 3px;
 }
-.pagespeed-footer :where(.portfolio__link):hover {
+.pagespeed-footer :where(a):hover {
   text-decoration: underline;
+} /* Keep the score and full metric labels on one line, even in the project drawer. */
+// The row can scroll horizontally by touch or keyboard if it is wider than its container.
+.pagespeed-report__summary-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding-bottom: 6px;
+
+  .pagespeed-score-row {
+    flex: none;
+    margin: 0;
+  }
+
+  .pagespeed-score {
+    width: 48px;
+  }
+
+  .pagespeed-metrics {
+    display: flex;
+    flex: none;
+  }
+
+  .pagespeed-metric {
+    white-space: nowrap;
+  }
 }

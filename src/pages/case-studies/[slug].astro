@@ -33,7 +33,7 @@ const next = all[(i + 1) % all.length];
   <div class="case-detail">
     <div class="portfolio-background">
       <Intro label={s.eyebrow} title={s.headline} description={s.tagline}>
-        <p class="case-detail__result portfolio__paragraph"><strong>Result:</strong> {s.listing.result}</p>
+        <p class="case-detail__result"><strong>Result:</strong> {s.listing.result}</p>
         <dl class="case-detail__facts">
           {s.facts.map((fact) => (
             <div>
@@ -44,14 +44,14 @@ const next = all[(i + 1) % all.length];
         </dl>
         <div class="case-detail__actions">
           <a
-            class="button portfolio__link"
+            class="button"
             href={s.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
             Visit {s.urlLabel} <ExternalArrow />
           </a>
-          <a href="/case-studies/" class="text-link portfolio__link">
+          <a href="/case-studies/" class="text-link">
             All case studies →
           </a>
         </div>

@@ -1,3 +1,5 @@
+// Site footer, footer links and wordmark on every standard page.
+
 @use "../foundation/breakpoints";
 
 .site-footer {
@@ -100,4 +102,98 @@
   @media (min-width: breakpoints.$small) {
     grid-column: auto;
   }
+}
+.site-footer {
+  padding-bottom: 18px;
+}
+
+.footer-wordmark {
+  line-height: 1.25;
+}
+
+.dark .tool-logo {
+  background: var(--logo-paper);
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.site-footer__link {
+  font-size: var(--text-small);
+}
+
+.site-footer__bio {
+  font-size: var(--text-small);
+}
+.site-footer__link {
+  padding-block: 10px;
+  min-height: 44px;
+}
+
+.site-footer__secondary-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.site-footer__links {
+  align-items: center;
+}
+
+.site-footer__top .brand {
+  min-height: 44px;
+}
+
+.footer-wordmark {
+  color: var(--wordmark-ink);
+  font-size: clamp(33px, 11.8vw, 65px);
+  margin-top: 35px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: clamp(58px, 13vw, 180px);
+    margin-top: 60px;
+  }
+}
+
+.site-footer .brand {
+  align-items: baseline;
+}
+
+.portfolio-footer-wordmark {
+  color: var(--foreground);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.portfolio-footer-wordmark__graphic {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.site-footer {
+  padding-bottom: 0;
+}
+
+.site-footer__link:hover {
+  color: var(--link-hover-ink);
+}
+
+.site-footer__secondary-link:hover {
+  color: var(--link-hover-ink);
+}
+
+.dark .site-footer__link:hover {
+  color: var(--link-hover-ink);
+}
+
+.dark .site-footer__secondary-link:hover {
+  color: var(--link-hover-ink);
+}
+
+.site-footer__link:hover {
+  color: var(--link-accent);
+}
+
+.site-footer__secondary-link:hover {
+  color: var(--link-accent);
 }

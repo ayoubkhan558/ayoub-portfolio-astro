@@ -10,11 +10,11 @@ import { serviceNiches } from "../../../data/serviceNiches";
   />
   <div class="services-niches-section__cards">
     {serviceNiches.map((s) => (
-      <a class="plain-card linked-card portfolio__link" href={`/services/${s.slug}/`}>
+      <a class="plain-card linked-card" href={`/services/${s.slug}/`}>
         <>
           <span class="eyebrow">{s.label}</span>
-          <h3 class="plain-card__title portfolio__heading-tertiary">{s.title}</h3>
-          <p class="plain-card__description portfolio__paragraph">{s.description}</p>
+          <h3 class="plain-card__title">{s.title}</h3>
+          <p class="plain-card__description">{s.description}</p>
           <span class="text-link card-action" aria-hidden="true">
             Explore service →
           </span>

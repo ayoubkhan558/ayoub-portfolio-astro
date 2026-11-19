@@ -1,4 +1,14 @@
+// Page introductions on About, Contact, Services, Projects, case studies and policy pages.
+
 @use "../foundation/breakpoints";
+
+.page-intro__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
+}
 
 .page-intro {
   padding-block: 142px 45px;
@@ -35,9 +45,27 @@
   margin-inline: auto;
 }
 
-.page-intro__actions,
-.case-detail__actions,
-.service-detail__actions,
+.page-intro__actions {
+  justify-content: center;
+}
+
+.case-detail__actions {
+  justify-content: center;
+}
+
+.service-detail__actions {
+  justify-content: center;
+}
+
 .page-intro .tags {
   justify-content: center;
+}
+
+.page-intro__title {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.page-intro .button {
+  overflow-wrap: anywhere;
 }

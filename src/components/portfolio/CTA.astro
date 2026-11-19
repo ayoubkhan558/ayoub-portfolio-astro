@@ -10,15 +10,15 @@ const {
 
 <section class="portfolio-cta-section cta-panel">
   <span class="eyebrow">Work together</span>
-  <h2 class="cta-panel__title portfolio__heading-secondary">{title}</h2>
-  <p class="cta-panel__description portfolio__paragraph">{text}</p>
+  <h2 class="cta-panel__title">{title}</h2>
+  <p class="cta-panel__description">{text}</p>
   <div class="portfolio-cta-section__actions">
-    <a class="button portfolio__link" href="/contact/">
+    <a class="button" href="/contact/">
       {button} <ExternalArrow />
     </a>
-    <a class="text-link portfolio__link" href={`mailto:${p.profile.email}`}>
+    <a class="text-link" href={`mailto:${p.profile.email}`}>
       {p.profile.email}
     </a>
   </div>
-  <p class="offer cta-panel__description portfolio__paragraph">{p.offer}</p>
+  <p class="offer cta-panel__description">{p.offer}</p>
 </section>

@@ -1,4 +1,47 @@
+// About page portrait, career timeline, experience and statistics.
+
 @use "../foundation/breakpoints";
+
+.about-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-7);
+  padding-block: var(--space-10);
+
+  @media (min-width: breakpoints.$small) {
+    gap: 30px;
+    padding-block: 56px;
+  }
+}
+
+.stats-row .stats-row__value {
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  font-size: 44px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 52px;
+  }
+}
+
+.stats-row :where(h3) {
+  font-size: var(--text-body);
+  margin: 0 0 var(--space-2);
+}
+
+.stats-row .stats-row__description {
+  font-size: var(--text-small);
+  margin: 0;
+}
 
 .about-hero {
   display: grid;
@@ -104,4 +147,16 @@
     flex: 0 1 auto;
     min-width: auto;
   }
+}
+
+.dark .company-logo {
+  background: var(--logo-paper);
+  padding: var(--space-2);
+  border-radius: 8px;
+}
+
+.about-hero .portrait {
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
 }

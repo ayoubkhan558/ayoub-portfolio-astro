@@ -1,3 +1,5 @@
+// Homepage Selected Work project list and its compact preview cards.
+
 @use "../foundation/breakpoints";
 
 .home-projects-section__grid {
@@ -13,7 +15,10 @@
 }
 
 .selected-card__image {
+  display: block;
   width: 100%;
+  // Override the source image's height so the preview follows the card ratio.
+  height: auto;
   aspect-ratio: 1.6;
   object-fit: cover;
   object-position: top;
@@ -28,14 +33,24 @@
   font-size: 23px;
 }
 
-.selected-card__description,
+.selected-card__description {
+  margin: 0 0 18px;
+  color: var(--muted-foreground);
+}
+
+.selected-card__badge {
+  margin-top: 0;
+}
+
 .selected-card__stack {
   margin: 0 0 18px;
   color: var(--muted-foreground);
 }
+
 .selected-card__stack {
   font-size: var(--text-small);
   line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .asset-fallback {
@@ -50,7 +65,7 @@
   padding: var(--space-6);
 }
 
-.asset-fallback>.asset-fallback__label {
+.asset-fallback > .asset-fallback__label {
   font-weight: 500;
   font-size: 36px;
 
@@ -59,9 +74,10 @@
   }
 }
 
-.asset-fallback>.asset-fallback__note {
+.asset-fallback > .asset-fallback__note {
   font-size: var(--text-caption);
 }
+
 .selected-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -76,10 +92,6 @@
   max-width: 260px;
   border-radius: 10px;
   background: var(--muted);
-}
-
-.selected-card__image {
-  display: block;
 }
 
 .selected-card__copy {
@@ -101,4 +113,57 @@
   font: inherit;
   text-align: left;
   cursor: pointer;
+}
+
+.selected-card__media {
+  position: relative;
+  overflow: hidden;
+}
+
+.selected-card .selected-card__media {
+  padding: 0;
+}
+
+.selected-card__media {
+  isolation: isolate;
+}
+
+.selected-card {
+  transition:
+    border-color 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.selected-card:hover {
+  border-color: var(--panel-hover-border);
+  box-shadow: 0 8px 32px var(--panel-shadow-ink);
+}
+
+.selected-card__stack {
+  margin-top: auto;
+  padding-top: var(--space-4);
+}
+
+.selected-card:focus-within {
+  outline: 2px solid var(--link-accent);
+  outline-offset: -2px;
+}
+
+.selected-card:hover {
+  @media (hover: hover) and (pointer: fine) {
+    border-color: var(--link-accent);
+  }
+}
+
+.selected-card__image {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    transition: transform 220ms ease;
+  }
+}
+
+.selected-card:is(:hover, :focus-within) .selected-card__image {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    transform: scale(1.035);
+  }
 }

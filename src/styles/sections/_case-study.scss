@@ -1,4 +1,14 @@
+// Case-study detail pages, including branding, quotes and screenshots.
+
 @use "../foundation/breakpoints";
+
+.case-detail__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
+}
 
 .case-hero {
   border-radius: 22px;
@@ -46,31 +56,10 @@
   }
 }
 
-.brand-preview {
-  background: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-6);
-  min-height: 180px;
-
-  @media (min-width: breakpoints.$large) {
-    min-height: 220px;
-  }
-}
-
 .branding-logo {
   max-height: 100px;
   max-width: 220px;
   object-fit: contain;
-}
-
-.brand-preview .brand-preview__value {
-  font-size: 30px;
 }
 
 .palette {
@@ -84,7 +73,11 @@
   width: 92px;
 }
 
-.palette .palette__value,
+.palette .palette__value {
+  display: block;
+  font-size: 11px;
+}
+
 .palette .palette__note {
   display: block;
   font-size: 11px;
@@ -216,7 +209,13 @@
   font-weight: 500;
 }
 
-.next-case>.next-case__label {
+.next-case > .next-case__label {
   font-size: 13px;
   color: var(--muted-foreground);
+}
+
+.dark .branding-logo {
+  background: var(--logo-paper);
+  padding: var(--space-2);
+  border-radius: 8px;
 }

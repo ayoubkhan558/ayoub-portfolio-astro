@@ -1,3 +1,5 @@
+// Homepage About, resources and section alignment.
+
 @use "../foundation/breakpoints";
 
 .home-about {
@@ -65,27 +67,17 @@
   }
 }
 
-.resource-panel :where(.portfolio__heading-secondary) {
+.resource-panel :where(h2) {
   margin-top: var(--space-3);
 }
 
-.resource-panel :where(.portfolio__paragraph) {
+.resource-panel :where(p) {
   max-width: 640px;
   margin-bottom: 0;
 }
 
 .resource-panel .button {
   flex-shrink: 0;
-}
-
-.selected-card__media,
-.project-media {
-  position: relative;
-  overflow: hidden;
-}
-
-.selected-card .selected-card__media {
-  padding: 0;
 }
 
 .delivery-badge {
@@ -104,49 +96,17 @@
   max-width: calc(100% - 32px);
 }
 
-.project-media .delivery-badge {
-  top: auto;
-  bottom: 14px;
-}
-
-.case-image-link,
-.selected-card__media {
-  isolation: isolate;
-}
-
-.case-image-link .delivery-badge {
-  top: 14px;
-  left: 14px;
-}
-
-.case-card,
-.selected-card,
-.plain-card,
-.project-card {
+.plain-card {
   transition:
     border-color 0.2s,
     background-color 0.2s,
     box-shadow 0.2s;
 }
 
-.case-card:hover,
-.selected-card:hover,
-.project-card:hover,
 .plain-card:hover {
   border-color: var(--panel-hover-border);
   box-shadow: 0 8px 32px var(--panel-shadow-ink);
-}
-
-.text-link:hover,
-.site-footer__link:hover,
-.site-footer__secondary-link:hover,
-.site-header__link:hover {
-  color: var(--link-hover-ink);
-}
-
-.dark .text-link:hover,
-.dark .site-footer__link:hover,
-.dark .site-footer__secondary-link:hover,
-.dark .site-header__link:hover {
-  color: var(--link-hover-ink);
+} /* Give the final strip inside the hero background room before the next section. */
+.home-page .home-trust-section {
+  padding-bottom: clamp(var(--space-10), 6vw, 88px);
 }

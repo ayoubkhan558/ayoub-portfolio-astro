@@ -8,11 +8,11 @@ import { FooterWordmark } from "../blocks/footer-wordmark";
   <div class="site-footer__container">
     <div class="site-footer__top">
       <div class="site-footer__identity">
-        <a class="brand portfolio__link" href="/">
+        <a class="brand" href="/">
           <span class="brand__mark">a.</span>
           <span class="brand__name">{p.profile.brand}</span>
         </a>
-        <p class="site-footer__bio portfolio__paragraph">
+        <p class="site-footer__bio">
           {p.profile.role}
           <br />
           {p.profile.location}
@@ -24,9 +24,9 @@ import { FooterWordmark } from "../blocks/footer-wordmark";
       </div>
       {p.footerColumns.map((column) => (
         <div class="site-footer__column">
-          <h2 class="site-footer__heading portfolio__heading-secondary">{column.title}</h2>
+          <h2 class="site-footer__heading">{column.title}</h2>
           {column.links.map((link) => (
-            <a class="site-footer__link portfolio__link" href={link.href}>
+            <a class="site-footer__link" href={link.href}>
               {link.label.replace(/résumé|resume/gi, "Resume")}
             </a>
           ))}
@@ -38,10 +38,10 @@ import { FooterWordmark } from "../blocks/footer-wordmark";
         © {new Date().getFullYear()} {p.profile.name}. All rights reserved.
       </span>
       <div class="site-footer__links">
-        <a class="site-footer__secondary-link portfolio__link" href="/privacy-policy/">Privacy policy</a>
-        <a class="site-footer__secondary-link portfolio__link" href="/terms-and-conditions/">Terms</a>
-        <a class="site-footer__secondary-link portfolio__link" href={p.profile.github}>GitHub <ExternalArrow /></a>
-        <a class="site-footer__secondary-link portfolio__link" href={p.profile.linktree}>All links <ExternalArrow /></a>
+        <a class="site-footer__secondary-link" href="/privacy-policy/">Privacy policy</a>
+        <a class="site-footer__secondary-link" href="/terms-and-conditions/">Terms</a>
+        <a class="site-footer__secondary-link" href={p.profile.github}>GitHub <ExternalArrow /></a>
+        <a class="site-footer__secondary-link" href={p.profile.linktree}>All links <ExternalArrow /></a>
       </div>
     </div>
   </div>

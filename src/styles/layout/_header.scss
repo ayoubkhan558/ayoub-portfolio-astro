@@ -1,3 +1,5 @@
+// Site header, theme switch and mobile navigation on every standard page.
+
 @use "../foundation/breakpoints";
 
 .site-header {
@@ -85,17 +87,168 @@
   gap: var(--space-2);
 }
 
-.icon-button {
+.site-header__menu-toggle {
   display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-  border-radius: 50%;
-  font-size: 23px;
+
+  @media (min-width: breakpoints.$large) {
+    display: none;
+  }
 }
 
-.icon-button:hover {
+.site-header__mobile-navigation[hidden] {
+  display: none;
+}
+
+.site-header__mobile-navigation {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  padding: var(--space-5);
+  border-radius: 20px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px var(--menu-shadow-ink);
+}
+
+.site-header__mobile-link {
+  display: block;
+  padding: var(--space-3) var(--space-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: var(--space-3);
+  background: var(--background);
+  border: 2px solid var(--foreground);
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 5px;
+}
+
+.brand-preview {
   background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  min-height: 180px;
+
+  @media (min-width: breakpoints.$large) {
+    min-height: 220px;
+  }
+}
+
+.brand-preview .brand-preview__value {
+  font-size: 30px;
+}
+
+.site-header {
+  align-items: center;
+}
+
+.site-header__menu {
+  display: block;
+  position: static;
+
+  @media (min-width: breakpoints.$large) {
+    display: none;
+  }
+}
+
+.site-header__menu-toggle {
+  list-style: none;
+}
+
+.site-header__menu-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.site-header__menu[open] .site-header__menu-toggle {
+  background: var(--muted);
+}
+
+.site-header__menu .site-header__mobile-navigation {
+  max-height: calc(100dvh - 140px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.site-header__mobile-link--current {
+  font-weight: 700;
+  background: var(--muted);
+  border-radius: 7px;
+}
+
+.theme-sun {
+  display: none;
+}
+
+.dark .theme-sun {
+  display: block;
+}
+
+.dark .theme-moon {
+  display: none;
+}
+
+.site-header__cta.button {
+  display: none;
+
+  @media (min-width: breakpoints.$large) {
+    display: inline-flex;
+  }
+} /* v1.2 — requested component refinements. Original source records are untouched. */
+.brand {
+  align-items: baseline;
+  gap: var(--space-2);
+  line-height: 1;
+}
+
+.brand__mark {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1;
+  transform: none;
+}
+
+.brand__name {
+  line-height: 1;
+  position: relative;
+  top: -2px;
+}
+
+.site-header .brand {
+  align-self: center;
+}
+
+.site-header__link:hover {
+  color: var(--link-hover-ink);
+}
+
+.dark .site-header__link:hover {
+  color: var(--link-hover-ink);
+}
+
+.site-header__link:hover {
+  color: var(--link-accent);
+}
+
+.site-header__mobile-link:hover {
+  color: var(--link-accent);
 }

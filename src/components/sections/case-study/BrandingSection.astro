@@ -9,9 +9,9 @@ const { study } = Astro.props;
   <div class="section-heading">
     <div>
       <span class="eyebrow">Visual identity</span>
-      <h2 class="section-heading__title portfolio__heading-secondary">{study.branding.title}</h2>
+      <h2 class="section-heading__title">{study.branding.title}</h2>
     </div>
-    <p class="section-heading__description portfolio__paragraph">{study.branding.text}</p>
+    <p class="section-heading__description">{study.branding.text}</p>
   </div>
   <div class="branding-grid">
     <div class="brand-preview">
@@ -25,8 +25,8 @@ const { study } = Astro.props;
       <strong class="brand-preview__value">{study.branding.logoMark}</strong>
     </div>
     <div>
-      <h3 class="portfolio__heading-tertiary">{study.branding.fontName}</h3>
-      <p class="portfolio__paragraph">{study.branding.fontMeta}</p>
+      <h3>{study.branding.fontName}</h3>
+      <p>{study.branding.fontMeta}</p>
       <div class="tags">
         {study.branding.fontFamilies?.map((f) => (
           <span class="tags__label">{f}</span>

@@ -14,12 +14,12 @@ import p from "../../../data/portfolio.json";
           <span class="eyebrow">
             {e.year} · {e.duration}
           </span>
-          <h3 class="portfolio__heading-tertiary">{e.title}</h3>
-          <p class="portfolio__paragraph">
+          <h3>{e.title}</h3>
+          <p>
             <strong>{e.company}</strong> · {e.location}
           </p>
-          <p class="portfolio__paragraph">{e.description}</p>
-          <p class="small-note portfolio__paragraph">
+          <p>{e.description}</p>
+          <p class="small-note">
             <time datetime={e.startDate}>{e.startDate}</time> →{" "}
             <time datetime={e.endDate}>{e.endDate}</time>
           </p>

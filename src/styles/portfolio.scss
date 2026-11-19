@@ -1,65 +1,35 @@
-// These partials were split from one stylesheet. Their order preserves the
-// original cascade, including which rule wins when selectors tie.
+// Foundation and primitives load first. Layout, components and page sections follow.
 
-// Base site styles, shared layout, and the first styles for each page.
 @use "foundation/site-base";
 @use "components/ui-controls";
-@use "layout/section-shells";
-@use "layout/header";
-@use "components/buttons";
-@use "layout/mobile-navigation";
-@use "sections/home-hero";
-@use "layout/section-heading";
-@use "components/case-study-cards";
-@use "components/services";
-@use "components/faq";
-@use "sections/call-to-action";
 @use "layout/footer";
+@use "layout/header";
 @use "layout/page-intro";
-@use "sections/about";
-@use "sections/case-study";
-@use "components/prose";
-@use "sections/selected-work";
-@use "sections/project-archive";
+@use "layout/section-heading";
+@use "layout/section-shells";
+
+
+// PAGE SECTIONS
+@use "components/asset-fallback";
+@use "components/buttons";
+@use "components/case-study-cards";
+@use "components/faq";
 @use "components/pagespeed";
+@use "components/pointer-feedback";
 @use "components/project-copy-dialog";
-@use "sections/contact-and-page-details";
-
-// Integration rules follow the underlying component defaults.
-@use "layout/footer-wordmark";
-@use "components/button-integration";
-@use "layout/header-integration";
-@use "components/hero-and-case-card-integration";
-@use "components/service-card-integration";
-@use "components/faq-fallback-integration";
-@use "components/testimonial-integration";
-@use "foundation/shared-type-and-assets";
-@use "layout/footer-integration";
-@use "components/archive-and-content-integration";
-@use "foundation/contrast";
-
-// Each component owns its mobile defaults and nested wider-screen rules.
-@use "layout/brand-and-footer";
-@use "sections/home-panels";
-@use "components/service-card-styles";
-@use "components/faq-accordion";
-@use "components/carousel-and-form-states";
 @use "components/project-drawer";
-@use "sections/case-study-screenshots";
-@use "components/faq-and-tools";
-@use "sections/toolbox-and-faq-spacing";
-@use "sections/home-editorial";
-@use "sections/about-toolbox-and-tools";
-@use "components/card-alignment";
-
-// Section and interaction refinements retain their original final positions.
-@use "sections/home-section-alignment";
-@use "components/testimonial-avatar";
-@use "components/faq-interaction";
-@use "components/pagespeed-summary";
-@use "components/clickable-work-cards";
-@use "components/sound-toggle";
+@use "components/prose";
+@use "components/services";
 @use "components/testimonials";
-@use "sections/toolbox-groups";
-@use "components/card-content";
-@use "components/pointer-and-hover";
+
+// PAGE SECTIONS
+@use "sections/about";
+@use "sections/about-toolbox-and-tools";
+@use "sections/call-to-action";
+@use "sections/case-study";
+@use "sections/contact-and-page-details";
+@use "sections/home-editorial";
+@use "sections/home-hero";
+@use "sections/home-panels";
+@use "sections/project-archive";
+@use "sections/selected-work";

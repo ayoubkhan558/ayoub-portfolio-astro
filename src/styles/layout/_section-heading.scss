@@ -1,3 +1,5 @@
+// Section headings and footer action alignment across the portfolio.
+
 @use "../foundation/breakpoints";
 
 .section-heading {
@@ -34,10 +36,28 @@
   }
 }
 
-.home-case-studies-section__footer,
-.home-projects-section__footer,
+.home-case-studies-section__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+.home-projects-section__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
 .home-services-section__footer {
   display: flex;
   justify-content: center;
   margin-top: var(--space-10);
+}
+
+.section-heading {
+  align-items: center;
+}
+
+.section-heading__description {
+  line-height: 1.6;
 }

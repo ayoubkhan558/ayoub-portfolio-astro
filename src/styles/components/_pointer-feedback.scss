@@ -1,0 +1,52 @@
+// Cursor and sound controls available throughout the site.
+
+@use "../foundation/breakpoints";
+
+// Keep the toggle off touch layouts and clear of the back-to-top control.
+.pointer-feedback__toggle:not([hidden]) {
+  display: none;
+
+  @media (min-width: breakpoints.$large) and (hover: hover) and (pointer: fine) {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: auto auto max(18px, env(safe-area-inset-bottom)) 18px;
+    z-index: 40;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--background);
+    color: var(--foreground);
+    cursor: pointer;
+  }
+}
+
+.pointer-feedback__toggle[aria-pressed="true"] .pointer-feedback__icon--off {
+  display: none;
+}
+
+.pointer-feedback__toggle[aria-pressed="false"] .pointer-feedback__icon--on {
+  display: none;
+} /* Preserve the native cursor and keep its enhancement outside pointer hit testing. */
+.pointer-feedback__halo:not([hidden]) {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 100;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 1px solid var(--link-accent);
+  border-radius: 50%;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+// Hover gives cards a visual response without implying that static cards are links.
+:is(.testimonial-card, .review-journal__entry, .tool-chip):hover {
+  @media (hover: hover) and (pointer: fine) {
+    background: var(--link-accent-soft);
+    border-color: var(--link-accent);
+  }
+}

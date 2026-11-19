@@ -9,7 +9,7 @@ const rows = [
 
 <div class="skills-marquee" data-skills-marquee>
   <div class="marquee-toolbar">
-    <p class="small-note marquee-toolbar__description portfolio__paragraph">
+    <p class="small-note marquee-toolbar__description">
       {entries.length} tools and technologies
     </p>
     <button type="button" class="marquee-toggle portfolio__button" aria-pressed="false" hidden>
@@ -45,7 +45,7 @@ const rows = [
                     {t.name.slice(0, 2)}
                   </span>
                 )}
-                <h3 class="tool-chip__title portfolio__heading-tertiary">{t.name}</h3>
+                <h3 class="tool-chip__title">{t.name}</h3>
                 {/* <p class="sr-only">
                   {t.description}
                   {"categories" in t

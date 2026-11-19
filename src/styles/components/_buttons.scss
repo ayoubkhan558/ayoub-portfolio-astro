@@ -1,3 +1,19 @@
+// Portfolio buttons, links and action rows used across pages.
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+.icon-button:hover {
+  background: var(--muted);
+}
 .button {
   display: inline-flex;
   align-items: center;
@@ -41,17 +57,102 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.about-hero__actions,
-.case-detail__actions,
-.hero__actions,
-.home-about-section__actions,
-.page-intro__actions,
-.portfolio-cta-section__actions,
-.project-card__actions,
+.home-about-section__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
+}
+
+.portfolio-cta-section__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
+}
+
 .service-detail__actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: var(--space-7);
+}
+.button {
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
+
+.button :is(.button__icon, .external-arrow) {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.text-link {
+  font-size: var(--text-small);
+}
+
+.text-link:hover {
+  color: var(--link-hover-ink);
+}
+
+.dark .text-link:hover {
+  color: var(--link-hover-ink);
+}
+
+// v1.3 — editorial section hierarchy, compact expertise and purposeful motion.
+:where(a) {
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+:where(a):hover {
+  color: var(--link-accent);
+}
+
+:where(a):focus-visible {
+  color: var(--link-accent);
+}
+
+:where(a):hover :where(h3) {
+  color: var(--link-accent);
+}
+
+:where(a):focus-visible :where(h3) {
+  color: var(--link-accent);
+}
+
+:where(a).button:hover {
+  color: var(--background);
+  background: var(--link-accent);
+  border-color: var(--link-accent);
+}
+
+:where(a).button:focus-visible {
+  color: var(--background);
+  background: var(--link-accent);
+  border-color: var(--link-accent);
+}
+
+.dark :where(a).button:hover {
+  color: var(--accent-button-hover-ink);
+}
+
+.dark :where(a).button:focus-visible {
+  color: var(--accent-button-hover-ink);
+}
+
+:where(a).text-link:hover {
+  color: var(--link-accent);
+}
+
+:where(a).case-image-link:hover .round-arrow {
+  color: var(--background);
+  background: var(--link-accent);
 }
