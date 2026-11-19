@@ -1,0 +1,26 @@
+---
+import CaseGrid from "../../components/portfolio/CaseGrid.astro";
+import CTA from "../../components/portfolio/CTA.astro";
+import Intro from "../../components/portfolio/Intro.astro";
+import Layout from "../../layouts/PortfolioLayout.astro";
+
+const description =
+  "What each client needed, what I changed, and how it turned out.";
+---
+
+<Layout
+  hasFooterCta
+  title="Case studies"
+  description={description}
+  image="/social/ayoub-portfolio-thumbnail-case-studies.jpg"
+>
+  <div class="portfolio-background">
+    <Intro title="Case studies" description={description} />
+    <section class="case-studies-list-section section-spacing section-spacing--opening" aria-label="Client case studies">
+      <div class="container">
+        <CaseGrid />
+      </div>
+    </section>
+  </div>
+  <CTA />
+</Layout>

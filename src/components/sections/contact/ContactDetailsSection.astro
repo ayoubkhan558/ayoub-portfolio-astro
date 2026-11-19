@@ -6,54 +6,56 @@ const formId = import.meta.env.PUBLIC_FORMSPREE_ID || "mgojyyqd";
 const contactSteps = ["Send project details", "Get a build estimate"];
 ---
 
-<section class="contact-details-section contact-layout">
-  <div class="contact-layout__form">
-    <ContactForm
-      client:load
-      action={`https://formspree.io/f/${formId}`}
-      email={p.profile.email}
-      subject={Astro.url.searchParams.get("subject") || ""}
-      details={Astro.url.searchParams.get("details") || ""}
-    />
-  </div>
-  <div class="contact-info">
-    <div class="contact-availability">
-      <span class="availability">
-        <i class="availability__dot"></i>
-        {p.profile.availability}
-      </span>
+<section class="contact-details-section section-spacing section-spacing--opening">
+  <div class="container contact-layout">
+    <div class="contact-layout__form">
+      <ContactForm
+        client:load
+        action={`https://formspree.io/f/${formId}`}
+        email={p.profile.email}
+        subject={Astro.url.searchParams.get("subject") || ""}
+        details={Astro.url.searchParams.get("details") || ""}
+      />
     </div>
-    <h2 class="contact-info__title contact-details-section__subheading">Let's build something useful.</h2>
+    <div class="contact-info">
+      <div class="contact-availability">
+        <span class="availability">
+          <i class="availability__dot"></i>
+          {p.profile.availability}
+        </span>
+      </div>
+      <h2 class="contact-info__title contact-details-section__subheading">Let's build something useful.</h2>
 
-    <p>
-      Share a few details in the project brief form to get a clear scope, realistic timeline, and practical next steps without back-and-forth calls.
-      <br>
-      <br>
-      Include your goals and budget so we can turn your idea into a clear plan—or write directly if you prefer email.
-    </p>
-    <a class="contact-link" href={`mailto:${p.profile.email}`}>
-      <span class="contact-link__label">Email</span>
-      {p.profile.email} <ExternalArrow />
-    </a>
-    <a class="contact-link" href={`tel:${p.profile.phone.replaceAll(" ", "")}`}>
-      <span class="contact-link__label">Phone</span>
-      {p.profile.phone} <ExternalArrow />
-    </a>
-    <a
-      class="contact-link"
-      href={p.profile.linkedin}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="contact-link__label">Connect</span>LinkedIn <ExternalArrow />
-    </a>
-    <a
-      class="contact-link"
-      href={p.profile.upwork}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="contact-link__label">Hire</span>Upwork <ExternalArrow />
-    </a>
+      <p>
+        Share a few details in the project brief form to get a clear scope, realistic timeline, and practical next steps without back-and-forth calls.
+        <br>
+        <br>
+        Include your goals and budget so we can turn your idea into a clear plan—or write directly if you prefer email.
+      </p>
+      <a class="contact-link" href={`mailto:${p.profile.email}`}>
+        <span class="contact-link__label">Email</span>
+        {p.profile.email} <ExternalArrow />
+      </a>
+      <a class="contact-link" href={`tel:${p.profile.phone.replaceAll(" ", "")}`}>
+        <span class="contact-link__label">Phone</span>
+        {p.profile.phone} <ExternalArrow />
+      </a>
+      <a
+        class="contact-link"
+        href={p.profile.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="contact-link__label">Connect</span>LinkedIn <ExternalArrow />
+      </a>
+      <a
+        class="contact-link"
+        href={p.profile.upwork}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="contact-link__label">Hire</span>Upwork <ExternalArrow />
+      </a>
+    </div>
   </div>
 </section>

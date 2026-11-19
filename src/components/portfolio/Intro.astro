@@ -2,7 +2,7 @@
 const { label, title, description } = Astro.props;
 ---
 
-<div class="page-intro">
+<div class="page-intro container">
   {label && <span class="eyebrow">{label}</span>}
   <h1 class="page-intro__title">
     <slot name="title">{title}</slot>

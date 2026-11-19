@@ -160,26 +160,6 @@
   border-radius: 20px;
 }
 
-.about-page
-  > :is(
-    .about-experience-section,
-    .about-story-section,
-    .about-testimonials-section,
-    .about-toolbox-section
-  ):nth-of-type(even) {
-  padding-block: 64px;
-}
-
-.services-page
-  > :is(
-    .service-detail-content-section,
-    .services-cards-section,
-    .services-delivery-section,
-    .services-process-section
-  ):nth-of-type(even) {
-  padding-block: 64px;
-}
-
 .linked-card {
   display: flex;
   flex-direction: column;
@@ -187,32 +167,4 @@
 
 .linked-card > .card-action {
   padding-top: 18px;
-}
-
-.about-page
-  > :is(
-    .about-experience-section,
-    .about-story-section,
-    .about-testimonials-section,
-    .about-toolbox-section
-  ):nth-of-type(even) {
-  padding-block: var(--space-12);
-
-  @media (min-width: breakpoints.$large) {
-    padding-block: 64px;
-  }
-}
-
-.services-page
-  > :is(
-    .service-detail-content-section,
-    .services-cards-section,
-    .services-delivery-section,
-    .services-process-section
-  ):nth-of-type(even) {
-  padding-block: var(--space-12);
-
-  @media (min-width: breakpoints.$large) {
-    padding-block: 64px;
-  }
 }

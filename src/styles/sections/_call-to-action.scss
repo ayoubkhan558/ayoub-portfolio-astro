@@ -6,11 +6,6 @@
   position: relative;
   isolation: isolate;
   text-align: center;
-  padding-block: 65px;
-
-  @media (min-width: breakpoints.$large) {
-    padding-block: 88px;
-  }
 }
 
 .cta-panel__foreground {

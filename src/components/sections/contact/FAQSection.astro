@@ -4,25 +4,27 @@ import portfolio from "../../../data/portfolio.json";
 ---
 
 <section
-  class="contact-faq-section portfolio-faq"
+  class="contact-faq-section section-spacing"
   aria-label="Frequently asked questions"
 >
-  <div class="faq-introduction">
-    <span class="eyebrow">Good questions</span>
-    <h2 class="portfolio-faq__title">Before we get started.</h2>
-    <p class="portfolio-faq__description">
-      Answers to common questions about working together.
-    </p>
-  </div>
-  <div class="portfolio-faq__questions">
-    {portfolio.faqs.map(({ question, answer }) => (
-      <details class="faq-list__item" name="contact-faq">
-        <summary class="faq-list__question">
-          {question}
-          <ChevronDown size={18} aria-hidden="true" />
-        </summary>
-        <p class="faq-list__answer">{answer}</p>
-      </details>
-    ))}
+  <div class="container portfolio-faq">
+    <div class="faq-introduction">
+      <span class="eyebrow">Good questions</span>
+      <h2 class="portfolio-faq__title">Before we get started.</h2>
+      <p class="portfolio-faq__description">
+        Answers to common questions about working together.
+      </p>
+    </div>
+    <div class="portfolio-faq__questions">
+      {portfolio.faqs.map(({ question, answer }) => (
+        <details class="faq-list__item" name="contact-faq">
+          <summary class="faq-list__question">
+            {question}
+            <ChevronDown size={18} aria-hidden="true" />
+          </summary>
+          <p class="faq-list__answer">{answer}</p>
+        </details>
+      ))}
+    </div>
   </div>
 </section>

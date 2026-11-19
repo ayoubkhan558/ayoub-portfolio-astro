@@ -7,33 +7,35 @@ interface Props {
 const { study } = Astro.props;
 ---
 
-<section class="case-study-challenges-section">
-  <div class="case-study-challenges-section__columns">
-    <div class="case-detail__column">
-      <span class="eyebrow">Before</span>
-      <h2>The challenges</h2>
-      {study.challenges.map((c) => (
-        <article class="challenge-item">
-          <>
-            <h3 class="challenge-item__title">{c.title}</h3>
-            <p>{c.text}</p>
-          </>
-        </article>
-      ))}
+<section class="case-study-challenges-section section-spacing">
+  <div class="container">
+    <div class="case-study-challenges-section__columns">
+      <div class="case-detail__column">
+        <span class="eyebrow">Before</span>
+        <h2>The challenges</h2>
+        {study.challenges.map((c) => (
+          <article class="challenge-item">
+            <>
+              <h3 class="challenge-item__title">{c.title}</h3>
+              <p>{c.text}</p>
+            </>
+          </article>
+        ))}
+      </div>
+      <div class="case-detail__column">
+        <span class="eyebrow">After</span>
+        <h2>The results</h2>
+        {study.results.map((c) => (
+          <article class="challenge-item">
+            <>
+              <h3 class="challenge-item__title">{c.title}</h3>
+              <p>{c.text}</p>
+            </>
+          </article>
+        ))}
+      </div>
     </div>
-    <div class="case-detail__column">
-      <span class="eyebrow">After</span>
-      <h2>The results</h2>
-      {study.results.map((c) => (
-        <article class="challenge-item">
-          <>
-            <h3 class="challenge-item__title">{c.title}</h3>
-            <p>{c.text}</p>
-          </>
-        </article>
-      ))}
-    </div>
+    <p class="result-highlight">{study.performanceNote}</p>
+    {study.pageSpeed && <PageSpeedReport report={study.pageSpeed} collapsed />}
   </div>
-  <p class="result-highlight">{study.performanceNote}</p>
-  {study.pageSpeed && <PageSpeedReport report={study.pageSpeed} collapsed />}
 </section>

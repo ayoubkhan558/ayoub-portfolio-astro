@@ -1,18 +1,14 @@
 // Service detail introductions and scope on /services/:slug/.
 @use "../foundation/breakpoints";
 
-.service-detail-hero {
+.service-detail-hero__layout {
   display: grid;
   align-items: start;
   gap: var(--space-8);
-  width: min(var(--layout-content-width), 100%);
-  margin-inline: auto;
-  padding: 142px var(--layout-gutter) var(--space-12);
 
   @media (min-width: breakpoints.$large) {
     grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
     gap: clamp(32px, 6vw, 80px);
-    padding-block: 180px 64px;
   }
 }
 

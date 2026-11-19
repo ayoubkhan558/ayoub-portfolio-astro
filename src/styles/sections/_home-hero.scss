@@ -13,18 +13,10 @@
 .hero {
   display: grid;
   align-items: center;
-  padding-top: 138px;
-  padding-bottom: 44px;
   grid-template-columns: 1fr;
   gap: 35px;
 
-  @media (min-width: breakpoints.$small) {
-    padding-top: 145px;
-  }
-
   @media (min-width: breakpoints.$large) {
-    padding-top: 190px;
-    padding-bottom: 72px;
     grid-template-columns: 1.6fr 1fr;
     gap: 38px;
   }
@@ -166,10 +158,6 @@
   @media (min-width: breakpoints.$small) {
     font-size: 19px;
   }
-}
-
-.logo-section {
-  padding-top: 64px;
 }
 
 .dashed-label {
@@ -368,11 +356,9 @@
   align-items: center;
   grid-template-columns: 1fr;
   gap: var(--space-8);
-  padding-top: 148px;
 
   @media (min-width: breakpoints.$large) {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    padding-top: 184px;
   }
 
   @media (min-width: breakpoints.$wide) {

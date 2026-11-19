@@ -4,27 +4,29 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="about-experience-section">
-  <SectionHeader label="Experience" title="Teams I've built with." />
-  <div class="experience-list">
-    {p.experienceLog.map((e) => (
-      <article class="experience-list__item">
-        <Asset src={e.logo} alt={e.company} class="company-logo" />
-        <div>
-          <span class="eyebrow">
-            {e.year} · {e.duration}
-          </span>
-          <h3>{e.title}</h3>
-          <p>
-            <strong>{e.company}</strong> · {e.location}
-          </p>
-          <p>{e.description}</p>
-          <p class="small-note">
-            <time datetime={e.startDate}>{e.startDate}</time> →{" "}
-            <time datetime={e.endDate}>{e.endDate}</time>
-          </p>
-        </div>
-      </article>
-    ))}
+<section class="about-experience-section section-spacing">
+  <div class="container">
+    <SectionHeader label="Experience" title="Teams I've built with." />
+    <div class="experience-list">
+      {p.experienceLog.map((e) => (
+        <article class="experience-list__item">
+          <Asset src={e.logo} alt={e.company} class="company-logo" />
+          <div>
+            <span class="eyebrow">
+              {e.year} · {e.duration}
+            </span>
+            <h3>{e.title}</h3>
+            <p>
+              <strong>{e.company}</strong> · {e.location}
+            </p>
+            <p>{e.description}</p>
+            <p class="small-note">
+              <time datetime={e.startDate}>{e.startDate}</time> →{" "}
+              <time datetime={e.endDate}>{e.endDate}</time>
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
   </div>
 </section>

@@ -7,37 +7,39 @@ interface Props {
 const { service } = Astro.props;
 ---
 
-<section class="service-detail-content-section">
-  <div class="service-detail-content-section__topics">
-    {service.sections.map((section) => (
-      <article class="service-detail-content-section__topic">
-        <h2 class="service-detail-content-section__title">{section.title}</h2>
-        {section.paragraphs.map((text) => (
-          <p>{text}</p>
-        ))}
-        {section.bullets && (
-          <ul class="check-list">
-            {section.bullets.map((text) => (
-              <li class="check-list__item">{text}</li>
-            ))}
-          </ul>
-        )}
-      </article>
-    ))}
+<section class="service-detail-content-section section-spacing">
+  <div class="container">
+    <div class="service-detail-content-section__topics">
+      {service.sections.map((section) => (
+        <article class="service-detail-content-section__topic">
+          <h2 class="service-detail-content-section__title">{section.title}</h2>
+          {section.paragraphs.map((text) => (
+            <p>{text}</p>
+          ))}
+          {section.bullets && (
+            <ul class="check-list">
+              {section.bullets.map((text) => (
+                <li class="check-list__item">{text}</li>
+              ))}
+            </ul>
+          )}
+        </article>
+      ))}
+    </div>
+    {service.relatedCases.length > 0 && (
+      <>
+        <h2 class="service-detail-content-section__subheading">
+          Related case studies
+        </h2>
+        {service.relatedNote && <p>{service.relatedNote}</p>}
+        <div class="link-list">
+          {service.relatedCases.map((c) => (
+            <a class="text-link" href={c.href}>
+              {c.label} <ExternalArrow />
+            </a>
+          ))}
+        </div>
+      </>
+    )}
   </div>
-  {service.relatedCases.length > 0 && (
-    <>
-      <h2 class="service-detail-content-section__subheading">
-        Related case studies
-      </h2>
-      {service.relatedNote && <p>{service.relatedNote}</p>}
-      <div class="link-list">
-        {service.relatedCases.map((c) => (
-          <a class="text-link" href={c.href}>
-            {c.label} <ExternalArrow />
-          </a>
-        ))}
-      </div>
-    </>
-  )}
 </section>

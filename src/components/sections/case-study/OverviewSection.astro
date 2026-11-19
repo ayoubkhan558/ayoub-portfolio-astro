@@ -7,10 +7,12 @@ interface Props {
 const { study } = Astro.props;
 ---
 
-<section class="case-study-overview-section">
-  <SectionHeader
-    label="The brief"
-    title="Project overview"
-    subtitle={study.overview}
-  />
+<section class="case-study-overview-section section-spacing">
+  <div class="container">
+    <SectionHeader
+      label="The brief"
+      title="Project overview"
+      subtitle={study.overview}
+    />
+  </div>
 </section>

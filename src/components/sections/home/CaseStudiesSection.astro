@@ -4,14 +4,16 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 ---
 
 <section
-  class="home-case-studies-section"
+  class="home-case-studies-section section-spacing"
   id="case-studies"
   data-project-reveal
 >
-  <SectionHeader
-    label="Case studies"
-    title="How the work came together"
-    subtitle="What each client needed, what I changed, and how it turned out."
-  />
-  <CaseGrid />
+  <div class="container">
+    <SectionHeader
+      label="Case studies"
+      title="How the work came together"
+      subtitle="What each client needed, what I changed, and how it turned out."
+    />
+    <CaseGrid />
+  </div>
 </section>

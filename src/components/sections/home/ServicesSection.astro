@@ -5,20 +5,22 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="home-services-section" id="services">
-  <SectionHeader
-    label="Solutions"
-    title="What you can hire me for"
-    subtitle="Business problems first, implementation details second. Pick the outcome you need and I will choose the right build path."
-  />
-  <ServiceCards
-    services={p.services.filter((s) => s.featured).slice(0, 3)}
-    compact
-  />
-  <div class="home-services-section__footer">
-    <a href="/services/" class="button button--outline">
-      View all services →
-    </a>
+<section class="home-services-section section-spacing" id="services">
+  <div class="container">
+    <SectionHeader
+      label="Solutions"
+      title="What you can hire me for"
+      subtitle="Business problems first, implementation details second. Pick the outcome you need and I will choose the right build path."
+    />
+    <ServiceCards
+      services={p.services.filter((s) => s.featured).slice(0, 3)}
+      compact
+    />
+    <div class="home-services-section__footer">
+      <a href="/services/" class="button button--outline">
+        View all services →
+      </a>
+    </div>
   </div>
 </section>
 

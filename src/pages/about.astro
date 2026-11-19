@@ -19,7 +19,7 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
       <Intro label="A little about me" description={p.profile.role}>
         <NameSparkles slot="title">{p.profile.name}</NameSparkles>
       </Intro>
-      <div class="about-hero">
+      <div class="about-hero container">
         <Asset
           src="/ayoub-about-v4.jpg"
           alt={p.profile.name}
@@ -52,7 +52,7 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
           </p>
         </div>
       </div>
-      <div class="stats-row">
+      <div class="stats-row container">
         {p.about.awards.map((a) => (
           <div class="stats-row__metric">
             <strong class="stats-row__value">{a.value}</strong>

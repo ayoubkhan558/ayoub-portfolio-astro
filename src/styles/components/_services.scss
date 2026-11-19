@@ -74,7 +74,7 @@
 
 .process-grid {
   display: grid;
-  gap: 0;
+  gap: var(--space-4);
   grid-template-columns: 1fr;
 
   @media (min-width: breakpoints.$small) {
@@ -87,22 +87,17 @@
 }
 
 .process-grid__step {
-  border-top: 1px dashed var(--border);
-  padding: var(--space-7) 0;
-  border-left: 0 !important;
-
-  @media (min-width: breakpoints.$small) {
-    padding: var(--space-8);
-    border-left: 1px dashed var(--border);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
 }
 
-.process-grid__step:nth-child(3n + 1) {
-  border-left: 1px dashed var(--border);
-
-  @media (min-width: breakpoints.$large) {
-    border-left: 0;
-  }
+.process-grid .step-number {
+  color: var(--link-accent);
 }
 
 .process-grid :where(p) {
@@ -113,7 +108,10 @@
   display: flex;
   gap: var(--space-6);
   flex-wrap: wrap;
-  margin-top: var(--space-6);
+  width: 100%;
+  margin-block-start: auto;
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--border);
 }
 
 .metric-row .metric-row__note {
@@ -175,14 +173,6 @@
 
 .service-price {
   font-size: 24px;
-}
-
-.process-grid__step:nth-child(2n + 1) {
-  border-left: 0;
-
-  @media (min-width: breakpoints.$large) {
-    border-left: 1px dashed var(--border);
-  }
 }
 
 .service-card.ui-card {
@@ -375,5 +365,46 @@
 
   .service-card__description {
     margin: 6px 0 0;
+  }
+}
+
+.services-delivery-section {
+  .check-list__item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--space-3);
+    padding-inline: 0;
+
+    &::before {
+      position: static;
+      content: "✓" / "";
+      color: var(--link-accent);
+    }
+  }
+
+  .services-delivery-section__checklist {
+    padding: var(--space-6);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+  }
+
+  .check-list__item + .check-list__item {
+    padding-block-start: var(--space-3);
+    border-block-start: 1px solid var(--border);
+  }
+
+  @media (min-width: breakpoints.$large) {
+    > .container {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      align-items: start;
+      gap: var(--space-8);
+    }
+
+    .services-delivery-section__checklist {
+      margin-block-start: 0;
+    }
   }
 }

@@ -9,60 +9,62 @@ interface Props {
 const { study } = Astro.props;
 ---
 
-<section class="case-study-branding-section">
-  <SectionHeader
-    label="Visual identity"
-    title={study.branding.title}
-    subtitle={study.branding.text}
-  />
-  <div class="branding-grid">
-    <div class="brand-preview">
-      {"logoImage" in study.branding && (
-        <Asset
-          src={study.branding.logoImage}
-          alt={`${study.client} logo`}
-          class="branding-logo"
-        />
+<section class="case-study-branding-section section-spacing">
+  <div class="container">
+    <SectionHeader
+      label="Visual identity"
+      title={study.branding.title}
+      subtitle={study.branding.text}
+    />
+    <div class="branding-grid">
+      <div class="brand-preview">
+        {"logoImage" in study.branding && (
+          <Asset
+            src={study.branding.logoImage}
+            alt={`${study.client} logo`}
+            class="branding-logo"
+          />
+        )}
+        <strong class="brand-preview__value">{study.branding.logoMark}</strong>
+      </div>
+      <div>
+        <h3>{study.branding.fontName}</h3>
+        <p>{study.branding.fontMeta}</p>
+        <div class="tags">
+          {study.branding.fontFamilies?.map((f) => (
+            <span class="tags__label">{f}</span>
+          ))}
+        </div>
+        <div class="palette">
+          {study.branding.palette.map((c) => (
+            <div class="palette__sample">
+              <>
+                <div class="swatch" style={{ backgroundColor: c.value }} />
+                <strong class="palette__value">{c.label}</strong>
+                <small class="palette__note portfolio__note">{c.value}</small>
+              </>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <h3 class="case-study-branding-section__tools-title">Tools used</h3>
+    <div class="tools-inline">
+      {study.tools.map(
+        (key: string) =>
+          tools[key] && (
+            <div class="tools-inline__tool">
+              <>
+                <Asset
+                  src={tools[key].logo}
+                  alt={tools[key].name}
+                  class="tool-logo"
+                />
+                <span>{tools[key].name}</span>
+              </>
+            </div>
+          ),
       )}
-      <strong class="brand-preview__value">{study.branding.logoMark}</strong>
     </div>
-    <div>
-      <h3>{study.branding.fontName}</h3>
-      <p>{study.branding.fontMeta}</p>
-      <div class="tags">
-        {study.branding.fontFamilies?.map((f) => (
-          <span class="tags__label">{f}</span>
-        ))}
-      </div>
-      <div class="palette">
-        {study.branding.palette.map((c) => (
-          <div class="palette__sample">
-            <>
-              <div class="swatch" style={{ backgroundColor: c.value }} />
-              <strong class="palette__value">{c.label}</strong>
-              <small class="palette__note portfolio__note">{c.value}</small>
-            </>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-  <h3 class="case-study-branding-section__tools-title">Tools used</h3>
-  <div class="tools-inline">
-    {study.tools.map(
-      (key: string) =>
-        tools[key] && (
-          <div class="tools-inline__tool">
-            <>
-              <Asset
-                src={tools[key].logo}
-                alt={tools[key].name}
-                class="tool-logo"
-              />
-              <span>{tools[key].name}</span>
-            </>
-          </div>
-        ),
-    )}
   </div>
 </section>

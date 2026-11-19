@@ -15,37 +15,39 @@ const avatar = portfolio.clients.find(
 )?.avatar;
 ---
 
-<section class="case-study-quote-section">
-  <figure class="large-quote">
-    <blockquote class="large-quote__quote">
-      “{study.testimonial.quote}”
-    </blockquote>
-    <figcaption class="large-quote__attribution">
-      <span class="testimonial__avatar" aria-hidden="true">
-        {avatar ? (
-          <img
-            class="portfolio__image"
-            src={avatar}
-            alt=""
-            width="48"
-            height="48"
-            loading="lazy"
-            decoding="async"
-          />
-        ) : (
-          <UserRound size={24} />
-        )}
-      </span>
-      <div>
-        <strong class="large-quote__author">{study.testimonial.author}</strong>
-        <span class="large-quote__role">{study.testimonial.meta}</span>
-      </div>
-    </figcaption>
-  </figure>
-  <div class="next-case">
-    <span class="next-case__label">Next case study</span>
-    <a class="next-case__link" href={next.listing.href}>
-      {next.client} →
-    </a>
+<section class="case-study-quote-section section-spacing">
+  <div class="container">
+    <figure class="large-quote">
+      <blockquote class="large-quote__quote">
+        “{study.testimonial.quote}”
+      </blockquote>
+      <figcaption class="large-quote__attribution">
+        <span class="testimonial__avatar" aria-hidden="true">
+          {avatar ? (
+            <img
+              class="portfolio__image"
+              src={avatar}
+              alt=""
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <UserRound size={24} />
+          )}
+        </span>
+        <div>
+          <strong class="large-quote__author">{study.testimonial.author}</strong>
+          <span class="large-quote__role">{study.testimonial.meta}</span>
+        </div>
+      </figcaption>
+    </figure>
+    <div class="next-case">
+      <span class="next-case__label">Next case study</span>
+      <a class="next-case__link" href={next.listing.href}>
+        {next.client} →
+      </a>
+    </div>
   </div>
 </section>

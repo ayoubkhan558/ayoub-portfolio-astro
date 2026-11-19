@@ -102,9 +102,6 @@
 .plain-card:hover {
   border-color: var(--panel-hover-border);
   box-shadow: 0 8px 32px var(--panel-shadow-ink);
-} /* Give the final strip inside the hero background room before the next section. */
-.home-page .home-trust-section {
-  padding-bottom: clamp(var(--space-10), 6vw, 88px);
 }
 
 .home-projects-section__footer {

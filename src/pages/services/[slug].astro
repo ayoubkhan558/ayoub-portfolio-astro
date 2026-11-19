@@ -18,39 +18,41 @@ const contactHref = `/contact/?subject=${encodeURIComponent(service.title)}#cont
 <Layout title={service.title} description={service.description}>
   <div class="service-detail-page">
     <div class="portfolio-background">
-      <section class="service-detail-hero">
-        <div class="service-detail-hero__intro">
-          <a class="text-link" href="/services/">
-            ← All services
-          </a>
-          <span class="eyebrow service-detail-hero__label">
-            {service.label}
-          </span>
-          <h1>{service.h1}</h1>
-          <p class="service-detail-hero__description">{service.description}</p>
-        </div>
-        <aside
-          class="service-detail-hero__pricing"
-          aria-label="Pricing and project details"
-        >
-          <a class="service-detail-hero__quote" href={contactHref}>
-            <span class="service-detail-hero__quote-text">
-              <strong class="service-detail-hero__price">
-                {service.price ?? "Request a starting price"}
-              </strong>
-              <span>{service.cta ?? "Discuss your project"}</span>
+      <section class="service-detail-hero section-spacing section-spacing--hero">
+        <div class="container service-detail-hero__layout">
+          <div class="service-detail-hero__intro">
+            <a class="text-link" href="/services/">
+              ← All services
+            </a>
+            <span class="eyebrow service-detail-hero__label">
+              {service.label}
             </span>
-            <ExternalArrow />
-          </a>
-          <dl class="service-detail-hero__facts">
-            {service.highlights.map(({ label, value }) => (
-              <div>
-                <dt class="service-detail-hero__term">{label}</dt>
-                <dd class="service-detail-hero__value">{value}</dd>
-              </div>
-            ))}
-          </dl>
-        </aside>
+            <h1>{service.h1}</h1>
+            <p class="service-detail-hero__description">{service.description}</p>
+          </div>
+          <aside
+            class="service-detail-hero__pricing"
+            aria-label="Pricing and project details"
+          >
+            <a class="service-detail-hero__quote" href={contactHref}>
+              <span class="service-detail-hero__quote-text">
+                <strong class="service-detail-hero__price">
+                  {service.price ?? "Request a starting price"}
+                </strong>
+                <span>{service.cta ?? "Discuss your project"}</span>
+              </span>
+              <ExternalArrow />
+            </a>
+            <dl class="service-detail-hero__facts">
+              {service.highlights.map(({ label, value }) => (
+                <div>
+                  <dt class="service-detail-hero__term">{label}</dt>
+                  <dd class="service-detail-hero__value">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
+        </div>
       </section>
     </div>
     <ServiceDetailSection service={service} />

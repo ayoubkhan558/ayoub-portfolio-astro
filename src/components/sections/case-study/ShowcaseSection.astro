@@ -9,8 +9,8 @@ const { pageShowcase } = Astro.props.study;
 ---
 
 {pageShowcase && (
-  <section class="portfolio-background">
-    <div class="case-study-showcase-section">
+  <section class="portfolio-background case-study-showcase-section section-spacing">
+    <div class="container">
       <SectionHeader
         label={pageShowcase.label}
         title={pageShowcase.title}

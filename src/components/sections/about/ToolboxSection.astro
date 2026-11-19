@@ -112,37 +112,41 @@ const groups = [
 ---
 
 <div class="portfolio-background">
-  <section class="about-toolbox-section">
-    <SectionHeader
-      title="My toolbox"
-      subtitle="What I use to build, launch, and maintain a site."
-    />
-    <div class="toolbox__groups" data-grid-spotlight>
-      {groups.map(({ title, icon: Icon, skills }) => (
-        <article class="toolbox__group" data-spotlight-card>
-          <span class="grid-spotlight__glow" aria-hidden="true"></span>
-          <h3 class="toolbox__title">
-            <Icon size={21} aria-hidden="true" />
-            {title}
-          </h3>
-          <dl class="toolbox__skills">
-            {skills.map(([skill, description]) => (
-              <div class="toolbox__skill">
-                <dt>{skill}</dt>
-                <dd class="toolbox__description">{description}</dd>
-              </div>
-            ))}
-          </dl>
-        </article>
-      ))}
-    </div>
-    <div hidden>
-      <div class="skills-title">
-        <h3 class="skills-title__title">Skills & technologies</h3>
+  <section class="about-toolbox-section section-spacing">
+    <div class="container">
+      <SectionHeader
+        title="My toolbox"
+        subtitle="What I use to build, launch, and maintain a site."
+      />
+      <div class="toolbox__groups" data-grid-spotlight>
+        {groups.map(({ title, icon: Icon, skills }) => (
+          <article class="toolbox__group" data-spotlight-card>
+            <span class="grid-spotlight__glow" aria-hidden="true"></span>
+            <h3 class="toolbox__title">
+              <Icon size={21} aria-hidden="true" />
+              {title}
+            </h3>
+            <dl class="toolbox__skills">
+              {skills.map(([skill, description]) => (
+                <div class="toolbox__skill">
+                  <dt>{skill}</dt>
+                  <dd class="toolbox__description">{description}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+        ))}
       </div>
-      <SkillsMarquee />
+      <div hidden>
+        <div class="skills-title">
+          <h3 class="skills-title__title">Skills & technologies</h3>
+        </div>
+        <SkillsMarquee />
+      </div>
+      <div class="gravity-logos-section">
+        <GravityLogos />
+      </div>
     </div>
-    <GravityLogos />
   </section>
 </div>
 

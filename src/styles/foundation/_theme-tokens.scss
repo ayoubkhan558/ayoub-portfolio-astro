@@ -35,6 +35,7 @@
   --layout-gutter: 20px;
   --section-spacing: 48px;
   --section-opening-space: 8px;
+  --page-header-offset: 142px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -64,11 +65,13 @@
     --layout-gutter: 28px;
     --section-spacing: 58px;
     --section-opening-space: 10px;
+    --page-header-offset: 150px;
   }
 
   @media (min-width: breakpoints.$large) {
     --section-spacing: 88px;
     --section-opening-space: 16px;
+    --page-header-offset: 180px;
   }
 
   --background: oklch(1 0 0);

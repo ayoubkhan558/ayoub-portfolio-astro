@@ -13,21 +13,23 @@ import Layout from "../layouts/PortfolioLayout.astro";
       description="How contact details, project information, analytics, and support records are handled."
     />
   </div>
-  <article class="legal-policy prose-narrow">
-    <p class="eyebrow">Last updated: June 28, 2026</p>
-    <div class="legal-highlights legal-policy__columns">
-      {highlights.map((h) => (
-        <div class="plain-card">
-          <>
-            <span class="eyebrow">{h.label}</span>
-            <p class="legal-highlights__description">{h.value}</p>
-          </>
-        </div>
-      ))}
+  <article class="legal-policy section-spacing">
+    <div class="container prose-narrow">
+      <p class="eyebrow">Last updated: June 28, 2026</p>
+      <div class="legal-highlights legal-policy__columns">
+        {highlights.map((h) => (
+          <div class="plain-card">
+            <>
+              <span class="eyebrow">{h.label}</span>
+              <p class="legal-highlights__description">{h.value}</p>
+            </>
+          </div>
+        ))}
+      </div>
+      <LegalSections
+        sections={sections}
+        sectionClass="privacy-policy-content-section"
+      />
     </div>
-    <LegalSections
-      sections={sections}
-      sectionClass="privacy-policy-content-section"
-    />
   </article>
 </Layout>

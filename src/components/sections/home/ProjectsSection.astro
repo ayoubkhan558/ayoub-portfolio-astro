@@ -4,20 +4,22 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 import ProjectCard from "../../portfolio/ProjectCard.astro";
 ---
 
-<section class="home-projects-section" id="projects" data-project-reveal>
-  <SectionHeader
-    label="Selected work"
-    title="Projects I’ve built"
-    subtitle="Explore the project details, tools, and screenshots."
-  />
-  <div class="home-projects-section__grid">
-    {projects.slice(0, 6).map((project, index) => (
-      <ProjectCard project={project.source} index={index} featured={project} />
-    ))}
-  </div>
-  <div class="home-projects-section__footer">
-    <a href="/projects/" class="button button--outline">
-      View all projects →
-    </a>
+<section class="home-projects-section section-spacing" id="projects" data-project-reveal>
+  <div class="container">
+    <SectionHeader
+      label="Selected work"
+      title="Projects I’ve built"
+      subtitle="Explore the project details, tools, and screenshots."
+    />
+    <div class="home-projects-section__grid">
+      {projects.slice(0, 6).map((project, index) => (
+        <ProjectCard project={project.source} index={index} featured={project} />
+      ))}
+    </div>
+    <div class="home-projects-section__footer">
+      <a href="/projects/" class="button button--outline">
+        View all projects →
+      </a>
+    </div>
   </div>
 </section>

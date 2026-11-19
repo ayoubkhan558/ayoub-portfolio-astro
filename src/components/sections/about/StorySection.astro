@@ -3,19 +3,21 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="about-story-section">
-  <SectionHeader label="My story" title="Learning by building." />
-  <div class="about-story-section__columns">
-    <p class="lead">{p.about.originStory}</p>
-    <p class="lead">{p.about.motivation}</p>
-  </div>
-  <div class="about-story-section__cards">
-    {p.about.storyCards.map((s) => (
-      <article class="plain-card">
-        <span class="eyebrow">{s.label}</span>
-        <h3 class="plain-card__title">{s.title}</h3>
-        <p class="plain-card__description">{s.text}</p>
-      </article>
-    ))}
+<section class="about-story-section section-spacing">
+  <div class="container">
+    <SectionHeader label="My story" title="Learning by building." />
+    <div class="about-story-section__columns">
+      <p class="lead">{p.about.originStory}</p>
+      <p class="lead">{p.about.motivation}</p>
+    </div>
+    <div class="about-story-section__cards">
+      {p.about.storyCards.map((s) => (
+        <article class="plain-card">
+          <span class="eyebrow">{s.label}</span>
+          <h3 class="plain-card__title">{s.title}</h3>
+          <p class="plain-card__description">{s.text}</p>
+        </article>
+      ))}
+    </div>
   </div>
 </section>
