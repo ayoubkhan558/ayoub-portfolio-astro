@@ -1,47 +1,149 @@
 ---
+import {
+  Braces,
+  Gauge,
+  LayoutTemplate,
+  Search,
+  ShoppingCart,
+  Workflow,
+} from "lucide-react";
+import GravityLogos from "../../effects/GravityLogos.astro";
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 import GridSpotlight from "../../effects/GridSpotlight.astro";
-import GlareSweep from "../../effects/GlareSweep.astro";
-import Heading from "../../portfolio/Heading.astro";
 import SkillsMarquee from "../../portfolio/SkillsMarquee.astro";
+
 const groups = [
   {
-    title: "Interfaces",
-    description:
-      "I use React for interactive pages and dashboards. I build responsive layouts from Figma designs with Tailwind or Sass.",
+    title: "React & web apps",
+    icon: Braces,
+    skills: [
+      [
+        "React",
+        "Reusable components, hooks, state management, and REST API integration.",
+      ],
+      ["Next.js", "Routing, server components, SSR, and static generation."],
+      [
+        "TypeScript & JavaScript",
+        "Typed interfaces, predictable state, and code the next developer can maintain.",
+      ],
+    ],
   },
   {
-    title: "Backends and APIs",
-    description:
-      "I use Node.js and Express for APIs and server logic, and PHP for WordPress work.",
+    title: "Styling & design",
+    icon: LayoutTemplate,
+    skills: [
+      [
+        "Figma to code",
+        "Responsive implementation that follows the design across screen sizes.",
+      ],
+      [
+        "CSS systems",
+        "Tailwind CSS, Sass/SCSS, shadcn/ui, Bootstrap, and reusable layout patterns.",
+      ],
+    ],
   },
   {
-    title: "WordPress and stores",
-    description:
-      "I build editable pages with Bricks or Elementor, use ACF for repeatable content, and set up stores with WooCommerce.",
+    title: "WordPress & CMS",
+    icon: Workflow,
+    skills: [
+      [
+        "Bricks Builder & Elementor Pro",
+        "Dynamic templates and custom widget integration.",
+      ],
+      [
+        "Editable content",
+        "ACF, custom post types, and flexible content layouts.",
+      ],
+      [
+        "WordPress architecture",
+        "Themes, REST API, headless setups, and content models editors can reuse.",
+      ],
+    ],
   },
   {
-    title: "Speed and search",
-    description:
-      "I use Core Web Vitals to find slow pages and technical SEO to help search engines crawl and understand a site.",
+    title: "Commerce & integrations",
+    icon: ShoppingCart,
+    skills: [
+      ["WooCommerce & Shopify", "Product pages, checkout, and payment flows."],
+      [
+        "Stripe, PayPal & custom APIs",
+        "Connect payments and external services to the site.",
+      ],
+      [
+        "Server-side work",
+        "Node.js and Express for APIs, and PHP for WordPress integrations.",
+      ],
+    ],
+  },
+  {
+    title: "Performance & handoff",
+    icon: Gauge,
+    skills: [
+      [
+        "Core Web Vitals",
+        "Optimize assets, serve WebP, and lazy-load images where it helps.",
+      ],
+      [
+        "Mobile-first QA",
+        "Test layouts, forms, and checkout across screen sizes and browsers.",
+      ],
+      [
+        "Documentation & support",
+        "Document the CMS, leave maintainable code, and validate technical SEO before handoff.",
+      ],
+    ],
+  },
+  {
+    title: "SEO & growth",
+    icon: Search,
+    skills: [
+      ["Technical SEO", "Improve crawlability and check indexing health."],
+      [
+        "Content & authority",
+        "Search intent, on-page content, off-page SEO, and link building.",
+      ],
+      [
+        "Conversion & measurement",
+        "Plan CTAs and conversion flows, and prepare the site for analytics tracking.",
+      ],
+    ],
   },
 ];
 ---
 
-<section class="about-toolbox-section">
-  <Heading title="My toolbox" />
-  <div class="toolbox__groups">
-    {groups.map((group) => (
-      <article class="toolbox__group">
-        <h3 class="toolbox__title">{group.title}</h3>
-        <p class="toolbox__description">{group.description}</p>
-      </article>
-    ))}
-  </div>
-  <div class="skills-title">
-    <h3 class="skills-title__title">Skills & technologies</h3>
-  </div>
-  <SkillsMarquee />
-</section>
+<div class="portfolio-background">
+  <section class="about-toolbox-section">
+    <SectionHeader
+      title="My toolbox"
+      subtitle="What I use to build, launch, and maintain a site."
+    />
+    <div class="toolbox__groups" data-grid-spotlight>
+      {groups.map(({ title, icon: Icon, skills }) => (
+        <article class="toolbox__group" data-spotlight-card>
+          <span class="grid-spotlight__glow" aria-hidden="true"></span>
+          <h3 class="toolbox__title">
+            <Icon size={21} aria-hidden="true" />
+            {title}
+          </h3>
+          <dl class="toolbox__skills">
+            {skills.map(([skill, description]) => (
+              <div class="toolbox__skill">
+                <dt>{skill}</dt>
+                <dd class="toolbox__description">{description}</dd>
+              </div>
+            ))}
+          </dl>
+        </article>
+      ))}
+    </div>
+    <div hidden>
+      <div class="skills-title">
+        <h3 class="skills-title__title">Skills & technologies</h3>
+      </div>
+      <SkillsMarquee />
+    </div>
+    <GravityLogos />
+  </section>
+</div>
 
 <GridSpotlight />
-<GlareSweep />

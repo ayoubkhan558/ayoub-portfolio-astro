@@ -2,14 +2,14 @@
 
 @use "../foundation/breakpoints";
 
-.home-page :is(.section-heading, .faq-introduction) {
+.home-page .faq-introduction {
   display: block;
   text-align: left;
   margin-bottom: var(--space-10);
   max-width: 820px;
 }
 
-.home-page :is(.section-heading, .faq-introduction) .eyebrow {
+.home-page .faq-introduction .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
@@ -17,28 +17,24 @@
   color: var(--link-accent);
 }
 
-.home-page :is(.section-heading, .faq-introduction) .eyebrow::before {
+.home-page .faq-introduction .eyebrow::before {
   content: "";
   width: 24px;
   height: 1px;
   background: currentColor;
 }
 
-.home-page :is(.section-heading__title, .portfolio-faq__title) {
+.home-page .portfolio-faq__title {
   max-width: 800px;
   font-size: clamp(30px, 3.4vw, 46px);
   line-height: 1.12;
 }
 
-.home-page :is(.section-heading__description, .portfolio-faq__description) {
+.home-page .portfolio-faq__description {
   max-width: 64ch;
   margin-top: var(--space-4);
   font-size: 18px;
   line-height: 1.6;
-}
-
-.home-page .resource-panel .section-heading {
-  margin-bottom: 0;
 }
 
 .text-rotator {
@@ -140,37 +136,11 @@
   color: var(--foreground);
 }
 
-.home-page .section-heading__description {
-  font-size: var(--text-body);
-
-  @media (min-width: breakpoints.$large) {
-    font-size: 18px;
-  }
-}
-
-.home-page .section-heading {
-  margin-bottom: var(--space-7);
-
-  @media (min-width: breakpoints.$medium) {
-    margin-bottom: var(--space-10);
-  }
-}
-
-.home-page .section-heading__title {
-  font-size: 32px;
-
-  @media (min-width: breakpoints.$medium) {
-    font-size: clamp(30px, 3.4vw, 46px);
-  }
-}
-
 // v1.4 — concise services, consistent spacing and bottom-aligned card actions.
 .about-page
   > :is(
-    .about-career-section,
     .about-experience-section,
     .about-story-section,
-    .about-testimonials-section,
     .about-toolbox-section
   ):nth-of-type(even) {
   background: color-mix(in oklch, var(--portfolio-sand) 25%, var(--background));
@@ -192,7 +162,6 @@
 
 .about-page
   > :is(
-    .about-career-section,
     .about-experience-section,
     .about-story-section,
     .about-testimonials-section,
@@ -209,10 +178,6 @@
     .services-process-section
   ):nth-of-type(even) {
   padding-block: 64px;
-}
-
-.card-action {
-  margin-top: auto;
 }
 
 .linked-card {
@@ -226,7 +191,6 @@
 
 .about-page
   > :is(
-    .about-career-section,
     .about-experience-section,
     .about-story-section,
     .about-testimonials-section,

@@ -8,7 +8,6 @@
   }
 
   :where(
-    .portfolio__button,
     .ui-button,
     .accordion__trigger,
     .portfolio__input,
@@ -91,8 +90,4 @@ body {
     "ss02" on,
     "ss03" on,
     "ss04" on;
-}
-
-:where(.portfolio__button) {
-  cursor: pointer;
 }

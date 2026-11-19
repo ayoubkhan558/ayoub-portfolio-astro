@@ -1,12 +1,14 @@
 ---
-import Heading from "../../portfolio/Heading.astro";
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
-interface Props { study: CaseStudyDetailData }
+interface Props {
+  study: CaseStudyDetailData;
+}
 const { study } = Astro.props;
 ---
 
 <section class="case-study-overview-section">
-  <Heading
+  <SectionHeader
     label="The brief"
     title="Project overview"
     subtitle={study.overview}

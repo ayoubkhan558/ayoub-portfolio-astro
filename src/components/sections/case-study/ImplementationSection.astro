@@ -1,18 +1,16 @@
 ---
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 import Asset from "../../portfolio/Asset.astro";
 import { toolCatalog as tools } from "../../../data/toolCatalog";
 import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
-interface Props { study: CaseStudyDetailData }
+interface Props {
+  study: CaseStudyDetailData;
+}
 const { study } = Astro.props;
 ---
 
 <section class="case-study-implementation-section">
-  <div class="section-heading">
-    <div>
-      <span class="eyebrow">The details</span>
-      <h2 class="section-heading__title">Built for every screen.</h2>
-    </div>
-  </div>
+  <SectionHeader label="The details" title="Built for every screen." />
   <div class="case-study-implementation-section__columns">
     <div class="case-detail__column">
       <h3>Page architecture</h3>

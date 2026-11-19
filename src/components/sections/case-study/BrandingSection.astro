@@ -1,18 +1,19 @@
 ---
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 import Asset from "../../portfolio/Asset.astro";
 import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
-interface Props { study: CaseStudyDetailData }
+interface Props {
+  study: CaseStudyDetailData;
+}
 const { study } = Astro.props;
 ---
 
 <section class="case-study-branding-section">
-  <div class="section-heading">
-    <div>
-      <span class="eyebrow">Visual identity</span>
-      <h2 class="section-heading__title">{study.branding.title}</h2>
-    </div>
-    <p class="section-heading__description">{study.branding.text}</p>
-  </div>
+  <SectionHeader
+    label="Visual identity"
+    title={study.branding.title}
+    subtitle={study.branding.text}
+  />
   <div class="branding-grid">
     <div class="brand-preview">
       {"logoImage" in study.branding && (

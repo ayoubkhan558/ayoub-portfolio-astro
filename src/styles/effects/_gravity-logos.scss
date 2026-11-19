@@ -1,0 +1,65 @@
+.gravity-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  position: relative;
+  min-height: clamp(270px, 34vw, 300px);
+  align-content: end;
+  margin: var(--space-8) 0 0;
+  padding: var(--space-4);
+  overflow: clip;
+  list-style: none;
+
+  @media (prefers-reduced-motion: reduce) {
+    min-height: 0;
+  }
+}
+
+.gravity-logos--running {
+  display: block;
+  height: clamp(270px, 34vw, 300px);
+}
+
+.gravity-logos__piece {
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  // background: linear-gradient(180deg, var(--background), var(--background) 48%, var(--background));
+  background: var(--logo-paper);
+  // background: linear-gradient(180deg, var(--background), var(--muted) 48%, var(--portfolio-sand));
+}
+
+// .gravity-logos__piece:nth-child(3n + 1) {
+//   width: 94px;
+// }
+
+// .gravity-logos__piece:nth-child(3n + 2) {
+//   width: 82px;
+// }
+
+.gravity-logos--running .gravity-logos__piece {
+  position: absolute;
+  inset: 0 auto auto 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.gravity-logos--dragging {
+  cursor: grabbing;
+}
+
+.gravity-logos--dragging .gravity-logos__piece {
+  cursor: grabbing;
+}
+
+.gravity-logos__logo {
+  object-fit: contain;
+  height: 24px;
+  width: fit-content;
+}

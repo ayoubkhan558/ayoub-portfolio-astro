@@ -1,0 +1,24 @@
+---
+const angle = (35 * Math.PI) / 180;
+const streaks = Array.from({ length: 16 }, (_, index) => {
+  const duration = 3 + Math.random() * 5;
+  const edge = Math.random() * 100;
+  const stillDistance = 75 + Math.random() * 500;
+
+  return {
+    "--meteor-left": index < 8 ? `${edge}%` : "0%",
+    "--meteor-top": index < 8 ? "0%" : `${edge}%`,
+    "--meteor-length": `${70 + Math.random() * 110}px`,
+    "--meteor-cycle": `${duration}s`,
+    "--meteor-delay": `${-Math.random() * duration}s`,
+    "--meteor-still-x": `${Math.cos(angle) * stillDistance}px`,
+    "--meteor-still-y": `${Math.sin(angle) * stillDistance}px`,
+  };
+});
+---
+
+<div class="meteors" aria-hidden="true">
+  {streaks.map((style) => (
+    <span class="meteors__streak" style={style}></span>
+  ))}
+</div>

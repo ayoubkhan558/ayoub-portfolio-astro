@@ -24,9 +24,6 @@ body {
   text-decoration: none;
 }
 
-:where(.portfolio__button) {
-  font: inherit;
-}
 
 :where(.portfolio__input) {
   font: inherit;
@@ -40,9 +37,6 @@ body {
   font: inherit;
 }
 
-:where(.portfolio__button) {
-  color: inherit;
-}
 
 :where(.portfolio__image) {
   display: block;

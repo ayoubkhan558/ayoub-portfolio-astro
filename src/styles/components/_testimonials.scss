@@ -150,41 +150,7 @@
   min-width: 0;
 }
 
-.home-page .home-testimonials-section .section-heading {
-  margin-inline: auto;
-  text-align: center;
-}
-
-.home-page .home-testimonials-section .section-heading__title {
-  margin-inline: auto;
-}
-
-.home-page .home-testimonials-section .section-heading__description {
-  margin-inline: auto;
-}
-
-.home-page .home-testimonials-section .section-heading {
-  text-align: left;
-
-  @media (min-width: breakpoints.$medium) {
-    text-align: center;
-  }
-}
-
-// Keep the subtitle with the testimonial heading so it reads as one introduction.
-.home-page .home-testimonials-section .section-heading {
-  display: block;
-  margin-inline: 0;
-  text-align: left;
-
-  .section-heading__title {
-    margin-inline: 0;
-  }
-
-  .section-heading__description {
-    margin-inline: 0;
-  }
-} /* Maintain the same portrait footprint whether the client photo loads or falls back. */
+ /* Maintain the same portrait footprint whether the client photo loads or falls back. */
 .testimonial__avatar {
   position: relative;
   display: grid;

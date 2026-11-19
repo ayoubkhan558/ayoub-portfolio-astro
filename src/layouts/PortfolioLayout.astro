@@ -11,6 +11,7 @@ const {
   description = p.profile.summary,
   image = "/social/ayoub-portfolio-thumbnail.jpg",
   recovery = false,
+  hasFooterCta = false,
 } = Astro.props;
 const fullTitle = `${title} | ${p.profile.name}`;
 const pathname = Astro.url.pathname;
@@ -117,6 +118,6 @@ const schema = {
     <main id="main">
       <slot />
     </main>
-    {!notFound && <><Footer /><BackToTop /><PointerFeedback /></>}
+    {!notFound && <><Footer meteors={!hasFooterCta} /><BackToTop /><PointerFeedback /></>}
   </body>
 </html>

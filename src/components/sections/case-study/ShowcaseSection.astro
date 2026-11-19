@@ -1,39 +1,46 @@
 ---
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 import Asset from "../../portfolio/Asset.astro";
 import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
-interface Props { study: CaseStudyDetailData }
+interface Props {
+  study: CaseStudyDetailData;
+}
 const { pageShowcase } = Astro.props.study;
 ---
 
-{pageShowcase && <section class="case-study-showcase-section">
-  <div class="section-heading">
-    <div>
-      <span class="eyebrow">{pageShowcase.label}</span>
-      <h2 class="section-heading__title">{pageShowcase.title}</h2>
+{pageShowcase && (
+  <section class="case-study-showcase-section">
+    <SectionHeader
+      label={pageShowcase.label}
+      title={pageShowcase.title}
+      subtitle={pageShowcase.text}
+    />
+    <div class="showcase-grid">
+      {pageShowcase.items.map((item) => (
+        <figure class="showcase-grid__figure">
+          <>
+            <a
+              class="screenshot-window"
+              href={item.image}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View full screenshot: ${item.label}`}
+            >
+              <Asset
+                src={item.image}
+                alt={item.label}
+                class="full-page-image"
+              />
+            </a>
+            <figcaption class="showcase-grid__caption">
+              <>
+                <h3 class="showcase-grid__title">{item.label}</h3>
+                <p>{item.caption}</p>
+              </>
+            </figcaption>
+          </>
+        </figure>
+      ))}
     </div>
-    <p class="section-heading__description">{pageShowcase.text}</p>
-  </div>
-  <div class="showcase-grid">
-    {pageShowcase.items.map((item) => (
-      <figure class="showcase-grid__figure">
-        <>
-          <a
-            class="screenshot-window"
-            href={item.image}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View full screenshot: ${item.label}`}
-          >
-            <Asset src={item.image} alt={item.label} class="full-page-image" />
-          </a>
-          <figcaption class="showcase-grid__caption">
-            <>
-              <h3 class="showcase-grid__title">{item.label}</h3>
-              <p>{item.caption}</p>
-            </>
-          </figcaption>
-        </>
-      </figure>
-    ))}
-  </div>
-</section>}
+  </section>
+)}

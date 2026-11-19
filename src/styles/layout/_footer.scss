@@ -207,3 +207,13 @@
 .site-footer__secondary-link:hover {
   color: var(--link-accent);
 }
+
+// Pages without a closing CTA show the shared meteor layer in the footer.
+.site-footer--meteors {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-footer--meteors .meteors {
+  z-index: -1;
+}

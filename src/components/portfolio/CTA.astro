@@ -2,6 +2,7 @@
 import p from "../../data/portfolio.json";
 import { siteSettings } from "../../config/siteSettings";
 import EmojiTrail from "../effects/EmojiTrail.astro";
+import Meteors from "../effects/Meteors.astro";
 import ExternalArrow from "./ExternalArrow.astro";
 const {
   title = "Got a project? Let's talk.",
@@ -16,21 +17,22 @@ const {
   data-emoji-trail={interactive ? siteSettings.ctaTrailMode : undefined}
   data-pointer-feedback={interactive ? true : undefined}
 >
-<div class="container">
+  <Meteors />
+  <div class="container cta-panel__foreground">
+    <span class="eyebrow">Work together</span>
+    <h2 class="cta-panel__title">{title}</h2>
+    <p class="cta-panel__description">{text}</p>
+    <div class="portfolio-cta-section__actions">
+      <a class="button" href="/contact/">
+        {button} <ExternalArrow />
+      </a>
+      <a class="text-link" href={`mailto:${p.profile.email}`}>
+        {p.profile.email}
+      </a>
+    </div>
+    <p class="offer cta-panel__description">{p.offer}</p>
+  </div>
   {interactive && <div class="emoji-trail" aria-hidden="true"></div>}
-  <span class="eyebrow">Work together</span>
-  <h2 class="cta-panel__title">{title}</h2>
-  <p class="cta-panel__description">{text}</p>
-  <div class="portfolio-cta-section__actions">
-    <a class="button" href="/contact/">
-      {button} <ExternalArrow />
-    </a>
-    <a class="text-link" href={`mailto:${p.profile.email}`}>
-      {p.profile.email}
-    </a>
-  </div>
-  <p class="offer cta-panel__description">{p.offer}</p>
-  </div>
 </section>
 
 {interactive && <EmojiTrail />}

@@ -1,4 +1,4 @@
-// The border uses a mask so its gradient never washes over the preview.
+// The border mask leaves the card content clear.
 [data-grid-spotlight] [data-spotlight-card] {
   position: relative;
 }
@@ -13,7 +13,7 @@
     border-radius: inherit;
     background: radial-gradient(
       200px circle at var(--x, 50%) var(--y, 50%),
-      var(--accent),
+      var(--link-accent),
       transparent
     );
     mask:
@@ -33,7 +33,7 @@
     border-radius: inherit;
     background: radial-gradient(
       200px circle at var(--x, 50%) var(--y, 50%),
-      var(--accent),
+      var(--link-accent),
       transparent
     );
     opacity: 0;

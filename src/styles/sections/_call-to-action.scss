@@ -3,12 +3,19 @@
 @use "../foundation/breakpoints";
 
 .cta-panel {
+  position: relative;
+  isolation: isolate;
   text-align: center;
   padding-block: 65px;
 
   @media (min-width: breakpoints.$large) {
     padding-block: 88px;
   }
+}
+
+.cta-panel__foreground {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-panel .cta-panel__title {

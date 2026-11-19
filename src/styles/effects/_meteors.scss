@@ -1,0 +1,66 @@
+// The head starts at the chosen edge; its tail extends back up the flight path.
+.meteors {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: clip;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.meteors__streak {
+  position: absolute;
+  top: var(--meteor-top);
+  left: var(--meteor-left);
+  width: var(--meteor-length);
+  height: 1px;
+  margin-left: calc(-1 * var(--meteor-length));
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 75%));
+  transform-origin: right center;
+  animation: meteor-flight var(--meteor-cycle) linear var(--meteor-delay)
+    infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 0.24;
+    transform: translate(var(--meteor-still-x), var(--meteor-still-y))
+      rotate(35deg);
+    animation: none;
+  }
+}
+
+.meteors__streak::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 7px 2px rgb(255 255 255 / 60%);
+}
+
+@keyframes meteor-flight {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(35deg);
+  }
+
+  5% {
+    opacity: 0.65;
+  }
+
+  30% {
+    opacity: 0.65;
+  }
+
+  40% {
+    opacity: 0;
+    transform: translate(573.4px, 401.5px) rotate(35deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(573.4px, 401.5px) rotate(35deg);
+  }
+}

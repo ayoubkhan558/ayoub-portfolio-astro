@@ -35,6 +35,7 @@
     "embla-carousel-react": "^8.6.0",
     "image-size": "^2.0.4",
     "lucide-react": "^1.59.0",
+    "matter-js": "0.20.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-hook-form": "^7.92.0",
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.11",
     "@axe-core/playwright": "^4.14.0",
+    "@types/matter-js": "0.19.8",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@typescript-eslint/parser": "^8.71.2",
@@ -55,7 +57,7 @@
     "typescript": "^6.0.3"
   },
   "private": true,
-  "description": "Muhammad Ayoub — personal portfolio built with Astro",
+  "description": "Muhammad Ayoub \u2014 personal portfolio built with Astro",
   "overrides": {
     "postcss-selector-parser": "^7.1.6"
   },

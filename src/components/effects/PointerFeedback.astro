@@ -37,7 +37,7 @@ import { Volume2, VolumeX } from "lucide-react";
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   const interactive = "a[href], button:enabled, summary, [role=button]";
   let audio: AudioContext | undefined;
-  let lastPlayed = 0;
+  let lastPlayed = -Infinity;
   let hovered: Element | null = null;
 
   function play(kind: keyof typeof sounds) {
@@ -76,7 +76,10 @@ import { Volume2, VolumeX } from "lucide-react";
       if (!soundOn || !finePointer.matches) return;
       try {
         audio ??= new AudioContext();
-        if (audio.state !== "running") await audio.resume();
+        if (audio.state !== "running") {
+          await audio.resume();
+          clearHover();
+        }
       } catch {}
     }
     syncToggle();
@@ -89,8 +92,30 @@ import { Volume2, VolumeX } from "lucide-react";
       await enableSound();
       play("tap");
     });
-    area?.addEventListener("pointerdown", enableSound);
-    area?.addEventListener("keydown", enableSound);
+    // Browsers require a user gesture before Web Audio can play.
+    document.addEventListener("pointerdown", (event) => {
+      if (
+        area &&
+        event.target instanceof Node &&
+        !control.contains(event.target)
+      ) {
+        void enableSound();
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (
+        area &&
+        !event.repeat &&
+        !event.ctrlKey &&
+        !event.altKey &&
+        !event.metaKey
+      ) {
+        void enableSound();
+      }
+    });
+    window.addEventListener("focus", () => {
+      if (audio) void enableSound();
+    });
   }
 
   area?.addEventListener("pointermove", (event) => {

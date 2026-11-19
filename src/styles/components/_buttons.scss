@@ -1,19 +1,5 @@
 // Portfolio buttons, links and action rows used across pages.
 
-.icon-button {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-  border-radius: 50%;
-  font-size: 23px;
-}
-
-.icon-button:hover {
-  background: var(--muted);
-}
 .button {
   display: inline-flex;
   align-items: center;
@@ -31,20 +17,45 @@
     transform 0.16s,
     background 0.16s;
 }
+
 .button:hover {
   transform: translateY(-2px);
   background: color-mix(in oklch, var(--primary) 85%, var(--foreground) 5%);
 }
+
 .button--small {
   min-height: 40px;
   padding: var(--space-2) 15px;
 }
+
 .button--outline {
   background: linear-gradient(110deg, var(--background), transparent);
   color: var(--foreground);
   border-color: var(--border);
   box-shadow: 0 2px 3px var(--button-shadow-ink);
 }
+
+.button--outline:hover {
+  transform: translateY(-2px);
+  // background: color-mix(in oklch, var(--primary) 45%, var(--foreground) 25%);
+  background: linear-gradient(110deg, var(--background), transparent);
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+.icon-button:hover {
+  background: var(--muted);
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -53,6 +64,7 @@
   font-size: var(--text-small);
   overflow-wrap: anywhere;
 }
+
 .text-link:hover {
   text-decoration: underline;
   text-underline-offset: 4px;

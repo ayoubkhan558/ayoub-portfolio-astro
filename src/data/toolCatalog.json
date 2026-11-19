@@ -254,11 +254,6 @@
     "logo": "/tools/happyfiles-logo.svg",
     "description": "WordPress media organization for cleaner file management workflows."
   },
-  "happyfiles-pro": {
-    "name": "HappyFiles Pro",
-    "logo": "/tools/happyfiles-logo.svg",
-    "description": "Advanced WordPress media organization for large content libraries."
-  },
   "wpc-admin-columns": {
     "name": "Admin Columns",
     "logo": null,

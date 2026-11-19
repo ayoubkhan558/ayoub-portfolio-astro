@@ -1,21 +1,23 @@
 ---
-import Heading from "../../portfolio/Heading.astro";
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="about-career-section">
-  <Heading
-    label={p.about.careerStartLabel}
-    title="How my work has changed"
-  />
-  <div class="timeline">
-    {p.about.careerPath.map((c) => (
-      <article class="timeline__item">
-        <span class="eyebrow">{c.year}</span>
-        <h3 class="timeline__title">{c.title}</h3>
-        <p class="timeline__description">{c.description}</p>
-        <span class="tag">{c.technologies}</span>
-      </article>
-    ))}
+<section class="portfolio-background">
+  <div class="about-career-section">
+    <SectionHeader
+      label={p.about.careerStartLabel}
+      title="How my work has changed"
+    />
+    <div class="timeline">
+      {p.about.careerPath.map((c) => (
+        <article class="timeline__item">
+          <span class="eyebrow">{c.year}</span>
+          <h3 class="timeline__title">{c.title}</h3>
+          <p class="timeline__description">{c.description}</p>
+          <span class="tag">{c.technologies}</span>
+        </article>
+      ))}
+    </div>
   </div>
 </section>

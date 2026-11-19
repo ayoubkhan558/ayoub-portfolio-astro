@@ -1,13 +1,13 @@
 ---
 import p from "../../../data/portfolio.json";
 import Asset from "../../portfolio/Asset.astro";
-import Heading from "../../portfolio/Heading.astro";
+import SectionHeader from "../../portfolio/SectionHeader.astro";
 ---
 
 <section class="home-about-section" id="about">
   <div class="home-about">
     <div>
-      <Heading
+      <SectionHeader
         label="About me"
         title="About Ayoub"
         subtitle={p.about.homeIntro}

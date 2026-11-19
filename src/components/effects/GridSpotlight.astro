@@ -5,11 +5,13 @@
   for (const grid of document.querySelectorAll<HTMLElement>(
     "[data-grid-spotlight]",
   )) {
+    const cards = [
+      ...grid.querySelectorAll<HTMLElement>("[data-spotlight-card]"),
+    ];
     grid.addEventListener(
       "pointermove",
       (event) => {
         if (!motion.matches || event.pointerType === "touch") return;
-        const cards = [...grid.querySelectorAll<HTMLElement>("[data-spotlight-card]")];
         const bounds = cards.map((card) => card.getBoundingClientRect());
         cards.forEach((card, index) => {
           card.style.setProperty(

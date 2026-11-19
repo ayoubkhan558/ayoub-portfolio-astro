@@ -1,7 +1,9 @@
 ---
 import PageSpeedReport from "../../portfolio/PageSpeedReport.astro";
 import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
-interface Props { study: CaseStudyDetailData }
+interface Props {
+  study: CaseStudyDetailData;
+}
 const { study } = Astro.props;
 ---
 
