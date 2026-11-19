@@ -34,3 +34,20 @@ Native body, heading, paragraph, and link defaults live in the foundation. Compo
 | `sections/home-panels` | Homepage About, resources and section alignment. |
 | `sections/project-archive` | Projects archive filters, results and project cards. |
 | `sections/selected-work` | Homepage Selected Work project list and its compact preview cards. |
+
+## Opt-in effects
+
+Load the corresponding component from `src/components/effects` in the owning section. Mark only the intended target or area. CSS for these effects is in `effects/`.
+
+| Marker or class | Current use |
+| --- | --- |
+| `data-emoji-trail` with an aria-hidden `.emoji-trail` layer | Homepage CTA, configured by `PUBLIC_CTA_TRAIL_MODE` in the environment or `src/config/siteSettings.ts` |
+| `<NameSparkles>` with its `data-name-sparkles` marker | Name in the About page heading |
+| `data-card-tilt` | Homepage Solutions cards |
+| `data-glare-sweep` | My Toolbox group cards only |
+| `.flood-fill-button` | Top navigation CTA |
+| `data-grid-spotlight` | My Toolbox group grid |
+| `data-skill-burst` | Muhammad Ayoub profile card in the homepage hero |
+| `data-logo-reveal` | Homepage client logos |
+| `data-project-reveal` | Homepage Selected Work and Case Studies images |
+| `data-hero-image-reveal` and `data-hero-title-reveal` | Homepage hero portrait and heading |

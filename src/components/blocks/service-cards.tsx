@@ -19,7 +19,7 @@ export function ServiceCards({
   idPrefix = "services",
   compact = false,
 }: {
-  services: typeof portfolio.services;
+  services: Pick<(typeof portfolio.services)[number], "level" | "slug" | "name" | "description" | "price" | "period" | "timeline" | "featured">[];
   idPrefix?: string;
   compact?: boolean;
 }) {
@@ -30,7 +30,7 @@ export function ServiceCards({
         {services.map((service, i) => {
           const Icon = icons[i % icons.length];
           return (
-            <article className="compact-solution" key={service.level}>
+            <article className="compact-solution" data-card-tilt key={service.level}>
               <div className="compact-solution-top">
                 <Icon size={22} aria-hidden="true" />
                 <span className="eyebrow">
@@ -42,7 +42,7 @@ export function ServiceCards({
               <p className="compact-solution__description"><strong>Pricing:</strong> {service.price}{service.period}</p>
               <a
                 className="text-link card-action"
-                href={`/services/#services-${i}`}
+                href={`/services/${service.slug}/`}
               >
                 View service details <ArrowUpRight className="button__icon" aria-hidden="true" size={16} />
               </a>
@@ -81,7 +81,7 @@ export function ServiceCards({
                 {s.price}
                 {s.period && <small className="service-price__note portfolio__note">{s.period}</small>}
               </div>
-              <p className="small-note service-card__description service-inner__description">{s.timeline}</p>
+              {s.timeline && <p className="small-note service-card__description service-inner__description">{s.timeline}</p>}
             </div>
             <div className="service-card__inclusions">
               <strong>What’s included</strong>
@@ -92,9 +92,9 @@ export function ServiceCards({
               className="button card-action"
             >
               <a
-                href={s.href.includes("subject=") ? s.href : `${s.href}${s.href.includes("?") ? "&" : "?"}subject=${encodeURIComponent(s.name)}`}
+                href={`/services/${s.slug}/`}
               >
-                {s.cta}
+                View service details
                 <ArrowUpRight className="button__icon" aria-hidden="true" />
               </a>
             </Button>

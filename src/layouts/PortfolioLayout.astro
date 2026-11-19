@@ -4,8 +4,8 @@ import "../styles/portfolio.scss";
 import Footer from "../components/portfolio/Footer.astro";
 import Header from "../components/portfolio/Header.astro";
 import p from "../data/portfolio.json";
+import PointerFeedback from "../components/effects/PointerFeedback.astro";
 import BackToTop from "../components/portfolio/BackToTop.astro";
-import PointerFeedback from "../components/portfolio/PointerFeedback.astro";
 const {
   title = p.profile.role,
   description = p.profile.summary,
@@ -117,6 +117,6 @@ const schema = {
     <main id="main">
       <slot />
     </main>
-    {!notFound && <><PointerFeedback /><Footer /><BackToTop /></>}
+    {!notFound && <><Footer /><BackToTop /><PointerFeedback /></>}
   </body>
 </html>

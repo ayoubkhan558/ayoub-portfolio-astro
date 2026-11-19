@@ -1,0 +1,18 @@
+[data-logo-reveal] .logo-strip__link {
+  position: relative;
+}
+
+.logo-strip__canvas {
+  position: absolute;
+  pointer-events: none;
+}
+
+.logo-strip__link--revealing .client-logo {
+  visibility: hidden;
+}
+
+.logo-strip__link--pending .client-logo {
+  @media (prefers-reduced-motion: no-preference) {
+    visibility: hidden;
+  }
+}

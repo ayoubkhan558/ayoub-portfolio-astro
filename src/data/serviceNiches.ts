@@ -4,6 +4,7 @@ export type ServiceNiche = {
   h1: string;
   description: string;
   label: string;
+  price?: string;
   highlights: Array<{ label: string; value: string }>;
   sections: Array<{ title: string; paragraphs: string[]; bullets?: string[] }>;
   relatedCases: Array<{ href: string; label: string }>;

@@ -1,0 +1,154 @@
+<script>
+  const motion = matchMedia(
+    "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+  );
+  const cards = "[data-card-tilt]";
+
+  interface Tilt {
+    card: HTMLElement;
+    wrapper: HTMLElement;
+    rect: DOMRect;
+    x: number;
+    y: number;
+    velocityX: number;
+    velocityY: number;
+    targetX: number;
+    targetY: number;
+  }
+
+  const moving = new Map<HTMLElement, Tilt>();
+  let hovered: Tilt | undefined;
+  let frame = 0;
+  let previousTime = 0;
+
+  function flatten(tilt: Tilt) {
+    tilt.card.classList.remove("card-tilt--active");
+    for (const property of ["x", "y", "glare-x", "glare-y"]) {
+      tilt.card.style.removeProperty(`--card-tilt-${property}`);
+    }
+    moving.delete(tilt.card);
+    if (![...moving.values()].some((other) => other.wrapper === tilt.wrapper)) {
+      tilt.wrapper.classList.remove("card-tilt__perspective");
+      tilt.wrapper.style.removeProperty("--card-tilt-origin");
+    }
+  }
+
+  function draw(time: number) {
+    // Small integration steps keep the 200/20 spring stable across refresh rates.
+    const elapsed = Math.min((time - previousTime) / 1000, 0.04);
+    const steps = Math.max(1, Math.ceil(elapsed / 0.008));
+    const dt = elapsed / steps;
+    previousTime = time;
+    let animating = false;
+    for (const tilt of moving.values()) {
+      for (let i = 0; i < steps; i++) {
+        tilt.velocityX +=
+          (200 * (tilt.targetX - tilt.x) - 20 * tilt.velocityX) * dt;
+        tilt.velocityY +=
+          (200 * (tilt.targetY - tilt.y) - 20 * tilt.velocityY) * dt;
+        tilt.x += tilt.velocityX * dt;
+        tilt.y += tilt.velocityY * dt;
+      }
+
+      const settled =
+        Math.abs(tilt.x - tilt.targetX) + Math.abs(tilt.y - tilt.targetY) <
+          0.025 && Math.abs(tilt.velocityX) + Math.abs(tilt.velocityY) < 0.1;
+      if (settled && tilt !== hovered) {
+        flatten(tilt);
+        continue;
+      }
+      animating ||= !settled;
+      tilt.card.style.setProperty(
+        "--card-tilt-x",
+        `${clamp(tilt.x / 12) * 12}deg`,
+      );
+      tilt.card.style.setProperty(
+        "--card-tilt-y",
+        `${clamp(tilt.y / 12) * 12}deg`,
+      );
+    }
+
+    frame = animating ? requestAnimationFrame(draw) : 0;
+  }
+
+  function render() {
+    if (frame) return;
+    previousTime = performance.now();
+    frame = requestAnimationFrame(draw);
+  }
+
+  function leave() {
+    if (!hovered) return;
+    hovered.targetX = hovered.targetY = 0;
+    hovered.card.classList.remove("card-tilt--glare");
+    hovered = undefined;
+    render();
+  }
+
+  function clamp(value: number) {
+    return Math.max(-1, Math.min(1, value));
+  }
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      if (
+        !motion.matches ||
+        event.pointerType !== "mouse" ||
+        !(event.target instanceof Element)
+      )
+        return;
+      const card = event.target.closest<HTMLElement>(cards);
+      if (card !== hovered?.card) {
+        leave();
+        const wrapper = card?.parentElement;
+        if (!card || !wrapper) return;
+
+        const rect = moving.get(card)?.rect ?? card.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+        const bounds = wrapper.getBoundingClientRect();
+        wrapper.style.setProperty(
+          "--card-tilt-origin",
+          `${rect.left - bounds.left + rect.width / 2}px ${rect.top - bounds.top + rect.height / 2}px`,
+        );
+        wrapper.classList.add("card-tilt__perspective");
+        card.classList.add("card-tilt--active", "card-tilt--glare");
+        hovered = moving.get(card) ?? {
+          card,
+          wrapper,
+          rect,
+          x: 0,
+          y: 0,
+          velocityX: 0,
+          velocityY: 0,
+          targetX: 0,
+          targetY: 0,
+        };
+        moving.set(card, hovered);
+      }
+      if (!hovered) return;
+
+      const { rect } = hovered;
+      const x = clamp(((event.clientX - rect.left) / rect.width) * 2 - 1);
+      const y = clamp(((event.clientY - rect.top) / rect.height) * 2 - 1);
+      hovered.targetX = y * 12;
+      hovered.targetY = -x * 12;
+      hovered.card.style.setProperty("--card-tilt-glare-x", `${(x + 1) * 50}%`);
+      hovered.card.style.setProperty("--card-tilt-glare-y", `${(y + 1) * 50}%`);
+      render();
+    },
+    { passive: true },
+  );
+
+  document.documentElement.addEventListener("pointerleave", leave);
+  window.addEventListener("scroll", leave, { capture: true, passive: true });
+  window.addEventListener("resize", leave);
+  motion.addEventListener("change", () => {
+    if (motion.matches) return;
+    hovered?.card.classList.remove("card-tilt--glare");
+    hovered = undefined;
+    cancelAnimationFrame(frame);
+    frame = 0;
+    for (const tilt of moving.values()) flatten(tilt);
+  });
+</script>

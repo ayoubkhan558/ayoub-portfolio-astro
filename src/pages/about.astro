@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/PortfolioLayout.astro";
+import NameSparkles from "../components/effects/NameSparkles.astro";
 import Intro from "../components/portfolio/Intro.astro";
 import Asset from "../components/portfolio/Asset.astro";
 import CTA from "../components/portfolio/CTA.astro";
@@ -15,11 +16,9 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
 <Layout title="About">
   <div class="about-page">
     <div class="portfolio-background">
-      <Intro
-        label="A little about me"
-        title={p.profile.name}
-        description={p.profile.role}
-      />
+      <Intro label="A little about me" description={p.profile.role}>
+        <NameSparkles slot="title">{p.profile.name}</NameSparkles>
+      </Intro>
       <div class="about-hero">
         <Asset
           src="/ayoub-about-v4.jpg"

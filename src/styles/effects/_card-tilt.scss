@@ -1,0 +1,38 @@
+// Cards use their existing parent for perspective, keeping grid and carousel markup intact.
+.card-tilt__perspective {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    perspective: 800px;
+    perspective-origin: var(--card-tilt-origin, center);
+  }
+}
+
+.card-tilt--active {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    position: relative;
+    transform: rotateX(var(--card-tilt-x, 0deg))
+      rotateY(var(--card-tilt-y, 0deg));
+  }
+}
+
+.card-tilt--active::before {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at var(--card-tilt-glare-x, 50%) var(--card-tilt-glare-y, 50%),
+      white,
+      transparent 70%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease-out;
+  }
+}
+
+.card-tilt--glare::before {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    opacity: 0.3;
+  }
+}

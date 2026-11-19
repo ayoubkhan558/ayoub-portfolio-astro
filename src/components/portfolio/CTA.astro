@@ -1,14 +1,23 @@
 ---
 import p from "../../data/portfolio.json";
+import { siteSettings } from "../../config/siteSettings";
+import EmojiTrail from "../effects/EmojiTrail.astro";
 import ExternalArrow from "./ExternalArrow.astro";
 const {
   title = "Got a project? Let's talk.",
   text = "Tell me what you're building.",
   button = p.hero.primaryCta,
+  interactive = false,
 } = Astro.props;
 ---
 
-<section class="portfolio-cta-section cta-panel">
+<section
+  class="portfolio-cta-section cta-panel"
+  data-emoji-trail={interactive ? siteSettings.ctaTrailMode : undefined}
+  data-pointer-feedback={interactive ? true : undefined}
+>
+<div class="container">
+  {interactive && <div class="emoji-trail" aria-hidden="true"></div>}
   <span class="eyebrow">Work together</span>
   <h2 class="cta-panel__title">{title}</h2>
   <p class="cta-panel__description">{text}</p>
@@ -21,4 +30,7 @@ const {
     </a>
   </div>
   <p class="offer cta-panel__description">{p.offer}</p>
+  </div>
 </section>
+
+{interactive && <EmojiTrail />}

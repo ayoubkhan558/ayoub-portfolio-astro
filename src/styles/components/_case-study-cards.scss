@@ -81,6 +81,8 @@
   font-weight: 500;
 }
 
+
+// TAGS
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -139,16 +141,6 @@
   gap: var(--space-8);
 }
 
-.services-niches-section__cards {
-  display: grid;
-  gap: var(--space-8);
-}
-
-.services-working-together-section__cards {
-  display: grid;
-  gap: var(--space-8);
-}
-
 .about-story-section__columns {
   gap: var(--space-7);
   grid-template-columns: 1fr;
@@ -213,30 +205,6 @@
 }
 
 .service-detail__cards {
-  grid-template-columns: 1fr;
-
-  @media (min-width: breakpoints.$small) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (min-width: breakpoints.$wide) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.services-niches-section__cards {
-  grid-template-columns: 1fr;
-
-  @media (min-width: breakpoints.$small) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (min-width: breakpoints.$wide) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.services-working-together-section__cards {
   grid-template-columns: 1fr;
 
   @media (min-width: breakpoints.$small) {

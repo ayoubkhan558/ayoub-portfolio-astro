@@ -1,10 +1,13 @@
 ---
+import LogoReveal from "../../effects/LogoReveal.astro";
 import Logos from "../../portfolio/Logos.astro";
 ---
 
-<section class="home-trust-section logo-section" id="trust">
+<section class="home-trust-section logo-section" id="trust" data-logo-reveal>
   <div class="dashed-label">
     <span class="dashed-label__label">Clients I’ve worked with</span>
   </div>
   <Logos />
 </section>
+
+<LogoReveal />

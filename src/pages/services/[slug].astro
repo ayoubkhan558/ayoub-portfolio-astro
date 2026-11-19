@@ -2,11 +2,11 @@
 import CTA from "../../components/portfolio/CTA.astro";
 import Intro from "../../components/portfolio/Intro.astro";
 import ServiceDetailSection from "../../components/sections/services/ServiceDetailSection.astro";
-import { serviceNiches } from "../../data/serviceNiches";
+import { serviceDetails } from "../../data/serviceCatalog";
 import Layout from "../../layouts/PortfolioLayout.astro";
 import ExternalArrow from "../../components/portfolio/ExternalArrow.astro";
 export function getStaticPaths() {
-  return serviceNiches.map((service) => ({
+  return serviceDetails.map((service) => ({
     params: { slug: service.slug },
     props: { service },
   }));
@@ -25,7 +25,7 @@ const { service: s } = Astro.props;
           </div>
           <div>
             <dt class="service-summary__term">Pricing</dt>
-            <dd class="service-summary__value">Custom quote</dd>
+            <dd class="service-summary__value">{s.price ?? "Custom quote"}</dd>
           </div>
           <div>
             <dt class="service-summary__term">Next step</dt>

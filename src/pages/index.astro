@@ -1,4 +1,6 @@
 ---
+import SkillBurst from "../components/effects/SkillBurst.astro";
+import ProjectReveal from "../components/effects/ProjectReveal.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 import p from "../data/portfolio.json";
 import { Hero } from "../components/blocks/hero";
@@ -25,17 +27,25 @@ import FAQSection from "../components/sections/home/FAQSection.astro";
     <ProblemsSection />
     <ProjectsSection />
     <CaseStudiesSection />
-    <Background variant="bottom" className="portfolio-background portfolio-background--bottom">
+    <Background
+      variant="bottom"
+      className="portfolio-background portfolio-background--bottom"
+    >
       <ServicesSection />
     </Background>
     <ResourceSection />
     <TestimonialsSection />
     <AboutSection />
     <FAQSection />
-    <Background variant="bottom" className="portfolio-background portfolio-background--bottom">
-      <div id="cta">
-        <CTA />
+    <Background
+      variant="bottom"
+      className="portfolio-background portfolio-background--bottom"
+    >
+      <div id="cta" class="home-page__footer-cta">
+        <CTA interactive />
       </div>
     </Background>
   </div>
+  <ProjectReveal />
+  <SkillBurst />
 </Layout>

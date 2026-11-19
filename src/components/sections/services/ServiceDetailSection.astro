@@ -21,6 +21,7 @@ const { service } = Astro.props;
       )}
     </article>
   ))}
+  {service.relatedCases.length > 0 && <>
   <h2 class="service-detail-content-section__subheading">Related case studies</h2>
   <div class="link-list">
     {service.relatedCases.map((c) => (
@@ -29,4 +30,5 @@ const { service } = Astro.props;
       </a>
     ))}
   </div>
+  </>}
 </section>

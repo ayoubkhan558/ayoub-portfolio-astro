@@ -2,15 +2,31 @@
 import { Volume2, VolumeX } from "lucide-react";
 ---
 
-<button type="button" class="pointer-feedback__toggle portfolio__button" aria-label="Hover sound" aria-pressed="true" title="Mute hover sound" hidden>
-  <Volume2 className="pointer-feedback__icon--on" size={20} aria-hidden="true" />
-  <VolumeX className="pointer-feedback__icon--off" size={20} aria-hidden="true" />
+<button
+  type="button"
+  class="pointer-feedback__toggle portfolio__button"
+  aria-label="Hover sound"
+  aria-pressed="true"
+  title="Mute hover sound"
+  hidden
+>
+  <Volume2
+    className="pointer-feedback__icon--on"
+    size={20}
+    aria-hidden="true"
+  />
+  <VolumeX
+    className="pointer-feedback__icon--off"
+    size={20}
+    aria-hidden="true"
+  />
 </button>
-<span class="pointer-feedback__halo" aria-hidden="true" hidden></span>
 <script>
-  const control = document.querySelector<HTMLButtonElement>(".pointer-feedback__toggle");
+  const control = document.querySelector<HTMLButtonElement>(
+    ".pointer-feedback__toggle",
+  );
+  const area = document.querySelector("[data-pointer-feedback]");
   let soundOn = true;
-  const halo = document.querySelector<HTMLElement>(".pointer-feedback__halo");
   const sounds = {
     tick: { from: 850, to: 640, length: 0.045, type: "sine" },
     tap: { from: 280, to: 130, length: 0.065, type: "triangle" },
@@ -23,7 +39,6 @@ import { Volume2, VolumeX } from "lucide-react";
   let audio: AudioContext | undefined;
   let lastPlayed = 0;
   let hovered: Element | null = null;
-  let frame = 0;
 
   function play(kind: keyof typeof sounds) {
     const sound = sounds[kind];
@@ -35,7 +50,10 @@ import { Volume2, VolumeX } from "lucide-react";
     const gain = audio.createGain();
     oscillator.type = sound.type;
     oscillator.frequency.setValueAtTime(sound.from, start);
-    oscillator.frequency.exponentialRampToValueAtTime(sound.to, start + sound.length);
+    oscillator.frequency.exponentialRampToValueAtTime(
+      sound.to,
+      start + sound.length,
+    );
     gain.gain.setValueAtTime(0.001, start);
     gain.gain.exponentialRampToValueAtTime(0.045, start + 0.008);
     gain.gain.exponentialRampToValueAtTime(0.001, start + sound.length);
@@ -46,7 +64,9 @@ import { Volume2, VolumeX } from "lucide-react";
 
   if (control && window.AudioContext) {
     control.hidden = false;
-    try { soundOn = localStorage.getItem("portfolio-hover-sound") !== "off"; } catch {}
+    try {
+      soundOn = localStorage.getItem("portfolio-hover-sound") !== "off";
+    } catch {}
     function syncToggle() {
       if (!control) return;
       control.title = soundOn ? "Mute hover sound" : "Enable hover sound";
@@ -63,38 +83,45 @@ import { Volume2, VolumeX } from "lucide-react";
     control.addEventListener("click", async () => {
       soundOn = !soundOn;
       syncToggle();
-      try { localStorage.setItem("portfolio-hover-sound", soundOn ? "on" : "off"); } catch {}
+      try {
+        localStorage.setItem("portfolio-hover-sound", soundOn ? "on" : "off");
+      } catch {}
       await enableSound();
       play("tap");
     });
-    document.addEventListener("pointerdown", enableSound);
-    document.addEventListener("keydown", enableSound);
+    area?.addEventListener("pointerdown", enableSound);
+    area?.addEventListener("keydown", enableSound);
   }
 
-  document.addEventListener("pointermove", (event) => {
+  area?.addEventListener("pointermove", (event) => {
+    if (!(event instanceof PointerEvent)) return;
     const element = event.target instanceof Element ? event.target : null;
     const controlTarget = element?.closest(interactive);
-    const card = element?.closest(".selected-card, .case-card__link, .project-card, .testimonial-card, .review-journal__entry");
-    const target = (element?.closest("dialog") ? controlTarget : card ?? controlTarget) ?? null;
-    const next = finePointer.matches && event.pointerType === "mouse" ? target : null;
+    const card = element?.closest(
+      ".selected-card, .case-card__link, .project-card, .testimonial-card, .review-journal__entry",
+    );
+    const target =
+      (element?.closest("dialog") ? controlTarget : (card ?? controlTarget)) ??
+      null;
+    const next =
+      finePointer.matches && event.pointerType === "mouse" ? target : null;
     if (next && next !== hovered) {
-      play(next === card ? "pop" : next.matches("summary, [data-slot^=carousel-]") ? "chime" : next.matches("button, .button, [role=button]") ? "tap" : "tick");
+      play(
+        next === card
+          ? "pop"
+          : next.matches("summary, [data-slot^=carousel-]")
+            ? "chime"
+            : next.matches("button, .button, [role=button]")
+              ? "tap"
+              : "tick",
+      );
     }
     hovered = next;
-    if (!halo) return;
-    cancelAnimationFrame(frame);
-    halo.hidden = !next || reducedMotion.matches;
-    if (!halo.hidden) {
-      frame = requestAnimationFrame(() => {
-        halo.style.translate = `${event.clientX}px ${event.clientY}px`;
-      });
-    }
   });
   function clearHover() {
     hovered = null;
-    if (halo) halo.hidden = true;
   }
-  document.documentElement.addEventListener("pointerleave", clearHover);
+  area?.addEventListener("pointerleave", clearHover);
   window.addEventListener("blur", clearHover);
   reducedMotion.addEventListener("change", clearHover);
   finePointer.addEventListener("change", clearHover);

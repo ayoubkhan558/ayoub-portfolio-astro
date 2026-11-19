@@ -166,6 +166,7 @@
   "services": [
     {
       "level": "SOLUTION_01",
+      "slug": "custom-web-app",
       "name": "Custom Web App",
       "price": "Starting from $2,000",
       "period": "",
@@ -185,6 +186,7 @@
     },
     {
       "level": "SOLUTION_02",
+      "slug": "ai-features-automation",
       "name": "AI Features & Automation",
       "price": "Custom quote",
       "period": "",
@@ -203,6 +205,7 @@
     },
     {
       "level": "SOLUTION_03",
+      "slug": "website-redesign",
       "name": "Website Redesign",
       "price": "Starting from $1,000",
       "period": "",
@@ -222,6 +225,7 @@
     },
     {
       "level": "SOLUTION_04",
+      "slug": "speed-optimization",
       "name": "Speed Optimization",
       "price": "Starting from $400",
       "period": "",
@@ -241,6 +245,7 @@
     },
     {
       "level": "SOLUTION_05",
+      "slug": "e-commerce-setup",
       "name": "E-Commerce Setup",
       "price": "Starting from $900",
       "period": "",
@@ -260,6 +265,7 @@
     },
     {
       "level": "SOLUTION_06",
+      "slug": "ongoing-support",
       "name": "Ongoing Support",
       "price": "Starting from $300/mo",
       "period": "",

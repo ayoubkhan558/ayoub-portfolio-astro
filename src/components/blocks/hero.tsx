@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, MapPin } from "lucide-react";
 
 import { PortfolioImage } from "@/components/portfolio/PortfolioImage";
 import { Button } from "@/components/ui/button";
@@ -24,7 +24,7 @@ export function Hero({
             <i className="availability__dot" aria-hidden="true" />
             {data.profile.availability}
           </span>
-          <h1 className="hero__title" id="hero-heading">
+          <h1 className="hero__title" data-hero-title-reveal id="hero-heading">
             {data.hero.headlineLineOne} {data.hero.headlineLineTwo}
           </h1>
           <p className="lead">{data.hero.subheadline}</p>
@@ -35,7 +35,11 @@ export function Hero({
                 <ArrowUpRight className="button__icon" aria-hidden="true" />
               </a>
             </Button>
-            <Button asChild variant="outline" className="button button--outline">
+            <Button
+              asChild
+              variant="outline"
+              className="button button--outline"
+            >
               <a href="/case-studies/">
                 {data.hero.secondaryCta}
                 <ArrowRight aria-hidden="true" />
@@ -44,15 +48,25 @@ export function Hero({
           </div>
           <div className="hero-badges">
             {data.hero.badges.map((b) => (
-              <span key={b.label}>{b.label}</span>
+              <span className="hero-badges__item" key={b.label}>
+                {b.label === "Top Rated on Upwork" && (
+                  <BadgeCheck size={16} aria-hidden="true" />
+                )}
+                {b.label}
+              </span>
             ))}
-            <span>{data.profile.location}</span>
+            <span className="hero-badges__item">
+              <MapPin size={16} aria-hidden="true" />
+              {data.profile.location}
+            </span>
           </div>
         </div>
         <aside
           className="hero-right hero-profile"
+          data-skill-burst
           aria-label="About your developer"
         >
+          <span className="border-beam" aria-hidden="true" />
           <div className="hero-profile-top">
             <span className="eyebrow">Independent web developer</span>
             <span className="profile-status">
@@ -65,15 +79,20 @@ export function Hero({
               src="/ayoub-about-v4.jpg"
               alt={data.profile.name}
               className="hero-profile-photo"
+              data-hero-image-reveal
               eager
             />
             <div>
               <span className="eyebrow">Build. Improve. Grow.</span>
-              <h2 className="hero-profile-identity__title">{data.profile.name}</h2>
+              <h2 className="hero-profile-identity__title">
+                {data.profile.name}
+              </h2>
               <p className="hero-profile-role hero-profile-identity__description">
                 Web Developer & SEO Specialist
               </p>
-              <p className="hero-profile-identity__description">{data.profile.location}</p>
+              <p className="hero-profile-identity__description">
+                {data.profile.location}
+              </p>
             </div>
           </div>
           <div className="hero-capabilities">
@@ -86,7 +105,9 @@ export function Hero({
               <div className="hero-profile__metric" key={m.label}>
                 <strong className="hero-profile-metrics__value">
                   {m.value}
-                  <small className="hero-profile-metrics__note portfolio__note">{m.unit}</small>
+                  <small className="hero-profile-metrics__note portfolio__note">
+                    {m.unit}
+                  </small>
                 </strong>
                 <span className="hero-profile-metrics__label">{m.label}</span>
               </div>
@@ -104,7 +125,9 @@ export function Hero({
       <div className="hero-showcase" hidden>
         <div className="browser-bar" aria-hidden="true">
           <span className="browser-dots browser-bar__label">● ● ●</span>
-          <span className="browser-bar__label">Selected work · built with care</span>
+          <span className="browser-bar__label">
+            Selected work · built with care
+          </span>
           <span className="browser-bar__label">{data.profile.brand}</span>
         </div>
         <a
@@ -121,11 +144,17 @@ export function Hero({
         <div className="showcase-caption">
           <div>
             <span className="eyebrow">Featured project / 01</span>
-            <strong className="showcase-caption__value">{featured.client}</strong>
+            <strong className="showcase-caption__value">
+              {featured.client}
+            </strong>
           </div>
           <a href={featured.listing.href} className="text-link">
             Explore the case study
-            <ArrowUpRight className="button__icon" aria-hidden="true" size={16} />
+            <ArrowUpRight
+              className="button__icon"
+              aria-hidden="true"
+              size={16}
+            />
           </a>
         </div>
       </div>

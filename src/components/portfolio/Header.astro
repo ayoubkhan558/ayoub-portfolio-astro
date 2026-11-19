@@ -30,8 +30,9 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   </nav>
   <div class="site-header__actions">
     <ThemeToggle />
-    <a class="button button--small site-header__cta" href="/contact/">
-      Let's talk <ExternalArrow />
+    <a class="flood-fill-button site-header__cta" href="/contact/">
+      <span class="flood-fill-button__label">Start building</span>
+      <span class="flood-fill-button__arrow" aria-hidden="true"><ExternalArrow /></span>
     </a>
     <details class="site-header__menu" id="menu-details">
       <summary

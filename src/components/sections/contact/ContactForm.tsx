@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import { shakeInvalidFields, stopFieldShake } from "../../effects/fieldShake";
+
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ArrowUpRight } from "lucide-react";
 import { useForm, type FieldPath } from "react-hook-form";
@@ -44,6 +46,7 @@ export default function ContactForm({
   const [status, setStatus] = useState<{ message: string; error: boolean } | null>(null);
   const {
     register,
+    clearErrors,
     handleSubmit,
     reset,
     setError,
@@ -51,6 +54,7 @@ export default function ContactForm({
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({
     resolver: yupResolver(contactFormSchema),
+    reValidateMode: "onSubmit",
     defaultValues: {
       name: "",
       email: "",
@@ -90,14 +94,17 @@ export default function ContactForm({
       };
 
       if (!response.ok || payload.ok === false) {
+        const invalidFields: string[] = [];
         for (const item of payload.errors ?? []) {
           if (item.field && isContactField(item.field)) {
+            invalidFields.push(item.field);
             setError(item.field, {
               type: "server",
               message: item.message || "Please check this field.",
             });
           }
         }
+        shakeInvalidFields(form, invalidFields);
         throw new Error(
           payload.errors?.map((item) => item.message).filter(Boolean).join(" ") ||
             "Please try again or use the direct email link above.",
@@ -158,7 +165,21 @@ export default function ContactForm({
       action={action}
       onSubmit={(event) => {
         formRef.current?.setAttribute("novalidate", "");
-        void handleSubmit(submitForm)(event);
+        void handleSubmit(submitForm, (invalid) => {
+          setStatus(null);
+          shakeInvalidFields(formRef.current, Object.keys(invalid));
+        })(event);
+      }}
+      onChange={(event) => {
+        const field = event.target;
+        if (
+          (field instanceof HTMLInputElement || field instanceof HTMLSelectElement ||
+            field instanceof HTMLTextAreaElement) &&
+          isContactField(field.name)
+        ) {
+          clearErrors(field.name);
+          stopFieldShake(field);
+        }
       }}
       aria-busy={isSubmitting}
     >
@@ -232,17 +253,25 @@ export default function ContactForm({
       <div className="form-grid contact-form__additional-fields">
         <label className="form-field">
           Budget range
-          <select className="contact-form__select portfolio__select" {...register("budgetRange")}>
+          <select className="contact-form__select portfolio__select" {...register("budgetRange")}
+            aria-invalid={Boolean(errors.budgetRange)}
+            aria-describedby={errors.budgetRange ? "error-budgetRange" : undefined}
+          >
             <option value="">Choose one</option>
             {budgets.map((budget) => <option key={budget}>{budget}</option>)}
           </select>
+          {showFieldError("budgetRange", errors.budgetRange?.message)}
         </label>
         <label className="form-field">
           Timeline
-          <select className="contact-form__select portfolio__select" {...register("timeline")}>
+          <select className="contact-form__select portfolio__select" {...register("timeline")}
+            aria-invalid={Boolean(errors.timeline)}
+            aria-describedby={errors.timeline ? "error-timeline" : undefined}
+          >
             <option value="">Choose one</option>
             {timelines.map((timeline) => <option key={timeline}>{timeline}</option>)}
           </select>
+          {showFieldError("timeline", errors.timeline?.message)}
         </label>
       </div>
       <label className="form-field">

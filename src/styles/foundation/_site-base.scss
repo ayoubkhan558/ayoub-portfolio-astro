@@ -138,6 +138,13 @@ body {
 .home-about-section__tags {
   margin-top: var(--space-10);
 }
+.home-about-section__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
+}
 
 .home-problems-section__project-fit {
   margin-top: var(--space-10);
@@ -185,12 +192,10 @@ body {
 }
 
 .portfolio-background {
-  background: linear-gradient(
-    180deg,
-    var(--portfolio-sand) 0%,
-    var(--muted) 430px,
-    var(--background) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--portfolio-sand) 0%,
+      var(--muted) 430px,
+      var(--background) 100%);
   margin: var(--space-2) var(--space-2) 0;
   border-radius: 25px 25px 18px 18px;
 
@@ -202,12 +207,10 @@ body {
 
 .portfolio-background--bottom {
   border-radius: 20px 20px 32px 32px;
-  background: linear-gradient(
-    180deg,
-    var(--background),
-    var(--muted) 48%,
-    var(--portfolio-sand)
-  );
+  background: linear-gradient(180deg,
+      var(--background),
+      var(--muted) 48%,
+      var(--portfolio-sand));
   margin-bottom: var(--space-3);
 }
 

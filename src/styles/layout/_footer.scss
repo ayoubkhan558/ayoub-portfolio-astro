@@ -159,15 +159,25 @@
 }
 
 .portfolio-footer-wordmark {
+  container-type: inline-size;
+  display: flex;
+  justify-content: center;
   color: var(--foreground);
-  overflow: hidden;
-  line-height: 0;
+  font-family: "DM Sans Wordmark", var(--font-dm-sans);
+  font-optical-sizing: none;
+  font-weight: 100;
+  line-height: 0.9;
 }
 
-.portfolio-footer-wordmark__graphic {
-  display: block;
-  height: auto;
-  width: 100%;
+.portfolio-footer-wordmark__letter {
+  font-size: 15cqi;
+  flex: 0 0 10.5%;
+  text-align: center;
+  font-variation-settings: "wght" 400;
+}
+
+.portfolio-footer-wordmark__letter:nth-child(7) {
+  flex-basis: 4%;
 }
 
 .site-footer {

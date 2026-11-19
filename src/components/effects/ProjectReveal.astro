@@ -1,0 +1,39 @@
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  const previews = [
+    ...document.querySelectorAll<HTMLElement>(
+      "[data-project-reveal] .selected-card__image, [data-project-reveal] .case-image",
+    ),
+  ].filter((preview) => preview instanceof HTMLImageElement);
+  const animations = new Set<Animation>();
+  let nextPreview = 0;
+  const observer = new IntersectionObserver((entries) => {
+    for (const { target, isIntersecting } of entries) {
+      if (!isIntersecting) continue;
+      observer.unobserve(target);
+      if (reduced.matches) continue;
+      const now = performance.now();
+      const delay = Math.max(0, nextPreview - now);
+      nextPreview = now + delay + 80;
+      const animation = target.animate(
+        [
+          { filter: "blur(10px)", opacity: 0 },
+          { filter: "blur(0)", opacity: 1 },
+        ],
+        { duration: 600, delay, easing: "ease-out", fill: "backwards" },
+      );
+      animations.add(animation);
+      animation.finished.then(
+        () => animations.delete(animation),
+        () => animations.delete(animation),
+      );
+    }
+  });
+  if (!reduced.matches)
+    previews.forEach((preview) => observer.observe(preview));
+  reduced.addEventListener("change", () => {
+    if (!reduced.matches) return;
+    observer.disconnect();
+    animations.forEach((animation) => animation.cancel());
+  });
+</script>

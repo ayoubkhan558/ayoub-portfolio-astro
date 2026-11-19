@@ -1,0 +1,113 @@
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  const blockSizes = [48, 24, 12, 6, 3];
+  const active = new Map<HTMLElement, () => void>();
+  let nextLogo = 0;
+
+  async function revealLogo(link: HTMLElement) {
+    if (reduced.matches) return;
+    const image = [
+      ...link.querySelectorAll<HTMLImageElement>("img.client-logo"),
+    ].find((logo) => getComputedStyle(logo).display !== "none");
+    if (!image) return;
+    try {
+      await image.decode();
+    } catch {
+      return;
+    }
+    if (reduced.matches || getComputedStyle(image).display === "none") return;
+
+    const rect = image.getBoundingClientRect();
+    const parent = link.getBoundingClientRect();
+    const canvas = document.createElement("canvas");
+    const sample = document.createElement("canvas");
+    const display = canvas.getContext("2d");
+    const pixels = sample.getContext("2d");
+    if (!display || !pixels || !rect.width || !rect.height) return;
+
+    const style = getComputedStyle(image);
+    const left = parseFloat(style.paddingLeft);
+    const top = parseFloat(style.paddingTop);
+    const width = rect.width - left - parseFloat(style.paddingRight);
+    const height = rect.height - top - parseFloat(style.paddingBottom);
+    if (width <= 0 || height <= 0) return;
+    const scale = Math.min(
+      width / image.naturalWidth,
+      height / image.naturalHeight,
+    );
+    const drawWidth = image.naturalWidth * scale;
+    const drawHeight = image.naturalHeight * scale;
+
+    canvas.className = "logo-strip__canvas";
+    canvas.setAttribute("aria-hidden", "true");
+    canvas.width = Math.ceil(rect.width);
+    canvas.height = Math.ceil(rect.height);
+    canvas.style.width = `${rect.width}px`;
+    canvas.style.height = `${rect.height}px`;
+    canvas.style.left = `${rect.left - parent.left}px`;
+    canvas.style.top = `${rect.top - parent.top}px`;
+    canvas.style.backgroundColor = style.backgroundColor;
+    canvas.style.borderRadius = style.borderRadius;
+    display.imageSmoothingEnabled = false;
+
+    let timer = 0;
+    let step = 0;
+    function finish() {
+      window.clearTimeout(timer);
+      canvas.remove();
+      link.classList.remove("logo-strip__link--revealing");
+      active.delete(link);
+    }
+    const draw = () => {
+      if (reduced.matches || step === blockSizes.length) {
+        finish();
+        return;
+      }
+
+      const block = blockSizes[step++];
+      sample.width = Math.max(1, Math.ceil(drawWidth / block));
+      sample.height = Math.max(1, Math.ceil(drawHeight / block));
+      pixels.drawImage(image, 0, 0, sample.width, sample.height);
+      display.clearRect(0, 0, canvas.width, canvas.height);
+      display.drawImage(
+        sample,
+        left + (width - drawWidth) / 2,
+        top + (height - drawHeight) / 2,
+        drawWidth,
+        drawHeight,
+      );
+      timer = window.setTimeout(draw, 140);
+    };
+
+    link.append(canvas);
+    link.classList.add("logo-strip__link--revealing");
+    active.set(link, finish);
+    draw();
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const { target, isIntersecting } of entries) {
+      if (!isIntersecting) continue;
+      observer.unobserve(target);
+      const now = performance.now();
+      const delay = Math.max(0, nextLogo - now);
+      nextLogo = now + delay + 280;
+      target.classList.add("logo-strip__link--pending");
+      window.setTimeout(() => {
+        void revealLogo(target as HTMLElement).finally(() => {
+          target.classList.remove("logo-strip__link--pending");
+        });
+      }, delay);
+    }
+  });
+  if (!reduced.matches) {
+    document
+      .querySelectorAll("[data-logo-reveal] .logo-strip__link")
+      .forEach((logo) => observer.observe(logo));
+  }
+  reduced.addEventListener("change", () => {
+    if (!reduced.matches) return;
+    observer.disconnect();
+    active.forEach((finish) => finish());
+  });
+</script>

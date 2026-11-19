@@ -1,0 +1,29 @@
+.emoji-trail {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: clip;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.emoji-trail__sprite {
+  position: absolute;
+  display: block;
+  font-size: clamp(24px, 4vw, 46px);
+  line-height: 1;
+}
+
+[data-emoji-trail] {
+  position: relative;
+}
+
+.emoji-trail__logo {
+  display: block;
+  width: clamp(36px, 5vw, 52px);
+  height: clamp(36px, 5vw, 52px);
+  padding: var(--space-2);
+  border-radius: 10px;
+  object-fit: contain;
+  background: var(--logo-paper);
+}

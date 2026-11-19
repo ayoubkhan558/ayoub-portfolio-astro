@@ -33,3 +33,17 @@
 @use "sections/home-panels";
 @use "sections/project-archive";
 @use "sections/selected-work";
+
+// Opt-in interaction styles. Effect targets are marked in the owning component.
+@use "effects/border-beam";
+@use "effects/card-tilt";
+@use "effects/emoji-trail";
+@use "effects/glare-sweep";
+@use "effects/grid-spotlight";
+@use "effects/hero-reveal";
+@use "effects/flood-fill-button";
+@use "effects/logo-reveal";
+@use "effects/magnetic-button";
+@use "effects/name-sparkles";
+@use "effects/pointer-feedback" as cta-pointer-feedback;
+@use "effects/skill-burst";

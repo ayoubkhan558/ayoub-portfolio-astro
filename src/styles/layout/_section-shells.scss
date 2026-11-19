@@ -1,7 +1,16 @@
-// Page and section gutters, maximum widths and vertical spacing.
+// Page and section gutters, maximum widths, containers and vertical spacing.
 
 // Section owners share gutters and vertical rhythm at compile time.
 // Templates need only their own class, including on full-width page shells.
+
+
+.container {
+  width: min(var(--layout-content-width), 100%);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+}
+
+
 .about-hero {
   width: min(var(--layout-content-width), 100%);
   margin-inline: auto;
@@ -39,7 +48,6 @@
 }
 
 .portfolio-cta-section {
-  width: min(var(--layout-content-width), 100%);
   margin-inline: auto;
   padding-inline: var(--layout-gutter);
 }
@@ -217,28 +225,7 @@
   padding-block: var(--section-spacing);
 }
 
-.services-niches-section {
-  width: min(var(--layout-content-width), 100%);
-  margin-inline: auto;
-  padding-inline: var(--layout-gutter);
-  padding-block: var(--section-spacing);
-}
-
 .services-process-section {
-  width: min(var(--layout-content-width), 100%);
-  margin-inline: auto;
-  padding-inline: var(--layout-gutter);
-  padding-block: var(--section-spacing);
-}
-
-.services-project-fit-section {
-  width: min(var(--layout-content-width), 100%);
-  margin-inline: auto;
-  padding-inline: var(--layout-gutter);
-  padding-block: var(--section-spacing);
-}
-
-.services-working-together-section {
   width: min(var(--layout-content-width), 100%);
   margin-inline: auto;
   padding-inline: var(--layout-gutter);

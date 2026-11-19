@@ -1,0 +1,128 @@
+// Flood Fill Button, The dot and expanding fill share the same center.
+.flood-fill-button {
+  --flood-fill-ink: rgb(0, 0, 0);
+  --flood-fill-txt: #fff;
+  --flood-fill-txt-hover: #000000;
+  --flood-fill-easing: cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  padding: var(--space-3) 42px;
+  // width: 158px;
+  // height: 56px;
+  border: 1px solid var(--foreground);
+  border-radius: 999px;
+  overflow: clip;
+  color: var(--foreground);
+  font-size: var(--text-small);
+}
+
+.dark {
+  .flood-fill-button {
+    --flood-fill-ink: #fff;
+    --flood-fill-txt: rgb(0, 0, 0);
+    --flood-fill-txt-hover: #fff;
+    --flood-fill-easing: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+.flood-fill-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 23px;
+  z-index: -1;
+  width: 310px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--flood-fill-ink);
+  translate: -50% -50%;
+  scale: calc(10 / 310);
+  transition: scale 450ms var(--flood-fill-easing);
+}
+
+.flood-fill-button__label {
+  translate: 8px 0;
+  transition:
+    translate 450ms var(--flood-fill-easing),
+    color 450ms var(--flood-fill-easing);
+}
+
+.flood-fill-button__arrow {
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  translate: 14px 0;
+  transition:
+    translate 450ms var(--flood-fill-easing),
+    opacity 450ms var(--flood-fill-easing);
+}
+
+.flood-fill-button:is(:hover, :focus-visible) {
+  color: var(--flood-fill-txt-hover);
+}
+
+.flood-fill-button:is(:hover, :focus-visible)::before {
+  scale: 1;
+}
+
+.flood-fill-button:is(:hover, :focus-visible) .flood-fill-button__label {
+  color: var(--flood-fill-txt);
+  translate: -18px 0;
+}
+
+.flood-fill-button:is(:hover, :focus-visible) .flood-fill-button__arrow {
+  color: var(--flood-fill-txt);
+  opacity: 1;
+  translate: 0 0;
+}
+
+.flood-fill-button {
+  @media (prefers-reduced-motion: reduce) {
+    transition:
+      background-color 150ms ease,
+      color 150ms ease !important;
+  }
+}
+
+.flood-fill-button:is(:hover, :focus-visible) {
+  @media (prefers-reduced-motion: reduce) {
+    background-color: var(--flood-fill-ink);
+  }
+}
+
+.flood-fill-button:is(:hover, :focus-visible)::before {
+  @media (prefers-reduced-motion: reduce) {
+    scale: calc(10 / 310);
+    background: var(--flood-fill-txt);
+    transition: background-color 150ms ease !important;
+  }
+}
+
+.flood-fill-button:is(:hover, :focus-visible) .flood-fill-button__label {
+  @media (prefers-reduced-motion: reduce) {
+    translate: 8px 0;
+  }
+}
+
+.flood-fill-button:is(:hover, :focus-visible) .flood-fill-button__arrow {
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 0;
+    translate: 14px 0;
+  }
+}
+
+.flood-fill-button::before {
+  @media (prefers-reduced-motion: reduce) {
+    transition: background-color 150ms ease !important;
+  }
+}
+
+.flood-fill-button__label {
+  @media (prefers-reduced-motion: reduce) {
+    transition: color 150ms ease !important;
+  }
+}

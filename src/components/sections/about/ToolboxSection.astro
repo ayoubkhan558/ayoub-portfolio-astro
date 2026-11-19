@@ -1,20 +1,38 @@
 ---
+import GridSpotlight from "../../effects/GridSpotlight.astro";
+import GlareSweep from "../../effects/GlareSweep.astro";
 import Heading from "../../portfolio/Heading.astro";
 import SkillsMarquee from "../../portfolio/SkillsMarquee.astro";
 const groups = [
-  { title: "Interfaces", description: "I use React for interactive pages and dashboards. I build responsive layouts from Figma designs with Tailwind or Sass." },
-  { title: "Backends and APIs", description: "I use Node.js and Express for APIs and server logic, and PHP for WordPress work." },
-  { title: "WordPress and stores", description: "I build editable pages with Bricks or Elementor, use ACF for repeatable content, and set up stores with WooCommerce." },
-  { title: "Speed and search", description: "I use Core Web Vitals to find slow pages and technical SEO to help search engines crawl and understand a site." },
+  {
+    title: "Interfaces",
+    description:
+      "I use React for interactive pages and dashboards. I build responsive layouts from Figma designs with Tailwind or Sass.",
+  },
+  {
+    title: "Backends and APIs",
+    description:
+      "I use Node.js and Express for APIs and server logic, and PHP for WordPress work.",
+  },
+  {
+    title: "WordPress and stores",
+    description:
+      "I build editable pages with Bricks or Elementor, use ACF for repeatable content, and set up stores with WooCommerce.",
+  },
+  {
+    title: "Speed and search",
+    description:
+      "I use Core Web Vitals to find slow pages and technical SEO to help search engines crawl and understand a site.",
+  },
 ];
-
 ---
 
 <section class="about-toolbox-section">
   <Heading title="My toolbox" />
-  <div class="toolbox__groups">
+  <div class="toolbox__groups" data-grid-spotlight>
     {groups.map((group) => (
-      <article class="toolbox__group">
+      <article class="toolbox__group" data-spotlight-card data-glare-sweep>
+        <span class="grid-spotlight__glow" aria-hidden="true"></span>
         <h3 class="toolbox__title">{group.title}</h3>
         <p class="toolbox__description">{group.description}</p>
       </article>
@@ -25,3 +43,6 @@ const groups = [
   </div>
   <SkillsMarquee />
 </section>
+
+<GridSpotlight />
+<GlareSweep />

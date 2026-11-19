@@ -54,7 +54,12 @@
 }
 
 .service-detail__actions {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
 }
 
 .page-intro .tags {

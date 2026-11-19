@@ -41,68 +41,32 @@
   margin-bottom: 0;
 }
 
-.fit-rotators {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-
-  @media (min-width: breakpoints.$medium) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-6);
-  }
-}
-
 .text-rotator {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--muted);
   min-width: 0;
-  padding: var(--space-6);
-
-  @media (min-width: breakpoints.$medium) {
-    padding: var(--space-7);
-  }
 }
 
-.rotator-header {
+.text-rotator__line {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
-  margin-bottom: var(--space-6);
+  align-items: baseline;
   flex-wrap: wrap;
+  gap: 0.25em;
+  font-size: clamp(16px, 4vw, 26px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
 }
 
-.rotator-header .rotator-header__title {
-  font-size: var(--text-body);
-  letter-spacing: normal;
+.text-rotator__label {
+  flex: none;
   margin: 0;
-}
-
-.rotator-controls {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.rotator-controls[hidden] {
-  display: none;
-}
-
-.rotator-controls .rotator-controls__button {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--background);
-  min-height: 44px;
-  padding: var(--space-2) var(--space-3);
-  font-size: 13px;
-}
-
-.rotator-controls .rotator-controls__button:hover {
-  color: var(--link-accent);
-  border-color: var(--link-accent);
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
 }
 
 .rotator-items {
+  flex: 1 1 12em;
+  min-width: 0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -112,24 +76,18 @@
   margin-bottom: var(--space-5);
 }
 
-.rotator-number {
-  display: block;
-  color: var(--link-accent);
-  font-family: var(--font-mono);
-  font-size: var(--text-caption);
-  margin-bottom: var(--space-3);
+.rotator-items__description {
+  display: inline-block;
+  margin: 0;
+  padding: 0.17em 0.3em 0.22em;
+  background: var(--primary);
+  border-radius: 0.18em;
+  color: var(--primary-foreground);
 }
 
-.rotator-items .rotator-items__description {
-  margin: 0;
-  color: var(--foreground);
-  line-height: 1.4;
-  letter-spacing: -0.025em;
-  font-size: 21px;
-
-  @media (min-width: breakpoints.$medium) {
-    font-size: 23px;
-  }
+.rotator-items__flower {
+  display: inline-block;
+  margin-inline-start: 0.12em;
 }
 
 [data-text-rotator][data-ready] .rotator-items {
@@ -145,19 +103,24 @@
 
 [data-text-rotator][data-ready] .rotator-items__item.is-current {
   opacity: 1;
-  animation: rotate-reveal 0.45s ease both;
 }
 
-@keyframes rotate-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
+.rotator-items__word {
+  display: inline-block;
+  white-space: nowrap;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.rotator-items__letter {
+  display: inline-block;
+}
+
+.rotator-items__accessible-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .education-note {
@@ -201,12 +164,6 @@
   }
 }
 
-[data-text-rotator][data-ready] .rotator-items__item.is-current {
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
-}
-
 // v1.4 — concise services, consistent spacing and bottom-aligned card actions.
 .about-page
   > :is(
@@ -226,10 +183,7 @@
     .service-detail-content-section,
     .services-cards-section,
     .services-delivery-section,
-    .services-niches-section,
-    .services-process-section,
-    .services-project-fit-section,
-    .services-working-together-section
+    .services-process-section
   ):nth-of-type(even) {
   background: color-mix(in oklch, var(--portfolio-sand) 25%, var(--background));
   border-block: 1px solid var(--border);
@@ -252,20 +206,9 @@
     .service-detail-content-section,
     .services-cards-section,
     .services-delivery-section,
-    .services-niches-section,
-    .services-process-section,
-    .services-project-fit-section,
-    .services-working-together-section
+    .services-process-section
   ):nth-of-type(even) {
   padding-block: 64px;
-}
-
-.single-rotator {
-  grid-template-columns: 1fr;
-}
-
-.single-rotator .rotator-items .rotator-items__description {
-  max-width: 70ch;
 }
 
 .card-action {
@@ -301,10 +244,7 @@
     .service-detail-content-section,
     .services-cards-section,
     .services-delivery-section,
-    .services-niches-section,
-    .services-process-section,
-    .services-project-fit-section,
-    .services-working-together-section
+    .services-process-section
   ):nth-of-type(even) {
   padding-block: var(--space-12);
 

@@ -16,3 +16,16 @@ export const problemsSolved = [
   "The landing page gets visits but few inquiries",
   "It’s easier for customers to buy from your competitors",
 ];
+
+// export const problemsSolved = [
+//   "Unclear value proposition",
+//   "Confusing user flows",
+//   "Slow page speeds",
+//   "Clunky mobile UX",
+//   "Feature-heavy copy",
+//   "Outdated brand visuals",
+//   "Friction-heavy forms",
+//   "Hard-to-edit content",
+//   "Low-converting pages",
+//   "Lost competitor leads",
+// ];

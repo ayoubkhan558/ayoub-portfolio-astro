@@ -6,38 +6,40 @@ interface Props {
 const { label, items } = Astro.props;
 ---
 
-<div class="text-rotator" data-text-rotator>
-  <div class="rotator-header">
-    <h3 class="rotator-header__title">{label}</h3>
-    <div class="rotator-controls" hidden>
-      <button class="rotator-controls__button portfolio__button"
-        type="button"
-        data-rotator-pause
-        aria-label={`Pause ${label.toLowerCase()} rotation`}
-        aria-pressed="false"
-      >
-        Pause
-      </button>
-      <button class="rotator-controls__button portfolio__button"
-        type="button"
-        data-rotator-next
-        aria-label={`Next ${label.toLowerCase()} item`}
-      >
-        Next <span aria-hidden="true">→</span>
-      </button>
-    </div>
+<div
+  class="text-rotator"
+  data-text-rotator
+  role="group"
+  aria-label={label}
+  tabindex="0"
+>
+  <div class="text-rotator__line">
+    <h4 class="text-rotator__label">{label}</h4>
+    <ul class="rotator-items" aria-label={label}>
+      {items.map((item, i) => (
+        <li class:list={["rotator-items__item", i === 0 && "is-current"]}>
+          <p class="rotator-items__description">
+            <span class="rotator-items__accessible-text">{item}</span>
+            <span aria-hidden="true">
+              {item.split(/\s+/).map((word, index) => (
+                <Fragment>
+                  {index > 0 && " "}
+                  <span class="rotator-items__word">
+                    {Array.from(word, (letter) => (
+                      <span class="rotator-items__letter">{letter}</span>
+                    ))}
+                  </span>
+                </Fragment>
+              ))}
+            </span>
+            <span class="rotator-items__flower" aria-hidden="true">
+              ✽
+            </span>
+          </p>
+        </li>
+      ))}
+    </ul>
   </div>
-  <ul class="rotator-items" aria-label={label}>
-    {items.map((item, i) => (
-      <li class:list={["rotator-items__item", i === 0 && "is-current"]}>
-        <span class="rotator-number" aria-hidden="true">
-          {String(i + 1).padStart(2, "0")} /{" "}
-          {String(items.length).padStart(2, "0")}
-        </span>
-        <p class="rotator-items__description">{item}</p>
-      </li>
-    ))}
-  </ul>
 </div>
 <script>
   document
@@ -46,62 +48,92 @@ const { label, items } = Astro.props;
       const items = Array.from(
         root.querySelectorAll<HTMLElement>(".rotator-items li"),
       );
-      const pause = root.querySelector<HTMLButtonElement>(
-        "[data-rotator-pause]",
-      )!;
-      const next = root.querySelector<HTMLButtonElement>(
-        "[data-rotator-next]",
-      )!;
       const reduced = matchMedia("(prefers-reduced-motion: reduce)");
       let index = 0,
-        paused = reduced.matches,
         inView = false,
         timer: ReturnType<typeof setInterval> | undefined;
       root.dataset.ready = "true";
-      root.querySelector<HTMLElement>(".rotator-controls")!.hidden = false;
-      // The complete list stays in the accessibility tree; only its visual presentation rotates.
-      function showNext() {
-        items[index].classList.remove("is-current");
+      let transition: Animation[] = [];
+      let rotating = false;
+
+      async function animateLetters(
+        item: HTMLElement,
+        frames: Keyframe[],
+        duration: number,
+      ) {
+        if (reduced.matches) return;
+        const letters = [...item.querySelectorAll(".rotator-items__letter")];
+        // Keep long phrases moving as quickly as short ones.
+        const stagger = Math.min(9, 220 / Math.max(1, letters.length - 1));
+        transition = letters.map((letter, i) =>
+          letter.animate(frames, {
+            duration,
+            delay: i * stagger,
+            easing: "ease-out",
+            fill: "both",
+          }),
+        );
+        await Promise.all(
+          transition.map((animation) => animation.finished.catch(() => {})),
+        );
+      }
+
+      async function showNext() {
+        if (rotating || items.length < 2) return;
+        rotating = true;
+        const previous = items[index];
+        await animateLetters(
+          previous,
+          [
+            { opacity: 1, transform: "translateY(0)", filter: "blur(0)" },
+            {
+              opacity: 0,
+              transform: "translateY(-0.35em)",
+              filter: "blur(5px)",
+            },
+          ],
+          170,
+        );
+        previous.classList.remove("is-current");
+        transition.forEach((animation) => animation.cancel());
+
         index = (index + 1) % items.length;
-        items[index].classList.add("is-current");
+        const current = items[index];
+        current.classList.add("is-current");
+        await animateLetters(
+          current,
+          [
+            {
+              opacity: 0,
+              transform: "translateY(0.35em)",
+              filter: "blur(5px)",
+            },
+            { opacity: 1, transform: "translateY(0)", filter: "blur(0)" },
+          ],
+          260,
+        );
+        transition.forEach((animation) => animation.cancel());
+        transition = [];
+        rotating = false;
       }
       function sync() {
         clearInterval(timer);
-        pause.textContent = reduced.matches
-          ? "Reduced motion"
-          : paused
-            ? "Play"
-            : "Pause";
-        pause.disabled = reduced.matches;
-        pause.setAttribute("aria-pressed", String(paused));
-        pause.setAttribute(
-          "aria-label",
-          `${paused ? "Play" : "Pause"} ${root.querySelector("h3")!.textContent!.toLowerCase()} rotation`,
-        );
         if (
-          !paused &&
           !reduced.matches &&
           inView &&
           !document.hidden &&
           !root.matches(":hover, :focus-within")
         )
-          timer = setInterval(showNext, 5500);
+          timer = setInterval(showNext, 4000);
       }
-      pause.addEventListener("click", () => {
-        paused = !paused;
-        sync();
-      });
-      next.addEventListener("click", () => {
-        showNext();
-        sync();
-      });
       ["mouseenter", "mouseleave", "focusin"].forEach((event) =>
         root.addEventListener(event, sync),
       );
       root.addEventListener("focusout", () => setTimeout(sync, 0));
       document.addEventListener("visibilitychange", sync);
       reduced.addEventListener("change", () => {
-        paused = reduced.matches;
+        if (reduced.matches)
+          transition.forEach((animation) => animation.cancel());
         sync();
       });
       new IntersectionObserver((entries) => {

@@ -17,13 +17,18 @@
   font-size: clamp(34px, 4.3vw, 56px);
 }
 
-.cta-panel > .cta-panel__description {
+.cta-panel>.cta-panel__description {
   max-width: 740px;
   margin-inline: auto;
 }
 
 .portfolio-cta-section__actions {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: var(--space-7);
 }
 
 .cta-panel .offer {

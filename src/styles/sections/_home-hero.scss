@@ -606,3 +606,8 @@
 .hero-profile-identity .hero-profile-identity__title {
   font-size: clamp(26px, 2.2vw, 34px);
 }
+.hero-badges__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}

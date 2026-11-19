@@ -1,0 +1,35 @@
+// Mask the rotating light to the edge so it never covers the card's content.
+.border-beam {
+  --border-beam-light: #62a9ff;
+  position: absolute;
+  inset: -1px;
+  padding: 1.5px;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
+}
+
+.border-beam::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 338deg,
+    var(--border-beam-light) 356deg,
+    transparent 360deg
+  );
+  animation: border-beam-rotate 4s linear infinite;
+}
+
+@keyframes border-beam-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}

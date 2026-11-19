@@ -55,20 +55,16 @@ await rotator.scrollIntoViewIfNeeded();
 await page.mouse.move(0, 0);
 const getCurrent = () => rotator.locator(".is-current").innerText();
 const original = await getCurrent();
-await page.waitForTimeout(5800);
+await page.waitForTimeout(4800);
 assert.notEqual(await getCurrent(), original, "Rotator advances automatically");
 assert.equal(await rotator.locator(".is-current").count(), 1);
-await rotator.locator("[data-rotator-pause]").click();
-await page.locator("body").click({ position: { x: 2, y: 2 } });
+await rotator.focus();
 const paused = await getCurrent();
-await page.waitForTimeout(5800);
-assert.equal(await getCurrent(), paused, "Pause holds current item");
-await rotator.locator("[data-rotator-next]").click();
-assert.notEqual(await getCurrent(), paused, "Next works while paused");
-await screenshot("rotators-desktop", ".fit-rotators");
-report.push(
-  "Home: personalized portrait/results hero, stacked section headings (Process removed), one-at-a-time rotating copy, pause and next controls.",
-);
+await page.waitForTimeout(4800);
+assert.equal(await getCurrent(), paused, "Keyboard focus holds current item");
+assert.equal(await rotator.getByRole("button").count(), 0);
+await screenshot("rotators-desktop", ".text-rotator");
+report.push("Homepage problems rotate automatically and pause on focus.");
 const top = page.locator("[data-back-to-top]");
 await page.locator("footer").scrollIntoViewIfNeeded();
 await page.waitForFunction(() =>
@@ -162,7 +158,7 @@ for (const width of [390, 320]) {
       "/",
       [
         ".hero-profile",
-        ".fit-rotators",
+        ".text-rotator",
         "#services",
         "#projects",
         "#case-studies",
@@ -194,22 +190,13 @@ for (const width of [390, 320]) {
   }
 }
 await page.goto(base, { waitUntil: "networkidle" });
-assert.equal(
-  await page.locator("[data-rotator-pause]").first().isDisabled(),
-  true,
-);
-const reducedCurrent = await page
-  .locator(".text-rotator .is-current")
-  .first()
-  .innerText();
-await page.locator("[data-rotator-next]").first().click();
-assert.notEqual(
-  await page.locator(".text-rotator .is-current").first().innerText(),
-  reducedCurrent,
-);
-report.push(
-  "Reduced motion disables autoplay; manual next remains usable. Desktop, 390px and 320px requested sections captured without page overflow.",
-);
+const reducedRotator = page.locator(".text-rotator .is-current").first();
+await reducedRotator.scrollIntoViewIfNeeded();
+const reducedCurrent = await reducedRotator.innerText();
+await page.mouse.move(0, 0);
+await page.waitForTimeout(4800);
+assert.equal(await reducedRotator.innerText(), reducedCurrent);
+report.push("Reduced motion holds the current problem phrase.");
 const noJs = await browser.newContext({
   javaScriptEnabled: false,
   viewport: { width: 390, height: 960 },

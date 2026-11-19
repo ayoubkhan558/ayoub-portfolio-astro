@@ -1,0 +1,141 @@
+<canvas class="skill-burst" aria-hidden="true" popover="manual"></canvas>
+
+<script>
+  const canvas = document.querySelector<HTMLCanvasElement>(".skill-burst");
+  const context = canvas?.getContext("2d");
+  if (canvas && context) {
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    const targets = "[data-skill-burst]";
+    const symbols = ["✦", "✧", "•", "⚡"];
+    const colors = ["#ffd66b", "#a8dcff", "#bbf7d0", "#f5c9ff"];
+    const particles: {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      age: number;
+      life: number;
+      symbol: string;
+      color: string;
+      size: number;
+    }[] = [];
+    const holds = new Map<number, { x: number; y: number; next: number }>();
+    let frame = 0;
+    let previous = 0;
+
+    function sizeCanvas() {
+      const scale = window.devicePixelRatio || 1;
+      canvas!.width = Math.round(innerWidth * scale);
+      canvas!.height = Math.round(innerHeight * scale);
+      context!.setTransform(scale, 0, 0, scale, 0, 0);
+    }
+
+    function emit(x: number, y: number, count: number) {
+      for (let i = 0; i < count && particles.length < 360; i++) {
+        const angle = ((Math.random() - 0.5) * Math.PI) / 2;
+        const speed = 280 + Math.random() * 440;
+        const style = Math.floor(Math.random() * symbols.length);
+        particles.push({
+          x,
+          y,
+          vx: Math.sin(angle) * speed,
+          vy: -Math.cos(angle) * speed,
+          age: 0,
+          life: 1 + Math.random() * 0.7,
+          symbol: symbols[style],
+          color: colors[style],
+          size: 8 + Math.random() * 10,
+        });
+      }
+    }
+
+    function clear() {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      holds.clear();
+      particles.length = 0;
+      context!.clearRect(0, 0, innerWidth, innerHeight);
+      if (canvas!.matches(":popover-open")) canvas!.hidePopover();
+    }
+
+    function draw(now: number) {
+      const dt = Math.min((now - previous) / 1000, 0.05);
+      previous = now;
+      for (const hold of holds.values()) {
+        if (now < hold.next) continue;
+        emit(hold.x, hold.y, 4);
+        hold.next = now + 160;
+      }
+
+      context!.clearRect(0, 0, innerWidth, innerHeight);
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.age += dt;
+        if (p.age >= p.life) {
+          particles.splice(i, 1);
+          continue;
+        }
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+        p.vy += 1100 * dt;
+        context!.globalAlpha = Math.min(1, (1 - p.age / p.life) / 0.4);
+        context!.fillStyle = p.color;
+        context!.font = `${p.size}px system-ui`;
+        context!.fillText(p.symbol, p.x, p.y);
+      }
+      if (particles.length || holds.size) frame = requestAnimationFrame(draw);
+      else clear();
+    }
+
+    document.addEventListener(
+      "pointerdown",
+      (event) => {
+        if (
+          reduced.matches ||
+          event.button !== 0 ||
+          !(event.target instanceof Element) ||
+          !event.target.closest(targets)
+        )
+          return;
+        const { clientX: x, clientY: y, pointerId } = event;
+        emit(x, y, 16);
+        const now = performance.now();
+        holds.set(pointerId, { x, y, next: now + 160 });
+        if (frame) return;
+        sizeCanvas();
+        canvas.showPopover();
+        previous = now;
+        frame = requestAnimationFrame(draw);
+      },
+      { passive: true },
+    );
+
+    window.addEventListener(
+      "pointermove",
+      (event) => {
+        const hold = holds.get(event.pointerId);
+        if (!hold) return;
+        hold.x = event.clientX;
+        hold.y = event.clientY;
+      },
+      { passive: true },
+    );
+    window.addEventListener("pointerup", (event) =>
+      holds.delete(event.pointerId),
+    );
+    window.addEventListener("pointercancel", (event) =>
+      holds.delete(event.pointerId),
+    );
+    window.addEventListener("blur", () => holds.clear());
+    window.addEventListener(
+      "resize",
+      () => {
+        if (frame) sizeCanvas();
+      },
+      { passive: true },
+    );
+    reduced.addEventListener("change", () => {
+      if (reduced.matches) clear();
+    });
+  }
+</script>

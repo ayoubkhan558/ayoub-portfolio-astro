@@ -1,0 +1,62 @@
+<span class="name-sparkles" data-name-sparkles>
+  <slot />
+  <span class="name-sparkles__layer" aria-hidden="true">
+    <span class="name-sparkles__star name-sparkles__star--still"></span>
+    <span class="name-sparkles__star name-sparkles__star--still"></span>
+    <span class="name-sparkles__star name-sparkles__star--still"></span>
+  </span>
+</span>
+
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  for (const name of document.querySelectorAll<HTMLElement>(
+    "[data-name-sparkles]",
+  )) {
+    const layer = name.querySelector<HTMLElement>(".name-sparkles__layer");
+    if (!layer) continue;
+    let visible = false;
+    let timer: number | undefined;
+
+    const random = (min: number, max: number) =>
+      min + Math.random() * (max - min);
+    const spawn = () => {
+      const star = document.createElement("span");
+      star.className = "name-sparkles__star";
+      const edge = Math.random() < 0.8;
+      star.style.left = `${random(-20, 120)}%`;
+      star.style.top = `${edge ? (Math.random() < 0.5 ? random(-20, 20) : random(80, 120)) : random(20, 80)}%`;
+      star.style.width = `${random(12, 22)}px`;
+      layer.append(star);
+      const animation = star.animate(
+        [
+          { transform: "translate(-50%, -50%) scale(0) rotate(0deg)" },
+          { transform: "translate(-50%, -50%) scale(1) rotate(37.5deg)" },
+          { transform: "translate(-50%, -50%) scale(0) rotate(75deg)" },
+        ],
+        { duration: 1000, easing: "ease-in-out" },
+      );
+      const remove = () => star.remove();
+      animation.finished.then(remove, remove);
+    };
+
+    const sync = () => {
+      window.clearInterval(timer);
+      if (visible && !reduced.matches && !document.hidden) {
+        timer = window.setInterval(spawn, 200);
+      } else {
+        layer
+          .querySelectorAll(
+            ".name-sparkles__star:not(.name-sparkles__star--still)",
+          )
+          .forEach((star) => star.remove());
+      }
+    };
+
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      sync();
+    }).observe(name);
+    reduced.addEventListener("change", sync);
+    document.addEventListener("visibilitychange", sync);
+  }
+</script>
