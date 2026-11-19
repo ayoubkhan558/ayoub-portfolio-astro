@@ -8,9 +8,9 @@ const { label, items } = Astro.props;
 
 <div class="text-rotator" data-text-rotator>
   <div class="rotator-header">
-    <h3>{label}</h3>
+    <h3 class="rotator-header__title portfolio__heading-tertiary">{label}</h3>
     <div class="rotator-controls" hidden>
-      <button
+      <button class="rotator-controls__button portfolio__button"
         type="button"
         data-rotator-pause
         aria-label={`Pause ${label.toLowerCase()} rotation`}
@@ -18,7 +18,7 @@ const { label, items } = Astro.props;
       >
         Pause
       </button>
-      <button
+      <button class="rotator-controls__button portfolio__button"
         type="button"
         data-rotator-next
         aria-label={`Next ${label.toLowerCase()} item`}
@@ -29,12 +29,12 @@ const { label, items } = Astro.props;
   </div>
   <ul class="rotator-items" aria-label={label}>
     {items.map((item, i) => (
-      <li class:list={[i === 0 && "is-current"]}>
+      <li class:list={["rotator-items__item", i === 0 && "is-current"]}>
         <span class="rotator-number" aria-hidden="true">
           {String(i + 1).padStart(2, "0")} /{" "}
           {String(items.length).padStart(2, "0")}
         </span>
-        <p>{item}</p>
+        <p class="rotator-items__description portfolio__paragraph">{item}</p>
       </li>
     ))}
   </ul>

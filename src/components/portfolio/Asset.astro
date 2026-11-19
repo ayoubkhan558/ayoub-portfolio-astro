@@ -7,6 +7,7 @@ interface Props extends Omit<HTMLAttributes<"img">, "src" | "alt"> {
   fallback?: string;
   alt?: string;
   eager?: boolean;
+  imageClassOnly?: boolean;
 }
 const {
   src,
@@ -14,6 +15,7 @@ const {
   alt = "",
   class: className = "",
   eager = false,
+  imageClassOnly = false,
   ...rest
 } = Astro.props;
 const asset = getAsset(src) ?? (fallback ? getAsset(fallback) : null);
@@ -25,7 +27,11 @@ const asset = getAsset(src) ?? (fallback ? getAsset(fallback) : null);
     width={asset.width}
     height={asset.height}
     alt={alt}
-    class={className}
+    class={
+      imageClassOnly
+        ? className
+        : ["portfolio__image", className].filter(Boolean).join(" ")
+    }
     loading={eager ? "eager" : "lazy"}
     decoding="async"
     fetchpriority={eager ? "high" : "auto"}
@@ -38,8 +44,10 @@ const asset = getAsset(src) ?? (fallback ? getAsset(fallback) : null);
     aria-label={`${alt} — preview not supplied`}
   >
     <>
-      <span>{initials(alt)}</span>
-      <small>Project preview unavailable</small>
+      <span class="asset-fallback__label">{initials(alt)}</span>
+      <small class="asset-fallback__note portfolio__note">
+        Project preview unavailable
+      </small>
     </>
   </div>
 )}

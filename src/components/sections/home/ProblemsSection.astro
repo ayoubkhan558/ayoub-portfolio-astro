@@ -4,20 +4,20 @@ import TextRotator from "../../portfolio/TextRotator.astro";
 import { painPoints, problemsSolved } from "./problems";
 ---
 
-<section class="home-problems-section section wrap" id="problems">
+<section class="home-problems-section" id="problems">
   <Heading
     label="Common problems"
     title="Website problems I can help with"
     subtitle="Start with what’s getting in the way on your current site."
   />
-  <div class="three-grid">
+  <div class="home-problems-section__cards">
     {painPoints.map((point) => (
       <article class="plain-card">
-        <h3>{point}</h3>
+        <h3 class="plain-card__title portfolio__heading-tertiary">{point}</h3>
       </article>
     ))}
   </div>
-  <div class="fit-rotators single-rotator spaced">
+  <div class="fit-rotators single-rotator home-problems-section__project-fit">
     <TextRotator label="Problems I solve" items={problemsSolved} />
   </div>
   <!-- <div class="tags industries">

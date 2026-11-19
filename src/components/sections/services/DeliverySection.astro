@@ -11,15 +11,15 @@ const outcomes = [
 ];
 ---
 
-<section class="services-delivery-section section wrap">
+<section class="services-delivery-section">
   <div class="section-heading">
     <div>
       <span class="eyebrow">Delivery</span>
-      <h2>What I deliver</h2>
+      <h2 class="section-heading__title portfolio__heading-secondary">What I deliver</h2>
     </div>
   </div>
-  <p>I use AI for quick prototypes and to explore implementation options. I review and test the code I ship.</p>
-  <ul class="check-list spaced">
-    {outcomes.map((outcome) => <li>{outcome}</li>)}
+  <p class="portfolio__paragraph">I use AI for quick prototypes and to explore implementation options. I review and test the code I ship.</p>
+  <ul class="check-list services-delivery-section__checklist">
+    {outcomes.map((outcome) => <li class="check-list__item">{outcome}</li>)}
   </ul>
 </section>

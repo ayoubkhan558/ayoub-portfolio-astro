@@ -1,11 +1,5 @@
-// The shared Astro layout loads this entry before portfolio.scss.
-// Tailwind imports come first so they stay ahead of the emitted style rules.
-@use "foundation/tailwind-setup";
-
-// Define fonts and light/dark tokens before mapping them to Tailwind utilities.
+// Class-based document defaults load before the theme. Portfolio components
+// own their layout, typography and interaction rules in portfolio.scss.
+@use "foundation/document";
 @use "foundation/fonts";
 @use "foundation/theme-tokens";
-@use "foundation/tailwind-theme";
-
-// Keep the custom utilities and base layers in their original order.
-@use "foundation/tailwind-layers";

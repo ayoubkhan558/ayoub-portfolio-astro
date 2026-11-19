@@ -1,22 +1,28 @@
-
 .service-card__pricing {
-  margin-block: 4px 18px;
+  margin-block: var(--space-1) 18px;
 
-  .service-price { margin: 0; }
-  p { margin: 4px 0 0; }
+  .service-price {
+    margin: 0;
+  }
+
+  .service-card__description {
+    margin: var(--space-1) 0 0;
+  }
 }
 
 .service-card__inclusions {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-6);
 
-  p { margin: 6px 0 0; }
+  .service-card__description {
+    margin: 6px 0 0;
+  }
 }
 
-.project-card .project-body h2 {
-  font-size: clamp(20px, 2vw, 25px);
+.project-card .project-body .project-body__title {
+  font-size: clamp(var(--text-lead), 2vw, 25px);
 }
 
-.project-card .project-body > p {
+.project-card .project-body>.project-body__description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

@@ -1,13 +1,7 @@
-.faq-list details[open] summary > svg {
-  transform: rotate(45deg);
-}
-.faq-list summary > svg {
-  flex-shrink: 0;
-  transition: transform 0.2s;
-}
-.faq-list summary {
+.faq-list__question {
   font-size: 18px;
 }
-.faq-list p {
-  font-size: 16px;
+
+.faq-list__answer {
+  font-size: var(--text-body);
 }

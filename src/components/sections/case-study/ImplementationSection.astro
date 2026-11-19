@@ -1,45 +1,47 @@
 ---
 import Asset from "../../portfolio/Asset.astro";
 import { toolCatalog as tools } from "../../../data/toolCatalog";
+import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
+interface Props { study: CaseStudyDetailData }
 const { study } = Astro.props;
 ---
 
-<section class="case-study-implementation-section section wrap">
+<section class="case-study-implementation-section">
   <div class="section-heading">
     <div>
       <span class="eyebrow">The details</span>
-      <h2>Built for every screen.</h2>
+      <h2 class="section-heading__title portfolio__heading-secondary">Built for every screen.</h2>
     </div>
   </div>
-  <div class="two-grid">
-    <div>
-      <h3>Page architecture</h3>
+  <div class="case-study-implementation-section__columns">
+    <div class="case-detail__column">
+      <h3 class="portfolio__heading-tertiary">Page architecture</h3>
       <div class="link-list">
         {study.desktopPages.map((page) => (
           <div class="architecture-row">
             <>
               <strong>{page.name}</strong>
-              <p>{page.type}</p>
+              <p class="architecture-row__description portfolio__paragraph">{page.type}</p>
             </>
           </div>
         ))}
       </div>
     </div>
-    <div>
-      <h3>Responsive benefits</h3>
+    <div class="case-detail__column">
+      <h3 class="portfolio__heading-tertiary">Responsive benefits</h3>
       <ul class="check-list">
         {study.responsiveBenefits.map((v) => (
-          <li>{v}</li>
+          <li class="check-list__item">{v}</li>
         ))}
       </ul>
     </div>
   </div>
-  <h3 class="spaced">Tools used</h3>
+  <h3 class="portfolio__heading-tertiary case-study-implementation-section__subheading">Tools used</h3>
   <div class="tools-inline">
     {study.tools.map(
       (key: string) =>
         tools[key] && (
-          <div>
+          <div class="tools-inline__tool">
             <>
               <Asset
                 src={tools[key].logo}

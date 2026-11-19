@@ -128,7 +128,7 @@ function Carousel({
     >
       <div
         onKeyDownCapture={handleKeyDown}
-        className={cn("relative", className)}
+        className={cn("carousel", className)}
         role="region"
         tabIndex={0}
         aria-roledescription="carousel"
@@ -147,13 +147,13 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       ref={carouselRef}
-      className="overflow-hidden"
+      className="carousel__viewport"
       data-slot="carousel-content"
     >
       <div
         className={cn(
-          "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          "carousel__track",
+          orientation === "horizontal" ? "carousel__track--horizontal" : "carousel__track--vertical",
           className,
         )}
         {...props}
@@ -171,8 +171,8 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        "carousel__slide",
+        orientation === "horizontal" ? "carousel__slide--horizontal" : "carousel__slide--vertical",
         className,
       )}
       {...props}
@@ -194,10 +194,10 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-8 rounded-full",
+        "carousel__arrow",
         orientation === "horizontal"
-          ? "top-1/2 -left-12 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "carousel__arrow--left"
+          : "carousel__arrow--top",
         className,
       )}
       disabled={!canScrollPrev}
@@ -205,7 +205,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="sr-only">Previous slide</span>
+      <span className="carousel__accessible-label">Previous slide</span>
     </Button>
   );
 }
@@ -224,10 +224,10 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-8 rounded-full",
+        "carousel__arrow",
         orientation === "horizontal"
-          ? "top-1/2 -right-12 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "carousel__arrow--right"
+          : "carousel__arrow--bottom",
         className,
       )}
       disabled={!canScrollNext}
@@ -235,7 +235,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="sr-only">Next slide</span>
+      <span className="carousel__accessible-label">Next slide</span>
     </Button>
   );
 }

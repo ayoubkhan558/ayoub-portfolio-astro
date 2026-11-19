@@ -1,18 +1,43 @@
+@use "../foundation/breakpoints";
+
 .page-intro {
-  padding-top: 180px;
-  padding-bottom: 65px;
+  padding-block: 142px 45px;
+
+  @media (min-width: breakpoints.$small) {
+    padding-top: 150px;
+  }
+
+  @media (min-width: breakpoints.$large) {
+    padding-block: 180px 65px;
+  }
+
   max-width: 1100px;
   text-align: center;
 }
-.page-intro h1 {
+
+.page-intro__title {
   max-width: 960px;
+  font-size: clamp(30px, 8.2vw, 36px);
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 42px;
+  }
+
+  @media (min-width: breakpoints.$large) {
+    font-size: clamp(38px, 4.3vw, 64px);
+  }
+
   margin: 0 auto 26px;
 }
-.page-intro .lead {
+
+.page-intro__description {
   max-width: 760px;
   margin-inline: auto;
 }
-.page-intro .actions,
+
+.page-intro__actions,
+.case-detail__actions,
+.service-detail__actions,
 .page-intro .tags {
   justify-content: center;
 }

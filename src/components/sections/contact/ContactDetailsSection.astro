@@ -6,7 +6,7 @@ const formId = import.meta.env.PUBLIC_FORMSPREE_ID || "mgojyyqd";
 const contactSteps = ["Send project details", "Get a build estimate"];
 ---
 
-<section class="contact-details-section section wrap first-section contact-layout">
+<section class="contact-details-section contact-layout">
   <div class="contact-layout__form">
     <ContactForm
       client:load
@@ -20,39 +20,39 @@ const contactSteps = ["Send project details", "Get a build estimate"];
     <div class="contact-availability">
       <span class="eyebrow">Available for</span>
       <span class="availability">
-        <i></i>
+        <i class="availability__dot"></i>
         {p.profile.availability}
       </span>
     </div>
-    <h2 class="spaced">Let's build something useful.</h2>
-    <ol class="check-list spaced">
-      {contactSteps.map((step) => <li>{step}</li>)}
+    <h2 class="contact-info__title portfolio__heading-secondary contact-details-section__subheading">Let's build something useful.</h2>
+    <ol class="check-list contact-details-section__checklist">
+      {contactSteps.map((step) => <li class="check-list__item">{step}</li>)}
     </ol>
-    <p>{p.profile.summary}</p>
-    <a class="contact-link" href={`mailto:${p.profile.email}`}>
-      <span>Email</span>
+    <p class="portfolio__paragraph">{p.profile.summary}</p>
+    <a class="contact-link portfolio__link" href={`mailto:${p.profile.email}`}>
+      <span class="contact-link__label">Email</span>
       {p.profile.email} <ExternalArrow />
     </a>
-    <a class="contact-link" href={`tel:${p.profile.phone.replaceAll(" ", "")}`}>
-      <span>Phone</span>
+    <a class="contact-link portfolio__link" href={`tel:${p.profile.phone.replaceAll(" ", "")}`}>
+      <span class="contact-link__label">Phone</span>
       {p.profile.phone} <ExternalArrow />
     </a>
     <a
-      class="contact-link"
+      class="contact-link portfolio__link"
       href={p.profile.linkedin}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span>Connect</span>LinkedIn <ExternalArrow />
+      <span class="contact-link__label">Connect</span>LinkedIn <ExternalArrow />
     </a>
     <a
-      class="contact-link"
+      class="contact-link portfolio__link"
       href={p.profile.upwork}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span>Hire</span>Upwork <ExternalArrow />
+      <span class="contact-link__label">Hire</span>Upwork <ExternalArrow />
     </a>
-    <p class="spaced">Based in {p.profile.location}</p>
+    <p class="portfolio__paragraph contact-details-section__supplement">Based in {p.profile.location}</p>
   </div>
 </section>

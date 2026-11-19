@@ -3,17 +3,17 @@ import Heading from "../../portfolio/Heading.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="about-career-section section wrap">
+<section class="about-career-section">
   <Heading
     label={p.about.careerStartLabel}
     title="How my work has changed"
   />
   <div class="timeline">
     {p.about.careerPath.map((c) => (
-      <article>
+      <article class="timeline__item">
         <span class="eyebrow">{c.year}</span>
-        <h3>{c.title}</h3>
-        <p>{c.description}</p>
+        <h3 class="timeline__title portfolio__heading-tertiary">{c.title}</h3>
+        <p class="timeline__description portfolio__paragraph">{c.description}</p>
         <span class="tag">{c.technologies}</span>
       </article>
     ))}

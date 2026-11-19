@@ -18,7 +18,7 @@ export function PortfolioImage({
       {...asset}
       {...props}
       alt={alt}
-      className={className}
+      className={["portfolio__image", className].filter(Boolean).join(" ")}
       loading={eager ? "eager" : "lazy"}
       decoding="async"
       fetchPriority={eager ? "high" : "auto"}
@@ -29,8 +29,8 @@ export function PortfolioImage({
       role="img"
       aria-label={`${alt} — preview not supplied`}
     >
-      <span>{initials(alt)}</span>
-      <small>Project preview unavailable</small>
+      <span className="asset-fallback__label">{initials(alt)}</span>
+      <small className="asset-fallback__note portfolio__note">Project preview unavailable</small>
     </div>
   );
 }

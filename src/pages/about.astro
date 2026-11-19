@@ -20,7 +20,7 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
         title={p.profile.name}
         description={p.profile.role}
       />
-      <div class="wrap about-hero">
+      <div class="about-hero">
         <Asset
           src="/ayoub-about-v4.jpg"
           alt={p.profile.name}
@@ -29,15 +29,15 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
         />
         <div>
           <span class="eyebrow">{p.profile.location}</span>
-          <h2>How I work</h2>
-          <p class="lead">{p.about.story}</p>
-          <div class="actions">
-            <a href={p.about.resumeHref} class="button" download>
+          <h2 class="about-hero__title portfolio__heading-secondary">How I work</h2>
+          <p class="lead portfolio__paragraph">{p.about.story}</p>
+          <div class="about-hero__actions">
+            <a href={p.about.resumeHref} class="button portfolio__link" download>
               Download Resume ↓
             </a>
             <a
               href={p.profile.upwork}
-              class="text-link"
+              class="text-link portfolio__link"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,18 +46,18 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
           </div>
           <div class="education-note">
             <span class="eyebrow">Education</span>
-            <p>{p.about.education}</p>
+            <p class="education-note__description portfolio__paragraph">{p.about.education}</p>
           </div>
-          <p class="small-note">
+          <p class="small-note portfolio__paragraph">
             Currently building: {p.profile.currentlyBuilding}
           </p>
         </div>
       </div>
-      <div class="wrap stats-row">
+      <div class="stats-row">
         {p.about.awards.map((a) => (
-          <div>
-            <strong>{a.value}</strong>
-            <p>{a.label}</p>
+          <div class="stats-row__metric">
+            <strong class="stats-row__value">{a.value}</strong>
+            <p class="stats-row__description portfolio__paragraph">{a.label}</p>
           </div>
         ))}
       </div>
@@ -67,7 +67,7 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
     <ExperienceSection />
     <ToolboxSection />
     <TestimonialsSection />
-    <div class="portfolio-background bottom">
+    <div class="portfolio-background portfolio-background--bottom">
       <CTA />
     </div>
   </div>

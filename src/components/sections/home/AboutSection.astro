@@ -4,7 +4,7 @@ import Asset from "../../portfolio/Asset.astro";
 import Heading from "../../portfolio/Heading.astro";
 ---
 
-<section class="home-about-section section wrap" id="about">
+<section class="home-about-section" id="about">
   <div class="home-about">
     <div>
       <Heading
@@ -12,29 +12,29 @@ import Heading from "../../portfolio/Heading.astro";
         title="About Ayoub"
         subtitle={p.about.homeIntro}
       />
-      <div class="actions">
-        <a href="/about/" class="button">
+      <div class="home-about-section__actions">
+        <a href="/about/" class="button portfolio__link">
           Meet {p.profile.name} →
         </a>
-        <a href={p.about.resumeHref} class="text-link" download>
+        <a href={p.about.resumeHref} class="text-link portfolio__link" download>
           Download Resume ↓
         </a>
       </div>
-      <div class="tags spaced">
+      <div class="tags home-about-section__tags">
         {p.recognition.map((v) => (
-          <span>
+          <span class="tags__label">
             {v.label} · {v.status}
           </span>
         ))}
       </div>
     </div>
-    <figure>
+    <figure class="home-about__figure">
       <Asset
         src="/ayoub-about-v4.jpg"
         alt={`${p.profile.name}, web developer and SEO specialist`}
         class="home-portrait"
       />
-      <figcaption>
+      <figcaption class="home-about__caption">
         {p.profile.name} · {p.profile.location}
       </figcaption>
     </figure>

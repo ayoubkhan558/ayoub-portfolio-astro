@@ -1,15 +1,18 @@
-.footer-column a {
+.site-footer__link {
   padding-block: 10px;
   min-height: 44px;
 }
-.footer-bottom a {
+
+.site-footer__secondary-link {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
 }
-.footer-bottom > div {
+
+.site-footer__links {
   align-items: center;
 }
-.footer-top .brand {
+
+.site-footer__top .brand {
   min-height: 44px;
 }

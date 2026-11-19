@@ -163,8 +163,8 @@ export default function ContactForm({
       aria-busy={isSubmitting}
     >
       <span className="eyebrow">Project brief</span>
-      <h2>What to send.</h2>
-      <p>
+      <h2 className="contact-form__title portfolio__heading-secondary">What to send.</h2>
+      <p className="contact-form__description portfolio__paragraph">
         Give me enough context to price the next step without a long discovery
         call.
       </p>
@@ -181,7 +181,7 @@ export default function ContactForm({
       <div className="form-grid">
         <label className="form-field">
           Name
-          <input
+          <input className="contact-form__input portfolio__input"
             {...register("name")}
             autoComplete="name"
             placeholder="Your name"
@@ -193,7 +193,7 @@ export default function ContactForm({
         </label>
         <label className="form-field">
           Email
-          <input
+          <input className="contact-form__input portfolio__input"
             {...register("email")}
             type="email"
             autoComplete="email"
@@ -207,7 +207,7 @@ export default function ContactForm({
       </div>
       <label className="form-field">
         Subject
-        <input
+        <input className="contact-form__input portfolio__input"
           {...register("_subject")}
           placeholder="Website build estimate"
           required
@@ -218,7 +218,7 @@ export default function ContactForm({
       </label>
       <label className="form-field">
         Project type
-        <select
+        <select className="contact-form__select portfolio__select"
           {...register("projectType")}
           required
           aria-invalid={Boolean(errors.projectType)}
@@ -229,17 +229,17 @@ export default function ContactForm({
         </select>
         {showFieldError("projectType", errors.projectType?.message)}
       </label>
-      <div className="form-grid spaced">
+      <div className="form-grid contact-form__additional-fields">
         <label className="form-field">
           Budget range
-          <select {...register("budgetRange")}>
+          <select className="contact-form__select portfolio__select" {...register("budgetRange")}>
             <option value="">Choose one</option>
             {budgets.map((budget) => <option key={budget}>{budget}</option>)}
           </select>
         </label>
         <label className="form-field">
           Timeline
-          <select {...register("timeline")}>
+          <select className="contact-form__select portfolio__select" {...register("timeline")}>
             <option value="">Choose one</option>
             {timelines.map((timeline) => <option key={timeline}>{timeline}</option>)}
           </select>
@@ -247,7 +247,7 @@ export default function ContactForm({
       </div>
       <label className="form-field">
         Website or reference link
-        <input
+        <input className="contact-form__input portfolio__input"
           {...register("websiteUrl")}
           type="url"
           placeholder="https://"
@@ -258,7 +258,7 @@ export default function ContactForm({
       </label>
       <label className="form-field">
         Project details
-        <textarea
+        <textarea className="contact-form__message portfolio__textarea"
           {...register("message")}
           required
           placeholder="Your goals, current blockers, reference links, and what success looks like…"
@@ -268,20 +268,20 @@ export default function ContactForm({
         {showFieldError("message", errors.message?.message)}
       </label>
       <input
-        className="contact-honeypot"
+        className="contact-honeypot contact-form__input portfolio__input"
         name="_gotcha"
         tabIndex={-1}
         aria-hidden="true"
         autoComplete="off"
       />
-      <button className="button" type="submit" id="send-brief" disabled={isSubmitting}>
+      <button className="button portfolio__button" type="submit" id="send-brief" disabled={isSubmitting}>
         {isSubmitting ? "Sending…" : "Send project brief"}
-        <ArrowUpRight aria-hidden="true" size={18} />
+        <ArrowUpRight className="button__icon" aria-hidden="true" size={18} />
       </button>
-      <p className="consent">
+      <p className="consent contact-form__description portfolio__paragraph">
         By submitting, you agree to the{" "}
-        <a href="/privacy-policy/">privacy policy</a>. Prefer email?{" "}
-        <a href={`mailto:${email}`}>Write directly</a>.
+        <a className="consent__link portfolio__link" href="/privacy-policy/">privacy policy</a>. Prefer email?{" "}
+        <a className="consent__link portfolio__link" href={`mailto:${email}`}>Write directly</a>.
       </p>
     </form>
   );

@@ -1,20 +1,38 @@
+@use "../foundation/breakpoints";
+
 .cta-panel {
   text-align: center;
-  padding-block: 88px;
+  padding-block: 65px;
+
+  @media (min-width: breakpoints.$large) {
+    padding-block: 88px;
+  }
 }
-.cta-panel h2 {
+
+.cta-panel .cta-panel__title {
   max-width: 800px;
   margin: 0 auto 22px;
   font-size: clamp(34px, 4.3vw, 56px);
 }
-.cta-panel > p {
+
+.cta-panel>.cta-panel__description {
   max-width: 740px;
   margin-inline: auto;
 }
-.cta-panel .actions {
+
+.portfolio-cta-section__actions {
   justify-content: center;
 }
+
 .cta-panel .offer {
   margin-top: 30px;
-  font-size: 12px;
+  font-size: var(--text-caption);
+}
+
+.cta-panel .text-link {
+  font-size: 13px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: var(--text-small);
+  }
 }

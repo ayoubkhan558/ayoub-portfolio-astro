@@ -8,19 +8,19 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
 
 <header class="site-header">
   <a
-    class="brand"
+    class="brand portfolio__link"
     href="/"
     aria-label={`a. ${p.profile.brand} — ${p.profile.name} home`}
   >
-    <span class="brand-mark" aria-hidden="true">
+    <span class="brand__mark" aria-hidden="true">
       a.
     </span>
-    <span>{p.profile.brand}</span>
+    <span class="brand__name">{p.profile.brand}</span>
   </a>
-  <nav class="desktop-nav" aria-label="Main navigation">
+  <nav class="site-header__navigation" aria-label="Main navigation">
     {p.navLinks.map((link) => (
       <a
-        class:list={[isActive(link.href) && "active"]}
+        class:list={["portfolio__link", "site-header__link", isActive(link.href) && "site-header__link--active"]}
         href={link.href}
         aria-current={path === link.href ? "page" : undefined}
       >
@@ -28,14 +28,14 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
       </a>
     ))}
   </nav>
-  <div class="header-actions">
+  <div class="site-header__actions">
     <ThemeToggle />
-    <a class="button small header-cta" href="/contact/">
+    <a class="button button--small site-header__cta portfolio__link" href="/contact/">
       Let's talk <ExternalArrow />
     </a>
-    <details class="mobile-menu" id="menu-details">
+    <details class="site-header__menu" id="menu-details">
       <summary
-        class="icon-button menu-toggle"
+        class="icon-button site-header__menu-toggle"
         id="menu-toggle"
         aria-label="Navigation menu"
         aria-controls="mobile-nav"
@@ -53,23 +53,24 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </summary>
-      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <nav id="mobile-nav" class="site-header__mobile-navigation" aria-label="Mobile navigation">
         {p.navLinks.map((link) => (
           <a
+            class:list={["portfolio__link", "site-header__mobile-link", path === link.href && "site-header__mobile-link--current"]}
             href={link.href}
             aria-current={path === link.href ? "page" : undefined}
           >
             {link.label}
           </a>
         ))}
-        <a href="/contact/">Let's talk <ExternalArrow /></a>
+        <a class="site-header__mobile-link portfolio__link" href="/contact/">Let's talk <ExternalArrow /></a>
       </nav>
     </details>
   </div>
 </header>
 <noscript>
-  <style>
-    #theme-toggle {
+  <style is:global>
+    .theme-toggle {
       display: none;
     }
   </style>

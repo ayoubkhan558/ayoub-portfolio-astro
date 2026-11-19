@@ -4,16 +4,16 @@ import p from "../../data/portfolio.json";
 
 <div class="process-grid">
   {p.process.map((s, i) => (
-    <article>
+    <article class="process-grid__step">
       <>
         <span class="step-number">{String(i + 1).padStart(2, "0")}</span>
-        <h3>{s.title}</h3>
-        <p>{s.description}</p>
+        <h3 class="portfolio__heading-tertiary">{s.title}</h3>
+        <p class="portfolio__paragraph">{s.description}</p>
         <div class="metric-row">
           {s.metrics.map((m) => (
             <span>
-              <small>{m.label}</small>
-              <b>{m.value}</b>
+              <small class="metric-row__note portfolio__note">{m.label}</small>
+              <b class="metric-row__value">{m.value}</b>
             </span>
           ))}
         </div>

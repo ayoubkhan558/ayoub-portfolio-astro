@@ -1,189 +1,206 @@
+@use "../foundation/breakpoints";
+
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
+
 .service-card {
   border: 1px solid var(--border);
   border-radius: 22px;
-  padding: 28px;
+  padding: var(--space-7);
   background: var(--card);
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
+
 .service-card.featured {
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklch, var(--primary) 65%, var(--background)),
-    var(--card) 40%
-  );
+  background: linear-gradient(180deg,
+      color-mix(in oklch, var(--primary) 65%, var(--background)),
+      var(--card) 40%);
 }
+
 .service-top {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: var(--space-2);
   align-items: start;
   min-height: 48px;
 }
+
 .service-top .eyebrow {
-  font-size: 10px;
+  font-size: var(--text-caption);
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 10px;
+  }
 }
-.service-card h3 {
+
+.service-card .service-card__title {
   font-size: 26px;
 }
-.service-card p,
-.service-card li {
-  font-size: 14px;
+
+.service-card .service-card__description {
+  font-size: var(--text-small);
 }
+
 .service-price {
   font-size: 24px;
   letter-spacing: -0.04em;
-  margin: 12px 0;
+  margin: var(--space-3) 0;
 }
-.service-price small {
+
+.service-price .service-price__note {
   display: block;
 }
-.service-card details {
-  margin-bottom: 24px;
-  font-size: 14px;
-}
-.service-card summary {
-  min-height: 44px;
-  cursor: pointer;
-}
+
 .service-card .button {
   margin-top: auto;
 }
+
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
-.process-grid article {
-  padding: 32px;
+
+.process-grid__step {
   border-top: 1px dashed var(--border);
+  padding: var(--space-7) 0;
+  border-left: 0 !important;
+
+  @media (min-width: breakpoints.$small) {
+    padding: var(--space-8);
+    border-left: 1px dashed var(--border);
+  }
+}
+
+.process-grid__step:nth-child(3n + 1) {
   border-left: 1px dashed var(--border);
+
+  @media (min-width: breakpoints.$large) {
+    border-left: 0;
+  }
 }
-.process-grid article:nth-child(3n + 1) {
-  border-left: 0;
+
+.process-grid :where(.portfolio__paragraph) {
+  font-size: var(--text-small);
 }
-.process-grid p {
-  font-size: 14px;
-}
+
 .metric-row {
   display: flex;
-  gap: 24px;
+  gap: var(--space-6);
   flex-wrap: wrap;
-  margin-top: 24px;
+  margin-top: var(--space-6);
 }
-.metric-row small {
+
+.metric-row .metric-row__note {
   display: block;
   color: var(--muted-foreground);
   font-size: 11px;
 }
-.metric-row b {
+
+.metric-row__value {
   font-size: 13px;
   font-weight: 500;
 }
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-.why-grid > div {
-  padding: 18px 0;
-  border-bottom: 1px dashed var(--border);
-  font-size: 15px;
-  display: flex;
-  gap: 14px;
-}
+
 .stats-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
-  padding-block: 56px;
+  gap: var(--space-7);
+  padding-block: var(--space-10);
+
+  @media (min-width: breakpoints.$small) {
+    gap: 30px;
+    padding-block: 56px;
+  }
 }
-.stats-row strong {
-  font-size: 52px;
+
+.stats-row .stats-row__value {
   font-weight: 500;
   letter-spacing: -0.05em;
+  font-size: 44px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 52px;
+  }
 }
-.stats-row h3 {
-  font-size: 16px;
-  margin: 0 0 8px;
+
+.stats-row :where(.portfolio__heading-tertiary) {
+  font-size: var(--text-body);
+  margin: 0 0 var(--space-2);
 }
-.stats-row p {
-  font-size: 14px;
+
+.stats-row .stats-row__description {
+  font-size: var(--text-small);
   margin: 0;
 }
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-.quote-card {
-  margin: 0;
-  padding: 28px;
-  background: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-}
-.quote-mark {
-  font-size: 65px;
-  line-height: 0.8;
-  display: block;
-  color: var(--muted-foreground);
-}
-blockquote {
-  margin: 15px 0 28px;
+
+:where(.review-inner__quote, .review-journal__quote, .large-quote__quote) {
+  margin: 15px 0 var(--space-7);
   font-size: 19px;
   line-height: 1.5;
   letter-spacing: -0.025em;
 }
-figcaption {
-  font-size: 14px;
+
+:where(.home-about__caption,
+  .review-journal__person,
+  .review-inner__caption,
+  .showcase-grid__caption,
+  .large-quote__attribution) {
+  font-size: var(--text-small);
 }
-figcaption strong,
-figcaption span {
+
+:where(.large-quote__author, .review-inner__author, .review-journal__author),
+:where(.large-quote__role,
+  .review-inner__role,
+  .review-journal__role,
+  .testimonial__avatar) {
   display: block;
 }
-figcaption span {
+
+:where(.large-quote__role,
+  .review-inner__role,
+  .review-journal__role,
+  .testimonial__avatar) {
   color: var(--muted-foreground);
 }
-.quote-card figcaption {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.quote-card > figcaption {
-  display: block;
-}
-.quote-card .small-note {
-  margin-top: 20px;
-  font-size: 12px;
-}
+
 .avatar {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
 }
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
+
+.service-price {
+  font-size: 24px;
 }
-.expertise-grid article {
-  padding: 22px 0;
-  border-top: 1px dashed var(--border);
-}
-.expertise-grid h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.expertise-grid p {
-  font-size: 14px;
-  margin-top: 8px;
+
+.process-grid__step:nth-child(2n + 1) {
+  border-left: 0;
+
+  @media (min-width: breakpoints.$large) {
+    border-left: 1px dashed var(--border);
+  }
 }

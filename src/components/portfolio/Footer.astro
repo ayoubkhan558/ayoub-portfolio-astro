@@ -5,43 +5,43 @@ import { FooterWordmark } from "../blocks/footer-wordmark";
 ---
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div>
-        <a class="brand" href="/">
-          <span class="brand-mark">a.</span>
-          <span>{p.profile.brand}</span>
+  <div class="site-footer__container">
+    <div class="site-footer__top">
+      <div class="site-footer__identity">
+        <a class="brand portfolio__link" href="/">
+          <span class="brand__mark">a.</span>
+          <span class="brand__name">{p.profile.brand}</span>
         </a>
-        <p>
+        <p class="site-footer__bio portfolio__paragraph">
           {p.profile.role}
           <br />
           {p.profile.location}
         </p>
         <span class="availability">
-          <i></i>
+          <i class="availability__dot"></i>
           {p.profile.availability}
         </span>
       </div>
       {p.footerColumns.map((column) => (
-        <div class="footer-column">
-          <h2>{column.title}</h2>
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading portfolio__heading-secondary">{column.title}</h2>
           {column.links.map((link) => (
-            <a href={link.href}>
+            <a class="site-footer__link portfolio__link" href={link.href}>
               {link.label.replace(/résumé|resume/gi, "Resume")}
             </a>
           ))}
         </div>
       ))}
     </div>
-    <div class="footer-bottom">
+    <div class="site-footer__bottom">
       <span>
         © {new Date().getFullYear()} {p.profile.name}. All rights reserved.
       </span>
-      <div>
-        <a href="/privacy-policy/">Privacy policy</a>
-        <a href="/terms-and-conditions/">Terms</a>
-        <a href={p.profile.github}>GitHub <ExternalArrow /></a>
-        <a href={p.profile.linktree}>All links <ExternalArrow /></a>
+      <div class="site-footer__links">
+        <a class="site-footer__secondary-link portfolio__link" href="/privacy-policy/">Privacy policy</a>
+        <a class="site-footer__secondary-link portfolio__link" href="/terms-and-conditions/">Terms</a>
+        <a class="site-footer__secondary-link portfolio__link" href={p.profile.github}>GitHub <ExternalArrow /></a>
+        <a class="site-footer__secondary-link portfolio__link" href={p.profile.linktree}>All links <ExternalArrow /></a>
       </div>
     </div>
   </div>

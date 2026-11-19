@@ -4,12 +4,12 @@
   justify-content: center;
   gap: 18px;
   min-height: 48px;
-  padding: 12px 22px;
+  padding: var(--space-3) 22px;
   background: var(--primary);
   color: var(--primary-foreground);
   border: 1px solid color-mix(in oklch, var(--foreground) 10%, transparent);
   border-radius: 9px;
-  font-size: 14px;
+  font-size: var(--text-small);
   font-weight: 600;
   transition:
     transform 0.16s,
@@ -19,32 +19,39 @@
   transform: translateY(-2px);
   background: color-mix(in oklch, var(--primary) 85%, var(--foreground) 5%);
 }
-.button.small {
+.button--small {
   min-height: 40px;
-  padding: 8px 15px;
+  padding: var(--space-2) 15px;
 }
-.button.outline {
+.button--outline {
   background: linear-gradient(110deg, var(--background), transparent);
   color: var(--foreground);
   border-color: var(--border);
-  box-shadow: 0 2px 3px #00000006;
+  box-shadow: 0 2px 3px var(--button-shadow-ink);
 }
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--text-small);
   overflow-wrap: anywhere;
 }
 .text-link:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.actions {
+.about-hero__actions,
+.case-detail__actions,
+.hero__actions,
+.home-about-section__actions,
+.page-intro__actions,
+.portfolio-cta-section__actions,
+.project-card__actions,
+.service-detail__actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: var(--space-7);
 }

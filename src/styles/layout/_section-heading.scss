@@ -1,21 +1,43 @@
+@use "../foundation/breakpoints";
+
 .section-heading {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
   align-items: end;
-  margin-bottom: 48px;
+  margin-bottom: var(--space-8);
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px;
+    margin-bottom: var(--space-12);
+  }
 }
-.section-heading h2 {
+
+.section-heading__title {
   margin-bottom: 0;
   max-width: 560px;
+  font-size: 32px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: clamp(28px, 3.2vw, 44px);
+  }
 }
-.section-heading p {
+
+.section-heading__description {
   max-width: 520px;
   margin: 0;
-  font-size: 17px;
+  font-size: var(--text-body);
+
+  @media (min-width: breakpoints.$large) {
+    font-size: 17px;
+  }
 }
-.section-end {
+
+.home-case-studies-section__footer,
+.home-projects-section__footer,
+.home-services-section__footer {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: var(--space-10);
 }

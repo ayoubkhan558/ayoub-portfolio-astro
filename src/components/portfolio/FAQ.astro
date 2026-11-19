@@ -14,9 +14,9 @@ import { FAQ } from "../blocks/faq";
   </style>
   <div class="faq-list">
     {p.faqs.map((f) => (
-      <details name="portfolio-faq">
-        <summary>{f.question}</summary>
-        <p>{f.answer}</p>
+      <details class="faq-list__item" name="portfolio-faq">
+        <summary class="faq-list__question">{f.question}</summary>
+        <p class="faq-list__answer portfolio__paragraph">{f.answer}</p>
       </details>
     ))}
   </div>

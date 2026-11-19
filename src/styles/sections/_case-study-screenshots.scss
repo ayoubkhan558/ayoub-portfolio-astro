@@ -1,12 +1,19 @@
+@use "../foundation/breakpoints";
+
 .screenshot-window {
   display: block;
   overflow: hidden;
   position: relative;
-  height: 460px;
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--card);
+  height: 360px;
+
+  @media (min-width: breakpoints.$medium) {
+    height: 460px;
+  }
 }
+
 .screenshot-window .full-page-image {
   display: block;
   width: 100%;
@@ -16,15 +23,23 @@
   border-radius: 0;
   transition: transform 0.5s ease-out;
 }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .screenshot-window:hover .full-page-image,
-  .screenshot-window:focus-visible .full-page-image {
+
+.screenshot-window:hover .full-page-image,
+.screenshot-window:focus-visible .full-page-image {
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     transform: translateY(var(--screenshot-distance, 0px));
     transition: transform var(--screenshot-duration, 5s) linear;
   }
 }
-@media (min-width: 801px) {
-  .project-drawer .project-body {
+
+.project-drawer .project-body {
+  @media (min-width: breakpoints.$large) {
     padding: 0;
+  }
+}
+
+.screenshot-window .full-page-image {
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }

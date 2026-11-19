@@ -11,32 +11,32 @@ const projects = sortProjectsByLiveStatus(archive.projects);
 ---
 
 <section
-  class="project-archive-section section wrap first-section"
+  class="project-archive-section"
   id="archive"
   data-projects-per-page={siteSettings.projectsPerPage}
 >
   <div class="project-archive__controls">
   <form class="project-toolbar" id="project-filters" role="search">
-    <label for="project-search">
+    <label class="project-toolbar__field" for="project-search">
       Search projects
-      <input
+      <input class="project-toolbar__input portfolio__input"
         id="project-search"
         name="q"
         type="search"
         placeholder="Search name, industry, stack…"
       />
     </label>
-    <label for="platform-filter">
+    <label class="project-toolbar__field" for="platform-filter">
       Platform
-      <select id="platform-filter" name="platform">
+      <select class="project-toolbar__select portfolio__select" id="platform-filter" name="platform">
         {projectPlatformFilters.map((p) => (
           <option value={p.value}>{p.label}</option>
         ))}
       </select>
     </label>
-    <label for="status-filter">
+    <label class="project-toolbar__field" for="status-filter">
       Original project status
-      <select id="status-filter" name="status">
+      <select class="project-toolbar__select portfolio__select" id="status-filter" name="status">
         {projectStatusFilters.map((p) => (
           <option value={p.value}>{p.label}</option>
         ))}
@@ -44,7 +44,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
     </label>
   </form>
   <p
-    class="project-count"
+    class="project-count portfolio__paragraph"
     id="project-count"
     tabindex="-1"
     aria-live="polite"
@@ -63,25 +63,25 @@ const projects = sortProjectsByLiveStatus(archive.projects);
     ))}
   </div>
   <div class="empty-state" id="no-projects" hidden>
-    <h2>No matching projects.</h2>
-    <p>Try a different keyword or clear your filters.</p>
-    <button class="button outline" id="clear-filters">
+    <h2 class="portfolio__heading-secondary">No matching projects.</h2>
+    <p class="portfolio__paragraph">Try a different keyword or clear your filters.</p>
+    <button class="button button--outline portfolio__button" id="clear-filters">
       Clear filters
     </button>
   </div>
   <div class="pagination" id="pagination" hidden>
-    <button type="button" class="button outline" id="prev-page">
+    <button type="button" class="button button--outline pagination__button portfolio__button" id="prev-page">
       ← Previous
     </button>
-    <span id="page-label" aria-live="polite"></span>
-    <button type="button" class="button outline" id="next-page">
+    <span class="pagination__label" id="page-label" aria-live="polite"></span>
+    <button type="button" class="button button--outline pagination__button portfolio__button" id="next-page">
       Next →
     </button>
   </div>
   <div class="project-copy-tools">
     <button
       type="button"
-      class="text-link project-archive__copy"
+      class="text-link project-archive__copy portfolio__button"
       id="open-project-copy"
       aria-haspopup="dialog"
       aria-controls="project-copy-dialog"
@@ -111,29 +111,29 @@ const projects = sortProjectsByLiveStatus(archive.projects);
         <header class="project-copy-header">
           <div>
             <span class="eyebrow">Project link builder</span>
-            <h2 id="project-copy-heading">Copy project links</h2>
+            <h2 class="project-copy-header__title portfolio__heading-secondary" id="project-copy-heading">Copy project links</h2>
           </div>
           <button
             type="button"
-            class="button outline project-copy-close"
+            class="button button--outline project-copy-close portfolio__button"
             id="close-project-copy"
           >
             Close
           </button>
         </header>
         <div class="project-copy-fields">
-          <label for="copy-list-title">
+          <label class="project-copy-fields__field" for="copy-list-title">
             List title
-            <input
+            <input class="portfolio__input"
               id="copy-list-title"
               type="text"
               maxlength="100"
               value="Ayoub's projects"
             />
           </label>
-          <label for="copy-project-platform">
+          <label class="project-copy-fields__field" for="copy-project-platform">
             Project group
-            <select id="copy-project-platform">
+            <select class="portfolio__select" id="copy-project-platform">
               {projectPlatformFilters
                 .filter((filter) => filter.value !== "all")
                 .map((filter, index) => (
@@ -143,46 +143,46 @@ const projects = sortProjectsByLiveStatus(archive.projects);
                 ))}
             </select>
           </label>
-          <label for="copy-project-status">
+          <label class="project-copy-fields__field" for="copy-project-status">
             Project status
-            <select id="copy-project-status">
+            <select class="portfolio__select" id="copy-project-status">
               <option value="Live">Live</option>
               <option value="Offline (Domain Expired)">Expired</option>
               <option value="Redesigned by Client">Redesigned</option>
             </select>
           </label>
-          <label for="copy-output-format">
+          <label class="project-copy-fields__field" for="copy-output-format">
             Output format
-            <select id="copy-output-format">
+            <select class="portfolio__select" id="copy-output-format">
               <option value="detailed">Detailed list</option>
               <option value="markdown">Markdown</option>
               <option value="urls">Links only</option>
             </select>
           </label>
           <div class="project-copy-options">
-            <label>
-              <input id="copy-include-title" type="checkbox" checked />
+            <label class="project-copy-fields__field project-copy-options__field">
+              <input class="project-copy-options__input portfolio__input" id="copy-include-title" type="checkbox" checked />
               Include title
             </label>
-            <label>
-              <input id="copy-include-category" type="checkbox" />
+            <label class="project-copy-fields__field project-copy-options__field">
+              <input class="project-copy-options__input portfolio__input" id="copy-include-category" type="checkbox" />
               Include categories
             </label>
           </div>
           <div class="project-copy-actions">
-            <button type="button" class="button" id="copy-all-projects">
+            <button type="button" class="button project-copy-actions__button portfolio__button" id="copy-all-projects">
               Copy all
             </button>
             <button
               type="button"
-              class="button outline"
+              class="button button--outline project-copy-actions__button portfolio__button"
               id="copy-project-group"
             >
               Copy group
             </button>
           </div>
           <p
-            class="project-copy-status"
+            class="project-copy-status portfolio__paragraph"
             id="project-copy-status"
             aria-live="polite"
             aria-atomic="true"
@@ -202,7 +202,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
         display: none;
       }
     </style>
-    <p>
+    <p class="portfolio__paragraph">
       All projects are shown. Enable JavaScript to use search, filters, and
       pagination.
     </p>

@@ -1,44 +1,81 @@
+@use "../foundation/breakpoints";
+
 .site-footer {
   padding-top: 65px;
   overflow: hidden;
 }
-.footer-top {
+
+.site-footer__top {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 48px;
-  padding-bottom: 48px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-7);
+  }
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: 2fr repeat(3, 1fr);
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    gap: var(--space-12);
+  }
+
+  padding-bottom: var(--space-12);
 }
-.footer-top p {
+
+.site-footer__bio {
   font-size: 13px;
   max-width: 260px;
   margin-top: 18px;
 }
-.footer-column h2 {
-  font-size: 14px;
+
+.site-footer__heading {
+  font-size: var(--text-small);
   letter-spacing: 0;
   font-weight: 600;
   margin: 6px 0 15px;
 }
-.footer-column a {
+
+.site-footer__link {
   display: block;
   font-size: 13px;
   color: var(--muted-foreground);
   padding-block: 6px;
 }
-.footer-bottom {
+
+.site-footer__bottom {
   border-top: 1px dashed var(--border);
-  padding-top: 24px;
+  padding-top: var(--space-6);
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  font-size: 11px;
+  gap: var(--space-5);
+  flex-direction: column;
+  font-size: 13px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: var(--text-small);
+  }
+
+  @media (min-width: breakpoints.$large) {
+    flex-direction: row;
+  }
+
   color: var(--muted-foreground);
 }
-.footer-bottom > div {
+
+.site-footer__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: var(--space-3);
+
+  @media (min-width: breakpoints.$small) {
+    gap: 18px;
+  }
 }
+
 .footer-wordmark {
   font-size: clamp(58px, 13vw, 180px);
   font-weight: 700;
@@ -47,4 +84,20 @@
   margin-top: 60px;
   color: color-mix(in oklch, var(--foreground) 10%, var(--background));
   white-space: nowrap;
+}
+
+.site-footer__identity {
+  grid-column: 1 / -1;
+
+  @media (min-width: breakpoints.$large) {
+    grid-column: auto;
+  }
+}
+
+.site-footer__column:last-child {
+  grid-column: 1 / -1;
+
+  @media (min-width: breakpoints.$small) {
+    grid-column: auto;
+  }
 }

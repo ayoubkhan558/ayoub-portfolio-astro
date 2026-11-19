@@ -13,7 +13,7 @@ function ReviewPortrait({ src }: { src: string | null }) {
   return (
     <span className="testimonial__avatar" aria-hidden="true">
       <UserRound size={24} />
-      {src && <img src={src} alt="" width="48" height="48" loading="lazy"
+      {src && <img className="portfolio__image" src={src} alt="" width="48" height="48" loading="lazy"
         onError={(event) => { event.currentTarget.hidden = true; }} />}
     </span>
   );
@@ -48,7 +48,7 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
           <figure className="review-journal__entry" key={review.id} id={review.id}>
             <figcaption className="review-journal__person">
               <ReviewPortrait src={review.avatar} />
-              <div><strong>{review.name}</strong><p>{review.role}</p></div>
+              <div><strong className="review-journal__author">{review.name}</strong><p className="review-journal__role portfolio__paragraph">{review.role}</p></div>
             </figcaption>
             <blockquote className="review-journal__quote">{review.quote}</blockquote>
           </figure>
@@ -58,7 +58,7 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
         {featured.map(renderQuote)}
         {remaining.length > 0 && (
           <details className="review-journal__more">
-            <summary>Read {remaining.length} more testimonials</summary>
+            <summary className="review-journal__toggle">Read {remaining.length} more testimonials</summary>
             {remaining.map(renderQuote)}
           </details>
         )}
@@ -80,21 +80,21 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
           >
             <Card className="testimonial-card">
               <CardContent className="review-inner">
-                <figure id={t.id}>
+                <figure className="review-inner__figure" id={t.id}>
                   <Quote
                     className="review-quote-icon"
                     size={28}
                     aria-hidden="true"
                   />
-                  <blockquote>{t.quote}</blockquote>
-                  <figcaption>
+                  <blockquote className="review-inner__quote">{t.quote}</blockquote>
+                  <figcaption className="review-inner__caption">
                     <ReviewPortrait src={t.avatar} />
                     <div>
-                      <strong>{t.name}</strong>
-                      <span>{t.role}</span>
+                      <strong className="review-inner__author">{t.name}</strong>
+                      <span className="review-inner__role">{t.role}</span>
                     </div>
                   </figcaption>
-                  {t.review && <p className="review-note">{t.review}</p>}
+                  {t.review && <p className="review-note portfolio__paragraph">{t.review}</p>}
                 </figure>
               </CardContent>
             </Card>
@@ -102,8 +102,8 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
         ))}
       </CarouselContent>
       <div className="slider-controls reviews-slider__controls" role="group" aria-label="Testimonial navigation">
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="reviews-slider__arrow" />
+        <CarouselNext className="reviews-slider__arrow" />
       </div>
     </Carousel>
   );

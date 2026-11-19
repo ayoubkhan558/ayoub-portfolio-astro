@@ -1,14 +1,19 @@
-.portfolio-faq [data-slot="accordion-trigger"] {
+@use "../foundation/breakpoints";
+
+.portfolio-faq .accordion__trigger {
   letter-spacing: normal;
   font-weight: 500;
 }
+
 .home-about .section-heading {
   display: block;
 }
-.home-about .section-heading > p {
+
+.home-about .section-heading__description {
   max-width: 56ch;
-  margin-top: 20px;
+  margin-top: var(--space-5);
 }
+
 .tool-monogram {
   display: flex;
   width: 40px;
@@ -18,27 +23,26 @@
   background: var(--muted);
   border: 1px solid var(--border);
   border-radius: 8px;
-  font-size: 14px;
+  font-size: var(--text-small);
 }
+
 .form-message {
-  margin-block: 20px;
+  margin-block: var(--space-5);
 }
-.project-media .project-status.is-legacy {
-  background: #faf3e6;
-  color: #76501a;
-  border-color: #d9c49d;
-}
-.faq-introduction h2 {
-  margin-top: 16px;
+
+.portfolio-faq__title {
+  margin-top: var(--space-4);
   line-height: 1.15;
 }
-.faq-introduction p {
-  margin-top: 24px;
-  font-size: 16px;
+
+.portfolio-faq__description {
+  margin-top: var(--space-6);
+  font-size: var(--text-body);
   line-height: 1.6;
 }
-@media (min-width: 1024px) {
-  .faq-introduction {
+
+.faq-introduction {
+  @media (min-width: breakpoints.$wide) {
     top: 32px;
     align-self: start;
   }

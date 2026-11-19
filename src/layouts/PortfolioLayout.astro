@@ -36,7 +36,7 @@ const schema = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="portfolio">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -91,17 +91,17 @@ const schema = {
       }
     </script>
   </head>
-  <body id="page-top">
+  <body class="portfolio__body" id="page-top">
     <noscript>
-      <style>
-        [data-slot="carousel-content"] {
+      <style is:global>
+        .carousel__viewport {
           overflow-x: auto !important;
         }
-        [data-slot="carousel-content"] > div {
+        .carousel__track {
           width: max-content;
           max-width: none;
         }
-        [data-slot="carousel-item"] {
+        .carousel__slide {
           width: min(320px, 85vw);
           flex-basis: auto !important;
         }
@@ -110,7 +110,7 @@ const schema = {
         }
       </style>
     </noscript>
-    <a href="#main" class="skip-link">
+    <a href="#main" class="skip-link portfolio__link">
       Skip to content
     </a>
     {!notFound && <Header />}

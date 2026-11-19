@@ -1,19 +1,32 @@
+@use "../foundation/breakpoints";
+
 .case-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
+
 .case-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 22px;
   overflow: hidden;
 }
+
 .case-image-link {
   display: block;
   position: relative;
   overflow: hidden;
 }
+
 .case-image {
   aspect-ratio: 1.35;
   width: 100%;
@@ -21,9 +34,11 @@
   object-position: top;
   transition: transform 0.3s;
 }
+
 .case-card:hover .case-image {
   transform: scale(1.025);
 }
+
 .round-arrow {
   position: absolute;
   bottom: 15px;
@@ -37,66 +52,115 @@
   font-size: 22px;
   border: 1px solid var(--border);
 }
+
 .case-body {
-  padding: 25px;
+  padding: var(--space-6);
+
+  @media (min-width: breakpoints.$small) {
+    padding: 25px;
+  }
 }
-.case-body h3 {
+
+.case-body .case-body__title {
   margin-top: 18px;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-3);
   font-size: 24px;
 }
-.case-body p {
-  font-size: 14px;
+
+.case-body .case-body__description {
+  font-size: var(--text-small);
 }
+
 .case-result {
   border-top: 1px dashed var(--border);
-  padding-top: 16px;
+  padding-top: var(--space-4);
   margin: 18px 0;
-  font-size: 14px;
+  font-size: var(--text-small);
   font-weight: 500;
 }
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
 }
-.tags span,
+
+.tags .tags__label,
 .tag {
   display: inline-block;
   font-size: 11px;
   line-height: 1.6;
-  padding: 4px 9px;
+  padding: var(--space-1) 9px;
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--muted-foreground);
   overflow-wrap: anywhere;
 }
-.two-grid,
-.three-grid {
+
+.about-story-section__columns,
+.case-study-challenges-section__columns,
+.case-study-implementation-section__columns,
+.legal-policy__columns,
+.about-story-section__cards,
+.home-problems-section__cards,
+.service-detail__cards,
+.services-niches-section__cards,
+.services-working-together-section__cards {
   display: grid;
-  gap: 32px;
+  gap: var(--space-8);
 }
-.two-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+.about-story-section__columns,
+.case-study-challenges-section__columns,
+.case-study-implementation-section__columns,
+.legal-policy__columns {
+  gap: var(--space-7);
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: breakpoints.$large) {
+    gap: var(--space-8);
+  }
 }
-.three-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+.about-story-section__cards,
+.home-problems-section__cards,
+.service-detail__cards,
+.services-niches-section__cards,
+.services-working-together-section__cards {
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
+
 .plain-card {
   padding: 30px;
   border: 1px solid var(--border);
   border-radius: 20px;
   background: var(--card);
 }
-.plain-card p:last-child {
+
+.plain-card__description:last-child {
   margin-bottom: 0;
 }
-.plain-card h3 {
+
+.plain-card__title {
   font-size: 23px;
 }
+
 .linked-card:hover {
   background: var(--muted);
 }
+
 .step-number {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -104,18 +168,26 @@
   display: block;
   margin-bottom: 25px;
 }
+
 .check-list {
   list-style: none;
   margin: 22px 0;
   padding: 0;
 }
-.check-list li {
+
+.check-list__item {
   position: relative;
   padding: 9px 0 9px 25px;
   color: var(--muted-foreground);
   line-height: 1.55;
+  font-size: var(--text-body);
+
+  @media (min-width: breakpoints.$small) {
+    font-size: inherit;
+  }
 }
-.check-list li:before {
+
+.check-list__item:before {
   content: "✓";
   position: absolute;
   left: 0;
@@ -123,7 +195,8 @@
   color: var(--foreground);
   font-size: 13px;
 }
+
 .industries {
   justify-content: center;
-  margin-top: 48px;
+  margin-top: var(--space-12);
 }

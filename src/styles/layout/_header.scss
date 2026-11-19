@@ -1,53 +1,90 @@
+@use "../foundation/breakpoints";
+
 .site-header {
   position: absolute;
   z-index: 50;
   left: 50%;
   transform: translateX(-50%);
-  top: 38px;
-  width: min(960px, calc(100% - 60px));
+  top: 24px;
+  width: calc(100% - 40px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 10px 16px 10px 20px;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3) var(--space-2) 18px;
   border: 1px solid var(--border);
   border-radius: 40px;
   background: color-mix(in oklch, var(--background) 78%, transparent);
   backdrop-filter: blur(18px);
+
+  @media (min-width: breakpoints.$small) {
+    top: 28px;
+    padding: 10px var(--space-4) 10px var(--space-5);
+  }
+
+  @media (min-width: breakpoints.$large) {
+    top: 38px;
+    width: min(960px, calc(100% - 60px));
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    gap: var(--space-5);
+  }
 }
+
 .brand {
+  margin-top: -5px;
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font-size: 13px;
+  font-size: var(--text-caption);
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 13px;
+  }
+
   font-weight: 700;
   letter-spacing: -0.03em;
   white-space: nowrap;
 }
-.brand-mark {
+
+.brand__mark {
   font-size: 32px;
   line-height: 1;
   letter-spacing: -0.07em;
 }
-.desktop-nav {
-  display: flex;
+
+.site-header__navigation {
+  display: none;
   align-items: center;
-  gap: 22px;
+  gap: 14px;
+
+  @media (min-width: breakpoints.$large) {
+    display: flex;
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    gap: 22px;
+  }
 }
-.desktop-nav a {
-  font-size: 14px;
+
+.site-header__link {
+  font-size: var(--text-small);
   min-height: 44px;
   display: flex;
   align-items: center;
 }
-.desktop-nav a.active {
+
+.site-header__link--active {
   color: var(--muted-foreground);
 }
-.header-actions {
+
+.site-header__actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
 }
+
 .icon-button {
   display: grid;
   place-items: center;
@@ -58,6 +95,7 @@
   border-radius: 50%;
   font-size: 23px;
 }
+
 .icon-button:hover {
   background: var(--muted);
 }

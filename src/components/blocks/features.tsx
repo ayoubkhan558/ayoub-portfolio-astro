@@ -20,7 +20,7 @@ export function Features({
           <Card className="case-card">
             <a
               href={s.listing.href}
-              className="case-card__link"
+              className="case-card__link portfolio__link"
               aria-labelledby={`case-title-${s.slug}`}
             >
               <div className="case-image-link">
@@ -46,8 +46,8 @@ export function Features({
                   </Badge>
                 ))}
               </div>
-              <h3 id={`case-title-${s.slug}`}>{s.listing.title}</h3>
-              <p>{s.listing.description}</p>
+              <h3 className="case-body__title portfolio__heading-tertiary" id={`case-title-${s.slug}`}>{s.listing.title}</h3>
+              <p className="case-body__description portfolio__paragraph">{s.listing.description}</p>
               <div className="case-result">{s.listing.result}</div>
               <span className="text-link card-action">
                 Read the case study

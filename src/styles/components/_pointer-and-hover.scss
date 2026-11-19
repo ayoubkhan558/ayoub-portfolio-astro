@@ -13,27 +13,37 @@
 }
 
 // Hover gives cards a visual response without implying that static cards are links.
-@media (hover: hover) and (pointer: fine) {
-  :is(.testimonial-card, .review-journal__entry, .tool-chip, .facts-grid article):hover {
+:is(.testimonial-card, .review-journal__entry, .tool-chip):hover {
+  @media (hover: hover) and (pointer: fine) {
     background: var(--link-accent-soft);
-    border-color: var(--link-accent);
-  }
-
-  .selected-work .selected-card:hover {
     border-color: var(--link-accent);
   }
 }
 
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  :is(.testimonial-card, .review-journal__entry, .tool-chip, .facts-grid article) {
-    transition: background-color 180ms ease, border-color 180ms ease;
+.selected-card:hover {
+  @media (hover: hover) and (pointer: fine) {
+    border-color: var(--link-accent);
   }
+}
 
-  .selected-work .selected-image {
+.testimonial-card,
+.review-journal__entry,
+.tool-chip {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease;
+  }
+}
+
+.selected-card__image {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
     transition: transform 220ms ease;
   }
+}
 
-  .selected-work .selected-card:is(:hover, :focus-within) .selected-image {
+.selected-card:is(:hover, :focus-within) .selected-card__image {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
     transform: scale(1.035);
   }
 }

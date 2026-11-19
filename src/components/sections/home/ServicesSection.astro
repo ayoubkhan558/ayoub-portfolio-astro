@@ -4,7 +4,7 @@ import Heading from "../../portfolio/Heading.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="home-services-section section wrap" id="services">
+<section class="home-services-section" id="services">
   <Heading
     label="Solutions"
     title="What you can hire me for"
@@ -14,8 +14,8 @@ import p from "../../../data/portfolio.json";
     services={p.services.filter((s) => s.featured).slice(0, 3)}
     compact
   />
-  <div class="section-end">
-    <a href="/services/" class="button outline">
+  <div class="home-services-section__footer">
+    <a href="/services/" class="button button--outline portfolio__link">
       View all services →
     </a>
   </div>

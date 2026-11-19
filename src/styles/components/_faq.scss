@@ -2,32 +2,29 @@
   max-width: 850px;
   margin: auto;
 }
-.faq-list details {
+
+.faq-list__item {
   border-bottom: 1px solid var(--border);
-  padding: 0 4px;
+  padding: 0 var(--space-1);
 }
-.faq-list summary {
+
+.faq-list__question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: var(--space-6);
   cursor: pointer;
   list-style: none;
   min-height: 80px;
   font-size: 18px;
   font-weight: 500;
 }
-.faq-list summary::-webkit-details-marker {
+
+.faq-list__question::-webkit-details-marker {
   display: none;
 }
-.faq-list summary span {
-  font-size: 25px;
-  font-weight: 400;
-}
-.faq-list details[open] summary span {
-  transform: rotate(45deg);
-}
-.faq-list p {
+
+.faq-list__answer {
   max-width: 740px;
-  padding-bottom: 16px;
+  padding-bottom: var(--space-4);
 }

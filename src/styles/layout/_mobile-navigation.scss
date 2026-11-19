@@ -1,38 +1,50 @@
-.menu-toggle {
+@use "../foundation/breakpoints";
+
+.site-header__menu-toggle {
+  display: grid;
+
+  @media (min-width: breakpoints.$large) {
+    display: none;
+  }
+}
+
+.site-header__mobile-navigation[hidden] {
   display: none;
 }
-.mobile-nav[hidden] {
-  display: none;
-}
-.mobile-nav {
+
+.site-header__mobile-navigation {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: var(--space-5);
   border-radius: 20px;
   background: var(--background);
   border: 1px solid var(--border);
-  box-shadow: 0 12px 30px #00000012;
+  box-shadow: 0 12px 30px var(--menu-shadow-ink);
 }
-.mobile-nav a {
+
+.site-header__mobile-link {
   display: block;
-  padding: 12px 8px;
+  padding: var(--space-3) var(--space-2);
   border-bottom: 1px solid var(--border);
 }
+
 .skip-link {
   position: fixed;
   top: -100px;
   left: 16px;
   z-index: 100;
-  padding: 12px;
+  padding: var(--space-3);
   background: var(--background);
   border: 2px solid var(--foreground);
   border-radius: 8px;
 }
+
 .skip-link:focus {
   top: 12px;
 }
+
 :focus-visible {
   outline: 2px solid var(--foreground);
   outline-offset: 5px;

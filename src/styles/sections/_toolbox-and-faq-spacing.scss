@@ -1,69 +1,50 @@
+@use "../foundation/breakpoints";
+
 /* Toolbox and proof sections share the same editorial rhythm across breakpoints. */
-.about-toolbox-section .compact-toolbox article {
-  grid-template-columns: minmax(140px, 0.28fr) minmax(0, 1fr);
-  align-items: start;
-  gap: 24px;
-}
-.about-toolbox-section .compact-toolbox article > div {
-  align-items: baseline;
-}
-.about-toolbox-section .compact-toolbox ul {
-  align-items: flex-start;
-}
-.about-toolbox-section .compact-toolbox li {
-  max-width: 100%;
-  overflow-wrap: anywhere;
-}
+
 .about-toolbox-section .skills-title {
-  padding-top: 32px;
   border-top: 1px solid var(--border);
+  margin-top: 36px;
+  padding-top: var(--space-6);
+
+  @media (min-width: breakpoints.$medium) {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+  }
 }
-.about-toolbox-section .skills-title h3,
-.about-toolbox-section .skills-title p {
+
+.about-toolbox-section .skills-title .skills-title__title,
+.about-toolbox-section .skills-title :where(.portfolio__paragraph) {
   margin-bottom: 0;
 }
+
 .about-toolbox-section .marquee-toolbar {
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  @media (min-width: breakpoints.$medium) {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-4);
+  }
 }
+
 .home-testimonials-section .reviews-slider,
 .about-testimonials .reviews-slider {
   min-width: 0;
 }
+
 .portfolio-faq {
   align-items: start;
-  column-gap: clamp(40px, 8vw, 112px);
+  column-gap: clamp(var(--space-10), 8vw, 112px);
   row-gap: 36px;
 }
-.portfolio-faq > :last-child {
+
+.portfolio-faq> :last-child {
   min-width: 0;
 }
-.portfolio-faq [data-slot="accordion-trigger"] {
+
+.portfolio-faq .accordion__trigger {
   overflow-wrap: anywhere;
-}
-@media (max-width: 800px) {
-  .about-toolbox-section .compact-toolbox article {
-    grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
-    gap: 18px;
-  }
-}
-@media (max-width: 600px) {
-  .about-toolbox-section .compact-toolbox article {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .about-toolbox-section .compact-toolbox article > div {
-    gap: 12px;
-  }
-  .about-toolbox-section .skills-title {
-    margin-top: 36px;
-    padding-top: 24px;
-  }
-  .about-toolbox-section .marquee-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .about-toolbox-section .tool-chip {
-    padding: 12px 14px;
-  }
 }

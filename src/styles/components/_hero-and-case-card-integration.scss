@@ -1,59 +1,93 @@
+@use "../foundation/breakpoints";
+
 .hero-right {
   position: relative;
   border-left: 0;
+  border-top: 1px dashed var(--border);
+  display: grid;
+  flex-wrap: wrap;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: space-between;
+  padding-left: 0;
+  padding-top: var(--space-7);
+
+  @media (min-width: breakpoints.$small) {
+    gap: var(--space-5);
+  }
+
+  @media (min-width: breakpoints.$large) {
+    border-top: 0;
+    display: block;
+    flex-wrap: nowrap;
+    gap: normal;
+    grid-template-columns: none;
+    justify-content: normal;
+    padding-left: 26px;
+    padding-top: 0;
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    padding-left: 42px;
+  }
 }
-.hero-divider {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  opacity: 0.35;
-}
-.hero-metric .metric-label {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--foreground);
-  margin-bottom: 4px;
-}
+
 .hero-project {
-  height: auto;
-  aspect-ratio: 16/9;
   max-height: 650px;
   object-fit: contain;
   background: var(--muted);
-  padding: 14px;
+  aspect-ratio: 16/10;
+  height: auto;
+  padding: var(--space-2);
+
+  @media (min-width: breakpoints.$small) {
+    aspect-ratio: 16/9;
+    padding: 14px;
+  }
 }
+
 .case-card-shell {
   min-width: 0;
 }
-.case-card[data-slot="card"] {
+
+.case-card.ui-card {
   height: 100%;
   padding: 0;
   gap: 0;
   box-shadow: none;
 }
-.case-body[data-slot="card-content"] {
+
+.case-body.ui-card__content {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 24px;
+  padding: var(--space-6);
 }
-.case-body > .text-link {
+
+.case-body>.text-link {
   margin-top: auto;
 }
+
 .case-result {
   margin-top: auto;
 }
+
 .case-body .tags {
   margin-bottom: 0;
 }
-.case-body h3 {
+
+.case-body .case-body__title {
   line-height: 1.2;
 }
+
 .case-image {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1.35;
   object-fit: cover;
+}
+
+.case-image {
+  aspect-ratio: 1.35;
 }

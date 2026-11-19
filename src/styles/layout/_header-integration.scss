@@ -1,35 +1,58 @@
+@use "../foundation/breakpoints";
+
 .site-header {
   align-items: center;
 }
-.mobile-menu {
-  display: none;
+
+.site-header__menu {
+  display: block;
   position: static;
+
+  @media (min-width: breakpoints.$large) {
+    display: none;
+  }
 }
-.mobile-menu summary {
+
+.site-header__menu-toggle {
   list-style: none;
 }
-.mobile-menu summary::-webkit-details-marker {
+
+.site-header__menu-toggle::-webkit-details-marker {
   display: none;
 }
-.mobile-menu[open] .menu-toggle {
+
+.site-header__menu[open] .site-header__menu-toggle {
   background: var(--muted);
 }
-.mobile-menu .mobile-nav {
+
+.site-header__menu .site-header__mobile-navigation {
   max-height: calc(100dvh - 140px);
   overflow-y: auto;
   overscroll-behavior: contain;
 }
-.mobile-nav a[aria-current="page"] {
+
+.site-header__mobile-link--current {
   font-weight: 700;
   background: var(--muted);
   border-radius: 7px;
 }
+
 .theme-sun {
   display: none;
 }
+
 .dark .theme-sun {
   display: block;
 }
+
 .dark .theme-moon {
   display: none;
+}
+
+.site-header__cta.button {
+  display: none;
+
+  @media (min-width: breakpoints.$large) {
+    display: inline-flex;
+  }
 }

@@ -1,9 +1,11 @@
+@use "../foundation/breakpoints";
+
 .reviews-slider__controls {
   justify-content: center;
-  margin-top: 20px;
+  margin-top: var(--space-5);
 }
 
-.reviews-slider .reviews-slider__controls button {
+.reviews-slider .reviews-slider__arrow {
   display: grid;
   place-items: center;
   padding: 0;
@@ -11,7 +13,10 @@
   border: 1px solid var(--muted-foreground);
   background: var(--card);
   color: var(--foreground);
-  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
 
   &:enabled:is(:hover, :focus-visible) {
     background: var(--link-accent-soft);
@@ -32,25 +37,25 @@
 // The About page pairs the speaker and quote in an editorial list.
 .review-journal__entry {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 16px clamp(20px, 5vw, 64px);
-  padding: clamp(20px, 4vw, 40px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4) clamp(var(--space-5), 5vw, 64px);
+  padding: clamp(var(--space-5), 4vw, var(--space-10));
   margin: 0;
   border-top: 1px solid var(--border);
 
-  @media (max-width: 650px) {
-    grid-template-columns: minmax(0, 1fr);
+  @media (min-width: breakpoints.$medium) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
 }
 
 .review-journal__person {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: var(--space-3);
 
-  p {
-    margin: 4px 0 0;
-    font-size: 14px;
+  .review-journal__role {
+    margin: var(--space-1) 0 0;
+    font-size: var(--text-small);
   }
 }
 
@@ -63,8 +68,8 @@
 .review-journal__more {
   border-block: 1px solid var(--border);
 
-  > summary {
-    padding: 16px 20px;
+  .review-journal__toggle {
+    padding: var(--space-4) var(--space-5);
     color: var(--link-accent);
     cursor: pointer;
   }

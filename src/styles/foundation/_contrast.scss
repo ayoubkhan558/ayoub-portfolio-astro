@@ -1,25 +1,37 @@
+@use "../foundation/breakpoints";
+
 /* Visible field boundaries on both themes, independent of the subtle card borders. */
-.project-toolbar input,
-.project-toolbar select,
-.contact-form input:not([name="_gotcha"]),
-.contact-form select,
-.contact-form textarea {
+.project-toolbar .project-toolbar__input,
+.project-toolbar .project-toolbar__select,
+.contact-form .contact-form__input:not([name="_gotcha"]),
+.contact-form .contact-form__select,
+.contact-form .contact-form__message {
   border-color: var(--muted-foreground);
 }
 
 .footer-wordmark {
-  color: #8a8a8a;
-}
-.dark .footer-wordmark {
-  color: #777;
+  color: var(--wordmark-ink);
+  font-size: clamp(33px, 11.8vw, 65px);
+  margin-top: 35px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: clamp(58px, 13vw, 180px);
+    margin-top: 60px;
+  }
 }
 
 /* Fallback tiles must stay legible even inside brand/logo tiles. */
 .asset-fallback {
-  color: #444 !important;
-  background: linear-gradient(145deg, #eee8d7, #f4f4f4) !important;
+  color: var(--fallback-ink) !important;
+  background: var(--fallback-surface) !important;
 }
-.dark .asset-fallback {
-  color: #ddd !important;
-  background: linear-gradient(145deg, #353329, #202020) !important;
+
+.project-toolbar .project-toolbar__select {
+  font-size: 13px;
+  padding-inline: 10px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 15px;
+    padding-inline: 14px;
+  }
 }

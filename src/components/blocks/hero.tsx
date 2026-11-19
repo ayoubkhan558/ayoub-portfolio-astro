@@ -16,27 +16,27 @@ export function Hero({
   return (
     <>
       <section
-        className="home-hero-section hero wrap"
+        className="home-hero-section hero"
         aria-labelledby="hero-heading"
       >
         <div className="hero-copy">
           <span className="availability">
-            <i aria-hidden="true" />
+            <i className="availability__dot" aria-hidden="true" />
             {data.profile.availability}
           </span>
-          <h1 id="hero-heading">
+          <h1 className="hero__title portfolio__heading-primary" id="hero-heading">
             {data.hero.headlineLineOne} {data.hero.headlineLineTwo}
           </h1>
-          <p className="lead">{data.hero.subheadline}</p>
-          <div className="actions">
+          <p className="lead portfolio__paragraph">{data.hero.subheadline}</p>
+          <div className="hero__actions">
             <Button asChild className="button">
-              <a href="/contact/">
+              <a className="portfolio__link" href="/contact/">
                 {data.hero.primaryCta}
-                <ArrowUpRight aria-hidden="true" />
+                <ArrowUpRight className="button__icon" aria-hidden="true" />
               </a>
             </Button>
-            <Button asChild variant="outline" className="button outline">
-              <a href="/case-studies/">
+            <Button asChild variant="outline" className="button button--outline">
+              <a className="portfolio__link" href="/case-studies/">
                 {data.hero.secondaryCta}
                 <ArrowRight aria-hidden="true" />
               </a>
@@ -56,7 +56,7 @@ export function Hero({
           <div className="hero-profile-top">
             <span className="eyebrow">Independent web developer</span>
             <span className="profile-status">
-              <i aria-hidden="true" />
+              <i className="profile-status__dot" aria-hidden="true" />
               Available
             </span>
           </div>
@@ -69,45 +69,45 @@ export function Hero({
             />
             <div>
               <span className="eyebrow">Build. Improve. Grow.</span>
-              <h2>{data.profile.name}</h2>
-              <p className="hero-profile-role">
+              <h2 className="hero-profile-identity__title portfolio__heading-secondary">{data.profile.name}</h2>
+              <p className="hero-profile-role hero-profile-identity__description portfolio__paragraph">
                 Web Developer & SEO Specialist
               </p>
-              <p>{data.profile.location}</p>
+              <p className="hero-profile-identity__description portfolio__paragraph">{data.profile.location}</p>
             </div>
           </div>
           <div className="hero-capabilities">
-            <span>React & Next.js</span>
-            <span>WordPress</span>
-            <span>Full-cycle SEO</span>
+            <span className="hero-capabilities__label">React & Next.js</span>
+            <span className="hero-capabilities__label">WordPress</span>
+            <span className="hero-capabilities__label">Full-cycle SEO</span>
           </div>
           <div className="hero-profile-metrics">
             {data.hero.trustMetrics.map((m) => (
-              <div key={m.label}>
-                <strong>
+              <div className="hero-profile__metric" key={m.label}>
+                <strong className="hero-profile-metrics__value">
                   {m.value}
-                  <small>{m.unit}</small>
+                  <small className="hero-profile-metrics__note portfolio__note">{m.unit}</small>
                 </strong>
-                <span>{m.label}</span>
+                <span className="hero-profile-metrics__label">{m.label}</span>
               </div>
             ))}
           </div>
           <div className="hero-profile-bottom">
             <span>{data.profile.name}</span>
-            <a className="text-link" href="/about/">
+            <a className="text-link portfolio__link" href="/about/">
               Meet Ayoub
               <ArrowRight aria-hidden="true" size={16} />
             </a>
           </div>
         </aside>
       </section>
-      <div className="hero-showcase wrap" hidden>
+      <div className="hero-showcase" hidden>
         <div className="browser-bar" aria-hidden="true">
-          <span className="browser-dots">● ● ●</span>
-          <span>Selected work · built with care</span>
-          <span>{data.profile.brand}</span>
+          <span className="browser-dots browser-bar__label">● ● ●</span>
+          <span className="browser-bar__label">Selected work · built with care</span>
+          <span className="browser-bar__label">{data.profile.brand}</span>
         </div>
-        <a
+        <a className="portfolio__link"
           href={featured.listing.href}
           aria-label={`Explore ${featured.client}`}
         >
@@ -121,11 +121,11 @@ export function Hero({
         <div className="showcase-caption">
           <div>
             <span className="eyebrow">Featured project / 01</span>
-            <strong>{featured.client}</strong>
+            <strong className="showcase-caption__value">{featured.client}</strong>
           </div>
-          <a href={featured.listing.href} className="text-link">
+          <a href={featured.listing.href} className="text-link portfolio__link">
             Explore the case study
-            <ArrowUpRight aria-hidden="true" size={16} />
+            <ArrowUpRight className="button__icon" aria-hidden="true" size={16} />
           </a>
         </div>
       </div>

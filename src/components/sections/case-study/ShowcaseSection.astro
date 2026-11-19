@@ -1,22 +1,24 @@
 ---
 import Asset from "../../portfolio/Asset.astro";
-const { study } = Astro.props;
+import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
+interface Props { study: CaseStudyDetailData }
+const { pageShowcase } = Astro.props.study;
 ---
 
-<section class="case-study-showcase-section section wrap">
+{pageShowcase && <section class="case-study-showcase-section">
   <div class="section-heading">
     <div>
-      <span class="eyebrow">{study.pageShowcase.label}</span>
-      <h2>{study.pageShowcase.title}</h2>
+      <span class="eyebrow">{pageShowcase.label}</span>
+      <h2 class="section-heading__title portfolio__heading-secondary">{pageShowcase.title}</h2>
     </div>
-    <p>{study.pageShowcase.text}</p>
+    <p class="section-heading__description portfolio__paragraph">{pageShowcase.text}</p>
   </div>
   <div class="showcase-grid">
-    {study.pageShowcase.items.map((item) => (
-      <figure>
+    {pageShowcase.items.map((item) => (
+      <figure class="showcase-grid__figure">
         <>
           <a
-            class="screenshot-window"
+            class="screenshot-window portfolio__link"
             href={item.image}
             target="_blank"
             rel="noopener noreferrer"
@@ -24,14 +26,14 @@ const { study } = Astro.props;
           >
             <Asset src={item.image} alt={item.label} class="full-page-image" />
           </a>
-          <figcaption>
+          <figcaption class="showcase-grid__caption">
             <>
-              <h3>{item.label}</h3>
-              <p>{item.caption}</p>
+              <h3 class="showcase-grid__title portfolio__heading-tertiary">{item.label}</h3>
+              <p class="portfolio__paragraph">{item.caption}</p>
             </>
           </figcaption>
         </>
       </figure>
     ))}
   </div>
-</section>
+</section>}

@@ -1,41 +1,22 @@
 ---
 import { projects } from "../../../data/work";
-import Asset from "../../portfolio/Asset.astro";
 import Heading from "../../portfolio/Heading.astro";
 import ProjectCard from "../../portfolio/ProjectCard.astro";
 ---
 
-<section class="home-projects-section selected-work section wrap" id="projects">
+<section class="home-projects-section" id="projects">
   <Heading
     label="Selected work"
     title="Projects I’ve built"
     subtitle="Explore the project details, tools, and screenshots."
   />
-  <div class="selected-grid">
+  <div class="home-projects-section__grid">
     {projects.slice(0, 6).map((project, index) => (
-      <ProjectCard project={project.source} index={index} featured>
-          <div class="selected-media">
-            <Asset
-              src={project.image.startsWith("/") ? project.image : null}
-              alt={project.title}
-              class="selected-image"
-            />
-          </div>
-          <div class="selected-work__copy">
-            <h3>
-              <button type="button" class="selected-work__opener" data-project-open aria-haspopup="dialog" aria-controls={`project-${index}`}>
-                {project.title}
-              </button>
-            </h3>
-            <p>{project.description}</p>
-            {project.deliveryContext && <p>{project.deliveryContext}</p>}
-            <p class="small-note">{project.stack}</p>
-          </div>
-      </ProjectCard>
+      <ProjectCard project={project.source} index={index} featured={project} />
     ))}
   </div>
-  <div class="section-end">
-    <a href="/projects/" class="button outline">
+  <div class="home-projects-section__footer">
+    <a href="/projects/" class="button button--outline portfolio__link">
       View all projects →
     </a>
   </div>

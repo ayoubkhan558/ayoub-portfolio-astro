@@ -4,22 +4,22 @@ import Heading from "../../portfolio/Heading.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="about-experience-section section wrap">
+<section class="about-experience-section">
   <Heading label="Experience" title="Teams I've built with." />
   <div class="experience-list">
     {p.experienceLog.map((e) => (
-      <article>
+      <article class="experience-list__item">
         <Asset src={e.logo} alt={e.company} class="company-logo" />
         <div>
           <span class="eyebrow">
             {e.year} · {e.duration}
           </span>
-          <h3>{e.title}</h3>
-          <p>
+          <h3 class="portfolio__heading-tertiary">{e.title}</h3>
+          <p class="portfolio__paragraph">
             <strong>{e.company}</strong> · {e.location}
           </p>
-          <p>{e.description}</p>
-          <p class="small-note">
+          <p class="portfolio__paragraph">{e.description}</p>
+          <p class="small-note portfolio__paragraph">
             <time datetime={e.startDate}>{e.startDate}</time> →{" "}
             <time datetime={e.endDate}>{e.endDate}</time>
           </p>

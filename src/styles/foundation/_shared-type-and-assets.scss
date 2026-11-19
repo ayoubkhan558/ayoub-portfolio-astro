@@ -1,25 +1,41 @@
+@use "../foundation/breakpoints";
+
 .asset-fallback {
   overflow: hidden;
 }
-.asset-fallback small {
-  font-size: 14px;
+
+.asset-fallback .asset-fallback__note {
+  font-size: var(--text-small);
 }
+
 .eyebrow {
-  font-size: 13px;
+  font-size: var(--text-caption);
+  letter-spacing: 0.045em;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
 }
+
 .small-note,
 .availability,
 .hero-badges,
 .project-count,
-.project-status,
 .text-link,
-.footer-column a,
-.footer-top p,
-.footer-bottom,
-.review-toolbar p,
-.tags span,
-.tag,
-.tool-grid p,
-.expertise-grid p {
-  font-size: 14px;
+.site-footer__link,
+.site-footer__bio,
+.tags .tags__label,
+.tag {
+  font-size: var(--text-small);
+}
+
+.hero-badges {
+  font-size: 13px;
+  gap: 10px var(--space-5);
+
+  @media (min-width: breakpoints.$small) {
+    font-size: var(--text-small);
+    gap: var(--space-6);
+  }
 }

@@ -3,18 +3,18 @@ import Heading from "../../portfolio/Heading.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="about-story-section section wrap">
+<section class="about-story-section">
   <Heading label="My story" title="Learning by building." />
-  <div class="two-grid">
-    <p class="lead">{p.about.originStory}</p>
-    <p class="lead">{p.about.motivation}</p>
+  <div class="about-story-section__columns">
+    <p class="lead portfolio__paragraph">{p.about.originStory}</p>
+    <p class="lead portfolio__paragraph">{p.about.motivation}</p>
   </div>
-  <div class="three-grid spaced">
+  <div class="about-story-section__cards">
     {p.about.storyCards.map((s) => (
       <article class="plain-card">
         <span class="eyebrow">{s.label}</span>
-        <h3>{s.title}</h3>
-        <p>{s.text}</p>
+        <h3 class="plain-card__title portfolio__heading-tertiary">{s.title}</h3>
+        <p class="plain-card__description portfolio__paragraph">{s.text}</p>
       </article>
     ))}
   </div>

@@ -1,10 +1,21 @@
+@use "../foundation/breakpoints";
+
 .project-toolbar {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-5);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+
+  @media (min-width: breakpoints.$small) {
+    gap: var(--space-4);
+  }
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
 }
-.project-toolbar label,
+
+.project-toolbar .project-toolbar__field,
 .form-field {
   display: flex;
   flex-direction: column;
@@ -12,9 +23,10 @@
   font-size: 13px;
   font-weight: 500;
 }
-input,
-select,
-textarea {
+
+:where(.portfolio__input),
+:where(.portfolio__select),
+:where(.portfolio__textarea) {
   width: 100%;
   min-height: 48px;
   border: 1px solid var(--border);
@@ -24,20 +36,32 @@ textarea {
   padding: 11px 14px;
   font-size: 15px;
 }
-textarea {
+
+:where(.portfolio__textarea) {
   resize: vertical;
   min-height: 155px;
 }
+
 .project-count {
   font-size: 13px;
   color: var(--muted-foreground);
-  margin: 20px 0 30px;
+  margin: var(--space-5) 0 30px;
 }
+
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: breakpoints.$wide) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
+
 .project-card {
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -46,67 +70,98 @@ textarea {
   content-visibility: auto;
   contain-intrinsic-size: auto 620px;
 }
+
 .project-preview {
   width: 100%;
   aspect-ratio: 1.6;
   object-fit: cover;
   object-position: top;
 }
+
 .project-body {
-  padding: 24px;
+  padding: var(--space-6);
 }
-.project-body h2 {
+
+.project-body .project-body__title {
   font-size: 24px;
 }
-.project-body p {
-  font-size: 14px;
+
+.project-body .project-body__description {
+  font-size: 15px;
+
+  @media (min-width: breakpoints.$small) {
+    font-size: var(--text-small);
+  }
 }
-.project-body details {
+
+.project-body .project-body__details {
   margin-top: 18px;
   font-size: 13px;
 }
-.project-body summary {
+
+.project-body .project-body__summary {
   cursor: pointer;
   min-height: 44px;
   padding: 10px 0;
 }
+
 .project-body .value-object {
   grid-template-columns: 1fr;
 }
-.project-body .value-tree p {
+
+.project-body .value-tree .value-tree__description {
   font-size: 13px;
 }
+
 .project-links {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: var(--space-5);
 }
-.project-status {
-  font-size: 11px;
-  margin-bottom: 12px;
-  color: var(--muted-foreground);
-}
+
 .project-grid [hidden],
 [hidden] {
   display: none !important;
 }
+
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
+  margin-top: var(--space-10);
+  justify-content: space-between;
+  gap: 10px;
+
+  @media (min-width: breakpoints.$small) {
+    justify-content: center;
+    gap: var(--space-5);
+  }
 }
-.pagination button:disabled {
+
+.pagination .pagination__button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
   transform: none;
 }
-.pagination span {
+
+.pagination .pagination__label {
   font-size: 13px;
 }
+
 .empty-state {
   text-align: center;
-  padding: 60px 24px;
+  padding: 60px var(--space-6);
+}
+
+.project-toolbar .project-toolbar__field:first-child {
+  grid-column: 1/-1;
+
+  @media (min-width: breakpoints.$large) {
+    grid-column: auto;
+  }
+}
+
+.project-preview {
+  aspect-ratio: 1.6;
+  height: auto;
 }

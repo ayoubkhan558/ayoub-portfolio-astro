@@ -9,7 +9,7 @@ export function ThemeToggle() {
       id="theme-toggle"
       size="icon"
       variant="ghost"
-      className="icon-button"
+      className="icon-button theme-toggle"
       aria-label="Toggle color theme"
       title="Toggle color theme"
     >

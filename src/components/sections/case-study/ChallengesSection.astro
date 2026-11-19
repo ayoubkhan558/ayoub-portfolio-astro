@@ -1,36 +1,38 @@
 ---
 import PageSpeedReport from "../../portfolio/PageSpeedReport.astro";
+import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
+interface Props { study: CaseStudyDetailData }
 const { study } = Astro.props;
 ---
 
-<section class="case-study-challenges-section section wrap">
-  <div class="two-grid">
-    <div>
+<section class="case-study-challenges-section">
+  <div class="case-study-challenges-section__columns">
+    <div class="case-detail__column">
       <span class="eyebrow">Before</span>
-      <h2>The challenges</h2>
+      <h2 class="portfolio__heading-secondary">The challenges</h2>
       {study.challenges.map((c) => (
         <article class="challenge-item">
           <>
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
+            <h3 class="challenge-item__title portfolio__heading-tertiary">{c.title}</h3>
+            <p class="portfolio__paragraph">{c.text}</p>
           </>
         </article>
       ))}
     </div>
-    <div>
+    <div class="case-detail__column">
       <span class="eyebrow">After</span>
-      <h2>The results</h2>
+      <h2 class="portfolio__heading-secondary">The results</h2>
       {study.results.map((c) => (
         <article class="challenge-item">
           <>
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
+            <h3 class="challenge-item__title portfolio__heading-tertiary">{c.title}</h3>
+            <p class="portfolio__paragraph">{c.text}</p>
           </>
         </article>
       ))}
     </div>
   </div>
-  <p class="result-highlight">{study.performanceNote}</p>
+  <p class="result-highlight portfolio__paragraph">{study.performanceNote}</p>
   {"pageSpeed" in study && (
     <details class="plain-card">
       <>

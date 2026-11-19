@@ -43,7 +43,7 @@ const expectedCount = JSON.parse(
 ).projects.length;
 if (count !== expectedCount)
   problems.push(`Expected ${expectedCount} archive records, got ${count}`);
-const titles = (archive.match(/<h2>/g) || []).length;
+const titles = (archive.match(/<h2\b[^>]*>/g) || []).length;
 if (titles < expectedCount)
   problems.push(`Missing archive project titles: ${titles} H2 elements`);
 if (!/noindex/.test(readFileSync(join(root, "404.html"), "utf8")))
@@ -52,8 +52,10 @@ const tools = JSON.parse(readFileSync("src/data/toolCatalog.json", "utf8"));
 const about = readFileSync(join(root, "about/index.html"), "utf8");
 const escaped = (s) =>
   s.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+// Match the heading content regardless of its component class or Astro attributes.
+const toolHeadings = new Set(Array.from(about.matchAll(/<h3\b[^>]*>([^<]*)<\/h3>/g), (match) => match[1]));
 for (const tool of Object.values(tools))
-  if (!about.includes(`<h3>${escaped(tool.name)}</h3>`))
+  if (!toolHeadings.has(escaped(tool.name)))
     problems.push(`Missing tool heading: ${tool.name}`);
 console.log(
   `${pages.length} HTML files, ${refs} local references, JSON-LD, archive record/title parity and 404 indexing checked. ${problems.length} failures.`,

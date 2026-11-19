@@ -3,7 +3,7 @@
 .pagespeed-report__summary-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--space-4);
   overflow-x: auto;
   padding-bottom: 6px;
 

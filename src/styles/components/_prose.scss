@@ -1,38 +1,65 @@
+@use "../foundation/breakpoints";
+
 .prose-narrow {
   max-width: 850px;
 }
-.prose-narrow h2 {
+
+.prose-narrow :where(.portfolio__heading-secondary) {
   font-size: 29px;
 }
+
 .link-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-4);
   margin-top: 25px;
 }
+
 .value-tree {
   min-width: 0;
   overflow-wrap: anywhere;
 }
-.value-tree h3 {
-  font-size: 14px;
+
+.value-tree .value-tree__title {
+  font-size: var(--text-small);
   letter-spacing: 0;
-  margin: 16px 0 5px;
+  margin: var(--space-4) 0 5px;
 }
-.value-tree p {
-  margin-bottom: 8px;
+
+.value-tree .value-tree__description {
+  margin-bottom: var(--space-2);
 }
+
 .value-object {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px 22px;
+  gap: var(--space-2) 22px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
+
 .value-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
+
 .detail-image {
   max-height: 500px;
   object-fit: contain;
+}
+
+.legal-highlights {
+  margin-block: 30px var(--space-12);
+  gap: 18px;
+}
+
+.legal-highlights .plain-card {
+  padding: 22px;
+}
+
+.legal-highlights .legal-highlights__description {
+  font-size: var(--text-small);
 }

@@ -13,14 +13,14 @@ import Layout from "../layouts/PortfolioLayout.astro";
       description="General terms for website use, project scope, payment, delivery, ownership, and support."
     />
   </div>
-  <article class="section wrap prose-narrow">
-    <p class="eyebrow">Last updated: June 28, 2026</p>
-    <div class="two-grid legal-highlights">
+  <article class="legal-policy prose-narrow">
+    <p class="eyebrow portfolio__paragraph">Last updated: June 28, 2026</p>
+    <div class="legal-highlights legal-policy__columns">
       {highlights.map((h) => (
         <div class="plain-card">
           <>
             <span class="eyebrow">{h.label}</span>
-            <p>{h.value}</p>
+            <p class="legal-highlights__description portfolio__paragraph">{h.value}</p>
           </>
         </div>
       ))}

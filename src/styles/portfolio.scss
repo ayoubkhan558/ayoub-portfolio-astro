@@ -3,6 +3,8 @@
 
 // Base site styles, shared layout, and the first styles for each page.
 @use "foundation/site-base";
+@use "components/ui-controls";
+@use "layout/section-shells";
 @use "layout/header";
 @use "components/buttons";
 @use "layout/mobile-navigation";
@@ -23,9 +25,7 @@
 @use "components/project-copy-dialog";
 @use "sections/contact-and-page-details";
 
-// Shared breakpoints and component integration follow the base rules so
-// responsive layouts and component-specific adjustments take precedence.
-@use "layout/responsive";
+// Integration rules follow the underlying component defaults.
 @use "layout/footer-wordmark";
 @use "components/button-integration";
 @use "layout/header-integration";
@@ -36,11 +36,9 @@
 @use "foundation/shared-type-and-assets";
 @use "layout/footer-integration";
 @use "components/archive-and-content-integration";
-@use "layout/responsive-integration";
 @use "foundation/contrast";
 
-// Later refinements stay after integration. Keep responsive rules here when
-// they need to override earlier rules for the same component.
+// Each component owns its mobile defaults and nested wider-screen rules.
 @use "layout/brand-and-footer";
 @use "sections/home-panels";
 @use "components/service-card-styles";
@@ -48,12 +46,10 @@
 @use "components/carousel-and-form-states";
 @use "components/project-drawer";
 @use "sections/case-study-screenshots";
-@use "layout/responsive-components";
 @use "components/faq-and-tools";
 @use "sections/toolbox-and-faq-spacing";
 @use "sections/home-editorial";
 @use "sections/about-toolbox-and-tools";
-@use "layout/responsive-editorial";
 @use "components/card-alignment";
 
 // Section and interaction refinements retain their original final positions.

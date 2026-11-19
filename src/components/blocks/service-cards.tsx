@@ -37,14 +37,14 @@ export function ServiceCards({
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3>{service.name}</h3>
-              <p><strong>What’s included:</strong> {service.description}</p>
-              <p><strong>Pricing:</strong> {service.price}{service.period}</p>
+              <h3 className="compact-solution__title portfolio__heading-tertiary">{service.name}</h3>
+              <p className="compact-solution__description portfolio__paragraph"><strong>What’s included:</strong> {service.description}</p>
+              <p className="compact-solution__description portfolio__paragraph"><strong>Pricing:</strong> {service.price}{service.period}</p>
               <a
-                className="text-link card-action"
+                className="text-link card-action portfolio__link"
                 href={`/services/#services-${i}`}
               >
-                View service details <ArrowUpRight aria-hidden="true" size={16} />
+                View service details <ArrowUpRight className="button__icon" aria-hidden="true" size={16} />
               </a>
             </article>
           );
@@ -75,27 +75,27 @@ export function ServiceCards({
                 </Badge>
               )}
             </div>
-            <h3 id={`${idPrefix}-${i}`}>{s.name}</h3>
+            <h3 className="service-card__title service-grid-v2__title portfolio__heading-tertiary" id={`${idPrefix}-${i}`}>{s.name}</h3>
             <div className="service-card__pricing">
               <div className="service-price">
                 {s.price}
-                {s.period && <small>{s.period}</small>}
+                {s.period && <small className="service-price__note portfolio__note">{s.period}</small>}
               </div>
-              <p className="small-note">{s.timeline}</p>
+              <p className="small-note service-card__description service-inner__description portfolio__paragraph">{s.timeline}</p>
             </div>
             <div className="service-card__inclusions">
               <strong>What’s included</strong>
-              <p>{s.description}</p>
+              <p className="service-card__description service-inner__description portfolio__paragraph">{s.description}</p>
             </div>
             <Button
               asChild
               className="button card-action"
             >
-              <a
+              <a className="portfolio__link"
                 href={s.href.includes("subject=") ? s.href : `${s.href}${s.href.includes("?") ? "&" : "?"}subject=${encodeURIComponent(s.name)}`}
               >
                 {s.cta}
-                <ArrowUpRight aria-hidden="true" />
+                <ArrowUpRight className="button__icon" aria-hidden="true" />
               </a>
             </Button>
           </CardContent>

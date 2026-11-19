@@ -5,7 +5,7 @@ const { label, title, subtitle } = Astro.props;
 <div class="section-heading">
   <div>
     {label && <span class="eyebrow">{label}</span>}
-    <h2>{title}</h2>
+    <h2 class="section-heading__title portfolio__heading-secondary">{title}</h2>
   </div>
-  {subtitle && <p>{subtitle}</p>}
+  {subtitle && <p class="section-heading__description portfolio__paragraph">{subtitle}</p>}
 </div>

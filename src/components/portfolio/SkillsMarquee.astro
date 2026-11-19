@@ -9,10 +9,10 @@ const rows = [
 
 <div class="skills-marquee" data-skills-marquee>
   <div class="marquee-toolbar">
-    <p class="small-note">
+    <p class="small-note marquee-toolbar__description portfolio__paragraph">
       {entries.length} tools and technologies
     </p>
-    <button type="button" class="marquee-toggle" aria-pressed="false" hidden>
+    <button type="button" class="marquee-toggle portfolio__button" aria-pressed="false" hidden>
       Pause motion
     </button>
   </div>
@@ -38,14 +38,14 @@ const rows = [
                     width="32"
                     height="32"
                     loading="lazy"
-                    class="tool-logo"
+                    class="tool-logo portfolio__image"
                   />
                 ) : (
                   <span class="tool-monogram" aria-hidden="true">
                     {t.name.slice(0, 2)}
                   </span>
                 )}
-                <h3>{t.name}</h3>
+                <h3 class="tool-chip__title portfolio__heading-tertiary">{t.name}</h3>
                 {/* <p class="sr-only">
                   {t.description}
                   {"categories" in t

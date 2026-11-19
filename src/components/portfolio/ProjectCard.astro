@@ -17,9 +17,9 @@ import type archive from "../../data/projectsArchive.json";
 interface Props {
   project: (typeof archive.projects)[number];
   index: number;
-  featured?: boolean;
+  featured?: import("../../data/work").ProjectCard;
 }
-const { project: p, index, featured = false } = Astro.props;
+const { project: p, index, featured } = Astro.props;
 const title = getProjectTitle(p);
 const panelId = `project-${index}`;
 const description = getProjectDescription(p);
@@ -101,50 +101,85 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
   data-project-category={getProjectMeta(p).join(", ")}
   data-project-website={copyHref || ""}
 >
-  {featured ? <slot /> : <>
-  <div class="project-media">
-    <Asset
-      src={p.screenshot}
-      fallback="/social/ayoub-portfolio-thumbnail-projects.jpg"
-      alt={`${title} website preview`}
-      class="project-preview"
-    />
-  </div>
-  <div class="project-body">
-    <h2>{title}</h2>
-    <p>{description}</p>
-    <div class="project-links card-link-row">
-      <button
-        type="button"
-        class="button outline project-open card-action"
-        data-project-open={panelId}
-        aria-haspopup="dialog"
-        aria-controls={panelId}
-      >
-        Project details <ExternalArrow />
-      </button>
-      {isDomainExpired && (
-        <span class="text-link project-domain-expired">Domain expired</span>
-      )}
-      {!isDomainExpired && href && (
-        <a
-          class="text-link"
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Website <ExternalArrow />
-        </a>
-      )}
-    </div>
-    <noscript>
-      <details>
-        <summary>Project details</summary>
-        <ValueTree value={details} />
-      </details>
-    </noscript>
-  </div>
-  </>}
+  {featured ? (
+    <>
+      <div class="selected-card__media">
+        <Asset
+          src={featured.image.startsWith("/") ? featured.image : null}
+          alt={featured.title}
+          class="selected-card__image"
+          imageClassOnly
+        />
+      </div>
+      <div class="selected-card__copy">
+        <h3 class="selected-card__title">
+          <button
+            type="button"
+            class="selected-card__opener"
+            data-project-open
+            aria-haspopup="dialog"
+            aria-controls={panelId}
+          >
+            {featured.title}
+          </button>
+        </h3>
+        <p class="selected-card__description">{featured.description}</p>
+        {featured.deliveryContext && (
+          <p class="selected-card__description">{featured.deliveryContext}</p>
+        )}
+        <p class="selected-card__stack">{featured.stack}</p>
+      </div>
+    </>
+  ) : (
+    <>
+      <div class="project-media">
+        <Asset
+          src={p.screenshot}
+          fallback="/social/ayoub-portfolio-thumbnail-projects.jpg"
+          alt={`${title} website preview`}
+          class="project-preview"
+        />
+      </div>
+      <div class="project-body">
+        <h2 class="project-body__title portfolio__heading-secondary">
+          {title}
+        </h2>
+        <p class="project-body__description portfolio__paragraph">
+          {description}
+        </p>
+        <div class="project-links card-link-row">
+          <button
+            type="button"
+            class="button button--outline project-open card-action portfolio__button"
+            data-project-open={panelId}
+            aria-haspopup="dialog"
+            aria-controls={panelId}
+          >
+            Project details <ExternalArrow />
+          </button>
+          {isDomainExpired && (
+            <span class="text-link project-domain-expired">Domain expired</span>
+          )}
+          {!isDomainExpired && href && (
+            <a
+              class="text-link portfolio__link"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Website <ExternalArrow />
+            </a>
+          )}
+        </div>
+        <noscript>
+          <details class="project-body__details">
+            <summary class="project-body__summary">Project details</summary>
+            <ValueTree value={details} />
+          </details>
+        </noscript>
+      </div>
+    </>
+  )}
   <dialog
     class="project-drawer"
     id={panelId}
@@ -154,7 +189,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       <span class="eyebrow">Project details</span>
       <button
         type="button"
-        class="icon-button drawer-close"
+        class="icon-button drawer-close portfolio__button"
         aria-label="Close project details"
       >
         <svg
@@ -178,28 +213,41 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         alt={`${title} website preview`}
         class="drawer-image"
       />
-      <div class="tags spaced">
-        <span>{p.projectStatus || "Status not recorded"}</span>
-        {p.company && <span>Delivered at {p.company}</span>}
+      <div class="tags project-card__tags">
+        <span class="tags__label">
+          {p.projectStatus || "Status not recorded"}
+        </span>
+        {p.company && <span class="tags__label">Delivered at {p.company}</span>}
         {stack.map((tool) => {
           const logo = getAsset(tool.logo);
           return logo ? (
-            <span class="project-stack-logo" title={tool.name}>
-              <img src={logo.src} alt={tool.name} loading="lazy" decoding="async" />
+            <span class="project-stack-logo tags__label" title={tool.name}>
+              <img
+                class="project-stack-logo__image portfolio__image"
+                src={logo.src}
+                alt={tool.name}
+                loading="lazy"
+                decoding="async"
+              />
             </span>
           ) : (
-            <span>{tool.name}</span>
+            <span class="tags__label">{tool.name}</span>
           );
         })}
       </div>
-      <h2 id={`${panelId}-title`}>{title}</h2>
-      <p>{description}</p>
+      <h2
+        class="drawer-content__title portfolio__heading-secondary"
+        id={`${panelId}-title`}
+      >
+        {title}
+      </h2>
+      <p class="portfolio__paragraph">{description}</p>
       <ValueTree value={details} />
       {p.pageSpeed && <PageSpeedReport report={p.pageSpeed} />}
-      <div class="actions">
+      <div class="project-card__actions">
         {href && (
           <a
-            class="button"
+            class="button portfolio__link"
             href={href}
             target="_blank"
             rel="noopener noreferrer"
@@ -214,9 +262,13 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
 
 <script>
   let opener: HTMLElement | null = null;
-  for (const card of document.querySelectorAll<HTMLElement>("[data-project-drawer-card]")) {
+  for (const card of document.querySelectorAll<HTMLElement>(
+    "[data-project-drawer-card]",
+  )) {
     const dialog = card.querySelector<HTMLDialogElement>("dialog")!;
-    const button = card.querySelector<HTMLButtonElement>("[data-project-open]")!;
+    const button = card.querySelector<HTMLButtonElement>(
+      "[data-project-open]",
+    )!;
     const open = () => {
       if (dialog.open) return;
       opener = button;

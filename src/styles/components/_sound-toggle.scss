@@ -1,8 +1,10 @@
+@use "../foundation/breakpoints";
+
 // Keep the toggle off touch layouts and clear of the back-to-top control.
 .pointer-feedback__toggle:not([hidden]) {
   display: none;
 
-  @media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+  @media (min-width: breakpoints.$large) and (hover: hover) and (pointer: fine) {
     display: grid;
     place-items: center;
     position: fixed;

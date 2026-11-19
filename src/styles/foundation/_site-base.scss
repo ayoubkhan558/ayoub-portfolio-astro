@@ -1,115 +1,156 @@
+@use "../foundation/breakpoints";
+
 /* Native Astro adaptation of Portfolio: original tokens/fonts, floating nav,
    warm top/bottom gradients, dashed separators and rounded editorial cards. */
-:root {
+.portfolio {
   --text-family: var(--font-dm-sans), system-ui, sans-serif;
-  --muted-foreground: oklch(0.46 0 0);
-  --portfolio-sand: #eee7d4;
 }
-.dark {
-  --muted-foreground: oklch(0.76 0 0);
-  --portfolio-sand: #39372d;
-}
+
 * {
   box-sizing: border-box;
 }
-body {
+
+.portfolio__body {
   margin: 0;
   font-family: var(--text-family);
-  font-size: 16px;
+  font-size: var(--text-body);
   line-height: 1.6;
 }
-a {
+
+:where(.portfolio__link) {
   color: inherit;
   text-decoration: none;
 }
-button,
-input,
-select,
-textarea {
+
+:where(.portfolio__button),
+:where(.portfolio__input),
+:where(.portfolio__select),
+:where(.portfolio__textarea) {
   font: inherit;
 }
-button {
+
+:where(.portfolio__button) {
   color: inherit;
 }
-img {
+
+:where(.portfolio__image) {
   display: block;
   max-width: 100%;
 }
-p {
+
+:where(.portfolio__paragraph) {
   margin: 0 0 18px;
   color: var(--muted-foreground);
 }
-h1,
-h2,
-h3,
-h4 {
+
+:where(.portfolio__heading-primary),
+:where(.portfolio__heading-secondary),
+:where(.portfolio__heading-tertiary),
+:where(.portfolio__heading-minor) {
   line-height: 1.15;
   letter-spacing: -0.035em;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
   color: var(--foreground);
 }
-h1 {
+
+:where(.portfolio__heading-primary) {
   font-size: clamp(38px, 4.3vw, 64px);
   font-weight: 500;
 }
-h2 {
+
+:where(.portfolio__heading-secondary) {
   font-size: clamp(28px, 3.2vw, 44px);
   font-weight: 500;
 }
-h3 {
+
+:where(.portfolio__heading-tertiary) {
   font-size: 23px;
   font-weight: 600;
 }
-small,
+
+:where(.portfolio__note),
 .small-note {
-  font-size: 14px;
+  font-size: var(--text-small);
   line-height: 1.5;
 }
-.wrap {
-  width: min(1220px, 100%);
-  margin-inline: auto;
-  padding-inline: 28px;
+
+.about-story-section__cards,
+.case-detail__tags,
+.case-study-implementation-section__subheading,
+.contact-details-section__checklist,
+.contact-details-section__subheading,
+.contact-details-section__supplement,
+.contact-form__additional-fields,
+.home-about-section__tags,
+.home-problems-section__project-fit,
+.project-card__tags,
+.service-detail-content-section__subheading,
+.service-detail-content-section__topic,
+.services-delivery-section__checklist {
+  margin-top: var(--space-10);
 }
-.section {
-  padding-block: 88px;
-}
-.first-section {
-  padding-top: 16px;
-}
-.spaced {
-  margin-top: 40px;
-}
+
 .lead {
-  font-size: 20px;
   line-height: 1.55;
+  font-size: 18px;
+
+  @media (min-width: breakpoints.$large) {
+    font-size: var(--text-lead);
+  }
 }
+
 .eyebrow {
   display: block;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-caption);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted-foreground);
-  margin-bottom: 16px;
+  margin-bottom: var(--space-4);
 }
+
 .portfolio-background {
-  margin: 12px 14px 0;
-  border-radius: 32px 32px 20px 20px;
-  background: linear-gradient(
-    180deg,
-    var(--portfolio-sand) 0%,
-    var(--muted) 430px,
-    var(--background) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--portfolio-sand) 0%,
+      var(--muted) 430px,
+      var(--background) 100%);
+  margin: var(--space-2) var(--space-2) 0;
+  border-radius: 25px 25px 18px 18px;
+
+  @media (min-width: breakpoints.$small) {
+    margin: var(--space-3) 14px 0;
+    border-radius: 32px 32px 20px 20px;
+  }
 }
-.portfolio-background.bottom {
+
+.portfolio-background--bottom {
   border-radius: 20px 20px 32px 32px;
-  background: linear-gradient(
-    180deg,
-    var(--background),
-    var(--muted) 48%,
-    var(--portfolio-sand)
-  );
-  margin-bottom: 12px;
+  background: linear-gradient(180deg,
+      var(--background),
+      var(--muted) 48%,
+      var(--portfolio-sand));
+  margin-bottom: var(--space-3);
+}
+
+.portfolio,
+.portfolio__body {
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto !important;
+  }
+}
+
+*,
+*:before,
+*:after {
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+:where(.portfolio__link) {
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }

@@ -9,14 +9,14 @@ import type portfolio from "@/data/portfolio.json";
 export function FAQ({ items }: { items: typeof portfolio.faqs }) {
   return (
     <div className="portfolio-faq">
-      <div className="faq-introduction space-y-4">
+      <div className="faq-introduction">
         <span className="eyebrow">Good questions</span>
-        <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+        <h2 className="portfolio-faq__title portfolio__heading-secondary">
           Before we get started.
         </h2>
-        <p className="text-muted-foreground max-w-md leading-snug">
+        <p className="portfolio-faq__description portfolio__paragraph">
           If you can't find what you're looking for,{" "}
-          <a href="/contact/" className="underline underline-offset-4">
+          <a href="/contact/" className="portfolio-faq__link portfolio__link">
             get in touch
           </a>
           .
@@ -27,12 +27,12 @@ export function FAQ({ items }: { items: typeof portfolio.faqs }) {
           type="single"
           collapsible
           defaultValue="faq-0"
-          className="w-full"
+          className="portfolio-faq__accordion"
         >
           {items.map((item, i) => (
             <AccordionItem key={item.question} value={`faq-${i}`}>
               <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent>
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

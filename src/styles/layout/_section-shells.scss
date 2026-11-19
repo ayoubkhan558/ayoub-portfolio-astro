@@ -1,0 +1,61 @@
+// Section owners share gutters and vertical rhythm at compile time.
+// Templates need only their own class, including on full-width page shells.
+.about-hero,
+.case-study__container,
+.hero-showcase,
+.home-hero-section,
+.home-trust-section,
+.page-intro,
+.portfolio-cta-section,
+.site-footer__container,
+.stats-row {
+  width: min(var(--layout-content-width), 100%);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+}
+
+.about-career-section,
+.about-experience-section,
+.about-story-section,
+.about-testimonials-section,
+.about-toolbox-section,
+.case-study-branding-section,
+.case-study-challenges-section,
+.case-study-implementation-section,
+.case-study-overview-section,
+.case-study-quote-section,
+.case-study-showcase-section,
+.contact-faq-section,
+.home-about-section,
+.home-case-studies-section,
+.home-faq-section,
+.home-problems-section,
+.home-projects-section,
+.home-resource-section,
+.home-services-section,
+.home-testimonials-section,
+.legal-policy,
+.service-detail-content-section,
+.services-delivery-section,
+.services-niches-section,
+.services-process-section,
+.services-project-fit-section,
+.services-working-together-section {
+  width: min(var(--layout-content-width), 100%);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+  padding-block: var(--section-spacing);
+}
+
+.case-studies-list-section,
+.contact-details-section,
+.faq-page-section,
+.project-archive-section,
+.service-related,
+.services-cards-section {
+  width: min(var(--layout-content-width), 100%);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+  padding-block: var(--section-spacing);
+  padding-top: var(--section-opening-space);
+}

@@ -1,15 +1,17 @@
 ---
 import Asset from "../../portfolio/Asset.astro";
+import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
+interface Props { study: CaseStudyDetailData }
 const { study } = Astro.props;
 ---
 
-<section class="case-study-branding-section section wrap">
+<section class="case-study-branding-section">
   <div class="section-heading">
     <div>
       <span class="eyebrow">Visual identity</span>
-      <h2>{study.branding.title}</h2>
+      <h2 class="section-heading__title portfolio__heading-secondary">{study.branding.title}</h2>
     </div>
-    <p>{study.branding.text}</p>
+    <p class="section-heading__description portfolio__paragraph">{study.branding.text}</p>
   </div>
   <div class="branding-grid">
     <div class="brand-preview">
@@ -20,23 +22,23 @@ const { study } = Astro.props;
           class="branding-logo"
         />
       )}
-      <strong>{study.branding.logoMark}</strong>
+      <strong class="brand-preview__value">{study.branding.logoMark}</strong>
     </div>
     <div>
-      <h3>{study.branding.fontName}</h3>
-      <p>{study.branding.fontMeta}</p>
+      <h3 class="portfolio__heading-tertiary">{study.branding.fontName}</h3>
+      <p class="portfolio__paragraph">{study.branding.fontMeta}</p>
       <div class="tags">
-        {study.branding.fontFamilies.map((f) => (
-          <span>{f}</span>
+        {study.branding.fontFamilies?.map((f) => (
+          <span class="tags__label">{f}</span>
         ))}
       </div>
       <div class="palette">
         {study.branding.palette.map((c) => (
-          <div>
+          <div class="palette__sample">
             <>
               <div class="swatch" style={{ backgroundColor: c.value }} />
-              <strong>{c.label}</strong>
-              <small>{c.value}</small>
+              <strong class="palette__value">{c.label}</strong>
+              <small class="palette__note portfolio__note">{c.value}</small>
             </>
           </div>
         ))}

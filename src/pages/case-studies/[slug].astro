@@ -33,37 +33,37 @@ const next = all[(i + 1) % all.length];
   <div class="case-detail">
     <div class="portfolio-background">
       <Intro label={s.eyebrow} title={s.headline} description={s.tagline}>
-        <p class="case-detail__result"><strong>Result:</strong> {s.listing.result}</p>
+        <p class="case-detail__result portfolio__paragraph"><strong>Result:</strong> {s.listing.result}</p>
         <dl class="case-detail__facts">
           {s.facts.map((fact) => (
             <div>
-              <dt>{fact.label}</dt>
-              <dd>{fact.value}</dd>
+              <dt class="case-detail__term">{fact.label}</dt>
+              <dd class="case-detail__value">{fact.value}</dd>
             </div>
           ))}
         </dl>
-        <div class="actions">
+        <div class="case-detail__actions">
           <a
-            class="button"
+            class="button portfolio__link"
             href={s.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
             Visit {s.urlLabel} <ExternalArrow />
           </a>
-          <a href="/case-studies/" class="text-link">
+          <a href="/case-studies/" class="text-link portfolio__link">
             All case studies →
           </a>
         </div>
-        <div class="tags spaced">
-          <span>{s.timeline}</span>
-          <span>{s.caseType}</span>
+        <div class="tags case-detail__tags">
+          <span class="tags__label">{s.timeline}</span>
+          <span class="tags__label">{s.caseType}</span>
           {s.listing.stack.map((t) => (
-            <span>{t}</span>
+            <span class="tags__label">{t}</span>
           ))}
         </div>
       </Intro>
-      <div class="wrap">
+      <div class="case-study__container">
         <Asset
           src={s.heroMockup}
           alt={`${s.client} website mockup`}
@@ -78,7 +78,7 @@ const next = all[(i + 1) % all.length];
     <ShowcaseSection study={s} />
     <ImplementationSection study={s} />
     <QuoteSection study={s} next={next} />
-    <div class="portfolio-background bottom">
+    <div class="portfolio-background portfolio-background--bottom">
       <CTA title={s.cta.heading} text={s.cta.text} button={s.cta.buttonText} />
     </div>
   </div>

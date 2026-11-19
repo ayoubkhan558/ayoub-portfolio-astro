@@ -1,0 +1,175 @@
+// Low-specificity defaults let a portfolio component control its own spacing.
+:where(.ui-button, .ui-badge) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--radius);
+  font-weight: 500;
+}
+:where(.ui-button) {
+  cursor: pointer;
+  font: inherit;
+}
+:where(.ui-button):disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+:where(.ui-button--default, .ui-badge--default) {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+:where(.ui-button--secondary, .ui-badge--secondary) {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+:where(.ui-button--destructive, .ui-badge--destructive) {
+  background: var(--destructive);
+  color: var(--background);
+}
+:where(.ui-button--outline, .ui-badge--outline) {
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+}
+:where(.ui-button--ghost):hover {
+  background: var(--accent);
+}
+:where(.ui-button--link) {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+:where(.ui-button--size-default) {
+  min-height: 36px;
+  padding-inline: var(--space-4);
+}
+:where(.ui-button--size-sm) {
+  min-height: 32px;
+  padding-inline: var(--space-3);
+}
+:where(.ui-button--size-lg) {
+  min-height: 40px;
+  padding-inline: var(--space-6);
+}
+:where(.ui-button--size-icon) {
+  width: 36px;
+  height: 36px;
+}
+:where(.ui-button--size-icon-sm) {
+  width: 32px;
+  height: 32px;
+}
+:where(.ui-button--size-icon-lg) {
+  width: 40px;
+  height: 40px;
+}
+:where(.ui-badge) {
+  width: fit-content;
+  padding: 2px var(--space-2);
+  font-size: var(--text-caption);
+}
+.ui-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-block: var(--space-6);
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.ui-card__header {
+  display: grid;
+  gap: var(--space-2);
+  padding-inline: var(--space-6);
+}
+.ui-card__title {
+  font-weight: 600;
+  line-height: 1;
+}
+.ui-card__description {
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+}
+.ui-card__action {
+  grid-area: 1 / 2 / span 2;
+  justify-self: end;
+  align-self: start;
+}
+.ui-card__content,
+.ui-card__footer {
+  padding-inline: var(--space-6);
+}
+.ui-card__footer {
+  display: flex;
+  align-items: center;
+}
+.carousel {
+  position: relative;
+}
+.carousel__viewport {
+  overflow: hidden;
+}
+.carousel__track {
+  display: flex;
+}
+.carousel__track--horizontal {
+  margin-left: calc(-1 * var(--space-4));
+}
+.carousel__track--vertical {
+  flex-direction: column;
+  margin-top: calc(-1 * var(--space-4));
+}
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.carousel__slide--horizontal {
+  padding-left: var(--space-4);
+}
+.carousel__slide--vertical {
+  padding-top: var(--space-4);
+}
+.carousel__arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.carousel__arrow--left {
+  left: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel__arrow--right {
+  right: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel__arrow--top {
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+.carousel__arrow--bottom {
+  bottom: -48px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+.accordion__panel {
+  overflow: hidden;
+  color: var(--muted-foreground);
+}
+.accordion__trigger {
+  cursor: pointer;
+}
+.accordion__icon {
+  pointer-events: none;
+}
+.portfolio-faq__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.portfolio-faq__accordion {
+  width: 100%;
+}
