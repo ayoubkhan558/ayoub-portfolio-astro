@@ -1,18 +1,69 @@
-import { useEffect, useRef, useState } from "react";
-
-import { shakeInvalidFields, stopFieldShake } from "../../effects/fieldShake";
-
+import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import { ArrowUpRight } from "lucide-react";
-import { useForm, type FieldPath } from "react-hook-form";
-
+import { shakeInvalidFields, stopFieldShake } from "../../effects/fieldShake";
 import {
-  budgets,
-  contactFormSchema,
-  projectTypes,
-  timelines,
-  type ContactFormValues,
-} from "./contactFormSchema";
+  useForm,
+  type FieldPath,
+  type SubmitErrorHandler,
+  type SubmitHandler,
+} from "react-hook-form";
+
+import { serviceCards } from "../../../data/serviceCatalog";
+
+export const projectTypes = serviceCards.map((service) => service.name);
+
+export const budgets = [
+  "$100 - $499",
+  "$500 - $999",
+  "$1,000 - $3,000",
+  "$3,000 - $7,500",
+  "$7,500+",
+  "Not sure yet",
+];
+
+export const timelines = [
+  "ASAP",
+  "2-4 weeks",
+  "1-2 months",
+  "Flexible / planning ahead",
+];
+
+const schema = yup.object({
+  name: yup
+    .string()
+    .trim()
+    .required("Please enter your name.")
+    .matches(/\p{L}/u, {
+      message: "Please enter a name that includes at least one letter.",
+      excludeEmptyString: true,
+    })
+    .min(3, "Please enter at least 3 characters.")
+    .max(100, "Please enter no more than 100 characters."),
+  email: yup
+    .string()
+    .trim()
+    .email("Please enter a valid email address.")
+    .required("Please enter your email address."),
+  _subject: yup.string().trim().required("Please enter a subject."),
+  projectType: yup
+    .string()
+    .oneOf(projectTypes, "Please choose a project type.")
+    .required("Please choose a project type."),
+  budgetRange: yup.string().defined(),
+  timeline: yup.string().defined(),
+  websiteUrl: yup
+    .string()
+    .transform((value, originalValue) =>
+      originalValue === "" ? undefined : value,
+    )
+    .url("Please enter a valid website URL (https://…).")
+    .optional(),
+  message: yup.string().trim().required("Please describe your project."),
+});
+
+export type ContactFormValues = yup.InferType<typeof schema>;
 
 type Props = {
   action: string;
@@ -46,15 +97,15 @@ export default function ContactForm({
   const [status, setStatus] = useState<{ message: string; error: boolean } | null>(null);
   const {
     register,
-    clearErrors,
     handleSubmit,
     reset,
     setError,
     setValue,
     formState: { errors, isSubmitting },
-  } = useForm<ContactFormValues>({
-    resolver: yupResolver(contactFormSchema),
-    reValidateMode: "onSubmit",
+  } = useForm({
+    resolver: yupResolver(schema, undefined, { mode: "sync" }),
+    mode: "onChange",
+    reValidateMode: "onChange",
     defaultValues: {
       name: "",
       email: "",
@@ -69,11 +120,15 @@ export default function ContactForm({
   useEffect(() => {
     formRef.current?.setAttribute("novalidate", "");
     const params = new URLSearchParams(window.location.search);
-    setValue("_subject", params.get("subject") ?? subject);
+    const projectSubject = params.get("subject") ?? subject;
+    setValue("_subject", projectSubject);
+    if (projectTypes.includes(projectSubject)) {
+      setValue("projectType", projectSubject);
+    }
     setValue("message", params.get("details") ?? details);
   }, [details, setValue, subject]);
 
-  async function submitForm() {
+  const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
     const form = formRef.current;
     if (!form) throw new Error("The project brief form is unavailable.");
 
@@ -82,9 +137,19 @@ export default function ContactForm({
     setStatus({ message: "Sending your project brief…", error: false });
 
     try {
+      const formData = new FormData(form);
+      for (const field of contactFields) {
+        const value = data[field];
+        if (value === undefined) {
+          formData.delete(field);
+        } else {
+          formData.set(field, value);
+        }
+      }
+
       const response = await fetch(action, {
         method: "POST",
-        body: new FormData(form),
+        body: formData,
         headers: { Accept: "application/json" },
         signal: controller.signal,
       });
@@ -143,17 +208,38 @@ export default function ContactForm({
     } finally {
       window.clearTimeout(timeout);
     }
+  };
+
+  const onInvalid: SubmitErrorHandler<ContactFormValues> = (invalid) => {
+    setStatus({
+      message: "Please correct the highlighted fields and try again.",
+      error: true,
+    });
+    shakeInvalidFields(formRef.current, Object.keys(invalid));
+  };
+
+  function onChange(event: ChangeEvent<HTMLFormElement>) {
+    const field = event.target;
+    if (
+      (field instanceof HTMLInputElement ||
+        field instanceof HTMLSelectElement ||
+        field instanceof HTMLTextAreaElement) &&
+      isContactField(field.name)
+    ) {
+      stopFieldShake(field);
+      if (status?.error) setStatus(null);
+    }
   }
 
   function showFieldError(
     field: FieldPath<ContactFormValues>,
     message?: string,
   ) {
-    return message ? (
-      <span className="field-error" id={`error-${field}`}>
+    return (
+      <span className="field-error" role="status" aria-atomic="true" id={`error-${field}`}>
         {message}
       </span>
-    ) : null;
+    );
   }
 
   return (
@@ -163,24 +249,8 @@ export default function ContactForm({
       ref={formRef}
       method="POST"
       action={action}
-      onSubmit={(event) => {
-        formRef.current?.setAttribute("novalidate", "");
-        void handleSubmit(submitForm, (invalid) => {
-          setStatus(null);
-          shakeInvalidFields(formRef.current, Object.keys(invalid));
-        })(event);
-      }}
-      onChange={(event) => {
-        const field = event.target;
-        if (
-          (field instanceof HTMLInputElement || field instanceof HTMLSelectElement ||
-            field instanceof HTMLTextAreaElement) &&
-          isContactField(field.name)
-        ) {
-          clearErrors(field.name);
-          stopFieldShake(field);
-        }
-      }}
+      onSubmit={handleSubmit(onSubmit, onInvalid)}
+      onChange={onChange}
       aria-busy={isSubmitting}
     >
       <span className="eyebrow">Project brief</span>
@@ -189,7 +259,7 @@ export default function ContactForm({
         Give me enough context to price the next step without a long discovery
         call.
       </p>
-      <div
+      {/* <div
         className={`form-message${status?.error ? " error" : ""}`}
         id="form-message"
         role={status?.error ? "alert" : "status"}
@@ -198,7 +268,7 @@ export default function ContactForm({
         hidden={!status}
       >
         {status?.message}
-      </div>
+      </div> */}
       <div className="form-grid">
         <label className="form-field">
           Name

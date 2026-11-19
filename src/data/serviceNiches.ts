@@ -5,6 +5,8 @@ export type ServiceNiche = {
   description: string;
   label: string;
   price?: string;
+  cta?: string;
+  relatedNote?: string;
   highlights: Array<{ label: string; value: string }>;
   sections: Array<{ title: string; paragraphs: string[]; bullets?: string[] }>;
   relatedCases: Array<{ href: string; label: string }>;
@@ -46,13 +48,9 @@ export const serviceNiches: ServiceNiche[] = [
           "Agencies that need reliable Bricks delivery, clinics and professional firms that need editable sites, and owners stuck on Divi or Elementor who want a cleaner stack.",
         ],
       },
-      {
-        title: "Related work",
-        paragraphs: [
-          "See Divi to Bricks, Figma to Bricks clinic, Elementor to Bricks real estate, and designer portfolio builds in the case studies.",
-        ],
-      },
     ],
+    relatedNote:
+      "See Divi to Bricks, Figma to Bricks clinic, Elementor to Bricks real estate, and designer portfolio builds in the case studies.",
     relatedCases: [
       {
         href: "/case-studies/pagano-law",

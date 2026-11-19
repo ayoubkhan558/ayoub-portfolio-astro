@@ -33,6 +33,7 @@
 @use "sections/home-panels";
 @use "sections/project-archive";
 @use "sections/selected-work";
+@use "sections/service-detail";
 
 // Opt-in interaction styles. Effect targets are marked in the owning component.
 @use "effects/border-beam";

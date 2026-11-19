@@ -1,63 +1,58 @@
 ---
-import CTA from "../../components/portfolio/CTA.astro";
-import Intro from "../../components/portfolio/Intro.astro";
 import ServiceDetailSection from "../../components/sections/services/ServiceDetailSection.astro";
 import { serviceDetails } from "../../data/serviceCatalog";
 import Layout from "../../layouts/PortfolioLayout.astro";
 import ExternalArrow from "../../components/portfolio/ExternalArrow.astro";
+
 export function getStaticPaths() {
   return serviceDetails.map((service) => ({
     params: { slug: service.slug },
     props: { service },
   }));
 }
-const { service: s } = Astro.props;
+
+const { service } = Astro.props;
+const contactHref = `/contact/?subject=${encodeURIComponent(service.title)}#contact-form`;
 ---
 
-<Layout title={s.title} description={s.description}>
+<Layout title={service.title} description={service.description}>
   <div class="service-detail-page">
     <div class="portfolio-background">
-      <Intro label={s.label} title={s.h1} description={s.description}>
-        <dl class="service-summary">
-          <div>
-            <dt class="service-summary__term">What’s included</dt>
-            <dd class="service-summary__value">{s.sections[0]?.paragraphs[0] || s.description}</dd>
-          </div>
-          <div>
-            <dt class="service-summary__term">Pricing</dt>
-            <dd class="service-summary__value">{s.price ?? "Custom quote"}</dd>
-          </div>
-          <div>
-            <dt class="service-summary__term">Next step</dt>
-            <dd class="service-summary__value">Send your project details for an estimate.</dd>
-          </div>
-        </dl>
-        <div class="service-detail__actions">
-          <a
-            class="button"
-            href={`/contact/?subject=${encodeURIComponent(s.title)}`}
-          >
-            Discuss your project <ExternalArrow />
-          </a>
+      <section class="service-detail-hero">
+        <div class="service-detail-hero__intro">
           <a class="text-link" href="/services/">
-            All services →
+            ← All services
           </a>
+          <span class="eyebrow service-detail-hero__label">
+            {service.label}
+          </span>
+          <h1>{service.h1}</h1>
+          <p class="service-detail-hero__description">{service.description}</p>
         </div>
-      </Intro>
-      <div class="service-related service-detail__cards">
-        {s.highlights.map((h) => (
-          <article class="plain-card">
-            <>
-              <span class="eyebrow">{h.label}</span>
-              <h3 class="plain-card__title">{h.value}</h3>
-            </>
-          </article>
-        ))}
-      </div>
+        <aside
+          class="service-detail-hero__pricing"
+          aria-label="Pricing and project details"
+        >
+          <a class="service-detail-hero__quote" href={contactHref}>
+            <span class="service-detail-hero__quote-text">
+              <strong class="service-detail-hero__price">
+                {service.price ?? "Request a starting price"}
+              </strong>
+              <span>{service.cta ?? "Discuss your project"}</span>
+            </span>
+            <ExternalArrow />
+          </a>
+          <dl class="service-detail-hero__facts">
+            {service.highlights.map(({ label, value }) => (
+              <div>
+                <dt class="service-detail-hero__term">{label}</dt>
+                <dd class="service-detail-hero__value">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </aside>
+      </section>
     </div>
-    <ServiceDetailSection service={s} />
-    <div class="portfolio-background portfolio-background--bottom">
-      <CTA />
-    </div>
+    <ServiceDetailSection service={service} />
   </div>
 </Layout>

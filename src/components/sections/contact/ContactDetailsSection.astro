@@ -25,10 +25,13 @@ const contactSteps = ["Send project details", "Get a build estimate"];
       </span>
     </div>
     <h2 class="contact-info__title contact-details-section__subheading">Let's build something useful.</h2>
-    <ol class="check-list contact-details-section__checklist">
-      {contactSteps.map((step) => <li class="check-list__item">{step}</li>)}
-    </ol>
-    <p>{p.profile.summary}</p>
+
+    <p>
+      Share a few details in the project brief form to get a clear scope, realistic timeline, and practical next steps without back-and-forth calls.
+      <br>
+      <br>
+      Include your goals and budget so we can turn your idea into a clear plan—or write directly if you prefer email.
+    </p>
     <a class="contact-link" href={`mailto:${p.profile.email}`}>
       <span class="contact-link__label">Email</span>
       {p.profile.email} <ExternalArrow />
@@ -53,6 +56,5 @@ const contactSteps = ["Send project details", "Get a build estimate"];
     >
       <span class="contact-link__label">Hire</span>Upwork <ExternalArrow />
     </a>
-    <p class="contact-details-section__supplement">Based in {p.profile.location}</p>
   </div>
 </section>

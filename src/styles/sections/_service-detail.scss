@@ -1,0 +1,108 @@
+// Service detail introductions and scope on /services/:slug/.
+@use "../foundation/breakpoints";
+
+.service-detail-hero {
+  display: grid;
+  align-items: start;
+  gap: var(--space-8);
+  width: min(var(--layout-content-width), 100%);
+  margin-inline: auto;
+  padding: 142px var(--layout-gutter) var(--space-12);
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+    padding-block: 180px 64px;
+  }
+}
+
+.service-detail-hero__label {
+  margin-top: var(--space-6);
+}
+
+.service-detail-hero__description {
+  max-width: 58ch;
+  margin-bottom: 0;
+  font-size: var(--text-lead);
+}
+
+.service-detail-hero__pricing {
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.service-detail-hero__quote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.service-detail-hero__quote:is(:hover, :focus-visible) {
+  color: var(--primary-foreground);
+  background: color-mix(
+    in oklch,
+    var(--primary),
+    var(--primary-foreground) 12%
+  );
+}
+
+.service-detail-hero__quote-text {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.service-detail-hero__price {
+  font-size: var(--text-lead);
+}
+
+.service-detail-hero__facts {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-small);
+}
+
+.service-detail-hero__term {
+  font-weight: 600;
+}
+
+.service-detail-hero__value {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+.service-detail-content-section__topics {
+  display: grid;
+  gap: var(--space-5);
+
+  @media (min-width: breakpoints.$large) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.service-detail-content-section__topic {
+  margin: 0;
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.service-detail-content-section__title {
+  font-size: clamp(23px, 3vw, 30px);
+}
+
+.service-detail-content-section__topic :last-child {
+  margin-bottom: 0;
+}
+
+.service-detail-content-section__topic:first-child {
+  grid-column: 1 / -1;
+}

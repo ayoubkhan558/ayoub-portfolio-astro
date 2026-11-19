@@ -1,4 +1,13 @@
 ---
+import {
+  Building2,
+  CalendarDays,
+  Code2,
+  Layers3,
+  Route,
+  Target,
+} from "lucide-react";
+import { toolCatalog } from "../../data/toolCatalog";
 import CTA from "../../components/portfolio/CTA.astro";
 import Intro from "../../components/portfolio/Intro.astro";
 import OverviewSection from "../../components/sections/case-study/OverviewSection.astro";
@@ -23,6 +32,18 @@ const seo = caseStudySeo[s.slug];
 const all = Object.values(data);
 const i = all.findIndex((study) => study.slug === s.slug);
 const next = all[(i + 1) % all.length];
+const factIcons = {
+  Industry: Building2,
+  "Delivery context": Route,
+  Objective: Target,
+  "Project type": Layers3,
+};
+const stackLogos: Record<string, string | null> = {
+  Bricks: toolCatalog["bricks-builder"].logo,
+  WordPress: toolCatalog.wordpress.logo,
+  ACF: "/tools/acf.svg",
+  "Shopify Admin": toolCatalog.shopify?.logo ?? null,
+};
 ---
 
 <Layout
@@ -33,14 +54,22 @@ const next = all[(i + 1) % all.length];
   <div class="case-detail">
     <div class="portfolio-background">
       <Intro label={s.eyebrow} title={s.headline} description={s.tagline}>
-        <p class="case-detail__result"><strong>Result:</strong> {s.listing.result}</p>
+        <p class="case-detail__result">
+          <strong>Result:</strong> {s.listing.result}
+        </p>
         <dl class="case-detail__facts">
-          {s.facts.map((fact) => (
-            <div>
-              <dt class="case-detail__term">{fact.label}</dt>
-              <dd class="case-detail__value">{fact.value}</dd>
-            </div>
-          ))}
+          {s.facts.map(({ label, value }) => {
+            const Icon = factIcons[label as keyof typeof factIcons] ?? Layers3;
+            return (
+              <div class="case-detail__fact">
+                <dt class="case-detail__term">
+                  <Icon size={17} aria-hidden="true" />
+                  {label}
+                </dt>
+                <dd class="case-detail__value">{value}</dd>
+              </div>
+            );
+          })}
         </dl>
         <div class="case-detail__actions">
           <a
@@ -55,13 +84,39 @@ const next = all[(i + 1) % all.length];
             All case studies →
           </a>
         </div>
-        <div class="tags case-detail__tags">
-          <span class="tags__label">{s.timeline}</span>
-          <span class="tags__label">{s.caseType}</span>
-          {s.listing.stack.map((t) => (
-            <span class="tags__label">{t}</span>
-          ))}
-        </div>
+        <ul
+          class="case-detail__tags"
+          aria-label="Timeline, project type, and technology"
+        >
+          <li class="case-detail__tag">
+            <CalendarDays size={16} aria-hidden="true" />
+            {s.timeline}
+          </li>
+          <li class="case-detail__tag">
+            <Layers3 size={16} aria-hidden="true" />
+            {s.caseType}
+          </li>
+          {s.listing.stack.map((tool) => {
+            const logo =
+              stackLogos[tool] ?? toolCatalog[tool.toLowerCase()]?.logo;
+            return (
+              <li class="case-detail__tag">
+                {logo ? (
+                  <img
+                    class="case-detail__tag-icon"
+                    src={logo}
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                ) : (
+                  <Code2 size={16} aria-hidden="true" />
+                )}
+                {tool}
+              </li>
+            );
+          })}
+        </ul>
       </Intro>
       <div class="case-study__container">
         <Asset

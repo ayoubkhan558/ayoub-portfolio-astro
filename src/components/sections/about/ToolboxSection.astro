@@ -29,10 +29,9 @@ const groups = [
 
 <section class="about-toolbox-section">
   <Heading title="My toolbox" />
-  <div class="toolbox__groups" data-grid-spotlight>
+  <div class="toolbox__groups">
     {groups.map((group) => (
-      <article class="toolbox__group" data-spotlight-card data-glare-sweep>
-        <span class="grid-spotlight__glow" aria-hidden="true"></span>
+      <article class="toolbox__group">
         <h3 class="toolbox__title">{group.title}</h3>
         <p class="toolbox__description">{group.description}</p>
       </article>

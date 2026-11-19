@@ -1,16 +1,12 @@
 import * as yup from "yup";
 
-export const projectTypes = [
-  "Business website redesign",
-  "WordPress / Bricks Builder build",
-  "WooCommerce store improvement",
-  "React / Next.js front end",
-  "Landing page or funnel",
-  "Existing site speed or cleanup",
-];
+import { serviceCards } from "../../../data/serviceCatalog";
+
+export const projectTypes = serviceCards.map((service) => service.name);
 
 export const budgets = [
-  "Under $1,000",
+  "$100 - $499",
+  "$500 - $999",
   "$1,000 - $3,000",
   "$3,000 - $7,500",
   "$7,500+",

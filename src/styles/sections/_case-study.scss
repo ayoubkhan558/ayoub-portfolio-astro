@@ -219,3 +219,65 @@
   padding: var(--space-2);
   border-radius: 8px;
 }
+
+// At-a-glance project facts and technology tags in the case-study intro.
+.case-detail__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr));
+  gap: var(--space-3);
+  margin: var(--space-6) 0 0;
+  text-align: left;
+}
+
+.case-detail__fact {
+  padding: var(--space-4) var(--space-5);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.case-detail__term {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+}
+
+.case-detail__value {
+  margin: var(--space-2) 0 0;
+  color: var(--foreground);
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+.case-detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-detail__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+}
+
+.case-detail__tag-icon {
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+  border-radius: 3px;
+  background: var(--logo-paper);
+  object-fit: contain;
+}

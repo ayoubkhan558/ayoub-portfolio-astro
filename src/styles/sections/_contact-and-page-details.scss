@@ -80,37 +80,6 @@
   line-height: 1.4;
 }
 
-.case-detail__facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3) var(--space-7);
-  padding-block: var(--space-3);
-  border-block: 1px solid var(--border);
-  font-size: var(--text-small);
-
-  .case-detail__term {
-    color: var(--muted-foreground);
-  }
-
-  .case-detail__value {
-    margin: 2px 0 0;
-  }
-}
-
-.service-summary {
-  display: grid;
-  gap: var(--space-4);
-  margin-block: var(--space-6);
-
-  .service-summary__term {
-    font-weight: 600;
-  }
-
-  .service-summary__value {
-    margin: var(--space-1) 0 0;
-  }
-}
-
 // Keep desktop filters with the list without covering the short mobile viewport.
 .project-archive__controls {
   @media (min-width: breakpoints.$wide) and (min-height: 650px) {
@@ -292,6 +261,11 @@
   margin-top: var(--space-1);
 }
 
+.field-error:empty {
+  position: absolute;
+  margin: 0;
+}
+
 .dark .field-error {
   color: var(--field-error-ink);
 }
@@ -319,15 +293,4 @@
 
 .form-message {
   margin-block: var(--space-5);
-}
-
-.service-detail-content-section__topic:nth-of-type(even) {
-  background: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: var(--space-6);
-
-  @media (min-width: breakpoints.$large) {
-    padding: var(--space-8);
-  }
 }
