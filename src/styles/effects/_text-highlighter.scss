@@ -1,0 +1,66 @@
+// Keep custom markers translucent against the page theme so the text stays readable.
+[data-highlight] {
+  --highlight-paint: linear-gradient(var(--link-accent), var(--link-accent));
+  --highlight-veil: color-mix(in srgb, var(--background) 76%, transparent);
+  --highlight-rest: left -0.12em bottom;
+  --highlight-anchor: left bottom;
+  --highlight-empty: 0% 62%;
+  --highlight-full: 100% 62%;
+  background-image:
+    linear-gradient(var(--highlight-veil), var(--highlight-veil)),
+    var(--highlight-paint);
+  background-repeat: no-repeat;
+  background-size: var(--highlight-full), var(--highlight-full);
+  background-position: var(--highlight-anchor), var(--highlight-anchor);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+[data-highlight-direction="rtl"] {
+  --highlight-rest: right -0.12em bottom;
+  --highlight-anchor: right bottom;
+}
+
+[data-highlight-direction="ttb"] {
+  --highlight-rest: center top -0.12em;
+  --highlight-anchor: center top;
+  --highlight-empty: 100% 0%;
+  --highlight-full: 100% 100%;
+}
+
+[data-highlight-direction="btt"] {
+  --highlight-rest: center bottom -0.12em;
+  --highlight-anchor: center bottom;
+  --highlight-empty: 100% 0%;
+  --highlight-full: 100% 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-highlight-ready] {
+    background-size: var(--highlight-empty), var(--highlight-empty);
+    background-position: var(--highlight-rest), var(--highlight-rest);
+  }
+
+  [data-highlight-ready][data-highlight-active] {
+    background-size: var(--highlight-full), var(--highlight-full);
+    background-position: var(--highlight-anchor), var(--highlight-anchor);
+    transition:
+      background-size var(--highlight-duration, 800ms) ease
+        var(--highlight-delay, 0ms),
+      background-position var(--highlight-duration, 800ms) ease
+        var(--highlight-delay, 0ms);
+  }
+
+  [data-highlight-ready][data-highlight-trigger="hover"]:is(
+      :hover,
+      :focus-within
+    ) {
+    background-size: var(--highlight-full), var(--highlight-full);
+    background-position: var(--highlight-anchor), var(--highlight-anchor);
+    transition:
+      background-size var(--highlight-duration, 800ms) ease
+        var(--highlight-delay, 0ms),
+      background-position var(--highlight-duration, 800ms) ease
+        var(--highlight-delay, 0ms);
+  }
+}

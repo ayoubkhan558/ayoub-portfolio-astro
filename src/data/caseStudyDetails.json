@@ -35,7 +35,7 @@
     },
     "heroMockup": "/case-study/rk-mockup.png",
     "eyebrow": "Case study / Rejuvenated Knives",
-    "headline": "A legacy PHP sharpening-service website rebuilt into a maintainable WordPress and Bricks Builder system.",
+    "headline": "Rejuvenated Knives - rebuilt legacy PHP  into a WordPress",
     "tagline": "Delivered while working at Xgrid.co: redesigned in Figma, rebuilt in Bricks Builder, and migrated from a hard-to-maintain PHP/MySQL setup into WordPress.",
     "overview": "Rejuvenated Knives had an older PHP website that was difficult to maintain, hard to expand, and not practical for adding new features or content changes. While working at Xgrid.co, the project started with a fresh Figma design, then the site was rebuilt in WordPress using Bricks Builder. Existing PHP and MySQL data was migrated into WordPress so the business could manage its door-to-door sharpening service through a more reliable CMS foundation.",
     "facts": [

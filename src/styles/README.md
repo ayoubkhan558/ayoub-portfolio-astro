@@ -51,3 +51,21 @@ Load the corresponding component from `src/components/effects` in the owning sec
 | `data-logo-reveal` | Homepage client logos |
 | `data-project-reveal` | Homepage Selected Work and Case Studies images |
 | `data-hero-image-reveal` and `data-hero-title-reveal` | Homepage hero portrait and heading |
+
+### Text highlighter
+
+The shared layout loads the script. Wrap inline text in `data-highlight`. The default is an 800 ms left-to-right reveal on the first viewport entry. Use `data-highlight-once="false"` to replay on later entries. A theme-colored veil keeps custom colors and gradients soft. Reduced motion and pages without JavaScript show the full highlight.
+
+```astro
+<span data-highlight>40% faster load times</span>
+
+<span data-highlight data-highlight-direction="rtl" data-highlight-delay="200ms">
+  15,000+ monthly visits
+</span>
+
+<a href="/services/" data-highlight data-highlight-trigger="hover"
+   data-highlight-color="linear-gradient(90deg, #ffd089, #a5e4b6)"
+   data-highlight-duration="0.7s">
+  Technical SEO and Core Web Vitals
+</a>
+```

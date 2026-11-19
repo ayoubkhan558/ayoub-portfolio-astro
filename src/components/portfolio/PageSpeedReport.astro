@@ -11,6 +11,7 @@ interface PageSpeedResult {
 }
 
 interface Props {
+  collapsed?: boolean;
   report: {
     source?: string;
     testedUrl?: string;
@@ -22,19 +23,20 @@ interface Props {
   };
 }
 
-const { report } = Astro.props as Props;
+const { report, collapsed = false } = Astro.props;
+const Report = collapsed ? "details" : "section";
 const allDevices = [
   {
     label: "Mobile",
     result: report.mobile,
-    error: report.mobileError,
   },
   {
     label: "Desktop",
     result: report.desktop,
-    error: report.desktopError,
   },
-].filter((device) => device.result || device.error);
+].filter((device): device is { label: string; result: PageSpeedResult } =>
+  Boolean(device.result && device.result.performance >= 70),
+);
 const devices = siteSettings.showDesktopPageSpeedOnly
   ? allDevices.filter((device) => device.label === "Desktop")
   : allDevices;
@@ -61,10 +63,11 @@ const metricLevel = (key: string, value: string) => {
 ---
 
 {devices.length > 0 && (
-  <section
-    class="pagespeed-report"
+  <Report
+    class:list={["pagespeed-report", collapsed && "plain-card"]}
     aria-label="Google PageSpeed Insights results"
   >
+    {collapsed && <summary>Google PageSpeed Insights results</summary>}
     <header class="pagespeed-header">
       <div>
         <span class="eyebrow">
@@ -73,69 +76,74 @@ const metricLevel = (key: string, value: string) => {
         <h3 class="pagespeed-report__title">Performance report</h3>
       </div>
     </header>
-    {devices.map(({ label, result, error }) => (
+    {devices.map(({ label, result }) => (
       <section class="pagespeed-device" aria-label={`${label} performance`}>
         <h4 class="pagespeed-report__device-title">{label}</h4>
-        {result ? (
-          <div class="pagespeed-report__summary-row" tabindex="0" role="group" aria-label={`${label} score and metrics`}>
-            <div class="pagespeed-score-row">
-              <div
-                class:list={["pagespeed-score", scoreLevel(result.performance)]}
-                aria-label={`Performance score ${result.performance} out of 100`}
+        <div
+          class="pagespeed-report__summary-row"
+          tabindex="0"
+          role="group"
+          aria-label={`${label} score and metrics`}
+        >
+          <div class="pagespeed-score-row">
+            <div
+              class:list={["pagespeed-score", scoreLevel(result.performance)]}
+              aria-label={`Performance score ${result.performance} out of 100`}
+            >
+              <svg
+                class="pagespeed-report__dial"
+                viewBox="0 0 100 100"
+                aria-hidden="true"
               >
-                <svg class="pagespeed-report__dial" viewBox="0 0 100 100" aria-hidden="true">
-                  <circle
-                    class="pagespeed-score-track"
-                    cx="50"
-                    cy="50"
-                    r="42"
-                    pathLength="100"
-                  />
-                  <circle
-                    class="pagespeed-score-value"
-                    cx="50"
-                    cy="50"
-                    r="42"
-                    pathLength="100"
-                    stroke-dasharray={`${Math.max(0, Math.min(100, result.performance))} 100`}
-                  />
-                </svg>
-                <span class="pagespeed-report__number">{result.performance}</span>
-              </div>
-              <span
-                class:list={[
-                  "pagespeed-score-label",
-                  scoreLevel(result.performance),
-                ]}
-              >
-                Performance
-              </span>
+                <circle
+                  class="pagespeed-score-track"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  pathLength="100"
+                />
+                <circle
+                  class="pagespeed-score-value"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  pathLength="100"
+                  stroke-dasharray={`${Math.max(0, Math.min(100, result.performance))} 100`}
+                />
+              </svg>
+              <span class="pagespeed-report__number">{result.performance}</span>
             </div>
-              <dl class="pagespeed-metrics">
-                {metrics.map((metric) => {
-                  const value =
-                    metric.key === "si" ? result.speedIndex : result[metric.key];
-                  return value != null && value !== "" ? (
-                    <div
-                      class:list={[
-                        "pagespeed-metric",
-                        metricLevel(metric.key, value),
-                      ]}
-                    >
-                      <dt class="pagespeed-report__metric-name">{metric.label}</dt>
-                      <dd class="pagespeed-report__metric-value">{value}</dd>
-                    </div>
-                  ) : null;
-                })}
-              </dl>
+            <span
+              class:list={[
+                "pagespeed-score-label",
+                scoreLevel(result.performance),
+              ]}
+            >
+              Performance
+            </span>
           </div>
-        ) : (
-          <p class="pagespeed-error">{error}</p>
-        )}
+          <dl class="pagespeed-metrics">
+            {metrics.map((metric) => {
+              const value =
+                metric.key === "si" ? result.speedIndex : result[metric.key];
+              return value != null && value !== "" ? (
+                <div
+                  class:list={[
+                    "pagespeed-metric",
+                    metricLevel(metric.key, value),
+                  ]}
+                >
+                  <dt class="pagespeed-report__metric-name">{metric.label}</dt>
+                  <dd class="pagespeed-report__metric-value">{value}</dd>
+                </div>
+              ) : null;
+            })}
+          </dl>
+        </div>
       </section>
     ))}
     <footer class="pagespeed-footer">
       <span>Scores can change over time.</span>
     </footer>
-  </section>
+  </Report>
 )}

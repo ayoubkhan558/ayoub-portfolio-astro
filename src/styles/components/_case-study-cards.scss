@@ -121,11 +121,6 @@
   gap: var(--space-8);
 }
 
-.case-study-implementation-section__columns {
-  display: grid;
-  gap: var(--space-8);
-}
-
 .about-story-section__cards {
   display: grid;
   gap: var(--space-8);
@@ -155,19 +150,6 @@
 }
 
 .case-study-challenges-section__columns {
-  gap: var(--space-7);
-  grid-template-columns: 1fr;
-
-  @media (min-width: breakpoints.$small) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (min-width: breakpoints.$large) {
-    gap: var(--space-8);
-  }
-}
-
-.case-study-implementation-section__columns {
   gap: var(--space-7);
   grid-template-columns: 1fr;
 

@@ -94,6 +94,8 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool.logo);
 </ul>
 
 <script>
+  import Matter from "matter-js";
+
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 
   for (const stage of document.querySelectorAll<HTMLElement>(
@@ -104,14 +106,10 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool.logo);
     ];
     let stop: (() => void) | undefined;
     let inView = false;
-    let pending = false;
 
-    async function start() {
-      if (reduced.matches || !inView || pending || stop) return;
-      pending = true;
+    function start() {
+      if (reduced.matches || !inView || stop) return;
       try {
-        const { default: Matter } = await import("matter-js");
-        if (!inView || reduced.matches) return;
         const { Bodies, Composite, Constraint, Engine, Body, Sleeping } =
           Matter;
         const sizes = pieces.map((piece) => ({
@@ -245,7 +243,8 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool.logo);
           Composite.clear(engine.world, false);
           Engine.clear(engine);
           // Drop successive layers into the center so pieces collide and pile up.
-          const spread = Math.min(width * 0.56, 210);
+          const columns = Math.max(3, Math.min(7, Math.floor(width / 112)));
+          const spread = Math.min(width * 0.75, 620);
           const walls = [
             Bodies.rectangle(width / 2, height + 48, width + 192, 96, {
               isStatic: true,
@@ -260,15 +259,18 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool.logo);
           ];
           bodies = pieces.map((_, index) => {
             const { width: pieceWidth, height: pieceHeight } = sizes[index];
-            const lane = (index % 3) - 1;
+            const lane = (index % columns) / (columns - 1) - 0.5;
             const x =
-              width / 2 + (lane * spread) / 2 + (Math.random() - 0.5) * 12;
-            const y = -pieceHeight / 2 - index * 42 - Math.random() * 14;
+              width / 2 + lane * spread + (Math.random() - 0.5) * 12;
+            const y =
+              -pieceHeight / 2 -
+              Math.floor(index / columns) * 66 -
+              Math.random() * 14;
             const body = Bodies.rectangle(x, y, pieceWidth, pieceHeight, {
               restitution: 0.18,
               frictionAir: 0.018,
               friction: 0.55,
-              chamfer: { radius: 22 },
+              chamfer: { radius: Math.min(16, pieceHeight / 3) },
               sleepThreshold: 50,
             });
             Body.setAngle(body, (Math.random() - 0.5) * 1.8);
@@ -298,20 +300,18 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool.logo);
           stop = undefined;
         };
       } catch {
-        // Keep the static logo list if the physics chunk cannot load.
-      } finally {
-        pending = false;
+        // Leave the logo list usable if physics initialization fails.
       }
     }
 
     new IntersectionObserver(([entry]) => {
       inView = entry.isIntersecting;
-      if (inView) void start();
+      if (inView) start();
     }).observe(stage);
 
     reduced.addEventListener("change", () => {
       if (reduced.matches) stop?.();
-      else void start();
+      else start();
     });
   }
 </script>

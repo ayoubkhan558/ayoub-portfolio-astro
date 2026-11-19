@@ -1,6 +1,7 @@
 ---
 import "../styles/global.scss";
 import "../styles/portfolio.scss";
+import TextHighlighter from "../components/effects/TextHighlighter.astro";
 import Footer from "../components/portfolio/Footer.astro";
 import Header from "../components/portfolio/Header.astro";
 import p from "../data/portfolio.json";
@@ -119,5 +120,6 @@ const schema = {
       <slot />
     </main>
     {!notFound && <><Footer meteors={!hasFooterCta} /><BackToTop /><PointerFeedback /></>}
+    <TextHighlighter />
   </body>
 </html>

@@ -19,7 +19,6 @@ const base = process.env.QA_BASE_URL || "http://127.0.0.1:4321";
     "/projects/",
     "/services/",
     "/contact/",
-    "/case-studies/",
     "/case-studies/rejuvenated-knives/",
     "/case-studies/pagano-law/",
     "/case-studies/weinberger-aesthetics/",

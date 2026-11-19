@@ -9,8 +9,8 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   vite: {
     optimizeDeps: {
-      // Pre-bundle dependencies used by the contact form's React island.
-      include: ["react-hook-form", "@hookform/resolvers/yup", "yup"],
+      // Pre-bundle dependencies used by interactive features.
+      include: ["react-hook-form", "@hookform/resolvers/yup", "yup", "matter-js"],
     },
   },
   redirects: {

@@ -1,0 +1,71 @@
+<script>
+  const observed = new IntersectionObserver((entries, observer) => {
+    for (const { target, isIntersecting } of entries) {
+      if (isIntersecting) {
+        target.setAttribute("data-highlight-active", "");
+        if (target.getAttribute("data-highlight-once") !== "false") {
+          observer.unobserve(target);
+        }
+      } else if (target.getAttribute("data-highlight-once") === "false") {
+        target.removeAttribute("data-highlight-active");
+      }
+    }
+  });
+
+  function initialize() {
+    observed.disconnect();
+    for (const element of document.querySelectorAll<HTMLElement>(
+      "[data-highlight]",
+    )) {
+      const {
+        highlightColor,
+        highlightDelay,
+        highlightDuration,
+        highlightTrigger,
+      } = element.dataset;
+      if (!element.hasAttribute("data-highlight-ready")) {
+        if (highlightColor && CSS.supports("color", highlightColor)) {
+          element.style.setProperty(
+            "--highlight-paint",
+            `linear-gradient(${highlightColor}, ${highlightColor})`,
+          );
+        } else if (
+          highlightColor &&
+          CSS.supports("background-image", highlightColor)
+        ) {
+          element.style.setProperty("--highlight-paint", highlightColor);
+        }
+        for (const [name, value] of [
+          ["delay", highlightDelay],
+          ["duration", highlightDuration],
+        ] as const) {
+          if (value && /^(?:\d+|\d*\.\d+)(?:ms|s)$/.test(value)) {
+            element.style.setProperty(`--highlight-${name}`, value);
+          }
+        }
+
+        element.setAttribute("data-highlight-ready", "");
+        if (highlightTrigger === "auto") {
+          // Let the unpainted state render before starting the transition.
+          requestAnimationFrame(() =>
+            requestAnimationFrame(() => {
+              element.setAttribute("data-highlight-active", "");
+            }),
+          );
+        }
+      }
+
+      if (highlightTrigger === "hover" || highlightTrigger === "auto") continue;
+      if (
+        !element.hasAttribute("data-highlight-active") ||
+        element.dataset.highlightOnce === "false"
+      ) {
+        observed.observe(element);
+      }
+    }
+  }
+
+  initialize();
+  document.addEventListener("astro:page-load", initialize);
+  document.addEventListener("astro:before-swap", () => observed.disconnect());
+</script>

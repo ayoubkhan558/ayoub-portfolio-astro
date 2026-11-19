@@ -1,5 +1,6 @@
 ---
 import SectionHeader from "../../portfolio/SectionHeader.astro";
+import { toolCatalog as tools } from "../../../data/toolCatalog";
 import Asset from "../../portfolio/Asset.astro";
 import type { CaseStudyDetailData } from "../../../data/caseStudyDetails";
 interface Props {
@@ -45,5 +46,23 @@ const { study } = Astro.props;
         ))}
       </div>
     </div>
+  </div>
+  <h3 class="case-study-branding-section__tools-title">Tools used</h3>
+  <div class="tools-inline">
+    {study.tools.map(
+      (key: string) =>
+        tools[key] && (
+          <div class="tools-inline__tool">
+            <>
+              <Asset
+                src={tools[key].logo}
+                alt={tools[key].name}
+                class="tool-logo"
+              />
+              <span>{tools[key].name}</span>
+            </>
+          </div>
+        ),
+    )}
   </div>
 </section>

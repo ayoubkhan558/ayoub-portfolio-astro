@@ -14,7 +14,6 @@ import OverviewSection from "../../components/sections/case-study/OverviewSectio
 import ChallengesSection from "../../components/sections/case-study/ChallengesSection.astro";
 import BrandingSection from "../../components/sections/case-study/BrandingSection.astro";
 import ShowcaseSection from "../../components/sections/case-study/ShowcaseSection.astro";
-import ImplementationSection from "../../components/sections/case-study/ImplementationSection.astro";
 import QuoteSection from "../../components/sections/case-study/QuoteSection.astro";
 import data from "../../data/caseStudyDetails.json";
 import { caseStudySeo } from "../../data/caseStudySeo";
@@ -55,7 +54,7 @@ const stackLogos: Record<string, string | null> = {
     <div class="portfolio-background">
       <Intro label={s.eyebrow} title={s.headline} description={s.tagline}>
         <p class="case-detail__result">
-          <strong>Result:</strong> {s.listing.result}
+          <strong>Result:</strong> <span data-highlight>{s.listing.result}</span>
         </p>
         <dl class="case-detail__facts">
           {s.facts.map(({ label, value }) => {
@@ -80,7 +79,7 @@ const stackLogos: Record<string, string | null> = {
           >
             Visit {s.urlLabel} <ExternalArrow />
           </a>
-          <a href="/case-studies/" class="text-link">
+          <a href="/case-studies" class="text-link">
             All case studies →
           </a>
         </div>
@@ -131,7 +130,6 @@ const stackLogos: Record<string, string | null> = {
     <ChallengesSection study={s} />
     <BrandingSection study={s} />
     <ShowcaseSection study={s} />
-    <ImplementationSection study={s} />
     <QuoteSection study={s} next={next} />
     <div class="portfolio-background portfolio-background--bottom">
       <CTA title={s.cta.heading} text={s.cta.text} button={s.cta.buttonText} />

@@ -40,7 +40,7 @@ export function Hero({
               variant="outline"
               className="button button--outline"
             >
-              <a href="/case-studies/">
+              <a href="/case-studies">
                 {data.hero.secondaryCta}
                 <ArrowRight aria-hidden="true" />
               </a>
@@ -83,7 +83,6 @@ export function Hero({
               eager
             />
             <div>
-              <span className="eyebrow">Build. Improve. Grow.</span>
               <h2 className="hero-profile-identity__title">
                 {data.profile.name}
               </h2>

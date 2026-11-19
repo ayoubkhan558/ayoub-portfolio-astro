@@ -124,20 +124,6 @@
   font-size: var(--text-lead);
 }
 
-.architecture-row {
-  padding: 14px 0;
-  border-bottom: 1px dashed var(--border);
-}
-
-.architecture-row .architecture-row__description {
-  margin: var(--space-1) 0 0;
-  font-size: 15px;
-
-  @media (min-width: breakpoints.$small) {
-    font-size: var(--text-small);
-  }
-}
-
 .tools-inline {
   display: flex;
   flex-wrap: wrap;
@@ -280,4 +266,8 @@
   border-radius: 3px;
   background: var(--logo-paper);
   object-fit: contain;
+}
+
+.case-study-branding-section__tools-title {
+  margin-top: var(--space-8);
 }
