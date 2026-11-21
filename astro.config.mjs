@@ -8,6 +8,13 @@ export default defineConfig({
   output: "static",
   integrations: [react(), sitemap()],
   vite: {
+    plugins: [{
+      name: "separate-dev-dependency-cache",
+      config(_, { command }) {
+        // Keep production React prebundles out of the running dev server.
+        if (command === "serve") return { cacheDir: "node_modules/.vite-dev" };
+      },
+    }],
     optimizeDeps: {
       // Pre-bundle island dependencies even when the first visit is to another page.
       include: [
