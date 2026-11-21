@@ -61,7 +61,7 @@
 
 .challenge-item {
   padding: 25px 0;
-  border-bottom: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border-hr);
 }
 
 .challenge-item__title {
@@ -201,7 +201,7 @@
 .next-case {
   display: flex;
   justify-content: space-between;
-  border-top: 1px dashed var(--border);
+  border-top: 1px dashed var(--border-hr);
   padding-top: 30px;
   margin-top: 55px;
   align-items: start;
@@ -220,7 +220,7 @@
   font-weight: 500;
 }
 
-.next-case > .next-case__label {
+.next-case>.next-case__label {
   font-size: var(--font-size-13);
   color: var(--muted-foreground);
 }
@@ -311,15 +311,12 @@
   }
 }
 
-.case-detail
-  > :is(
-    .case-study-branding-section,
-    .case-study-challenges-section,
-    .case-study-implementation-section,
-    .case-study-overview-section,
-    .case-study-quote-section,
-    .case-study-showcase-section
-  ):nth-of-type(odd) {
+.case-detail> :is(.case-study-branding-section,
+  .case-study-challenges-section,
+  .case-study-implementation-section,
+  .case-study-overview-section,
+  .case-study-quote-section,
+  .case-study-showcase-section):nth-of-type(odd) {
   background: var(--muted);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -330,15 +327,12 @@
   }
 }
 
-.case-detail
-  > :is(
-    .case-study-branding-section,
-    .case-study-challenges-section,
-    .case-study-implementation-section,
-    .case-study-overview-section,
-    .case-study-quote-section,
-    .case-study-showcase-section
-  ):nth-of-type(even) {
+.case-detail> :is(.case-study-branding-section,
+  .case-study-challenges-section,
+  .case-study-implementation-section,
+  .case-study-overview-section,
+  .case-study-quote-section,
+  .case-study-showcase-section):nth-of-type(even) {
   border-top: 1px solid var(--border);
   padding-top: var(--space-10);
 
@@ -347,15 +341,12 @@
   }
 }
 
-.case-detail
-  > :is(
-    .case-study-branding-section,
-    .case-study-challenges-section,
-    .case-study-implementation-section,
-    .case-study-overview-section,
-    .case-study-quote-section,
-    .case-study-showcase-section
-  ) {
+.case-detail> :is(.case-study-branding-section,
+  .case-study-challenges-section,
+  .case-study-implementation-section,
+  .case-study-overview-section,
+  .case-study-quote-section,
+  .case-study-showcase-section) {
   margin-block: 64px;
 }
 

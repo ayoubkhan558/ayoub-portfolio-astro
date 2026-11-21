@@ -91,7 +91,7 @@
 }
 
 .timeline .timeline__item {
-  border-top: 1px dashed var(--border);
+  border-top: 1px dashed var(--border-hr);
   padding-top: 22px;
 }
 
@@ -107,7 +107,7 @@
 .experience-list__item {
   display: grid;
   padding: var(--space-8) 0;
-  border-top: 1px dashed var(--border);
+  border-top: 1px dashed var(--border-hr);
   grid-template-columns: 1fr;
   gap: var(--space-5);
 

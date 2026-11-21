@@ -172,7 +172,7 @@
   left: 0;
   right: 0;
   top: 50%;
-  border-top: 1px dashed var(--border);
+  border-top: 1px dashed var(--border-hr);
 }
 
 .dashed-label .dashed-label__label {
@@ -290,7 +290,7 @@
 .hero-right {
   position: relative;
   border-left: 0;
-  border-top: 1px dashed var(--border);
+  border-top: 1px dashed var(--border-hr);
   display: grid;
   flex-wrap: wrap;
   gap: 14px;

@@ -39,7 +39,7 @@
   &::before {
     position: absolute;
     inset: 0;
-    border: 1px dashed var(--border);
+    border: 1px dashed var(--border-hr);
     border-radius: 50%;
     content: "";
   }
@@ -68,16 +68,14 @@
   border-radius: 14px;
   background: var(--card);
   color: var(--link-accent);
-  animation: integration-orbit-spin var(--orbit-duration) linear infinite
-    reverse;
+  animation: integration-orbit-spin var(--orbit-duration) linear infinite reverse;
 }
 
 .integration-orbit__ring--inner .integration-orbit__tile {
   animation-direction: normal;
 }
 
-.integration-orbit--white-tiles
-  :is(.integration-orbit__center, .integration-orbit__tile) {
+.integration-orbit--white-tiles :is(.integration-orbit__center, .integration-orbit__tile) {
   background: var(--logo-background-color);
 }
 
@@ -115,6 +113,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .integration-orbit__ring,
   .integration-orbit__tile {
     animation: none;
