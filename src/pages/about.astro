@@ -1,11 +1,6 @@
 ---
 import Layout from "../layouts/PortfolioLayout.astro";
-// Keep About-only effects with this route.
-import "../styles/effects/_gravity-logos.scss";
-import "../styles/effects/_integration-orbit.scss";
-import "../styles/effects/_name-sparkles.scss";
-import "../styles/sections/_about.scss";
-import "../styles/sections/_about-toolbox-and-tools.scss";
+import aboutStyles from "../styles/sections/about-page.scss?inline";
 import NameSparkles from "../components/effects/NameSparkles.astro";
 import Intro from "../components/portfolio/Intro.astro";
 import Asset from "../components/portfolio/Asset.astro";
@@ -20,6 +15,7 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
 ---
 
 <Layout hasFooterCta title="About">
+  <style slot="head" is:inline set:html={aboutStyles}></style>
   <div class="about-page">
     <div class="portfolio-background">
       <Intro label="A little about me" description={p.profile.role}>
@@ -30,8 +26,9 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
           src="/ayoub-about-v4.jpg"
           alt={p.profile.name}
           class="portrait"
-          optimizeWidths={[400, 640, 960, 1120]}
-          sizes="(min-width: 920px) 43vw, 92vw"
+          optimizeWidths={[400, 520, 640, 800, 1040]}
+          quality={72}
+          sizes="(min-width: 1220px) 500px, (min-width: 920px) 40vw, (min-width: 560px) 500px, calc(100vw - 40px)"
           eager
         />
         <div>

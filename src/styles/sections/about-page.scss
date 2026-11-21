@@ -1,0 +1,6 @@
+// Inline this small route stylesheet to avoid a separate blocking request.
+@use "../effects/gravity-logos";
+@use "../effects/integration-orbit";
+@use "../effects/name-sparkles";
+@use "about";
+@use "about-toolbox-and-tools";

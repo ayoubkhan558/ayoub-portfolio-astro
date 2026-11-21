@@ -13,7 +13,7 @@ import p from "../../../data/portfolio.json";
       {p.experienceLog.map((e) => (
         <article class="experience-list__item">
           {/* The company name below already identifies this logo. */}
-          <Asset src={e.logo} alt="" class="experience-list__logo" optimizeWidths={[160, 320]} sizes="160px" />
+          <Asset src={e.logo} alt="" class="experience-list__logo" optimizeWidths={[96, 192]} sizes="90px" quality={68} />
           <div class="experience-list__content">
             <span class="experience-list__period">
               {e.year} · {e.duration}
