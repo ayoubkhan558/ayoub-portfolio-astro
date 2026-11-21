@@ -4,4 +4,4 @@ import { Testimonials } from "../blocks/testimonials";
 const { journal = false } = Astro.props;
 ---
 
-<Testimonials data={p} journal={journal} client:load />
+<Testimonials data={p} journal={journal} client:visible />

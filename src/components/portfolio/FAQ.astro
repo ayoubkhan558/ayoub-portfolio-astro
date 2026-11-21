@@ -1,23 +1,29 @@
 ---
 import p from "../../data/portfolio.json";
-import { FAQ } from "../blocks/faq";
 ---
 
-<div class="faq-enhanced">
-  <FAQ items={p.faqs} client:load />
-</div>
-<noscript>
-  <style>
-    .faq-enhanced {
-      display: none;
-    }
-  </style>
+<div class="portfolio-faq">
+  <div class="faq-introduction">
+    <span class="eyebrow">Good questions</span>
+    <h2 class="portfolio-faq__title portfolio__heading portfolio__heading--section">
+      Before we get started.
+    </h2>
+    <p class="portfolio-faq__description portfolio__paragraph">
+      If you can't find what you're looking for,
+      <a href="/contact/" class="portfolio-faq__link portfolio__link">get in touch</a>.
+    </p>
+  </div>
   <div class="faq-list">
-    {p.faqs.map((f) => (
-      <details class="faq-list__item" name="portfolio-faq">
-        <summary class="faq-list__question">{f.question}</summary>
-        <p class="faq-list__answer portfolio__paragraph">{f.answer}</p>
+    {p.faqs.map(({ question, answer }, index) => (
+      <details class="faq-list__item" name="portfolio-faq" open={index === 0}>
+        <summary class="faq-list__question">
+          {question}
+          <svg class="portfolio-faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </summary>
+        <p class="faq-list__answer portfolio__paragraph">{answer}</p>
       </details>
     ))}
   </div>
-</noscript>
+</div>

@@ -414,3 +414,8 @@
     transition: none;
   }
 }
+.tools-inline__tool .tool-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}

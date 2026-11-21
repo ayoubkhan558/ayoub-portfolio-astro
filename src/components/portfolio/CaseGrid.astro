@@ -1,10 +1,58 @@
 ---
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { caseStudyDetails } from "../../data/caseStudyDetails";
-import { Features } from "../blocks/features";
+import { Badge } from "../ui/badge";
+import { Card, CardContent } from "../ui/card";
+import Asset from "./Asset.astro";
+
 interface Props {
   limit?: number;
+  optimizeThumbnails?: boolean;
 }
-const { limit } = Astro.props;
+const { limit, optimizeThumbnails = false } = Astro.props;
+const studies = Object.values(caseStudyDetails);
 ---
 
-<Features studies={Object.values(caseStudyDetails)} limit={limit} />
+<div class="case-grid">
+  {studies.slice(0, limit ?? studies.length).map(({ slug, listing }) => (
+    <article class="case-card-shell">
+      <Card className="case-card">
+        <a
+          href={listing.href}
+          class="case-card__link portfolio__link"
+          aria-label={`Read the ${listing.title} case study`}
+        >
+          <div class="case-image-link">
+            <Asset
+              src={listing.image}
+              alt={listing.imageAlt}
+              class="case-image"
+              optimizeWidths={optimizeThumbnails ? [360, 600] : undefined}
+              sizes={optimizeThumbnails ? "(min-width: 1120px) 33vw, (min-width: 560px) 50vw, 100vw" : undefined}
+            />
+            {listing.company && (
+              <span class="delivery-badge">Delivered at {listing.company}</span>
+            )}
+            <span class="round-arrow" aria-hidden="true">
+              <ArrowUpRight size={20} />
+            </span>
+          </div>
+          <CardContent className="case-body">
+            <div class="tags">
+              {listing.stack.map(tag => <Badge variant="outline">{tag}</Badge>)}
+            </div>
+            <h3 class="case-body__title portfolio__heading portfolio__heading--subsection" id={`case-title-${slug}`}>
+              {listing.title}
+            </h3>
+            <p class="case-body__description portfolio__paragraph">{listing.description}</p>
+            <div class="case-result">{listing.result}</div>
+            <span class="text-link card-action">
+              Read the case study
+              <ArrowRight aria-hidden="true" size={16} />
+            </span>
+          </CardContent>
+        </a>
+      </Card>
+    </article>
+  ))}
+</div>

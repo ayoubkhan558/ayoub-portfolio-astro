@@ -1,11 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import portrait from "../../public/ayoub-about-v4.jpg";
 import SkillBurst from "../components/effects/SkillBurst.astro";
 import ProjectReveal from "../components/effects/ProjectReveal.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 import p from "../data/portfolio.json";
 import { Hero } from "../components/blocks/hero";
 import { Background } from "../components/background";
-import { caseStudyDetails } from "../data/caseStudyDetails";
 import CTA from "../components/portfolio/CTA.astro";
 import TrustSection from "../components/sections/home/TrustSection.astro";
 import ProblemsSection from "../components/sections/home/ProblemsSection.astro";
@@ -21,7 +22,21 @@ import FAQSection from "../components/sections/home/FAQSection.astro";
 <Layout hasFooterCta>
   <div class="home-page">
     <Background className="portfolio-background">
-      <Hero data={p} featured={Object.values(caseStudyDetails)[0]} />
+      <Hero data={p}>
+        <Image
+          slot="portrait"
+          src={portrait}
+          alt={p.profile.name}
+          class="portfolio__image hero-profile-photo"
+          width={160}
+          widths={[160, 320]}
+          sizes="(min-width: 1120px) 104px, (min-width: 920px) 80px, (min-width: 768px) 104px, 80px"
+          format="webp"
+          loading="eager"
+          fetchpriority="high"
+          data-hero-image-reveal
+        />
+      </Hero>
       <TrustSection />
     </Background>
     <ProblemsSection />

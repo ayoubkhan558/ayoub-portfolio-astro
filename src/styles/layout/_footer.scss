@@ -145,7 +145,7 @@ html {
   display: flex;
   justify-content: center;
   color: var(--foreground);
-  font-family: "DM Sans Wordmark";
+  font-family: var(--body-font-family);
   font-optical-sizing: none;
   font-weight: 100;
   line-height: 0.9;

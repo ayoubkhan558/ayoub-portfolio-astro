@@ -19,6 +19,8 @@ import data from "../../data/caseStudyDetails.json";
 import { caseStudySeo } from "../../data/caseStudySeo";
 import Asset from "../../components/portfolio/Asset.astro";
 import Layout from "../../layouts/PortfolioLayout.astro";
+import "../../styles/sections/_contact-and-page-details.scss";
+import "../../styles/sections/_case-study.scss";
 import ExternalArrow from "../../components/portfolio/ExternalArrow.astro";
 export function getStaticPaths() {
   return Object.values(data).map((study) => ({

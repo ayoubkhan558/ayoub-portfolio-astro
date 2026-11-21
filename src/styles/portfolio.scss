@@ -24,18 +24,11 @@
 @use "components/testimonials";
 
 // PAGE SECTIONS
-@use "sections/about";
-@use "sections/about-toolbox-and-tools";
 @use "sections/call-to-action";
-@use "sections/case-study";
-@use "sections/contact-and-page-details";
 @use "sections/home-editorial";
 @use "sections/home-hero";
 @use "sections/home-panels";
-@use "sections/project-archive";
 @use "sections/selected-work";
-@use "sections/service-detail";
-@use "sections/services-delivery";
 
 // Opt-in interaction styles. Effect targets are marked in the owning component.
 @use "effects/border-beam";

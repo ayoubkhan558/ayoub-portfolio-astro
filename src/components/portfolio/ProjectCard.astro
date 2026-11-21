@@ -59,7 +59,7 @@ const details = Object.fromEntries(
         "figmaLink",
         "rating",
         "dateRaw",
-        ...(!href ? ["websiteUrl"] : []),
+        "websiteUrl",
         "notes",
       ].includes(k) &&
       !(typeof v === "string" && v.toLowerCase().includes("figma.com")) &&
@@ -107,6 +107,8 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       <div class="selected-card__media">
         <Asset
           src={featured.image.startsWith("/") ? featured.image : null}
+          optimizeWidths={[320, 640]}
+          sizes="260px"
           alt={featured.title}
           class="selected-card__image"
           imageClassOnly

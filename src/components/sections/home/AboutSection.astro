@@ -68,6 +68,8 @@ const studioTags = [
         <div class="home-about__portrait-stage" data-about-parallax>
           <Asset
             src="/ayoub-about-v4.jpg"
+            optimizeWidths={[480, 800]}
+            sizes="(min-width: 920px) 38vw, 90vw"
             alt={`${p.profile.name}, web developer and SEO specialist`}
             class="home-portrait"
           />

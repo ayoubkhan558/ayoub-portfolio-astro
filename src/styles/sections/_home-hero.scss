@@ -84,81 +84,6 @@
   padding-left: 42px;
 }
 
-.hero-project {
-  width: 100%;
-  height: 540px;
-  object-fit: cover;
-  object-position: center;
-  border: 1px solid var(--border);
-}
-
-.hero-showcase {
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.browser-bar {
-  border: 1px solid var(--border);
-  border-bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-3);
-  align-items: center;
-  border-radius: 16px 16px 0 0;
-  background: var(--background);
-  color: var(--muted-foreground);
-  padding: var(--space-3);
-  font-size: var(--font-size-10);
-
-  @include breakpoints.mq(sm) {
-    padding: 15px var(--space-5);
-  }
-
-  @include breakpoints.mq(lg) {
-    font-size: var(--caption-font-size);
-  }
-}
-
-.browser-dots {
-  letter-spacing: 3px;
-  font-size: var(--font-size-10);
-  color: var(--preview-caption-color);
-}
-
-.showcase-caption {
-  display: flex;
-  justify-content: space-between;
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-top: 0;
-  border-radius: 0 0 16px 16px;
-  align-items: start;
-  flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-4);
-
-  @include breakpoints.mq(sm) {
-    align-items: center;
-    flex-direction: row;
-    gap: var(--space-5);
-    padding: var(--space-5) var(--space-6);
-  }
-}
-
-.showcase-caption .eyebrow {
-  margin-bottom: var(--space-1);
-  font-size: var(--font-size-10);
-}
-
-.showcase-caption .showcase-caption__value {
-  font-weight: 500;
-  font-size: var(--font-size-18);
-
-  @include breakpoints.mq(sm) {
-    font-size: var(--font-size-19);
-  }
-}
-
 .dashed-label {
   position: relative;
   display: flex;
@@ -262,14 +187,6 @@
   }
 }
 
-.browser-bar>.browser-bar__label:last-child {
-  display: none;
-
-  @include breakpoints.mq(lg) {
-    display: inline;
-  }
-}
-
 .hero .hero__title {
   @include breakpoints.mq(xl) {
     font-size: var(--font-size-52);
@@ -316,20 +233,6 @@
 
   @include breakpoints.mq(xl) {
     padding-left: 42px;
-  }
-}
-
-.hero-project {
-  max-height: 650px;
-  object-fit: contain;
-  background: var(--muted);
-  aspect-ratio: 16/10;
-  height: auto;
-  padding: var(--space-2);
-
-  @include breakpoints.mq(sm) {
-    aspect-ratio: 16/9;
-    padding: 14px;
   }
 }
 
@@ -410,21 +313,6 @@
   @include breakpoints.mq(md) {
     max-width: none;
   }
-}
-
-.profile-status {
-  display: inline-flex;
-  gap: 7px;
-  align-items: center;
-  color: var(--link-accent);
-  font-size: var(--caption-font-size);
-}
-
-.profile-status__dot {
-  width: 6px;
-  height: 6px;
-  background: currentColor;
-  border-radius: 50%;
 }
 
 .hero-profile-identity {

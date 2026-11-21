@@ -7,21 +7,24 @@ import p from "../../data/portfolio.json";
   {p.clients
     .filter((c) => c.showInLogos)
     .map((c) => {
+      const darkLogo = c.logoDark || c.logo;
       const LogoItem = c.website ? "a" : "span";
       const link = c.website
         ? {
             href: c.website,
             target: "_blank",
             rel: "noopener noreferrer",
-            "aria-label": c.name,
+            "aria-label": "Visit " + c.name + " website",
           }
         : {};
 
       return (
         <LogoItem class:list={["logo-strip__item", c.website && "portfolio__link"]} {...link}>
-          <Asset src={c.logo} alt={c.name} class="client-logo light-logo" />
+          <Asset src={c.logo} optimizeWidths={[192, 384]} sizes="(min-width: 560px) 120px, 95px" alt={c.name} class="client-logo light-logo" />
           <Asset
-            src={c.logoDark || c.logo}
+            src={darkLogo}
+            optimizeWidths={[192, 384]}
+            sizes="(min-width: 560px) 120px, 95px"
             alt={c.name}
             class="client-logo dark-logo"
           />
