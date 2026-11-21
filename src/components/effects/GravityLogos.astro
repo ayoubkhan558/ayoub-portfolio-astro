@@ -2,21 +2,6 @@
 import tools from "../../data/toolCatalog.json";
 import { aiToolKeys } from "../../data/toolCatalog";
 
-// const keys = [
-//   "html",
-//   "css",
-//   "javascript",
-//   "typescript",
-//   "figma",
-//   "nextjs",
-//   "tailwind",
-//   "sass",
-//   "bricks-builder",
-//   "wordpress",
-//   "woocommerce",
-//   "elementor",
-// ] as const;
-
 const keys = [
   "html",
   "css",
@@ -75,43 +60,57 @@ const keys = [
 const logos = keys.map((key) => tools[key]).filter((tool) => tool?.logo);
 ---
 
-<ul
-  class="gravity-logos"
-  data-gravity-logos
-  aria-label="Skills and technology logos"
->
-  {logos.map(({ name, logo }) => (
-    <li class="gravity-logos__piece">
-      <img
-        class="gravity-logos__logo"
-        src={logo}
-        alt={name}
-        width="38"
-        height="38"
-        draggable="false"
-        loading="lazy"
-      />
-    </li>
-  ))}
-</ul>
+<div data-gravity-demo>
+  <button type="button" class="button button--outline" data-gravity-toggle aria-pressed="false" aria-controls="gravity-skill-logos" hidden>Animate skill logos</button>
+  <ul
+    id="gravity-skill-logos"
+    class="gravity-logos"
+    data-gravity-logos
+    aria-label="Skills and technology logos"
+  >
+    {logos.map(({ name, logo }) => (
+      <li class="gravity-logos__piece">
+        <img
+          class="gravity-logos__logo"
+          src={logo}
+          alt={name}
+          width="38"
+          height="38"
+          draggable="false"
+          loading="lazy"
+        />
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  [data-gravity-toggle][hidden] { display: none; }
+</style>
 
 <script>
-  import Matter from "matter-js";
-
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 
-  for (const stage of document.querySelectorAll<HTMLElement>(
-    "[data-gravity-logos]",
-  )) {
+  for (const demo of document.querySelectorAll<HTMLElement>("[data-gravity-demo]")) {
+    const stage = demo.querySelector<HTMLElement>("[data-gravity-logos]");
+    const toggle = demo.querySelector<HTMLButtonElement>("[data-gravity-toggle]");
+    if (!stage || !toggle) continue;
     const pieces = [
       ...stage.querySelectorAll<HTMLElement>(".gravity-logos__piece"),
     ];
     let stop: (() => void) | undefined;
+    let enabled = false;
     let inView = false;
+    const logoList = stage;
+    const motionButton = toggle;
 
-    function start() {
-      if (reduced.matches || !inView || stop) return;
+    async function start() {
+      if (!enabled || reduced.matches || !inView || stop) return;
       try {
+        // Import physics only after the animation is requested and visible.
+        const { default: Matter } = await import("matter-js");
+        if (!enabled || reduced.matches || !inView || stop) return;
+        const stage = logoList;
         const { Bodies, Composite, Constraint, Engine, Body, Sleeping } =
           Matter;
         const sizes = pieces.map((piece) => ({
@@ -232,9 +231,11 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool?.logo);
           });
         }
 
-        function reset() {
-          const nextWidth = stage.clientWidth;
-          const nextHeight = stage.clientHeight;
+        function reset([entry]: ResizeObserverEntry[]) {
+          // Use the observed dimensions after the animated layout is applied.
+          const size = entry.borderBoxSize?.[0];
+          const nextWidth = size?.inlineSize ?? logoList.clientWidth;
+          const nextHeight = size?.blockSize ?? logoList.clientHeight;
           if (!nextWidth || (width === nextWidth && height === nextHeight))
             return;
           width = nextWidth;
@@ -289,7 +290,6 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool?.logo);
         stage.classList.add("gravity-logos--running");
         const resize = new ResizeObserver(reset);
         resize.observe(stage);
-        reset();
         stop = () => {
           release();
           listeners.abort();
@@ -302,18 +302,33 @@ const logos = keys.map((key) => tools[key]).filter((tool) => tool?.logo);
           stop = undefined;
         };
       } catch {
-        // Leave the logo list usable if physics initialization fails.
+        enabled = false;
+        motionButton.setAttribute("aria-pressed", "false");
       }
     }
 
     new IntersectionObserver(([entry]) => {
       inView = entry.isIntersecting;
-      if (inView) start();
+      if (inView) void start();
+      else stop?.();
     }).observe(stage);
 
-    reduced.addEventListener("change", () => {
-      if (reduced.matches) stop?.();
-      else start();
+    function syncMotionPreference() {
+      motionButton.hidden = reduced.matches;
+      if (reduced.matches) {
+        enabled = false;
+        motionButton.setAttribute("aria-pressed", "false");
+        stop?.();
+      }
+    }
+
+    toggle.addEventListener("click", () => {
+      enabled = !enabled;
+      toggle.setAttribute("aria-pressed", String(enabled));
+      if (enabled) void start();
+      else stop?.();
     });
+    reduced.addEventListener("change", syncMotionPreference);
+    syncMotionPreference();
   }
 </script>

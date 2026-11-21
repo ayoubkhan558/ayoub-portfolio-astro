@@ -127,7 +127,10 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
     }
   });
   document.addEventListener("click", (e) => {
-    if (e.target instanceof Node && !details.contains(e.target)) closeMenu();
+    // Keep focus on a visible control when an outside click dismisses the menu.
+    if (e.target instanceof Node && !details.contains(e.target)) {
+      closeMenu(details.contains(document.activeElement));
+    }
   });
   const desktop = matchMedia("(min-width: 920px)");
   desktop.addEventListener("change", (e) => {

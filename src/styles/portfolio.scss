@@ -23,25 +23,17 @@
 @use "components/services";
 @use "components/testimonials";
 
+// Route-specific styles are imported by the pages that use them.
 // PAGE SECTIONS
 @use "sections/call-to-action";
-@use "sections/home-editorial";
 @use "sections/home-hero";
-@use "sections/home-panels";
-@use "sections/selected-work";
 
 // Opt-in interaction styles. Effect targets are marked in the owning component.
 @use "effects/border-beam";
 @use "effects/card-tilt";
 @use "effects/emoji-trail";
 @use "effects/grid-spotlight";
-@use "effects/gravity-logos";
-@use "effects/hero-reveal";
-@use "effects/integration-orbit";
 @use "effects/flood-fill-button";
-@use "effects/logo-reveal";
 @use "effects/meteors";
-@use "effects/name-sparkles";
 @use "effects/pointer-feedback" as cta-pointer-feedback;
-@use "effects/skill-burst";
 @use "effects/text-highlighter";

@@ -23,9 +23,11 @@ const {
   sizes,
   ...rest
 } = Astro.props;
+// Astro imports originals and generates size variants during the build.
 const optimizable = import.meta.glob<{ default: ImageMetadata }>([
   "/public/ayoub-about-v4.jpg",
   "/public/client/*.png",
+  "/public/comapnies/*.png",
   "/public/case-study/*-thumbnail.{jpg,webp}",
   "/public/projects/**/project-ss-{xgrid,alkira,chkk,pagano-law,king-sr-real-estate-rk,weinberger-aesthetics}.jpg",
 ]);

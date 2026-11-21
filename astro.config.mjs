@@ -16,7 +16,7 @@ export default defineConfig({
       },
     }],
     optimizeDeps: {
-      // Pre-bundle island dependencies even when the first visit is to another page.
+      // Pre-bundle common island dependencies and leave opt-in effects to their dynamic imports.
       include: [
         "react",
         "react-dom",
@@ -27,7 +27,6 @@ export default defineConfig({
         "react-hook-form",
         "@hookform/resolvers/yup",
         "yup",
-        "matter-js",
       ],
     },
   },

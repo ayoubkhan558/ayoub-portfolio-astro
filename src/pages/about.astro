@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/PortfolioLayout.astro";
+// Keep About-only effects with this route.
+import "../styles/effects/_gravity-logos.scss";
+import "../styles/effects/_integration-orbit.scss";
+import "../styles/effects/_name-sparkles.scss";
 import "../styles/sections/_about.scss";
 import "../styles/sections/_about-toolbox-and-tools.scss";
 import NameSparkles from "../components/effects/NameSparkles.astro";
@@ -26,6 +30,8 @@ import ExternalArrow from "../components/portfolio/ExternalArrow.astro";
           src="/ayoub-about-v4.jpg"
           alt={p.profile.name}
           class="portrait"
+          optimizeWidths={[400, 640, 960, 1120]}
+          sizes="(min-width: 920px) 43vw, 92vw"
           eager
         />
         <div>

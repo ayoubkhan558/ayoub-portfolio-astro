@@ -1,6 +1,7 @@
 ---
 import Asset from "../../portfolio/Asset.astro";
 import SectionHeader from "../../portfolio/SectionHeader.astro";
+// Employer names are shown beside their decorative logos.
 import p from "../../../data/portfolio.json";
 ---
 
@@ -11,7 +12,8 @@ import p from "../../../data/portfolio.json";
     <div>
       {p.experienceLog.map((e) => (
         <article class="experience-list__item">
-          <Asset src={e.logo} alt={e.company} class="experience-list__logo" />
+          {/* The company name below already identifies this logo. */}
+          <Asset src={e.logo} alt="" class="experience-list__logo" optimizeWidths={[160, 320]} sizes="160px" />
           <div class="experience-list__content">
             <span class="experience-list__period">
               {e.year} · {e.duration}

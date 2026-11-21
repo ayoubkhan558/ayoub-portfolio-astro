@@ -31,16 +31,12 @@ const wordmark = "MAYOUB.DEV";
     let strength = createSpring();
     let active = false;
     let frame = 0;
+    let centers: number[] = [];
 
     function render() {
       const x = pointer.step(target);
       const blend = strength.step(active ? 1 : 0);
       const amount = Math.max(0, Math.min(1, blend));
-      const centers = letters.map((letter) => {
-        const rect = letter.getBoundingClientRect();
-        return rect.left + rect.width / 2;
-      });
-
       letters.forEach((letter, index) => {
         const distance = Math.min(1, Math.abs(x - centers[index]) / radius);
         const weight = 100 + (800 * (1 + Math.cos(distance * Math.PI))) / 2;
@@ -56,7 +52,14 @@ const wordmark = "MAYOUB.DEV";
     wordmark.addEventListener("pointermove", (event) => {
       if (!motion.matches || event.pointerType === "touch") return;
       target = event.clientX;
-      if (!active && !frame) pointer = createSpring(target);
+      if (!active) {
+        // Measure once before animating font weights to avoid per-frame layout reads.
+        centers = letters.map((letter) => {
+          const rect = letter.getBoundingClientRect();
+          return rect.left + rect.width / 2;
+        });
+        if (!frame) pointer = createSpring(target);
+      }
       active = true;
       if (!frame) frame = requestAnimationFrame(render);
     });
