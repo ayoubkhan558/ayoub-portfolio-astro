@@ -1,0 +1,136 @@
+---
+import { toolCatalog } from "../../data/toolCatalog";
+
+const tiles = [
+  { key: "nextjs", x: 58, y: 39 },
+  { key: "typescript", x: 160, y: 25 },
+  { key: "tailwind", x: 266, y: 42 },
+  { key: "figma", x: 373, y: 59 },
+  { key: "wordpress", x: 480, y: 35 },
+  { key: "bricks-builder", x: 582, y: 26 },
+  { key: "woocommerce", x: 558, y: 100 },
+  { key: "codex", x: 450, y: 114 },
+  { key: "claude-code", x: 334, y: 113 },
+  { key: "github-copilot", x: 220, y: 115 },
+  { key: "vite", x: 103, y: 114 },
+];
+---
+
+<div class="tool-path-marquee" data-tool-path-marquee>
+  <svg class="tool-path-marquee__track" viewBox="0 0 640 142" aria-hidden="true" focusable="false">
+    <path
+      data-tool-path
+      d="M 58 39 C 135 4 207 23 266 42 S 405 69 480 35 S 611 22 611 65 C 611 120 520 114 450 114 S 303 109 220 115 S 26 130 29 76 Q 30 53 58 39 Z"
+    />
+    {tiles.map(({ key, x, y }) => (
+      <g data-tool-path-tile transform={`translate(${x} ${y})`}>
+        <rect class="tool-path-marquee__tile" x="-19" y="-19" width="38" height="38" rx="11" />
+        <image href={toolCatalog[key].logo!} x="-11" y="-11" width="22" height="22" />
+      </g>
+    ))}
+  </svg>
+  <button type="button" class="tool-path-marquee__toggle" data-tool-path-toggle hidden>
+    Pause logo motion
+  </button>
+</div>
+
+<script>
+  const motion = matchMedia("(prefers-reduced-motion: reduce)");
+
+  for (const marquee of document.querySelectorAll("[data-tool-path-marquee]")) {
+    const path = marquee.querySelector<SVGPathElement>("[data-tool-path]");
+    const toggle = marquee.querySelector<HTMLButtonElement>("[data-tool-path-toggle]");
+    if (!path || !toggle) continue;
+
+    const tiles = Array.from(marquee.querySelectorAll("[data-tool-path-tile]"));
+    const length = path.getTotalLength();
+    let visible = false;
+    let paused = false;
+    let frame = 0;
+    let previousTime = 0;
+    let distance = 0;
+
+    function tick(time: number) {
+      if (previousTime) {
+        distance = (distance + (time - previousTime) * 0.035) % length;
+      }
+      previousTime = time;
+
+      tiles.forEach((tile, index) => {
+        const point = path!.getPointAtLength((distance + index * length / tiles.length) % length);
+        tile.setAttribute("transform", `translate(${point.x} ${point.y})`);
+      });
+      frame = requestAnimationFrame(tick);
+    }
+
+    function sync() {
+      toggle!.hidden = motion.matches;
+      toggle!.textContent = paused ? "Resume logo motion" : "Pause logo motion";
+      if (visible && !paused && !motion.matches) {
+        if (!frame) frame = requestAnimationFrame(tick);
+      } else {
+        cancelAnimationFrame(frame);
+        frame = 0;
+        previousTime = 0;
+      }
+    }
+
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      sync();
+    }).observe(marquee);
+    motion.addEventListener("change", sync);
+    toggle.addEventListener("click", () => {
+      paused = !paused;
+      sync();
+    });
+    sync();
+  }
+</script>
+
+<style>
+  .tool-path-marquee {
+    max-width: 720px;
+    margin: var(--space-8) auto 0;
+    text-align: center;
+  }
+
+  .tool-path-marquee__track {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  [data-tool-path] {
+    fill: none;
+    stroke: var(--link-accent);
+    stroke-opacity: 0.4;
+    stroke-dasharray: 3 5;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .tool-path-marquee__tile {
+    fill: var(--logo-background-color);
+    stroke: var(--border);
+    vector-effect: non-scaling-stroke;
+  }
+
+  .tool-path-marquee__toggle {
+    min-height: 44px;
+    margin-top: var(--space-2);
+    padding-inline: var(--space-3);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--foreground);
+    font: inherit;
+    font-size: var(--small-font-size);
+    cursor: pointer;
+  }
+
+  .tool-path-marquee__toggle:focus-visible {
+    outline: 2px solid var(--link-accent);
+    outline-offset: 2px;
+  }
+</style>

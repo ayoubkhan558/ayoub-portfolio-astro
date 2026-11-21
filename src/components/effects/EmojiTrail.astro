@@ -58,7 +58,7 @@
   tools.wordpress,
   tools.woocommerce,
   tools.elementor
-].map((tool) => tool.logo).filter((logo): logo is string => typeof logo === "string");
+].map((tool) => tool?.logo).filter((logo): logo is string => typeof logo === "string");
 
 
   for (const area of document.querySelectorAll<HTMLElement>(

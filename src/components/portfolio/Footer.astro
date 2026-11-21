@@ -4,18 +4,19 @@ import ExternalArrow from "./ExternalArrow.astro";
 import p from "../../data/portfolio.json";
 import FooterWordmark from "./FooterWordmark.astro";
 const { meteors = false } = Astro.props;
+const contactFlipLabel = "Say hello \u2192";
 ---
 
 <footer class:list={["site-footer", meteors && "site-footer--meteors"]}>
   {meteors && <Meteors />}
-  <div class="site-footer__container container">
+  <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__identity">
-        <a class="brand" href="/">
+        <a class="brand portfolio__link" href="/">
           <span class="brand__mark">a.</span>
           <span class="brand__name">{p.profile.brand}</span>
         </a>
-        <p class="site-footer__bio">
+        <p class="site-footer__bio portfolio__paragraph">
           {p.profile.role}
           <br />
           {p.profile.location}
@@ -27,9 +28,23 @@ const { meteors = false } = Astro.props;
       </div>
       {p.footerColumns.map((column) => (
         <div class="site-footer__column">
-          <h2 class="site-footer__heading">{column.title}</h2>
-          {column.links.map((link) => (
-            <a class="site-footer__link" href={link.href}>
+          <h2 class="site-footer__heading portfolio__heading portfolio__heading--section">{column.title}</h2>
+          {column.links.map((link) => link.label === "Get in touch" && link.href === "/contact" ? (
+            <a class="site-footer__link site-footer__link--flip portfolio__link" href={link.href} aria-label={link.label}>
+              <span class="site-footer__flip" aria-hidden="true">
+                {[link.label, contactFlipLabel].map((label, row) => (
+                  <span class:list={["site-footer__flip-row", row === 1 && "site-footer__flip-row--back"]}>
+                    {Array.from(label).map((letter, index) => (
+                      <span class="site-footer__flip-letter" style={{ "--flip-index": index }}>
+                        {letter === " " ? "\u00a0" : letter}
+                      </span>
+                    ))}
+                  </span>
+                ))}
+              </span>
+            </a>
+          ) : (
+            <a class="site-footer__link portfolio__link" href={link.href}>
               {link.label.replace(/résumé|resume/gi, "Resume")}
             </a>
           ))}
@@ -41,16 +56,16 @@ const { meteors = false } = Astro.props;
         © {new Date().getFullYear()} {p.profile.name}. All rights reserved.
       </span>
       <div class="site-footer__links">
-        <a class="site-footer__secondary-link" href="/privacy-policy/">
+        <a class="site-footer__secondary-link portfolio__link" href="/privacy-policy/">
           Privacy policy
         </a>
-        <a class="site-footer__secondary-link" href="/terms-and-conditions/">
+        <a class="site-footer__secondary-link portfolio__link" href="/terms-and-conditions/">
           Terms
         </a>
-        <a class="site-footer__secondary-link" href={p.profile.github}>
+        <a class="site-footer__secondary-link portfolio__link" href={p.profile.github}>
           GitHub <ExternalArrow />
         </a>
-        <a class="site-footer__secondary-link" href={p.profile.linktree}>
+        <a class="site-footer__secondary-link portfolio__link" href={p.profile.linktree}>
           All links <ExternalArrow />
         </a>
       </div>

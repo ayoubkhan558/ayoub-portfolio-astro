@@ -1,9 +1,10 @@
 // Flood Fill Button, The dot and expanding fill share the same center.
 .flood-fill-button {
-  --flood-fill-ink: rgb(0, 0, 0);
-  --flood-fill-txt: #fff;
-  --flood-fill-txt-hover: #000000;
+  // Fill color and easing, plus the text colors before and after the fill.
+  --flood-fill-background: rgb(0, 0, 0);
   --flood-fill-easing: cubic-bezier(0.23, 1, 0.32, 1);
+  --flood-fill-hover-text-color: #000000;
+  --flood-fill-text-color: #fff;
   position: relative;
   isolation: isolate;
   display: inline-flex;
@@ -17,15 +18,15 @@
   border-radius: 999px;
   overflow: clip;
   color: var(--foreground);
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .dark {
   .flood-fill-button {
-    --flood-fill-ink: #fff;
-    --flood-fill-txt: rgb(0, 0, 0);
-    --flood-fill-txt-hover: #fff;
-    --flood-fill-easing: cubic-bezier(0.23, 1, 0.32, 1);
+    // Reverse the fill and text colors in dark mode.
+    --flood-fill-background: #fff;
+    --flood-fill-hover-text-color: #fff;
+    --flood-fill-text-color: rgb(0, 0, 0);
   }
 }
 
@@ -38,7 +39,7 @@
   width: 310px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--flood-fill-ink);
+  background: var(--flood-fill-background);
   translate: -50% -50%;
   scale: calc(10 / 310);
   transition: scale 450ms var(--flood-fill-easing);
@@ -62,7 +63,7 @@
 }
 
 .flood-fill-button:is(:hover, :focus-visible) {
-  color: var(--flood-fill-txt-hover);
+  color: var(--flood-fill-hover-text-color);
 }
 
 .flood-fill-button:is(:hover, :focus-visible)::before {
@@ -70,12 +71,12 @@
 }
 
 .flood-fill-button:is(:hover, :focus-visible) .flood-fill-button__label {
-  color: var(--flood-fill-txt);
+  color: var(--flood-fill-text-color);
   translate: -18px 0;
 }
 
 .flood-fill-button:is(:hover, :focus-visible) .flood-fill-button__arrow {
-  color: var(--flood-fill-txt);
+  color: var(--flood-fill-text-color);
   opacity: 1;
   translate: 0 0;
 }
@@ -90,14 +91,14 @@
 
 .flood-fill-button:is(:hover, :focus-visible) {
   @media (prefers-reduced-motion: reduce) {
-    background-color: var(--flood-fill-ink);
+    background-color: var(--flood-fill-background);
   }
 }
 
 .flood-fill-button:is(:hover, :focus-visible)::before {
   @media (prefers-reduced-motion: reduce) {
     scale: calc(10 / 310);
-    background: var(--flood-fill-txt);
+    background: var(--flood-fill-text-color);
     transition: background-color 150ms ease !important;
   }
 }

@@ -254,8 +254,8 @@ export default function ContactForm({
       aria-busy={isSubmitting}
     >
       <span className="eyebrow">Project brief</span>
-      <h2 className="contact-form__title">What to send.</h2>
-      <p className="contact-form__description">
+      <h2 className="contact-form__title portfolio__heading portfolio__heading--section">What to send.</h2>
+      <p className="contact-form__description portfolio__paragraph">
         Give me enough context to price the next step without a long discovery
         call.
       </p>
@@ -367,20 +367,20 @@ export default function ContactForm({
         {showFieldError("message", errors.message?.message)}
       </label>
       <input
-        className="contact-honeypot contact-form__input portfolio__input"
+        hidden
         name="_gotcha"
         tabIndex={-1}
         aria-hidden="true"
         autoComplete="off"
       />
-      <button className="button portfolio__button" type="submit" id="send-brief" disabled={isSubmitting}>
+      <button className="button" type="submit" id="send-brief" disabled={isSubmitting}>
         {isSubmitting ? "Sending…" : "Send project brief"}
         <ArrowUpRight className="button__icon" aria-hidden="true" size={18} />
       </button>
-      <p className="consent contact-form__description">
+      <p className="consent contact-form__description portfolio__paragraph">
         By submitting, you agree to the{" "}
-        <a className="consent__link" href="/privacy-policy/">privacy policy</a>. Prefer email?{" "}
-        <a className="consent__link" href={`mailto:${email}`}>Write directly</a>.
+        <a className="consent__link portfolio__link" href="/privacy-policy/">privacy policy</a>. Prefer email?{" "}
+        <a className="consent__link portfolio__link" href={`mailto:${email}`}>Write directly</a>.
       </p>
     </form>
   );

@@ -7,7 +7,7 @@
   z-index: 50;
   left: 50%;
   transform: translateX(-50%);
-  top: 24px;
+  top: breakpoints.clamp-val(24px, 38px);
   width: calc(100% - 40px);
   display: flex;
   align-items: center;
@@ -19,17 +19,15 @@
   background: color-mix(in oklch, var(--background) 78%, transparent);
   backdrop-filter: blur(18px);
 
-  @media (min-width: breakpoints.$small) {
-    top: 28px;
+  @include breakpoints.mq(sm) {
     padding: 10px var(--space-4) 10px var(--space-5);
   }
 
-  @media (min-width: breakpoints.$large) {
-    top: 38px;
+  @include breakpoints.mq(lg) {
     width: min(960px, calc(100% - 60px));
   }
 
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     gap: var(--space-5);
   }
 }
@@ -39,10 +37,10 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font-size: var(--text-caption);
+  font-size: var(--caption-font-size);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 13px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-13);
   }
 
   font-weight: 700;
@@ -51,7 +49,7 @@
 }
 
 .brand__mark {
-  font-size: 32px;
+  font-size: var(--font-size-32);
   line-height: 1;
   letter-spacing: -0.07em;
 }
@@ -61,17 +59,17 @@
   align-items: center;
   gap: 14px;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     display: flex;
   }
 
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     gap: 22px;
   }
 }
 
 .site-header__link {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -90,7 +88,7 @@
 .site-header__menu-toggle {
   display: grid;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     display: none;
   }
 }
@@ -108,7 +106,7 @@
   border-radius: 20px;
   background: var(--background);
   border: 1px solid var(--border);
-  box-shadow: 0 12px 30px var(--menu-shadow-ink);
+  box-shadow: 0 12px 30px var(--shadow-subtle-color);
 }
 
 .site-header__mobile-link {
@@ -149,13 +147,13 @@
   gap: var(--space-6);
   min-height: 180px;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     min-height: 220px;
   }
 }
 
 .brand-preview .brand-preview__value {
-  font-size: 30px;
+  font-size: var(--font-size-30);
 }
 
 .site-header {
@@ -166,7 +164,7 @@
   display: block;
   position: static;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     display: none;
   }
 }
@@ -210,7 +208,7 @@
 .site-header__cta.flood-fill-button {
   display: none;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     display: inline-flex;
   }
 } /* v1.2 — requested component refinements. Original source records are untouched. */
@@ -222,7 +220,7 @@
 
 .brand__mark {
   display: inline-block;
-  font-size: 32px;
+  font-size: var(--font-size-32);
   line-height: 1;
   transform: none;
 }
@@ -238,11 +236,11 @@
 }
 
 .site-header__link:hover {
-  color: var(--link-hover-ink);
+  color: var(--link-accent);
 }
 
 .dark .site-header__link:hover {
-  color: var(--link-hover-ink);
+  color: var(--link-accent);
 }
 
 .site-header__link:hover {

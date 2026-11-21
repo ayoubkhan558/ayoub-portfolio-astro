@@ -11,7 +11,7 @@
   background: var(--muted);
   border: 1px solid var(--border);
   border-radius: 8px;
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 // Toolbox and proof sections share the same editorial rhythm across breakpoints.
@@ -20,7 +20,7 @@
   margin-top: 36px;
   padding-top: var(--space-6);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     margin-top: var(--space-12);
     padding-top: var(--space-8);
   }
@@ -30,16 +30,12 @@
   margin-bottom: 0;
 }
 
-.about-toolbox-section .skills-title :where(p) {
-  margin-bottom: 0;
-}
-
 .about-toolbox-section .marquee-toolbar {
   align-items: flex-start;
   flex-direction: column;
   gap: var(--space-3);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     align-items: center;
     flex-direction: row;
     gap: var(--space-4);
@@ -52,7 +48,7 @@
   background: var(--background);
   min-height: 44px;
   padding: var(--space-2) var(--space-3);
-  font-size: 13px;
+  font-size: var(--font-size-13);
 }
 
 .marquee-toggle:hover {
@@ -67,22 +63,18 @@
   margin-top: var(--space-12);
   display: block;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     display: flex;
   }
 }
 
 .skills-title .skills-title__title {
-  font-size: 24px;
+  font-size: var(--font-size-24);
   margin-bottom: 10px;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     margin-bottom: 0;
   }
-}
-
-.skills-title :where(p) {
-  font-size: var(--text-small);
 }
 
 .marquee-toolbar {
@@ -93,7 +85,7 @@
   align-items: flex-start;
   flex-direction: column;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     align-items: center;
     flex-direction: row;
   }
@@ -145,7 +137,7 @@
 }
 
 .tool-chip .tool-chip__title {
-  font-size: 15px;
+  font-size: var(--font-size-15);
   letter-spacing: normal;
   margin: 0;
   white-space: nowrap;
@@ -192,43 +184,10 @@
   }
 }
 
-.back-to-top {
-  display: grid;
-  place-items: center;
-  position: fixed;
-  z-index: 30;
-  right: max(20px, env(safe-area-inset-right));
-  bottom: max(20px, env(safe-area-inset-bottom));
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--background);
-  color: var(--foreground);
-  box-shadow: 0 2px 12px var(--control-shadow-ink);
-}
-
-.back-to-top:hover {
-  background: var(--link-accent);
-  color: var(--background);
-}
-
-.back-to-top[data-ready] {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.back-to-top[data-ready].is-visible {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .about-toolbox-section .tool-chip {
   padding: var(--space-3) 14px;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     padding: 14px 18px;
   }
 }
@@ -270,14 +229,14 @@
   align-items: center;
   gap: var(--space-3);
   margin: 0 0 var(--space-4);
-  font-size: 20px;
+  font-size: var(--lead-font-size);
 }
 
 .toolbox__skills {
   display: grid;
   gap: var(--space-3);
   margin: 0;
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .toolbox__skill {

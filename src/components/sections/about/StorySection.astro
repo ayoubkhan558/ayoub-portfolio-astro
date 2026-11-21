@@ -1,21 +1,33 @@
 ---
+import IconCloud from "../../portfolio/IconCloud.astro";
+import { aiToolKeys, toolCatalog } from "../../../data/toolCatalog";
 import SectionHeader from "../../portfolio/SectionHeader.astro";
 import p from "../../../data/portfolio.json";
+
+const teamIcons = p.experienceLog.map(({ company, logo }) => ({ src: logo, label: company }));
+const aiTools = new Set<string>(aiToolKeys);
+const toIcon = ({ name, logo }: (typeof toolCatalog)[string]) =>
+  logo ? [{ src: logo, label: name }] : [];
+const toolIcons = Object.entries(toolCatalog)
+  .filter(([key]) => !aiTools.has(key))
+  .flatMap(([, tool]) => toIcon(tool));
+const aiIcons = aiToolKeys.flatMap((key) => toIcon(toolCatalog[key]));
+const icons = [...teamIcons, ...toolIcons.slice(0, 28 - teamIcons.length), ...aiIcons];
 ---
 
 <section class="about-story-section section-spacing">
   <div class="container">
     <SectionHeader label="My story" title="Learning by building." />
     <div class="about-story-section__columns">
-      <p class="lead">{p.about.originStory}</p>
-      <p class="lead">{p.about.motivation}</p>
+      <p class="portfolio__paragraph portfolio__paragraph--lead" set:html={p.about.originStory}></p>
+      <IconCloud icons={icons} spinSpeed={20} label="Teams and development tools" />
     </div>
     <div class="about-story-section__cards">
       {p.about.storyCards.map((s) => (
         <article class="plain-card">
           <span class="eyebrow">{s.label}</span>
-          <h3 class="plain-card__title">{s.title}</h3>
-          <p class="plain-card__description">{s.text}</p>
+          <h3 class="plain-card__title portfolio__heading portfolio__heading--subsection">{s.title}</h3>
+          <p class="plain-card__description portfolio__paragraph">{s.text}</p>
         </article>
       ))}
     </div>

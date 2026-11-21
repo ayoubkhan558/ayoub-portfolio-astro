@@ -2,6 +2,51 @@
 
 @use "../foundation/breakpoints";
 
+:where(.review-inner__quote) {
+  margin: 15px 0 var(--space-7);
+  font-size: var(--font-size-19);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
+:where(.review-journal__quote) {
+  margin: 15px 0 var(--space-7);
+  font-size: var(--font-size-19);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
+:where(.review-journal__person) {
+  font-size: var(--small-font-size);
+}
+
+:where(.review-inner__caption) {
+  font-size: var(--small-font-size);
+}
+
+:where(.review-inner__author) {
+  display: block;
+}
+
+:where(.review-journal__author) {
+  display: block;
+}
+
+:where(.review-inner__role) {
+  display: block;
+  color: var(--muted-foreground);
+}
+
+:where(.review-journal__role) {
+  display: block;
+  color: var(--muted-foreground);
+}
+
+:where(.testimonial__avatar) {
+  display: block;
+  color: var(--muted-foreground);
+}
+
 .testimonial-card.ui-card {
   scroll-snap-align: start;
   padding: 0;
@@ -15,7 +60,7 @@
   height: 100%;
   padding: var(--space-6);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     padding: var(--space-7);
   }
 }
@@ -27,11 +72,11 @@
   height: 100%;
   min-height: 320px;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     min-height: 300px;
   }
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     min-height: 320px;
   }
 }
@@ -45,10 +90,10 @@
 .review-inner .review-inner__quote {
   line-height: 1.5;
   margin: var(--space-3) 0 var(--space-8);
-  font-size: 19px;
+  font-size: var(--font-size-19);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: var(--text-lead);
+  @include breakpoints.mq(sm) {
+    font-size: var(--lead-font-size);
   }
 }
 
@@ -60,17 +105,17 @@
 }
 
 .review-inner__author {
-  font-size: 15px;
+  font-size: var(--font-size-15);
 }
 
 .review-inner__role {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   line-height: 1.5;
   margin-top: 3px;
 }
 
 .review-note {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   line-height: 1.5;
   margin: 18px 0 0;
 }
@@ -122,11 +167,11 @@
   padding-left: 0;
   flex-basis: 92%;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     flex-basis: calc((100% - 16px) / 2);
   }
 
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     flex-basis: calc((100% - 32px) / 3);
   }
 }
@@ -195,7 +240,7 @@
     color 180ms ease;
 
   &:enabled:is(:hover, :focus-visible) {
-    background: var(--link-accent-soft);
+    background: var(--link-accent-tint);
     border-color: var(--link-accent);
     color: var(--link-accent);
   }
@@ -214,12 +259,12 @@
 .review-journal__entry {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4) clamp(var(--space-5), 5vw, 64px);
-  padding: clamp(var(--space-5), 4vw, var(--space-10));
+  gap: var(--space-4) breakpoints.clamp-val(20px, 64px);
+  padding: breakpoints.clamp-val(20px, 40px);
   margin: 0;
   border-top: 1px solid var(--border);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
 }
@@ -231,13 +276,13 @@
 
   .review-journal__role {
     margin: var(--space-1) 0 0;
-    font-size: var(--text-small);
+    font-size: var(--small-font-size);
   }
 }
 
 .review-journal__quote {
   margin: 0;
-  font-size: clamp(17px, 2vw, 24px);
+  font-size: var(--font-size-24);
   line-height: 1.5;
 }
 

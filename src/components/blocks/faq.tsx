@@ -11,18 +11,18 @@ export function FAQ({ items }: { items: typeof portfolio.faqs }) {
     <div className="portfolio-faq">
       <div className="faq-introduction">
         <span className="eyebrow">Good questions</span>
-        <h2 className="portfolio-faq__title">
+        <h2 className="portfolio-faq__title portfolio__heading portfolio__heading--section">
           Before we get started.
         </h2>
-        <p className="portfolio-faq__description">
+        <p className="portfolio-faq__description portfolio__paragraph">
           If you can't find what you're looking for,{" "}
-          <a href="/contact/" className="portfolio-faq__link">
+          <a href="/contact/" className="portfolio-faq__link portfolio__link">
             get in touch
           </a>
           .
         </p>
       </div>
-      <div className="portfolio-faq__questions">
+      <div>
         <Accordion
           type="single"
           collapsible

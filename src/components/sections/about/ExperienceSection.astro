@@ -7,20 +7,21 @@ import p from "../../../data/portfolio.json";
 <section class="about-experience-section section-spacing">
   <div class="container">
     <SectionHeader label="Experience" title="Teams I've built with." />
-    <div class="experience-list">
+
+    <div>
       {p.experienceLog.map((e) => (
         <article class="experience-list__item">
-          <Asset src={e.logo} alt={e.company} class="company-logo" />
-          <div>
-            <span class="eyebrow">
+          <Asset src={e.logo} alt={e.company} class="experience-list__logo" />
+          <div class="experience-list__content">
+            <span class="experience-list__period">
               {e.year} · {e.duration}
             </span>
-            <h3>{e.title}</h3>
-            <p>
+            <h3 class="experience-list__title">{e.title}</h3>
+            <p class="experience-list__company">
               <strong>{e.company}</strong> · {e.location}
             </p>
-            <p>{e.description}</p>
-            <p class="small-note">
+            <p class="experience-list__description">{e.description}</p>
+            <p class="experience-list__dates">
               <time datetime={e.startDate}>{e.startDate}</time> →{" "}
               <time datetime={e.endDate}>{e.endDate}</time>
             </p>

@@ -1,0 +1,44 @@
+---
+import type { City, Route } from "./edge-globe";
+
+interface Props {
+  cities: City[];
+  routes: Route[];
+  size?: number;
+  speed?: number;
+  tilt?: number;
+  longitude?: number;
+  label?: string;
+}
+
+const {
+  cities, routes, size = 360, speed = 12, tilt = 20, longitude = -65,
+  label = "Interactive globe",
+} = Astro.props;
+---
+
+<edge-globe data-config={JSON.stringify({ cities, routes, speed, tilt, longitude })} style:max-width={size + "px"}>
+  <canvas
+    width={size}
+    height={size}
+    tabindex="0"
+    aria-label={`${label}. Drag or use the arrow keys to rotate. Cities: ${cities.map(city => city.name).join(", ")}.`}
+  ></canvas>
+</edge-globe>
+
+<script>
+  import "./edge-globe";
+</script>
+
+<style>
+  edge-globe { display: block; width: 100%; }
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    touch-action: none;
+    cursor: grab;
+  }
+  canvas:active { cursor: grabbing; }
+</style>

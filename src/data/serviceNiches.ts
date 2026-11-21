@@ -161,7 +161,3 @@ export const serviceNiches: ServiceNiche[] = [
     ],
   },
 ];
-
-export function getServiceNiche(slug: string) {
-  return serviceNiches.find((niche) => niche.slug === slug);
-}

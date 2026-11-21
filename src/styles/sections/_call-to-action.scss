@@ -16,7 +16,7 @@
 .cta-panel .cta-panel__title {
   max-width: 800px;
   margin: 0 auto 22px;
-  font-size: clamp(34px, 4.3vw, 56px);
+  font-size: var(--font-size-52);
 }
 
 .cta-panel>.cta-panel__description {
@@ -35,13 +35,13 @@
 
 .cta-panel .offer {
   margin-top: 30px;
-  font-size: var(--text-caption);
+  font-size: var(--caption-font-size);
 }
 
 .cta-panel .text-link {
-  font-size: 13px;
+  font-size: var(--font-size-13);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: var(--text-small);
+  @include breakpoints.mq(sm) {
+    font-size: var(--small-font-size);
   }
 }

@@ -1,4 +1,5 @@
 ---
+import { BriefcaseBusiness, Mail, Network, Phone } from "lucide-react";
 import p from "../../../data/portfolio.json";
 import ExternalArrow from "../../portfolio/ExternalArrow.astro";
 import ContactForm from "./ContactForm";
@@ -6,7 +7,7 @@ const formId = import.meta.env.PUBLIC_FORMSPREE_ID || "mgojyyqd";
 const contactSteps = ["Send project details", "Get a build estimate"];
 ---
 
-<section class="contact-details-section section-spacing section-spacing--opening">
+<section class="section-spacing section-spacing--opening">
   <div class="container contact-layout">
     <div class="contact-layout__form">
       <ContactForm
@@ -24,37 +25,51 @@ const contactSteps = ["Send project details", "Get a build estimate"];
           {p.profile.availability}
         </span>
       </div>
-      <h2 class="contact-info__title contact-details-section__subheading">Let's build something useful.</h2>
+      <h2 class="contact-info__title contact-details-section__subheading portfolio__heading portfolio__heading--section">Let's build something useful.</h2>
 
-      <p>
+      <p class="portfolio__paragraph">
         Share a few details in the project brief form to get a clear scope, realistic timeline, and practical next steps without back-and-forth calls.
         <br>
         <br>
         Include your goals and budget so we can turn your idea into a clear plan—or write directly if you prefer email.
       </p>
-      <a class="contact-link" href={`mailto:${p.profile.email}`}>
-        <span class="contact-link__label">Email</span>
-        {p.profile.email} <ExternalArrow />
+      <a class="contact-link portfolio__link" href={`mailto:${p.profile.email}`}>
+        <Mail className="contact-link__icon" size={20} aria-hidden="true" />
+        <span>
+          <span class="contact-link__label">Email</span>
+          {p.profile.email} <ExternalArrow />
+        </span>
       </a>
-      <a class="contact-link" href={`tel:${p.profile.phone.replaceAll(" ", "")}`}>
-        <span class="contact-link__label">Phone</span>
-        {p.profile.phone} <ExternalArrow />
+      <a class="contact-link portfolio__link" href={`tel:${p.profile.phone.replaceAll(" ", "")}`}>
+        <Phone className="contact-link__icon" size={20} aria-hidden="true" />
+        <span>
+          <span class="contact-link__label">Phone</span>
+          {p.profile.phone} <ExternalArrow />
+        </span>
       </a>
       <a
-        class="contact-link"
+        class="contact-link portfolio__link"
         href={p.profile.linkedin}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span class="contact-link__label">Connect</span>LinkedIn <ExternalArrow />
+        <Network className="contact-link__icon" size={20} aria-hidden="true" />
+        <span>
+          <span class="contact-link__label">Connect</span>
+          LinkedIn <ExternalArrow />
+        </span>
       </a>
       <a
-        class="contact-link"
+        class="contact-link portfolio__link"
         href={p.profile.upwork}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span class="contact-link__label">Hire</span>Upwork <ExternalArrow />
+        <BriefcaseBusiness className="contact-link__icon" size={20} aria-hidden="true" />
+        <span>
+          <span class="contact-link__label">Hire</span>
+          Upwork <ExternalArrow />
+        </span>
       </a>
     </div>
   </div>

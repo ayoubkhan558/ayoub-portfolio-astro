@@ -14,11 +14,11 @@ const { label, items } = Astro.props;
   tabindex="0"
 >
   <div class="text-rotator__line">
-    <h4 class="text-rotator__label">{label}</h4>
+    <h4 class="text-rotator__label portfolio__heading">{label}</h4>
     <ul class="rotator-items" aria-label={label}>
       {items.map((item, i) => (
         <li class:list={["rotator-items__item", i === 0 && "is-current"]}>
-          <p class="rotator-items__description">
+          <p class="rotator-items__description portfolio__paragraph">
             <span class="rotator-items__accessible-text">{item}</span>
             <span aria-hidden="true">
               {item.split(/\s+/).map((word, index) => (

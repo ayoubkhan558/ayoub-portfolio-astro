@@ -1,5 +1,6 @@
 ---
 import tools from "../../data/toolCatalog.json";
+import { aiToolKeys } from "../../data/toolCatalog";
 
 // const keys = [
 //   "html",
@@ -68,9 +69,10 @@ const keys = [
   "wordpress",
   "woocommerce",
   "elementor",
+  ...aiToolKeys,
 ] as const;
 
-const logos = keys.map((key) => tools[key]).filter((tool) => tool.logo);
+const logos = keys.map((key) => tools[key]).filter((tool) => tool?.logo);
 ---
 
 <ul

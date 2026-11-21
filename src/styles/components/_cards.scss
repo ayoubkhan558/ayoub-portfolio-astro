@@ -1,0 +1,69 @@
+// Shared card surfaces, tags and preview badges.
+
+.plain-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+  transition:
+    border-color 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.plain-card:hover {
+  border-color: var(--panel-hover-border);
+  box-shadow: 0 8px 32px var(--shadow-subtle-color);
+}
+
+.plain-card__description:last-child {
+  margin-bottom: 0;
+}
+
+.plain-card__title {
+  font-size: var(--font-size-23);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tags .tags__label {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+  padding: var(--space-1) 9px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--muted-foreground);
+  overflow-wrap: anywhere;
+}
+
+.tag {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+  padding: var(--space-1) 9px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--muted-foreground);
+  overflow-wrap: anywhere;
+}
+
+.delivery-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  border: 1px solid var(--preview-border-color);
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: var(--preview-background-color);
+  color: var(--preview-text-color);
+  font-size: var(--caption-font-size);
+  line-height: 1.4;
+  box-shadow: 0 2px 8px var(--shadow-subtle-color);
+  max-width: calc(100% - 32px);
+}

@@ -9,8 +9,19 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   vite: {
     optimizeDeps: {
-      // Pre-bundle dependencies used by interactive features.
-      include: ["react-hook-form", "@hookform/resolvers/yup", "yup", "matter-js"],
+      // Pre-bundle island dependencies even when the first visit is to another page.
+      include: [
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react/jsx-runtime",
+        "react/jsx-dev-runtime",
+        "lucide-react",
+        "react-hook-form",
+        "@hookform/resolvers/yup",
+        "yup",
+        "matter-js",
+      ],
     },
   },
   redirects: {

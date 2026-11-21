@@ -6,22 +6,26 @@ import p from "../../data/portfolio.json";
 <div class="logo-strip">
   {p.clients
     .filter((c) => c.showInLogos)
-    .map((c) => (
-      <a
-        class="logo-strip__link"
-        href={c.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={c.name}
-      >
-        <>
+    .map((c) => {
+      const LogoItem = c.website ? "a" : "span";
+      const link = c.website
+        ? {
+            href: c.website,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": c.name,
+          }
+        : {};
+
+      return (
+        <LogoItem class:list={["logo-strip__item", c.website && "portfolio__link"]} {...link}>
           <Asset src={c.logo} alt={c.name} class="client-logo light-logo" />
           <Asset
             src={c.logoDark || c.logo}
             alt={c.name}
             class="client-logo dark-logo"
           />
-        </>
-      </a>
-    ))}
+        </LogoItem>
+      );
+    })}
 </div>

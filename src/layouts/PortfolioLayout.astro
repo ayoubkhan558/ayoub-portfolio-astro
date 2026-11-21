@@ -93,7 +93,7 @@ const schema = {
       }
     </script>
   </head>
-  <body id="page-top">
+  <body class="portfolio__body" id="page-top">
     <noscript>
       <style is:global>
         .carousel__viewport {
@@ -112,14 +112,15 @@ const schema = {
         }
       </style>
     </noscript>
-    <a href="#main" class="skip-link">
+    <a href="#main" class="skip-link portfolio__link">
       Skip to content
     </a>
     {!notFound && <Header />}
-    <main id="main">
+    <main id="main" tabindex="-1">
       <slot />
     </main>
-    {!notFound && <><Footer meteors={!hasFooterCta} /><BackToTop /><PointerFeedback /></>}
+    {!notFound && <><Footer meteors={!hasFooterCta} /><PointerFeedback /></>}
+    <BackToTop downTarget={pathname === "/" ? "#trust" : undefined} />
     <TextHighlighter />
   </body>
 </html>

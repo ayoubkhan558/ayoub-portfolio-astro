@@ -274,6 +274,41 @@
     "logo": "/tools/elementor.svg",
     "description": "Visual WordPress builder for responsive custom page layouts."
   },
+  "claude-ai": {
+    "name": "Claude AI",
+    "logo": "/tools/claude-ai.svg",
+    "description": "AI assistant for reasoning through requirements and reviewing drafts."
+  },
+  "claude-code": {
+    "name": "Claude Code",
+    "logo": "/tools/claudecode.svg",
+    "description": "Terminal-based coding agent for working across a codebase."
+  },
+  "codex": {
+    "name": "Codex",
+    "logo": "/tools/codex.svg",
+    "description": "Coding agent for implementing changes, debugging, and running checks."
+  },
+  "cursor": {
+    "name": "Cursor",
+    "logo": "/tools/cursor.svg",
+    "description": "Code editor with AI-assisted editing and codebase search."
+  },
+  "github-copilot": {
+    "name": "GitHub Copilot",
+    "logo": "/tools/githubcopilot.svg",
+    "description": "AI coding assistance for completions, explanations, and edits."
+  },
+  "muse": {
+    "name": "Muse",
+    "logo": "/tools/muse.svg",
+    "description": "AI tool for exploring ideas and drafts."
+  },
+  "openai": {
+    "name": "OpenAI",
+    "logo": "/tools/openai.svg",
+    "description": "AI models for prototyping and testing application features."
+  },
   "performance-qa": {
     "name": "Performance QA",
     "logo": null,

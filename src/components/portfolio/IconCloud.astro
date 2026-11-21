@@ -1,0 +1,279 @@
+---
+interface Props {
+  icons: readonly { src: string; label: string }[];
+  label?: string;
+  spinSpeed?: number;
+  diameter?: number;
+  tilt?: number;
+}
+
+const {
+  icons,
+  label = "Icon cloud",
+  spinSpeed = 20,
+  diameter = 260,
+  tilt = 12,
+} = Astro.props;
+const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+const pitch = (tilt * Math.PI) / 180;
+const points = icons.map((icon, index) => {
+  const y = 1 - (2 * (index + 0.5)) / icons.length;
+  const radius = Math.sqrt(1 - y * y);
+  const angle = goldenAngle * index;
+  const x = radius * Math.cos(angle);
+  const z = radius * Math.sin(angle);
+  const vertical = y * Math.cos(pitch) - z * Math.sin(pitch);
+  const depth = (1 + y * Math.sin(pitch) + z * Math.cos(pitch)) / 2;
+  return { icon, x, y, z, vertical, depth };
+});
+---
+
+<div
+  class="icon-cloud"
+  data-icon-cloud
+  data-spin-speed={spinSpeed}
+  data-tilt={tilt}
+  style={{ "--icon-cloud-size": diameter + 46 + "px" }}
+  role="group"
+  tabindex="0"
+  aria-label={label + ". Drag or use the arrow keys to rotate."}
+>
+  {points.map(({ icon, x, y, z, vertical, depth }) => (
+    <div
+      class="icon-cloud__tile"
+      data-point={[x, y, z].join(",")}
+      style={{
+        "--cloud-x": x,
+        "--cloud-y": vertical,
+        "--cloud-scale": 0.5 + depth * 0.6,
+        opacity: 0.15 + depth * 0.85,
+        zIndex: Math.round(depth * 1000),
+      }}
+    >
+      <img
+        class="icon-cloud__image portfolio__image"
+        src={icon.src}
+        alt={icon.label}
+        width="24"
+        height="24"
+        loading="lazy"
+        draggable="false"
+      />
+    </div>
+  ))}
+</div>
+
+<script>
+  const radians = Math.PI / 180;
+  const dragSensitivity = 0.009;
+  const coastDuration = 850;
+
+  for (const cloud of document.querySelectorAll<HTMLElement>(
+    "[data-icon-cloud]",
+  )) {
+    const motion = matchMedia("(prefers-reduced-motion: reduce)");
+    const speed = Number(cloud.dataset.spinSpeed) * radians;
+    const tiles = Array.from(
+      cloud.querySelectorAll<HTMLElement>("[data-point]"),
+      (tile) => ({
+        tile,
+        point: tile.dataset.point!.split(",").map(Number),
+      }),
+    );
+    let yaw = 0;
+    let pitch = Number(cloud.dataset.tilt) * radians;
+    let frame = 0;
+    let previousFrame = 0;
+    let visible = false;
+    let pointer: number | null = null;
+    let lastX = 0;
+    let lastY = 0;
+    let lastMove = 0;
+    let velocity = 0;
+    let coastStart = 0;
+    let resumeAt = 0;
+
+    function render() {
+      const sinYaw = Math.sin(yaw);
+      const cosYaw = Math.cos(yaw);
+      const sinPitch = Math.sin(pitch);
+      const cosPitch = Math.cos(pitch);
+
+      for (const {
+        tile,
+        point: [x, y, z],
+      } of tiles) {
+        const horizontal = x * cosYaw + z * sinYaw;
+        const turnedZ = z * cosYaw - x * sinYaw;
+        const vertical = y * cosPitch - turnedZ * sinPitch;
+        const depth = (1 + y * sinPitch + turnedZ * cosPitch) / 2;
+        tile.style.setProperty("--cloud-x", String(horizontal));
+        tile.style.setProperty("--cloud-y", String(vertical));
+        tile.style.setProperty("--cloud-scale", String(0.5 + depth * 0.6));
+        tile.style.opacity = String(0.15 + depth * 0.85);
+        tile.style.zIndex = String(Math.round(depth * 1000));
+      }
+    }
+
+    function tick(now: number) {
+      frame = 0;
+      const elapsed = previousFrame ? Math.min(now - previousFrame, 40) : 0;
+      previousFrame = now;
+      if (coastStart) {
+        const progress = Math.min(1, (now - coastStart) / coastDuration);
+        yaw += velocity * (1 - progress) ** 2 * elapsed;
+        if (progress === 1) coastStart = 0;
+      } else if (now >= resumeAt) {
+        yaw += (speed * elapsed) / 1000;
+      }
+      render();
+      schedule();
+    }
+
+    function schedule() {
+      if (
+        visible &&
+        !motion.matches &&
+        pointer === null &&
+        !frame &&
+        (speed || coastStart)
+      ) {
+        frame = requestAnimationFrame(tick);
+      }
+    }
+
+    function stop() {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      previousFrame = 0;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible) schedule();
+      else stop();
+    });
+    observer.observe(cloud);
+
+    motion.addEventListener("change", () => {
+      if (motion.matches) {
+        coastStart = 0;
+        stop();
+      } else schedule();
+    });
+
+    cloud.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0 || pointer !== null) return;
+      pointer = event.pointerId;
+      lastX = event.clientX;
+      lastY = event.clientY;
+      lastMove = event.timeStamp;
+      velocity = 0;
+      coastStart = 0;
+      cloud.setPointerCapture(pointer);
+      stop();
+    });
+
+    cloud.addEventListener("pointermove", (event) => {
+      if (event.pointerId !== pointer) return;
+      const delta = (event.clientX - lastX) * dragSensitivity;
+      const elapsed = Math.max(event.timeStamp - lastMove, 1);
+      yaw += delta;
+      pitch = Math.max(
+        -1.2,
+        Math.min(1.2, pitch + (event.clientY - lastY) * dragSensitivity),
+      );
+      velocity = Math.max(-0.015, Math.min(0.015, delta / elapsed));
+      lastX = event.clientX;
+      lastY = event.clientY;
+      lastMove = event.timeStamp;
+      render();
+    });
+
+    function finishDrag(event: PointerEvent) {
+      if (event.pointerId !== pointer) return;
+      pointer = null;
+      const now = performance.now();
+      if (
+        event.type === "pointerup" &&
+        !motion.matches &&
+        event.timeStamp - lastMove < 100 &&
+        Math.abs(velocity) > 0.0001
+      ) {
+        coastStart = now;
+      }
+      resumeAt = now + (coastStart ? coastDuration : 0) + 700;
+      schedule();
+    }
+
+    cloud.addEventListener("pointerup", finishDrag);
+    cloud.addEventListener("pointercancel", finishDrag);
+    cloud.addEventListener("lostpointercapture", finishDrag);
+
+    cloud.addEventListener("keydown", (event) => {
+      if (
+        !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)
+      )
+        return;
+      event.preventDefault();
+      if (event.key === "ArrowLeft") yaw -= 0.15;
+      if (event.key === "ArrowRight") yaw += 0.15;
+      if (event.key === "ArrowUp") pitch = Math.max(-1.2, pitch - 0.15);
+      if (event.key === "ArrowDown") pitch = Math.min(1.2, pitch + 0.15);
+      coastStart = 0;
+      resumeAt = performance.now() + 700;
+      render();
+    });
+  }
+</script>
+
+<style>
+  .icon-cloud {
+    position: relative;
+    container-type: inline-size;
+    isolation: isolate;
+    width: min(100%, var(--icon-cloud-size));
+    aspect-ratio: 1;
+    margin-inline: auto;
+    /* // temp position fix  */
+    margin-top: -55px;
+    border-radius: var(--radius);
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .icon-cloud:active {
+    cursor: grabbing;
+  }
+
+  .icon-cloud:focus-visible {
+    outline: 2px solid var(--link-accent);
+    outline-offset: 2px;
+  }
+
+  .icon-cloud__tile {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--logo-background-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--cloud-x) * (50cqi - 23px)),
+        calc(var(--cloud-y) * (50cqi - 23px))
+      )
+      scale(var(--cloud-scale));
+  }
+
+  .icon-cloud__image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+</style>

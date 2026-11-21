@@ -3,7 +3,7 @@ import {
   Braces,
   Gauge,
   LayoutTemplate,
-  Search,
+  Sparkles,
   ShoppingCart,
   Workflow,
 } from "lucide-react";
@@ -11,6 +11,8 @@ import GravityLogos from "../../effects/GravityLogos.astro";
 import SectionHeader from "../../portfolio/SectionHeader.astro";
 import GridSpotlight from "../../effects/GridSpotlight.astro";
 import SkillsMarquee from "../../portfolio/SkillsMarquee.astro";
+import ToolPathMarquee from "../../effects/ToolPathMarquee.astro";
+import { aiToolKeys, toolCatalog } from "../../../data/toolCatalog";
 
 const groups = [
   {
@@ -76,35 +78,46 @@ const groups = [
     ],
   },
   {
-    title: "Performance & handoff",
+    title: "Performance & SEO",
     icon: Gauge,
     skills: [
       [
-        "Core Web Vitals",
-        "Optimize assets, serve WebP, and lazy-load images where it helps.",
+        "Core Web Vitals & mobile QA",
+        "Optimize assets and loading, then test layouts, forms, and checkout across devices.",
       ],
       [
-        "Mobile-first QA",
-        "Test layouts, forms, and checkout across screen sizes and browsers.",
+        "Technical & on-page SEO",
+        "Check crawlability and indexing, and structure pages around search intent.",
       ],
+      // [
+      //   "Conversion & measurement",
+      //   "Plan calls to action, conversion flows, and analytics tracking.",
+      // ],
       [
-        "Documentation & support",
-        "Document the CMS, leave maintainable code, and validate technical SEO before handoff.",
+        "Documentation & handoff",
+        "Document CMS workflows, performance checks, and SEO settings for the next developer.",
       ],
     ],
   },
   {
-    title: "SEO & growth",
-    icon: Search,
+    title: "AI Skills",
+    icon: Sparkles,
     skills: [
-      ["Technical SEO", "Improve crawlability and check indexing health."],
       [
-        "Content & authority",
-        "Search intent, on-page content, off-page SEO, and link building.",
+        "Prompt design",
+        "Give AI tools clear requirements, project context, and examples.",
       ],
       [
-        "Conversion & measurement",
-        "Plan CTAs and conversion flows, and prepare the site for analytics tracking.",
+        "AI-assisted prototyping",
+        "Explore layouts and implementation options before building the final version.",
+      ],
+      [
+        "AI-assisted coding & review",
+        "Use AI for debugging and refactoring, then review and test the changes before shipping.",
+      ],
+      [
+        "Tools",
+        aiToolKeys.map((key) => toolCatalog[key].name).join(", ") + ".",
       ],
     ],
   },
@@ -122,7 +135,7 @@ const groups = [
         {groups.map(({ title, icon: Icon, skills }) => (
           <article class="toolbox__group" data-spotlight-card>
             <span class="grid-spotlight__glow" aria-hidden="true"></span>
-            <h3 class="toolbox__title">
+            <h3 class="toolbox__title portfolio__heading portfolio__heading--subsection">
               <Icon size={21} aria-hidden="true" />
               {title}
             </h3>
@@ -139,13 +152,14 @@ const groups = [
       </div>
       <div hidden>
         <div class="skills-title">
-          <h3 class="skills-title__title">Skills & technologies</h3>
+          <h3 class="skills-title__title portfolio__heading portfolio__heading--subsection">Skills & technologies</h3>
         </div>
         <SkillsMarquee />
       </div>
-      <div class="gravity-logos-section">
+      <div>
         <GravityLogos />
       </div>
+      <ToolPathMarquee />
     </div>
   </section>
 </div>

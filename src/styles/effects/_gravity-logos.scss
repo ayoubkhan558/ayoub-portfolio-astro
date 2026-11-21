@@ -1,10 +1,12 @@
+@use "../foundation/breakpoints";
+
 .gravity-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-3);
   position: relative;
-  min-height: clamp(440px, 1200px - 130vw, 480px);
+  min-height: breakpoints.clamp-val(480px, 440px, 554px, 585px);
   align-content: end;
   margin: var(--space-8) 0 0;
   padding: var(--space-4);
@@ -18,7 +20,7 @@
 
 .gravity-logos--running {
   display: block;
-  height: clamp(440px, 1200px - 130vw, 480px);
+  height: breakpoints.clamp-val(480px, 440px, 554px, 585px);
 }
 
 .gravity-logos__piece {
@@ -30,8 +32,8 @@
   border-radius: 10px;
   border: 1px solid var(--border);
   // background: linear-gradient(180deg, var(--background), var(--background) 48%, var(--background));
-  background: var(--logo-paper);
-  // background: linear-gradient(180deg, var(--background), var(--muted) 48%, var(--portfolio-sand));
+  background: var(--logo-background-color);
+  // background: linear-gradient(180deg, var(--background), var(--muted) 48%, var(--section-tint-color));
 }
 
 // .gravity-logos__piece:nth-child(3n + 1) {

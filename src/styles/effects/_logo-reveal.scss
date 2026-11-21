@@ -1,4 +1,4 @@
-[data-logo-reveal] .logo-strip__link {
+[data-logo-reveal] .logo-strip__item {
   position: relative;
 }
 
@@ -7,11 +7,11 @@
   pointer-events: none;
 }
 
-.logo-strip__link--revealing .client-logo {
+.logo-strip__item--revealing .client-logo {
   visibility: hidden;
 }
 
-.logo-strip__link--pending .client-logo {
+.logo-strip__item--pending .client-logo {
   @media (prefers-reduced-motion: no-preference) {
     visibility: hidden;
   }

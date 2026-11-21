@@ -28,8 +28,8 @@ const { study } = Astro.props;
         <strong class="brand-preview__value">{study.branding.logoMark}</strong>
       </div>
       <div>
-        <h3>{study.branding.fontName}</h3>
-        <p>{study.branding.fontMeta}</p>
+        <h3 class="portfolio__heading portfolio__heading--subsection">{study.branding.fontName}</h3>
+        <p class="portfolio__paragraph">{study.branding.fontMeta}</p>
         <div class="tags">
           {study.branding.fontFamilies?.map((f) => (
             <span class="tags__label">{f}</span>
@@ -48,7 +48,7 @@ const { study } = Astro.props;
         </div>
       </div>
     </div>
-    <h3 class="case-study-branding-section__tools-title">Tools used</h3>
+    <h3 class="case-study-branding-section__tools-title portfolio__heading portfolio__heading--subsection">Tools used</h3>
     <div class="tools-inline">
       {study.tools.map(
         (key: string) =>

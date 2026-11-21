@@ -2,6 +2,22 @@
 
 @use "../foundation/breakpoints";
 
+
+
+html {
+  color-scheme: light;
+  // Amber distinguishes scores that need improvement. Good and poor scores use the green and red above.
+  --pagespeed-mid: #925000;
+}
+
+// Dark mode overrides the colors shared by both themes.
+.dark {
+  color-scheme: dark;
+
+  // PageSpeed scores.
+  --pagespeed-mid: #fdd663;
+}
+
 .pagespeed-report {
   margin-block: var(--space-3);
   padding: var(--space-3);
@@ -9,11 +25,12 @@
   border-radius: 14px;
   background: var(--background);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     margin-block: var(--space-7);
     padding: var(--space-5);
   }
 }
+
 .pagespeed-header {
   display: flex;
   align-items: flex-start;
@@ -22,49 +39,55 @@
   padding-bottom: 14px;
   border-bottom: 1px solid var(--border);
 }
+
 .pagespeed-header .eyebrow {
   margin-bottom: 5px;
 }
+
 .pagespeed-report__title {
   margin: 0;
-  font-size: var(--text-body);
+  font-size: var(--body-font-size);
 
-  @media (min-width: breakpoints.$medium) {
-    font-size: var(--text-lead);
+  @include breakpoints.mq(md) {
+    font-size: var(--lead-font-size);
   }
 }
 
 .pagespeed-device {
   padding-top: var(--space-3);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     padding-top: var(--space-5);
   }
 }
-.pagespeed-device + .pagespeed-device {
+
+.pagespeed-device+.pagespeed-device {
   margin-top: var(--space-5);
   border-top: 1px solid var(--border);
 }
+
 .pagespeed-report__device-title {
   margin: 0 0 var(--space-2);
-  font-size: var(--text-body);
+  font-size: var(--body-font-size);
   font-weight: 600;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     margin-bottom: var(--space-4);
   }
 }
+
 .pagespeed-score-row {
   display: flex;
   align-items: center;
   gap: var(--space-2);
   margin-bottom: 10px;
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     gap: var(--space-3);
     margin-bottom: 18px;
   }
 }
+
 .pagespeed-score {
   position: relative;
   display: grid;
@@ -72,17 +95,19 @@
   aspect-ratio: 1;
   place-items: center;
   flex: 0 0 auto;
-  color: var(--pagespeed-level);
+  color: var(--pagespeed-rating-color);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     width: 72px;
   }
 }
+
 .pagespeed-report__dial {
   position: absolute;
   inset: 0;
   transform: rotate(-90deg);
 }
+
 .pagespeed-score-track {
   fill: none;
   stroke-width: 7;
@@ -92,96 +117,107 @@
   fill: none;
   stroke-width: 7;
 }
+
 .pagespeed-score-track {
-  stroke: color-mix(in srgb, var(--pagespeed-level) 15%, transparent);
+  stroke: color-mix(in srgb, var(--pagespeed-rating-color) 15%, transparent);
 }
+
 .pagespeed-score-value {
-  stroke: var(--pagespeed-level);
+  stroke: var(--pagespeed-rating-color);
   stroke-linecap: round;
 }
+
 .pagespeed-report__number {
-  font-size: 17px;
+  font-size: var(--font-size-17);
   font-weight: 600;
   line-height: 1;
 
-  @media (min-width: breakpoints.$medium) {
-    font-size: 22px;
+  @include breakpoints.mq(md) {
+    font-size: var(--font-size-22);
   }
 }
+
 .pagespeed-score-label {
-  color: var(--pagespeed-level);
-  font-size: 13px;
+  color: var(--pagespeed-rating-color);
+  font-size: var(--font-size-13);
   font-weight: 600;
 
-  @media (min-width: breakpoints.$medium) {
-    font-size: 15px;
+  @include breakpoints.mq(md) {
+    font-size: var(--font-size-15);
   }
 }
+
+// Map the rating to a color shared by the score, label, and metrics.
 .pagespeed-score.good {
-  --pagespeed-level: var(--pagespeed-good);
+  --pagespeed-rating-color: var(--link-accent);
 }
 
 .pagespeed-score-label.good {
-  --pagespeed-level: var(--pagespeed-good);
+  --pagespeed-rating-color: var(--link-accent);
 }
+
 .pagespeed-score.needs-improvement {
-  --pagespeed-level: var(--pagespeed-mid);
+  --pagespeed-rating-color: var(--pagespeed-mid);
 }
 
 .pagespeed-score-label.needs-improvement {
-  --pagespeed-level: var(--pagespeed-mid);
+  --pagespeed-rating-color: var(--pagespeed-mid);
 }
+
 .pagespeed-score.poor {
-  --pagespeed-level: var(--pagespeed-poor);
+  --pagespeed-rating-color: var(--error-msg-clr);
 }
 
 .pagespeed-score-label.poor {
-  --pagespeed-level: var(--pagespeed-poor);
+  --pagespeed-rating-color: var(--error-msg-clr);
 }
+
 .pagespeed-metrics {
   gap: var(--space-2);
   margin: 0;
 }
+
 .pagespeed-metric {
   min-width: 0;
   padding: 7px var(--space-2);
-  border-left: 3px solid var(--pagespeed-level);
+  border-left: 3px solid var(--pagespeed-rating-color);
   border-radius: 4px;
-  background: color-mix(in srgb, var(--pagespeed-level) 8%, var(--background));
+  background: color-mix(in srgb, var(--pagespeed-rating-color) 8%, var(--background));
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     padding: 10px var(--space-3);
   }
 }
+
 .pagespeed-metric.good {
-  --pagespeed-level: var(--pagespeed-good);
+  --pagespeed-rating-color: var(--link-accent);
 }
+
 .pagespeed-metric.needs-improvement {
-  --pagespeed-level: var(--pagespeed-mid);
+  --pagespeed-rating-color: var(--pagespeed-mid);
 }
+
 .pagespeed-metric.poor {
-  --pagespeed-level: var(--pagespeed-poor);
+  --pagespeed-rating-color: var(--error-msg-clr);
 }
+
 .pagespeed-report__metric-name {
   color: var(--muted-foreground);
-  font-size: 11px;
+  font-size: var(--font-size-11);
   line-height: 1.4;
 }
+
 .pagespeed-report__metric-value {
   margin: 3px 0 0;
   color: var(--foreground);
-  font-size: 13px;
+  font-size: var(--font-size-13);
   font-weight: 600;
 
-  @media (min-width: breakpoints.$medium) {
-    font-size: 15px;
+  @include breakpoints.mq(md) {
+    font-size: var(--font-size-15);
   }
 }
-.pagespeed-error {
-  margin: 0;
-  color: var(--muted-foreground);
-  font-size: 13px;
-}
+
 .pagespeed-footer {
   display: flex;
   flex-wrap: wrap;
@@ -192,21 +228,15 @@
   padding-top: 9px;
   border-top: 1px solid var(--border);
   color: var(--muted-foreground);
-  font-size: 11px;
+  font-size: var(--font-size-11);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     margin-top: 18px;
     padding-top: 14px;
   }
 }
-.pagespeed-footer :where(a) {
-  color: var(--foreground);
-  font-weight: 600;
-  text-underline-offset: 3px;
-}
-.pagespeed-footer :where(a):hover {
-  text-decoration: underline;
-} /* Keep the score and full metric labels on one line, even in the project drawer. */
+
+/* Keep the score and full metric labels on one line, even in the project drawer. */
 // The row can scroll horizontally by touch or keyboard if it is wider than its container.
 .pagespeed-report__summary-row {
   display: flex;

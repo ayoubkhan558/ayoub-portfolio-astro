@@ -16,7 +16,7 @@ export function Hero({
   return (
     <>
       <section
-        className="home-hero-section section-spacing section-spacing--hero"
+        className="section-spacing section-spacing--hero"
         aria-labelledby="hero-heading"
       >
         <div className="container hero">
@@ -25,13 +25,13 @@ export function Hero({
               <i className="availability__dot" aria-hidden="true" />
               {data.profile.availability}
             </span>
-            <h1 className="hero__title" data-hero-title-reveal id="hero-heading">
+            <h1 className="hero__title portfolio__heading portfolio__heading--page" data-hero-title-reveal id="hero-heading">
               {data.hero.headlineLineOne} {data.hero.headlineLineTwo}
             </h1>
-            <p className="lead">{data.hero.subheadline}</p>
+            <p className="portfolio__paragraph portfolio__paragraph--lead hero__description">{data.hero.subheadline}</p>
             <div className="hero__actions">
               <Button asChild className="button">
-                <a href="/contact/">
+                <a className="portfolio__link" href="/contact/">
                   {data.hero.primaryCta}
                   <ArrowUpRight className="button__icon" aria-hidden="true" />
                 </a>
@@ -41,7 +41,7 @@ export function Hero({
                 variant="outline"
                 className="button button--outline"
               >
-                <a href="/case-studies">
+                <a className="portfolio__link" href="/case-studies">
                   {data.hero.secondaryCta}
                   <ArrowRight aria-hidden="true" />
                 </a>
@@ -84,13 +84,13 @@ export function Hero({
                 eager
               />
               <div>
-                <h2 className="hero-profile-identity__title">
+                <h2 className="hero-profile-identity__title portfolio__heading portfolio__heading--section">
                   {data.profile.name}
                 </h2>
-                <p className="hero-profile-role hero-profile-identity__description">
+                <p className="hero-profile-role hero-profile-identity__description portfolio__paragraph">
                   Web Developer & SEO Specialist
                 </p>
-                <p className="hero-profile-identity__description">
+                <p className="hero-profile-identity__description portfolio__paragraph">
                   {data.profile.location}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export function Hero({
             </div>
             <div className="hero-profile-bottom">
               <span>{data.profile.name}</span>
-              <a className="text-link" href="/about/">
+              <a className="text-link portfolio__link" href="/about/">
                 Meet Ayoub
                 <ArrowRight aria-hidden="true" size={16} />
               </a>
@@ -131,7 +131,7 @@ export function Hero({
           </span>
           <span className="browser-bar__label">{data.profile.brand}</span>
         </div>
-        <a
+        <a className="portfolio__link"
           href={featured.listing.href}
           aria-label={`Explore ${featured.client}`}
         >
@@ -149,7 +149,7 @@ export function Hero({
               {featured.client}
             </strong>
           </div>
-          <a href={featured.listing.href} className="text-link">
+          <a href={featured.listing.href} className="text-link portfolio__link">
             Explore the case study
             <ArrowUpRight
               className="button__icon"

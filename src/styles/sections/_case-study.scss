@@ -2,7 +2,32 @@
 
 @use "../foundation/breakpoints";
 
+:where(.large-quote__quote) {
+  margin: 15px 0 var(--space-7);
+  font-size: var(--font-size-19);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
+:where(.showcase-grid__caption) {
+  font-size: var(--small-font-size);
+}
+
+:where(.large-quote__attribution) {
+  font-size: var(--small-font-size);
+}
+
+:where(.large-quote__author) {
+  display: block;
+}
+
+:where(.large-quote__role) {
+  display: block;
+  color: var(--muted-foreground);
+}
+
 .case-detail__actions {
+  justify-content: center;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -20,16 +45,16 @@
 
 .result-highlight {
   line-height: 1.5;
-  border-left: 2px solid var(--portfolio-sand);
+  border-left: 2px solid var(--section-tint-color);
   margin-top: 35px;
   background: var(--muted);
   border-radius: 0 12px 12px 0;
   color: var(--foreground);
-  font-size: 18px;
+  font-size: var(--font-size-18);
   padding: 18px;
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 22px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-22);
     padding: var(--space-5) var(--space-7);
   }
 }
@@ -40,7 +65,7 @@
 }
 
 .challenge-item__title {
-  font-size: 21px;
+  font-size: var(--font-size-21);
   margin-bottom: var(--space-3);
 }
 
@@ -50,7 +75,7 @@
   grid-template-columns: 1fr;
   gap: 30px;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: 1fr 2fr;
     gap: 50px;
   }
@@ -75,18 +100,18 @@
 
 .palette .palette__value {
   display: block;
-  font-size: 11px;
+  font-size: var(--font-size-11);
 }
 
 .palette .palette__note {
   display: block;
-  font-size: 11px;
+  font-size: var(--font-size-11);
 }
 
 .swatch {
   height: 40px;
   border-radius: 9px;
-  border: 1px solid var(--preview-outline);
+  border: 1px solid var(--preview-outline-color);
   margin-bottom: var(--space-2);
 }
 
@@ -95,7 +120,7 @@
   gap: 30px;
   grid-template-columns: 1fr;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -121,7 +146,7 @@
 }
 
 .showcase-grid .showcase-grid__title {
-  font-size: var(--text-lead);
+  font-size: var(--lead-font-size);
 }
 
 .tools-inline {
@@ -135,7 +160,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
+  font-size: var(--font-size-13);
 }
 
 .large-quote {
@@ -145,7 +170,7 @@
   text-align: center;
   padding: var(--space-7) var(--space-6);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     padding: 45px;
   }
 }
@@ -153,10 +178,10 @@
 .large-quote .large-quote__quote {
   max-width: 850px;
   margin: 0 auto 25px;
-  font-size: 23px;
+  font-size: var(--font-size-23);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 29px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-29);
   }
 }
 
@@ -183,7 +208,7 @@
   flex-direction: column;
   gap: var(--space-3);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     align-items: center;
     flex-direction: row;
     gap: var(--space-6);
@@ -191,17 +216,17 @@
 }
 
 .next-case .next-case__link {
-  font-size: 24px;
+  font-size: var(--font-size-24);
   font-weight: 500;
 }
 
 .next-case > .next-case__label {
-  font-size: 13px;
+  font-size: var(--font-size-13);
   color: var(--muted-foreground);
 }
 
 .dark .branding-logo {
-  background: var(--logo-paper);
+  background: var(--logo-background-color);
   padding: var(--space-2);
   border-radius: 8px;
 }
@@ -227,13 +252,13 @@
   align-items: center;
   gap: var(--space-2);
   color: var(--muted-foreground);
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .case-detail__value {
   margin: var(--space-2) 0 0;
   color: var(--foreground);
-  font-size: var(--text-body);
+  font-size: var(--body-font-size);
   line-height: 1.5;
 }
 
@@ -256,7 +281,7 @@
   border-radius: 6px;
   background: var(--card);
   color: var(--muted-foreground);
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .case-detail__tag-icon {
@@ -264,10 +289,137 @@
   height: 16px;
   padding: 1px;
   border-radius: 3px;
-  background: var(--logo-paper);
+  background: var(--logo-background-color);
   object-fit: contain;
 }
 
 .case-study-branding-section__tools-title {
   margin-top: var(--space-8);
+}
+
+.case-study-challenges-section__columns {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: 1fr;
+
+  @include breakpoints.mq(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include breakpoints.mq(lg) {
+    gap: var(--space-8);
+  }
+}
+
+.case-detail
+  > :is(
+    .case-study-branding-section,
+    .case-study-challenges-section,
+    .case-study-implementation-section,
+    .case-study-overview-section,
+    .case-study-quote-section,
+    .case-study-showcase-section
+  ):nth-of-type(odd) {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 36px var(--space-6);
+
+  @include breakpoints.mq(md) {
+    padding: 64px var(--space-12);
+  }
+}
+
+.case-detail
+  > :is(
+    .case-study-branding-section,
+    .case-study-challenges-section,
+    .case-study-implementation-section,
+    .case-study-overview-section,
+    .case-study-quote-section,
+    .case-study-showcase-section
+  ):nth-of-type(even) {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-10);
+
+  @include breakpoints.mq(md) {
+    padding-top: 64px;
+  }
+}
+
+.case-detail
+  > :is(
+    .case-study-branding-section,
+    .case-study-challenges-section,
+    .case-study-implementation-section,
+    .case-study-overview-section,
+    .case-study-quote-section,
+    .case-study-showcase-section
+  ) {
+  margin-block: 64px;
+}
+
+.case-detail .case-detail__column:first-child {
+  padding-right: 0;
+
+  @include breakpoints.mq(md) {
+    padding-right: var(--space-6);
+  }
+}
+
+.case-detail .case-detail__column:last-child {
+  padding-left: var(--space-8);
+  border-left: 0;
+  border-top: 1px solid var(--border);
+  padding: var(--space-7) 0 0;
+
+  @include breakpoints.mq(md) {
+    border-left: 1px solid var(--border);
+    border-top: 0;
+    padding: 0 0 0 var(--space-8);
+  }
+}
+
+.screenshot-window {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  height: 360px;
+
+  @include breakpoints.mq(md) {
+    height: 460px;
+  }
+}
+
+.screenshot-window .full-page-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  transition: transform 0.5s ease-out;
+}
+
+.screenshot-window:hover .full-page-image {
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--screenshot-distance, 0px));
+    transition: transform var(--screenshot-duration, 5s) linear;
+  }
+}
+
+.screenshot-window:focus-visible .full-page-image {
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--screenshot-distance, 0px));
+    transition: transform var(--screenshot-duration, 5s) linear;
+  }
+}
+
+.screenshot-window .full-page-image {
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }

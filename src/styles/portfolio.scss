@@ -5,13 +5,14 @@
 @use "layout/footer";
 @use "layout/header";
 @use "layout/page-intro";
+@use "layout/scroll-control";
 @use "layout/section-heading";
 @use "layout/section-shells";
 
-
-// PAGE SECTIONS
+// SHARED COMPONENTS
 @use "components/asset-fallback";
 @use "components/buttons";
+@use "components/cards";
 @use "components/case-study-cards";
 @use "components/faq";
 @use "components/pagespeed";
@@ -34,18 +35,18 @@
 @use "sections/project-archive";
 @use "sections/selected-work";
 @use "sections/service-detail";
+@use "sections/services-delivery";
 
 // Opt-in interaction styles. Effect targets are marked in the owning component.
 @use "effects/border-beam";
 @use "effects/card-tilt";
 @use "effects/emoji-trail";
-@use "effects/glare-sweep";
 @use "effects/grid-spotlight";
 @use "effects/gravity-logos";
 @use "effects/hero-reveal";
+@use "effects/integration-orbit";
 @use "effects/flood-fill-button";
 @use "effects/logo-reveal";
-@use "effects/magnetic-button";
 @use "effects/meteors";
 @use "effects/name-sparkles";
 @use "effects/pointer-feedback" as cta-pointer-feedback;

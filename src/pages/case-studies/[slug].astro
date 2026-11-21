@@ -45,7 +45,8 @@ const stackLogos: Record<string, string | null> = {
 };
 ---
 
-<Layout hasFooterCta
+<Layout
+  hasFooterCta
   title={seo?.title || s.client}
   description={seo?.description || s.tagline}
   image={s.heroMockup}
@@ -53,9 +54,6 @@ const stackLogos: Record<string, string | null> = {
   <div class="case-detail">
     <div class="portfolio-background">
       <Intro label={s.eyebrow} title={s.headline} description={s.tagline}>
-        <p class="case-detail__result">
-          <strong>Result:</strong> <span data-highlight>{s.listing.result}</span>
-        </p>
         <dl class="case-detail__facts">
           {s.facts.map(({ label, value }) => {
             const Icon = factIcons[label as keyof typeof factIcons] ?? Layers3;
@@ -72,14 +70,14 @@ const stackLogos: Record<string, string | null> = {
         </dl>
         <div class="case-detail__actions">
           <a
-            class="button"
+            class="button portfolio__link"
             href={s.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
             Visit {s.urlLabel} <ExternalArrow />
           </a>
-          <a href="/case-studies" class="text-link">
+          <a href="/case-studies" class="text-link portfolio__link">
             All case studies →
           </a>
         </div>
@@ -95,7 +93,7 @@ const stackLogos: Record<string, string | null> = {
             <Layers3 size={16} aria-hidden="true" />
             {s.caseType}
           </li>
-          {s.listing.stack.map((tool) => {
+          <!-- {s.listing.stack.map((tool) => {
             const logo =
               stackLogos[tool] ?? toolCatalog[tool.toLowerCase()]?.logo;
             return (
@@ -114,10 +112,14 @@ const stackLogos: Record<string, string | null> = {
                 {tool}
               </li>
             );
-          })}
+          })} -->
         </ul>
+        <p class="case-detail__result portfolio__paragraph">
+          <strong>Result:</strong>{" "}
+          <span data-highlight>{s.listing.result}</span>
+        </p>
       </Intro>
-      <div class="case-study__container container">
+      <div class="container">
         <Asset
           src={s.heroMockup}
           alt={`${s.client} website mockup`}

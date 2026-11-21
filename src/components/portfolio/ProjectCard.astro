@@ -112,7 +112,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         />
       </div>
       <div class="selected-card__copy">
-        <h3 class="selected-card__title">
+        <h3 class="selected-card__title portfolio__heading portfolio__heading--subsection">
           <button
             type="button"
             class="selected-card__opener"
@@ -123,11 +123,11 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
             {featured.title}
           </button>
         </h3>
-        <p class="selected-card__description">{featured.description}</p>
+        <p class="selected-card__description portfolio__paragraph">{featured.description}</p>
         {featured.deliveryContext && (
-          <p class="selected-card__badge">{featured.deliveryContext}</p>
+          <p class="selected-card__badge portfolio__paragraph">{featured.deliveryContext}</p>
         )}
-        <p class="selected-card__stack">{featured.stack}</p>
+        <p class="selected-card__stack portfolio__paragraph">{featured.stack}</p>
       </div>
     </>
   ) : (
@@ -141,10 +141,10 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         />
       </div>
       <div class="project-body">
-        <h2 class="project-body__title">
+        <h2 class="project-body__title portfolio__heading portfolio__heading--section">
           {title}
         </h2>
-        <p class="project-body__description">
+        <p class="project-body__description portfolio__paragraph">
           {description}
         </p>
         <div class="project-links card-link-row">
@@ -162,7 +162,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
           )}
           {!isDomainExpired && href && (
             <a
-              class="text-link"
+              class="text-link portfolio__link"
               href={href}
               target="_blank"
               rel="noopener noreferrer"
@@ -189,7 +189,7 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       <span class="eyebrow">Project details</span>
       <button
         type="button"
-        class="icon-button drawer-close portfolio__button"
+        class="icon-button drawer-close"
         aria-label="Close project details"
       >
         <svg
@@ -236,18 +236,18 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
         })}
       </div>
       <h2
-        class="drawer-content__title"
+        class="drawer-content__title portfolio__heading portfolio__heading--section"
         id={`${panelId}-title`}
       >
         {title}
       </h2>
-      <p>{description}</p>
+      <p class="portfolio__paragraph">{description}</p>
       <ValueTree value={details} />
       {p.pageSpeed && <PageSpeedReport report={p.pageSpeed} />}
       <div class="project-card__actions">
         {href && (
           <a
-            class="button"
+            class="button portfolio__link"
             href={href}
             target="_blank"
             rel="noopener noreferrer"

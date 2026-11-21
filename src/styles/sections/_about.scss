@@ -15,31 +15,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--space-7);
-  padding-block: var(--space-10);
-
-  @media (min-width: breakpoints.$small) {
-    gap: 30px;
-    padding-block: 56px;
-  }
+  padding-block: var(--space-12);
 }
 
 .stats-row .stats-row__value {
   font-weight: 500;
   letter-spacing: -0.05em;
-  font-size: 44px;
+  font-size: var(--font-size-44);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 52px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-52);
   }
 }
 
-.stats-row :where(h3) {
-  font-size: var(--text-body);
-  margin: 0 0 var(--space-2);
-}
-
 .stats-row .stats-row__description {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   margin: 0;
 }
 
@@ -47,11 +37,10 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr;
-  gap: 35px;
+  gap: breakpoints.clamp-val(35px, 70px);
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: 1fr 1.25fr;
-    gap: 70px;
   }
 }
 
@@ -64,11 +53,11 @@
   margin: auto;
   max-width: 500px;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     height: 450px;
   }
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     height: 490px;
     margin: 0;
     max-width: none;
@@ -76,10 +65,10 @@
 }
 
 .about-hero .about-hero__title {
-  font-size: 32px;
+  font-size: var(--font-size-32);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 40px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-40);
   }
 }
 
@@ -92,11 +81,11 @@
   gap: var(--space-7);
   grid-template-columns: 1fr;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
@@ -107,27 +96,68 @@
 }
 
 .timeline .timeline__title {
-  font-size: 21px;
+  font-size: var(--font-size-21);
 }
 
 .timeline .timeline__description {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
-.experience-list .experience-list__item {
+// Experience list ITEM
+.experience-list__item {
   display: grid;
   padding: var(--space-8) 0;
   border-top: 1px dashed var(--border);
   grid-template-columns: 1fr;
   gap: var(--space-5);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: 100px 1fr;
     gap: var(--space-10);
   }
 }
 
-.company-logo {
+.experience-list__content {
+  min-width: 0;
+}
+
+.experience-list__period {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: var(--caption-font-size);
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.experience-list__title {
+  margin: 0 0 var(--space-5);
+  color: var(--foreground);
+  font-size: var(--font-size-23);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.experience-list__item:hover .experience-list__title {
+  color: var(--link-accent);
+}
+
+.experience-list__company,
+.experience-list__description,
+.experience-list__dates {
+  margin: 0 0 18px;
+  color: var(--muted-foreground);
+}
+
+.experience-list__dates {
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+}
+
+.experience-list__logo {
   max-width: 90px;
   max-height: 60px;
   object-fit: contain;
@@ -143,14 +173,14 @@
   flex: 1;
   min-width: 42%;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     flex: 0 1 auto;
     min-width: auto;
   }
 }
 
-.dark .company-logo {
-  background: var(--logo-paper);
+.dark .experience-list__logo {
+  background: var(--logo-background-color);
   padding: var(--space-2);
   border-radius: 8px;
 }
@@ -159,4 +189,45 @@
   height: auto;
   aspect-ratio: 4/5;
   object-fit: cover;
+}
+
+.about-story-section__columns {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+  margin-bottom: var(--space-10);
+
+  @include breakpoints.mq(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-story-section__cards {
+  display: grid;
+  margin-top: var(--space-10);
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+
+  @include breakpoints.mq(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include breakpoints.mq(xl) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-testimonials-section__layout {
+  display: grid;
+  align-items: start;
+  gap: var(--space-8);
+
+  @include breakpoints.mq(md) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: var(--space-12);
+  }
+}
+
+.about-testimonials-section__reviews {
+  min-width: 0;
 }

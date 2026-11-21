@@ -11,7 +11,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
 ---
 
 <section
-  class="project-archive-section section-spacing section-spacing--opening"
+  class="section-spacing section-spacing--opening"
   id="archive"
   data-projects-per-page={siteSettings.projectsPerPage}
 >
@@ -45,7 +45,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
       </label>
     </form>
     <p
-      class="project-count"
+      class="project-count portfolio__paragraph"
       id="project-count"
       tabindex="-1"
       aria-live="polite"
@@ -64,18 +64,18 @@ const projects = sortProjectsByLiveStatus(archive.projects);
       ))}
     </div>
     <div class="empty-state" id="no-projects" hidden>
-      <h2>No matching projects.</h2>
-      <p>Try a different keyword or clear your filters.</p>
-      <button class="button button--outline portfolio__button" id="clear-filters">
+      <h2 class="portfolio__heading portfolio__heading--section">No matching projects.</h2>
+      <p class="portfolio__paragraph">Try a different keyword or clear your filters.</p>
+      <button class="button button--outline" id="clear-filters">
         Clear filters
       </button>
     </div>
     <div class="pagination" id="pagination" hidden>
-      <button type="button" class="button button--outline pagination__button portfolio__button" id="prev-page">
+      <button type="button" class="button button--outline pagination__button" id="prev-page">
         ← Previous
       </button>
       <span class="pagination__label" id="page-label" aria-live="polite"></span>
-      <button type="button" class="button button--outline pagination__button portfolio__button" id="next-page">
+      <button type="button" class="button button--outline pagination__button" id="next-page">
         Next →
       </button>
     </div>
@@ -112,11 +112,11 @@ const projects = sortProjectsByLiveStatus(archive.projects);
           <header class="project-copy-header">
             <div>
               <span class="eyebrow">Project link builder</span>
-              <h2 class="project-copy-header__title" id="project-copy-heading">Copy project links</h2>
+              <h2 class="project-copy-header__title portfolio__heading portfolio__heading--section" id="project-copy-heading">Copy project links</h2>
             </div>
             <button
               type="button"
-              class="button button--outline project-copy-close portfolio__button"
+              class="button button--outline project-copy-close"
               id="close-project-copy"
             >
               Close
@@ -171,19 +171,19 @@ const projects = sortProjectsByLiveStatus(archive.projects);
               </label>
             </div>
             <div class="project-copy-actions">
-              <button type="button" class="button project-copy-actions__button portfolio__button" id="copy-all-projects">
+              <button type="button" class="button project-copy-actions__button" id="copy-all-projects">
                 Copy all
               </button>
               <button
                 type="button"
-                class="button button--outline project-copy-actions__button portfolio__button"
+                class="button button--outline project-copy-actions__button"
                 id="copy-project-group"
               >
                 Copy group
               </button>
             </div>
             <p
-              class="project-copy-status"
+              class="project-copy-status portfolio__paragraph"
               id="project-copy-status"
               aria-live="polite"
               aria-atomic="true"
@@ -203,7 +203,7 @@ const projects = sortProjectsByLiveStatus(archive.projects);
           display: none;
         }
       </style>
-      <p>
+      <p class="portfolio__paragraph">
         All projects are shown. Enable JavaScript to use search, filters, and
         pagination.
       </p>

@@ -8,7 +8,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
 
 <header class="site-header">
   <a
-    class="brand"
+    class="brand portfolio__link"
     href="/"
     aria-label={`a. ${p.profile.brand} — ${p.profile.name} home`}
   >
@@ -20,7 +20,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   <nav class="site-header__navigation" aria-label="Main navigation">
     {p.navLinks.map((link) => (
       <a
-        class:list={["site-header__link", isActive(link.href) && "site-header__link--active"]}
+        class:list={["portfolio__link", "site-header__link", isActive(link.href) && "site-header__link--active"]}
         href={link.href}
         aria-current={path === link.href ? "page" : undefined}
       >
@@ -30,7 +30,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   </nav>
   <div class="site-header__actions">
     <ThemeToggle />
-    <a class="flood-fill-button site-header__cta" href="/contact/">
+    <a class="flood-fill-button site-header__cta portfolio__link" href="/contact/">
       <span class="flood-fill-button__label">Start building</span>
       <span class="flood-fill-button__arrow" aria-hidden="true"><ExternalArrow /></span>
     </a>
@@ -57,14 +57,14 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
       <nav id="mobile-nav" class="site-header__mobile-navigation" aria-label="Mobile navigation">
         {p.navLinks.map((link) => (
           <a
-            class:list={["site-header__mobile-link", path === link.href && "site-header__mobile-link--current"]}
+            class:list={["portfolio__link", "site-header__mobile-link", path === link.href && "site-header__mobile-link--current"]}
             href={link.href}
             aria-current={path === link.href ? "page" : undefined}
           >
             {link.label}
           </a>
         ))}
-        <a class="site-header__mobile-link" href="/contact/">Let's talk <ExternalArrow /></a>
+        <a class="site-header__mobile-link portfolio__link" href="/contact/">Let's talk <ExternalArrow /></a>
       </nav>
     </details>
   </div>
@@ -129,7 +129,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
   document.addEventListener("click", (e) => {
     if (e.target instanceof Node && !details.contains(e.target)) closeMenu();
   });
-  const desktop = matchMedia("(min-width: 801px)");
+  const desktop = matchMedia("(min-width: 920px)");
   desktop.addEventListener("change", (e) => {
     if (e.matches) closeMenu();
   });

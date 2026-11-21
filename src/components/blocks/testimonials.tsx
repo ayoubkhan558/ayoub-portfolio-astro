@@ -48,13 +48,13 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
           <figure className="review-journal__entry" key={review.id} id={review.id}>
             <figcaption className="review-journal__person">
               <ReviewPortrait src={review.avatar} />
-              <div><strong className="review-journal__author">{review.name}</strong><p className="review-journal__role">{review.role}</p></div>
+              <div><strong className="review-journal__author">{review.name}</strong><p className="review-journal__role portfolio__paragraph">{review.role}</p></div>
             </figcaption>
             <blockquote className="review-journal__quote">{review.quote}</blockquote>
           </figure>
     );
     return (
-      <div className="review-journal">
+      <div>
         {featured.map(renderQuote)}
         {remaining.length > 0 && (
           <details className="review-journal__more">
@@ -94,7 +94,7 @@ export function Testimonials({ data, journal }: { data: typeof portfolio; journa
                       <span className="review-inner__role">{t.role}</span>
                     </div>
                   </figcaption>
-                  {t.review && <p className="review-note">{t.review}</p>}
+                  {t.review && <p className="review-note portfolio__paragraph">{t.review}</p>}
                 </figure>
               </CardContent>
             </Card>

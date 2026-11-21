@@ -29,7 +29,7 @@ function AccordionTrigger({
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
   return (
-    <AccordionPrimitive.Header className="accordion__heading">
+    <AccordionPrimitive.Header className="accordion__heading portfolio__heading portfolio__heading--subsection">
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(

@@ -6,9 +6,9 @@
   align-items: start;
   gap: var(--space-8);
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
-    gap: clamp(32px, 6vw, 80px);
+    gap: breakpoints.clamp-val(32px, 80px);
   }
 }
 
@@ -19,7 +19,7 @@
 .service-detail-hero__description {
   max-width: 58ch;
   margin-bottom: 0;
-  font-size: var(--text-lead);
+  font-size: var(--lead-font-size);
 }
 
 .service-detail-hero__pricing {
@@ -55,14 +55,14 @@
 }
 
 .service-detail-hero__price {
-  font-size: var(--text-lead);
+  font-size: var(--lead-font-size);
 }
 
 .service-detail-hero__facts {
   display: grid;
   gap: var(--space-3);
   margin: var(--space-4) 0 0;
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .service-detail-hero__term {
@@ -78,7 +78,7 @@
   display: grid;
   gap: var(--space-5);
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -92,7 +92,7 @@
 }
 
 .service-detail-content-section__title {
-  font-size: clamp(23px, 3vw, 30px);
+  font-size: var(--font-size-30);
 }
 
 .service-detail-content-section__topic :last-child {
@@ -101,4 +101,8 @@
 
 .service-detail-content-section__topic:first-child {
   grid-column: 1 / -1;
+}
+
+.service-detail-content-section__subheading {
+  margin-top: var(--space-10);
 }

@@ -5,11 +5,11 @@
 }
 
 .asset-fallback .asset-fallback__note {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 // Fallback tiles must stay legible even inside brand/logo tiles.
 .asset-fallback {
-  color: var(--fallback-ink) !important;
-  background: var(--fallback-surface) !important;
+  color: var(--image-fallback-text-color) !important;
+  background: var(--image-fallback-background) !important;
 }

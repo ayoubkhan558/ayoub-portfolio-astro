@@ -6,9 +6,9 @@ import p from "../../data/portfolio.json";
   {p.process.map((s, i) => (
     <article class="process-grid__step">
       <>
-        <span class="step-number">{String(i + 1).padStart(2, "0")}</span>
-        <h3>{s.title}</h3>
-        <p>{s.description}</p>
+        <span class="process-grid__number">{String(i + 1).padStart(2, "0")}</span>
+        <h3 class="portfolio__heading portfolio__heading--subsection">{s.title}</h3>
+        <p class="process-grid__description portfolio__paragraph">{s.description}</p>
         <div class="metric-row">
           {s.metrics.map((m) => (
             <span>

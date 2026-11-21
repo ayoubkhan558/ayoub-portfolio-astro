@@ -1,3 +1,5 @@
+@use "../foundation/breakpoints";
+
 .emoji-trail {
   position: absolute;
   inset: 0;
@@ -10,7 +12,7 @@
 .emoji-trail__sprite {
   position: absolute;
   display: block;
-  font-size: clamp(24px, 4vw, 46px);
+  font-size: var(--font-size-44);
   line-height: 1;
 }
 
@@ -20,10 +22,10 @@
 
 .emoji-trail__logo {
   display: block;
-  width: clamp(36px, 5vw, 52px);
-  height: clamp(36px, 5vw, 52px);
+  width: breakpoints.clamp-val(36px, 52px);
+  height: breakpoints.clamp-val(36px, 52px);
   padding: var(--space-2);
   border-radius: 10px;
   object-fit: contain;
-  background: var(--logo-paper);
+  background: var(--logo-background-color);
 }

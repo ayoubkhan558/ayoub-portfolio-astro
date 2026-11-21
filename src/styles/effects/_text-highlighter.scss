@@ -1,49 +1,50 @@
 // Keep custom markers translucent against the page theme so the text stays readable.
 [data-highlight] {
-  --highlight-paint: linear-gradient(var(--link-accent), var(--link-accent));
-  --highlight-veil: color-mix(in srgb, var(--background) 76%, transparent);
-  --highlight-rest: left -0.12em bottom;
-  --highlight-anchor: left bottom;
-  --highlight-empty: 0% 62%;
-  --highlight-full: 100% 62%;
+  // Marker colors, positions, and sizes before and after activation.
+  --highlight-active-position: left bottom;
+  --highlight-end-size: 100% 62%;
+  --highlight-gradient: linear-gradient(var(--link-accent), var(--link-accent));
+  --highlight-idle-position: left -0.12em bottom;
+  --highlight-overlay: color-mix(in srgb, var(--background) 76%, transparent);
+  --highlight-start-size: 0% 62%;
   background-image:
-    linear-gradient(var(--highlight-veil), var(--highlight-veil)),
-    var(--highlight-paint);
+    linear-gradient(var(--highlight-overlay), var(--highlight-overlay)),
+    var(--highlight-gradient);
   background-repeat: no-repeat;
-  background-size: var(--highlight-full), var(--highlight-full);
-  background-position: var(--highlight-anchor), var(--highlight-anchor);
+  background-size: var(--highlight-end-size), var(--highlight-end-size);
+  background-position: var(--highlight-active-position), var(--highlight-active-position);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
 [data-highlight-direction="rtl"] {
-  --highlight-rest: right -0.12em bottom;
-  --highlight-anchor: right bottom;
+  --highlight-active-position: right bottom;
+  --highlight-idle-position: right -0.12em bottom;
 }
 
 [data-highlight-direction="ttb"] {
-  --highlight-rest: center top -0.12em;
-  --highlight-anchor: center top;
-  --highlight-empty: 100% 0%;
-  --highlight-full: 100% 100%;
+  --highlight-active-position: center top;
+  --highlight-end-size: 100% 100%;
+  --highlight-idle-position: center top -0.12em;
+  --highlight-start-size: 100% 0%;
 }
 
 [data-highlight-direction="btt"] {
-  --highlight-rest: center bottom -0.12em;
-  --highlight-anchor: center bottom;
-  --highlight-empty: 100% 0%;
-  --highlight-full: 100% 100%;
+  --highlight-active-position: center bottom;
+  --highlight-end-size: 100% 100%;
+  --highlight-idle-position: center bottom -0.12em;
+  --highlight-start-size: 100% 0%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   [data-highlight-ready] {
-    background-size: var(--highlight-empty), var(--highlight-empty);
-    background-position: var(--highlight-rest), var(--highlight-rest);
+    background-size: var(--highlight-start-size), var(--highlight-start-size);
+    background-position: var(--highlight-idle-position), var(--highlight-idle-position);
   }
 
   [data-highlight-ready][data-highlight-active] {
-    background-size: var(--highlight-full), var(--highlight-full);
-    background-position: var(--highlight-anchor), var(--highlight-anchor);
+    background-size: var(--highlight-end-size), var(--highlight-end-size);
+    background-position: var(--highlight-active-position), var(--highlight-active-position);
     transition:
       background-size var(--highlight-duration, 800ms) ease
         var(--highlight-delay, 0ms),
@@ -55,8 +56,8 @@
       :hover,
       :focus-within
     ) {
-    background-size: var(--highlight-full), var(--highlight-full);
-    background-position: var(--highlight-anchor), var(--highlight-anchor);
+    background-size: var(--highlight-end-size), var(--highlight-end-size);
+    background-position: var(--highlight-active-position), var(--highlight-active-position);
     transition:
       background-size var(--highlight-duration, 800ms) ease
         var(--highlight-delay, 0ms),

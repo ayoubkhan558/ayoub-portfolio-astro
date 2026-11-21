@@ -16,11 +16,11 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     gap: var(--space-4);
   }
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 13px;
+  font-size: var(--font-size-13);
   font-weight: 500;
 }
 
@@ -41,7 +41,7 @@
   background: var(--background);
   color: var(--foreground);
   padding: 11px 14px;
-  font-size: 15px;
+  font-size: var(--font-size-15);
 }
 
 :where(.portfolio__select) {
@@ -52,7 +52,7 @@
   background: var(--background);
   color: var(--foreground);
   padding: 11px 14px;
-  font-size: 15px;
+  font-size: var(--font-size-15);
 }
 
 :where(.portfolio__textarea) {
@@ -63,7 +63,7 @@
   background: var(--background);
   color: var(--foreground);
   padding: 11px 14px;
-  font-size: 15px;
+  font-size: var(--font-size-15);
 }
 
 :where(.portfolio__textarea) {
@@ -72,7 +72,7 @@
 }
 
 .project-count {
-  font-size: 13px;
+  font-size: var(--font-size-13);
   color: var(--muted-foreground);
   margin: var(--space-5) 0 30px;
 }
@@ -82,11 +82,11 @@
   gap: 22px;
   grid-template-columns: 1fr;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -112,20 +112,20 @@
 }
 
 .project-body .project-body__title {
-  font-size: 24px;
+  font-size: var(--font-size-24);
 }
 
 .project-body .project-body__description {
-  font-size: 15px;
+  font-size: var(--font-size-15);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: var(--text-small);
+  @include breakpoints.mq(sm) {
+    font-size: var(--small-font-size);
   }
 }
 
 .project-body .project-body__details {
   margin-top: 18px;
-  font-size: 13px;
+  font-size: var(--font-size-13);
 }
 
 .project-body .project-body__summary {
@@ -139,7 +139,7 @@
 }
 
 .project-body .value-tree .value-tree__description {
-  font-size: 13px;
+  font-size: var(--font-size-13);
 }
 
 .project-links {
@@ -164,7 +164,7 @@
   justify-content: space-between;
   gap: 10px;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     justify-content: center;
     gap: var(--space-5);
   }
@@ -177,7 +177,7 @@
 }
 
 .pagination .pagination__label {
-  font-size: 13px;
+  font-size: var(--font-size-13);
 }
 
 .empty-state {
@@ -188,7 +188,7 @@
 .project-toolbar .project-toolbar__field:first-child {
   grid-column: 1/-1;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-column: auto;
   }
 }
@@ -199,7 +199,7 @@
 }
 
 .project-count {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .project-toolbar .project-toolbar__input {
@@ -215,22 +215,22 @@
 }
 
 .pagination .button {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   min-width: 0;
   padding: 10px var(--space-3);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     min-width: 110px;
     padding: var(--space-3) 22px;
   }
 }
 
 .pagination .pagination__label {
-  font-size: 13px;
+  font-size: var(--font-size-13);
   white-space: nowrap;
 
-  @media (min-width: breakpoints.$small) {
-    font-size: var(--text-small);
+  @include breakpoints.mq(sm) {
+    font-size: var(--small-font-size);
     white-space: normal;
   }
 }
@@ -249,11 +249,11 @@
 }
 
 .project-toolbar .project-toolbar__select {
-  font-size: 13px;
+  font-size: var(--font-size-13);
   padding-inline: 10px;
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 15px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-15);
     padding-inline: 14px;
   }
 }
@@ -277,7 +277,7 @@
 
 .project-card:hover {
   border-color: var(--panel-hover-border);
-  box-shadow: 0 8px 32px var(--panel-shadow-ink);
+  box-shadow: 0 8px 32px var(--shadow-subtle-color);
 }
 
 .project-card {
@@ -326,7 +326,7 @@
 }
 
 .project-card .project-body .project-body__title {
-  font-size: clamp(var(--text-lead), 2vw, 25px);
+  font-size: var(--font-size-25);
 }
 
 .project-card .project-body > .project-body__description {

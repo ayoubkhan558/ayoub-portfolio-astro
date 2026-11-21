@@ -1,6 +1,7 @@
 // Mask the rotating light to the edge so it never covers the card's content.
 .border-beam {
-  --border-beam-light: #62a9ff;
+  // Color of the moving segment along the border.
+  --border-beam-color: var(--link-accent);
   position: absolute;
   inset: -1px;
   padding: 1.5px;
@@ -22,7 +23,7 @@
   background: conic-gradient(
     transparent 0deg,
     transparent 338deg,
-    var(--border-beam-light) 356deg,
+    var(--border-beam-color) 356deg,
     transparent 360deg
   );
   animation: border-beam-rotate 4s linear infinite;

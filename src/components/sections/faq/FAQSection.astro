@@ -7,16 +7,16 @@ const topics = [
 ];
 ---
 
-<section class="faq-page-section section-spacing section-spacing--opening">
+<section class="section-spacing section-spacing--opening">
   <div class="container">
     {topics.map((topic, index) => (
       <section class="faq-topics__group">
-        <h2>{topic.title}</h2>
+        <h2 class="portfolio__heading portfolio__heading--section">{topic.title}</h2>
         <div class="faq-list">
           {topic.items.map((item) => (
             <details class="faq-list__item" name={`faq-topic-${index}`}>
               <summary class="faq-list__question">{item.question}</summary>
-              <p class="faq-list__answer">{item.answer}</p>
+              <p class="faq-list__answer portfolio__paragraph">{item.answer}</p>
             </details>
           ))}
         </div>

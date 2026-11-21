@@ -4,7 +4,7 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 ---
 
 <section
-  class="home-case-studies-section section-spacing"
+  class="section-spacing"
   id="case-studies"
   data-project-reveal
 >
@@ -14,6 +14,11 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
       title="How the work came together"
       subtitle="What each client needed, what I changed, and how it turned out."
     />
-    <CaseGrid />
+    <CaseGrid limit={3} />
+    <div class="home-case-studies-section__footer">
+      <a href="/case-studies/" class="button button--outline portfolio__link">
+        Show all case studies →
+      </a>
+    </div>
   </div>
 </section>

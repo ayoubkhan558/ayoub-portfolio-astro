@@ -37,11 +37,11 @@ export function ServiceCards({
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="compact-solution__title">{service.name}</h3>
-              <p className="compact-solution__description"><strong>What’s included:</strong> {service.description}</p>
-              <p className="compact-solution__description"><strong>Pricing:</strong> {service.price}{service.period}</p>
+              <h3 className="compact-solution__title portfolio__heading portfolio__heading--subsection">{service.name}</h3>
+              <p className="compact-solution__description portfolio__paragraph"><strong>What’s included:</strong> {service.description}</p>
+              <p className="compact-solution__description portfolio__paragraph"><strong>Pricing:</strong> {service.price}{service.period}</p>
               <a
-                className="text-link card-action"
+                className="text-link card-action portfolio__link"
                 href={`/services/${service.slug}/`}
               >
                 View service details <ArrowUpRight className="button__icon" aria-hidden="true" size={16} />
@@ -75,23 +75,23 @@ export function ServiceCards({
                 </Badge>
               )}
             </div>
-            <h3 className="service-card__title service-grid-v2__title" id={`${idPrefix}-${i}`}>{s.name}</h3>
+            <h3 className="service-card__title service-grid-v2__title portfolio__heading portfolio__heading--subsection" id={`${idPrefix}-${i}`}>{s.name}</h3>
             <div className="service-card__pricing">
               <div className="service-price">
                 {s.price}
                 {s.period && <small className="service-price__note portfolio__note">{s.period}</small>}
               </div>
-              {s.timeline && <p className="small-note service-card__description service-inner__description">{s.timeline}</p>}
+              {s.timeline && <p className="small-note service-card__description service-inner__description portfolio__paragraph">{s.timeline}</p>}
             </div>
             <div className="service-card__inclusions">
               <strong>What’s included</strong>
-              <p className="service-card__description service-inner__description">{s.description}</p>
+              <p className="service-card__description service-inner__description portfolio__paragraph">{s.description}</p>
             </div>
             <Button
               asChild
               className="button card-action"
             >
-              <a
+              <a className="portfolio__link"
                 href={`/services/${s.slug}/`}
               >
                 View service details

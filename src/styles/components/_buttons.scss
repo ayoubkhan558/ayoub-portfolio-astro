@@ -11,7 +11,7 @@
   color: var(--primary-foreground);
   border: 1px solid color-mix(in oklch, var(--foreground) 10%, transparent);
   border-radius: 9px;
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   font-weight: 600;
   transition:
     transform 0.16s,
@@ -23,16 +23,11 @@
   background: color-mix(in oklch, var(--primary) 85%, var(--foreground) 5%);
 }
 
-.button--small {
-  min-height: 40px;
-  padding: var(--space-2) 15px;
-}
-
 .button--outline {
   background: linear-gradient(110deg, var(--background), transparent);
   color: var(--foreground);
   border-color: var(--border);
-  box-shadow: 0 2px 3px var(--button-shadow-ink);
+  box-shadow: 0 2px 3px var(--shadow-subtle-color);
 }
 
 .button--outline:hover {
@@ -49,7 +44,7 @@
   border: 0;
   background: transparent;
   border-radius: 50%;
-  font-size: 23px;
+  font-size: var(--font-size-23);
 }
 
 .icon-button:hover {
@@ -61,7 +56,7 @@
   align-items: center;
   gap: var(--space-2);
   font-weight: 500;
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   overflow-wrap: anywhere;
 }
 
@@ -83,66 +78,66 @@
 }
 
 .text-link {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .text-link:hover {
-  color: var(--link-hover-ink);
+  color: var(--link-accent);
 }
 
 .dark .text-link:hover {
-  color: var(--link-hover-ink);
+  color: var(--link-accent);
 }
 
 // v1.3 — editorial section hierarchy, compact expertise and purposeful motion.
-:where(a) {
+:where(.portfolio__link) {
   transition:
     color 0.18s ease,
     background-color 0.18s ease,
     border-color 0.18s ease;
 }
 
-:where(a):hover {
+:where(.portfolio__link):hover {
   color: var(--link-accent);
 }
 
-:where(a):focus-visible {
+:where(.portfolio__link):focus-visible {
   color: var(--link-accent);
 }
 
-:where(a):hover :where(h3) {
+:where(.portfolio__link):hover :where(.portfolio__heading--subsection) {
   color: var(--link-accent);
 }
 
-:where(a):focus-visible :where(h3) {
+:where(.portfolio__link):focus-visible :where(.portfolio__heading--subsection) {
   color: var(--link-accent);
 }
 
-:where(a).button:hover {
+:where(.portfolio__link).button:hover {
   color: var(--background);
   background: var(--link-accent);
   border-color: var(--link-accent);
 }
 
-:where(a).button:focus-visible {
+:where(.portfolio__link).button:focus-visible {
   color: var(--background);
   background: var(--link-accent);
   border-color: var(--link-accent);
 }
 
-.dark :where(a).button:hover {
-  color: var(--accent-button-hover-ink);
+.dark :where(.portfolio__link).button:hover {
+  color: var(--background);
 }
 
-.dark :where(a).button:focus-visible {
-  color: var(--accent-button-hover-ink);
+.dark :where(.portfolio__link).button:focus-visible {
+  color: var(--background);
 }
 
-:where(a).text-link:hover {
+:where(.portfolio__link).text-link:hover {
   color: var(--link-accent);
 }
 
-:where(a).case-image-link:hover .round-arrow {
+:where(.portfolio__link).case-image-link:hover .round-arrow {
   color: var(--background);
   background: var(--link-accent);
 }

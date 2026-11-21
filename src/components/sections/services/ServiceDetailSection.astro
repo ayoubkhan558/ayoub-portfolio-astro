@@ -12,9 +12,9 @@ const { service } = Astro.props;
     <div class="service-detail-content-section__topics">
       {service.sections.map((section) => (
         <article class="service-detail-content-section__topic">
-          <h2 class="service-detail-content-section__title">{section.title}</h2>
+          <h2 class="service-detail-content-section__title portfolio__heading portfolio__heading--section">{section.title}</h2>
           {section.paragraphs.map((text) => (
-            <p>{text}</p>
+            <p class="portfolio__paragraph">{text}</p>
           ))}
           {section.bullets && (
             <ul class="check-list">
@@ -28,13 +28,13 @@ const { service } = Astro.props;
     </div>
     {service.relatedCases.length > 0 && (
       <>
-        <h2 class="service-detail-content-section__subheading">
+        <h2 class="service-detail-content-section__subheading portfolio__heading portfolio__heading--section">
           Related case studies
         </h2>
-        {service.relatedNote && <p>{service.relatedNote}</p>}
+        {service.relatedNote && <p class="portfolio__paragraph">{service.relatedNote}</p>}
         <div class="link-list">
           {service.relatedCases.map((c) => (
-            <a class="text-link" href={c.href}>
+            <a class="text-link portfolio__link" href={c.href}>
               {c.label} <ExternalArrow />
             </a>
           ))}

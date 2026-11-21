@@ -2,7 +2,7 @@
 
 The shared Astro layout loads `global.scss` for fonts, theme tokens and document defaults, then `portfolio.scss` for site styles. Start with the owner below and keep component states and mobile-first queries in that partial. The shared viewport widths live in `foundation/_breakpoints.scss`.
 
-Native body, heading, paragraph, and link defaults live in the foundation. Component classes override them where needed. Keep each selector in its own rule.
+Shared body, heading, paragraph, and link defaults live in the foundation. Add `.portfolio__paragraph--lead` alongside `.portfolio__paragraph` for introductory copy. Component classes override them where needed. Keep each selector in its own rule.
 
 | Partial | Where it is used |
 | --- | --- |
@@ -15,7 +15,8 @@ Native body, heading, paragraph, and link defaults live in the foundation. Compo
 | `layout/section-shells` | Page and section gutters, maximum widths and vertical spacing. |
 | `components/asset-fallback` | Fallback previews used by projects, case studies and logo images. |
 | `components/buttons` | Portfolio buttons, links and action rows used across pages. |
-| `components/case-study-cards` | Case-study cards on the homepage and case-study index, plus shared card grids. |
+| `components/cards` | Shared card surfaces, tags and preview badges. |
+| `components/case-study-cards` | Case-study cards on the homepage and case-study index. |
 | `components/faq` | Homepage, Contact and standalone FAQ accordions. |
 | `components/pagespeed` | Performance reports in project drawers and case-study details. |
 | `components/pointer-feedback` | Cursor and sound controls available throughout the site. |
@@ -34,6 +35,7 @@ Native body, heading, paragraph, and link defaults live in the foundation. Compo
 | `sections/home-panels` | Homepage About, resources and section alignment. |
 | `sections/project-archive` | Projects archive filters, results and project cards. |
 | `sections/selected-work` | Homepage Selected Work project list and its compact preview cards. |
+| `sections/services-delivery` | Services page delivery outcomes and checklist layout. |
 
 ## Opt-in effects
 
@@ -44,7 +46,6 @@ Load the corresponding component from `src/components/effects` in the owning sec
 | `data-emoji-trail` with an aria-hidden `.emoji-trail` layer | Homepage CTA, configured by `PUBLIC_CTA_TRAIL_MODE` in the environment or `src/config/siteSettings.ts` |
 | `<NameSparkles>` with its `data-name-sparkles` marker | Name in the About page heading |
 | `data-card-tilt` | Homepage Solutions cards |
-| `data-glare-sweep` | My Toolbox group cards only |
 | `.flood-fill-button` | Top navigation CTA |
 | `data-grid-spotlight` | My Toolbox group grid |
 | `data-skill-burst` | Muhammad Ayoub profile card in the homepage hero |

@@ -11,9 +11,9 @@
 }
 
 .section-spacing--opening {
-  padding-block-start: var(--section-opening-space);
+  padding-block-start: var(--section-after-intro-padding);
 }
 
 .section-spacing--hero {
-  padding-block-start: var(--page-header-offset);
+  padding-block-start: var(--page-header-top-padding);
 }

@@ -1,5 +1,0 @@
-[data-magnetic-button]:not(:focus-visible) {
-  @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
-    translate: var(--magnetic-offset, none);
-  }
-}

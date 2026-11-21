@@ -4,7 +4,7 @@ import TextRotator from "../../portfolio/TextRotator.astro";
 import { painPoints, problemsSolved } from "./problems";
 ---
 
-<section class="home-problems-section section-spacing" id="problems">
+<section class="section-spacing" id="problems">
   <div class="container">
     <SectionHeader
       label="Common problems"
@@ -14,7 +14,7 @@ import { painPoints, problemsSolved } from "./problems";
     <div class="home-problems-section__cards">
       {painPoints.map((point) => (
         <article class="plain-card">
-          <h3 class="plain-card__title">{point}</h3>
+          <h3 class="plain-card__title portfolio__heading portfolio__heading--subsection">{point}</h3>
         </article>
       ))}
     </div>

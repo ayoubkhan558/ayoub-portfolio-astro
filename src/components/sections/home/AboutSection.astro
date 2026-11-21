@@ -1,44 +1,135 @@
 ---
+import { BriefcaseBusiness, FolderCheck, GraduationCap, MapPin, Star, Users } from "lucide-react";
 import p from "../../../data/portfolio.json";
 import Asset from "../../portfolio/Asset.astro";
 import SectionHeader from "../../portfolio/SectionHeader.astro";
+
+const marks = {
+  "React frontends": { style: "marker", path: "M 3 54 Q 49 48 97 53" },
+  "on a phone": { style: "underline", path: "M 3 78 Q 42 69 97 74 Q 50 78 13 91" },
+  "before handoff": { style: "circle", path: "M 62 11 C 35 3 4 15 3 49 C 0 79 24 93 50 92 C 77 92 98 75 98 49 C 98 24 80 12 57 11" },
+};
+const markedPhrases = /(React frontends|on a phone|before handoff)/g;
+const stats = Object.fromEntries(p.about.awards.map(({ label, value }) => [label, value]));
+const [degree, university] = p.about.education.split(", ");
+const studioTags = [
+  { id: "experience", icon: BriefcaseBusiness, label: `${stats.Experience} experience` },
+  { id: "location", icon: MapPin, label: p.profile.location },
+  { id: "education", icon: GraduationCap, label: degree, detail: university },
+  { id: "projects", icon: FolderCheck, label: `${stats["Projects delivered"]} projects delivered` },
+  { id: "rating", icon: Star, label: `${stats.Rating} rating` },
+  { id: "clients", icon: Users, label: `${stats["Happy clients"]} happy clients` },
+];
 ---
 
-<section class="home-about-section section-spacing" id="about">
+<section class="section-spacing" id="about">
   <div class="container">
     <div class="home-about">
       <div>
         <SectionHeader
           label="About me"
           title="About Ayoub"
-          subtitle={p.about.homeIntro}
         />
+        <div class="home-about__bio" data-about-annotations>
+          {[p.about.homeIntro, p.about.homeDetails].map((paragraph, index) => (
+            <p class:list={["portfolio__paragraph", index === 0 && "portfolio__paragraph--lead"]}>
+              {paragraph.split(markedPhrases).map((piece) => {
+                const mark = marks[piece as keyof typeof marks];
+                return mark ? (
+                  <span class:list={["home-about__annotation", `home-about__annotation--${mark.style}`]} data-about-annotation>
+                    {piece}
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                      <path d={mark.path} pathLength="1" vector-effect="non-scaling-stroke" />
+                    </svg>
+                  </span>
+                ) : piece;
+              })}
+            </p>
+          ))}
+          <img
+            class="home-about__signature portfolio__image"
+            src="/mayoub-signature.png"
+            alt={p.about.signature}
+            width="280"
+            height="123"
+            loading="lazy"
+          />
+        </div>
         <div class="home-about-section__actions">
-          <a href="/about/" class="button">
+          <a href="/about/" class="button portfolio__link">
             Meet {p.profile.name} →
           </a>
-          <a href={p.about.resumeHref} class="text-link" download>
+          <a href={p.about.resumeHref} class="text-link portfolio__link" download>
             Download Resume ↓
           </a>
         </div>
-        <div class="tags home-about-section__tags">
-          {p.recognition.map((v) => (
-            <span class="tags__label">
-              {v.label} · {v.status}
+      </div>
+      <figure class="home-about__figure">
+        <div class="home-about__portrait-stage" data-about-parallax>
+          <Asset
+            src="/ayoub-about-v4.jpg"
+            alt={`${p.profile.name}, web developer and SEO specialist`}
+            class="home-portrait"
+          />
+          {studioTags.map(({ id, icon: Icon, label, detail }) => (
+            <span class:list={["home-about__float", `home-about__float--${id}`]}>
+              <Icon className="home-about__float-icon" size={16} aria-hidden="true" />
+              <span>
+                {label}
+                {detail && <small class="home-about__float-detail">{detail}</small>}
+              </span>
             </span>
           ))}
         </div>
-      </div>
-      <figure class="home-about__figure">
-        <Asset
-          src="/ayoub-about-v4.jpg"
-          alt={`${p.profile.name}, web developer and SEO specialist`}
-          class="home-portrait"
-        />
         <figcaption class="home-about__caption">
-          {p.profile.name} · {p.profile.location}
+          {p.profile.name}
         </figcaption>
       </figure>
     </div>
   </div>
 </section>
+
+<script>
+  for (const bio of document.querySelectorAll("[data-about-annotations]")) {
+    const phrases = bio.querySelectorAll<HTMLElement>("[data-about-annotation]");
+    const resize = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const phrase = entry.target as HTMLElement;
+        phrase.style.setProperty("--annotation-width", `${entry.contentRect.width}px`);
+        phrase.style.setProperty("--annotation-height", `${entry.contentRect.height}px`);
+      }
+    });
+    for (const phrase of phrases) resize.observe(phrase);
+
+    const reveal = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      bio.classList.add("home-about__bio--annotated");
+      reveal.disconnect();
+    }, { threshold: 0.25 });
+    reveal.observe(bio);
+  }
+
+  const pointerMotion = matchMedia(
+    "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+  );
+
+  for (const portrait of document.querySelectorAll<HTMLElement>("[data-about-parallax]")) {
+    const reset = () => {
+      portrait.style.removeProperty("--portrait-pointer-x");
+      portrait.style.removeProperty("--portrait-pointer-y");
+    };
+
+    document.addEventListener("pointermove", (event) => {
+      if (!pointerMotion.matches || event.pointerType === "touch") return;
+      const x = (event.clientX / window.innerWidth - 0.5) * 2;
+      const y = (event.clientY / window.innerHeight - 0.5) * 2;
+      portrait.style.setProperty("--portrait-pointer-x", String(x));
+      portrait.style.setProperty("--portrait-pointer-y", String(y));
+    }, { passive: true });
+
+    document.documentElement.addEventListener("pointerleave", reset);
+    document.addEventListener("pointercancel", reset);
+    window.addEventListener("blur", reset);
+    pointerMotion.addEventListener("change", reset);
+  }
+</script>

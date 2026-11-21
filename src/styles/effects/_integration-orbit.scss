@@ -1,0 +1,122 @@
+// Animated logo rings in IntegrationOrbit.astro.
+
+.integration-orbit {
+  position: relative;
+  container-type: inline-size;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  margin-block-start: var(--space-8);
+}
+
+.integration-orbit__center,
+.integration-orbit__ring {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  translate: -50% -50%;
+}
+
+.integration-orbit__center,
+.integration-orbit__tile {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+}
+
+.integration-orbit__center {
+  z-index: 1;
+  width: min(72px, 22cqi);
+  border-radius: 100%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.integration-orbit__ring {
+  aspect-ratio: 1;
+  animation: integration-orbit-spin var(--orbit-duration) linear infinite;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    border: 1px dashed var(--border);
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.integration-orbit__ring--outer {
+  // 280px diameter at the full 340px stage width.
+  width: calc(100% * 280 / 340);
+  --orbit-duration: 32s;
+}
+
+.integration-orbit__ring--inner {
+  // 160px diameter at the full 340px stage width.
+  width: calc(100% * 160 / 340);
+  --orbit-duration: 20s;
+  animation-direction: reverse;
+}
+
+.integration-orbit__position {
+  position: absolute;
+  translate: -50% -50%;
+}
+
+.integration-orbit__tile {
+  width: min(44px, 14cqi);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--link-accent);
+  animation: integration-orbit-spin var(--orbit-duration) linear infinite
+    reverse;
+}
+
+.integration-orbit__ring--inner .integration-orbit__tile {
+  animation-direction: normal;
+}
+
+.integration-orbit--white-tiles
+  :is(.integration-orbit__center, .integration-orbit__tile) {
+  background: var(--logo-background-color);
+}
+
+.integration-orbit__image {
+  width: 24px;
+  height: 24px;
+  max-width: 82%;
+  max-height: 82%;
+  object-fit: contain;
+}
+
+.integration-orbit__center .integration-orbit__image {
+  width: 40px;
+  height: 40px;
+}
+
+.integration-orbit__center--portrait {
+  overflow: hidden;
+}
+
+.integration-orbit__center--portrait .integration-orbit__image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@keyframes integration-orbit-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .integration-orbit__ring,
+  .integration-orbit__tile {
+    animation: none;
+  }
+}

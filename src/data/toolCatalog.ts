@@ -1,6 +1,6 @@
 import toolCatalogJson from "./toolCatalog.json";
 
-export type ToolCatalogItem = {
+type ToolCatalogItem = {
   name: string;
   logo: string | null;
   description: string;
@@ -8,12 +8,12 @@ export type ToolCatalogItem = {
 
 export const toolCatalog = toolCatalogJson as Record<string, ToolCatalogItem>;
 
-export function getToolCatalogItem(toolKey: string): ToolCatalogItem {
-  return (
-    toolCatalog[toolKey] ?? {
-      name: toolKey,
-      logo: null,
-      description: "Project stack item.",
-    }
-  );
-}
+export const aiToolKeys = [
+  "claude-ai",
+  "claude-code",
+  "codex",
+  "cursor",
+  "github-copilot",
+  "muse",
+  "openai",
+] as const satisfies readonly (keyof typeof toolCatalogJson)[];

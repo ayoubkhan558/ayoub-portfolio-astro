@@ -11,11 +11,11 @@
   gap: var(--space-7);
   grid-template-columns: 1fr;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     gap: var(--space-8);
   }
 }
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 13px;
+  font-size: var(--font-size-13);
   font-weight: 500;
 }
 
@@ -34,7 +34,7 @@
   grid-template-columns: 1fr;
   gap: 35px;
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: 1fr 1.35fr;
     gap: 60px;
   }
@@ -42,14 +42,14 @@
 
 // Keep the form first in the reading order and place it beside the contact details on wide screens.
 .contact-layout__form {
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-area: 1 / 2;
     min-width: 0;
   }
 }
 
-.contact-layout > .contact-info {
-  @media (min-width: breakpoints.$large) {
+.contact-layout>.contact-info {
+  @include breakpoints.mq(lg) {
     grid-area: 1 / 1;
   }
 }
@@ -68,7 +68,7 @@
   scroll-margin-block-start: var(--space-6);
 }
 
-.faq-topics__group + .faq-topics__group {
+.faq-topics__group+.faq-topics__group {
   margin-top: var(--space-10);
 }
 
@@ -76,56 +76,72 @@
   max-width: 52ch;
   margin-block: var(--space-5);
   color: var(--foreground);
-  font-size: clamp(19px, 2.4vw, 28px);
-  line-height: 1.4;
+  font-size: var(--font-size-28);
 }
 
 // Keep desktop filters with the list without covering the short mobile viewport.
 .project-archive__controls {
-  @media (min-width: breakpoints.$wide) and (min-height: 650px) {
-    // position: sticky;
-    // top: 0;
-    // z-index: 5;
-    padding-block: var(--space-2);
-    // background: var(--background);
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      // position: sticky;
+      // top: 0;
+      // z-index: 5;
+      padding-block: var(--space-2);
+      // background: var(--background);
+    }
   }
 }
 
 .project-archive__controls .project-toolbar {
-  @media (min-width: breakpoints.$wide) and (min-height: 650px) {
-    gap: var(--space-3);
-    margin-bottom: var(--space-1);
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      gap: var(--space-3);
+      margin-bottom: var(--space-1);
+    }
   }
 }
 
-.project-archive__controls
-  :is(:where(.portfolio__input), :where(.portfolio__select)) {
-  @media (min-width: breakpoints.$wide) and (min-height: 650px) {
-    min-height: 38px;
-    padding-block: 5px;
+.project-archive__controls :is(:where(.portfolio__input), :where(.portfolio__select)) {
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      min-height: 38px;
+      padding-block: 5px;
+    }
   }
 }
 
 .project-archive__controls .project-count {
-  @media (min-width: breakpoints.$wide) and (min-height: 650px) {
-    margin-block: var(--space-1) 0;
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      margin-block: var(--space-1) 0;
+    }
   }
 }
 
 .contact-info .contact-info__title {
-  font-size: 32px;
+  font-size: var(--font-size-32);
 }
 
 .contact-link {
-  display: block;
-  border-bottom: 1px dashed var(--border);
-  padding: 18px 0;
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--card);
+  border: 1px solid var(--border-hr);
+  border-radius: 22px;
   overflow-wrap: anywhere;
 }
 
-.contact-link .contact-link__label {
+.contact-link__icon {
+  color: var(--link-accent);
+}
+
+.contact-link__label {
   display: block;
-  font-size: 11px;
+  font-size: var(--font-size-11);
   color: var(--muted-foreground);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -137,17 +153,17 @@
   border-radius: 22px;
   padding: 22px;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     padding: 35px;
   }
 }
 
 .contact-form .contact-form__title {
-  font-size: 28px;
+  font-size: var(--font-size-28);
 }
 
 .contact-form .contact-form__description {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .form-grid {
@@ -155,7 +171,7 @@
   grid-template-columns: 1fr;
   gap: 18px;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -181,15 +197,15 @@
 }
 
 .form-message.error {
-  color: var(--contact-error-ink);
+  color: var(--error-msg-clr);
 }
 
 .dark .form-message.error {
-  color: var(--contact-error-ink);
+  color: var(--error-msg-clr);
 }
 
 .contact-form .consent {
-  font-size: var(--text-caption);
+  font-size: var(--caption-font-size);
   margin-top: 18px;
 }
 
@@ -202,12 +218,12 @@
 }
 
 .contact-form .consent {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
   line-height: 1.55;
 }
 
 .form-field {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .contact-form__additional-fields {
@@ -220,7 +236,7 @@
 }
 
 .form-message {
-  font-size: 15px;
+  font-size: var(--font-size-15);
   line-height: 1.6;
 }
 
@@ -254,8 +270,8 @@
 
 .field-error {
   display: block;
-  color: var(--field-error-ink);
-  font-size: var(--text-small);
+  color: var(--error-msg-clr);
+  font-size: var(--small-font-size);
   line-height: 1.5;
   font-weight: 400;
   margin-top: var(--space-1);
@@ -267,12 +283,12 @@
 }
 
 .dark .field-error {
-  color: var(--field-error-ink);
+  color: var(--error-msg-clr);
 }
 
 [aria-invalid="true"] {
-  border-color: var(--invalid-border) !important;
-  outline-color: var(--invalid-border);
+  border-color: var(--error-message-border) !important;
+  outline-color: var(--error-message-border);
 }
 
 .form-message {
@@ -282,15 +298,36 @@
 .form-message.error {
   border: 1px solid var(--error-message-border);
   background: var(--error-message-surface);
-  color: var(--error-message-ink);
+  color: var(--error-msg-clr);
 }
 
 .dark .form-message.error {
   background: var(--error-message-surface);
-  color: var(--error-message-ink);
+  color: var(--error-msg-clr);
   border-color: var(--error-message-border);
 }
 
 .form-message {
   margin-block: var(--space-5);
+}
+
+.contact-details-section__subheading {
+  margin-top: var(--space-10);
+}
+
+.contact-form__additional-fields {
+  margin-top: var(--space-10);
+}
+
+.legal-highlights {
+  margin-block: 30px var(--space-12);
+  gap: 18px;
+}
+
+.legal-highlights .plain-card {
+  padding: 22px;
+}
+
+.legal-highlights .legal-highlights__description {
+  font-size: var(--small-font-size);
 }

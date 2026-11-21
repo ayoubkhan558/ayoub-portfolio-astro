@@ -7,11 +7,11 @@
   gap: 22px;
   grid-template-columns: 1fr;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -27,11 +27,9 @@
 }
 
 .service-card.featured {
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklch, var(--primary) 65%, var(--background)),
-    var(--card) 40%
-  );
+  background: linear-gradient(180deg,
+      color-mix(in oklch, var(--primary) 65%, var(--background)),
+      var(--card) 40%);
 }
 
 .service-top {
@@ -43,23 +41,23 @@
 }
 
 .service-top .eyebrow {
-  font-size: var(--text-caption);
+  font-size: var(--caption-font-size);
 
-  @media (min-width: breakpoints.$small) {
-    font-size: 10px;
+  @include breakpoints.mq(sm) {
+    font-size: var(--font-size-10);
   }
 }
 
 .service-card .service-card__title {
-  font-size: 26px;
+  font-size: var(--font-size-26);
 }
 
 .service-card .service-card__description {
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 
 .service-price {
-  font-size: 24px;
+  font-size: var(--font-size-24);
   letter-spacing: -0.04em;
   margin: var(--space-3) 0;
 }
@@ -77,11 +75,11 @@
   gap: var(--space-4);
   grid-template-columns: 1fr;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -96,12 +94,16 @@
   background: var(--card);
 }
 
-.process-grid .step-number {
+.process-grid__number {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-13);
   color: var(--link-accent);
+  display: block;
+  margin-bottom: 25px;
 }
 
-.process-grid :where(p) {
-  font-size: var(--text-small);
+.process-grid__description {
+  font-size: var(--small-font-size);
 }
 
 .metric-row {
@@ -117,62 +119,16 @@
 .metric-row .metric-row__note {
   display: block;
   color: var(--muted-foreground);
-  font-size: 11px;
+  font-size: var(--font-size-11);
 }
 
 .metric-row__value {
-  font-size: 13px;
+  font-size: var(--font-size-13);
   font-weight: 500;
 }
 
-:where(.review-inner__quote, .review-journal__quote, .large-quote__quote) {
-  margin: 15px 0 var(--space-7);
-  font-size: 19px;
-  line-height: 1.5;
-  letter-spacing: -0.025em;
-}
-
-:where(
-  .home-about__caption,
-  .review-journal__person,
-  .review-inner__caption,
-  .showcase-grid__caption,
-  .large-quote__attribution
-) {
-  font-size: var(--text-small);
-}
-
-:where(.large-quote__author, .review-inner__author, .review-journal__author) {
-  display: block;
-}
-
-:where(
-  .large-quote__role,
-  .review-inner__role,
-  .review-journal__role,
-  .testimonial__avatar
-) {
-  display: block;
-}
-
-:where(
-  .large-quote__role,
-  .review-inner__role,
-  .review-journal__role,
-  .testimonial__avatar
-) {
-  color: var(--muted-foreground);
-}
-
-.avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .service-price {
-  font-size: 24px;
+  font-size: var(--font-size-24);
 }
 
 .service-card.ui-card {
@@ -189,20 +145,20 @@
   gap: 0;
   padding: var(--space-6);
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     padding: var(--space-7);
   }
 }
 
-.service-inner > .button {
+.service-inner>.button {
   width: 100%;
   margin-top: auto;
 }
 
-.service-inner > .service-inner__description:first-of-type {
+.service-inner>.service-inner__description:first-of-type {
   min-height: 0;
 
-  @media (min-width: breakpoints.$small) {
+  @include breakpoints.mq(sm) {
     min-height: 82px;
   }
 }
@@ -215,6 +171,7 @@
 .service-top .tag {
   flex-shrink: 0;
 }
+
 .service-grid-v2 .service-card {
   border-radius: 18px;
   overflow: hidden;
@@ -243,8 +200,8 @@
   width: 50px;
   height: 50px;
   border-radius: 14px;
-  background: var(--service-symbol-surface);
-  color: var(--service-symbol-ink);
+  background: var(--link-accent-tint);
+  color: var(--link-accent);
 }
 
 .service-grid-v2 .service-top .tag {
@@ -252,14 +209,14 @@
 }
 
 .service-grid-v2 .service-grid-v2__title {
-  font-size: 27px;
+  font-size: var(--font-size-27);
   line-height: 1.2;
   margin-bottom: var(--space-4);
 }
 
 .service-grid-v2 .service-price {
   margin: var(--space-2) 0;
-  font-size: 25px;
+  font-size: var(--font-size-25);
 }
 
 .service-grid-v2 .service-card:hover {
@@ -268,13 +225,13 @@
 }
 
 .service-grid-v2 .service-card:hover .service-symbol {
-  background: var(--service-symbol-hover);
-  color: var(--logo-paper);
+  background: var(--link-accent);
+  color: var(--background);
 }
 
 .dark .service-symbol {
-  background: var(--service-symbol-surface);
-  color: var(--service-symbol-ink);
+  background: var(--link-accent-tint);
+  color: var(--link-accent);
 }
 
 .compact-solutions-grid {
@@ -282,7 +239,7 @@
   grid-template-columns: 1fr;
   gap: var(--space-4);
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-6);
   }
@@ -300,7 +257,7 @@
     background 0.2s;
   padding: var(--space-6);
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     padding: var(--space-7);
   }
 }
@@ -324,12 +281,12 @@
 }
 
 .compact-solution .compact-solution__title {
-  font-size: 24px;
+  font-size: var(--font-size-24);
   margin-bottom: var(--space-3);
 }
 
 .compact-solution .compact-solution__description {
-  font-size: 15px;
+  font-size: var(--font-size-15);
   line-height: 1.65;
   margin-bottom: var(--space-6);
 }
@@ -340,14 +297,15 @@
   height: 100%;
   padding: var(--space-6);
 
-  @media (min-width: breakpoints.$medium) {
+  @include breakpoints.mq(md) {
     padding: var(--space-7);
   }
 }
 
-.service-grid-v2 .service-inner > .card-action {
+.service-grid-v2 .service-inner>.card-action {
   margin-top: auto;
 }
+
 .service-card__pricing {
   margin-block: var(--space-1) 18px;
 
@@ -365,46 +323,5 @@
 
   .service-card__description {
     margin: 6px 0 0;
-  }
-}
-
-.services-delivery-section {
-  .check-list__item {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: baseline;
-    gap: var(--space-3);
-    padding-inline: 0;
-
-    &::before {
-      position: static;
-      content: "✓" / "";
-      color: var(--link-accent);
-    }
-  }
-
-  .services-delivery-section__checklist {
-    padding: var(--space-6);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: var(--card);
-  }
-
-  .check-list__item + .check-list__item {
-    padding-block-start: var(--space-3);
-    border-block-start: 1px solid var(--border);
-  }
-
-  @media (min-width: breakpoints.$large) {
-    > .container {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-      align-items: start;
-      gap: var(--space-8);
-    }
-
-    .services-delivery-section__checklist {
-      margin-block-start: 0;
-    }
   }
 }

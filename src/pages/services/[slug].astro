@@ -16,25 +16,25 @@ const contactHref = `/contact/?subject=${encodeURIComponent(service.title)}#cont
 ---
 
 <Layout title={service.title} description={service.description}>
-  <div class="service-detail-page">
+  <div>
     <div class="portfolio-background">
-      <section class="service-detail-hero section-spacing section-spacing--hero">
+      <section class="section-spacing section-spacing--hero">
         <div class="container service-detail-hero__layout">
-          <div class="service-detail-hero__intro">
-            <a class="text-link" href="/services/">
+          <div>
+            <a class="text-link portfolio__link" href="/services/">
               ← All services
             </a>
             <span class="eyebrow service-detail-hero__label">
               {service.label}
             </span>
-            <h1>{service.h1}</h1>
-            <p class="service-detail-hero__description">{service.description}</p>
+            <h1 class="portfolio__heading portfolio__heading--page">{service.h1}</h1>
+            <p class="service-detail-hero__description portfolio__paragraph">{service.description}</p>
           </div>
           <aside
             class="service-detail-hero__pricing"
             aria-label="Pricing and project details"
           >
-            <a class="service-detail-hero__quote" href={contactHref}>
+            <a class="service-detail-hero__quote portfolio__link" href={contactHref}>
               <span class="service-detail-hero__quote-text">
                 <strong class="service-detail-hero__price">
                   {service.price ?? "Request a starting price"}

@@ -12,7 +12,7 @@
 .name-sparkles__star {
   position: absolute;
   aspect-ratio: 1;
-  background: #f5b544;
+  background: var(--brand-warm);
   clip-path: polygon(
     50% 0,
     62% 38%,

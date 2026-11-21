@@ -1,0 +1,43 @@
+@use "../foundation/breakpoints";
+
+.services-delivery-section {
+  .check-list__item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--space-3);
+    padding-inline: 0;
+
+    &::before {
+      position: static;
+      content: "✓" / "";
+      color: var(--link-accent);
+    }
+  }
+
+  .services-delivery-section__checklist {
+    margin-top: var(--space-10);
+    padding: var(--space-6);
+    border: 1px dashed var(--border-hr);
+    border-radius: 18px;
+    background: var(--card);
+  }
+
+  .check-list__item+.check-list__item {
+    padding-block-start: var(--space-3);
+    border-block-start: 1px dashed var(--border-hr);
+  }
+
+  @include breakpoints.mq(lg) {
+    >.container {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      align-items: start;
+      gap: var(--space-8);
+    }
+
+    .services-delivery-section__checklist {
+      margin-block-start: 0;
+    }
+  }
+}

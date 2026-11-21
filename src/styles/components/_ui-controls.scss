@@ -22,8 +22,8 @@
   color: var(--primary-foreground);
 }
 :where(.ui-button--secondary, .ui-badge--secondary) {
-  background: var(--secondary);
-  color: var(--secondary-foreground);
+  background: var(--muted);
+  color: var(--foreground);
 }
 :where(.ui-button--destructive, .ui-badge--destructive) {
   background: var(--destructive);
@@ -35,7 +35,7 @@
   color: var(--foreground);
 }
 :where(.ui-button--ghost):hover {
-  background: var(--accent);
+  background: var(--muted);
 }
 :where(.ui-button--link) {
   text-decoration: underline;
@@ -68,7 +68,7 @@
 :where(.ui-badge) {
   width: fit-content;
   padding: 2px var(--space-2);
-  font-size: var(--text-caption);
+  font-size: var(--caption-font-size);
 }
 .ui-card {
   display: flex;
@@ -76,7 +76,7 @@
   gap: var(--space-6);
   padding-block: var(--space-6);
   background: var(--card);
-  color: var(--card-foreground);
+  color: var(--foreground);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -91,7 +91,7 @@
 }
 .ui-card__description {
   color: var(--muted-foreground);
-  font-size: var(--text-small);
+  font-size: var(--small-font-size);
 }
 .ui-card__action {
   grid-area: 1 / 2 / span 2;

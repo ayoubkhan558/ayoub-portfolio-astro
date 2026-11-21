@@ -55,7 +55,7 @@
     function finish() {
       window.clearTimeout(timer);
       canvas.remove();
-      link.classList.remove("logo-strip__link--revealing");
+      link.classList.remove("logo-strip__item--revealing");
       active.delete(link);
     }
     const draw = () => {
@@ -80,7 +80,7 @@
     };
 
     link.append(canvas);
-    link.classList.add("logo-strip__link--revealing");
+    link.classList.add("logo-strip__item--revealing");
     active.set(link, finish);
     draw();
   }
@@ -92,17 +92,17 @@
       const now = performance.now();
       const delay = Math.max(0, nextLogo - now);
       nextLogo = now + delay + 280;
-      target.classList.add("logo-strip__link--pending");
+      target.classList.add("logo-strip__item--pending");
       window.setTimeout(() => {
         void revealLogo(target as HTMLElement).finally(() => {
-          target.classList.remove("logo-strip__link--pending");
+          target.classList.remove("logo-strip__item--pending");
         });
       }, delay);
     }
   });
   if (!reduced.matches) {
     document
-      .querySelectorAll("[data-logo-reveal] .logo-strip__link")
+      .querySelectorAll("[data-logo-reveal] .logo-strip__item")
       .forEach((logo) => observer.observe(logo));
   }
   reduced.addEventListener("change", () => {

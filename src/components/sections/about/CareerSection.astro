@@ -3,7 +3,7 @@ import SectionHeader from "../../portfolio/SectionHeader.astro";
 import p from "../../../data/portfolio.json";
 ---
 
-<section class="portfolio-background about-career-section section-spacing">
+<section class="portfolio-background section-spacing">
   <div class="container">
     <SectionHeader
       label={p.about.careerStartLabel}
@@ -13,8 +13,8 @@ import p from "../../../data/portfolio.json";
       {p.about.careerPath.map((c) => (
         <article class="timeline__item">
           <span class="eyebrow">{c.year}</span>
-          <h3 class="timeline__title">{c.title}</h3>
-          <p class="timeline__description">{c.description}</p>
+          <h3 class="timeline__title portfolio__heading portfolio__heading--subsection">{c.title}</h3>
+          <p class="timeline__description portfolio__paragraph">{c.description}</p>
           <span class="tag">{c.technologies}</span>
         </article>
       ))}

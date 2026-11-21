@@ -26,14 +26,14 @@
       if (!element.hasAttribute("data-highlight-ready")) {
         if (highlightColor && CSS.supports("color", highlightColor)) {
           element.style.setProperty(
-            "--highlight-paint",
+            "--highlight-gradient",
             `linear-gradient(${highlightColor}, ${highlightColor})`,
           );
         } else if (
           highlightColor &&
           CSS.supports("background-image", highlightColor)
         ) {
-          element.style.setProperty("--highlight-paint", highlightColor);
+          element.style.setProperty("--highlight-gradient", highlightColor);
         }
         for (const [name, value] of [
           ["delay", highlightDelay],

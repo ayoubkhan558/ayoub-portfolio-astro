@@ -28,7 +28,7 @@
   cursor: pointer;
   list-style: none;
   min-height: 80px;
-  font-size: 18px;
+  font-size: var(--font-size-18);
   font-weight: 500;
 }
 
@@ -41,11 +41,11 @@
   padding-bottom: var(--space-4);
 }
 .faq-list__question {
-  font-size: 18px;
+  font-size: var(--font-size-18);
 }
 
 .faq-list__answer {
-  font-size: var(--text-body);
+  font-size: var(--body-font-size);
 }
 .portfolio-faq .accordion__trigger {
   display: flex;
@@ -53,7 +53,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
-  font-size: 17px;
+  font-size: var(--font-size-17);
   line-height: 1.5;
   padding: 25px var(--space-1);
   min-height: 72px;
@@ -76,7 +76,7 @@
 }
 
 .portfolio-faq .accordion__panel {
-  font-size: var(--text-body);
+  font-size: var(--body-font-size);
   line-height: 1.7;
   padding-inline: var(--space-1);
 }
@@ -102,12 +102,12 @@
 
 .portfolio-faq__description {
   margin-top: var(--space-6);
-  font-size: var(--text-body);
+  font-size: var(--body-font-size);
   line-height: 1.6;
 }
 
 .faq-introduction {
-  @media (min-width: breakpoints.$wide) {
+  @include breakpoints.mq(xl) {
     top: 32px;
     align-self: start;
   }
@@ -115,7 +115,7 @@
 
 .portfolio-faq {
   align-items: start;
-  column-gap: clamp(var(--space-10), 8vw, 112px);
+  column-gap: breakpoints.clamp-val(40px, 112px);
   row-gap: 36px;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .faq-list__question {
-  font-size: 18px;
+  font-size: var(--font-size-18);
 }
 
 .portfolio-faq .accordion__trigger:is(:hover, :focus-visible) {
@@ -190,7 +190,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
 
-  @media (min-width: breakpoints.$large) {
+  @include breakpoints.mq(lg) {
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   }
 

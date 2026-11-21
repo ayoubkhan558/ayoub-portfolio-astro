@@ -1,46 +1,81 @@
+---
+interface Props {
+  downTarget?: string;
+}
+
+const { downTarget } = Astro.props;
+const label = downTarget ? "Scroll down" : "Scroll up";
+---
+
 <a
-  href="#page-top"
-  class="back-to-top"
-  aria-label="Back to top"
-  title="Back to top"
+  href={downTarget ?? "#page-top"}
+  class:list={["hero-scroll", "portfolio__link", !downTarget && "hero-scroll--up"]}
+  aria-label={downTarget ? label : "Back to top"}
   data-back-to-top
+  data-scroll-down-target={downTarget}
 >
   <svg
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.8"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    class="hero-scroll__ring"
+    width="200"
+    height="200"
+    viewBox="0 0 200 200"
     aria-hidden="true"
+    focusable="false"
   >
-    <path d="m6 12 6-6 6 6M12 6v13" />
+    <defs>
+      <path id="hero-scroll-circle" d="M 100 26 a 74 74 0 1 1 0 148 a 74 74 0 1 1 0 -148" />
+    </defs>
+    <text class="hero-scroll__text">
+      <textPath
+        href="#hero-scroll-circle"
+        textLength={2 * Math.PI * 74}
+        lengthAdjust="spacing"
+        xml:space="preserve"
+      >{`${label.toUpperCase()} • ${label.toUpperCase()} • `}</textPath>
+    </text>
   </svg>
+  <span class="hero-scroll__button" aria-hidden="true">
+    <svg class="hero-scroll__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14m-7-7 7 7 7-7" />
+    </svg>
+  </span>
 </a>
+
 <script>
-  const topLink =
-    document.querySelector<HTMLAnchorElement>("[data-back-to-top]")!;
-  topLink.dataset.ready = "true";
-  function syncTopLink() {
-    const visible = scrollY > 500;
-    topLink.classList.toggle("is-visible", visible);
-    topLink.tabIndex = visible ? 0 : -1;
-    topLink.setAttribute("aria-hidden", String(!visible));
-  }
-  addEventListener("scroll", syncTopLink, { passive: true });
-  syncTopLink();
-  topLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    document
-      .querySelector<HTMLAnchorElement>(".site-header .brand")
-      ?.focus({ preventScroll: true });
-    scrollTo({
-      top: 0,
-      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "instant"
-        : "smooth",
+  const control = document.querySelector<HTMLAnchorElement>("[data-back-to-top]");
+  if (control) {
+    const downTarget = control.dataset.scrollDownTarget;
+    const ringText = control.querySelector("textPath");
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+
+    const syncControl = () => {
+      const scrolled = scrollY > (downTarget ? 80 : 0);
+      const up = !downTarget || scrolled;
+      const visible = Boolean(downTarget) || scrolled;
+      control.classList.toggle("hero-scroll--up", up);
+      control.classList.toggle("is-visible", scrolled);
+      control.hidden = !visible;
+      control.href = up ? "#page-top" : downTarget!;
+      control.setAttribute("aria-label", up ? "Back to top" : "Scroll down");
+      const direction = up ? "UP" : "DOWN";
+      const text = `SCROLL ${direction} • SCROLL ${direction} • `;
+      if (ringText && ringText.textContent !== text) ringText.textContent = text;
+    };
+
+    addEventListener("scroll", syncControl, { passive: true });
+    addEventListener("pageshow", syncControl);
+    syncControl();
+
+    control.addEventListener("click", (event) => {
+      if (control.getAttribute("href") !== "#page-top") return;
+      event.preventDefault();
+      if (downTarget && location.hash === downTarget) {
+        history.replaceState(history.state, "", location.pathname + location.search);
+      }
+      const focusTarget = document.querySelector<HTMLElement>(".site-header .brand")
+        ?? document.getElementById("main");
+      focusTarget?.focus({ preventScroll: true });
+      scrollTo({ top: 0, behavior: reducedMotion.matches ? "instant" : "smooth" });
     });
-  });
+  }
 </script>

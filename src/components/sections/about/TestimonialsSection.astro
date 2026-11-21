@@ -1,14 +1,30 @@
 ---
+import IntegrationOrbit from "../../portfolio/IntegrationOrbit.astro";
 import SectionHeader from "../../portfolio/SectionHeader.astro";
 import Testimonials from "../../portfolio/Testimonials.astro";
+import p from "../../../data/portfolio.json";
+
+const clientIcons = p.clients
+  .filter((client) => client.showInLogos)
+  .map(({ logo, name }) => ({ src: logo, label: name }));
+const outerCount = Math.ceil(clientIcons.length * 2 / 3);
 ---
 
-<section class="about-testimonials-section about-testimonials section-spacing">
-  <div class="container">
-    <SectionHeader align="center"
-      label="Testimonials"
-      title="Notes from clients"
-    />
-    <Testimonials journal />
+<section class="about-testimonials section-spacing">
+  <div class="container about-testimonials-section__layout">
+    <div>
+      <SectionHeader label="Testimonials" title="Notes from clients" />
+      <IntegrationOrbit
+        center={{ src: "/ayoub-about-v4.jpg", label: "Muhammad Ayoub" }}
+        outer={clientIcons.slice(0, outerCount)}
+        inner={clientIcons.slice(outerCount)}
+        label="Client logos"
+        centerPortrait
+        whiteTiles
+      />
+    </div>
+    <div class="about-testimonials-section__reviews">
+      <Testimonials journal />
+    </div>
   </div>
 </section>

@@ -13,7 +13,7 @@
     "upwork": "https://www.upwork.com/freelancers/~ayoubkhan558",
     "availability": "Open for new projects",
     "currentlyBuilding": "Resumify workflows",
-    "summary": "I build websites with React, Next.js, and WordPress. I’ve worked on SEO since 2022, and I’m spending more time on Node.js and Express alongside PHP."
+    "summary": "I build websites with React, Next.js, and WordPress. I’ve also worked on SEO, and I’m spending more time on Node.js and Express alongside PHP."
   },
   "offer": "Refer a client and get 15% off your next project.",
   "navLinks": [
@@ -408,9 +408,10 @@
   ],
   "about": {
     "story": "I started web development in 2018. In the early times, I did not have an internet connection at home, so I used my friends' internet to download tutorials, then watched them offline to learn HTML, CSS, and the fundamentals. That beginning made me self-learned, resourceful, and passionate about building useful things.",
-    "homeIntro": "I’m a web developer in Faisalabad, Pakistan. AI helps me try ideas quickly. I write more specific prompts as the work takes shape and review the code before I use it.",
+    "homeIntro": "I build WordPress sites and React frontends for teams that need a fast site they can maintain. I like turning a Figma design into a working page and making it feel just as good on a phone.",
+    "homeDetails": "When I take over an existing site, I start by finding what slows it down or makes it hard to update. I use AI to try ideas quickly, then review the code and test the pages, forms, and integrations before handoff.",
     "motivation": "I like fixing the parts of a website people deal with every day: a slow page, a form that’s hard to use, or content that takes too many steps to update.",
-    "originStory": "I started learning web development in 2018. I didn’t have internet at home, so I used my friends’ connections to download tutorials. I watched them offline and learned HTML and CSS by building pages myself.",
+    "originStory": "I started learning web development in 2018. I didn’t have internet at home, so I used my friends’ connections to download tutorials. I watched them offline and learned HTML and CSS by building pages myself. <br> <br> I like fixing the parts of a website people deal with every day: a slow page, a form that’s hard to use, or content that takes too many steps to update.",
     "education": "Master of Computer Science, University of Sahiwal",
     "educationHistory": [
       {
@@ -531,7 +532,7 @@
     "awards": [
       {
         "label": "Projects delivered",
-        "value": "50+"
+        "value": "150+"
       },
       {
         "label": "Rating",
@@ -543,7 +544,7 @@
       },
       {
         "label": "Happy clients",
-        "value": "20+"
+        "value": "30+"
       }
     ],
     "storyCards": [
@@ -845,7 +846,7 @@
           "href": "https://linkedin.com/in/ayoubkhan558"
         },
         {
-          "label": "Hire Me",
+          "label": "Get in touch",
           "href": "/contact"
         }
       ]
@@ -857,7 +858,7 @@
       "role": "Aesthetics practice client",
       "logo": "/client/weinberger-aesthetics-logo.svg",
       "logoDark": "/client/weinberger-aesthetics-logo-no-color.svg",
-      "website": "https://weinbergeraesthetics.com/",
+      "website": "https://www.weinberger-aesthetics.de/",
       "reviewId": "review-weinbergeraesthetics-01",
       "testimonial": "The result felt more premium and made the path to booking feel clearer and more trustworthy.",
       "initials": "WA",
@@ -899,7 +900,7 @@
       "role": "Real estate client",
       "logo": "/client/kingsre-logo.png",
       "logoDark": "/client/kingsre-logo-no-color.png",
-      "website": "https://www.kingsrealestate.com/",
+      "website": "https://kingsre.ae/",
       "reviewId": "review-kingsre-01",
       "testimonial": "The website feels more credible and makes it easier for prospects to move toward an inquiry.",
       "initials": "KR",
@@ -941,7 +942,7 @@
       "role": "Professional services client",
       "logo": "/client/paganolaw-logo.png",
       "logoDark": "/client/paganolaw-logo.png",
-      "website": "https://paganolaw.com/",
+      "website": "https://paganolaw.net/",
       "reviewId": "review-paganolaw-01",
       "testimonial": "The final pages were polished, readable, and better suited for high-trust service inquiries.",
       "initials": "PL",
@@ -955,7 +956,7 @@
       "role": "Commerce client",
       "logo": "/client/ro-gold-logo.png",
       "logoDark": "/client/ro-gold-logo-no-color.png",
-      "website": "https://rogold.com/",
+      "website": null,
       "reviewId": "review-rogold-01",
       "testimonial": "The work gave our products a stronger presentation and a more premium browsing experience.",
       "initials": "RG",
@@ -969,7 +970,7 @@
       "role": "Service business client",
       "logo": "/client/serveekay-logo.svg",
       "logoDark": "/client/serveekay-logo-no-color.svg",
-      "website": "https://serveekay.com/",
+      "website": null,
       "reviewId": "review-serveekay-01",
       "testimonial": "The site became easier to maintain and the page hierarchy was much clearer after launch.",
       "initials": "SK",
@@ -1027,7 +1028,7 @@
       "role": "Product interface client",
       "logo": "/client/serpio-logo.png",
       "logoDark": "/client/serpio-logo-no-color.png",
-      "website": "https://serpio.com/",
+      "website": null,
       "reviewId": "review-serpio-01",
       "testimonial": "The interface work improved usability and gave the product a cleaner launch-ready structure.",
       "initials": "SP",
@@ -1055,7 +1056,7 @@
       "role": "Brand website client",
       "logo": "/client/shinning-horizon-logo.png",
       "logoDark": "/client/shinning-horizon-logo-no-color.png",
-      "website": "https://shinninghorizon.com/",
+      "website": null,
       "reviewId": "review-shinninghorizon-01",
       "testimonial": "The website now feels more consistent and gives visitors a clearer path through the content.",
       "initials": "SH",

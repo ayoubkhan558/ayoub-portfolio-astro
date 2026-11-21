@@ -1,5 +1,42 @@
-// Mobile-first breakpoints shared by components and sections.
-$small: 541px;
-$medium: 601px;
-$large: 801px;
-$wide: 1024px;
+@use "sass:math";
+@use "sass:map";
+
+$clamp-mobile-minimum: 390px !default;
+$clamp-desktop-maximum: 1440px !default;
+
+// Interpolate between the two viewport endpoints, including shrinking sizes.
+@function clamp-val(
+  $min,
+  $max,
+  $min-vw: $clamp-mobile-minimum,
+  $max-vw: $clamp-desktop-maximum
+) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+
+  @return clamp(
+    #{math.min($min, $max)},
+    calc($intercept + $slope * 100vw),
+    #{math.max($min, $max)}
+  );
+}
+
+// Use a named tier or pass a width directly for a component-specific query.
+$breakpoints: (
+  sm: 560px,
+  md: 768px,
+  lg: 920px,
+  xl: 1120px,
+);
+
+@mixin mq($bp) {
+  $width: $bp;
+
+  @if map.has-key($breakpoints, $bp) {
+    $width: map.get($breakpoints, $bp);
+  }
+
+  @media (min-width: $width) {
+    @content;
+  }
+}

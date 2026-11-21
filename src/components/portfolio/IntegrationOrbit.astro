@@ -1,0 +1,100 @@
+---
+import type { LucideIcon } from "lucide-react";
+
+type OrbitVisual = { label: string } & (
+  { src: string; icon?: never } | { icon: LucideIcon; src?: never }
+);
+
+interface Props {
+  center: OrbitVisual;
+  inner: readonly OrbitVisual[];
+  outer: readonly OrbitVisual[];
+  label?: string;
+  whiteTiles?: boolean;
+  centerPortrait?: boolean;
+}
+
+const {
+  center,
+  inner,
+  outer,
+  label = "Development tools",
+  whiteTiles = false,
+  centerPortrait = false,
+} = Astro.props;
+const CenterIcon = center.icon;
+const rings = [
+  { name: "outer", items: outer, offset: -45 },
+  { name: "inner", items: inner, offset: -62 },
+] as const;
+const description = [center, ...outer, ...inner]
+  .map((item) => item.label)
+  .join(", ");
+---
+
+<div
+  class:list={[
+    "integration-orbit",
+    { "integration-orbit--white-tiles": whiteTiles },
+  ]}
+  role="img"
+  aria-label={`${label}: ${description}`}
+>
+  <div
+    class:list={[
+      "integration-orbit__center",
+      { "integration-orbit__center--portrait": centerPortrait },
+    ]}
+    aria-hidden="true"
+  >
+    {CenterIcon ? (
+      <CenterIcon className="integration-orbit__image" />
+    ) : (
+      <img
+        class="integration-orbit__image portfolio__image"
+        src={center.src}
+        alt=""
+        width="40"
+        height="40"
+        loading="lazy"
+      />
+    )}
+  </div>
+  {rings.map(({ name, items, offset }) => (
+    <div
+      class:list={[
+        "integration-orbit__ring",
+        `integration-orbit__ring--${name}`,
+      ]}
+      aria-hidden="true"
+    >
+      {items.map(({ src, icon: Icon }, index) => {
+        const angle = ((offset + (360 * index) / items.length) * Math.PI) / 180;
+        return (
+          <div
+            class="integration-orbit__position"
+            style={{
+              left: `${50 + 50 * Math.cos(angle)}%`,
+              top: `${50 + 50 * Math.sin(angle)}%`,
+            }}
+          >
+            <div class="integration-orbit__tile">
+              {Icon ? (
+                <Icon className="integration-orbit__image" />
+              ) : (
+                <img
+                  class="integration-orbit__image portfolio__image"
+                  src={src}
+                  alt=""
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                />
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  ))}
+</div>

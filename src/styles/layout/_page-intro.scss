@@ -11,11 +11,7 @@
 }
 
 .page-intro {
-  padding-block: var(--page-header-offset) 45px;
-
-  @media (min-width: breakpoints.$large) {
-    padding-block-end: 65px;
-  }
+  padding-block: var(--page-header-top-padding) breakpoints.clamp-val(45px, 65px);
 
   max-width: 1100px;
   text-align: center;
@@ -23,15 +19,7 @@
 
 .page-intro__title {
   max-width: 960px;
-  font-size: clamp(30px, 8.2vw, 36px);
-
-  @media (min-width: breakpoints.$small) {
-    font-size: 42px;
-  }
-
-  @media (min-width: breakpoints.$large) {
-    font-size: clamp(38px, 4.3vw, 64px);
-  }
+  font-size: var(--font-size-52);
 
   margin: 0 auto 26px;
 }
@@ -43,19 +31,6 @@
 
 .page-intro__actions {
   justify-content: center;
-}
-
-.case-detail__actions {
-  justify-content: center;
-}
-
-.service-detail__actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: var(--space-7);
 }
 
 .page-intro .tags {
