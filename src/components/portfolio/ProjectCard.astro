@@ -107,8 +107,9 @@ const stack = (p.platformFrameworkBuilder || "Custom web build")
       <div class="selected-card__media">
         <Asset
           src={featured.image.startsWith("/") ? featured.image : null}
-          optimizeWidths={[320, 640]}
-          sizes="260px"
+          width={500}
+          optimizeWidths={[320, 500]}
+          sizes="(min-width: 1120px) 500px, (min-width: 768px) 43vw, min(500px, calc(100vw - 72px))"
           alt={featured.title}
           class="selected-card__image"
           imageClassOnly

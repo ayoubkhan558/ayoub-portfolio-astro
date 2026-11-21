@@ -51,7 +51,6 @@ Load the corresponding component from `src/components/effects` in the owning sec
 | `data-skill-burst` | Muhammad Ayoub profile card in the homepage hero |
 | `data-logo-reveal` | Homepage client logos |
 | `data-project-reveal` | Homepage Selected Work and Case Studies images |
-| `data-hero-image-reveal` and `data-hero-title-reveal` | Homepage hero portrait and heading |
 
 ### Text highlighter
 

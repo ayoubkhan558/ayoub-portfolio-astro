@@ -1,11 +1,12 @@
 <script>
-  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  // Keep canvas work out of touch and reduced-motion page loads.
+  const motion = matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
   const blockSizes = [48, 24, 12, 6, 3];
   const active = new Map<HTMLElement, () => void>();
   let nextLogo = 0;
 
   async function revealLogo(link: HTMLElement) {
-    if (reduced.matches) return;
+    if (!motion.matches) return;
     const image = [
       ...link.querySelectorAll<HTMLImageElement>("img.client-logo"),
     ].find((logo) => getComputedStyle(logo).display !== "none");
@@ -15,7 +16,7 @@
     } catch {
       return;
     }
-    if (reduced.matches || getComputedStyle(image).display === "none") return;
+    if (!motion.matches || getComputedStyle(image).display === "none") return;
 
     const rect = image.getBoundingClientRect();
     const parent = link.getBoundingClientRect();
@@ -59,7 +60,7 @@
       active.delete(link);
     }
     const draw = () => {
-      if (reduced.matches || step === blockSizes.length) {
+      if (!motion.matches || step === blockSizes.length) {
         finish();
         return;
       }
@@ -100,13 +101,13 @@
       }, delay);
     }
   });
-  if (!reduced.matches) {
+  if (motion.matches) {
     document
       .querySelectorAll("[data-logo-reveal] .logo-strip__item")
       .forEach((logo) => observer.observe(logo));
   }
-  reduced.addEventListener("change", () => {
-    if (!reduced.matches) return;
+  motion.addEventListener("change", () => {
+    if (motion.matches) return;
     observer.disconnect();
     active.forEach((finish) => finish());
   });

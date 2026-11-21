@@ -4,13 +4,7 @@ import portrait from "../../public/ayoub-about-v4.jpg";
 import SkillBurst from "../components/effects/SkillBurst.astro";
 import ProjectReveal from "../components/effects/ProjectReveal.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
-// Load homepage-only section and effect styles here.
-import "../styles/sections/_home-editorial.scss";
-import "../styles/sections/_home-panels.scss";
-import "../styles/sections/_selected-work.scss";
-import "../styles/effects/_hero-reveal.scss";
-import "../styles/effects/_logo-reveal.scss";
-import "../styles/effects/_skill-burst.scss";
+import homeStyles from "../styles/sections/home-page.scss?inline";
 import p from "../data/portfolio.json";
 import { Hero } from "../components/blocks/hero";
 import { Background } from "../components/background";
@@ -27,6 +21,7 @@ import FAQSection from "../components/sections/home/FAQSection.astro";
 ---
 
 <Layout hasFooterCta>
+  <style slot="head" is:inline set:html={homeStyles}></style>
   <div class="home-page">
     <Background className="portfolio-background">
       <Hero data={p}>
@@ -41,7 +36,6 @@ import FAQSection from "../components/sections/home/FAQSection.astro";
           format="webp"
           loading="eager"
           fetchpriority="high"
-          data-hero-image-reveal
         />
       </Hero>
       <TrustSection />

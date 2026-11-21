@@ -114,7 +114,7 @@
 
 .selected-card__media {
   width: 100%;
-  max-width: 260px;
+  max-width: 500px;
   border-radius: 10px;
   background: var(--muted);
 }
@@ -123,10 +123,10 @@
   min-width: 0;
 }
 
-// Cap the preview width so project details have more room on desktop.
+// Keep the preview at 500px when the card leaves enough room for its text.
 .selected-card {
   @include breakpoints.mq(md) {
-    grid-template-columns: minmax(0, breakpoints.clamp-val(160px, 260px)) minmax(0, 1fr);
+    grid-template-columns: min(500px, 46%) minmax(0, 1fr);
   }
 }
 

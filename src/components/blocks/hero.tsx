@@ -23,7 +23,7 @@ export function Hero({
             <i className="availability__dot" aria-hidden="true" />
             {data.profile.availability}
           </span>
-          <h1 className="hero__title portfolio__heading portfolio__heading--page" data-hero-title-reveal id="hero-heading">
+          <h1 className="hero__title portfolio__heading portfolio__heading--page" id="hero-heading">
             {data.hero.headlineLineOne} {data.hero.headlineLineTwo}
           </h1>
           <p className="portfolio__paragraph portfolio__paragraph--lead hero__description">{data.hero.subheadline}</p>

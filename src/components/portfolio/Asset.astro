@@ -4,12 +4,14 @@ import type { ImageMetadata } from "astro";
 import type { HTMLAttributes } from "astro/types";
 
 import { getAsset, initials } from "../../lib/assets";
-interface Props extends Omit<HTMLAttributes<"img">, "src" | "alt"> {
+interface Props extends Omit<HTMLAttributes<"img">, "src" | "alt" | "width"> {
   src?: string | null;
   fallback?: string;
   alt?: string;
   eager?: boolean;
   imageClassOnly?: boolean;
+  /** Requested output width in CSS pixels. Raster sources also use it for optimization. */
+  width?: number;
   quality?: number;
   optimizeWidths?: [number, ...number[]];
 }
@@ -21,6 +23,7 @@ const {
   eager = false,
   imageClassOnly = false,
   optimizeWidths,
+  width,
   quality,
   sizes,
   ...rest
@@ -33,18 +36,23 @@ const optimizable = import.meta.glob<{ default: ImageMetadata }>([
   "/public/case-study/*-thumbnail.{jpg,webp}",
   "/public/projects/**/project-ss-{xgrid,alkira,chkk,pagano-law,king-sr-real-estate-rk,weinberger-aesthetics}.jpg",
 ]);
-const variant = optimizeWidths && src ? await optimizable[`/public${src}`]?.() : undefined;
+const requestedWidths = optimizeWidths ?? (width ? [width] : undefined);
+const variant = requestedWidths && src ? await optimizable[`/public${src}`]?.() : undefined;
 const asset = getAsset(src) ?? (fallback ? getAsset(fallback) : null);
+const displayWidth = width && asset?.width ? Math.min(width, asset.width) : width ?? asset?.width;
+const displayHeight = displayWidth && asset?.width && asset.height
+  ? Math.round(asset.height * displayWidth / asset.width)
+  : asset?.height;
 const classes = imageClassOnly ? className : ["portfolio__image", className].filter(Boolean).join(" ");
 ---
 
-{variant && optimizeWidths ? (
+{variant && requestedWidths ? (
   <Image
     src={variant.default}
     alt={alt}
     class={classes}
-    width={Math.min(optimizeWidths[0], variant.default.width)}
-    widths={[...new Set(optimizeWidths.map(width => Math.min(width, variant.default.width)))]}
+    width={Math.min(width ?? requestedWidths[0], variant.default.width)}
+    widths={[...new Set(requestedWidths.map(width => Math.min(width, variant.default.width)))]}
     sizes={sizes}
     format="webp"
     quality={quality}
@@ -56,8 +64,8 @@ const classes = imageClassOnly ? className : ["portfolio__image", className].fil
 ) : asset ? (
   <img
     src={asset.src}
-    width={asset.width}
-    height={asset.height}
+    width={displayWidth}
+    height={displayHeight}
     alt={alt}
     class={classes}
     sizes={sizes}

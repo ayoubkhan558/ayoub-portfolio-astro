@@ -1,126 +1,24 @@
 <script>
-  import tools from "../../data/toolCatalog.json";
   const motion = matchMedia(
     "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
   );
-  const emoji = ["✨", "⚡", "💡", "🚀", "🌐", "⌛", "🛠️", "👋"];
 
-  const skills = [
-  tools.html,
-  tools.css,
-  tools.javascript,
-  tools.typescript,
-  tools.figma,
-  tools.nextjs,
-  tools.graphql,
-  tools.redux,
-  tools["material-ui"],
-  tools.bootstrap,
-  tools.bulma,
-  tools.tailwind,
-  tools.gsap,
-  tools.swiperjs,
-  tools.accessibility,
-  tools.php,
-  tools["rest-api"],
-  tools.plyr,
-  tools.scrollreveal,
-  tools.jquery,
-  tools.postcss,
-  tools.sass,
-  tools.shopify,
-  tools.webflow,
-  tools.vite,
-  tools.vercel,
-  tools.git,
-  tools.npm,
-  tools.postman,
-  tools.json,
-  tools.seo,
-  tools["rank-math"],
-  tools["yoast-seo"],
-  tools["vs-code"],
-  tools.mysql,
-  tools.phpmyadmin,
-  tools["admin-columns-pro"],
-  tools.chaty,
-  tools["litespeed-cache"],
-  tools["meta-pixel"],
-  tools["microsoft-clarity"],
-  tools["bricks-builder"],
-  tools["advanced-custom-fields"],
-  tools["slim-seo"],
-  tools.seopress,
-  tools["fluent-smtp"],
-  tools["google-site-kit"],
-  tools.happyfiles,
-  tools.wordpress,
-  tools.woocommerce,
-  tools.elementor
-].map((tool) => tool?.logo).filter((logo): logo is string => typeof logo === "string");
-
-
-  for (const area of document.querySelectorAll<HTMLElement>(
-    "[data-emoji-trail]",
-  )) {
-    const layer = area.querySelector<HTMLElement>(".emoji-trail");
-    if (!layer) continue;
-    const useSkills = area.dataset.emojiTrail !== "emoji";
-    const choices = useSkills ? skills : emoji;
-
-    let lastX = 0;
-    let lastY = 0;
-    let lastTime = -Infinity;
-    let previous = -1;
-    area.addEventListener(
-      "pointermove",
-      (event) => {
-        if (!motion.matches || event.pointerType !== "mouse") return;
-        const now = performance.now();
-        if (
-          now - lastTime < 160 ||
-          Math.hypot(event.clientX - lastX, event.clientY - lastY) < 80
-        )
-          return;
-        lastX = event.clientX;
-        lastY = event.clientY;
-        lastTime = now;
-        const bounds = layer.getBoundingClientRect();
-        const sprite = document.createElement("span");
-        sprite.className = "emoji-trail__sprite";
-        previous =
-          (previous + 1 + Math.floor(Math.random() * (choices.length - 1))) %
-          choices.length;
-        if (useSkills) {
-          const logo = new Image();
-          logo.className = "emoji-trail__logo";
-          logo.src = choices[previous];
-          logo.alt = "";
-          sprite.append(logo);
-        } else {
-          sprite.textContent = choices[previous];
-        }
-        sprite.style.left = `${event.clientX - bounds.left}px`;
-        sprite.style.top = `${event.clientY - bounds.top}px`;
-        layer.append(sprite);
-        const drop = sprite.animate(
-          [
-            { opacity: 1, transform: "translate(-50%, -50%) rotate(-12deg)" },
-            { opacity: 0, transform: "translate(-35%, 190%) rotate(24deg)" },
-          ],
-          { duration: 700, easing: "cubic-bezier(.35, .05, .8, .45)" },
-        );
-        const remove = () => sprite.remove();
-        drop.finished.then(remove, remove);
-      },
-      { passive: true },
-    );
-
-    area.addEventListener("pointerleave", () => {
-      lastTime = -Infinity;
-    });
-    motion.addEventListener("change", () => {
-      if (!motion.matches) layer.replaceChildren();
-    });
+  for (const area of document.querySelectorAll<HTMLElement>("[data-emoji-trail]")) {
+    let loading = false;
+    // Load the animation and icon data only for visitors who hover the CTA.
+    const load = async (event: PointerEvent) => {
+      if (!motion.matches || event.pointerType !== "mouse" || loading) return;
+      loading = true;
+      try {
+        const { attachEmojiTrail } = await import("./emojiTrailMotion");
+        attachEmojiTrail(area, motion);
+        area.removeEventListener("pointerenter", load);
+      } catch {
+        // The decorative effect can be retried on the next hover.
+      } finally {
+        loading = false;
+      }
+    };
+    area.addEventListener("pointerenter", load);
   }
 </script>
