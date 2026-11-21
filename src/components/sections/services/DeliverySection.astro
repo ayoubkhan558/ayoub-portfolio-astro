@@ -1,30 +1,9 @@
 ---
-import SectionHeader from "../../portfolio/SectionHeader.astro";
-const outcomes = [
-  "A clearer homepage that explains the offer in seconds",
-  "Stronger calls to action and a simpler inquiry path",
-  "Pages structured around buyer questions, objections, and next steps",
-  "Pages that load faster on phones",
-  "Reusable sections for future campaigns, services, and landing pages",
-  "A site that shows customers what makes your business different",
-  "Code your team or next developer can maintain",
-  "Editing controls for the content your team updates regularly",
-];
+import GlobalEdgeNetwork from "../GlobalEdgeNetwork.astro";
 ---
 
-<section class="services-delivery-section section-spacing">
+<section class="section-spacing" aria-label="Services and client work">
   <div class="container">
-    <div>
-      <SectionHeader label="Delivery" title="What I deliver" />
-      <p class="portfolio__paragraph">
-        I use AI for quick prototypes and to explore implementation options. I
-        review and test the code I ship.
-      </p>
-    </div>
-    <ul class="check-list services-delivery-section__checklist">
-      {outcomes.map((outcome) => (
-        <li class="check-list__item">{outcome}</li>
-      ))}
-    </ul>
+    <GlobalEdgeNetwork />
   </div>
 </section>

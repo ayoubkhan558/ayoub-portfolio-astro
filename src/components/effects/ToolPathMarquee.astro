@@ -1,6 +1,12 @@
 ---
 import { toolCatalog } from "../../data/toolCatalog";
 
+interface Props {
+  fullWidth?: boolean;
+  labels?: string[];
+}
+const { fullWidth = false, labels } = Astro.props;
+
 const tiles = [
   { key: "nextjs", x: 58, y: 39 },
   { key: "typescript", x: 160, y: 25 },
@@ -16,22 +22,37 @@ const tiles = [
 ];
 ---
 
-<div class="tool-path-marquee" data-tool-path-marquee>
-  <svg class="tool-path-marquee__track" viewBox="0 0 640 142" aria-hidden="true" focusable="false">
-    <path
-      data-tool-path
-      d="M 58 39 C 135 4 207 23 266 42 S 405 69 480 35 S 611 22 611 65 C 611 120 520 114 450 114 S 303 109 220 115 S 26 130 29 76 Q 30 53 58 39 Z"
-    />
-    {tiles.map(({ key, x, y }) => (
-      <g data-tool-path-tile transform={`translate(${x} ${y})`}>
-        <rect class="tool-path-marquee__tile" x="-19" y="-19" width="38" height="38" rx="11" />
-        <image href={toolCatalog[key].logo!} x="-11" y="-11" width="22" height="22" />
-      </g>
-    ))}
-  </svg>
-  <button type="button" class="tool-path-marquee__toggle" data-tool-path-toggle hidden>
-    Pause logo motion
-  </button>
+<div class:list={["tool-path-marquee", { "tool-path-marquee--wide": fullWidth }]} data-tool-path-marquee>
+  {labels ? (
+    <div class="tool-path-marquee__word-path">
+      <svg class="tool-path-marquee__track" viewBox="0 0 640 90" preserveAspectRatio="none" aria-hidden="true">
+        <path data-tool-path d="M640 50 C555 50 535 15 490 15 S380 68 320 68 S210 25 150 25 S55 55 0 55" />
+      </svg>
+      <ul class="tool-path-marquee__labels" role="list">
+        {labels.map(label => <li data-tool-path-word>{label}</li>)}
+      </ul>
+    </div>
+  ) : (
+  <>
+    <svg class="tool-path-marquee__track" viewBox="0 0 640 142" aria-hidden="true" focusable="false">
+      <path
+        data-tool-path
+        d="M 58 39 C 135 4 207 23 266 42 S 405 69 480 35 S 611 22 611 65 C 611 120 520 114 450 114 S 303 109 220 115 S 26 130 29 76 Q 30 53 58 39 Z"
+      />
+      {tiles.map(({ key, x, y }) => (
+        <g data-tool-path-tile transform={`translate(${x} ${y})`}>
+          <rect class="tool-path-marquee__tile" x="-19" y="-19" width="38" height="38" rx="11" />
+          <image href={toolCatalog[key].logo!} x="-11" y="-11" width="22" height="22" />
+        </g>
+      ))}
+    </svg>
+    </>
+  )}
+  {!labels && (
+    <button type="button" class="tool-path-marquee__toggle" data-tool-path-toggle hidden>
+      Pause logo motion
+    </button>
+  )}
 </div>
 
 <script>
@@ -40,22 +61,45 @@ const tiles = [
   for (const marquee of document.querySelectorAll("[data-tool-path-marquee]")) {
     const path = marquee.querySelector<SVGPathElement>("[data-tool-path]");
     const toggle = marquee.querySelector<HTMLButtonElement>("[data-tool-path-toggle]");
-    if (!path || !toggle) continue;
+    if (!path) continue;
 
     const tiles = Array.from(marquee.querySelectorAll("[data-tool-path-tile]"));
+    const words = Array.from(marquee.querySelectorAll<HTMLElement>("[data-tool-path-word]"));
     const length = path.getTotalLength();
+    let wordGap = length / 3;
+    let wordLoop = wordGap * words.length;
+
+    function positionWords(distance: number) {
+      words.forEach((word, index) => {
+        const offset = (distance + index * wordGap) % wordLoop;
+        const point = path!.getPointAtLength(Math.min(offset, length));
+        word.style.left = `${point.x / 640 * 100}%`;
+        word.style.top = `${point.y / 90 * 100}%`;
+        word.style.opacity = String(Math.max(0, Math.min(1, offset / 35, (length - offset) / 35)));
+      });
+    }
     let visible = false;
     let paused = false;
     let frame = 0;
     let previousTime = 0;
     let distance = 0;
+    if (words.length) {
+      new ResizeObserver(([entry]) => {
+        const visibleWords = Math.max(2, Math.min(7, Math.floor(entry.contentRect.width / 145)));
+        wordGap = length / visibleWords;
+        wordLoop = wordGap * words.length;
+        distance %= wordLoop;
+        positionWords(distance);
+      }).observe(marquee);
+    }
 
     function tick(time: number) {
       if (previousTime) {
-        distance = (distance + (time - previousTime) * 0.035) % length;
+        distance = (distance + Math.min(time - previousTime, 50) * 0.035) % (words.length ? wordLoop : length);
       }
       previousTime = time;
 
+      if (words.length) positionWords(distance);
       tiles.forEach((tile, index) => {
         const point = path!.getPointAtLength((distance + index * length / tiles.length) % length);
         tile.setAttribute("transform", `translate(${point.x} ${point.y})`);
@@ -64,8 +108,10 @@ const tiles = [
     }
 
     function sync() {
-      toggle!.hidden = motion.matches;
-      toggle!.textContent = paused ? "Resume logo motion" : "Pause logo motion";
+      if (toggle) {
+        toggle.hidden = motion.matches;
+        toggle.textContent = paused ? "Resume logo motion" : "Pause logo motion";
+      }
       if (visible && !paused && !motion.matches) {
         if (!frame) frame = requestAnimationFrame(tick);
       } else {
@@ -80,7 +126,7 @@ const tiles = [
       sync();
     }).observe(marquee);
     motion.addEventListener("change", sync);
-    toggle.addEventListener("click", () => {
+    toggle?.addEventListener("click", () => {
       paused = !paused;
       sync();
     });
@@ -93,6 +139,55 @@ const tiles = [
     max-width: 720px;
     margin: var(--space-8) auto 0;
     text-align: center;
+  }
+
+  .tool-path-marquee--wide {
+    max-width: none;
+    margin: 0;
+  }
+
+  .tool-path-marquee__word-path {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tool-path-marquee__word-path .tool-path-marquee__track {
+    height: clamp(5.5rem, 12vw, 10rem);
+  }
+
+  .tool-path-marquee__labels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tool-path-marquee__labels li {
+    padding-inline: 0.45em;
+    border-radius: 0.25em;
+    background: var(--card);
+    font-size: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .tool-path-marquee__labels:has(li[style]) {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .tool-path-marquee__labels li[style] {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tool-path-marquee__labels li { opacity: 1 !important; }
   }
 
   .tool-path-marquee__track {

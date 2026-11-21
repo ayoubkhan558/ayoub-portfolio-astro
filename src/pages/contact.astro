@@ -1,8 +1,11 @@
 ---
+import ToolPathMarquee from "../components/effects/ToolPathMarquee.astro";
 import Intro from "../components/portfolio/Intro.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 import ContactDetailsSection from "../components/sections/contact/ContactDetailsSection.astro";
 import FAQSection from "../components/sections/contact/FAQSection.astro";
+
+const emojis = ["👋", "💬", "💡", "🎨", "✏️", "🧩", "💻", "⚡", "🛒", "🛠️", "🤝", "🚀"];
 ---
 
 <Layout title="Contact">
@@ -13,5 +16,14 @@ import FAQSection from "../components/sections/contact/FAQSection.astro";
     />
     <ContactDetailsSection />
   </div>
+  <div class="section-spacing" id="contact-marquee">
+    <ToolPathMarquee fullWidth labels={emojis} />
+  </div>
   <FAQSection />
 </Layout>
+
+<style>
+  #contact-marquee :global([data-tool-path-word]) {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+  }
+</style>
