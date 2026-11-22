@@ -2,6 +2,13 @@
 
 @use "../foundation/breakpoints";
 
+.case-detail__result {
+  max-width: 52ch;
+  margin-block: var(--space-5);
+  color: var(--foreground);
+  font-size: var(--font-size-28);
+}
+
 :where(.large-quote__quote) {
   margin: 15px 0 var(--space-7);
   font-size: var(--font-size-19);
@@ -418,4 +425,38 @@
   width: 36px;
   height: 36px;
   object-fit: contain;
+}
+
+:where(.testimonial__avatar) {
+  display: block;
+  color: var(--muted-foreground);
+}
+
+.testimonial__avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  height: 48px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--muted-foreground);
+
+  :where(.portfolio__image) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  :where(.portfolio__image)[hidden] {
+    display: none;
+  }
+}
+
+@layer base {
+  :where(.case-detail__facts, .case-detail__value, .showcase-grid__figure, .large-quote, .large-quote__quote) { margin: 0; }
 }

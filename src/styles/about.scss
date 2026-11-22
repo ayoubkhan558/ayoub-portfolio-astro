@@ -1,0 +1,17 @@
+// Inline this small route stylesheet to avoid a separate blocking request.
+@use "layout/page-intro";
+@use "sections/about-reviews";
+@use "sections/call-to-action";
+@use "effects/grid-spotlight";
+@use "effects/gravity-logos";
+@use "effects/integration-orbit";
+@use "effects/name-sparkles";
+@use "sections/about";
+@use "sections/about-toolbox-and-tools";
+
+@media (hover: hover) and (pointer: fine) {
+  :is(.review-journal__entry, .tool-chip):hover {
+    background: var(--link-accent-tint);
+    border-color: var(--link-accent);
+  }
+}

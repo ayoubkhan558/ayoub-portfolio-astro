@@ -1,0 +1,23 @@
+// Availability indicator used by the footer, homepage and Contact.
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: var(--font-size-13);
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.availability__dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--availability-dot-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--availability-ring-color);
+}
+
+.availability {
+  font-size: var(--small-font-size);
+}

@@ -263,3 +263,7 @@ html {
     white-space: nowrap;
   }
 }
+
+@layer base {
+  :where(.pagespeed-metrics, .pagespeed-report__metric-value) { margin: 0; }
+}

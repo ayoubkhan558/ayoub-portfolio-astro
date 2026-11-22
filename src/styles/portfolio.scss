@@ -4,7 +4,6 @@
 @use "components/ui-controls";
 @use "layout/footer";
 @use "layout/header";
-@use "layout/page-intro";
 @use "layout/scroll-control";
 @use "layout/section-heading";
 @use "layout/section-shells";
@@ -12,27 +11,10 @@
 // SHARED COMPONENTS
 @use "components/asset-fallback";
 @use "components/buttons";
+@use "components/availability";
 @use "components/cards";
-@use "components/case-study-cards";
-@use "components/faq";
-@use "components/pagespeed";
-@use "components/pointer-feedback";
-@use "components/project-copy-dialog";
-@use "components/project-drawer";
-@use "components/prose";
-@use "components/services";
-@use "components/testimonials";
 
-// Route-specific styles are imported by the pages that use them.
-// PAGE SECTIONS
-@use "sections/call-to-action";
-@use "sections/home-hero";
-
-// Opt-in interaction styles. Effect targets are marked in the owning component.
-@use "effects/border-beam";
-@use "effects/card-tilt";
-@use "effects/emoji-trail";
-@use "effects/grid-spotlight";
+// Shared effects rendered by the layout.
 @use "effects/flood-fill-button";
 @use "effects/meteors";
 @use "effects/pointer-feedback" as cta-pointer-feedback;

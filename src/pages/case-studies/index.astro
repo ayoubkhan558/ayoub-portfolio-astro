@@ -1,8 +1,9 @@
 ---
-import CaseGrid from "../../components/portfolio/CaseGrid.astro";
+import CaseStudiesSection from "../../components/sections/shared/CaseStudiesSection.astro";
 import CTA from "../../components/portfolio/CTA.astro";
 import Intro from "../../components/portfolio/Intro.astro";
 import Layout from "../../layouts/PortfolioLayout.astro";
+import "../../styles/case-studies.scss";
 
 const description =
   "What each client needed, what I changed, and how it turned out.";
@@ -16,11 +17,7 @@ const description =
 >
   <div class="portfolio-background">
     <Intro title="Case studies" description={description} />
-    <section class="section-spacing section-spacing--opening" aria-label="Client case studies">
-      <div class="container">
-        <CaseGrid />
-      </div>
-    </section>
+    <CaseStudiesSection opening label="Client case studies" />
   </div>
   <CTA />
 </Layout>

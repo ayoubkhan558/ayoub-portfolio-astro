@@ -4,7 +4,7 @@ import portrait from "../../public/ayoub-about-v4.jpg";
 import SkillBurst from "../components/effects/SkillBurst.astro";
 import ProjectReveal from "../components/effects/ProjectReveal.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
-import homeStyles from "../styles/sections/home-page.scss?inline";
+import homeStyles from "../styles/home.scss?inline";
 import p from "../data/portfolio.json";
 import { Hero } from "../components/blocks/hero";
 import { Background } from "../components/background";
@@ -14,10 +14,11 @@ import ProblemsSection from "../components/sections/home/ProblemsSection.astro";
 import ServicesSection from "../components/sections/home/ServicesSection.astro";
 import ResourceSection from "../components/sections/home/ResourceSection.astro";
 import ProjectsSection from "../components/sections/home/ProjectsSection.astro";
-import CaseStudiesSection from "../components/sections/home/CaseStudiesSection.astro";
-import TestimonialsSection from "../components/sections/home/TestimonialsSection.astro";
+import SectionHeader from "../components/portfolio/SectionHeader.astro";
+import CaseStudiesSection from "../components/sections/shared/CaseStudiesSection.astro";
+import TestimonialsSection from "../components/sections/shared/TestimonialsSection.astro";
 import AboutSection from "../components/sections/home/AboutSection.astro";
-import FAQSection from "../components/sections/home/FAQSection.astro";
+import FAQSection from "../components/sections/shared/FAQSection.astro";
 ---
 
 <Layout hasFooterCta>
@@ -42,7 +43,17 @@ import FAQSection from "../components/sections/home/FAQSection.astro";
     </Background>
     <ProblemsSection />
     <ProjectsSection />
-    <CaseStudiesSection />
+    <CaseStudiesSection id="case-studies" limit={3} optimizeThumbnails reveal>
+      <SectionHeader
+        slot="heading"
+        label="Case studies"
+        title="How the work came together"
+        subtitle="What each client needed, what I changed, and how it turned out."
+      />
+      <div slot="action" class="home-case-studies-section__footer">
+        <a href="/case-studies/" class="button button--outline portfolio__link">Show all case studies →</a>
+      </div>
+    </CaseStudiesSection>
     <Background
       variant="bottom"
       className="portfolio-background portfolio-background--bottom"
@@ -50,9 +61,14 @@ import FAQSection from "../components/sections/home/FAQSection.astro";
       <ServicesSection />
     </Background>
     <ResourceSection />
-    <TestimonialsSection />
+    <TestimonialsSection id="proof" class="home-testimonials-section" title="What it’s like to work together." subtitle="Client feedback from real projects." />
     <AboutSection />
-    <FAQSection />
+    <FAQSection id="faq" items={p.faqs} openFirst>
+      <Fragment slot="description">
+        If you can't find what you're looking for,
+        <a href="/contact/" class="portfolio-faq__link portfolio__link">get in touch</a>.
+      </Fragment>
+    </FAQSection>
     <Background
       variant="bottom"
       className="portfolio-background portfolio-background--bottom"

@@ -1,0 +1,26 @@
+---
+import FAQList, { type FAQItem } from "./FAQList.astro";
+
+interface Props {
+  id: string;
+  items: FAQItem[];
+  title?: string;
+  label?: string;
+  openFirst?: boolean;
+}
+
+const { id, items, title = "Before we get started.", label = "Good questions", openFirst } = Astro.props;
+---
+
+<section class="section-spacing" {id} aria-labelledby={id + "-title"}>
+  <div class="container portfolio-faq">
+    <div class="faq-introduction">
+      <span class="eyebrow">{label}</span>
+      <h2 id={id + "-title"} class="portfolio-faq__title portfolio__heading portfolio__heading--section">{title}</h2>
+      {Astro.slots.has("description") && (
+        <p class="portfolio-faq__description portfolio__paragraph"><slot name="description" /></p>
+      )}
+    </div>
+    <FAQList {items} name={id} class="faq-list" {openFirst} showChevron />
+  </div>
+</section>

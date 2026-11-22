@@ -1,0 +1,75 @@
+// Review journal on About.
+
+@use "../foundation/breakpoints";
+
+:where(.review-journal__quote) {
+  margin: 15px 0 var(--space-7);
+  font-size: var(--font-size-19);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
+:where(.review-journal__person) {
+  font-size: var(--small-font-size);
+}
+
+:where(.review-journal__author) {
+  display: block;
+}
+
+:where(.review-journal__role) {
+  display: block;
+  color: var(--muted-foreground);
+}
+
+.review-journal__entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4) breakpoints.clamp-val(20px, 64px);
+  padding: breakpoints.clamp-val(20px, 40px);
+  margin: 0;
+  border-top: 1px solid var(--border);
+
+  @include breakpoints.mq(md) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+.review-journal__person {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+
+  .review-journal__role {
+    margin: var(--space-1) 0 0;
+    font-size: var(--small-font-size);
+  }
+}
+
+.review-journal__quote {
+  margin: 0;
+  font-size: var(--font-size-24);
+  line-height: 1.5;
+}
+
+.review-journal__more {
+  border-block: 1px solid var(--border);
+
+  .review-journal__toggle {
+    padding: var(--space-4) var(--space-5);
+    color: var(--link-accent);
+    cursor: pointer;
+  }
+}
+
+.review-journal__entry {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease;
+  }
+}
+
+@layer base {
+  :where(.review-journal__entry, .review-journal__quote) { margin: 0; }
+}

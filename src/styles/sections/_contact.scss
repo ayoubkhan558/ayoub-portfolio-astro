@@ -1,24 +1,6 @@
-// Contact page form and supporting layout, plus legal navigation and page summaries.
+// Contact page styles.
 
 @use "../foundation/breakpoints";
-
-.legal-policy__columns {
-  display: grid;
-  gap: var(--space-8);
-}
-
-.legal-policy__columns {
-  gap: var(--space-7);
-  grid-template-columns: 1fr;
-
-  @include breakpoints.mq(sm) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @include breakpoints.mq(lg) {
-    gap: var(--space-8);
-  }
-}
 
 .form-field {
   display: flex;
@@ -51,70 +33,6 @@
 .contact-layout>.contact-info {
   @include breakpoints.mq(lg) {
     grid-area: 1 / 1;
-  }
-}
-
-.legal-toc {
-  padding-block: var(--space-6);
-  border-bottom: 1px solid var(--border);
-}
-
-.legal-toc__links .legal-toc__links-link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.legal-toc__target {
-  scroll-margin-block-start: var(--space-6);
-}
-
-.faq-topics__group+.faq-topics__group {
-  margin-top: var(--space-10);
-}
-
-.case-detail__result {
-  max-width: 52ch;
-  margin-block: var(--space-5);
-  color: var(--foreground);
-  font-size: var(--font-size-28);
-}
-
-// Keep desktop filters with the list without covering the short mobile viewport.
-.project-archive__controls {
-  @include breakpoints.mq(xl) {
-    @media (min-height: 650px) {
-      // position: sticky;
-      // top: 0;
-      // z-index: 5;
-      padding-block: var(--space-2);
-      // background: var(--background);
-    }
-  }
-}
-
-.project-archive__controls .project-toolbar {
-  @include breakpoints.mq(xl) {
-    @media (min-height: 650px) {
-      gap: var(--space-3);
-      margin-bottom: var(--space-1);
-    }
-  }
-}
-
-.project-archive__controls :is(:where(.portfolio__input), :where(.portfolio__select)) {
-  @include breakpoints.mq(xl) {
-    @media (min-height: 650px) {
-      min-height: 38px;
-      padding-block: 5px;
-    }
-  }
-}
-
-.project-archive__controls .project-count {
-  @include breakpoints.mq(xl) {
-    @media (min-height: 650px) {
-      margin-block: var(--space-1) 0;
-    }
   }
 }
 
@@ -240,10 +158,6 @@
   line-height: 1.6;
 }
 
-.legal-highlights {
-  margin-top: 30px;
-}
-
 .contact-form__additional-fields {
   gap: 18px;
 }
@@ -317,17 +231,4 @@
 
 .contact-form__additional-fields {
   margin-top: var(--space-10);
-}
-
-.legal-highlights {
-  margin-block: 30px var(--space-12);
-  gap: 18px;
-}
-
-.legal-highlights .plain-card {
-  padding: 22px;
-}
-
-.legal-highlights .legal-highlights__description {
-  font-size: var(--small-font-size);
 }

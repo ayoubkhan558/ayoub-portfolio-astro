@@ -1,0 +1,27 @@
+---
+import CaseGrid from "../../portfolio/CaseGrid.astro";
+
+interface Props {
+  id?: string;
+  label?: string;
+  limit?: number;
+  opening?: boolean;
+  optimizeThumbnails?: boolean;
+  reveal?: boolean;
+}
+
+const { id, label, limit, opening, optimizeThumbnails, reveal } = Astro.props;
+---
+
+<section
+  class:list={["section-spacing", opening && "section-spacing--opening"]}
+  {id}
+  aria-label={label}
+  data-project-reveal={reveal || undefined}
+>
+  <div class="container">
+    <slot name="heading" />
+    <CaseGrid {limit} {optimizeThumbnails} />
+    <slot name="action" />
+  </div>
+</section>

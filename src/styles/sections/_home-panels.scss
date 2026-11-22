@@ -296,3 +296,7 @@
 .home-problems-section__project-fit {
   margin-top: var(--space-10);
 }
+
+@layer base {
+  :where(.home-about__figure) { margin: 0; }
+}

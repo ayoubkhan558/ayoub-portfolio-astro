@@ -1,9 +1,0 @@
-// Hover feedback for testimonials and skills.
-
-// Hover gives cards a visual response without implying that static cards are links.
-:is(.testimonial-card, .review-journal__entry, .tool-chip):hover {
-  @media (hover: hover) and (pointer: fine) {
-    background: var(--link-accent-tint);
-    border-color: var(--link-accent);
-  }
-}

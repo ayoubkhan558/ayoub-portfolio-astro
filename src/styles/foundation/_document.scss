@@ -9,7 +9,6 @@
 
   :where(
     .ui-button,
-    .accordion__trigger,
     .portfolio__input,
     .portfolio__textarea,
     .portfolio__select
@@ -22,31 +21,6 @@
     font: inherit;
     letter-spacing: inherit;
     color: inherit;
-  }
-
-  :where(.check-list, .legal-toc__links, .rotator-items) {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  :where(
-    .pagespeed-metrics,
-    .service-summary,
-    .case-detail__facts,
-    .case-detail__value,
-    .service-summary__value,
-    .pagespeed-report__metric-value,
-    .showcase-grid__figure,
-    .home-about__figure,
-    .large-quote,
-    .review-journal__entry,
-    .review-inner__figure,
-    .review-inner__quote,
-    .large-quote__quote,
-    .review-journal__quote
-  ) {
-    margin: 0;
   }
 
   :where(.portfolio__image) {

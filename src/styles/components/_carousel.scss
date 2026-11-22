@@ -1,0 +1,54 @@
+// Controls for the testimonial carousel.
+
+.carousel {
+  position: relative;
+}
+.carousel__viewport {
+  overflow: hidden;
+}
+.carousel__track {
+  display: flex;
+}
+.carousel__track--horizontal {
+  margin-left: calc(-1 * var(--space-4));
+}
+.carousel__track--vertical {
+  flex-direction: column;
+  margin-top: calc(-1 * var(--space-4));
+}
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.carousel__slide--horizontal {
+  padding-left: var(--space-4);
+}
+.carousel__slide--vertical {
+  padding-top: var(--space-4);
+}
+.carousel__arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.carousel__arrow--left {
+  left: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel__arrow--right {
+  right: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel__arrow--top {
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+.carousel__arrow--bottom {
+  bottom: -48px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}

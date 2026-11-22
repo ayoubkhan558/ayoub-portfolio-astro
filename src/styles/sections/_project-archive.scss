@@ -2,6 +2,45 @@
 
 @use "../foundation/breakpoints";
 
+// Keep desktop filters with the list without covering the short mobile viewport.
+.project-archive__controls {
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      // position: sticky;
+      // top: 0;
+      // z-index: 5;
+      padding-block: var(--space-2);
+      // background: var(--background);
+    }
+  }
+}
+
+.project-archive__controls .project-toolbar {
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      gap: var(--space-3);
+      margin-bottom: var(--space-1);
+    }
+  }
+}
+
+.project-archive__controls :is(:where(.portfolio__input), :where(.portfolio__select)) {
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      min-height: 38px;
+      padding-block: 5px;
+    }
+  }
+}
+
+.project-archive__controls .project-count {
+  @include breakpoints.mq(xl) {
+    @media (min-height: 650px) {
+      margin-block: var(--space-1) 0;
+    }
+  }
+}
+
 .project-card__actions {
   display: flex;
   align-items: center;

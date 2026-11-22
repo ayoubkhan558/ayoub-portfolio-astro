@@ -2,9 +2,10 @@
 import ToolPathMarquee from "../components/effects/ToolPathMarquee.astro";
 import Intro from "../components/portfolio/Intro.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
-import "../styles/sections/_contact-and-page-details.scss";
+import "../styles/contact.scss";
 import ContactDetailsSection from "../components/sections/contact/ContactDetailsSection.astro";
-import FAQSection from "../components/sections/contact/FAQSection.astro";
+import portfolio from "../data/portfolio.json";
+import FAQSection from "../components/sections/shared/FAQSection.astro";
 
 const emojis = ["👋", "💬", "💡", "🎨", "✏️", "🧩", "💻", "⚡", "🛒", "🛠️", "🤝", "🚀"];
 ---
@@ -20,7 +21,9 @@ const emojis = ["👋", "💬", "💡", "🎨", "✏️", "🧩", "💻", "⚡",
   <div class="section-spacing" id="contact-marquee">
     <ToolPathMarquee fullWidth labels={emojis} />
   </div>
-  <FAQSection />
+  <FAQSection id="contact-faq" items={portfolio.faqs}>
+    <Fragment slot="description">Answers to common questions about working together.</Fragment>
+  </FAQSection>
 </Layout>
 
 <style>

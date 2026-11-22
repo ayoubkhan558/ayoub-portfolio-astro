@@ -1,0 +1,56 @@
+// Legal page styles.
+
+@use "../foundation/breakpoints";
+
+.legal-policy__columns {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.legal-policy__columns {
+  gap: var(--space-7);
+  grid-template-columns: 1fr;
+
+  @include breakpoints.mq(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include breakpoints.mq(lg) {
+    gap: var(--space-8);
+  }
+}
+
+.legal-toc {
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-toc__links .legal-toc__links-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal-toc__target {
+  scroll-margin-block-start: var(--space-6);
+}
+
+.legal-highlights {
+  margin-top: 30px;
+}
+
+.legal-highlights {
+  margin-block: 30px var(--space-12);
+  gap: 18px;
+}
+
+.legal-highlights .plain-card {
+  padding: 22px;
+}
+
+.legal-highlights .legal-highlights__description {
+  font-size: var(--small-font-size);
+}
+
+@layer base {
+  :where(.legal-toc__links) { margin: 0; padding: 0; list-style: none; }
+}

@@ -1,0 +1,32 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  name: string;
+  openFirst?: boolean;
+  showChevron?: boolean;
+  class?: string;
+}
+
+const { items, name, openFirst = false, showChevron = false, class: className } = Astro.props;
+---
+
+<div class={className}>
+  {items.map(({ question, answer }, index) => (
+    <details class="faq-list__item" name={name} open={openFirst && index === 0}>
+      <summary class="faq-list__question">
+        {question}
+        {showChevron && (
+          <svg class="portfolio-faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        )}
+      </summary>
+      <p class="faq-list__answer portfolio__paragraph">{answer}</p>
+    </details>
+  ))}
+</div>

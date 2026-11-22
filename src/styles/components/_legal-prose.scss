@@ -1,0 +1,7 @@
+.prose-narrow {
+  max-width: 850px;
+}
+
+.prose-narrow :where(.legal-toc__title, .legal-policy__section-title) {
+  font-size: var(--font-size-29);
+}

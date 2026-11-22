@@ -1,0 +1,27 @@
+// Inline homepage-only styles while keeping the shared stylesheet cacheable.
+@use "components/case-study-cards";
+@use "components/faq";
+@use "components/pagespeed";
+@use "components/project-drawer";
+@use "components/project-values";
+@use "components/carousel";
+@use "components/testimonials";
+@use "sections/call-to-action";
+@use "sections/home-hero";
+@use "sections/home-solutions";
+@use "components/faq-section";
+@use "effects/border-beam";
+@use "effects/card-tilt";
+@use "effects/emoji-trail";
+@use "sections/home-editorial";
+@use "sections/home-panels";
+@use "sections/selected-work";
+@use "effects/logo-reveal";
+@use "effects/skill-burst";
+
+@media (hover: hover) and (pointer: fine) {
+  .testimonial-card:hover {
+    background: var(--link-accent-tint);
+    border-color: var(--link-accent);
+  }
+}

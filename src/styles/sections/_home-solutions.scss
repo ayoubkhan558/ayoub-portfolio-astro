@@ -1,0 +1,60 @@
+// Compact homepage service cards.
+
+@use "../foundation/breakpoints";
+
+.compact-solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+
+  @include breakpoints.mq(lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+.compact-solution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  padding: var(--space-6);
+
+  @include breakpoints.mq(lg) {
+    padding: var(--space-7);
+  }
+}
+
+.compact-solution:hover {
+  border-color: var(--link-accent);
+  background: color-mix(in oklch, var(--link-accent) 4%, var(--card));
+}
+
+.compact-solution-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--link-accent);
+  margin-bottom: var(--space-6);
+}
+
+.compact-solution-top .eyebrow {
+  margin: 0;
+}
+
+.compact-solution .compact-solution__title {
+  font-size: var(--font-size-24);
+  margin-bottom: var(--space-3);
+}
+
+.compact-solution .compact-solution__description {
+  font-size: var(--font-size-15);
+  line-height: 1.65;
+  margin-bottom: var(--space-6);
+}

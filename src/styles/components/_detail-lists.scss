@@ -1,0 +1,39 @@
+@use "../foundation/breakpoints";
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: 25px;
+}
+
+.check-list {
+  list-style: none;
+  margin: 22px 0;
+  padding: 0;
+}
+
+.check-list__item {
+  position: relative;
+  padding: 9px 0 9px 25px;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+  font-size: var(--body-font-size);
+
+  @include breakpoints.mq(sm) {
+    font-size: inherit;
+  }
+}
+
+.check-list__item:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  color: var(--foreground);
+  font-size: var(--font-size-13);
+}
+
+@layer base {
+  :where(.check-list) { margin: 0; padding: 0; list-style: none; }
+}

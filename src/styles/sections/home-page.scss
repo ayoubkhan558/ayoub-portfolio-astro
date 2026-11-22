@@ -1,6 +1,0 @@
-// Inline homepage-only styles while keeping the shared stylesheet cacheable.
-@use "home-editorial";
-@use "home-panels";
-@use "selected-work";
-@use "../effects/logo-reveal";
-@use "../effects/skill-burst";

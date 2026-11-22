@@ -106,3 +106,7 @@
 .service-detail-content-section__subheading {
   margin-top: var(--space-10);
 }
+
+@layer base {
+  :where(.service-summary, .service-summary__value) { margin: 0; }
+}

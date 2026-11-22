@@ -1,0 +1,31 @@
+---
+import SectionHeader from "../../portfolio/SectionHeader.astro";
+import Testimonials from "../../portfolio/Testimonials.astro";
+
+interface Props {
+  id?: string;
+  class?: string;
+  layoutClass?: string;
+  reviewsClass?: string;
+  title: string;
+  subtitle?: string;
+  journal?: boolean;
+}
+
+const { id, class: className, layoutClass, reviewsClass, title, subtitle, journal = false } = Astro.props;
+---
+
+<section class:list={["section-spacing", className]} {id}>
+  <div class:list={["container", layoutClass]}>
+    {Astro.slots.has("intro") ? (
+      <slot name="intro" />
+    ) : (
+      <SectionHeader label="Testimonials" {title} {subtitle} />
+    )}
+    {reviewsClass ? (
+      <div class={reviewsClass}><Testimonials {journal} /></div>
+    ) : (
+      <Testimonials {journal} />
+    )}
+  </div>
+</section>

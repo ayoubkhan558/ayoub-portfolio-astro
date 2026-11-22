@@ -1,0 +1,37 @@
+@use "../foundation/breakpoints";
+
+.value-tree {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.value-tree .value-tree__title {
+  font-size: var(--small-font-size);
+  letter-spacing: 0;
+  margin: var(--space-4) 0 5px;
+}
+
+.value-tree .value-tree__description {
+  margin-bottom: var(--space-2);
+}
+
+.value-object {
+  display: grid;
+  gap: var(--space-2) 22px;
+  grid-template-columns: 1fr;
+
+  @include breakpoints.mq(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.detail-image {
+  max-height: 500px;
+  object-fit: contain;
+}
