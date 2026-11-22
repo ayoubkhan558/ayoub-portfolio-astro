@@ -16,6 +16,7 @@ import ResourceSection from "../components/sections/home/ResourceSection.astro";
 import ProjectsSection from "../components/sections/home/ProjectsSection.astro";
 import SectionHeader from "../components/portfolio/SectionHeader.astro";
 import CaseStudiesSection from "../components/sections/shared/CaseStudiesSection.astro";
+import Logos from "../components/portfolio/Logos.astro";
 import TestimonialsSection from "../components/sections/shared/TestimonialsSection.astro";
 import AboutSection from "../components/sections/home/AboutSection.astro";
 import FAQSection from "../components/sections/shared/FAQSection.astro";
@@ -61,7 +62,9 @@ import FAQSection from "../components/sections/shared/FAQSection.astro";
       <ServicesSection />
     </Background>
     <ResourceSection />
-    <TestimonialsSection id="proof" class="home-testimonials-section" title="What it’s like to work together." subtitle="Client feedback from real projects." />
+    <TestimonialsSection id="proof" class="home-testimonials-section" title="What it’s like to work together." subtitle="Client feedback from real projects.">
+      <Logos slot="logos" projectsOnly label="Selected project logos" />
+    </TestimonialsSection>
     <AboutSection />
     <FAQSection id="faq" items={p.faqs} openFirst>
       <Fragment slot="description">

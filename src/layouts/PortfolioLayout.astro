@@ -76,21 +76,13 @@ const schema = {
       set:html={JSON.stringify(schema).replace(/</g, "\\u003c")}
     />
     <script is:inline>
-      try {
-        const value = localStorage.getItem("theme");
-        const saved = value === "dark" || value === "light" ? value : null;
-        document.documentElement.classList.toggle(
-          "dark",
-          saved
-            ? saved === "dark"
-            : matchMedia("(prefers-color-scheme: dark)").matches,
-        );
-      } catch {
-        document.documentElement.classList.toggle(
-          "dark",
-          matchMedia("(prefers-color-scheme: dark)").matches,
-        );
-      }
+      (() => {
+        const systemTheme = matchMedia("(prefers-color-scheme: dark)");
+        // Apply the system theme before paint and follow changes while open.
+        const sync = () => document.documentElement.classList.toggle("dark", systemTheme.matches);
+        sync();
+        systemTheme.addEventListener("change", sync);
+      })();
     </script>
     <slot name="head" />
   </head>

@@ -79,12 +79,6 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
 <script>
   const theme = document.querySelector<HTMLButtonElement>("#theme-toggle");
   const preference = matchMedia("(prefers-color-scheme: dark)");
-  let userChoice = false;
-  try {
-    userChoice = ["light", "dark"].includes(
-      localStorage.getItem("theme") || "",
-    );
-  } catch {}
   function syncThemeLabel() {
     const dark = document.documentElement.classList.contains("dark");
     const label = `Switch to ${dark ? "light" : "dark"} theme`;
@@ -92,19 +86,10 @@ const isActive = (href: string) => path === href || path.startsWith(href + "/");
     theme?.setAttribute("title", label);
   }
   theme?.addEventListener("click", () => {
-    const dark = document.documentElement.classList.toggle("dark");
-    userChoice = true;
-    try {
-      localStorage.setItem("theme", dark ? "dark" : "light");
-    } catch {}
+    document.documentElement.classList.toggle("dark");
     syncThemeLabel();
   });
-  preference.addEventListener("change", (e) => {
-    if (!userChoice) {
-      document.documentElement.classList.toggle("dark", e.matches);
-      syncThemeLabel();
-    }
-  });
+  preference.addEventListener("change", syncThemeLabel);
   syncThemeLabel();
   const details = document.querySelector<HTMLDetailsElement>("#menu-details")!;
   const toggle = document.querySelector<HTMLElement>("#menu-toggle")!;

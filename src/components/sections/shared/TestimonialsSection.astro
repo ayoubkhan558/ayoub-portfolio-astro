@@ -22,6 +22,7 @@ const { id, class: className, layoutClass, reviewsClass, title, subtitle, journa
     ) : (
       <SectionHeader label="Testimonials" {title} {subtitle} />
     )}
+    <slot name="logos" />
     {reviewsClass ? (
       <div class={reviewsClass}><Testimonials {journal} /></div>
     ) : (
