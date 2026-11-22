@@ -1,3 +1,4 @@
+import { searchServicePages } from "./searchServicePages";
 import portfolio from "./portfolio.json";
 import { serviceNiches, type ServiceNiche } from "./serviceNiches";
 
@@ -43,12 +44,20 @@ const nicheBriefs: Record<string, string> = {
     "Send your current site URL, the pages that need work, and anything your team must be able to edit after launch.",
 };
 
+const searchHeadings: Record<string, { title: string; h1: string }> = {
+  "custom-web-app": { title: "Custom Website Development", h1: "Custom website development for complex workflows" },
+  "website-redesign": { title: "Web Designer for Website Redesigns", h1: "Web designer for a clearer, faster redesign" },
+  "e-commerce-setup": { title: "Ecommerce Website Developer", h1: "Ecommerce website developer for stores and catalogs" },
+  "wordpress-redesign": { title: "WordPress Developer for Hire", h1: "WordPress developer for hire" },
+};
+
 export const serviceDetails: ServiceNiche[] = [
   ...portfolio.services.map((service) => ({
     slug: service.slug,
     title: service.name,
     h1: service.name,
     description: service.description,
+    ...searchHeadings[service.slug],
     label: "Service",
     price:
       service.price === "Custom quote"
@@ -69,6 +78,7 @@ export const serviceDetails: ServiceNiche[] = [
   })),
   ...serviceNiches.map((service) => ({
     ...service,
+    ...searchHeadings[service.slug],
     sections: [
       ...service.sections.map((section, index) => ({
         ...section,
@@ -77,6 +87,7 @@ export const serviceDetails: ServiceNiche[] = [
       { title: "What to send", paragraphs: [nicheBriefs[service.slug]] },
     ],
   })),
+  ...searchServicePages,
 ];
 
 export const serviceCards = [

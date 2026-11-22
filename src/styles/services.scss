@@ -3,3 +3,10 @@
 @use "components/services";
 @use "sections/call-to-action";
 @use "sections/services-delivery";
+
+.service-resource-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-4) var(--space-6);
+  padding-inline-start: var(--space-5);
+}

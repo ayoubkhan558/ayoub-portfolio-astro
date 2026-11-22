@@ -1,7 +1,8 @@
 ---
 import CTA from "../components/portfolio/CTA.astro";
 import Intro from "../components/portfolio/Intro.astro";
-import p from "../data/portfolio.json";
+import SectionHeader from "../components/portfolio/SectionHeader.astro";
+import { searchServicePages } from "../data/searchServicePages";
 import Layout from "../layouts/PortfolioLayout.astro";
 import "../styles/services.scss";
 import ServiceCardsSection from "../components/sections/services/ServiceCardsSection.astro";
@@ -9,15 +10,25 @@ import ProcessSection from "../components/sections/services/ProcessSection.astro
 import DeliverySection from "../components/sections/services/DeliverySection.astro";
 ---
 
-<Layout hasFooterCta title="Services">
+<Layout hasFooterCta title="Website Developer Services" description="Compare website developer services for new websites, WordPress redesigns, online stores, and performance improvements.">
   <div class="services-page">
     <div class="portfolio-background">
       <Intro
-        title="Web development and SEO services"
-        description={p.profile.summary}
+        title="Website developer services"
+        description="Compare options for a new website, a redesign, an online store, or ongoing support."
       />
       <ServiceCardsSection />
     </div>
+    <section class="section-spacing">
+      <div class="container">
+        <SectionHeader title="Find the right service for your project" />
+        <ul class="service-resource-links">
+          {searchServicePages.map(service => (
+            <li><a href={`/services/${service.slug}/`} class="text-link portfolio__link">{service.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </section>
     <ProcessSection />
     <DeliverySection />
     <div class="portfolio-background portfolio-background--bottom">
